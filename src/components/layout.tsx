@@ -79,7 +79,7 @@ export function HomeHeroSection() {
                   <TextLoop />
                 </span>
               </div>
-              <p className="text-[1rem] text-black">
+              <p className="text-[1rem] text-gray-700">
                 Got a dream that sounds a bit out there? Perfect! At AV
                 Technosys, we specialize in <br />
                 turning the ‘Wait, what?’ into ‘Wow, no way!’ Join us on a wild

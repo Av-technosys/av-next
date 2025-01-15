@@ -30,17 +30,13 @@ const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [blogData, setBlogData] = useState(data);
 
-  const filteredBlogs = blogData.filter(({ keyword }) =>
-    keyword.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="bg-[#1c1c1e] pt-3">
       <Header2 />
 
       <img className="w-full" src={'./blog.jpg'} alt="blog" />
       <div className="fontTest mx-auto flex max-w-7xl flex-wrap justify-center px-6 md:px-4">
-        <div className="flex w-full -translate-y-[16%] flex-col gap-8 rounded-3xl bg-white px-8 py-8 text-black md:-translate-y-1/2 md:px-16 md:py-16">
+        <div className="flex w-full max-w-6xl -translate-y-[16%] flex-col gap-8 rounded-3xl bg-white px-8 py-8 text-black md:-translate-y-1/2 md:px-16 md:py-16">
           <div className="">
             <h1 className="text-2xl font-semibold lg:text-5xl">Blog</h1>
             <p className="mt-2 text-xs font-normal text-gray-800 md:mt-2 lg:text-base">
@@ -49,7 +45,7 @@ const Blog = () => {
             </p>
           </div>
 
-          <div className="fontTest mx-auto flex w-full flex-col items-center overflow-hidden rounded md:w-1/2 md:flex-row">
+          <div className="fontTest mx-auto flex w-full flex-col items-center overflow-hidden rounded-xl md:w-3/5 md:flex-row">
             <div className="flex h-40 w-full items-center justify-center border border-black bg-black p-4 text-center text-sm text-white lg:h-[17rem]">
               <h1 className="w-full text-center text-2xl">
                 Quick/New Update of AV Technosys
@@ -75,68 +71,68 @@ const Blog = () => {
                 </li>
                 <li
                   className="min-w-fit"
-                  onClick={() =>
-                    setBlogData(
-                      data.filter((obj) => obj.keyword === 'App Development')
-                    )
-                  }
+                  // onClick={() =>
+                  //   setBlogData(
+                  //     data.filter((obj) => obj.keyword === 'App Development')
+                  //   )
+                  // }
                 >
                   App Development
                 </li>
                 <li
-                  onClick={() =>
-                    setBlogData(
-                      data.filter((obj) => obj.keyword === 'Buisness')
-                    )
-                  }
+                // onClick={() =>
+                //   setBlogData(
+                //     data.filter((obj) => obj.keyword === 'Buisness')
+                //   )
+                // }
                 >
                   Buisness
                 </li>
                 <li
-                  onClick={() =>
-                    setBlogData(data.filter((obj) => obj.keyword === 'Odoo'))
-                  }
+                // onClick={() =>
+                //   setBlogData(data.filter((obj) => obj.keyword === 'Odoo'))
+                // }
                 >
                   Odoo
                 </li>
                 <li
                   className="min-w-fit"
-                  onClick={() =>
-                    setBlogData(
-                      data.filter((obj) => obj.keyword === 'On Demand')
-                    )
-                  }
+                  // onClick={() =>
+                  //   setBlogData(
+                  //     data.filter((obj) => obj.keyword === 'On Demand')
+                  //   )
+                  // }
                 >
                   On Demand
                 </li>
                 <li
                   className="min-w-fit"
-                  onClick={() =>
-                    setBlogData(data.filter((obj) => obj.keyword === 'Open AI'))
-                  }
+                  // onClick={() =>
+                  //   setBlogData(data.filter((obj) => obj.keyword === 'Open AI'))
+                  // }
                 >
                   Open AI
                 </li>
                 <li
-                  onClick={() =>
-                    setBlogData(
-                      data.filter((obj) => obj.keyword === 'Software')
-                    )
-                  }
+                // onClick={() =>
+                //   setBlogData(
+                //     data.filter((obj) => obj.keyword === 'Software')
+                //   )
+                // }
                 >
                   Software
                 </li>
                 <li
-                  onClick={() =>
-                    setBlogData(data.filter((obj) => obj.keyword === 'Tech'))
-                  }
+                // onClick={() =>
+                //   setBlogData(data.filter((obj) => obj.keyword === 'Tech'))
+                // }
                 >
                   Tech
                 </li>
                 <li
-                  onClick={() =>
-                    setBlogData(data.filter((obj) => obj.keyword === 'Web'))
-                  }
+                // onClick={() =>
+                //   setBlogData(data.filter((obj) => obj.keyword === 'Web'))
+                // }
                 >
                   Web
                 </li>
@@ -148,7 +144,7 @@ const Blog = () => {
                 type="search"
                 placeholder="Search"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                // onChange={(e) => setSearchTerm(e.target.value)}
               />
               <Search size={20} color="white" />
             </div>

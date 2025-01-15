@@ -4,12 +4,12 @@ import { LoaderCircle } from 'lucide-react';
 // import './Footer.css';
 
 const Form1 = () => {
-  const form = useRef();
+  const form = useRef<any>();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<any>({});
 
   const validateForm = (formData) => {
-    let errors = {};
+    let errors: any = {};
 
     // Check if the name is empty
     if (!formData.get('from_name')) {
@@ -47,13 +47,15 @@ const Form1 = () => {
     }
 
     emailjs
-      .sendForm('service_tz902dr', 'template_qqpxlae', form.current, {
+      // @ts-ignore
+      .sendForm('service_tz902dr', 'template_qqpxlae', form?.current, {
         publicKey: '7e3pjCOJgYjLD4Mu-',
       })
       .then(
         () => {
           console.log('SUCCESS!');
-          form.current.reset();
+          // @ts-ignore
+          form?.current.reset();
           setErrors({});
         },
         (error) => {
@@ -70,6 +72,7 @@ const Form1 = () => {
         <h1 className="p- md:ml- lg: text-4xl font-semibold text-white md:pt-10 md:text-[4rem] lg:text-[4rem]">
           Let's Connect
         </h1>
+
         <form ref={form} onSubmit={sendEmail}>
           <div className="md:justify- md:gap- lg:gap- mt-8 flex flex-col justify-between gap-7 outline-none md:mt-12 md:flex-row lg:ml-0">
             <input

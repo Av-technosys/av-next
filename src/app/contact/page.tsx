@@ -29,7 +29,7 @@ const ContactUs = () => {
   const [errors, setErrors] = useState({});
 
   const validateForm = (formData) => {
-    let errors = {};
+    let errors: any = {};
 
     // Validate first name
     if (!formData.get('first_name')) {
@@ -90,13 +90,15 @@ const ContactUs = () => {
     }
 
     emailjs
-      .sendForm('service_tz902dr', 'template_bjzmbng', form.current, {
+      // @ts-ignore
+      .sendForm('service_tz902dr', 'template_bjzmbng', form?.current, {
         publicKey: '7e3pjCOJgYjLD4Mu-',
       })
       .then(
         () => {
           console.log('SUCCESS!');
-          form.current.reset(); // Clear form fields after submission
+          // @ts-ignore
+          form?.current.reset(); // Clear form fields after submission
           setErrors({}); // Clear validation errors
         },
         (error) => {
@@ -119,6 +121,7 @@ const ContactUs = () => {
             {/* @ts-ignore */}
             <form
               className="fontTest flex h-full flex-col justify-between gap-3"
+              // @ts-ignore
               ref={form}
               onSubmit={sendEmail}
             >
@@ -140,9 +143,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="w-full">
-                  <label className="text-sm text-white" for="lname">
-                    Last Name
-                  </label>
+                  <label className="text-sm text-white">Last Name</label>
                   <br />
                   <input
                     className="mt-2 w-full rounded-lg border border-gray-600 bg-[#1c1c1e] px-3 py-2 text-sm text-white"
@@ -166,9 +167,13 @@ const ContactUs = () => {
                   name="from_company"
                   placeholder="Enter your company name"
                 />
-                {errors.company_name && (
-                  <span className="text-red-500">{errors.company_name}</span>
-                )}
+                {
+                  // @ts-ignore
+                  errors?.company_name && (
+                    // @ts-ignore
+                    <span className="text-red-500">{errors?.company_name}</span>
+                  )
+                }
               </div>
 
               <div className="w-full">
@@ -224,6 +229,7 @@ const ContactUs = () => {
       </div>
 
       {/* map  */}
+      <div className="h-8"></div>
       <div className="fontTest bg-[#1c1c1e] pb-10 pt-10 font-semibold text-white lg:h-[100vh] lg:pb-8 lg:pl-[80px] lg:pt-0">
         <h1 className="justify-center text-center text-2xl font-semibold lg:text-[4rem]">
           Get in touch with our team
@@ -242,7 +248,7 @@ const ContactUs = () => {
       </div>
 
       {/* //daisy ui card */}
-      <div className="mx-auto flex w-full max-w-7xl flex-col justify-between gap-6 px-10 py-2 md:flex-row md:gap-10 md:px-4">
+      <div className="mx-auto mb-6 flex w-full max-w-7xl flex-col justify-between gap-6 px-10 py-2 md:flex-row md:gap-10 md:px-4">
         {ContactUsCardData.map((data: any) => {
           return <ContactUsCards data={data} />;
         })}
@@ -268,7 +274,8 @@ const PhoneNumberField = () => {
       </div>
       <div className="w-full">
         <PhoneInput
-          className="bg-[#1c1c1e] text-white"
+          // className="bg-[#1c1c1e] text-white"
+          // @ts-ignore
           defaultCountry="IN"
           placeholder="Enter your phone number"
           country={'in'}
@@ -337,17 +344,17 @@ type ContactUsCard = {
 function ContactUsCards({ data }: { data: ContactUsCard }) {
   const IconComponent = iconMap[data.icon];
   return (
-    <div className="flex w-full flex-col gap-8 rounded-lg border border-gray-300 bg-[#1c1c1e] p-4 text-white">
-      <div className="h-fit w-fit rounded-md border border-gray-400 p-2">
-        <IconComponent size={20} />
+    <div className="flex w-full flex-col gap-8 rounded-lg border border-gray-400 bg-[#1c1c1e] p-4 text-white">
+      <div className="h-fit w-fit rounded-md border border-gray-600 p-2.5">
+        <IconComponent size={22} />
       </div>
       <div className="flex flex-col gap-0">
-        <h2 className="">{data.title}</h2>
+        <h2 className="text-2xl">{data.title}</h2>
         <p className="text-gray-300">{data.description}</p>
         <Link
           href={data.link}
           onClick={handleEmailClick}
-          className="mt-8 w-full rounded-lg border border-gray-500 px-3 py-2 text-center"
+          className="mt-8 w-full rounded-md border border-gray-500 px-3 py-2 text-center"
         >
           {data.buttonText}
         </Link>

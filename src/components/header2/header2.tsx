@@ -8,6 +8,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import PhoneField from './phoneFild';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const Header2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,11 +30,12 @@ const Header2 = () => {
   return (
     <>
       <header className="fontTest mx-auto flex h-28 w-full max-w-7xl items-center justify-between bg-[#1c1c1e] px-6 text-white">
-        <Link className="h-16 pr-8 md:h-28" href="/">
+        <Link className="relative h-16 w-16 pr-8 md:h-28" href="/">
           {' '}
-          <img
+          <Image
+            fill={true}
             className="h-full w-auto object-contain"
-            src={'./av-logo.svg'}
+            src={'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-logo.svg'}
             alt="logo"
           />
         </Link>
@@ -60,7 +62,7 @@ const Header2 = () => {
               <ul className="">
                 <li className="py-3 text-xl">
                   {' '}
-                  <Link href="/company">Company</Link>
+                  <Link href="/company">About Us</Link>
                 </li>
                 <li className="py-3 text-xl">
                   <Link href="/Services">Services</Link>
@@ -374,8 +376,8 @@ const Header2 = () => {
                   <PhoneField />
                 </div>
                 <textarea
-                  className="ml-3 mt-8 border bg-white pb-16 pr-[285px] text-sm font-normal"
-                  placeholder="   Message"
+                  className="ml-3 mt-8 w-full border bg-white p-2 pb-16 text-sm font-normal"
+                  placeholder="Message"
                 ></textarea>
 
                 <button className="float-end mt-3 rounded-xl border bg-indigo-600 px-5 py-3 text-white">

@@ -6,8 +6,8 @@ const PhoneField = () => {
   const [phone, setPhone] = useState('');
 
   return (
-    <div className="ml-6 flex w-full max-w-sm flex-col">
-      <label className="mb-2 text-white" htmlFor="phone">
+    <div className="flex w-full max-w-sm flex-col">
+      <label className="mb-2 text-white mix-blend-difference" htmlFor="phone">
         Phone Number
       </label>
       <PhoneInput
@@ -16,11 +16,12 @@ const PhoneField = () => {
         onChange={setPhone}
         placeholder={'Enter your phone number '}
         inputStyle={{
-          width: '445px',
+          width: '100%',
           backgroundColor: '#white',
           border: '1px solid #gray',
           borderRadius: '',
           color: 'gray',
+          // mixBlendMode: 'color',
         }}
         dropdownStyle={{
           backgroundColor: '#white',

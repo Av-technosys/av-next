@@ -1,27 +1,31 @@
 'use client';
 import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
-import DoneIcon from '@mui/icons-material/Done';
-
 import Header2 from '@/components/header2/header2';
 import Footer1 from '../footer1';
-import Tabs from './technologies';
 import { IconCloud } from '@/components/techIconGlob';
-import PhoneField from '@/components/header2/phoneFild';
+import { motion } from 'framer-motion';
 import PhoneInput from 'react-phone-input-2';
 import { Check } from 'lucide-react';
 import { cn } from '@/utils/cn';
+import Tabs from '@/components/techohologiesOffered';
+import { Modal } from 'antd';
+import PhoneField from '@/components/header2/phoneFild';
 
 const HireusPage = () => {
+  const [isHiremeOpen, setIsHiremeOpen] = useState(false);
   return (
     <div className="w-full bg-[#1c1c1e] pt-3">
       <Header2 />
 
+      {/* Hire me form */}
+      <HireMeForm open={isHiremeOpen} setIsOpen={setIsHiremeOpen} />
+
       <div className="mx-auto w-full max-w-7xl grid-rows-1 justify-between bg-[#1c1c1e] px-6 pt-10 md:px-4 lg:flex">
         <div className="lg:w-[65%]">
           <div className="flex bg-[#1c1c1e]">
-            <h1 className="mt-2 text-[1.5rem] font-semibold text-white lg:mt-0 lg:text-[4rem]">
-              Hire A Developer
+            <h1 className="mt-2 items-center gap-1 text-4xl font-semibold text-white md:flex lg:mt-0 lg:text-6xl">
+              Hire A{' '}
+              <span className="text-[#d5b676] md:text-white">Developer</span>
             </h1>
             <div className="rounded-3xl">
               <video
@@ -36,12 +40,11 @@ const HireusPage = () => {
             </div>
           </div>
 
-          <h1 className="mt-5 text-[1.5rem] font-semibold text-white lg:mt-0 lg:text-[4rem]">
-            {' '}
-            For Your Next Project{' '}
-          </h1>
-          <div className="mt-2 md:mt-6">
-            <p className="text-[1rem] font-medium text-white">
+          <p className="text-3xl font-semibold text-white lg:mt-4 lg:text-6xl">
+            For Your Next Project
+          </p>
+          <div className="mt-4 max-w-2xl md:mt-10">
+            <p className="text-gray-300">
               Are you looking for top-notch developers to bring your ideas to
               life? Whether you're building a website, mobile app, or custom
               software, our team of skilled developers is here to help. We
@@ -60,7 +63,7 @@ const HireusPage = () => {
 
       <StatsSection />
 
-      <HireNow />
+      <HireNow setIsHiremeOpen={setIsHiremeOpen} />
 
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 bg-[#1c1c1e] px-6 py-12 md:px-4 md:py-20">
         <h1 className="py-4 text-4xl font-semibold text-white md:text-6xl">
@@ -120,7 +123,7 @@ const PhoneNumberField = () => {
 
 export default HireusPage;
 
-function HireNow() {
+function HireNow({ setIsHiremeOpen }: { setIsHiremeOpen: any }) {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -151,7 +154,12 @@ function HireNow() {
 
         <div className="fontTest mt-20 grid gap-10 pb-20 lg:flex lg:justify-between">
           {hiringOptions.map((hiringOption, idx) => (
-            <HiringOptions hiringOption={hiringOption} key={idx} idx={idx} />
+            <HiringOptions
+              setIsHiremeOpen={setIsHiremeOpen}
+              hiringOption={hiringOption}
+              key={idx}
+              idx={idx}
+            />
           ))}
         </div>
       </div>
@@ -216,14 +224,18 @@ const statsData = [
 
 function StatsSection() {
   return (
-    <div className="mx-auto grid w-full max-w-7xl grid-cols-2 justify-items-center gap-6 self-center bg-[#1c1c1e] px-6 py-20 font-semibold text-white md:px-4 lg:flex lg:justify-between">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="mx-auto grid w-full max-w-7xl grid-cols-2 justify-items-center gap-6 self-center bg-[#1c1c1e] px-6 py-10 pb-20 font-semibold text-white md:px-4 md:pt-6 lg:flex lg:justify-between"
+    >
       {statsData.map((stat, index) => (
-        <div className="w-full max-w-52 items-center justify-center rounded-3xl border border-white p-6 text-center">
-          <h1 className="text-3xl"> {stat.value}</h1>
-          <p className="text-[1rem]">{stat.description} </p>
+        <div className="flex w-full max-w-72 flex-col gap-2 rounded-3xl border border-gray-400 p-6 text-center">
+          <h1 className="text-4xl"> {stat.value}</h1>
+          <p className="text-xl text-gray-300">{stat.description} </p>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 
@@ -331,15 +343,18 @@ const hiringOptions: HiringOption[] = [
       'Talent Discovery',
       '90 days Replacement',
       'Account Management Support',
+      'Customizable hiring solutions',
     ],
     buttonText: 'Hire Now',
   },
 ];
 
 function HiringOptions({
+  setIsHiremeOpen,
   hiringOption,
   idx,
 }: {
+  setIsHiremeOpen: any;
   hiringOption: HiringOption;
   idx: number;
 }) {
@@ -378,17 +393,24 @@ function HiringOptions({
             </div>
           ))}
         </div>
-        <HireMeButton idx={idx} />
+        <HireMeButton setIsHiremeOpen={setIsHiremeOpen} idx={idx} />
       </div>
     </div>
   );
 }
 
-function HireMeButton({ idx }: { idx: number }) {
+function HireMeButton({
+  setIsHiremeOpen,
+  idx,
+}: {
+  setIsHiremeOpen: any;
+  idx: number;
+}) {
   return (
     <div className="p-4 md:px-4">
       <div className="overflow-hidden duration-300 md:h-0 md:group-hover:h-auto md:group-hover:py-4">
         <div
+          onClick={() => setIsHiremeOpen(true)}
           className={cn(
             'w-full rounded bg-black px-4 py-2 text-center text-white md:bg-white md:text-black',
             idx === 1 && 'bg-white text-black md:bg-black md:text-white'
@@ -398,5 +420,118 @@ function HireMeButton({ idx }: { idx: number }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function HireMeForm({ open, setIsOpen }: any) {
+  function handleCancel() {
+    setIsOpen(false);
+  }
+  return (
+    <Modal
+      open={open}
+      title=""
+      height=""
+      width={700}
+      // onOk={handleOk}
+      onCancel={handleCancel}
+      footer={[]}
+    >
+      <form action="">
+        <div className="">
+          <div className="flex justify-between gap-6 pt-8">
+            <div className="w-full">
+              <label className="" htmlFor="">
+                First Name
+              </label>{' '}
+              <br />
+              <input
+                className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
+                type="text"
+                placeholder="   Enter your First name"
+              />
+            </div>
+            <div className="w-full">
+              <label htmlFor="">Last Name</label> <br />
+              <input
+                className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
+                type="text"
+                placeholder="   Enter your Last name"
+              />
+            </div>
+          </div>
+
+          <div className="mt-8 w-full">
+            <label htmlFor="">Company Name</label> <br />
+            <input
+              className="w-full rounded-lg border-2 border-black px-3 py-2"
+              type="text"
+              placeholder="   Enter your company name   "
+            />{' '}
+            <br />
+          </div>
+
+          <div className="mt-8 w-full">
+            <label htmlFor="">Email</label> <br />
+            <input
+              className="w-full rounded-lg border-2 border-black py-2"
+              type="email"
+              placeholder="   Enter your email"
+            />
+          </div>
+        </div>
+
+        <div className="mt-6 w-full">
+          {/* <label htmlFor="">Phone Number</label> <br /> */}
+          <PhoneField />
+        </div>
+
+        <div className="mt-6">
+          <label htmlFor="">Choose how you want to hire</label> <br />
+          <select
+            className="w-full rounded-lg border-2 border-black py-2"
+            // placeholder="Choose A Category"
+          >
+            Choose how you want to hire
+            <option value="0">Choose a Category</option>
+            <hr />
+            <option value="1">Hire A Contractor</option> <hr />
+            <option value="2">Hire An Employee On AV Payroll</option> <hr />
+            <option value="3">Direct-hire On Your Payroll</option> <hr />
+          </select>
+        </div>
+        <br />
+
+        <div className="mt-2">
+          <label htmlFor="">Which Role are you hiring for?</label> <br />
+          <select
+            className="w-full rounded-lg border-2 border-black py-2"
+            // placeholder="Choose A Category"
+          >
+            Choose how you want to hire
+            <option value="0">Choose a Category</option>
+            <hr />
+            <option value="1">Front-End Developer</option> <hr />
+            <option value="2">Back-End Developer</option> <hr />
+            <option value="4">UI/UX Designer</option> <hr />
+            <option value="5">Graphic Designer</option> <hr />
+            <option value="6">Web App Development</option> <hr />
+            <option value="7">Mobile App Development</option> <hr />
+            <option value="8">Database Integration</option> <hr />
+            <option value="7">Shopify/Wordpress Development</option> <hr />
+          </select>
+        </div>
+
+        <button
+          className="mt-[2.5rem] w-full rounded-lg bg-black px-8 py-3 text-white"
+          key="submit"
+          // type="primary"
+          // loading={loading}
+          // onClick={handleOk}
+        >
+          Get In touch
+        </button>
+      </form>
+    </Modal>
   );
 }

@@ -10,8 +10,10 @@ import Form1 from './letsConnectForm';
 import Hero from './hero';
 import ImageWithBorders from './testCard';
 import Footer1 from './footer1';
-import { Dot } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Dot } from 'lucide-react';
 import { cn } from '@/utils/cn';
+import Link from 'next/link';
+import Tabs from '@/components/techohologiesOffered';
 
 export default function Home() {
   return (
@@ -30,6 +32,13 @@ export default function Home() {
         {servicesDataArray.map((serviceData: ServiceType, index) => (
           <Service serviceData={serviceData} idx={index} key={index} />
         ))}
+      </div>
+
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 bg-[#1c1c1e] px-6 py-12 md:px-4 md:py-20">
+        <h1 className="py-4 text-4xl font-semibold text-white md:text-6xl">
+          Technologies Offered
+        </h1>
+        <Tabs />
       </div>
       <Location />
       <Marque1 />
@@ -127,6 +136,7 @@ function Service({
               </li>
             ))}
           </ul>
+          <ReadMoreButton isDark={isDark} link="" />
         </div>
         <div className="hidden w-full max-w-md overflow-hidden rounded-3xl md:block">
           <img
@@ -137,6 +147,23 @@ function Service({
         </div>
       </motion.div>
     </motion.div>
+  );
+}
+
+function ReadMoreButton({ link, isDark }: { link: string; isDark: boolean }) {
+  return (
+    <Link
+      href={link}
+      className={cn(
+        'flex w-fit cursor-pointer items-center gap-1 rounded-md border px-4 py-2 font-semibold duration-200 hover:gap-2',
+        isDark
+          ? 'text-black hover:bg-[#1c1c1e] hover:text-white'
+          : 'text-white hover:bg-white hover:text-black'
+      )}
+    >
+      <p>Read More</p>
+      <ArrowUpRight size={18} />
+    </Link>
   );
 }
 
@@ -213,4 +240,5 @@ type ServiceType = {
   description: string;
   features: string[];
   image: string;
+  link?: string;
 };
