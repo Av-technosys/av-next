@@ -1056,9 +1056,6 @@ function TechonologyDetailModal({
           backgroundColor: '#404040',
           color: 'white',
           borderRadius: 25,
-          top: '0',
-          translate: '0 30%',
-          position: 'absolute',
         },
       }}
       footer={[]}

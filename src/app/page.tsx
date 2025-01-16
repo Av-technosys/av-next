@@ -97,10 +97,10 @@ function Service({
     >
       <motion.div
         style={{ opacity: springOpacity }}
-        className="mx-auto flex h-full w-full max-w-7xl flex-row justify-between gap-6 px-6 py-12 md:px-4"
+        className="mx-auto flex h-full w-full max-w-7xl flex-row justify-between gap-6 overflow-hidden px-6 py-12 md:px-4"
       >
-        <div className="flex h-full w-full flex-col gap-16">
-          <div className="flex flex-col gap-6 md:gap-8">
+        <div className="flex h-full w-full flex-col justify-between gap-6">
+          <div className="flex flex-col gap-6 md:gap-6">
             <p
               className={cn(
                 'font-instrument text-5xl font-bold tracking-wide md:text-7xl',
