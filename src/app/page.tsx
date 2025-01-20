@@ -1,6 +1,6 @@
 'use client';
 import { HomeHeroSection } from '@/components/layout';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Partners from './partners';
 import Card2 from './card2';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
@@ -10,12 +10,25 @@ import Form1 from './letsConnectForm';
 import Hero from './hero';
 import ImageWithBorders from './testCard';
 import Footer1 from './footer1';
-import { ArrowRight, ArrowUpRight, Dot } from 'lucide-react';
+import { ArrowUpRight, Dot } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
 import Tabs from '@/components/techohologiesOffered';
 
-export default function Home() {
+const Home = () => {
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsInitialLoad(false);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isInitialLoad) {
+    return <InitialLoadAnimation />;
+  }
+
   return (
     <div className="w-full bg-[#1c1c1e]">
       <HomeHeroSection />
@@ -50,7 +63,7 @@ export default function Home() {
       {/* <div className="h-60"></div> */}
     </div>
   );
-}
+};
 
 const serviceDataArray = [
   {
@@ -179,7 +192,8 @@ const servicesDataArray = [
       'Process automation',
       'Scalable cloud solutions',
     ],
-    image: './service-image.jpg',
+    image:
+      'https://av-blog-web.s3.ap-south-1.amazonaws.com/digital-enterprise.jpg',
   },
   {
     title: 'Digital Experience',
@@ -192,7 +206,8 @@ const servicesDataArray = [
       'Cross-platform consistency',
       'Accessibility and usability optimization',
     ],
-    image: './service-image.jpg',
+    image:
+      'https://av-blog-web.s3.ap-south-1.amazonaws.com/digital-transformation.jpg',
   },
   {
     title: 'Digital Marketing',
@@ -205,7 +220,8 @@ const servicesDataArray = [
       'Content marketing',
       'Email marketing and automation',
     ],
-    image: './service-image.jpg',
+    image:
+      'https://av-blog-web.s3.ap-south-1.amazonaws.com/digital+marketing+.png',
   },
   {
     title: 'Digital Innovation',
@@ -218,7 +234,8 @@ const servicesDataArray = [
       'Blockchain development',
       'Prototyping and rapid experimentation',
     ],
-    image: './service-image.jpg',
+    image:
+      'https://av-blog-web.s3.ap-south-1.amazonaws.com/Digital-Innovation.png',
   },
   {
     title: 'Cloud Transformation',
@@ -231,7 +248,8 @@ const servicesDataArray = [
       'Data storage and backup solutions',
       'Cloud-native app development',
     ],
-    image: './service-image.jpg',
+    image:
+      'https://av-blog-web.s3.ap-south-1.amazonaws.com/cloud-transformation.jpg',
   },
 ];
 type ServiceType = {
@@ -242,3 +260,56 @@ type ServiceType = {
   image: string;
   link?: string;
 };
+
+function InitialLoadAnimation() {
+  return (
+    <div className="h-fullwful flex min-h-screen flex-col items-center justify-center gap-8 bg-[#1c1c1e] text-white">
+      <div className="flex items-center gap-2">
+        <div className="size-24">
+          <img
+            className="h-full w-full object-contain"
+            src="./av-loading-logo.svg"
+            alt=""
+          />
+        </div>
+        <ul className="flex h-24 flex-col justify-between pb-2">
+          <motion.li
+            initial={{ x: 16, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="text-xl font-semibold text-gray-200"
+          >
+            Inovate
+          </motion.li>
+          <motion.li
+            initial={{ x: 12, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="semfont-semibold-gray-200 text-xl font-medium"
+          >
+            Impact
+          </motion.li>
+          <motion.li
+            initial={{ x: 12, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-xl font-semibold text-gray-200"
+          >
+            Inspire
+          </motion.li>
+        </ul>
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="flex flex-col items-center justify-center gap-1 blur-md"
+      >
+        <div className="h-2 w-24 rounded-full bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
+        <div className="h-2 w-52 rounded-full bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+        <div className="h-2 w-24 rounded-full bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
+      </motion.div>
+    </div>
+  );
+}
+
+export default Home;

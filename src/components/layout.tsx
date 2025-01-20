@@ -94,7 +94,7 @@ export function HomeHeroSection() {
                 Talk To Expert
               </Link>
               <button className="rounded-lg border border-black px-4 py-3 font-medium text-black duration-200 hover:bg-[#4643cc] hover:text-white">
-                <Link href="/contact">Book Service</Link>
+                <Link href="/contact-us">Book Service</Link>
               </button>
             </div>
           </div>
@@ -195,7 +195,6 @@ const HeaderHome = () => {
           <img
             className="hidden h-full w-auto object-contain md:block"
             src={'./av-logo.svg'}
-            // src={'./av-logo-black.svg'}
             alt="logo"
           />
         </Link>
@@ -225,10 +224,10 @@ const HeaderHome = () => {
               <ul className="">
                 <li className="py-3 text-xl">
                   {' '}
-                  <Link href="/company">Company</Link>
+                  <Link href="/about-us">About Us</Link>
                 </li>
                 <li className="py-3 text-xl">
-                  <Link href="/Services">Services</Link>
+                  <Link href="/services">Services</Link>
                 </li>
                 <li className="py-3 text-xl">
                   <Link href="/Portfolio">Portfolio</Link>
@@ -237,12 +236,12 @@ const HeaderHome = () => {
                   <Link href="/blog">Blog</Link>
                 </li>
                 <li className="py-3 text-xl">
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact-us">Contact Us</Link>
                 </li>
               </ul>
               <div className="grid gap-2">
                 <button className="rounded-sm border border-black py-1">
-                  <Link href="/hireus">Hire Us</Link>
+                  <Link href="/hire-us">Hire Us</Link>
                 </button>
                 <button className="rounded-sm border border-black py-1">
                   {' '}
@@ -260,8 +259,8 @@ const HeaderHome = () => {
         <div className="flex h-28 w-full items-center bg-[#1c1c1e]">
           <div className="flex h-full w-full items-center bg-white md:rounded-t-3xl">
             <div className="mx-auto my-auto hidden h-fit w-full max-w-2xl items-center justify-between gap-8 rounded-full border border-black px-8 py-4 text-black md:flex">
-              <Link className="whitespace-nowrap" href="/company">
-                Company
+              <Link className="whitespace-nowrap" href="/about-us">
+                About Us
               </Link>
               <Link className="whitespace-nowrap" href="/services">
                 Services
@@ -272,7 +271,7 @@ const HeaderHome = () => {
               <Link className="whitespace-nowrap" href="/blog">
                 Blog
               </Link>
-              <Link className="whitespace-nowrap" href="/contact">
+              <Link className="whitespace-nowrap" href="/contact-us">
                 Contact Us
               </Link>
             </div>
@@ -282,7 +281,7 @@ const HeaderHome = () => {
         {/* <Outlet /> */}
         <div className="hidden h-28 shrink-0 items-center justify-end gap-4 rounded-bl-3xl bg-[#1c1c1e] pl-8 lg:flex">
           <button className="h-fit w-fit rounded-lg border border-gray-700 px-8 py-2">
-            <Link href="/hireus"> Hire us</Link>
+            <Link href="/hire-us"> Hire us</Link>
           </button>
           <div className="flex h-fit w-fit items-center gap-2 rounded-lg border px-3">
             <div className="flex h-fit w-fit items-center justify-center rounded-full bg-white p-0.5">

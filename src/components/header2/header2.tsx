@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Slider } from 'antd';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -7,16 +7,58 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import PhoneField from './phoneFild';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Loader2 } from 'lucide-react';
 import Image from 'next/image';
+import emailjs from '@emailjs/browser';
+import { useRouter } from 'next/navigation';
 
 const Header2 = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
+  const router = useRouter;
+  const [timeValue, setTimeValue] = useState([30]);
+  const [budgetValue, setBudgetValue] = useState([15000, 70000]);
+  const [mobileNumber, setMobileNumber] = useState('');
   const [first, setfirst] = useState(false);
   const togglemenu = () => {
     setfirst(!first);
   };
+  function handleFormSubmit(e) {
+    setLoading(true);
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    console.log(data);
+    const templatePhrase = {
+      from_budget: budgetValue,
+      from_time: timeValue,
+      from_country: data.countary,
+      from_project: isClicked,
+      message: data.message,
+      from_number: mobileNumber,
+      from_email: data.email,
+      // from_company: '',
+      to_name: data.name,
+      from_name: data.name,
+    };
+
+    emailjs
+      .send('service_tz902dr', 'template_qqpxlae', templatePhrase, {
+        publicKey: '7e3pjCOJgYjLD4Mu-',
+      })
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          // @ts-ignore
+          e.target.reset();
+          setLoading(false);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        }
+      );
+  }
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
@@ -62,10 +104,10 @@ const Header2 = () => {
               <ul className="">
                 <li className="py-3 text-xl">
                   {' '}
-                  <Link href="/company">About Us</Link>
+                  <Link href="/about-us">About Us</Link>
                 </li>
                 <li className="py-3 text-xl">
-                  <Link href="/Services">Services</Link>
+                  <Link href="/services">Services</Link>
                 </li>
                 <li className="py-3 text-xl">
                   <Link href="/Portfolio">Portfolio</Link>
@@ -96,8 +138,8 @@ const Header2 = () => {
 
         <div className="w-full">
           <div className="mx-auto my-auto hidden h-fit w-full max-w-2xl items-center justify-between gap-8 rounded-full border px-8 py-4 md:flex">
-            <Link className="whitespace-nowrap" href="/company">
-              Company
+            <Link className="whitespace-nowrap" href="/about-us">
+              About Us
             </Link>
             <Link className="whitespace-nowrap" href="/services">
               Services
@@ -108,7 +150,7 @@ const Header2 = () => {
             <Link className="whitespace-nowrap" href="/blog">
               Blog
             </Link>
-            <Link className="whitespace-nowrap" href="/contact">
+            <Link className="whitespace-nowrap" href="/contact-us">
               Contact Us
             </Link>
           </div>
@@ -146,7 +188,7 @@ const Header2 = () => {
               <div className="absolute inset-0 p-6">
                 <h1 className="mb-5 text-5xl font-semibold text-white">
                   {' '}
-                  Our <br /> Offices
+                  Our Offices
                 </h1>
                 <div className="space-y-16 text-[1rem] font-medium text-white">
                   <div className="flex justify-between">
@@ -309,7 +351,7 @@ const Header2 = () => {
 
                 <Slider
                   className="mx-6"
-                  defaultValue={30}
+                  defaultValue={timeValue}
                   included={true}
                   step={10}
                   dots={true}
@@ -317,12 +359,9 @@ const Header2 = () => {
                   //   @ts-ignore
                   range={{ min: 10, max: 100 }}
                   tipFormatter={(value) => `${value} days`}
-                  // tooltip={{
-                  //   open: true,
-                  // }}
-
                   //   @ts-ignore
                   tooltip={true}
+                  onChange={(value) => setTimeValue(value)}
                 />
               </div>
               <div>
@@ -330,7 +369,7 @@ const Header2 = () => {
                 <Slider
                   className="mx-6"
                   range={{ draggableTrack: true }}
-                  defaultValue={[15000, 70000]}
+                  defaultValue={budgetValue}
                   included={true}
                   step={10}
                   min={100}
@@ -338,50 +377,61 @@ const Header2 = () => {
                   key={'value'}
                   tipFormatter={(value) => `$ ${value} `}
                   tooltip={{}}
+                  onChange={(value) => setBudgetValue(value)}
                 />
               </div>
 
               <h1 className="mt-5 p-3 text-sm font-medium">
                 Fill the form and get an estimate
               </h1>
-              <form action="">
-                <div className="ml-3 flex gap-20">
+              <form onSubmit={handleFormSubmit}>
+                <div className="ml-3 flex gap-2">
                   <input
-                    className="border bg-white py-1"
+                    className="w-full border bg-white py-1"
                     type="text"
+                    name="name"
                     placeholder="  Name*"
                   />
                   <input
-                    className="border bg-white py-1"
+                    className="w-full border bg-white py-1"
                     type="text"
+                    name="email"
                     placeholder="    Email*"
                   />
                 </div>
                 <div>
                   <select
                     className="ml-3 mt-8 justify-start border bg-white py-2 pr-72 font-medium"
-                    name=""
+                    name="countary"
                     id=""
                   >
                     <option className="" value="">
                       --Select Country--
                     </option>
-                    <option value="1">USA</option>
-                    <option value="2">UK</option>
-                    <option value="3">India</option>
-                    <option value="4">Other</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="INDIA">India</option>
+                    <option value="Others">Other</option>
                   </select>
                 </div>
-                <div className="-ml-3">
-                  <PhoneField />
+                <div className="ml-3 mt-2">
+                  <PhoneField onChange={(e) => setMobileNumber(e)} />
                 </div>
                 <textarea
+                  name="message"
                   className="ml-3 mt-8 w-full border bg-white p-2 pb-16 text-sm font-normal"
                   placeholder="Message"
                 ></textarea>
 
-                <button className="float-end mt-3 rounded-xl border bg-indigo-600 px-5 py-3 text-white">
-                  Submit
+                <button
+                  // onClick={(e) => handleFormSubmit(e)}
+                  className="float-end mt-3 rounded-xl border bg-indigo-600 px-5 py-3 text-white"
+                >
+                  {loading ? (
+                    <Loader2 className="animate-spin" size={20} />
+                  ) : (
+                    'Submit'
+                  )}
                 </button>
               </form>
             </div>

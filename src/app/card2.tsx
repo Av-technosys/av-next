@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import Carousel from 'react-simply-carousel';
 
 const Card2 = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-
   return (
     <>
       <div className="mx-auto mt-20 flex w-full max-w-7xl flex-col gap-4 bg-[#1c1c1e] px-6 text-white md:gap-8 md:px-4">

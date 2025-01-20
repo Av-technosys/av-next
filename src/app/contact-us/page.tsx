@@ -10,7 +10,13 @@ import Footer1 from '../footer1';
 import VideoPlayer from './videPlayer';
 import Link from 'next/link';
 
-import { MessageSquareText, MessageCircle, Phone, MapPin } from 'lucide-react';
+import {
+  MessageSquareText,
+  MessageCircle,
+  Phone,
+  MapPin,
+  LoaderCircle,
+} from 'lucide-react';
 
 const iconMap = {
   MessageSquareText,
@@ -27,7 +33,8 @@ const handleEmailClick = () => {
 const ContactUs = () => {
   const form = useRef();
   const [errors, setErrors] = useState({});
-
+  const [loading, setLoading] = useState(false);
+  const [mobileNumber, setMobileNumber] = useState('');
   const validateForm = (formData) => {
     let errors: any = {};
 
@@ -80,29 +87,33 @@ const ContactUs = () => {
 
   // Function to send email using EmailJS
   const sendEmail = (e) => {
+    console.log('form submition start');
     e.preventDefault();
     const formData = new FormData(form.current);
     const validationErrors = validateForm(formData);
-
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-
+    const data = Object.fromEntries(formData);
+    // console.log(data);
+    const templatePhrase = {
+      from_name: data.from_first_name + ' ' + data.from_last_name,
+      from_email: data.from_email,
+      from_number: mobileNumber,
+      from_company: data.from_company,
+      message: data.message,
+    };
+    // console.log(templatePhrase);
     emailjs
-      // @ts-ignore
-      .sendForm('service_tz902dr', 'template_bjzmbng', form?.current, {
+      .send('service_tz902dr', 'template_bjzmbng', templatePhrase, {
         publicKey: '7e3pjCOJgYjLD4Mu-',
       })
       .then(
-        () => {
-          console.log('SUCCESS!');
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
           // @ts-ignore
-          form?.current.reset(); // Clear form fields after submission
-          setErrors({}); // Clear validation errors
+          e.target.reset();
+          setLoading(false);
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log('FAILED...', error);
         }
       );
   };
@@ -136,7 +147,7 @@ const ContactUs = () => {
                     className="mt-2 w-full rounded-lg border border-gray-600 bg-[#1c1c1e] px-3 py-2 text-sm text-white"
                     type="text"
                     id="fname"
-                    name="from_name"
+                    name="from_first_name"
                     placeholder="Enter your first name"
                     required
                   />
@@ -149,7 +160,7 @@ const ContactUs = () => {
                     className="mt-2 w-full rounded-lg border border-gray-600 bg-[#1c1c1e] px-3 py-2 text-sm text-white"
                     type="text"
                     id="lname"
-                    name="from_name"
+                    name="from_last_name"
                     placeholder="Enter your last name"
                     required
                   />
@@ -190,7 +201,7 @@ const ContactUs = () => {
                 />
               </div>
               <div className="w-full text-sm">
-                <PhoneNumberField />
+                <PhoneField onChange={(e) => setMobileNumber(e)} />
               </div>
 
               <div className="w-full">
@@ -221,7 +232,11 @@ const ContactUs = () => {
               </div>
 
               <button className="w-full rounded-lg border bg-white px-6 py-3 text-center text-xs font-semibold text-black">
-                Get In Touch
+                {loading ? (
+                  <LoaderCircle className="mx-auto animate-spin" size={20} />
+                ) : (
+                  <p>Get In Touch</p>
+                )}
               </button>
             </form>
           </div>
@@ -249,8 +264,8 @@ const ContactUs = () => {
 
       {/* //daisy ui card */}
       <div className="mx-auto mb-6 flex w-full max-w-7xl flex-col justify-between gap-6 px-10 py-2 md:flex-row md:gap-10 md:px-4">
-        {ContactUsCardData.map((data: any) => {
-          return <ContactUsCards data={data} />;
+        {ContactUsCardData.map((data: any, idx) => {
+          return <ContactUsCards key={idx} data={data} />;
         })}
       </div>
 
@@ -262,37 +277,44 @@ const ContactUs = () => {
 
 export default ContactUs;
 
-const PhoneNumberField = () => {
-  const [value, setValue] = useState('');
+const PhoneField = ({ onChange }) => {
+  const [phone, setPhone] = useState('');
+
+  const handlePhoneChange = (value) => {
+    setPhone(value);
+    if (onChange) {
+      onChange(value);
+    }
+  };
 
   return (
-    <>
-      <div className="flex w-full flex-col">
-        <label className="mb-2 text-white" htmlFor="phone">
-          Phone Number
-        </label>
-      </div>
-      <div className="w-full">
-        <PhoneInput
-          // className="bg-[#1c1c1e] text-white"
-          // @ts-ignore
-          defaultCountry="IN"
-          placeholder="Enter your phone number"
-          country={'in'}
-          name="from_number"
-          value={value}
-          inputStyle={{
-            background: 'transparent',
-            width: '100%',
-            borderColor: 'gray',
-            color: 'gray',
-          }}
-          dropdownStyle={{ background: '#1c1c1e' }}
-          buttonStyle={{ background: 'transparent', borderColor: 'gray' }}
-          onChange={setValue}
-        />
-      </div>
-    </>
+    <div className="flex w-full max-w-sm flex-col">
+      <label className="mb-2 text-white mix-blend-difference" htmlFor="phone">
+        Phone Number
+      </label>
+      <PhoneInput
+        country={'in'}
+        value={phone}
+        onChange={handlePhoneChange}
+        placeholder={'Enter your phone number'}
+        inputStyle={{
+          width: '100%',
+          backgroundColor: '#ffffff',
+          border: '1px solid #gray',
+          borderRadius: '4px',
+          color: 'gray',
+        }}
+        dropdownStyle={{
+          backgroundColor: '#ffffff',
+          borderColor: '#gray',
+        }}
+        buttonStyle={{
+          backgroundColor: '#ffffff',
+          borderColor: '#gray',
+        }}
+        containerClass="text-black"
+      />
+    </div>
   );
 };
 

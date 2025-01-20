@@ -10,6 +10,7 @@ import { cn } from '@/utils/cn';
 import Tabs from '@/components/techohologiesOffered';
 import { Modal } from 'antd';
 import PhoneField from '@/components/header2/phoneFild';
+import emailjs from '@emailjs/browser';
 
 const HireusPage = () => {
   const [isHiremeOpen, setIsHiremeOpen] = useState(false);
@@ -17,7 +18,6 @@ const HireusPage = () => {
     <div className="w-full bg-[#1c1c1e] pt-3">
       <Header2 />
 
-      {/* Hire me form */}
       <HireMeForm open={isHiremeOpen} setIsOpen={setIsHiremeOpen} />
 
       <div className="mx-auto w-full max-w-7xl grid-rows-1 justify-between bg-[#1c1c1e] px-6 pt-10 md:px-4 lg:flex">
@@ -57,7 +57,6 @@ const HireusPage = () => {
 
         <div className="">
           <IconCloud images={iCloudIcons} />
-          {/* <img src={dev} alt="" width={500} height={500}/> */}
         </div>
       </div>
 
@@ -84,40 +83,6 @@ const HireusPage = () => {
       </div>
       <Footer1 />
     </div>
-  );
-};
-
-const PhoneNumberField = () => {
-  const [value, setValue] = useState('');
-
-  return (
-    <>
-      <div className="flex w-full flex-col">
-        <label className="mb-2 text-white" htmlFor="phone">
-          Phone Number
-        </label>
-      </div>
-      <div className="w-full">
-        <PhoneInput
-          // @ts-ignore
-          className="bg-[#1c1c1e] text-white"
-          defaultCountry="IN"
-          placeholder="Enter your phone number"
-          country={'in'}
-          name="from_number"
-          value={value}
-          inputStyle={{
-            background: 'transparent',
-            width: '100%',
-            borderColor: 'gray',
-            color: 'gray',
-          }}
-          dropdownStyle={{ background: '#1c1c1e' }}
-          buttonStyle={{ background: 'transparent', borderColor: 'gray' }}
-          onChange={setValue}
-        />
-      </div>
-    </>
   );
 };
 
@@ -194,7 +159,7 @@ function TechMindSteps() {
   return (
     <div className="grid grid-cols-2 gap-6 py-10 md:mt-6 md:gap-12 lg:flex lg:justify-between lg:py-0">
       {stepsData.map((step, index) => (
-        <div className="flex w-full flex-col gap-2" key={index}>
+        <div key={index} className="flex w-full flex-col gap-2">
           <img className="mx-auto size-24 md:size-36" src={step.image} alt="" />
           <h1 className="text-center lg:mt-[32px]">{step.heading}</h1>
         </div>
@@ -205,7 +170,7 @@ function TechMindSteps() {
 
 const statsData = [
   {
-    value: '266+',
+    value: '500+',
     description: 'Projects Delivered Till Date',
   },
   {
@@ -217,7 +182,7 @@ const statsData = [
     description: 'Experienced Resources',
   },
   {
-    value: '250+',
+    value: '98%',
     description: 'Client Retention',
   },
 ];
@@ -230,7 +195,10 @@ function StatsSection() {
       className="mx-auto grid w-full max-w-7xl grid-cols-2 justify-items-center gap-6 self-center bg-[#1c1c1e] px-6 py-10 pb-20 font-semibold text-white md:px-4 md:pt-6 lg:flex lg:justify-between"
     >
       {statsData.map((stat, index) => (
-        <div className="flex w-full max-w-72 flex-col gap-2 rounded-3xl border border-gray-400 p-6 text-center">
+        <div
+          key={index}
+          className="flex w-full max-w-72 flex-col gap-2 rounded-3xl border border-gray-400 p-6 text-center"
+        >
           <h1 className="text-4xl"> {stat.value}</h1>
           <p className="text-xl text-gray-300">{stat.description} </p>
         </div>
@@ -362,7 +330,7 @@ function HiringOptions({
     <div className={cn('w-full', idx === 1 && 'md:-translate-y-12')}>
       <div
         className={cn(
-          'group flex w-full flex-col gap-4 rounded-md border border-black duration-300 hover:-translate-y-4 lg:hover:bg-black lg:hover:text-white',
+          'group flex w-full flex-col gap-4 rounded-md border border-black text-black duration-300 hover:-translate-y-4 lg:hover:bg-black lg:hover:text-white',
           idx === 1 &&
             'bg-black text-white lg:hover:bg-white lg:hover:text-black'
         )}
@@ -387,7 +355,7 @@ function HiringOptions({
         </div>
         <div className="flex flex-col gap-2 px-4 font-medium md:px-6">
           {hiringOption.features.map((feature, idx) => (
-            <div className="flex gap-2">
+            <div key={idx} className="flex gap-2">
               <Check className="mt-0.5 shrink-0" size={20} />
               <p>{feature}</p>
             </div>
@@ -427,17 +395,48 @@ function HireMeForm({ open, setIsOpen }: any) {
   function handleCancel() {
     setIsOpen(false);
   }
+
+  const [mobileNumber, setMobileNumber] = useState('');
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    const templatePhrase = {
+      from_name: data.from_first_name + ' ' + data.from_last_name,
+      from_number: mobileNumber,
+      from_email: data.from_email,
+      from_company: data.from_company,
+      from_hiring_option: data.from_hiring_option,
+      from_role: data.from_role,
+    };
+
+    emailjs
+      .send('service_tz902dr', 'template_bjzmbng', templatePhrase, {
+        publicKey: '7e3pjCOJgYjLD4Mu-',
+      })
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          // @ts-ignore
+          e.target.reset();
+          handleCancel();
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        }
+      );
+  }
   return (
     <Modal
       open={open}
       title=""
       height=""
       width={700}
-      // onOk={handleOk}
       onCancel={handleCancel}
       footer={[]}
     >
-      <form action="">
+      <form onSubmit={handleFormSubmit}>
         <div className="">
           <div className="flex justify-between gap-6 pt-8">
             <div className="w-full">
@@ -448,6 +447,7 @@ function HireMeForm({ open, setIsOpen }: any) {
               <input
                 className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
                 type="text"
+                name="from_first_name"
                 placeholder="   Enter your First name"
               />
             </div>
@@ -456,6 +456,7 @@ function HireMeForm({ open, setIsOpen }: any) {
               <input
                 className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
                 type="text"
+                name="from_last_name"
                 placeholder="   Enter your Last name"
               />
             </div>
@@ -466,6 +467,7 @@ function HireMeForm({ open, setIsOpen }: any) {
             <input
               className="w-full rounded-lg border-2 border-black px-3 py-2"
               type="text"
+              name="from_company"
               placeholder="   Enter your company name   "
             />{' '}
             <br />
@@ -476,28 +478,38 @@ function HireMeForm({ open, setIsOpen }: any) {
             <input
               className="w-full rounded-lg border-2 border-black py-2"
               type="email"
+              name="from_email"
               placeholder="   Enter your email"
             />
           </div>
         </div>
 
         <div className="mt-6 w-full">
-          {/* <label htmlFor="">Phone Number</label> <br /> */}
-          <PhoneField />
+          <PhoneField
+            onChange={(val) => {
+              setMobileNumber(val);
+            }}
+          />
         </div>
 
         <div className="mt-6">
           <label htmlFor="">Choose how you want to hire</label> <br />
           <select
             className="w-full rounded-lg border-2 border-black py-2"
-            // placeholder="Choose A Category"
+            name="from_hiring_option"
           >
-            Choose how you want to hire
-            <option value="0">Choose a Category</option>
+            {/* Choose how you want to hire */}
+            {/* <option value="0">Choose a Category</option> */}
+            {/* <hr /> */}
+            <option value="Hire A Contractor">Hire A Contractor</option> <hr />
+            <option value="Hire An Employee On AV Payroll">
+              Hire An Employee On AV Payroll
+            </option>{' '}
             <hr />
-            <option value="1">Hire A Contractor</option> <hr />
-            <option value="2">Hire An Employee On AV Payroll</option> <hr />
-            <option value="3">Direct-hire On Your Payroll</option> <hr />
+            <option value="Direct-hire On Your Payroll">
+              Direct-hire On Your Payroll
+            </option>{' '}
+            <hr />
           </select>
         </div>
         <br />
@@ -506,28 +518,41 @@ function HireMeForm({ open, setIsOpen }: any) {
           <label htmlFor="">Which Role are you hiring for?</label> <br />
           <select
             className="w-full rounded-lg border-2 border-black py-2"
-            // placeholder="Choose A Category"
+            name="from_role"
           >
             Choose how you want to hire
-            <option value="0">Choose a Category</option>
+            {/* <option value="0">Choose a Category</option> */}
+            {/* <hr /> */}
+            <option value="Front-End Developer">
+              Front-End Developer
+            </option>{' '}
             <hr />
-            <option value="1">Front-End Developer</option> <hr />
-            <option value="2">Back-End Developer</option> <hr />
-            <option value="4">UI/UX Designer</option> <hr />
-            <option value="5">Graphic Designer</option> <hr />
-            <option value="6">Web App Development</option> <hr />
-            <option value="7">Mobile App Development</option> <hr />
-            <option value="8">Database Integration</option> <hr />
-            <option value="7">Shopify/Wordpress Development</option> <hr />
+            <option value="Back-End Developer">Back-End Developer</option>{' '}
+            <hr />
+            <option value="UI/UX Designer">UI/UX Designer</option> <hr />
+            <option value="Graphic Designer">Graphic Designer</option> <hr />
+            <option value="Web App Development">
+              Web App Development
+            </option>{' '}
+            <hr />
+            <option value="Mobile App Development">
+              Mobile App Development
+            </option>{' '}
+            <hr />
+            <option value="Database Integration">
+              Database Integration
+            </option>{' '}
+            <hr />
+            <option value="Shopify/Wordpress Development">
+              Shopify/Wordpress Development
+            </option>{' '}
+            <hr />
           </select>
         </div>
 
         <button
           className="mt-[2.5rem] w-full rounded-lg bg-black px-8 py-3 text-white"
-          key="submit"
-          // type="primary"
-          // loading={loading}
-          // onClick={handleOk}
+          type="submit"
         >
           Get In touch
         </button>

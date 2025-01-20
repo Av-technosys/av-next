@@ -7,7 +7,7 @@ import Footer1 from '@/app/footer1';
 const Page = async (context: any) => {
   const slug = context.params.id;
 
-  const URL = `https://av-blog.onrender.com/api/blogs?filters[slug][$eq]=${slug}&populate=*`;
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`;
 
   console.log(URL);
 

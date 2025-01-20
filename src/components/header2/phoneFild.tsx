@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
-import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
-const PhoneField = () => {
+const PhoneField = ({ onChange }) => {
   const [phone, setPhone] = useState('');
+
+  const handlePhoneChange = (value) => {
+    setPhone(value);
+    if (onChange) {
+      onChange(value);
+    }
+  };
 
   return (
     <div className="flex w-full max-w-sm flex-col">
@@ -13,22 +20,21 @@ const PhoneField = () => {
       <PhoneInput
         country={'in'}
         value={phone}
-        onChange={setPhone}
-        placeholder={'Enter your phone number '}
+        onChange={handlePhoneChange}
+        placeholder={'Enter your phone number'}
         inputStyle={{
           width: '100%',
-          backgroundColor: '#white',
+          backgroundColor: '#ffffff',
           border: '1px solid #gray',
-          borderRadius: '',
+          borderRadius: '4px',
           color: 'gray',
-          // mixBlendMode: 'color',
         }}
         dropdownStyle={{
-          backgroundColor: '#white',
+          backgroundColor: '#ffffff',
           borderColor: '#gray',
         }}
         buttonStyle={{
-          backgroundColor: '#white',
+          backgroundColor: '#ffffff',
           borderColor: '#gray',
         }}
         containerClass="text-black"

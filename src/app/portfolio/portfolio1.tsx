@@ -5,16 +5,16 @@ import { ProjectDataSchema } from './types';
 import Link from 'next/link';
 import { ArrowUpRight, Check } from 'lucide-react';
 
-const PortfolioPage1 = ({ data }: { data: ProjectDataSchema }) => {
+const PortfolioPage1 = ({ data }: { data: any }) => {
   return (
     <div className="w-full bg-[#1c1c1e]">
       <hr className="bg-white text-white" />
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:px-4">
         <div className="flex h-full max-h-screen min-h-[36rem] justify-between gap-6">
           <div className="flex h-full w-full flex-col justify-between gap-12 md:min-h-[32rem]">
-            <ProjectLogo logo={data.logo} />
+            <ProjectLogo logo={data?.logo?.url} />
             <div className="block w-full md:hidden">
-              <BannerImage bannerImage={data.bannerImage} />
+              <BannerImage bannerImage={data?.bannerImage?.url} />
             </div>
             <AboutProject
               name={data.name}
@@ -23,7 +23,7 @@ const PortfolioPage1 = ({ data }: { data: ProjectDataSchema }) => {
             />
           </div>
           <div className="hidden w-full md:block">
-            <BannerImage bannerImage={data.bannerImage} />
+            <BannerImage bannerImage={data?.bannerImage?.url} />
           </div>
         </div>
         <div className="flex w-full flex-col gap-6 md:flex-row">
@@ -70,7 +70,11 @@ function TechUsed({ techStack }: { techStack: string[] }) {
       <div className="grid w-full max-w-96 grid-cols-4 flex-wrap">
         {techStack.map((item) => (
           <div className="">
-            <img src={item} className="size-20 object-contain" alt="" />
+            <img
+              src={`./${item}.svg`}
+              className="size-20 object-contain"
+              alt=""
+            />
           </div>
         ))}
       </div>
@@ -109,18 +113,19 @@ function Solutions({ solutions }) {
   return (
     <div className="w-full max-w-lg text-xl font-semibold text-white lg:text-[32px]">
       Solutions
-      {solutions.map((solution) => (
-        <div className="px-2">
-          <h1 className="mt-2 font-normal text-white lg:mt-6">
-            {solution.title}
-          </h1>
-          <ul className="ml-5 mt-5 list-disc text-xl font-normal lg:text-[1rem]">
-            {solution.points.map((item: string) => (
-              <li className="text-gray-200">{item}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      {Array.isArray(solutions) &&
+        solutions.map((solution) => (
+          <div className="px-2">
+            <h1 className="mt-2 font-normal text-white lg:mt-6">
+              {solution.title}
+            </h1>
+            <ul className="ml-5 mt-5 list-disc text-xl font-normal lg:text-[1rem]">
+              {solution.points.map((item: string) => (
+                <li className="text-gray-200">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
     </div>
   );
 }

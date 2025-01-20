@@ -10,7 +10,7 @@ import Link from 'next/link';
 const Blog = () => {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
-  const blogURL = `https://av-blog.onrender.com/api/blogs?populate[blog_image]=true&sort[0]=updatedAt:desc&populate[category][fields][0]=id&populate[category][fields][1]=name&populate[category][fields][2]=slug&fields[0]=id&fields[1]=title&fields[2]=createdAt&fields[3]=description&fields[4]=slug`;
+  const blogURL = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate[blog_image]=true&sort[0]=updatedAt:desc&populate[category][fields][0]=id&populate[category][fields][1]=name&populate[category][fields][2]=slug&fields[0]=id&fields[1]=title&fields[2]=createdAt&fields[3]=description&fields[4]=slug`;
   useEffect(() => {
     setLoading(true);
     async function getBlogData() {

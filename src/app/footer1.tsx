@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import './Footer.css';
 import { useState } from 'react';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer1 = () => {
   return (
@@ -17,23 +18,37 @@ const Footer1 = () => {
           </h6>
         </div>
         <hr />
-        <div className="fontTest mx-auto flex w-full max-w-7xl flex-col justify-between space-y-5 px-6 pt-12 text-[1rem] font-semibold md:flex-row md:space-y-0 md:px-4">
-          <div className="flex w-full items-center">
-            <p className="max-w-xl">
-              AV Technosys isn’t your typical tech company – we’re the crew that
-              flips the script on what’s possible. We take your biggest ideas
-              and turn them into digital experiences that make people stop,
-              stare, and scroll back.{' '}
-            </p>
+        <div className="mx-auto flex w-full max-w-7xl flex-col px-6 md:px-4">
+          <div className="flex flex-col gap-6 border-t border-neutral-700 py-8 md:flex-row">
+            {footerData.map((item, idx) => {
+              return <FooterList key={idx} data={item} />;
+            })}
+
+            <div className="mt-4 flex w-full gap-4 text-gray-200 md:mt-0 md:justify-end">
+              <Facebook
+                className="cursor-pointer duration-200 hover:scale-125"
+                size={22}
+              />
+              <Instagram
+                className="cursor-pointer duration-200 hover:scale-125"
+                size={22}
+              />
+              <Twitter
+                className="cursor-pointer duration-200 hover:scale-125"
+                size={22}
+              />
+              <Linkedin
+                className="cursor-pointer duration-200 hover:scale-125"
+                size={22}
+              />
+            </div>
           </div>
-          <ContactDetails />
+          <div className="flex justify-center py-10">
+            <h3 className="w-[90%] text-center text-3xl duration-500 hover:scale-75 hover:opacity-50 md:text-4xl lg:text-7xl">
+              Driving Digital Innovation, Powering Marketing Success
+            </h3>
+          </div>
         </div>
-        <div className="mx-auto flex max-w-7xl justify-center px-6 py-10 md:px-4">
-          <h3 className="text-center text-3xl duration-500 hover:scale-75 hover:opacity-50 md:text-4xl lg:text-[7rem] xl:text-8xl">
-            Driving Digital Innovation, Powering Marketing Success
-          </h3>
-        </div>
-            
       </footer>
     </>
   );
@@ -41,114 +56,102 @@ const Footer1 = () => {
 
 export default Footer1;
 
-function ContactDetails() {
-  const [showText, setShowText] = useState('');
+function FooterList({ data }: any) {
   return (
-    <div className="flex w-full max-w-md justify-between">
-      <div className="flex w-full">
-        <div className="h-full border-r pr-4">
-          <div className="flex h-full flex-col gap-4 md:justify-between">
-            <p
-              onMouseLeave={() => setShowText('')}
-              onMouseEnter={() => setShowText('+91 99830-34111')}
+    <div className="flex w-full max-w-60 flex-col gap-4">
+      <p>{data.name}</p>
+      <div className="flex flex-col gap-2">
+        {data.links.map((item: any, idx: number) => {
+          return (
+            <Link
+              href={item.link}
+              className="cursor-pointer text-gray-400 duration-200 hover:text-white hover:underline"
+              key={idx}
             >
-              Contact
-            </p>
-            <p
-              onMouseLeave={() => setShowText('')}
-              onMouseEnter={() =>
-                setShowText(
-                  '238, 2nd Floor, Mangalam Metropolis Tower, Purani Chungi, Vaishali Nagar, Jaipur, Rajasthan 302017'
-                )
-              }
-            >
-              Address
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col justify-between gap-7 px-4 md:hidden">
-          <p className="text-center text-xs">+91 99830-34111</p>
-          <p className="text-center text-xs">
-            238, 2nd Floor, Mangalam Metropolis Tower, Purani Chungi, Vaishali
-            Nagar, Jaipur, Rajasthan 302017
-          </p>
-        </div>
-        <div className="hidden w-full items-center justify-center text-center md:flex">
-          <AnimatePresence>
-            {showText && (
-              <motion.p
-                className="w-full px-6 text-center text-sm font-semibold"
-                initial={{
-                  opacity: 0,
-                  y: 50,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 50,
-                }}
-                transition={{
-                  duration: 0.2,
-                }}
-              >
-                {showText}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </div>
-      </div>
-      <div className="border-l pl-2">
-        <ul>
-          <a
-            href="https://www.instagram.com/avtechnosys/"
-            className="group flex items-center gap-2"
-            target="_blank"
-          >
-            <Instagram
-              className="opacity-0 duration-200 group-hover:opacity-100"
-              size={18}
-            />
-            <li className="">Instagram</li>
-          </a>
-          <a
-            href="https://www.facebook.com/people/AV-Technosys/"
-            target="_blank"
-            className="group flex items-center gap-2"
-          >
-            {' '}
-            <Facebook
-              className="opacity-0 duration-200 group-hover:opacity-100"
-              size={18}
-            />
-            <li className="">Facebook</li>
-          </a>
-          <a
-            href="https://x.com/AvTechnosys"
-            className="group flex items-center gap-2"
-            target="_blank"
-          >
-            <Twitter
-              className="opacity-0 duration-200 group-hover:opacity-100"
-              size={18}
-            />
-            <li className="">Twitter</li>
-          </a>
-          <a
-            href="https://www.linkedin.com/company/av-technosys/mycompany/"
-            target="_blank"
-            className="group flex items-center gap-2"
-          >
-            <Linkedin
-              className="opacity-0 duration-200 group-hover:opacity-100"
-              size={18}
-            />
-            <li className="">Linkedin</li>
-          </a>
-        </ul>
+              {item.name}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
 }
+
+const footerData = [
+  {
+    name: 'Services',
+    links: [
+      {
+        name: 'Web Development',
+        link: '/services#0',
+      },
+      {
+        name: 'Web Design',
+        link: '/services#1',
+      },
+      {
+        name: 'Mobile App Development',
+        link: '/services#2',
+      },
+      {
+        name: 'Web Hosting',
+        link: '/services#3',
+      },
+      {
+        name: 'E-Commerce',
+        link: '/services#4',
+      },
+      {
+        name: 'Quality Assurance',
+        link: '/services#5',
+      },
+      {
+        name: 'Digital Marketing',
+        link: '/services#6',
+      },
+      {
+        name: 'Cloud Computing',
+        link: '/services#7',
+      },
+    ],
+  },
+  {
+    name: 'Product',
+    links: [
+      {
+        name: 'About Us',
+        link: '/about-us',
+      },
+      {
+        name: 'Services',
+        link: '/esrvices',
+      },
+      {
+        name: 'Portfolio',
+        link: '/portfolio',
+      },
+      {
+        name: 'Career',
+        link: '/career',
+      },
+      {
+        name: 'Blog',
+        link: '/blog',
+      },
+    ],
+  },
+
+  {
+    name: 'Company',
+    links: [
+      {
+        name: 'Hire Us',
+        link: '/hire-us',
+      },
+      {
+        name: 'Contact Us',
+        link: '/contact-us',
+      },
+    ],
+  },
+];
