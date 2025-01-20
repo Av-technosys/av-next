@@ -68,7 +68,7 @@ function TechUsed({ techStack }: { techStack: string[] }) {
         Technology Stack Used
       </p>
       <div className="grid w-full max-w-96 grid-cols-4 flex-wrap">
-        {techStack.map((item) => (
+        {techStack?.map((item) => (
           <div className="">
             <img
               src={`./${item}.svg`}
@@ -94,7 +94,7 @@ function ProjectBreakDown({
       </h1>
       <div className="mt-3 flex">
         <ul className="flex flex-col gap-2 text-lg lg:text-[1rem]">
-          {projectBreakDown.map((item) => (
+          {projectBreakDown?.map((item) => (
             <li className="flex gap-2">
               {' '}
               <div className="mt-1 flex h-fit w-fit items-center justify-center rounded-full bg-white p-0.5">
@@ -120,7 +120,7 @@ function Solutions({ solutions }) {
               {solution.title}
             </h1>
             <ul className="ml-5 mt-5 list-disc text-xl font-normal lg:text-[1rem]">
-              {solution.points.map((item: string) => (
+              {solution?.points?.map((item: string) => (
                 <li className="text-gray-200">{item}</li>
               ))}
             </ul>
