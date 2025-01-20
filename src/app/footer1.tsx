@@ -82,36 +82,24 @@ const footerData = [
     name: 'Services',
     links: [
       {
-        name: 'Web Development',
+        name: 'Digital Enterprise',
         link: '/services#0',
       },
       {
-        name: 'Web Design',
+        name: 'Digital Experience',
         link: '/services#1',
       },
       {
-        name: 'Mobile App Development',
+        name: 'Digital Marketing',
         link: '/services#2',
       },
       {
-        name: 'Web Hosting',
+        name: 'Digital Innovation',
         link: '/services#3',
       },
       {
-        name: 'E-Commerce',
+        name: 'Cloud Transformation',
         link: '/services#4',
-      },
-      {
-        name: 'Quality Assurance',
-        link: '/services#5',
-      },
-      {
-        name: 'Digital Marketing',
-        link: '/services#6',
-      },
-      {
-        name: 'Cloud Computing',
-        link: '/services#7',
       },
     ],
   },

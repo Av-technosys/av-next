@@ -4,14 +4,17 @@ import Footer1 from '../footer1';
 import { title } from 'process';
 import {
   ArrowUpRight,
+  Building2,
   CheckSquare,
   Cloud,
+  Lightbulb,
   Megaphone,
   MonitorSmartphone,
   Paintbrush,
   Server,
   ShoppingCart,
   TabletSmartphone,
+  UsersRound,
 } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/utils/cn';
@@ -33,69 +36,48 @@ export default Page;
 
 const servicesData = [
   {
-    title: 'Web Development',
+    title: 'Digital Enterprise',
     description:
-      'We craft custom, scalable websites that are as functional as they are powerful. Whether you need a sleek portfolio site or a complex web application, we deliver top-tier solutions that drive results and engage users.',
-    subTitle: 'Build the Future of Your Business Online',
+      'At AV Technosys, we help businesses embrace digital transformation with innovative strategies, advanced technologies, and optimized processes to drive success and scalability.',
+    subTitle: 'Empowering Businesses with Digital Excellence',
     Icon: MonitorSmartphone,
     image: 'https://unsplash.it/300/200?random=1',
   },
 
   {
-    title: 'Web Design',
+    title: 'Digital Experience',
     description:
-      'Our designs are more than just beautiful—they’re built to capture attention and turn visitors into customers. We create responsive, user-friendly websites that shine on any device and make an unforgettable impression.',
-    subTitle: 'Designs That Engage, Convert, and Inspire',
-    Icon: Paintbrush,
+      'At AV Technosys, we create exceptional digital experiences that engage users, elevate brand interactions, and drive business success. By leveraging innovative technologies and design principles, we ensure every customer touchpoint is seamless, intuitive, and impactful.',
+    subTitle: 'Enhancing Engagement and Interaction Across Platforms',
+    Icon: Building2,
     image: 'https://unsplash.it/300/200?random=2',
   },
-  {
-    title: 'Mobile App Development',
-    description:
-      "We build mobile apps for iOS and Android that are intuitive, seamless, and packed with features. Whether you're launching a new app or enhancing an existing one, we create experiences that keep your users coming back.",
-    subTitle: 'Revolutionizing User Experiences on Mobile',
-    Icon: TabletSmartphone,
-    image: 'https://unsplash.it/300/200?random=6',
-  },
-  {
-    title: 'Web Hosting',
-    description:
-      'Your website deserves the best. We provide fast, secure, and reliable web hosting solutions that keep your site running smoothly 24/7. Our hosting is designed to scale as your business grows, ensuring optimal performance at all times.',
-    subTitle: 'Speed, Security, and Reliability—All in One',
-    Icon: Server,
-    image: 'https://unsplash.it/300/200?random=3',
-  },
-  {
-    title: 'E-Commerce',
-    description:
-      'We create secure, feature-packed e-commerce platforms that deliver exceptional shopping experiences. From small stores to large-scale e-commerce sites, we help you drive sales and build lasting customer loyalty.',
-    subTitle: 'Transforming the Way You Sell Online',
-    Icon: ShoppingCart,
-    image: 'https://unsplash.it/300/200?random=4',
-  },
-  {
-    title: 'Quality Assurance',
-    description:
-      'We take the guesswork out of tech. Our rigorous quality assurance process ensures that your website, app, or software runs flawlessly across all platforms. We test every detail to ensure optimal performance and reliability.',
-    subTitle: 'Flawless Performance, Every Time',
-    Icon: CheckSquare,
-    image: 'https://unsplash.it/300/200?random=5',
-  },
+
   {
     title: 'Digital Marketing',
     description:
-      'We help you amplify your brand’s presence and attract your ideal customers with smart digital marketing strategies. From SEO and social media to PPC and content marketing, we boost your online visibility and turn clicks into conversions.',
-    subTitle: 'Get Noticed, Get Results',
-    Icon: Megaphone,
-    image: 'https://unsplash.it/300/200?random=6',
+      'At AV Technosys, we craft data-driven marketing strategies to help businesses grow, reach their audience, and increase brand awareness. By leveraging innovative tools and techniques, we deliver measurable results that drive engagement and success.',
+    subTitle: 'Driving Growth Through Innovation',
+    Icon: UsersRound,
+    image: 'https://unsplash.it/300/200?random=3',
   },
+
   {
-    title: 'Cloud Computing',
+    title: 'Digital Innovation',
     description:
-      'We make it easy to access, store, and collaborate on your data securely with our cloud computing services. Our flexible cloud solutions help you scale your business efficiently, while keeping everything safe and accessible.',
-    subTitle: 'Unlock the Power of the Cloud',
+      'At AV Technosys, we drive digital innovation by leveraging the latest technologies and creative solutions. Our approach empowers businesses to stay ahead of the competition and thrive in an ever-evolving digital landscape.',
+    subTitle: 'Shaping the Future of Business',
+    Icon: Lightbulb,
+    image: 'https://unsplash.it/300/200?random=4',
+  },
+
+  {
+    title: 'Cloud Transformation',
+    description:
+      'At AV Technosys, we guide organizations through seamless cloud transitions, empowering them to scale, innovate, and operate with enhanced efficiency, flexibility, and cost savings.',
+    subTitle: 'Enabling Scalable, Agile Business Solutions',
     Icon: Cloud,
-    image: 'https://unsplash.it/300/200?random=6',
+    image: 'https://unsplash.it/300/200?random=5',
   },
 ];
 
@@ -173,7 +155,7 @@ const statsData = [
 
 function ShowServices() {
   return (
-    <div className="mx-auto mt-24 grid w-full max-w-7xl grid-cols-1 gap-4 px-6 sm:grid-cols-2 md:grid-cols-4 md:px-4">
+    <div className="mx-auto mt-24 grid w-full max-w-7xl grid-cols-1 gap-4 px-6 sm:grid-cols-2 md:grid-cols-3 md:px-4">
       {servicesData.map((data, idx) => {
         return <ServiceCard idx={idx} data={data} />;
       })}
