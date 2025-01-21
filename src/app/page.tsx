@@ -14,6 +14,7 @@ import { ArrowUpRight, Dot } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
 import Tabs from '@/components/techohologiesOffered';
+import PlatformReview from '@/components/platformReview';
 
 const Home = () => {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -58,6 +59,8 @@ const Home = () => {
       <Form1 />
       <Hero />
       <ImageWithBorders />
+      <PlatformReview />
+      {/* <div className="h-6"></div> */}
       <Footer1 />
 
       {/* <div className="h-60"></div> */}
@@ -149,7 +152,7 @@ function Service({
               </li>
             ))}
           </ul>
-          <ReadMoreButton isDark={isDark} link="" />
+          <ReadMoreButton isDark={isDark} link={`/services#${idx}`} />
         </div>
         <div className="hidden w-full max-w-md overflow-hidden rounded-3xl md:block">
           <img

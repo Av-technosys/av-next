@@ -9,11 +9,11 @@ const Footer1 = () => {
   return (
     <>
       <footer className="fontTest lg:pt bg-[#1c1c1e] text-white">
-        <div className="mx-auto w-full max-w-7xl p-6 lg:pb-[4rem]">
-          <h4 className="py-3 text-2xl font-semibold md:text-6xl">
+        <div className="mx-auto w-full max-w-7xl p-6 lg:pb-12">
+          <h4 className="py-2 text-2xl font-semibold md:text-6xl">
             Contact Us
           </h4>
-          <h6 className="py-6 text-2xl text-[#787878] duration-200 hover:text-white md:text-7xl">
+          <h6 className="py-4 text-2xl text-[#787878] duration-200 hover:text-white md:text-7xl">
             sales@avtechnosys.com
           </h6>
         </div>
