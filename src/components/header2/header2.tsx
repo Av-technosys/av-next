@@ -121,7 +121,7 @@ const Header2 = () => {
               </ul>
               <div className="grid gap-2">
                 <button className="rounded-sm border border-black py-1">
-                  <Link href="/hireus">Hire Us</Link>
+                  <Link href="/hire-us">Hire Us</Link>
                 </button>
                 <button className="rounded-sm border border-black py-1">
                   {' '}

@@ -25,22 +25,34 @@ const Footer1 = () => {
             })}
 
             <div className="mt-4 flex w-full gap-4 text-gray-200 md:mt-0 md:justify-end">
-              <Facebook
-                className="cursor-pointer duration-200 hover:scale-125"
-                size={22}
-              />
-              <Instagram
-                className="cursor-pointer duration-200 hover:scale-125"
-                size={22}
-              />
-              <Twitter
-                className="cursor-pointer duration-200 hover:scale-125"
-                size={22}
-              />
-              <Linkedin
-                className="cursor-pointer duration-200 hover:scale-125"
-                size={22}
-              />
+              <Link href={'https://www.facebook.com/people/AV-Technosys/'}>
+                <Facebook
+                  className="cursor-pointer duration-200 hover:scale-125"
+                  size={22}
+                />
+              </Link>
+              <Link href={'https://www.instagram.com/avtechnosys/'}>
+                <Instagram
+                  className="cursor-pointer duration-200 hover:scale-125"
+                  size={22}
+                />
+              </Link>
+              <Link href={'https://x.com/AvTechnosys'}>
+                <Twitter
+                  className="cursor-pointer duration-200 hover:scale-125"
+                  size={22}
+                />
+              </Link>
+              <Link
+                href={
+                  'https://www.linkedin.com/company/av-technosys/mycompany/'
+                }
+              >
+                <Linkedin
+                  className="cursor-pointer duration-200 hover:scale-125"
+                  size={22}
+                />
+              </Link>
             </div>
           </div>
           <div className="flex justify-center py-10">

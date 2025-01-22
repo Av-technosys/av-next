@@ -6,6 +6,7 @@ import { LoaderCircle } from 'lucide-react';
 
 const Form1 = () => {
   const form = useRef<any>();
+  const [formSubmitionMessage, setFormSubmitionMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<any>({});
 
@@ -57,10 +58,12 @@ const Form1 = () => {
           console.log('SUCCESS!');
           // @ts-ignore
           form?.current.reset();
+          setFormSubmitionMessage('The form is submited successfully');
           setErrors({});
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setFormSubmitionMessage('Something went wrong. Please try again.');
         }
       );
 
@@ -80,7 +83,7 @@ const Form1 = () => {
               type="text"
               name="from_name"
               placeholder="What is your name ?"
-              className="w-full border-b-2 border-b-gray-200 bg-transparent pb-4 pr-8 text-lg text-white outline-none md:w-auto md:pb-6 md:pr-12 md:text-3xl lg:pb-6 lg:pr-16 lg:text-[1.5rem]"
+              className="w-full border-b-2 border-b-gray-200 bg-transparent p-4 text-lg text-white outline-none ring-gray-400 focus:rounded focus:ring-1 md:w-auto md:text-3xl lg:text-[1.5rem]"
             />
             {errors.from_name && (
               <span className="text-red-500">{errors.from_name}</span>
@@ -90,7 +93,7 @@ const Form1 = () => {
               type="text"
               name="from_email"
               placeholder="What is your Email ?"
-              className="border-b-2 border-b-gray-200 bg-transparent pb-4 pr-8 text-lg text-white outline-none md:w-auto md:pb-6 md:pr-12 md:text-3xl lg:pb-6 lg:pr-16 lg:text-[1.5rem]"
+              className="border-b-2 border-b-gray-200 bg-transparent p-4 text-lg text-white outline-none focus:rounded focus:ring-1 focus:ring-gray-400 md:w-auto md:text-3xl lg:text-[1.5rem]"
             />
 
             {errors.from_email && (
@@ -102,12 +105,17 @@ const Form1 = () => {
               type="text"
               name="message"
               placeholder="Tell us about your business and project"
-              className="w-full border-b-2 border-b-gray-200 bg-transparent pb-4 text-lg text-white outline-none md:pb-6 md:text-3xl lg:w-[100%] lg:text-[1.5rem]"
+              className="w-full border-b-2 border-b-gray-200 bg-transparent p-4 text-lg text-white outline-none focus:rounded focus:ring-1 focus:ring-gray-400 md:text-3xl lg:w-[100%] lg:text-[1.5rem]"
             />
             {errors.message && (
               <span className="text-red-500">{errors.message}</span>
             )}
           </div>
+          {formSubmitionMessage && (
+            <div className="mt-4">
+              <p>{formSubmitionMessage}</p>
+            </div>
+          )}
           <div className="lg:mr- mt-14 flex justify-end lg:mt-20">
             <button
               type="submit"

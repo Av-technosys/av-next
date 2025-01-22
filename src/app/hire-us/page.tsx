@@ -107,7 +107,7 @@ function HireNow({ setIsHiremeOpen }: { setIsHiremeOpen: any }) {
   };
   return (
     <div className="rounded-t-[4rem] bg-gray-50 py-16 md:py-24 lg:rounded-t-[10rem]">
-      <div className="mx-auto max-w-7xl px-10 md:px-4">
+      <div className="mx-auto max-w-7xl px-10 text-black md:px-4">
         <h1 className="text-3xl font-semibold lg:text-[4rem] lg:leading-[4rem]">
           Every business has <br />
           <span className="text-[#4643CC]">unique security needs</span>

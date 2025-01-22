@@ -20,7 +20,7 @@ const Partners = () => {
             and drive global success.
           </p>
           <Link
-            href={'/Contact'}
+            href={'/contact-us'}
             className="mt-4 flex items-center gap-4 hover:opacity-50"
           >
             <div className="flex size-4 items-center justify-center rounded-full bg-white p-1">
