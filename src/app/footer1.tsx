@@ -24,7 +24,7 @@ const Footer1 = () => {
               return <FooterList key={idx} data={item} />;
             })}
 
-            <div className="mt-4 flex w-full gap-4 text-gray-200 md:mt-0 md:justify-end">
+            <div className="ml-auto mt-4 flex gap-4 text-gray-200 md:mt-0 md:justify-end">
               <Link href={'https://www.facebook.com/people/AV-Technosys/'}>
                 <Facebook
                   className="cursor-pointer duration-200 hover:scale-125"
@@ -124,7 +124,7 @@ const footerData = [
       },
       {
         name: 'Services',
-        link: '/esrvices',
+        link: '/services',
       },
       {
         name: 'Portfolio',
@@ -151,6 +151,19 @@ const footerData = [
       {
         name: 'Contact Us',
         link: '/contact-us',
+      },
+    ],
+  },
+  {
+    name: 'Contact Info',
+    links: [
+      {
+        name: '+91 99830-34111',
+        link: '/',
+      },
+      {
+        name: '238, 2nd Floor, Mangalam Metropolis Tower, Purani Chungi, Vaishali Nagar, Jaipur, Rajasthan 302017',
+        link: '/',
       },
     ],
   },

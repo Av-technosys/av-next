@@ -134,23 +134,23 @@ function HireNow({ setIsHiremeOpen }: { setIsHiremeOpen: any }) {
 
 const stepsData = [
   {
-    image: './vector.svg',
+    image: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/Vector.svg',
     heading: 'Send accross your detailed project requirements',
   },
   {
-    image: './vector1.svg',
+    image: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/Vector1.svg',
     heading: 'Connect with our tech experts',
   },
   {
-    image: './vector2.svg',
+    image: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/Vector2.svg',
     heading: 'Choose the top candidates for screening',
   },
   {
-    image: './vector3.svg',
+    image: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/Vector3.svg',
     heading: 'Conduct interviews with the shortlisted candidates',
   },
   {
-    image: './vector4.svg',
+    image: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/Vector4.svg',
     heading: 'Choose the top candidates for screening',
   },
 ];

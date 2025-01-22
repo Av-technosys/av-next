@@ -34,7 +34,7 @@ function HeroSection() {
   return (
     <div className="mx-auto flex h-full min-h-96 w-full max-w-7xl flex-col gap-2 px-6 py-3 md:px-4">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-6 py-6">
-        <p className="text-center text-5xl font-medium md:text-6xl">
+        <p className="text-center text-5xl font-medium text-white md:text-6xl">
           About AV Technosys
         </p>
         <p className="text-center text-gray-200">
@@ -51,8 +51,8 @@ function HeroSection() {
         href={'/hire-us'}
         className="mx-auto flex w-fit cursor-pointer items-center gap-2 rounded border border-neutral-400 bg-neutral-800 px-4 py-2 font-semibold duration-200 hover:gap-3 hover:bg-white hover:text-black"
       >
-        <p>Hire Us</p>
-        <ArrowUpRight size={20} />
+        <p className="text-white">Hire Us</p>
+        <ArrowUpRight color="#fff" size={20} />
       </Link>
     </div>
   );
@@ -115,7 +115,9 @@ const whyAVData = [
 function ApproachSection() {
   return (
     <div className="mx-auto mt-16 flex w-full max-w-7xl flex-col gap-6 px-6 md:px-4">
-      <p className="text-4xl font-semibold md:text-5xl">Development Process</p>
+      <p className="text-4xl font-semibold text-white md:text-5xl">
+        Development Process
+      </p>
       <StickyScrollRevealDemo />
     </div>
   );

@@ -159,7 +159,7 @@ const Header2 = () => {
         {/* <Outlet /> */}
         <div className="hidden shrink-0 justify-end gap-4 pl-8 lg:flex">
           <button className="rounded-lg border border-gray-700 px-8">
-            <Link href="/hireus"> Hire us</Link>
+            <Link href="/hire-us"> Hire us</Link>
           </button>
           <div className="flex items-center gap-2 rounded-lg border px-3">
             <div className="flex h-fit w-fit items-center justify-center rounded-full bg-white p-0.5">

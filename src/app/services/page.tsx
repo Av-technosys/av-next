@@ -138,7 +138,7 @@ function HeroSection() {
   return (
     <div className="mx-auto flex h-full min-h-80 w-full max-w-7xl flex-col gap-8 px-6 py-3 md:px-4">
       <div className="flex w-full flex-col gap-6 py-6">
-        <p className="text-center text-5xl font-medium md:text-6xl">
+        <p className="text-center text-5xl font-medium text-white md:text-6xl">
           Our Services
         </p>
         <p className="mx-auto max-w-2xl text-center text-gray-300">
@@ -153,8 +153,8 @@ function HeroSection() {
         href={'/hire-us'}
         className="mx-auto flex w-fit cursor-pointer items-center gap-2 rounded border border-neutral-400 bg-neutral-800 px-8 py-2 font-semibold duration-200 hover:gap-3 hover:bg-white hover:text-black"
       >
-        <p>Hire Us</p>
-        <ArrowUpRight size={20} />
+        <p className="text-white">Hire Us</p>
+        <ArrowUpRight color="#fff" size={20} />
       </Link>
     </div>
   );
@@ -220,7 +220,7 @@ function ServiceCard({ data, idx }: any) {
   return (
     <Link
       href={`#${idx}`}
-      className="flex w-full cursor-pointer flex-col gap-4 rounded-xl border border-neutral-600 bg-neutral-800 p-4 duration-300 hover:border-gray-400 hover:shadow hover:shadow-gray-500"
+      className="flex w-full cursor-pointer flex-col gap-4 rounded-xl border border-neutral-600 bg-neutral-800 p-4 text-white duration-300 hover:border-gray-400 hover:shadow hover:shadow-gray-500"
     >
       <data.Icon size={32} />
       <p className="text-2xl font-semibold">{data.title}</p>
@@ -261,7 +261,7 @@ function ServiceDetailsCard({
     <div
       id={idx}
       className={cn(
-        'flex w-full flex-col-reverse justify-between gap-6 py-6 md:flex-row',
+        'flex w-full flex-col-reverse justify-between gap-6 py-6 text-white md:flex-row',
         idx % 2 !== 0 ? 'md:flex-row-reverse' : ''
       )}
     >
