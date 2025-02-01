@@ -230,7 +230,7 @@ const HeaderHome = () => {
                   <Link href="/services">Services</Link>
                 </li>
                 <li className="py-3 text-xl">
-                  <Link href="/Portfolio">Portfolio</Link>
+                  <Link href="/portfolio">Portfolio</Link>
                 </li>
                 <li className="py-3 text-xl">
                   <Link href="/blog">Blog</Link>

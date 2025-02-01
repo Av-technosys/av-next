@@ -24,7 +24,7 @@ const Footer1 = () => {
               return <FooterList key={idx} data={item} />;
             })}
 
-            <div className="ml-auto mt-4 flex gap-4 text-gray-200 md:mt-0 md:justify-end">
+            <div className="md:ml-auto mt-4 flex gap-4 text-gray-200 md:mt-0 md:justify-end">
               <Link href={'https://www.facebook.com/people/AV-Technosys/'}>
                 <Facebook
                   className="cursor-pointer duration-200 hover:scale-125"

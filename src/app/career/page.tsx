@@ -170,29 +170,25 @@ const cureerCardData = [
   {
     name: 'Benefits',
     description: [
-      'At Microsoft, you’ll take risks, push boundaries, and grow more than you thought possible. And you won’t be alone on that journey. We have something special here; we put our employees at the center of everything we do, and we know that what we offer is essential not only to your work but to your life too. ',
-      'In addition to world-class benefits designed to help you and your family live well, we offer competitive pay, bonuses and stock awards to eligible employees based on individual performance, as well as benefits to help you lead a healthy life, invest in your future, and enjoy your journey here at Microsoft. Empowering you. So, you can empower the world.',
+      `At AV's, we value our team and offer a dynamic work environment that fosters growth and innovation. Our employees enjoy competitive salaries, comprehensive health benefits, professional development opportunities, and a supportive culture. Join us to collaborate with top talent, enhance your skills, and shape the future of technology while enjoying work-life balance and a range of employee perks. Your career at AV's is not just a job—it's a path to growth and success.`,
     ],
   },
   {
     name: 'Culture',
     description: [
-      'We fundamentally believe that we need a culture founded in a growth mindset. It starts with a belief that everyone can grow and develop; that potential is nurtured, not pre-determined; and that anyone can change their mindset. ',
-      'We need to be always learning and insatiably curious. We need to be willing to lean into uncertainty, take risks and move quickly when we make mistakes, recognizing failure happens along the way to mastery.',
+      `At AV's, our culture is built on collaboration, innovation, and respect. We encourage creativity and provide an inclusive environment where diverse ideas thrive. Employees benefit from flexible work arrangements, a supportive team atmosphere, and ample opportunities for personal and professional growth. Our commitment to work-life balance, continuous learning, and employee well-being ensures that every team member can thrive both inside and outside of the office. Join us and experience a workplace where your contributions truly matter.`,
     ],
   },
   {
     name: 'Diversity and inclusion',
     description: [
-      'We start with our senior-most leaders. Microsoft’s Board of Directors is one of the most diverse of any technology company today, with women and racial and ethnic minorities holding nine of our 12 positions.',
-      'At Microsoft, our diverse backgrounds are helping build better technology. We share stories of how our technological developments are changing our future and empowering us all.',
+      `At AV's, diversity and inclusion are at the heart of our success. We believe that a diverse workforce brings unique perspectives, fosters innovation, and drives excellence. Our inclusive culture ensures every voice is heard, respected, and valued. We offer equal opportunities for all employees, empowering them to bring their authentic selves to work. By embracing diversity in all its forms, we create a dynamic environment where everyone can grow, contribute, and thrive, making AV's a place where talent and creativity flourish.`,
     ],
   },
   {
     name: 'Flexible work',
     description: [
-      'This is the physical place where you work. Work site information provided in a job posting indicates the expectations of working remotely or working on-site. The following information will be listed under the work site field in a job posting',
-      'This is the geographic location of your work. Each organization at Microsoft has guidelines related to location flexibility.',
+      `At AV's, we understand the importance of work-life balance. Our flexible work policies allow employees to tailor their schedules and work environments to suit their needs, whether that's remote work, flexible hours, or a hybrid model. We trust our team to manage their time effectively, empowering them to achieve both professional success and personal well-being. Join AV's for a flexible and supportive work culture that values your time, productivity, and happiness.`,
     ],
   },
 ];

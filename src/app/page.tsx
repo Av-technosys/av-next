@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialLoad(false);
-    }, 1200);
+    }, 1800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -38,7 +38,7 @@ const Home = () => {
       <div className="relative w-full scroll-smooth">
         <div className="sticky top-0 mb-2 bg-[#1c1c1e] px-6 py-2 md:px-4">
           <div className="mx-auto flex h-[12vh] max-w-7xl items-center px-6 md:h-[13vh] md:px-4">
-            <p className="w-full text-center text-3xl font-medium text-white md:text-left md:text-5xl">
+            <p className="w-full px-8 text-center text-3xl font-medium text-white md:text-left md:text-5xl">
               Our services
             </p>
           </div>
@@ -115,11 +115,11 @@ function Service({
         style={{ opacity: springOpacity }}
         className="mx-auto flex h-full w-full max-w-7xl flex-row justify-between gap-2 overflow-hidden px-6 py-12 md:px-4"
       >
-        <div className="flex h-full w-full flex-col justify-between gap-4">
+        <div className="flex h-full w-full flex-col gap-4">
           <div className="flex flex-col gap-6 md:gap-6">
             <p
               className={cn(
-                'font-instrument text-5xl font-bold tracking-wide md:text-7xl',
+                'font-instrument text-5xl font-semibold tracking-wide md:text-7xl',
                 isDark ? 'text-black' : 'text-white'
               )}
             >

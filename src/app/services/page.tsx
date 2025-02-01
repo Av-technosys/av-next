@@ -151,10 +151,10 @@ function HeroSection() {
       </div>
       <Link
         href={'/hire-us'}
-        className="mx-auto flex w-fit cursor-pointer items-center gap-2 rounded border border-neutral-400 bg-neutral-800 px-8 py-2 font-semibold duration-200 hover:gap-3 hover:bg-white hover:text-black"
+        className="mx-auto text-white flex w-fit cursor-pointer items-center gap-2 rounded border border-neutral-400 bg-neutral-800 px-8 py-2 font-semibold duration-200 hover:gap-3 hover:bg-white hover:text-black"
       >
-        <p className="text-white">Hire Us</p>
-        <ArrowUpRight color="#fff" size={20} />
+        <p className="">Hire Us</p>
+        <ArrowUpRight size={20} />
       </Link>
     </div>
   );

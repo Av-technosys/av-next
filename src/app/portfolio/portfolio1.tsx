@@ -10,8 +10,8 @@ const PortfolioPage1 = ({ data }: { data: any }) => {
     <div className="w-full bg-[#1c1c1e]">
       <hr className="bg-white text-white" />
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:px-4">
-        <div className="flex h-full max-h-screen min-h-[36rem] justify-between gap-6">
-          <div className="flex h-full w-full flex-col justify-between gap-12 md:min-h-[32rem]">
+        <div className="flex md:h-[28rem] justify-between gap-6">
+          <div className="flex h-full w-full flex-col justify-between gap-12 md:min-h-[26rem]">
             <ProjectLogo logo={data?.logo?.url} />
             <div className="block w-full md:hidden">
               <BannerImage bannerImage={data?.bannerImage?.url} />
@@ -93,7 +93,7 @@ function ProjectBreakDown({
         Project Breakdown
       </h1>
       <div className="mt-3 flex">
-        <ul className="flex flex-col gap-2 text-lg lg:text-[1rem]">
+        <ul className="flex flex-col gap-2 text-base md:text-lg lg:text-[1rem]">
           {projectBreakDown?.map((item) => (
             <li className="flex gap-2">
               {' '}
@@ -119,7 +119,7 @@ function Solutions({ solutions }) {
             <h1 className="mt-2 font-normal text-white lg:mt-6">
               {solution.title}
             </h1>
-            <ul className="ml-5 mt-5 list-disc text-xl font-normal lg:text-[1rem]">
+            <ul className="ml-5 mt-5 list-disc text-base md:text-xl font-normal lg:text-[1rem]">
               {solution?.points?.map((item: string) => (
                 <li className="text-gray-200">{item}</li>
               ))}
@@ -153,10 +153,10 @@ function AboutProject({
 }) {
   return (
     <div className="flex w-full flex-col gap-4">
-      <p className="text-4xl font-semibold text-white">{name}</p>
+      <p className="text-3xl font-semibold text-white">About {name}</p>
       <p className="text-gray-300">{description}</p>
       <Link
-        className="flex w-fit items-center gap-2 rounded-md border px-3 py-2 text-white"
+        className="flex w-fit items-center gap-2 hover:gap-3 duration-200 rounded-md border px-3 py-2 text-white"
         href={projectLink}
       >
         <p>Visit Site</p>

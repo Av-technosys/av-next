@@ -23,9 +23,9 @@ const HireusPage = () => {
       <div className="mx-auto w-full max-w-7xl grid-rows-1 justify-between bg-[#1c1c1e] px-6 pt-10 md:px-4 lg:flex">
         <div className="lg:w-[65%]">
           <div className="flex bg-[#1c1c1e]">
-            <h1 className="mt-2 items-center gap-1 text-4xl font-semibold text-white md:flex lg:mt-0 lg:text-6xl">
-              Hire A{' '}
-              <span className="text-[#d5b676] md:text-white">Developer</span>
+            <h1 className="mt-2 items-center gap-4 text-4xl font-semibold text-white md:flex lg:mt-0 lg:text-6xl">
+              <p>Hire A</p>
+              <span className="text-[#d5b676] md:text-white"> Developer</span>
             </h1>
             <div className="rounded-3xl">
               <video
