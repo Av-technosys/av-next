@@ -269,7 +269,7 @@ function ServiceDetailsCard({
         <p className="text-md uppercase text-yellow-400 md:text-xl">
           {data.title}
         </p>
-        <p className="line-clamp-2 text-3xl font-medium md:text-4xl">
+        <p className="line-clamp-2 py-1 text-3xl font-medium md:text-4xl">
           {data.subTitle}
         </p>
         <p className="text-gray-200">{data.description}</p>
