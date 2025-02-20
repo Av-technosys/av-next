@@ -289,7 +289,7 @@ function InitialLoadAnimation() {
             transition={{ delay: 0.2 }}
             className="semfont-semibold-gray-200 text-xl font-medium"
           >
-            Impact
+            Implement
           </motion.li>
           <motion.li
             initial={{ x: 12, opacity: 0 }}
