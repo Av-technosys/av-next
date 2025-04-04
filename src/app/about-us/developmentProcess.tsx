@@ -11,7 +11,7 @@ const content = [
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
         <Image
-          src="https://av-blog-web.s3.ap-south-1.amazonaws.com/requirement+gathering.jpg"
+          src="/designAndDevelopment.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -27,7 +27,7 @@ const content = [
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
-          src="https://av-blog-web.s3.ap-south-1.amazonaws.com/sprint-planing.jpg"
+          src="/sprintPlaning.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -43,7 +43,7 @@ const content = [
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
         <Image
-          src="https://av-blog-web.s3.ap-south-1.amazonaws.com/design-and-development.jpg"
+          src="/defineAndAnalise.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
