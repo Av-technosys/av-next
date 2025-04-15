@@ -171,7 +171,7 @@ const valuesData = [
   {
     title: 'Integrity',
     description:
-      'We build trust through honesty and transparency in everything we do.s',
+      'We build trust through honesty and transparency in everything we do.',
     Icon: Blocks,
   },
 ];
