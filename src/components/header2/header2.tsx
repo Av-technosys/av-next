@@ -194,9 +194,10 @@ const Header2 = () => {
                   <div className="flex justify-between">
                     <div>
                       <p>
-                        238, 2nd floor, Purani Chungi,
+                        238, 2nd floor, Mangalam Metropolis Tower,
                         <br />
-                        DCM Road, Vaishali Nagar, <br />
+                        Purani Chungi, Vaishali Nagar,
+                        <br />
                         Jaipur, Rajasthan, 302017
                         <br />
                         Phone no.:- +91 9983034111
