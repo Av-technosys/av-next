@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Av Technosys',
@@ -15,9 +16,32 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="./fav.svg" type="image/x-icon" />
+        {/* Google search console */}
+        <meta
+          name="google-site-verification"
+          content="HQJB1181ErQ3G35WCCaCOIniYQOafoWa9LWO5SpZclk"
+        />
       </head>
-      {/* <body className={`bg-[#1c1c1e] text-white antialiased`}>{children}</body> */}
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        {/* Google Analytics Scripts */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-CG4YB8XJ0P`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CG4YB8XJ0P');
+            `,
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
