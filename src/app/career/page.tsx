@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Career',
   description:
     "Find all the available job openings here, apply to the top mobile app development company, and you'll have a great chance to grow your career.",
+  alternates: {
+    canonical: 'https://avtechnosys.com/career',
+  },
 };
 
 const Page = () => {

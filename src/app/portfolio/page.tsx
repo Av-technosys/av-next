@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Portfolio',
   description:
     'AV Technosys has worked on several client projects across various industries like ecommerce, automative, and so on. Do check out this link to know more',
+  alternates: {
+    canonical: 'https://avtechnosys.com/portfolio',
+  },
 };
 
 const PortfolioPage = async () => {

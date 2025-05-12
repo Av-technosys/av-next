@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Services',
   description:
     'Unlock your business potential with expert digital engineering — from innovative product development to strategic transformation.',
+  alternates: {
+    canonical: 'https://avtechnosys.com/services',
+  },
 };
 
 const Page = () => {

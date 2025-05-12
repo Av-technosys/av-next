@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'About Us',
   description:
     'We are a leading Web development company with a team of more than 100+ experienced developers. Know more about AV Technosys and our services by visiting us',
+  alternates: {
+    canonical: 'https://avtechnosys.com/about-us',
+  },
 };
 
 const Page = () => {
