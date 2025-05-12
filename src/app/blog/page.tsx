@@ -191,7 +191,7 @@ const Blog = () => {
                       {blog.title}
                     </p>
                     <p className="text-[10px] font-normal text-gray-700">
-                      ------{blog.category.name}
+                      ------{blog.category?.name}
                     </p>
                     <p className="line-clamp-2 text-[10px] text-gray-300">
                       {blog.description}
