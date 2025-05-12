@@ -4,6 +4,13 @@ import Footer1 from '../footer1';
 import Header2 from '@/components/header2/header2';
 import ImageWithBorders from '../testCard';
 import PortfolioPage1 from './portfolio1';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description:
+    'AV Technosys has worked on several client projects across various industries like ecommerce, automative, and so on. Do check out this link to know more',
+};
 
 const PortfolioPage = async () => {
   const URL = `${process.env.NEXT_PUBLIC_API_URL}/api/projects?sort[0]=updatedAt:desc&populate=*`;
@@ -27,7 +34,7 @@ const PortfolioPage = async () => {
     <div className="w-full bg-[#1c1c1e] pt-3">
       <Header2 />
       <div className="relative">
-        {projectData.map((item) => (
+        {projectData?.map((item) => (
           <PortfolioPage1 key={item.id} data={item} />
         ))}
       </div>

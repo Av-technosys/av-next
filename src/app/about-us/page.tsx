@@ -6,14 +6,19 @@ import {
   BadgeCheck,
   Blocks,
   Folders,
-  Icon,
   Lightbulb,
   Sparkles,
   UserRound,
 } from 'lucide-react';
-import { title } from 'process';
 import { StickyScrollRevealDemo } from './developmentProcess';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'We are a leading Web development company with a team of more than 100+ experienced developers. Know more about AV Technosys and our services by visiting us',
+};
 
 const Page = () => {
   return (
@@ -37,13 +42,17 @@ function HeroSection() {
         <p className="text-center text-5xl font-medium text-white md:text-6xl">
           About AV Technosys
         </p>
-        <p className="text-center text-sm md:text-base text-gray-200">
-          At AV Technosys, we make technology simple, reliable, and impactful. Our personalized AV and IT solutions help you connect, collaborate, and communicate effortlessly. Whether upgrading your workspace or creating seamless experiences, we’re here to bring your vision to life. Let’s take your technology to the next level!
+        <p className="text-center text-sm text-gray-200 md:text-base">
+          At AV Technosys, we make technology simple, reliable, and impactful.
+          Our personalized AV and IT solutions help you connect, collaborate,
+          and communicate effortlessly. Whether upgrading your workspace or
+          creating seamless experiences, we’re here to bring your vision to
+          life. Let’s take your technology to the next level!
         </p>
       </div>
       <Link
         href={'/hire-us'}
-        className="mx-auto flex w-fit cursor-pointer text-white items-center gap-2 rounded border border-neutral-400  bg-neutral-800 px-4 py-2 font-semibold duration-200 hover:gap-3 hover:bg-white hover:text-black"
+        className="mx-auto flex w-fit cursor-pointer items-center gap-2 rounded border border-neutral-400 bg-neutral-800 px-4 py-2 font-semibold text-white duration-200 hover:gap-3 hover:bg-white hover:text-black"
       >
         <p className="">Hire Us</p>
         <ArrowUpRight size={20} />
@@ -54,11 +63,11 @@ function HeroSection() {
 
 function WhyAV() {
   return (
-    <div className="mx-auto mt-4 md:mt-12 w-full max-w-7xl px-6 md:px-4">
+    <div className="mx-auto mt-4 w-full max-w-7xl px-6 md:mt-12 md:px-4">
       <p className="text-4xl font-semibold text-black md:text-5xl">
         Why <span className="text-yellow-400">AV Technosys</span>
       </p>
-      <div className=" mt-6 md:mt-12 flex flex-col items-center justify-between gap-1 md:flex-row md:gap-6">
+      <div className="mt-6 flex flex-col items-center justify-between gap-1 md:mt-12 md:flex-row md:gap-6">
         {whyAVData.map((item, idx) => {
           return <WhyAVBox key={idx} data={item} />;
         })}
@@ -69,7 +78,7 @@ function WhyAV() {
 
 function WhyAVBox({ data }: { data: any }) {
   return (
-    <div className="flex h-full min-h-36 md:min-h-40 w-full flex-col gap-3">
+    <div className="flex h-full min-h-36 w-full flex-col gap-3 md:min-h-40">
       <div className="flex items-center gap-3 text-yellow-400">
         <data.Icon size={32} />
         <p className="text-lg font-semibold">{data.title}</p>
@@ -132,7 +141,7 @@ function OurValue() {
       <p className="text-4xl font-semibold text-black md:text-5xl">
         Our <span className="text-yellow-400">Values</span>
       </p>
-      <div className=" mt-6 md:mt-12 flex flex-col items-center justify-between gap-6 md:flex-row">
+      <div className="mt-6 flex flex-col items-center justify-between gap-6 md:mt-12 md:flex-row">
         {valuesData.map((item, idx) => {
           return <OuvrValueCard data={item} />;
         })}
@@ -143,7 +152,7 @@ function OurValue() {
 
 function OuvrValueCard({ data }: any) {
   return (
-    <div className="group w-full cursor-pointer rounded-3xl border p-4 md:p-6 text-black duration-300 hover:shadow-md hover:shadow-yellow-300">
+    <div className="group w-full cursor-pointer rounded-3xl border p-4 text-black duration-300 hover:shadow-md hover:shadow-yellow-300 md:p-6">
       <div className="flex flex-col gap-4 rounded-2xl bg-gray-50 p-6 shadow-md shadow-gray-500 duration-300 group-hover:shadow-none">
         <div className="flex flex-col gap-2">
           <data.Icon size={32} color="#facc15" />

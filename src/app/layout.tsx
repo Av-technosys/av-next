@@ -3,8 +3,13 @@ import './globals.css';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Av Technosys',
-  description: 'Av Technosys -Innovate | Inspire | Implement',
+  title: {
+    default: 'AV Technosys : Top Website And Mobile App Development Company',
+    template:
+      '%s | AV Technosys : Top Website And Mobile App Development Company',
+  },
+  description:
+    'AV Technosys is a mobile app development and web development company, builds world-class high-performing mobile applications and web apps.',
 };
 
 export default function RootLayout({
