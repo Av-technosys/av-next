@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.avtechnosys.com/services',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const Page = () => {

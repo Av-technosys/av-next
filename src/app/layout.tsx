@@ -13,6 +13,35 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.avtechnosys.com',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'AV Technosys : Top Website And Mobile App Development Company',
+    description:
+      'AV Technosys is a mobile app development and web development company, builds world-class high-performing mobile applications and web apps.',
+    url: 'https://www.avtechnosys.com',
+    siteName: 'AV Technosys',
+    images: [
+      {
+        url: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-only-logo.png',
+        width: 512,
+        height: 512,
+        alt: 'AV Technosys Logo',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AV Technosys : Top Website And Mobile App Development Company',
+    description:
+      'AV Technosys builds world-class mobile and web apps. Experience top-tier tech with us.',
+    images: [
+      'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-only-logo.png',
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +53,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="./fav.svg" type="image/x-icon" />
+        {/* <meta name="robots" content="index, follow" /> */}
+
         {/* Google search console */}
         <meta
           name="google-site-verification"

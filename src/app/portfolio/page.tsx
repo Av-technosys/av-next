@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.avtechnosys.com/portfolio',
   },
+  robots: {
+    index: true,
+    follow: false,
+  },
 };
 
 const PortfolioPage = async () => {

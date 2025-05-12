@@ -4,7 +4,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'av-blog-web.s3.ap-south-1.amazonaws.com',
+        // hostname: 'av-blog-web.s3.ap-south-1.amazonaws.com',
+        hostname: '**',
         // port: '',
         // pathname: 'cozzy.corner/**',
       },

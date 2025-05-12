@@ -72,12 +72,13 @@ const Header2 = () => {
   return (
     <>
       <header className="fontTest mx-auto flex h-28 w-full max-w-7xl items-center justify-between bg-[#1c1c1e] px-6 text-white">
-        <Link className="relative h-16 w-16 pr-8 md:h-28" href="/">
+        <Link className="relative h-28 w-28 pr-8 md:h-28" href="/">
           {' '}
           <Image
             fill={true}
-            className="h-full w-auto object-contain"
-            src={'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-logo.svg'}
+            className="h-full w-full object-contain"
+            // src={'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-logo.svg'}
+            src={'/AV-Technosys-logo.png'}
             alt="logo"
           />
         </Link>
@@ -110,13 +111,13 @@ const Header2 = () => {
                   <Link href="/services">Services</Link>
                 </li>
                 <li className="py-3 text-xl">
-                  <Link href="/Portfolio">Portfolio</Link>
+                  <Link href="/portfolio">Portfolio</Link>
                 </li>
                 <li className="py-3 text-xl">
                   <Link href="/blog">Blog</Link>
                 </li>
                 <li className="py-3 text-xl">
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact-us">Contact Us</Link>
                 </li>
               </ul>
               <div className="grid gap-2">
@@ -125,7 +126,7 @@ const Header2 = () => {
                 </button>
                 <button className="rounded-sm border border-black py-1">
                   {' '}
-                  <Link href="/contact">
+                  <Link href="/contact-us">
                     {' '}
                     <ArrowForwardIosIcon className="mr-1 rounded-full bg-black p-1 text-white" />
                     Let's Connect

@@ -194,7 +194,8 @@ const HeaderHome = () => {
           />
           <img
             className="hidden h-full w-auto object-contain md:block"
-            src={'./av-logo.svg'}
+            // src={'./av-logo.svg'}
+            src={'./AV-Technosys-logo.png'}
             alt="logo"
           />
         </Link>

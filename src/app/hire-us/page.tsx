@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.avtechnosys.com/hire-us',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const HireusPage = () => {
