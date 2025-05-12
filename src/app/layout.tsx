@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'AV Technosys is a mobile app development and web development company, builds world-class high-performing mobile applications and web apps.',
   alternates: {
-    canonical: 'https://avtechnosys.com',
+    canonical: 'https://www.avtechnosys.com',
   },
 };
 

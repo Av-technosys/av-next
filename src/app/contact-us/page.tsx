@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Contact AV Technosys for mobile and web development services. Send us your app request—we’ll get back to you within 48 hours!',
   alternates: {
-    canonical: 'https://avtechnosys.com/contact-us',
+    canonical: 'https://www.avtechnosys.com/contact-us',
   },
 };
 

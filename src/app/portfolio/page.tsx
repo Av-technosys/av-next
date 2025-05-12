@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'AV Technosys has worked on several client projects across various industries like ecommerce, automative, and so on. Do check out this link to know more',
   alternates: {
-    canonical: 'https://avtechnosys.com/portfolio',
+    canonical: 'https://www.avtechnosys.com/portfolio',
   },
 };
 
