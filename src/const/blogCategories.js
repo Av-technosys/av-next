@@ -1,45 +1,42 @@
 export const blogCategories = [
-  {
-    value: 'corporate-retreat-ideas',
-    label: 'Corporate Retreat Ideas',
-  },
-  {
-    value: 'team-building-destinations',
-    label: 'Team-Building Destinations',
-  },
-  {
-    value: 'luxury-stays-for-teams',
-    label: 'Luxury Stays for Teams',
-  },
-  {
-    value: 'budget-friendly-group-trips',
-    label: 'Budget-Friendly Group Trips',
-  },
-  {
-    value: 'workation-tips-for-teams',
-    label: 'Workation Tips for Teams',
-  },
-  {
-    value: 'event-planning-and-logistics',
-    label: 'Event Planning & Logistics',
-  },
-  {
-    value: 'success-stories-from-past-trips',
-    label: 'Success Stories from Past Trips',
-  },
-  {
-    value: 'travel-safety-for-corporate-teams',
-    label: 'Travel Safety for Teams',
-  },
-  {
-    value: 'packing-and-preparation-corporate-travel',
-    label: 'Packing & Prep for Corporate Trips',
-  },
-  {
-    value: 'productivity-on-the-go-for-teams',
-    label: 'Productivity on the Go',
-  },
+  { value: 'adobe-commerce', label: 'Adobe Commerce' },
+  { value: 'adobe-photoshop', label: 'Adobe Photoshop' },
+  { value: 'agriculture', label: 'Agriculture' },
+  { value: 'ai', label: 'AI' },
+  { value: 'ai-news', label: 'AI News' },
+  { value: 'aiw', label: 'AIW' },
+  { value: 'angular', label: 'Angular' },
+  { value: 'app-development', label: 'App Development' },
+  { value: 'app-website-statistics', label: 'App/Website Statistics' },
+  { value: 'astrology', label: 'Astrology' },
+  { value: 'automotive-app-development', label: 'Automotive App Development' },
+  { value: 'blockchain', label: 'Blockchain' },
+  { value: 'car-service', label: 'Car Service' },
+  { value: 'dating', label: 'Dating' },
+  { value: 'devops', label: 'DevOps' },
+  { value: 'drupal', label: 'Drupal' },
+  { value: 'e-commerce', label: 'E-commerce' },
+  { value: 'education', label: 'Education' },
+  { value: 'entertainment-media', label: 'Entertainment & Media' },
+  { value: 'fintech', label: 'Fintech' },
+  { value: 'fitness', label: 'Fitness' },
+  { value: 'flutter', label: 'Flutter' },
+  { value: 'flutter-developer', label: 'Flutter Developer' },
+  { value: 'flutterflow', label: 'FlutterFlow' },
+  { value: 'food-delivery-app', label: 'Food Delivery App' },
+  { value: 'health-care', label: 'Health care' },
+  { value: 'hire-developers', label: 'Hire Developers' },
+  { value: 'hiring-guide', label: 'Hiring Guide' },
+  { value: 'ionic', label: 'Ionic' },
+  { value: 'iphone', label: 'iPhone' },
+  { value: 'laundry', label: 'Laundry' },
+  { value: 'logistics', label: 'Logistics' },
+  { value: 'magento', label: 'Magento' },
+  { value: 'next-js', label: 'Next JS' },
+  { value: 'node-js', label: 'Node.js' },
+  { value: 'on-demand-app-development', label: 'On Demand App Development' },
 ];
+
 export const blogUser = [
   {
     name: 'Veer choudhary',

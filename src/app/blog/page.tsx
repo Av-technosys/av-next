@@ -33,33 +33,8 @@ const Blog = () => {
   return (
     <div className="bg-[#1c1c1e] pt-3">
       <Header2 />
-
-      <img className="w-full" src={'./blog.jpg'} alt="blog" />
-      <div className="fontTest mx-auto flex max-w-7xl flex-wrap justify-center px-6 md:px-4">
-        <div className="flex w-full max-w-6xl -translate-y-[16%] flex-col gap-8 rounded-3xl bg-white px-8 py-8 text-black md:-translate-y-1/2 md:px-16 md:py-16">
-          <div className="">
-            <h1 className="text-2xl font-semibold lg:text-5xl">Blog</h1>
-            <p className="mt-2 text-xs font-normal text-gray-800 md:mt-2 lg:text-base">
-              Get daily news and insights on mobile apps, web, and software
-              development to make money.
-            </p>
-          </div>
-
-          <div className="fontTest mx-auto flex w-full flex-col items-center overflow-hidden rounded-xl md:w-3/5 md:flex-row">
-            <div className="flex h-40 w-full items-center justify-center border border-black bg-black p-4 text-center text-sm text-white lg:h-[17rem]">
-              <h1 className="w-full text-center text-2xl">
-                Quick/New Update of AV Technosys
-              </h1>
-            </div>
-            <div className="h-40 w-full lg:-mb-0 lg:h-[17rem]">
-              <VideoBlog />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="fontTest mx-auto max-w-7xl bg-[#1c1c1e] px-6 md:px-4">
-        <span className="text-[2rem] font-semibold text-white lg:text-6xl">
+      <div className="fontTest mx-auto mt-12 max-w-7xl bg-[#1c1c1e] px-6 md:px-4">
+        <span className="cursor-default text-3xl font-semibold text-white lg:text-5xl">
           Latest Articles
         </span>
         <div className="">
