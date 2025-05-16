@@ -93,9 +93,7 @@ function Service({
   const springOpacity = useSpring(opacity, { stiffness: 100, damping: 20 });
 
   useEffect(() => {
-    const unsubscribe = scrollYProgress.onChange((latest) => {
-      console.log('Scroll progress:', latest);
-    });
+    const unsubscribe = scrollYProgress.onChange((latest) => {});
 
     return () => unsubscribe();
   }, [scrollYProgress]);

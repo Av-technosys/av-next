@@ -213,7 +213,6 @@ const Blog = () => {
 export default Blog;
 
 function BlogLoadingAnimation() {
-  console.log('hey there');
   return (
     <div className="col-span-2 h-40 min-h-40 w-full shrink-0 animate-pulse rounded-lg bg-neutral-800 md:col-span-4"></div>
   );
