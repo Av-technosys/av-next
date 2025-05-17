@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 import { blogCategories } from './../../../const/index';
 import Link from 'next/link';
 import { ChevronRightIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const Page = async (context: any) => {
   const slug = context.params.id;
@@ -39,16 +40,18 @@ const Page = async (context: any) => {
 
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div className="flex h-16 items-center gap-4">
-            <div className="h-full">
-              <img
-                src={blogData.userImage || undefined}
-                className="aspect-square h-full w-full rounded-full object-cover"
-                alt=""
-              />
-            </div>
-            <div className="flex flex-col justify-between gap-2">
-              <p className="text-xl font-semibold">{blogData.userName}</p>
-              <p>{dayjs(JSON.parse(blogData.date)).format('DD-MM-YYYY')}</p>
+            <Image
+              height={64}
+              width={64}
+              src={blogData.userImage as string}
+              className="rounded-full"
+              alt=""
+            />
+            <div className="flex flex-col justify-center gap-1">
+              <span className="text-xl font-semibold">{blogData.userName}</span>
+              <span>
+                {dayjs(JSON.parse(blogData.date)).format('DD-MM-YYYY')}
+              </span>
             </div>
           </div>
           <p className="hidden text-2xl font-semibold sm:block">
