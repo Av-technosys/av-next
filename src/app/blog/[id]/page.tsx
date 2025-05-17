@@ -6,6 +6,46 @@ import { blogCategories } from './../../../const/index';
 import Link from 'next/link';
 import { ChevronRightIcon } from 'lucide-react';
 import Image from 'next/image';
+import { Metadata, ResolvingMetadata } from 'next';
+
+type Props = {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = (await params).id;
+  const [post] = await getBlogBySlug(slug);
+
+  return {
+    title: post?.title,
+    description: post?.metaDescription,
+    keywords: post?.tags,
+    publisher: post?.userName,
+    alternates: {
+      canonical: `https://www.avtechnosys.com/blog/${slug}`,
+    },
+    openGraph: {
+      title: post?.title,
+      description: post?.metaDescription,
+      url: `https://www.avtechnosys.com/blog/${slug}`,
+      siteName: 'AV Technosys',
+      images: [
+        {
+          url: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-only-logo.png',
+          width: 512,
+          height: 512,
+          alt: 'AV Technosys Logo',
+        },
+      ],
+      type: 'website',
+      locale: 'en_IN',
+    },
+  };
+}
 
 const Page = async (context: any) => {
   const slug = context.params.id;
