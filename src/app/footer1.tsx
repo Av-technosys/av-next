@@ -8,15 +8,15 @@ import Link from 'next/link';
 const Footer1 = () => {
   return (
     <>
-      <footer className="fontTest lg:pt bg-[#1c1c1e] text-white">
-        <div className="mx-auto w-full max-w-7xl p-6 lg:pb-12">
+      <footer className="fontTest lg:pt mt-10 bg-[#1c1c1e] text-white">
+        {/* <div className="mx-auto w-full max-w-7xl p-6 lg:pb-12">
           <h4 className="py-2 text-2xl font-semibold md:text-6xl">
             Contact Us
           </h4>
           <h6 className="py-4 text-2xl text-[#787878] duration-200 hover:text-white md:text-7xl">
             sales@avtechnosys.com
           </h6>
-        </div>
+        </div> */}
         <hr />
         <div className="mx-auto flex w-full max-w-7xl flex-col px-6 md:px-4">
           <div className="flex flex-col gap-6 border-t border-neutral-700 py-8 md:flex-row">
@@ -24,7 +24,7 @@ const Footer1 = () => {
               return <FooterList key={idx} data={item} />;
             })}
 
-            <div className="md:ml-auto mt-4 flex gap-4 text-gray-200 md:mt-0 md:justify-end">
+            <div className="mt-4 flex gap-4 text-gray-200 md:ml-auto md:mt-0 md:justify-end">
               <Link href={'https://www.facebook.com/people/AV-Technosys/'}>
                 <Facebook
                   className="cursor-pointer duration-200 hover:scale-125"

@@ -38,19 +38,19 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^2.30.0",
+    "dayjs": "^1.11.13",
+    "drizzle-kit": "^0.31.0",
+    "drizzle-orm": "^0.42.0",
     "framer-motion": "^11.8.0",
     "lucide-react": "^0.447.0",
     "mongoose": "^8.7.2",
     "next": "14.2.13",
+    "postgres": "^3.4.5",
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
     "react-markdown": "^9.0.3",
-    "drizzle-kit": "^0.31.0",
-    "drizzle-orm": "^0.42.0",
-    "postgres": "^3.4.5",
-
     "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^7.1.1",
     "react-simply-carousel": "^9.1.8",
@@ -69,4 +69,3 @@
     "typescript": "^5"
   }
 }
-

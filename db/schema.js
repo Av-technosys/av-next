@@ -11,5 +11,6 @@ export const blogTable = pgTable('blog', {
   data: varchar('data').notNull(),
   userImage: varchar('user_image'),
   userName: varchar('user_name'),
+  slug: varchar('slug'),
   isVisible: boolean('is_visible').notNull().default(true),
 });
