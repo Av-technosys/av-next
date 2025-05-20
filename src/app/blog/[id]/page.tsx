@@ -37,7 +37,7 @@ export async function generateMetadata(
       siteName: 'AV Technosys',
       images: [
         {
-          url: 'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-only-logo.png',
+          url: post.image,
           width: 512,
           height: 512,
           alt: 'AV Technosys Logo',
