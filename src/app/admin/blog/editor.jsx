@@ -33,19 +33,26 @@ import { SelectBlogCategories } from '@/conponents/admin/selectBlogCategories';
 import { SelectUser } from '@/conponents/admin/selectUser';
 import TitleDatepicker from '@/conponents/admin/datePicker';
 
-import { insertBlog } from './../../../../lib/index';
+import { insertBlog, updateBlogByID } from './../../../../lib/index';
 import { message } from 'antd';
-import { set } from 'date-fns';
+import { blogUser } from '@/const';
 
-const TiptapEditor = () => {
-  const [title, setTitle] = useState('');
-  const [metaDescription, setMetaDescription] = useState('');
-  const [blogCategory, setBlogCategory] = useState('');
-  const [user, setUser] = useState('');
+const TiptapEditor = ({ data }) => {
+  const [title, setTitle] = useState(data?.title || '');
+  const [metaDescription, setMetaDescription] = useState(
+    data?.metaDescription || ''
+  );
+  const [blogCategory, setBlogCategory] = useState(data?.blogCategory || '');
+  const [user, setUser] = useState(
+    data ? blogUser.find((item) => item.name === data.userName) : ''
+  );
   const [imageLink, setImageLink] = useState('');
-  const [tagList, setTagList] = useState([]);
-  const [blogDate, setBlogDate] = useState(new Date());
-  const [imageSrc, setImageSrc] = useState(null);
+  const [tagList, setTagList] = useState(data?.tags || []);
+  const [blogDate, setBlogDate] = useState(
+    data?.date ? JSON.parse(data.date) : new Date()
+  );
+  // const [blogDate, setBlogDate] = useState(new Date());
+  const [imageSrc, setImageSrc] = useState(data?.image || '');
   const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -75,7 +82,7 @@ const TiptapEditor = () => {
       TableHeader,
       TableCell,
     ],
-    content: '<p>Hello World! 🌎️</p>',
+    content: data?.data || '<p>Hello World! 🌎️</p>',
   });
 
   const [savedHtml, setSavedHtml] = useState('');
@@ -85,37 +92,70 @@ const TiptapEditor = () => {
     if (editor) {
       const html = editor.getHTML();
       setSavedHtml(html);
-      const imageLinkLocal = await handleImageUpload();
-      const response = await insertBlog({
-        title,
-        metaDescription,
-        blogCategory,
-        image: imageLinkLocal,
-        tags: tagList,
-        date: blogDate,
-        data: html,
-        userImage: user.image,
-        userName: user.name,
-      });
+      // https://av-blog.s3.ap-south-1.amazonaws.com
 
-      if (response) {
-        message.success('blog Sved');
-        setTitle('');
-        setMetaDescription('');
-        setBlogCategory('');
-        setImageLink('');
-        setTagList([]);
-        setBlogDate(new Date());
-        setUser('');
-        setImageSrc(null);
-        setImageFile(null);
-        editor.commands.clearContent();
+      let finalImageSrc = imageSrc;
+
+      if (!imageSrc.includes('https://av-blog.s3.ap-south-1.amazonaws.com')) {
+        const s3URL = await handleImageUpload();
+        finalImageSrc = s3URL;
+        setImageSrc(s3URL); // still update the state if needed
+      }
+
+      // Use `finalImageSrc` for upload
+      if (data?.slug) {
+        const response = await updateBlogByID({
+          title,
+          metaDescription,
+          blogCategory,
+          image: finalImageSrc,
+          tags: tagList,
+          date: blogDate,
+          data: html,
+          userImage: user.image,
+          userName: user.name,
+          slug: data?.slug,
+        });
+        if (response) {
+          message.success('blog Sved');
+        } else {
+          message.error('ERROR');
+        }
       } else {
-        message.error('ERROR');
+        const response = await insertBlog({
+          title,
+          metaDescription,
+          blogCategory,
+          image: finalImageSrc,
+          tags: tagList,
+          date: blogDate,
+          data: html,
+          userImage: user.image,
+          userName: user.name,
+        });
+        showNoti(response);
       }
     }
     setLoading(false);
   };
+
+  function showNoti(response) {
+    if (response) {
+      message.success('blog Sved');
+      setTitle('');
+      setMetaDescription('');
+      setBlogCategory('');
+      setImageLink('');
+      setTagList([]);
+      setBlogDate(new Date());
+      setUser('');
+      setImageSrc(null);
+      setImageFile(null);
+      editor.commands.clearContent();
+    } else {
+      message.error('ERROR');
+    }
+  }
 
   const handleImageUpload = async () => {
     var imageUrl;

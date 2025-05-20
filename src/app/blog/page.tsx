@@ -33,33 +33,6 @@ const Blog = async () => {
           Latest Articles
         </span>
         <div className="">
-          <div className="lg:flex">
-            {/* <div className="flex w-full flex-col justify-between gap-3 md:flex-row">
-              <ul className="scrollbar-x-hidden mt-4 flex cursor-pointer gap-5 overflow-x-scroll py-4 text-[1rem] text-white lg:gap-12">
-                <li className="" onClick={() => setBlogData(data)}>
-                  All
-                </li>
-                <li className="min-w-fit">App Development</li>
-                <li>Buisness</li>
-                <li>Odoo</li>
-                <li className="min-w-fit">On Demand</li>
-                <li className="min-w-fit">Open AI</li>
-                <li>Software</li>
-                <li>Tech</li>
-                <li>Web</li>
-              </ul>
-            </div> */}
-            {/* <div className="flex items-center gap-4 border-b py-2">
-              <input
-                className="w-full bg-[#1c1c1e] px-3 py-2 text-white"
-                type="search"
-                placeholder="Search"
-                value={searchTerm}
-              />
-              <Search size={20} color="white" />
-            </div> */}
-          </div>
-
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {blogData?.map((blog: any) => {
               function formatDateToDDMMYYYY(isoDateStr: string) {
@@ -72,13 +45,16 @@ const Blog = async () => {
                   key={blog.id}
                   className="relative mb-4 flex flex-col gap-2"
                 >
-                  <div className="relative h-auto w-full sm:h-56 sm:w-full">
+                  <Link
+                    href={`/blog/${blog?.slug}`}
+                    className="relative h-auto w-full sm:h-56 sm:w-full"
+                  >
                     <img
                       className="h-full w-full rounded-xl object-cover"
                       src={blog.image}
                       alt={blog.title}
                     />
-                  </div>
+                  </Link>
                   <div className="flex gap-2 text-sm text-gray-400">
                     <p className="">{blog.userName}</p>
                     <p className=" ">{formatDateToDDMMYYYY(blog.date)}</p>

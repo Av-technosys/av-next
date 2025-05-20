@@ -1,4 +1,10 @@
-import { boolean, pgTable, uuid, varchar } from 'drizzle-orm/pg-core';
+import {
+  boolean,
+  pgTable,
+  timestamp,
+  uuid,
+  varchar,
+} from 'drizzle-orm/pg-core';
 
 export const blogTable = pgTable('blog', {
   id: uuid('id').primaryKey().defaultRandom(),
@@ -13,4 +19,13 @@ export const blogTable = pgTable('blog', {
   userName: varchar('user_name'),
   slug: varchar('slug'),
   isVisible: boolean('is_visible').notNull().default(true),
+});
+
+export const blogForm = pgTable('blogForm', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name'),
+  email: varchar('email'),
+  message: varchar('message'),
+  number: varchar('number'),
+  createdAt: timestamp('created_at').defaultNow(),
 });

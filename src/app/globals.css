@@ -12,6 +12,7 @@
 
 
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -83,25 +84,25 @@
 
 /* TIPTAP Global Styles */
 .tiptap h1 {
-  font-size: 3.6rem; /* text-2xl */
+  font-size: 2.25rem; /* text-2xl */
   font-weight: 700; /* font-bold */
   margin: 1rem 0;
 }
 
 .tiptap h2 {
-  font-size: 2.4rem; /* text-xl */
+  font-size: 1.875rem; /* text-xl */
   font-weight: 600; /* font-semibold */
   margin: 0.75rem 0;
 }
 
 .tiptap h3 {
-  font-size: 1.6rem; /* text-lg */
+  font-size: 1.25rem; /* text-lg */
   font-weight: 600;
   margin: 0.5rem 0;
 }
 
 .tiptap p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   /* line-height: 1.75; */
   word-break: keep-all;
   color: #ccc;

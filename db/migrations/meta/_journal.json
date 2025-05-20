@@ -15,6 +15,13 @@
       "when": 1747466752288,
       "tag": "0001_regular_black_knight",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1747726091897,
+      "tag": "0002_bumpy_talisman",
+      "breakpoints": true
     }
   ]
 }
