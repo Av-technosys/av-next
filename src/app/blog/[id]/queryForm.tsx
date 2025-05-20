@@ -90,7 +90,7 @@ function InputFiled({
     <div className="flex flex-col gap-1">
       <p className="font-semibold">{name}</p>
       <input
-        className="w-full rounded-md border border-gray-400 bg-transparent px-4 py-2 ring-blue-200 focus:ring-2"
+        className="w-full rounded-md border border-gray-400 bg-transparent px-4 py-2 ring-blue-200 [-moz-appearance:textfield] focus:ring-2 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         placeholder={placeholder}
         onChange={onChange}
         type={type}
