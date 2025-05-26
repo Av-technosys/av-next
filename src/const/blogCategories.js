@@ -2,7 +2,7 @@ export const blogCategories = [
   { value: 'adobe-commerce', label: 'Adobe Commerce' },
   { value: 'adobe-photoshop', label: 'Adobe Photoshop' },
   { value: 'agriculture', label: 'Agriculture' },
-  { value: 'ai', label: 'AI' },
+  { value: 'ai', label: 'Artificial Intelligence' },
   { value: 'ai-news', label: 'AI News' },
   { value: 'aiw', label: 'AIW' },
   { value: 'angular', label: 'Angular' },
@@ -35,6 +35,16 @@ export const blogCategories = [
   { value: 'next-js', label: 'Next JS' },
   { value: 'node-js', label: 'Node.js' },
   { value: 'on-demand-app-development', label: 'On Demand App Development' },
+  { value: 'shopify', label: 'Shopify' },
+];
+
+export const blogCategorySummery = [
+  { value: 'app-development', label: 'App Development' },
+  { value: 'dating', label: 'Dating' },
+  { value: 'ai', label: 'Artificial Intelligence' },
+  { value: 'blockchain', label: 'Blockchain' },
+  { value: 'e-commerce', label: 'E-commerce' },
+  { value: 'shopify', label: 'Shopify' },
 ];
 
 export const blogUser = [

@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Footer1 = () => {
   return (
     <>
-      <footer className="fontTest lg:pt mt-10 bg-[#1c1c1e] text-white">
+      <footer className="fontTest lg:pt mt-10 bg-white text-black">
         {/* <div className="mx-auto w-full max-w-7xl p-6 lg:pb-12">
           <h4 className="py-2 text-2xl font-semibold md:text-6xl">
             Contact Us
@@ -17,14 +17,13 @@ const Footer1 = () => {
             sales@avtechnosys.com
           </h6>
         </div> */}
-        <hr />
         <div className="mx-auto flex w-full max-w-7xl flex-col px-6 md:px-4">
-          <div className="flex flex-col gap-6 border-t border-neutral-700 py-8 md:flex-row">
+          <div className="flex flex-col gap-6 py-8 md:flex-row">
             {footerData.map((item, idx) => {
               return <FooterList key={idx} data={item} />;
             })}
 
-            <div className="mt-4 flex gap-4 text-gray-200 md:ml-auto md:mt-0 md:justify-end">
+            <div className="mt-4 flex gap-4 text-gray-600 md:ml-auto md:mt-0 md:justify-end">
               <Link href={'https://www.facebook.com/people/AV-Technosys/'}>
                 <Facebook
                   className="cursor-pointer duration-200 hover:scale-125"
@@ -55,8 +54,8 @@ const Footer1 = () => {
               </Link>
             </div>
           </div>
-          <div className="flex justify-center py-10">
-            <h3 className="w-[90%] text-center text-3xl duration-500 hover:scale-75 hover:opacity-50 md:text-4xl lg:text-7xl">
+          <div className="flex justify-center pb-4 pt-10">
+            <h3 className="w-[90%] text-center text-3xl duration-500 md:text-3xl lg:text-3xl">
               Driving Digital Innovation, Powering Marketing Success
             </h3>
           </div>
@@ -77,7 +76,7 @@ function FooterList({ data }: any) {
           return (
             <Link
               href={item.link}
-              className="cursor-pointer text-gray-400 duration-200 hover:text-white hover:underline"
+              className="cursor-pointer text-gray-600 duration-200 hover:text-black hover:underline"
               key={idx}
             >
               {item.name}

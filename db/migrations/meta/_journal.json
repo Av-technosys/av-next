@@ -22,6 +22,13 @@
       "when": 1747726091897,
       "tag": "0002_bumpy_talisman",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1748231526798,
+      "tag": "0003_stormy_captain_stacy",
+      "breakpoints": true
     }
   ]
 }

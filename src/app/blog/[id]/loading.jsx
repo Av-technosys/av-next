@@ -2,10 +2,12 @@ import { Skeleton } from './../../../components/ui/skeleton';
 
 const Loading = () => {
   return (
-    <div className="min-h-screen w-full bg-neutral-800 py-16">
-      <Skeleton className="mx-auto mt-12 h-[320px] w-[80%] max-w-3xl animate-pulse rounded-xl bg-neutral-900" />
-      <Skeleton className="mx-auto mt-12 h-[20px] w-[50%] max-w-xl animate-pulse rounded-xl bg-neutral-900" />
-      <Skeleton className="mx-auto mt-4 h-[20px] w-[50%] max-w-xl animate-pulse rounded-xl bg-neutral-900" />
+    <div className="mx-auto flex min-h-screen w-full max-w-7xl justify-between bg-white py-8">
+      <Skeleton className="mx-auto mt-8 h-[90vh] w-[25%] max-w-3xl animate-pulse rounded-xl bg-neutral-100" />
+
+      <Skeleton className="mx-auto mt-8 h-[90vh] w-[50%] max-w-xl animate-pulse rounded-xl bg-neutral-100" />
+
+      <Skeleton className="mx-auto mt-8 h-[90vh] w-[25%] max-w-xl animate-pulse rounded-xl bg-neutral-100" />
     </div>
   );
 };

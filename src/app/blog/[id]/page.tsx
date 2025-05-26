@@ -1,14 +1,17 @@
 'use server';
 import Header2 from '@/components/header2/header2';
 import Footer1 from '@/app/footer1';
-import { getBlogBySlug } from '../../../../lib';
+import { getBlogBySlug, getRelatedBlogs } from '../../../../lib';
 import dayjs from 'dayjs';
 import { blogCategories } from './../../../const/index';
 import Link from 'next/link';
-import { ChevronRightIcon } from 'lucide-react';
+import { ChevronRightIcon, MoveRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Metadata, ResolvingMetadata } from 'next';
 import { QueryForm } from './queryForm';
+import { NavBarHome } from '@/components/navBar';
+import { TableOfContents } from './tableOfContext';
+import { TArroeRight } from '@/components/icons';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -37,10 +40,12 @@ export async function generateMetadata(
       siteName: 'AV Technosys',
       images: [
         {
-          url: post.image,
+          url:
+            post?.image ||
+            'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-only-logo.png',
           width: 512,
           height: 512,
-          alt: 'AV Technosys Logo',
+          alt: post?.title || 'AV Technosys Logo',
         },
       ],
       type: 'website',
@@ -52,16 +57,21 @@ export async function generateMetadata(
 const Page = async (context: any) => {
   const slug = context.params.id;
   const [blogData] = await getBlogBySlug(slug);
+  const relatedBlogs = await getRelatedBlogs(blogData?.id);
 
   if (!blogData) {
     return <p>Loading...</p>;
   }
 
   return (
-    <div className="min-h-screen bg-[#1c1c1e] text-white">
-      <Header2 />
-      <div className="mx-auto mt-12 flex max-w-6xl flex-col gap-6 px-4 md:flex-row">
-        <div className="flex flex-col gap-6">
+    <div className="min-h-screen bg-white text-black">
+      {/* <Header2 /> */}
+      <NavBarHome />
+      <div className="mx-auto mt-12 grid max-w-screen-2xl grid-cols-12 gap-6 px-4">
+        <div className="sticky top-24 col-span-3 hidden h-fit lg:block">
+          <TableOfContents slug={slug} />
+        </div>
+        <div className="col-span-6 flex flex-col gap-6">
           <div className="flex w-fit items-center gap-1">
             <Link className="cursor-pointer hover:underline" href={'/'}>
               <p>Home</p>
@@ -109,8 +119,37 @@ const Page = async (context: any) => {
             dangerouslySetInnerHTML={{ __html: blogData.data }}
           />
         </div>
-
-        <QueryForm />
+        <div className="col-span-3 w-full">
+          <QueryForm slug={slug} />
+        </div>
+      </div>
+      {/* <div className="mt-24 h-16 bg-gradient-to-b from-white to-gray-200"></div> */}
+      <div className="mt-12 w-full bg-gray-100 px-4 py-12">
+        <div className="mx-auto max-w-7xl text-black">
+          <div className="mb-8 flex flex-col justify-between gap-4 xl:flex-row xl:items-center">
+            <div>
+              <p className="mb-2 text-3xl font-semibold uppercase">
+                Our Latest Blogs
+              </p>
+              <p className="text-xl text-gray-600">
+                Get the most recent information on trends, technology, and
+                development insights.
+              </p>
+            </div>
+            <Link
+              href={'/blog'}
+              className="flex h-fit w-fit cursor-pointer items-center gap-2 rounded bg-yellow-500 px-6 py-3 font-medium text-white duration-200 hover:bg-yellow-600"
+            >
+              <p>View All Blogs</p>
+              <TArroeRight size={20} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {relatedBlogs?.map((blog: any) => {
+              return <BlogCard blog={blog} />;
+            })}
+          </div>
+        </div>
       </div>
       <Footer1 />
     </div>
@@ -121,4 +160,36 @@ export default Page;
 
 function getBlogCategory(blogCategorySlug: string) {
   return blogCategories.find((item) => item.value === blogCategorySlug)?.label;
+}
+
+function BlogCard({ blog }) {
+  function formatDateToDDMMYYYY() {
+    return dayjs(JSON.parse(blog.date)).format('DD-MM-YYYY');
+  }
+
+  return (
+    <div key={blog.id} className="relative mb-4 flex flex-col gap-2">
+      <Link
+        href={`/blog/${blog?.slug}`}
+        className="relative h-auto w-full sm:h-56 sm:w-full"
+      >
+        <img
+          className="h-full w-full rounded-xl object-cover"
+          src={blog.image}
+          alt={blog.title}
+        />
+      </Link>
+      <div className="flex gap-2 text-sm text-gray-600">
+        <p className="">{blog.userName}</p>
+        <p className=" ">{formatDateToDDMMYYYY()}</p>
+      </div>
+      <Link
+        href={`/blog/${blog?.slug}`}
+        className="line-clamp-2 text-lg font-semibold hover:underline"
+      >
+        {blog.title}
+      </Link>
+      <p className="line-clamp-2 text-gray-600">{blog.metaDescription}</p>
+    </div>
+  );
 }

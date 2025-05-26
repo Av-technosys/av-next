@@ -1,0 +1,1 @@
+ALTER TABLE "blogForm" ADD COLUMN "slug" varchar;

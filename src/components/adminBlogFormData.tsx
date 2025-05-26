@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from './ui/table';
+import Link from 'next/link';
 
 const AdminBlogFormTable = ({ data }) => {
   return (
@@ -29,7 +30,15 @@ const AdminBlogFormTable = ({ data }) => {
               <TableCell>{item?.email}</TableCell>
               <TableCell>{item?.number}</TableCell>
               <TableCell className="">{item?.message}</TableCell>
-              <TableCell className="">{item?.slug}</TableCell>
+              <TableCell className="">
+                <Link
+                  target="_blank"
+                  className="hover:underline"
+                  href={`/blog/${item?.slug}`}
+                >
+                  {item?.slug}
+                </Link>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

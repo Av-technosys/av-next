@@ -27,5 +27,6 @@ export const blogForm = pgTable('blogForm', {
   email: varchar('email'),
   message: varchar('message'),
   number: varchar('number'),
+  slug: varchar('slug'),
   createdAt: timestamp('created_at').defaultNow(),
 });

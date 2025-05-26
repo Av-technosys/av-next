@@ -1,14 +1,13 @@
 import Footer1 from '../footer1';
-import Header2 from '@/components/header2/header2';
-import { ArrowDownRight } from 'lucide-react';
-import Link from 'next/link';
 
 import { getAllBlogsMetaDeta } from './../../../lib/index';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { Metadata } from 'next';
-
-dayjs.extend(utc);
+import { NavBarHome } from '@/components/navBar';
+import { blogCategories } from '@/const';
+import { blogCategorySummery } from '@/const/blogCategories';
+import ShowBlogs from './showBlogs';
 
 export const metadata: Metadata = {
   title: 'Blogs',
@@ -26,53 +25,13 @@ export const metadata: Metadata = {
 const Blog = async () => {
   const blogData = await getAllBlogsMetaDeta();
   return (
-    <div className="bg-[#1c1c1e] pt-3">
-      <Header2 />
-      <div className="fontTest mx-auto mt-12 max-w-7xl bg-[#1c1c1e] px-6 text-white md:px-4">
-        <span className="cursor-default text-3xl font-semibold text-white lg:text-5xl">
-          Latest Articles
-        </span>
-        <div className="">
-          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {blogData?.map((blog: any) => {
-              function formatDateToDDMMYYYY(isoDateStr: string) {
-                const date = dayjs.utc(JSON.parse(isoDateStr));
-                return date.format('DD/MM/YYYY');
-              }
-
-              return (
-                <div
-                  key={blog.id}
-                  className="relative mb-4 flex flex-col gap-2"
-                >
-                  <Link
-                    href={`/blog/${blog?.slug}`}
-                    className="relative h-auto w-full sm:h-56 sm:w-full"
-                  >
-                    <img
-                      className="h-full w-full rounded-xl object-cover"
-                      src={blog.image}
-                      alt={blog.title}
-                    />
-                  </Link>
-                  <div className="flex gap-2 text-sm text-gray-400">
-                    <p className="">{blog.userName}</p>
-                    <p className=" ">{formatDateToDDMMYYYY(blog.date)}</p>
-                  </div>
-                  <Link
-                    href={`/blog/${blog?.slug}`}
-                    className="line-clamp-2 text-lg font-semibold text-white hover:underline"
-                  >
-                    {blog.title}
-                  </Link>
-                  <p className="line-clamp-2 text-gray-300">
-                    {blog.metaDescription}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+    <div className="pt-3 text-black">
+      <NavBarHome />
+      <div className="fontTest mx-auto mt-12 max-w-7xl px-6 md:px-4">
+        <ShowBlogs
+          blogData={blogData}
+          blogCategorySummery={blogCategorySummery}
+        />
       </div>
 
       <Footer1 />

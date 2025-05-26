@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Script from 'next/script';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: {
@@ -51,17 +52,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" href="./fav.svg" type="image/x-icon" />
         {/* <meta name="robots" content="index, follow" /> */}
-
+        <link rel="icon" href="/new/av-only-logo.ico" />
         {/* Google search console */}
         <meta
           name="google-site-verification"
           content="HQJB1181ErQ3G35WCCaCOIniYQOafoWa9LWO5SpZclk"
         />
-      </head>
-      <body className={`antialiased`}>
+      </Head>
+      <body className={`font-inter antialiased`}>
         {/* Google Analytics Scripts */}
         <Script
           strategy="afterInteractive"

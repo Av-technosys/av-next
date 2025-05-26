@@ -56,6 +56,7 @@ export default {
       },
       fontFamily: {
         instrument: ['League Gothic', 'serif'],
+        inter: ['Inter', 'sans-seri'],
       },
       borderRadius: {
         lg: 'var(--radius)',
