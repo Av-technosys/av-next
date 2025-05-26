@@ -27,7 +27,7 @@ const Blog = async () => {
   return (
     <div className="pt-3 text-black">
       <NavBarHome />
-      <div className="fontTest mx-auto mt-12 max-w-7xl px-6 md:px-4">
+      <div className="fontTest mx-auto mt-4 max-w-7xl px-6 md:px-4 lg:mt-12">
         <ShowBlogs
           blogData={blogData}
           blogCategorySummery={blogCategorySummery}

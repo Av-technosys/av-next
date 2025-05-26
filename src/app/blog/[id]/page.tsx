@@ -1,11 +1,10 @@
 'use server';
-import Header2 from '@/components/header2/header2';
 import Footer1 from '@/app/footer1';
 import { getBlogBySlug, getRelatedBlogs } from '../../../../lib';
 import dayjs from 'dayjs';
 import { blogCategories } from './../../../const/index';
 import Link from 'next/link';
-import { ChevronRightIcon, MoveRightIcon } from 'lucide-react';
+import { ChevronRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import { Metadata, ResolvingMetadata } from 'next';
 import { QueryForm } from './queryForm';
@@ -71,7 +70,7 @@ const Page = async (context: any) => {
         <div className="sticky top-24 col-span-3 hidden h-fit lg:block">
           <TableOfContents slug={slug} />
         </div>
-        <div className="col-span-6 flex flex-col gap-6">
+        <div className="col-span-12 flex flex-col gap-6 lg:col-span-6">
           <div className="flex w-fit items-center gap-1">
             <Link className="cursor-pointer hover:underline" href={'/'}>
               <p>Home</p>
@@ -119,7 +118,7 @@ const Page = async (context: any) => {
             dangerouslySetInnerHTML={{ __html: blogData.data }}
           />
         </div>
-        <div className="col-span-3 w-full">
+        <div className="col-span-12 w-full lg:col-span-3">
           <QueryForm slug={slug} />
         </div>
       </div>
@@ -171,10 +170,10 @@ function BlogCard({ blog }) {
     <div key={blog.id} className="relative mb-4 flex flex-col gap-2">
       <Link
         href={`/blog/${blog?.slug}`}
-        className="relative h-auto w-full sm:h-56 sm:w-full"
+        className="relative h-auto w-full sm:h-56 sm:w-auto"
       >
         <img
-          className="h-full w-full rounded-xl object-cover"
+          className="h-auto w-full rounded-xl object-cover sm:h-full sm:w-auto"
           src={blog.image}
           alt={blog.title}
         />

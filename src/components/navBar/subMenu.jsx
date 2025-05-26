@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { TUser } from './../icons';
+import { TArroeRight, TUser } from './../icons';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -13,7 +13,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-
+import { AnimatePresence } from 'framer-motion';
+import * as motion from 'motion/react-client';
 const navLinks = [
   {
     name: 'about us',
@@ -72,42 +73,50 @@ const components = [
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="uppercase">
-            Services
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+    <div>
+      <MobileNav navLinks={navLinks} components={components} />
+      <NavigationMenu className="hidden lg:block">
+        <NavigationMenuList className="w-full flex-col md:flex-row">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="uppercase">
+              Services
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-        {navLinks.map((item) => {
-          return (
-            <NavigationMenuItem>
-              <Link href={item.link} legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), 'uppercase')}
+          {navLinks.map((item) => {
+            return (
+              <NavigationMenuItem>
+                <Link
+                  className="w-full"
+                  href={item.link}
+                  legacyBehavior
+                  passHref
                 >
-                  {item.name}
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          );
-        })}
-      </NavigationMenuList>
-    </NavigationMenu>
+                  <NavigationMenuLink
+                    className={cn(navigationMenuTriggerStyle(), 'uppercase')}
+                  >
+                    {item.name}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            );
+          })}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
 }
 
@@ -139,3 +148,69 @@ const ListItem = React.forwardRef(
   }
 );
 ListItem.displayName = 'ListItem';
+
+function MobileNav({ navLinks, components }) {
+  return (
+    <div className="mb-4 flex h-full lg:hidden">
+      <div className="mt-4 flex h-full max-h-[72vh] w-full flex-col overflow-y-auto overflow-x-hidden">
+        <DropdownMenu components={components} />
+        {navLinks.map((item) => {
+          return (
+            <Link
+              href={item.link}
+              className="w-full border-b py-4 font-medium uppercase"
+            >
+              {item.name}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function DropdownMenu({ components }) {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  return (
+    <div className="w-full">
+      {/* Header */}
+      <div
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+        className="flex w-full cursor-pointer items-center justify-between gap-4 border-b"
+      >
+        <p className="w-full py-4 font-medium uppercase">Services</p>
+        <TArroeRight
+          className={`${isMenuOpen ? 'rotate-90' : ''} transition-transform duration-200`}
+          size={20}
+        />
+      </div>
+
+      {/* Dropdown Menu with Animation */}
+      <AnimatePresence initial={false}>
+        {isMenuOpen && (
+          <motion.div
+            key="dropdown"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <div className="flex w-full flex-col bg-yellow-50 px-3">
+              {components.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="w-full border-b py-3 text-sm font-medium uppercase"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}

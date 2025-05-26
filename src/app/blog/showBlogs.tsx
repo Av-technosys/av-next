@@ -36,20 +36,28 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex w-full items-center justify-between gap-6">
-        <div className="flex w-full items-center gap-10 py-8">
-          {blogCategorySummery.map((item) => {
-            return (
-              <p
-                onClick={() => handleCategoryFilter(item.value)}
-                className="hover:underline"
-              >
-                {item.label}
-              </p>
-            );
-          })}
+      <div className="mb-12 flex w-full flex-col items-center justify-between gap-3 sm:flex-row sm:gap-6">
+        <div className="w-full overflow-x-auto">
+          <div className="flex w-full min-w-[48rem] items-center gap-6 overflow-x-auto py-4 lg:gap-10">
+            <p
+              onClick={() => setFilteredBlogs(blogData)}
+              className="hover:underline"
+            >
+              All
+            </p>
+            {blogCategorySummery.map((item) => {
+              return (
+                <p
+                  onClick={() => handleCategoryFilter(item.value)}
+                  className="hover:underline"
+                >
+                  {item.label}
+                </p>
+              );
+            })}
+          </div>
         </div>
-        <div className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 shadow-md transition-all focus-within:ring-2 focus-within:ring-blue-500">
+        <div className="flex w-full items-center gap-2 rounded-lg bg-white/10 px-4 py-2 shadow-md transition-all focus-within:ring-2 focus-within:ring-blue-500 sm:w-auto">
           <input
             type="text"
             placeholder="Search blogs"
@@ -61,7 +69,7 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
         </div>
       </div>
       {filteredBlogs.length > 0 ? (
-        <div className="mb-12 flex h-full w-full items-center gap-6">
+        <div className="mb-12 flex h-full w-full flex-col items-center gap-6 md:flex-row">
           <div className="h-auto w-full max-w-2xl">
             <Link href={`/blog/${filteredBlogs[0]?.slug}`}>
               <img

@@ -4,11 +4,14 @@ import './Footer.css';
 import { useState } from 'react';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
-const Footer1 = () => {
+const Footer1 = ({ className = '' }) => {
   return (
     <>
-      <footer className="fontTest lg:pt mt-10 bg-white text-black">
+      <footer
+        className={cn(`fontTest lg:pt mt-10 bg-white text-black`, className)}
+      >
         {/* <div className="mx-auto w-full max-w-7xl p-6 lg:pb-12">
           <h4 className="py-2 text-2xl font-semibold md:text-6xl">
             Contact Us
@@ -54,8 +57,8 @@ const Footer1 = () => {
               </Link>
             </div>
           </div>
-          <div className="flex justify-center pb-4 pt-10">
-            <h3 className="w-[90%] text-center text-3xl duration-500 md:text-3xl lg:text-3xl">
+          <div className="flex justify-center pb-6 pt-2 md:pt-10">
+            <h3 className="text-center text-3xl font-medium duration-500 md:w-[90%] md:text-3xl lg:text-3xl">
               Driving Digital Innovation, Powering Marketing Success
             </h3>
           </div>
@@ -69,8 +72,8 @@ export default Footer1;
 
 function FooterList({ data }: any) {
   return (
-    <div className="flex w-full max-w-60 flex-col gap-4">
-      <p>{data.name}</p>
+    <div className="flex w-full max-w-60 flex-col gap-2 md:gap-4">
+      <p className="text-lg font-semibold">{data.name}</p>
       <div className="flex flex-col gap-2">
         {data.links.map((item: any, idx: number) => {
           return (

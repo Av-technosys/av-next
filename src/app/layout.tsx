@@ -43,6 +43,11 @@ export const metadata: Metadata = {
       'https://av-blog-web.s3.ap-south-1.amazonaws.com/av-only-logo.png',
     ],
   },
+  icons: {
+    icon: '/new/favicon.ico',
+    shortcut: '/new/favicon.ico',
+    apple: '/new/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -53,9 +58,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="./fav.svg" type="image/x-icon" />
         {/* <meta name="robots" content="index, follow" /> */}
-        <link rel="icon" href="/new/av-only-logo.ico" />
+        <link rel="icon" type="image/x-icon" href="/new/favicon.ico" />
         {/* Google search console */}
         <meta
           name="google-site-verification"

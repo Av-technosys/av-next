@@ -33,7 +33,7 @@ export function QueryForm({ slug }) {
 
   return (
     // <div className="sticky top-6 h-fit min-w-80 overflow-y-auto rounded-md bg-gradient-to-t from-[#ffb347] to-[#ffcc33]">
-    <div className="sticky top-28 h-fit w-full overflow-y-auto rounded-lg border shadow-xl">
+    <div className="sticky top-28 mx-auto h-fit w-full max-w-md overflow-y-auto rounded-lg border shadow-xl">
       <div
         className="relative h-32 w-full"
         style={{

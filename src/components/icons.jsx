@@ -3,6 +3,11 @@ import {
   IconBrandFacebook,
   IconBrandLinkedin,
   IconBrandX,
+  IconMail,
+  IconMapPin,
+  IconMessage,
+  IconMessageChatbotFilled,
+  IconPhone,
   IconUser,
 } from '@tabler/icons-react';
 
@@ -20,4 +25,19 @@ export function TX(props) {
 }
 export function TArroeRight(props) {
   return <IconArrowRight {...props} />;
+}
+export function TPhone(props) {
+  return <IconPhone {...props} />;
+}
+export function TEmail(props) {
+  return <IconMail {...props} />;
+}
+export function TMessage(props) {
+  return <IconMessage {...props} />;
+}
+export function TChatSupport(props) {
+  return <IconMessageChatbotFilled {...props} />;
+}
+export function TMapPin(props) {
+  return <IconMapPin {...props} />;
 }

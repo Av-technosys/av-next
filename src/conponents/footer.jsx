@@ -1,45 +1,45 @@
-import { Facebook, Instagram } from "lucide-react";
-import Link from "next/link";
+import { Facebook, Instagram } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     // <footer className="bg-cover relative bg-center text-white py-10 px-6">
     <div
-      className=" w-full h-full relative min-h-96 pt-24 px-4 pb-4"
+      className="relative h-full min-h-96 w-full px-4 pb-4 pt-24"
       style={{
         backgroundImage: "url('/footer-bg.jpg')",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       }}
     >
       <img
         src="/footer-top.png"
-        className=" z-10 absolute top-0 left-0"
+        className="absolute left-0 top-0 z-10"
         alt=""
       />
-      <div className=" text-white w-full top-20 left-0  !z-50">
-        <div className=" w-full pb-6 max-w-7xl mx-auto flex justify-between gap-4 items-center">
-          <p className=" text-4xl font-semibold">LOGO</p>
-          <div className="flex justify-end gap-3 mt-6 mb-2">
+      <div className="left-0 top-20 !z-50 w-full text-white">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 pb-6">
+          <p className="text-4xl font-semibold">LOGO</p>
+          <div className="mb-2 mt-6 flex justify-end gap-3">
             {[Instagram, Facebook].map((Icon, idx) => (
               <div
                 key={idx}
-                className="w-10 h-10 cursor-pointer flex items-center justify-center rounded-full border border-white text-sm hover:bg-white hover:text-black transition"
+                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white text-sm transition hover:bg-white hover:text-black"
               >
                 <Icon />
               </div>
             ))}
           </div>
         </div>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-6 md:gap-8 pb-10">
-          <div className=" md:text-lg">
-            <h3 className="font-semibold mb-3 md:mb-6 text-2xl">Address</h3>
+        <div className="mx-auto flex max-w-7xl flex-col flex-wrap justify-between gap-6 pb-10 md:flex-row md:gap-8">
+          <div className="md:text-lg">
+            <h3 className="mb-3 text-2xl font-semibold md:mb-6">Address</h3>
             <p>123 Main Street</p>
             <p>New York, NY 10001</p>
           </div>
 
-          <div className=" md:text-lg">
-            <h3 className="font-semibold mb-3 md:mb-6 text-2xl">Quick Links</h3>
+          <div className="md:text-lg">
+            <h3 className="mb-3 text-2xl font-semibold md:mb-6">Quick Links</h3>
             <ul className="space-y-1">
               <li>
                 <Link href="/" className="hover:underline">
@@ -60,17 +60,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className=" md:text-lg">
-            <Link href={"/contact-us"} className="font-semibold  text-2xl">
+          <div className="md:text-lg">
+            <Link href={'/contact-us'} className="text-2xl font-semibold">
               Contact Us
             </Link>
 
-            <p className=" mt-3 md:mt-6">+1 500 321 852 789</p>
+            <p className="mt-3 md:mt-6">+1 500 321 852 789</p>
             <p>+1 500 321 852 789</p>
           </div>
 
-          <div className=" md:text-lg">
-            <h3 className="font-semibold mb-3 md:mb-6 text-2xl">
+          <div className="md:text-lg">
+            <h3 className="mb-3 text-2xl font-semibold md:mb-6">
               Utility Pages
             </h3>
             <ul className="space-y-1">
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center mt-4 text-sm border-t border-gray-400 pt-4">
+        <div className="mt-4 border-t border-gray-400 pt-4 text-center text-sm">
           Copyright © Roam Fy Planners | Developed by - Ashish Bishnoi
         </div>
       </div>

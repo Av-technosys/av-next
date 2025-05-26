@@ -179,6 +179,11 @@
   margin: 1rem 0;
 }
 
+/* first element of tr */
+.tiptap tr:first-child{
+  background-color: #eab308;
+}
+
 
 @media (max-width: 768px) {
   /* TIPTAP Global Styles */
