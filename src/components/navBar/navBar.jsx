@@ -13,6 +13,9 @@ export function NavBarHome() {
   function navigateHomePage() {
     router.push('/');
   }
+  function navigateContactUs() {
+    router.push('/contact-us');
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +68,10 @@ export function NavBarHome() {
         <div className="block w-full px-6 pb-4 lg:hidden lg:px-4">
           <div className="mt-2 space-y-2">
             <NavigationMenuDemo />
-            <Button className="w-full bg-yellow-500 uppercase text-white hover:bg-yellow-600">
+            <Button
+              onClick={navigateContactUs}
+              className="w-full bg-yellow-500 uppercase text-white hover:bg-yellow-600"
+            >
               Contact Us
             </Button>
           </div>
