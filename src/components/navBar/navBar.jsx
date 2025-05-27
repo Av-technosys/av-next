@@ -47,7 +47,10 @@ export function NavBarHome() {
         {/* Desktop Menu */}
         <div className="hidden items-center gap-4 lg:flex">
           <NavigationMenuDemo />
-          <Button className="bg-yellow-500 uppercase text-white hover:bg-yellow-600">
+          <Button
+            onClick={navigateContactUs}
+            className="bg-yellow-500 uppercase text-white hover:bg-yellow-600"
+          >
             Contact Us
           </Button>
         </div>

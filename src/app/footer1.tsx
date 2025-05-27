@@ -161,7 +161,11 @@ const footerData = [
     links: [
       {
         name: '+91 99830-34111',
-        link: '/',
+        link: 'tel:+919983034111',
+      },
+      {
+        name: '+91 7877727352',
+        link: 'tel:+917877727352',
       },
       {
         name: '238, 2nd Floor, Mangalam Metropolis Tower, Purani Chungi, Vaishali Nagar, Jaipur, Rajasthan 302017',

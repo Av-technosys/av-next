@@ -1,4 +1,3 @@
-'use server';
 import Footer1 from '@/app/footer1';
 import { getBlogBySlug, getRelatedBlogs } from '../../../../lib';
 import dayjs from 'dayjs';
@@ -144,8 +143,8 @@ const Page = async (context: any) => {
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {relatedBlogs?.map((blog: any) => {
-              return <BlogCard blog={blog} />;
+            {relatedBlogs?.map((blog: any, idx) => {
+              return <BlogCard key={idx} blog={blog} />;
             })}
           </div>
         </div>

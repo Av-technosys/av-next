@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import InputImage from './inputImage';
 import InputTagList from './inputTagList';
+import { toast } from 'sonner';
 
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -34,8 +35,8 @@ import { SelectUser } from '@/conponents/admin/selectUser';
 import TitleDatepicker from '@/conponents/admin/datePicker';
 
 import { insertBlog, updateBlogByID } from './../../../../lib/index';
-import { message } from 'antd';
 import { blogUser } from '@/const';
+import { Toaster } from '@/components/ui/sonner';
 
 const TiptapEditor = ({ data }) => {
   const [title, setTitle] = useState(data?.title || '');
@@ -117,9 +118,9 @@ const TiptapEditor = ({ data }) => {
           slug: data?.slug,
         });
         if (response) {
-          message.success('blog Sved');
+          toast('blog Sved.');
         } else {
-          message.error('ERROR');
+          toast('ERROR');
         }
       } else {
         const response = await insertBlog({
@@ -141,7 +142,8 @@ const TiptapEditor = ({ data }) => {
 
   function showNoti(response) {
     if (response) {
-      message.success('blog Sved');
+      toast('blog Sved.');
+
       setTitle('');
       setMetaDescription('');
       setBlogCategory('');
@@ -153,7 +155,7 @@ const TiptapEditor = ({ data }) => {
       setImageFile(null);
       editor.commands.clearContent();
     } else {
-      message.error('ERROR');
+      toast('ERROR');
     }
   }
 
@@ -209,6 +211,7 @@ const TiptapEditor = ({ data }) => {
 
   return (
     <div className="mx-auto w-full max-w-7xl">
+      <Toaster />
       <Input
         title={'Blog Title'}
         placeholder="Enter Blog Title"
