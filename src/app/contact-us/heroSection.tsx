@@ -1,16 +1,12 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as motion from 'motion/react-client';
 import CustomInputNumber from './inputNumber';
 
 import emailjs from '@emailjs/browser';
 import './Footer.css';
-
-// Phone fild
-import PhoneInput from 'react-phone-input-2';
-import Link from 'next/link';
 
 import {
   MessageSquareText,
@@ -19,17 +15,18 @@ import {
   MapPin,
   LoaderCircle,
 } from 'lucide-react';
-import { TChatSupport, TMapPin, TMessage, TPhone } from '@/components/icons';
+import { ZContactUser } from '@/ZTypes/contact';
+import { LeadPopUp } from '@/components/leadPopUp';
+import { InputText } from '@/components/inputText';
+import { InputTextArea } from '@/components/inputTextArea';
+import { submitLeadForm } from '../../../lib';
+import { useRouter } from 'next/navigation';
 
 const iconMap = {
   MessageSquareText,
   MessageCircle,
   Phone,
   MapPin,
-};
-
-const handleEmailClick = () => {
-  window.location.href = `mailto:avtechnosys02@gmail.com?`;
 };
 
 export default function Header() {
@@ -40,43 +37,50 @@ export default function Header() {
     number: '+91',
   });
 
+  const [isLeadOpen, setIsLeadOpen] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [showMessage, setShowMessage] = useState('');
-  const sendEmail = async () => {
+  const [errorMessage, setErrorMessage] = useState('');
+  const handleFormSubmit = async () => {
     setLoading(true);
-    const templatePhrase = {
-      from_name: formDetails.name,
-      from_email: formDetails.email,
-      from_number: formDetails.number,
-      from_company: '',
-      message: formDetails.number,
-    };
-    // console.log(templatePhrase);
-    await emailjs
-      .send('service_tz902dr', 'template_bjzmbng', templatePhrase, {
-        publicKey: '7e3pjCOJgYjLD4Mu-',
-      })
-      .then(
-        (response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          // @ts-ignore
-          e.target.reset();
-          setLoading(false);
-        },
-        (error) => {
-          console.log('FAILED...', error);
-        }
-      );
+    const msg = ZContactUser.safeParse(formDetails);
 
-    setShowMessage('Successfully Sent');
+    if (!msg.success) {
+      setErrorMessage(msg.error.issues[0].message);
+      setLoading(false);
+      return;
+    }
+
+    const response = await submitLeadForm({
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+      number: formDetails.number,
+      slug: 'Contact-Us',
+    });
+
+    if (response) {
+      setShowMessage('Successfully Sent');
+      setErrorMessage('');
+    } else {
+      setShowMessage('');
+      setErrorMessage('Something went wrong');
+    }
+
     setFormDetails({
       name: '',
       email: '',
       message: '',
       number: '+91',
     });
+
     setLoading(false);
   };
+
+  const router = useRouter();
+
+  const navigateCareer = () => router.push('/career');
 
   return (
     <div
@@ -87,6 +91,7 @@ export default function Header() {
         backgroundPosition: 'center',
       }}
     >
+      <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <div className="m-auto flex w-full max-w-7xl flex-col justify-between gap-12 px-4 py-16 md:flex-row md:gap-6 md:px-8">
         <div className="flex w-full flex-col gap-4 md:max-w-md md:gap-12">
           <p className="text-center text-5xl font-bold leading-[64px] text-white md:text-left">
@@ -98,8 +103,12 @@ export default function Header() {
           </p>
           <div>
             <div className="flex items-center justify-center gap-4 md:justify-start">
-              <HeroBtn label="For Business " />
               <HeroBtn
+                onClick={() => setIsLeadOpen(true)}
+                label="For Business "
+              />
+              <HeroBtn
+                onClick={navigateCareer}
                 label="For Career "
                 className="bg-white text-black hover:bg-gray-200"
               />
@@ -142,8 +151,9 @@ export default function Header() {
               }
             />
             <p className="capitalize text-green-600">{showMessage}</p>
+            <p className="capitalize text-red-600">{errorMessage}</p>
             <button
-              onClick={sendEmail}
+              onClick={handleFormSubmit}
               disabled={loading}
               className={cn(
                 'cursor-pointer rounded bg-yellow-500 py-3 text-center text-lg font-semibold text-white duration-200 hover:bg-yellow-600',
@@ -166,75 +176,10 @@ export default function Header() {
   );
 }
 
-function InputText({ label, value, setValue }) {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const showLabel = isFocused || value.length > 0;
-
-  return (
-    <div className="relative mt-6 w-full">
-      <AnimatePresence>
-        {showLabel && (
-          <motion.label
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: -12, opacity: 1 }}
-            exit={{ y: 10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="absolute left-3 top-1 bg-white px-1 text-sm font-medium text-gray-600"
-          >
-            {label}
-          </motion.label>
-        )}
-      </AnimatePresence>
-
-      <input
-        type="text"
-        value={value}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={!showLabel ? label : ''}
-        className="w-full rounded border border-gray-300 px-4 py-3 text-base placeholder-gray-400 focus:border-yellow-500 focus:outline-none"
-      />
-    </div>
-  );
-}
-function InputTextArea({ label, value, setValue }) {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const showLabel = isFocused || value.length > 0;
-
-  return (
-    <div className="relative mt-6 w-full">
-      <AnimatePresence>
-        {showLabel && (
-          <motion.label
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: -12, opacity: 1 }}
-            exit={{ y: 10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="absolute left-3 top-1 bg-white px-1 text-sm font-medium text-gray-600"
-          >
-            {label}
-          </motion.label>
-        )}
-      </AnimatePresence>
-
-      <textarea
-        value={value}
-        rows={4}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={!showLabel ? label : ''}
-        className="w-full rounded border border-gray-300 px-4 py-3 text-base placeholder-gray-400 focus:border-yellow-500 focus:outline-none"
-      />
-    </div>
-  );
-}
-function HeroBtn({ className = '', label = '' }) {
+function HeroBtn({ className = '', label = '', onClick = () => {} }) {
   return (
     <div
+      onClick={onClick}
       className={cn(
         'w-fit cursor-pointer rounded bg-yellow-500 px-4 py-2 font-semibold text-white duration-200 hover:bg-yellow-600',
         className

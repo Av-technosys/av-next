@@ -1,0 +1,38 @@
+'use client';
+import { AnimatePresence } from 'framer-motion';
+import * as motion from 'motion/react-client';
+import { useState } from 'react';
+
+export function InputText({ label, value, setValue }) {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const showLabel = isFocused || value.length > 0;
+
+  return (
+    <div className="relative mt-6 w-full">
+      <AnimatePresence>
+        {showLabel && (
+          <motion.label
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: -12, opacity: 1 }}
+            exit={{ y: 10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="absolute left-3 top-1 bg-white px-1 text-sm font-medium text-gray-600"
+          >
+            {label}
+          </motion.label>
+        )}
+      </AnimatePresence>
+
+      <input
+        type="text"
+        value={value}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder={!showLabel ? label : ''}
+        className="w-full rounded border border-gray-300 px-4 py-3 text-base placeholder-gray-400 focus:border-yellow-500 focus:outline-none"
+      />
+    </div>
+  );
+}

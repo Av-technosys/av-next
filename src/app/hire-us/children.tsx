@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import Tabs from '@/components/techohologiesOffered';
-import { Modal } from 'antd';
 import PhoneField from '@/components/header2/phoneFild';
 import emailjs from '@emailjs/browser';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 const Chldren = () => {
   const [isHiremeOpen, setIsHiremeOpen] = useState(false);
 
@@ -422,135 +422,133 @@ function HireMeForm({ open, setIsOpen }: any) {
       );
   }
   return (
-    <Modal
-      open={open}
-      title=""
-      height=""
-      width={700}
-      onCancel={handleCancel}
-      footer={[]}
-    >
-      <form onSubmit={handleFormSubmit}>
-        <div className="">
-          <div className="flex justify-between gap-6 pt-8">
-            <div className="w-full">
-              <label className="" htmlFor="">
-                First Name
-              </label>{' '}
+    <Dialog open={open} onOpenChange={setIsOpen}>
+      <DialogContent className="flex max-h-[86vh] w-full gap-0 overflow-y-auto p-0 sm:max-w-4xl">
+        <form onSubmit={handleFormSubmit} className="mx-auto w-full p-8">
+          <div className="w-full">
+            <div className="flex justify-between gap-6 pt-8">
+              <div className="w-full">
+                <label className="" htmlFor="">
+                  First Name
+                </label>{' '}
+                <br />
+                <input
+                  className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
+                  type="text"
+                  name="from_first_name"
+                  placeholder="   Enter your First name"
+                />
+              </div>
+              <div className="w-full">
+                <label htmlFor="">Last Name</label> <br />
+                <input
+                  className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
+                  type="text"
+                  name="from_last_name"
+                  placeholder="   Enter your Last name"
+                />
+              </div>
+            </div>
+
+            <div className="mt-8 w-full">
+              <label htmlFor="">Company Name</label> <br />
+              <input
+                className="w-full rounded-lg border-2 border-black px-3 py-2"
+                type="text"
+                name="from_company"
+                placeholder="   Enter your company name   "
+              />{' '}
               <br />
-              <input
-                className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
-                type="text"
-                name="from_first_name"
-                placeholder="   Enter your First name"
-              />
             </div>
-            <div className="w-full">
-              <label htmlFor="">Last Name</label> <br />
+
+            <div className="mt-8 w-full">
+              <label htmlFor="">Email</label> <br />
               <input
-                className="mt-[1rem] w-full rounded-lg border-2 border-black px-3 py-2"
-                type="text"
-                name="from_last_name"
-                placeholder="   Enter your Last name"
+                className="w-full rounded-lg border-2 border-black py-2"
+                type="email"
+                name="from_email"
+                placeholder="   Enter your email"
               />
             </div>
           </div>
 
-          <div className="mt-8 w-full">
-            <label htmlFor="">Company Name</label> <br />
-            <input
-              className="w-full rounded-lg border-2 border-black px-3 py-2"
-              type="text"
-              name="from_company"
-              placeholder="   Enter your company name   "
-            />{' '}
-            <br />
-          </div>
-
-          <div className="mt-8 w-full">
-            <label htmlFor="">Email</label> <br />
-            <input
-              className="w-full rounded-lg border-2 border-black py-2"
-              type="email"
-              name="from_email"
-              placeholder="   Enter your email"
+          <div className="mt-6 w-full">
+            <PhoneField
+              onChange={(val) => {
+                setMobileNumber(val);
+              }}
             />
           </div>
-        </div>
 
-        <div className="mt-6 w-full">
-          <PhoneField
-            onChange={(val) => {
-              setMobileNumber(val);
-            }}
-          />
-        </div>
+          <div className="mt-6">
+            <label htmlFor="">Choose how you want to hire</label> <br />
+            <select
+              className="w-full rounded-lg border-2 border-black py-2"
+              name="from_hiring_option"
+            >
+              {/* Choose how you want to hire */}
+              {/* <option value="0">Choose a Category</option> */}
+              {/* <hr /> */}
+              <option value="Hire A Contractor">Hire A Contractor</option>{' '}
+              <hr />
+              <option value="Hire An Employee On AV Payroll">
+                Hire An Employee On AV Payroll
+              </option>{' '}
+              <hr />
+              <option value="Direct-hire On Your Payroll">
+                Direct-hire On Your Payroll
+              </option>{' '}
+              <hr />
+            </select>
+          </div>
+          <br />
 
-        <div className="mt-6">
-          <label htmlFor="">Choose how you want to hire</label> <br />
-          <select
-            className="w-full rounded-lg border-2 border-black py-2"
-            name="from_hiring_option"
+          <div className="mt-2">
+            <label htmlFor="">Which Role are you hiring for?</label> <br />
+            <select
+              className="w-full rounded-lg border-2 border-black py-2"
+              name="from_role"
+            >
+              Choose how you want to hire
+              {/* <option value="0">Choose a Category</option> */}
+              {/* <hr /> */}
+              <option value="Front-End Developer">
+                Front-End Developer
+              </option>{' '}
+              <hr />
+              <option value="Back-End Developer">
+                Back-End Developer
+              </option>{' '}
+              <hr />
+              <option value="UI/UX Designer">UI/UX Designer</option> <hr />
+              <option value="Graphic Designer">Graphic Designer</option> <hr />
+              <option value="Web App Development">
+                Web App Development
+              </option>{' '}
+              <hr />
+              <option value="Mobile App Development">
+                Mobile App Development
+              </option>{' '}
+              <hr />
+              <option value="Database Integration">
+                Database Integration
+              </option>{' '}
+              <hr />
+              <option value="Shopify/Wordpress Development">
+                Shopify/Wordpress Development
+              </option>{' '}
+              <hr />
+            </select>
+          </div>
+
+          <button
+            className="mt-[2.5rem] w-full rounded-lg bg-black px-8 py-3 text-white"
+            type="submit"
           >
-            {/* Choose how you want to hire */}
-            {/* <option value="0">Choose a Category</option> */}
-            {/* <hr /> */}
-            <option value="Hire A Contractor">Hire A Contractor</option> <hr />
-            <option value="Hire An Employee On AV Payroll">
-              Hire An Employee On AV Payroll
-            </option>{' '}
-            <hr />
-            <option value="Direct-hire On Your Payroll">
-              Direct-hire On Your Payroll
-            </option>{' '}
-            <hr />
-          </select>
-        </div>
-        <br />
-
-        <div className="mt-2">
-          <label htmlFor="">Which Role are you hiring for?</label> <br />
-          <select
-            className="w-full rounded-lg border-2 border-black py-2"
-            name="from_role"
-          >
-            Choose how you want to hire
-            {/* <option value="0">Choose a Category</option> */}
-            {/* <hr /> */}
-            <option value="Front-End Developer">
-              Front-End Developer
-            </option>{' '}
-            <hr />
-            <option value="Back-End Developer">Back-End Developer</option>{' '}
-            <hr />
-            <option value="UI/UX Designer">UI/UX Designer</option> <hr />
-            <option value="Graphic Designer">Graphic Designer</option> <hr />
-            <option value="Web App Development">
-              Web App Development
-            </option>{' '}
-            <hr />
-            <option value="Mobile App Development">
-              Mobile App Development
-            </option>{' '}
-            <hr />
-            <option value="Database Integration">
-              Database Integration
-            </option>{' '}
-            <hr />
-            <option value="Shopify/Wordpress Development">
-              Shopify/Wordpress Development
-            </option>{' '}
-            <hr />
-          </select>
-        </div>
-
-        <button
-          className="mt-[2.5rem] w-full rounded-lg bg-black px-8 py-3 text-white"
-          type="submit"
-        >
-          Get In touch
-        </button>
-      </form>
-    </Modal>
+            Get In touch
+          </button>
+        </form>
+      </DialogContent>
+    </Dialog>
   );
 }

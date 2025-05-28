@@ -1,0 +1,666 @@
+[
+  {
+    "id": 28,
+    "documentId": "vkw1b056klfv8tzv949gyox2",
+    "name": "saaskart",
+    "description": "Saaskart India's leading SaaS discovery platform providing data-driven insights and exclusive deals for buyers. With a focus on learning, excellence, adaptability and diversity Saaskart streamlines the software buying process while fostering innovation and inclusivity within the industry.",
+    "projectLink": "https://saaskart.co",
+    "solutions": [
+      {
+        "title": "End User Features",
+        "points": [
+          " This creative website showcases Saaskart's best features and provides investment solutions for buyers and sellers, fostering collaboration with partners.",
+          " Marketplace to see and buy product.",
+          " Informative blogs. "
+        ]
+      }
+    ],
+    "projectBreakDown": [
+      "Logo Design",
+      "UI/UX & Prototyping",
+      "Database - MySQL",
+      " JS Libraries - jQuery, Underscore.js, etc",
+      " UI Framework - Bootstrap",
+      "Elementor (page builder) WordPress, WooCommerce, Elementor."
+    ],
+    "techStack": [
+      "php",
+      "my-sql",
+      "core-js"
+    ],
+    "createdAt": "2025-01-20T10:07:27.099Z",
+    "updatedAt": "2025-02-01T05:05:18.655Z",
+    "publishedAt": "2025-02-01T05:05:22.546Z",
+    "logo": {
+      "id": 5,
+      "documentId": "bnfq4y69iv30uw6rryfsbqh4",
+      "name": "saaskart.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "width": 197,
+      "height": 91,
+      "formats": null,
+      "hash": "saaskart_d462b35afd",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 3.08,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/saaskart_d462b35afd.jpg",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:19:38.382Z",
+      "updatedAt": "2025-01-28T12:19:38.382Z",
+      "publishedAt": "2025-01-28T12:19:38.382Z"
+    },
+    "bannerImage": {
+      "id": 4,
+      "documentId": "jt6d79grqvu0zoc7m7zygczw",
+      "name": "saaskart1.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 584,
+      "height": 567,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/small_saaskart1_6a25abf790.png",
+          "hash": "small_saaskart1_6a25abf790",
+          "mime": "image/png",
+          "name": "small_saaskart1.png",
+          "path": null,
+          "size": 124.93,
+          "width": 500,
+          "height": 485,
+          "sizeInBytes": 124926
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_saaskart1_6a25abf790.png",
+          "hash": "thumbnail_saaskart1_6a25abf790",
+          "mime": "image/png",
+          "name": "thumbnail_saaskart1.png",
+          "path": null,
+          "size": 18.38,
+          "width": 161,
+          "height": 156,
+          "sizeInBytes": 18380
+        }
+      },
+      "hash": "saaskart1_6a25abf790",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 46.02,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/saaskart1_6a25abf790.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:18:52.854Z",
+      "updatedAt": "2025-01-28T12:18:52.854Z",
+      "publishedAt": "2025-01-28T12:18:52.859Z"
+    }
+  },
+  {
+    "id": 25,
+    "documentId": "v1pnzcl1x36zbk7d9exouk38",
+    "name": "Fix Papa",
+    "description": "FixPapa offers a comprehensive solution for all your IT hardware needs. From repairing and servicing to purchasing and responsibly disposing of e-waste we ensure hassle-free transactions while promoting environmental sustainability. Explore our wide range of products including refurbished laptops desktops printers servers projectors and CCTV along with low price and open box deals for budget-friendly options.",
+    "projectLink": "https://fixpapa.com/",
+    "solutions": [
+      {
+        "title": "Web Design And Development",
+        "points": [
+          "This creative website allows users to buy and sell products online.",
+          "Users can filter product by brand",
+          "Users can rent products from website"
+        ]
+      },
+      {
+        "title": "Seller Portal",
+        "points": [
+          "Sellers can list there products easily.",
+          "Sales matrix",
+          "Product analytics",
+          "Payment settlement",
+          "Delivery management"
+        ]
+      }
+    ],
+    "projectBreakDown": [
+      "UI/UX & Prototyping",
+      "Programming language - PHP",
+      "JS Framework - GSAP",
+      "WordPress - WooCommerce Elementor, Contact Form 7 Small Ballon Instagram Feed, Site Kit",
+      "UI Framework - Bootstrap"
+    ],
+    "techStack": [
+      "php",
+      "bootstrap",
+      "core-js"
+    ],
+    "createdAt": "2025-01-20T11:54:50.597Z",
+    "updatedAt": "2025-01-28T12:38:03.426Z",
+    "publishedAt": "2025-01-28T12:38:07.432Z",
+    "logo": {
+      "id": 7,
+      "documentId": "icb2lzboikwi5qt8ef4hq9vi",
+      "name": "fixpapa.svg",
+      "alternativeText": null,
+      "caption": null,
+      "width": 318,
+      "height": 100,
+      "formats": null,
+      "hash": "fixpapa_41041c9ced",
+      "ext": ".svg",
+      "mime": "image/svg+xml",
+      "size": 174.11,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/fixpapa_41041c9ced.svg",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:23:44.982Z",
+      "updatedAt": "2025-01-28T12:23:44.982Z",
+      "publishedAt": "2025-01-28T12:23:44.982Z"
+    },
+    "bannerImage": {
+      "id": 6,
+      "documentId": "v61890jxcyv7ipljv8sdoy9e",
+      "name": "fixpapa1.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 650,
+      "height": 641,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/small_fixpapa1_4655375d90.png",
+          "hash": "small_fixpapa1_4655375d90",
+          "mime": "image/png",
+          "name": "small_fixpapa1.png",
+          "path": null,
+          "size": 98.47,
+          "width": 500,
+          "height": 493,
+          "sizeInBytes": 98474
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_fixpapa1_4655375d90.png",
+          "hash": "thumbnail_fixpapa1_4655375d90",
+          "mime": "image/png",
+          "name": "thumbnail_fixpapa1.png",
+          "path": null,
+          "size": 15.42,
+          "width": 158,
+          "height": 156,
+          "sizeInBytes": 15424
+        }
+      },
+      "hash": "fixpapa1_4655375d90",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 36.43,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/fixpapa1_4655375d90.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:23:18.923Z",
+      "updatedAt": "2025-01-28T12:23:18.923Z",
+      "publishedAt": "2025-01-28T12:23:18.923Z"
+    }
+  },
+  {
+    "id": 24,
+    "documentId": "fa7dqosck23wwo9n7btue20t",
+    "name": "Rajasthani Haat",
+    "description": "RajasthaniHaat showcase the vibrant artistry of Rajasthan. Users can explore a diverse range of authentic Rajasthani fabrics handicrafts and traditional treasures. Engaging with the community users learn about Rajasthan's rich heritage and contribute to the empowerment of local artisans.",
+    "projectLink": "https://rajasthanihaat.com/",
+    "solutions": [
+      {
+        "title": "Customer App / Web",
+        "points": [
+          "This user friendly website allows users to access a curated selection of genuine Rajasthani authentic product Diverse range of product",
+          "Community Engagement empowerment to the Rajasthani artisant educational content",
+          "Secure transactions customer support"
+        ]
+      },
+      {
+        "title": "Admin Portal",
+        "points": [
+          "Product Listing",
+          "Price Listing",
+          "Website analytics - Product & Sell",
+          "Delivery management",
+          "CMS page content management"
+        ]
+      }
+    ],
+    "projectBreakDown": [
+      "UI/UX & Prototyping",
+      "Programming language - PHP",
+      "JS Framework - GSAP",
+      "WordPress - WooCommerce Elementor, Contact Form 7 Small Ballon Instagram Feed, Site Kit",
+      "UI Framework - Bootstrap"
+    ],
+    "techStack": [
+      "my-sql",
+      "reactjs",
+      "hubsport"
+    ],
+    "createdAt": "2025-01-20T12:32:51.339Z",
+    "updatedAt": "2025-01-28T12:37:30.503Z",
+    "publishedAt": "2025-01-28T12:37:34.344Z",
+    "logo": {
+      "id": 11,
+      "documentId": "pvgq6woqoam0xq4abuedw9nf",
+      "name": "rajhut.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "width": 205,
+      "height": 98,
+      "formats": null,
+      "hash": "rajhut_f469200f04",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 3.07,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/rajhut_f469200f04.jpg",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:28:35.009Z",
+      "updatedAt": "2025-01-28T12:28:35.009Z",
+      "publishedAt": "2025-01-28T12:28:35.009Z"
+    },
+    "bannerImage": {
+      "id": 10,
+      "documentId": "zt6ldeni127s68tc4xdhrnnc",
+      "name": "rajhut1.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 621,
+      "height": 603,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/small_rajhut1_0a0aab68bb.png",
+          "hash": "small_rajhut1_0a0aab68bb",
+          "mime": "image/png",
+          "name": "small_rajhut1.png",
+          "path": null,
+          "size": 194.98,
+          "width": 500,
+          "height": 486,
+          "sizeInBytes": 194977
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_rajhut1_0a0aab68bb.png",
+          "hash": "thumbnail_rajhut1_0a0aab68bb",
+          "mime": "image/png",
+          "name": "thumbnail_rajhut1.png",
+          "path": null,
+          "size": 25.9,
+          "width": 161,
+          "height": 156,
+          "sizeInBytes": 25902
+        }
+      },
+      "hash": "rajhut1_0a0aab68bb",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 78.83,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/rajhut1_0a0aab68bb.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:27:56.776Z",
+      "updatedAt": "2025-01-28T12:27:56.776Z",
+      "publishedAt": "2025-01-28T12:27:56.776Z"
+    }
+  },
+  {
+    "id": 23,
+    "documentId": "rpsylfgius4pm6eytal6y9hy",
+    "name": "Finz",
+    "description": "Finz introduces subscription-based payment cards to revolutionize financial transactions. Finz cards offer mersonalized memberships enhancing financial management and rewarding users with, exclusive cashback, discounts and perks.",
+    "projectLink": "#",
+    "solutions": [
+      {
+        "title": "Customer App / Web",
+        "points": [
+          "This user friendly app allows users to buy product smoothly.",
+          "Community section to post content.",
+          "Membership section.",
+          "Informative blogs."
+        ]
+      },
+      {
+        "title": "Seller Portal",
+        "points": [
+          "Seller onboarding",
+          "Sales matrix",
+          "Product analytics",
+          "Payment settlement",
+          "Delivery management"
+        ]
+      }
+    ],
+    "projectBreakDown": [
+      "UI/UX & Prototyping",
+      "Programming language - PHP",
+      "JS Framework - GSAP",
+      "WordPress - WooCommerce Elementor, Contact Form 7 Small Ballon Instagram Feed, Site Kit",
+      "UI Framework - Bootstrap"
+    ],
+    "techStack": [
+      "php",
+      "wordpress",
+      "reactjs"
+    ],
+    "createdAt": "2025-01-20T12:40:55.313Z",
+    "updatedAt": "2025-01-28T12:36:46.454Z",
+    "publishedAt": "2025-01-28T12:36:50.295Z",
+    "logo": {
+      "id": 13,
+      "documentId": "ncqc8x3sf8eb7igaapa0dnd6",
+      "name": "finz.svg",
+      "alternativeText": null,
+      "caption": null,
+      "width": 318,
+      "height": 100,
+      "formats": null,
+      "hash": "finz_0205fdecf6",
+      "ext": ".svg",
+      "mime": "image/svg+xml",
+      "size": 8.1,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/finz_0205fdecf6.svg",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:30:13.951Z",
+      "updatedAt": "2025-01-28T12:30:13.951Z",
+      "publishedAt": "2025-01-28T12:30:13.951Z"
+    },
+    "bannerImage": {
+      "id": 12,
+      "documentId": "peg1sao8kiw97mq2m9hl7yv8",
+      "name": "finz1.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 621,
+      "height": 603,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/small_finz1_fad4221460.png",
+          "hash": "small_finz1_fad4221460",
+          "mime": "image/png",
+          "name": "small_finz1.png",
+          "path": null,
+          "size": 132.33,
+          "width": 500,
+          "height": 486,
+          "sizeInBytes": 132331
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_finz1_fad4221460.png",
+          "hash": "thumbnail_finz1_fad4221460",
+          "mime": "image/png",
+          "name": "thumbnail_finz1.png",
+          "path": null,
+          "size": 18.57,
+          "width": 161,
+          "height": 156,
+          "sizeInBytes": 18565
+        }
+      },
+      "hash": "finz1_fad4221460",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 53.77,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/finz1_fad4221460.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:29:53.626Z",
+      "updatedAt": "2025-01-28T12:29:53.626Z",
+      "publishedAt": "2025-01-28T12:29:53.626Z"
+    }
+  },
+  {
+    "id": 22,
+    "documentId": "nzhrap8pwkakk9pe6qm6xc90",
+    "name": "Tavaga",
+    "description": "Tavaga offers personalized rob-advisory services provide precise investment portfolios as per individual needs with automated algorithms it manages investments to achieve financial goals efficiently. Services include customized portfolio management tax planning insurance review and specialized offerings for NRIs.",
+    "projectLink": "https://tavaga.com/",
+    "solutions": [
+      {
+        "title": "Customer App / Web",
+        "points": [
+          "This user friendly app allows users to buy product smoothly",
+          "Community section to post content",
+          "Membership section",
+          "Informative blogs"
+        ]
+      },
+      {
+        "title": "Seller Portal",
+        "points": [
+          "Seller onboarding",
+          "Sales matrix",
+          "Product analytics",
+          "Payment settlement",
+          "Delivery management"
+        ]
+      }
+    ],
+    "projectBreakDown": [
+      "UI/UX & Prototyping",
+      "Programming language - PHP",
+      "JS Framework - GSAP",
+      "WordPress - WooCommerce Elementor, Contact Form 7 Small Ballon Instagram Feed, Site Kit",
+      "UI Framework - Bootstrap"
+    ],
+    "techStack": [
+      "android",
+      "nodejs",
+      "php",
+      "xcode"
+    ],
+    "createdAt": "2025-01-20T12:47:23.329Z",
+    "updatedAt": "2025-01-28T12:35:49.170Z",
+    "publishedAt": "2025-01-28T12:35:53.009Z",
+    "logo": {
+      "id": 16,
+      "documentId": "wye8xkjixl6ezlitq5e9mxku",
+      "name": "tavaga.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 318,
+      "height": 100,
+      "formats": {
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_tavaga_39358ad798.png",
+          "hash": "thumbnail_tavaga_39358ad798",
+          "mime": "image/png",
+          "name": "thumbnail_tavaga.png",
+          "path": null,
+          "size": 6.2,
+          "width": 245,
+          "height": 77,
+          "sizeInBytes": 6196
+        }
+      },
+      "hash": "tavaga_39358ad798",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 1.69,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/tavaga_39358ad798.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:33:30.538Z",
+      "updatedAt": "2025-01-28T12:33:30.538Z",
+      "publishedAt": "2025-01-28T12:33:30.538Z"
+    },
+    "bannerImage": {
+      "id": 15,
+      "documentId": "vcoqiy86awlxhjlggo6x79ha",
+      "name": "tavago1.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 621,
+      "height": 603,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/small_tavago1_fdd13430d0.png",
+          "hash": "small_tavago1_fdd13430d0",
+          "mime": "image/png",
+          "name": "small_tavago1.png",
+          "path": null,
+          "size": 95.72,
+          "width": 500,
+          "height": 486,
+          "sizeInBytes": 95724
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_tavago1_fdd13430d0.png",
+          "hash": "thumbnail_tavago1_fdd13430d0",
+          "mime": "image/png",
+          "name": "thumbnail_tavago1.png",
+          "path": null,
+          "size": 13.82,
+          "width": 161,
+          "height": 156,
+          "sizeInBytes": 13820
+        }
+      },
+      "hash": "tavago1_fdd13430d0",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 31.22,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/tavago1_fdd13430d0.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:33:04.744Z",
+      "updatedAt": "2025-01-28T12:33:04.744Z",
+      "publishedAt": "2025-01-28T12:33:04.744Z"
+    }
+  },
+  {
+    "id": 18,
+    "documentId": "v4wplfgl1juxtobnkey58o77",
+    "name": "Reno Quotes",
+    "description": "RenoQuotes provide trustworthy contractors for renovation projects. They help with any type of project ranging from general home improvement and construction to roofing and landscaping.",
+    "projectLink": "https://renoquotes.com/",
+    "solutions": [
+      {
+        "title": "End User Features",
+        "points": [
+          "This user friendly app allows users to buy product smoothly.",
+          "Community section to post content",
+          "Membership section",
+          "Informative blogs"
+        ]
+      },
+      {
+        "title": "Seller Portal",
+        "points": [
+          "Seller onboarding",
+          "Sales matrix",
+          "Product analytics",
+          "Payment settlement",
+          "Delivery management"
+        ]
+      }
+    ],
+    "projectBreakDown": [
+      "Logo Design",
+      "UI/UX & Prototyping",
+      "Web Server - Next.js Apache HTTP",
+      "Programming Language - Node.js",
+      "JS Framework - React Next.js",
+      "Security - HSTS"
+    ],
+    "techStack": [
+      "php",
+      "nextjs",
+      "nodejs",
+      "reactjs"
+    ],
+    "createdAt": "2025-01-20T12:04:03.919Z",
+    "updatedAt": "2025-01-28T12:26:49.108Z",
+    "publishedAt": "2025-01-28T12:26:52.990Z",
+    "logo": {
+      "id": 9,
+      "documentId": "vt012pszhvq06884j6dbg2v8",
+      "name": "renoquotes.svg",
+      "alternativeText": null,
+      "caption": null,
+      "width": 318,
+      "height": 54,
+      "formats": null,
+      "hash": "renoquotes_29d059323a",
+      "ext": ".svg",
+      "mime": "image/svg+xml",
+      "size": 50.72,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/renoquotes_29d059323a.svg",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:26:34.938Z",
+      "updatedAt": "2025-01-28T12:26:34.938Z",
+      "publishedAt": "2025-01-28T12:26:34.939Z"
+    },
+    "bannerImage": {
+      "id": 8,
+      "documentId": "jj10y7wm2ruhqv9ubt596dkx",
+      "name": "renoquotes1.png",
+      "alternativeText": null,
+      "caption": null,
+      "width": 641,
+      "height": 623,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/small_renoquotes1_43d303ab87.png",
+          "hash": "small_renoquotes1_43d303ab87",
+          "mime": "image/png",
+          "name": "small_renoquotes1.png",
+          "path": null,
+          "size": 90.71,
+          "width": 500,
+          "height": 486,
+          "sizeInBytes": 90714
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://av-blog.s3.ap-south-1.amazonaws.com/thumbnail_renoquotes1_43d303ab87.png",
+          "hash": "thumbnail_renoquotes1_43d303ab87",
+          "mime": "image/png",
+          "name": "thumbnail_renoquotes1.png",
+          "path": null,
+          "size": 13.52,
+          "width": 161,
+          "height": 156,
+          "sizeInBytes": 13521
+        }
+      },
+      "hash": "renoquotes1_43d303ab87",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 34.26,
+      "url": "https://av-blog.s3.ap-south-1.amazonaws.com/renoquotes1_43d303ab87.png",
+      "previewUrl": null,
+      "provider": "aws-s3",
+      "provider_metadata": null,
+      "createdAt": "2025-01-28T12:26:02.111Z",
+      "updatedAt": "2025-01-28T12:26:02.111Z",
+      "publishedAt": "2025-01-28T12:26:02.112Z"
+    }
+  }
+]

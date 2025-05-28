@@ -1,5 +1,9 @@
 import AdminBlogTble from '@/components/adminBlogTble';
-import { getAdminBlogData, getBlogFormData } from '../../../lib';
+import {
+  getAdminBlogData,
+  getBlogFormData,
+  getLeadFormData,
+} from '../../../lib';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
 import AdminBlogFormTable from '@/components/adminBlogFormData';
@@ -7,6 +11,7 @@ import AdminBlogFormTable from '@/components/adminBlogFormData';
 const Page = async () => {
   const data = await getAdminBlogData();
   const blogFormData = await getBlogFormData();
+  const leadFormData = await getLeadFormData();
   return (
     <div className="mx-auto max-w-7xl p-6">
       <h2 className="text-2xl font-semibold">Admin</h2>
@@ -18,7 +23,18 @@ const Page = async () => {
         New Blog
       </Link>
       <AdminBlogTble data={data} />
-      {blogFormData && <AdminBlogFormTable data={blogFormData} />}
+      {blogFormData.length > 0 && (
+        <>
+          <p className="mt-12 text-3xl">Blogs Data</p>
+          <AdminBlogFormTable data={blogFormData} />
+        </>
+      )}
+      {leadFormData.length > 0 && (
+        <>
+          <p className="mt-12 text-3xl">Leads Data</p>
+          <AdminBlogFormTable data={leadFormData} />
+        </>
+      )}
     </div>
   );
 };

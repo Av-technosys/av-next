@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 const AdminBlogFormTable = ({ data }) => {
   return (
-    <div className="mt-12 w-full">
+    <div className="mt-6 w-full">
       <Table>
         <TableHeader>
           <TableRow>

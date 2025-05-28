@@ -30,3 +30,13 @@ export const blogForm = pgTable('blogForm', {
   slug: varchar('slug'),
   createdAt: timestamp('created_at').defaultNow(),
 });
+
+export const leadFormsData = pgTable('formsData', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name'),
+  email: varchar('email'),
+  message: varchar('message'),
+  number: varchar('number'),
+  slug: varchar('slug'),
+  createdAt: timestamp('created_at').defaultNow(),
+});
