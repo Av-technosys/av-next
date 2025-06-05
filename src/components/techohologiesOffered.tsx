@@ -1,46 +1,67 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent } from './ui/dialog';
+import {
+  TAi,
+  TArroeRight,
+  TBackEnd,
+  TCart,
+  TDataScience,
+  TFrontEnd,
+  TMobile,
+  TRobot,
+} from './icons';
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState<any>(null);
   const tabs = [
-    { label: 'Mobility', content: '' },
-    { label: 'Frontend', content: '' },
-    { label: 'Backend', content: '' },
-    { label: 'Machine Learning', content: '' },
-    { label: 'Artificial Intelligence', content: '' },
-    { label: 'Data Analytics', content: '' },
-    { label: 'CMS & E-Commerce', content: '' },
+    { label: 'Mobility', content: '', icon: TMobile },
+    { label: 'Frontend', content: '', icon: TFrontEnd },
+    { label: 'Backend', content: '', icon: TBackEnd },
+    { label: 'Machine Learning', content: '', icon: TRobot },
+    { label: 'Artificial Intelligence', content: '', icon: TAi },
+    { label: 'Data Analytics', content: '', icon: TDataScience },
+    { label: 'CMS & E-Commerce', content: '', icon: TCart },
   ];
 
   return (
-    <div className="bg-[#1c1c1e] text-white">
-      {/* Tabs */}
+    <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-2">
       <TechonologyDetailModal
         data={modalData}
         open={isModalOpen}
         setOpen={setIsModalOpen}
       />
-      <div className="flex cursor-pointer list-none justify-between overflow-x-scroll scroll-smooth text-[1rem] font-semibold text-white lg:overflow-x-auto">
-        {tabs.map((tab, index) => (
-          <li
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`p-2 px-5 ${
-              activeTab === index ? 'border-b-2 border-gray-500' : ''
-            }`}
-          >
-            {tab.label}
-          </li>
-        ))}
+      {/* <div className="bg-[#FFD717] pr-2"> */}
+      <div className="bg-yellow-500 pr-2 text-neutral-900">
+        <div className="good-scrollbar flex max-h-72 cursor-pointer list-none flex-col overflow-y-auto scroll-smooth p-3 text-lg md:max-h-[28rem] md:p-5 md:text-xl">
+          {tabs.map((tab, index) => {
+            const Icon = tab.icon;
+            return (
+              <li
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`flex items-center justify-between rounded-md px-5 py-4 font-semibold ${
+                  activeTab === index ? 'bg-white/40 text-gray-700' : ''
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <Icon />
+                  {tab.label}
+                </div>
+                {activeTab === index && (
+                  <TArroeRight className="ml-2 size-6 text-gray-700" />
+                )}
+              </li>
+            );
+          })}
+        </div>
       </div>
 
       {/* Content */}
-      <div className="justify-between pb-10 lg:pb-0">
+      <div className="hide-scrollbar max-h-[28rem] justify-between overflow-y-auto bg-white px-4 pb-10 [&>*]:gap-3">
         {activeTab === 0 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[0].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -54,7 +75,7 @@ const Tabs = () => {
         )}
 
         {activeTab === 1 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[1].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -67,7 +88,7 @@ const Tabs = () => {
           </div>
         )}
         {activeTab === 2 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[2].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -80,7 +101,7 @@ const Tabs = () => {
           </div>
         )}
         {activeTab === 3 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[3].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -93,7 +114,7 @@ const Tabs = () => {
           </div>
         )}
         {activeTab === 4 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[4].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -106,7 +127,7 @@ const Tabs = () => {
           </div>
         )}
         {activeTab === 5 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[5].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -119,7 +140,7 @@ const Tabs = () => {
           </div>
         )}
         {activeTab === 6 && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-10 grid grid-cols-2">
             {TechonologyData[6].map((item, index) => (
               <IconWithName
                 setModalData={setModalData}
@@ -1021,14 +1042,16 @@ function IconWithName({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3, delay: idx * 0.1 }}
       onClick={handleOnClick}
-      className="flex cursor-pointer items-center gap-3 rounded bg-transparent p-3 duration-200 hover:bg-neutral-800 lg:flex"
+      className="flex cursor-pointer items-center gap-4 rounded-xl border-2 border-gray-200 bg-gray-100 px-3 py-4 duration-200 hover:bg-gray-200 md:px-5 lg:flex"
     >
       <img
-        className="h-12 w-auto object-contain"
+        className="h-6 w-auto object-contain md:h-10"
         src={`./${item.imgSrc}`}
         alt="Backend"
       />
-      <h1 className="mt-3">{item.name}</h1>
+      <h1 className="my-auto font-medium text-gray-800 md:text-xl">
+        {item.name}
+      </h1>
     </motion.div>
   );
 }
@@ -1045,7 +1068,7 @@ function TechonologyDetailModal({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="flex max-h-[86vh] w-full gap-0 overflow-y-auto p-0 sm:max-w-4xl">
-        <div className="flex w-full flex-col gap-4 px-2 py-12 md:px-4">
+        <div className="flex w-full flex-col gap-4 px-4 py-12 md:px-8">
           <p className="text-3xl font-medium">{data?.title || 'Title'}</p>
           <p className="text-gray-600">{data?.description || 'Description'}</p>
 

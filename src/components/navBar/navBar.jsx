@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import * as motion from 'motion/react-client';
 import { Menu, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { TEmail, TTeams } from '../icons';
 
 export function NavBarHome() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +29,7 @@ export function NavBarHome() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white py-3 shadow-md md:py-5">
+    <div className="sticky top-0 z-50 w-full bg-white py-3 shadow-md md:py-3">
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 px-4">
         {/* Logo with animation */}
         <motion.div
@@ -80,6 +82,27 @@ export function NavBarHome() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+export function InfoNav() {
+  return (
+    <div className="mx-auto flex w-full max-w-screen-2xl flex-col justify-end px-4 py-1 sm:flex-row sm:gap-6">
+      <Link
+        className="ml-auto flex w-fit items-center gap-2 text-sm hover:underline md:text-base"
+        href="mailto:info@avtechnosys.com"
+      >
+        <TEmail className="size-4 text-blue-600 md:size-8" />
+        info@avtechnosys.com
+      </Link>
+      <Link
+        className="ml-auto flex w-fit items-center gap-2 text-sm hover:underline sm:ml-0 md:text-base"
+        href="msteams:/l/chat/0/0?users=akansha@avtechnosys.com"
+      >
+        <TTeams className="size-4 text-blue-600 md:size-8" />
+        akansha@avtechnosys.com
+      </Link>
     </div>
   );
 }

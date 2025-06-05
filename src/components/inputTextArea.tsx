@@ -4,7 +4,13 @@ import { AnimatePresence } from 'framer-motion';
 import * as motion from 'motion/react-client';
 import { useState } from 'react';
 
-export function InputTextArea({ label, value, setValue }) {
+export function InputTextArea({
+  label,
+  inputClass = '',
+  labelClass = '',
+  value,
+  setValue,
+}) {
   const [isFocused, setIsFocused] = useState(false);
 
   const showLabel = isFocused || value.length > 0;
@@ -18,7 +24,10 @@ export function InputTextArea({ label, value, setValue }) {
             animate={{ y: -12, opacity: 1 }}
             exit={{ y: 10, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-3 top-1 w-full bg-white pl-1 pr-4 text-xs font-medium text-gray-600"
+            className={cn(
+              'absolute left-3 top-1 w-full bg-white pl-1 pr-4 text-xs font-medium text-gray-600',
+              labelClass
+            )}
           >
             {label}
           </motion.label>
@@ -34,7 +43,8 @@ export function InputTextArea({ label, value, setValue }) {
         placeholder={!showLabel ? label : ''}
         className={cn(
           'w-full rounded border border-gray-300 px-4 pb-3 text-base placeholder-gray-400 focus:border-yellow-500 focus:outline-none',
-          isFocused ? 'pt-6' : 'pt-3'
+          isFocused ? 'pt-6' : 'pt-3',
+          inputClass
         )}
       />
     </div>

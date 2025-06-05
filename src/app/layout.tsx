@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Script from 'next/script';
-import Head from 'next/head';
+import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: {
@@ -50,6 +50,10 @@ export const metadata: Metadata = {
   },
 };
 
+const inter = Inter({
+  weight: '400',
+  subsets: ['latin'],
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,16 +61,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* <meta name="robots" content="index, follow" /> */}
+      <head>
         <link rel="icon" type="image/x-icon" href="/new/favicon.ico" />
         {/* Google search console */}
         <meta
           name="google-site-verification"
           content="HQJB1181ErQ3G35WCCaCOIniYQOafoWa9LWO5SpZclk"
         />
-      </Head>
-      <body className={`font-inter antialiased`}>
+        <meta
+          name="dmca-site-verification"
+          content="TjFlbHU5SmZnSFQ2UjV2TXp5Ti9sWGVaazEvR1JQRjBnR1pPQzlEM0JRYz01"
+        />
+      </head>
+      <body className={` ${inter.className} scroll-smooth antialiased`}>
         {/* Google Analytics Scripts */}
         <Script
           strategy="afterInteractive"

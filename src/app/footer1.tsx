@@ -57,10 +57,30 @@ const Footer1 = ({ className = '' }) => {
               </Link>
             </div>
           </div>
-          <div className="flex justify-center pb-6 pt-2 md:pt-10">
-            <h3 className="text-center text-3xl font-medium duration-500 md:w-[90%] md:text-3xl lg:text-3xl">
-              Driving Digital Innovation, Powering Marketing Success
-            </h3>
+        </div>
+        <div className="w-full bg-gray-100 py-4">
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 md:flex-row">
+            <div className="flex items-center gap-4">
+              <a href="https://www.dmca.com/Protection/Status.aspx?id=d9f8c7fd-18f0-4b29-bdf1-d4b6e19ea6f3&refurl=https%3a%2f%2fwww.avtechnosys.com%2f&rlo=true">
+                <img src="/new/review/dmca.png" className="h-12 w-auto" />
+              </a>
+              <p className="text-gray-700">
+                Copyright © 2025{' '}
+                <span className="font-medium text-black">avtechnosys.com</span>{' '}
+                All Rights Reserved
+              </p>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-6 md:mt-0 md:flex-nowrap">
+              <Link className="hover:underline" href={'/terms-and-conditions'}>
+                Terms of Service
+              </Link>
+              <Link className="hover:underline" href={'/privacy-policy'}>
+                Privacy Policy
+              </Link>
+              <Link className="hover:underline" href={'/career'}>
+                Career
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
@@ -72,7 +92,7 @@ export default Footer1;
 
 function FooterList({ data }: any) {
   return (
-    <div className="flex w-full max-w-60 flex-col gap-2 md:gap-4">
+    <div className="flex w-full flex-col gap-2 sm:max-w-60 md:gap-4">
       <p className="text-lg font-semibold">{data.name}</p>
       <div className="flex flex-col gap-2">
         {data.links.map((item: any, idx: number) => {
@@ -132,10 +152,7 @@ const footerData = [
         name: 'Portfolio',
         link: '/portfolio',
       },
-      {
-        name: 'Career',
-        link: '/career',
-      },
+
       {
         name: 'Blog',
         link: '/blog',
@@ -153,6 +170,14 @@ const footerData = [
       {
         name: 'Contact Us',
         link: '/contact-us',
+      },
+      {
+        name: 'Privacy Policy',
+        link: '/privacy-policy',
+      },
+      {
+        name: 'Terms & Conditions',
+        link: '/terms-and-conditions',
       },
     ],
   },

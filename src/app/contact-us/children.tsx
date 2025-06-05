@@ -137,7 +137,7 @@ const Cldren = () => {
       </div> */}
 
       {/* //daisy ui card */}
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 md:px-4 lg:grid-cols-4 lg:gap-10">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-8 sm:grid-cols-2 md:px-4 lg:grid-cols-4 lg:gap-10">
         {ContactUsCardData.map((data: any, idx) => {
           return <ContactUsCards key={idx} data={data} />;
         })}
@@ -197,17 +197,17 @@ type ContactUsCard = {
 function ContactUsCards({ data }: { data: ContactUsCard }) {
   const IconComponent = data.icon;
   return (
-    <div className="flex w-full flex-col gap-8 rounded-lg border border-gray-200 bg-gray-100 p-4 text-black">
-      <div className="h-fit w-fit">
+    <div className="flex w-full flex-col gap-4 rounded-lg border border-gray-200 bg-gray-50 px-6 py-6 text-black md:gap-6 md:py-8">
+      <div className="mx-auto h-fit w-fit">
         <IconComponent size={32} />
       </div>
-      <div className="flex flex-col gap-0">
-        <h2 className="text-2xl">{data.title}</h2>
-        <p className="text-gray-600">{data.description}</p>
+      <div className="flex flex-col gap-0 text-center">
+        <h2 className="text-2xl font-medium">{data.title}</h2>
+        <p className="text-gray-500">{data.description}</p>
         <Link
           href={data.link}
           onClick={handleEmailClick}
-          className="mt-8 w-full rounded-md border border-dashed border-gray-300 px-3 py-2 text-center hover:border-solid"
+          className="mt-8 w-full rounded-md px-3 py-2 text-center duration-200"
         >
           {data.buttonText}
         </Link>
