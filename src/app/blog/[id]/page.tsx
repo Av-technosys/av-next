@@ -10,7 +10,6 @@ import { QueryForm } from './queryForm';
 import { NavBarHome } from '@/components/navBar';
 import { TableOfContents } from './tableOfContext';
 import { TArroeRight } from '@/components/icons';
-import Dow from './Dow';
 
 type Props = {
   params: Promise<{ id: string }>;

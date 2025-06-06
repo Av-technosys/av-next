@@ -9,9 +9,21 @@ import Link from 'next/link';
 import AdminBlogFormTable from '@/components/adminBlogFormData';
 
 const Page = async () => {
-  const data = await getAdminBlogData();
-  const blogFormData = await getBlogFormData();
-  const leadFormData = await getLeadFormData();
+  let data = [];
+  let blogFormData = [];
+  let leadFormData = [];
+
+  try {
+    [data, blogFormData, leadFormData] = await Promise.all([
+      getAdminBlogData(),
+      getBlogFormData(),
+      getLeadFormData(),
+    ]);
+  } catch (error) {
+    console.error('Error fetching admin data:', error);
+    // Optional: Show fallback UI or rethrow
+  }
+
   return (
     <div className="mx-auto max-w-7xl p-6">
       <h2 className="text-2xl font-semibold">Admin</h2>
