@@ -12,7 +12,6 @@ import {
   TAi,
   TArroeRight,
   TBriefcase,
-  TCertificate,
   TCircleTick,
   TCircularRelation,
   TCode,
@@ -23,7 +22,6 @@ import {
   TSoftwareDevelopment,
   TUserCode,
   TUserGroup,
-  TUserPentagon,
   TWorld,
 } from '@/components/icons';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
@@ -40,18 +38,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
 
 const Home = () => {
-  const [isInitialLoad, setIsInitialLoad] = useState(false);
   const [isLeadOpen, setIsLeadOpen] = useState(false);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsInitialLoad(false);
-  //   }, 1800);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  if (isInitialLoad) {
-    return <InitialLoadAnimation />;
-  }
 
   return (
     <div className="h-full min-h-screen w-full bg-white">
@@ -78,57 +65,6 @@ const Home = () => {
     </div>
   );
 };
-
-function InitialLoadAnimation() {
-  return (
-    <div className="h-fullwful flex min-h-screen flex-col items-center justify-center gap-8 bg-[#1c1c1e] text-white">
-      <div className="flex items-center gap-2">
-        <div className="size-24">
-          <img
-            className="h-full w-full object-contain"
-            src="./av-loading-logo.svg"
-            alt=""
-          />
-        </div>
-        <ul className="flex h-24 flex-col justify-between pb-2">
-          <motion.li
-            initial={{ x: 16, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            className="text-xl font-semibold text-gray-200"
-          >
-            Inovate
-          </motion.li>
-          <motion.li
-            initial={{ x: 12, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="semfont-semibold-gray-200 text-xl font-medium"
-          >
-            Implement
-          </motion.li>
-          <motion.li
-            initial={{ x: 12, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-xl font-semibold text-gray-200"
-          >
-            Inspire
-          </motion.li>
-        </ul>
-      </div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="flex flex-col items-center justify-center gap-1 blur-md"
-      >
-        <div className="h-2 w-24 rounded-full bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
-        <div className="h-2 w-52 rounded-full bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-        <div className="h-2 w-24 rounded-full bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
-      </motion.div>
-    </div>
-  );
-}
 
 export default Home;
 function HeroSection({ setIsLeadOpen }) {
@@ -700,46 +636,12 @@ function BlogCard({ blog }) {
   );
 }
 
-// function BookCall() {
-//   return (
-//     <div className="mt-32 w-full bg-gradient-to-br from-orange-600 to-yellow-400 text-white">
-//       <div className="mx-auto flex w-full max-w-7xl justify-between gap-4">
-//         <div className="flex w-1/2 flex-col gap-6 py-12">
-//           <p className="text-4xl font-semibold leading-tight tracking-wide">
-//             Get Started with a Free Expert Consultation
-//           </p>
-//           <p className="tracking-wider text-gray-200">
-//             By creating solutions for businesses, entrepreneurs, industry
-//             leaders, and governmental organizations, we bring the digital future
-//             closer to people.
-//           </p>
-//           <button className="relative mt-12 inline-flex h-12 w-fit overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-//             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFF_0%,#f7e77c_50%,#09090b_60%)]" />
-//             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-zinc-950 px-6 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-//               Book A Free Demo
-//             </span>
-//           </button>
-//         </div>
-//         <div className="relative h-full w-full max-w-xl">
-//           {/* <div className="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-slate-900 to-transparent"></div> */}
-//           <img
-//             src="/new/bookACall.jpg"
-//             // className="h-full w-full object-cover"
-//             className="h-auto w-full [mask-image:linear-gradient(to_right,transparent,black_40%,black_60%,transparent)] [mask-repeat:no-repeat] [mask-size:100%_100%]"
-//             alt=""
-//           />
-//           {/* <div className="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-slate-900 to-transparent"></div> */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 function WhyChooseUs() {
   const data = [
     {
       title: 'Expertise Meets Innovation',
       description:
-        'With over 14 years of global experience, we deliver scalable, future-ready software solutions built on innovation and trust.',
+        'With over 10 years of global experience, we deliver scalable, future-ready software solutions built on innovation and trust.',
       image: '/new/wcu1.jpeg',
     },
     {
@@ -771,7 +673,7 @@ function WhyChooseUs() {
             Reimagined user experiences
           </p> */}
           <div className="grid-cols-2 items-center gap-6 lg:grid">
-            <div className="relative mx-auto hidden aspect-[3/4] h-full max-h-[36rem] w-auto overflow-hidden rounded-2xl lg:block">
+            <div className="relative mx-auto hidden aspect-[3/4] h-[34rem] w-auto overflow-hidden rounded-2xl lg:block">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={data[selectedIndex].image}
@@ -793,7 +695,7 @@ function WhyChooseUs() {
                   onHoverStart={() => setSelectedIndex(idx)}
                   className={cn(
                     'flex cursor-pointer gap-7 border-b py-4 opacity-100 duration-200 md:py-6 md:opacity-50',
-                    selectedIndex === idx && 'opacity-100'
+                    selectedIndex === idx && 'md:opacity-100'
                   )}
                 >
                   <div className="flex text-xl font-semibold md:text-3xl">

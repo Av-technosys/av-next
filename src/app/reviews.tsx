@@ -1,3 +1,4 @@
+import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +24,14 @@ const Testimonial = () => {
           </p>
         </div>
         <div className="mt-16 w-full">
-          <Carousel className="">
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
+            className=""
+          >
             <CarouselContent>
               {cardData.map((cardData, index) => (
                 <CarouselItem key={index}>
