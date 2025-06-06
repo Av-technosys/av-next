@@ -150,7 +150,6 @@ const Page = async (context: any) => {
           </div>
         </div>
       </div>
-      <Dow blogData={blogData} />
       <Footer1 />
     </div>
   );

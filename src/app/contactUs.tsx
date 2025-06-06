@@ -1,6 +1,9 @@
 import { InputText } from '@/components/inputText';
 import { InputTextArea } from '@/components/inputTextArea';
+import { ZContactUser } from '@/ZTypes/contact';
 import { useState } from 'react';
+import { submitLeadForm } from '../../lib';
+import { cn } from '@/lib/utils';
 
 export function ContactUs() {
   const [formDetails, setFormDetails] = useState({
@@ -9,13 +12,53 @@ export function ContactUs() {
     message: '',
     number: '+91',
   });
+
+  const [loading, setLoading] = useState(false);
+  const [showMessage, setShowMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const handleFormSubmit = async () => {
+    setLoading(true);
+    const msg = ZContactUser.safeParse(formDetails);
+
+    if (!msg.success) {
+      setErrorMessage(msg.error.issues[0].message);
+      setLoading(false);
+      return;
+    }
+
+    const response = await submitLeadForm({
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+      number: formDetails.number,
+      slug: 'Contact-Us',
+    });
+
+    if (response) {
+      setShowMessage('Successfully Sent');
+      setErrorMessage('');
+    } else {
+      setShowMessage('');
+      setErrorMessage('Something went wrong');
+    }
+
+    setFormDetails({
+      name: '',
+      email: '',
+      message: '',
+      number: '+91',
+    });
+
+    setLoading(false);
+  };
+
   return (
     <div
       style={{ background: 'linear-gradient(135deg, #1f1f1f, #6b21a8)' }}
       className="w-full border-y-4 border-purple-400 px-4 py-20"
     >
       <div className="mx-auto grid min-h-96 max-w-7xl grid-cols-1 flex-col items-center justify-between gap-16 md:grid-cols-2 md:gap-4">
-        <div className="flex flex-col gap-6 text-white">
+        <div className="space-y-12 text-white">
           <p className="text-3xl font-medium leading-tight tracking-wider md:text-4xl">
             Our Technology Experts Are Catalysts for Digital Transformation
           </p>
@@ -67,9 +110,18 @@ export function ContactUs() {
               setFormDetails({ ...formDetails, message: value })
             }
           />
-          <div className="my-2 cursor-pointer rounded-md bg-purple-900 px-4 py-2 text-center font-semibold text-white duration-200 hover:bg-purple-950">
-            Request a proposal
-          </div>
+          <p className="capitalize text-green-600">{showMessage}</p>
+          <p className="capitalize text-red-600">{errorMessage}</p>
+          <button
+            onClick={handleFormSubmit}
+            disabled={loading}
+            className={cn(
+              'my-2 cursor-pointer rounded-md bg-purple-900 px-4 py-2 text-center font-semibold text-white duration-200 hover:bg-purple-950',
+              loading && 'opacity-50'
+            )}
+          >
+            {loading ? 'Sending...' : 'Request a proposal'}
+          </button>
         </div>
       </div>
     </div>

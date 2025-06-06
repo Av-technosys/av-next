@@ -770,7 +770,7 @@ const TechonologyData = [
     },
     {
       name: 'Apache Flink',
-      imgSrc: './flink.svg',
+      imgSrc: './flink.png',
       alt: 'Machine Learning',
       content: 'Apache Flink',
       title: 'Apache Flink: Real-Time Stream Processing Framework',
@@ -802,7 +802,7 @@ const TechonologyData = [
     },
     {
       name: 'Apache Kafka',
-      imgSrc: './kafka.svg',
+      imgSrc: './kafka.png',
       alt: 'Machine Learning',
       content: 'Apache Kafka',
       title: 'Apache Kafka: Distributed Event Streaming Platform',
@@ -853,7 +853,7 @@ const TechonologyData = [
     },
     {
       name: 'WordPress',
-      imgSrc: './wordpress-icon.svg',
+      imgSrc: './wordpress.png',
       alt: 'Backend',
       content: 'WordPress',
       title: 'WordPress: The Ultimate CMS for Websites and Blogs',
@@ -885,7 +885,7 @@ const TechonologyData = [
     },
     {
       name: 'Big Commerce',
-      imgSrc: './bigcommerce.svg',
+      imgSrc: './bigcommerce.webp',
       alt: 'Backend',
       content: 'Big Commerce',
       title: 'Big Commerce: Enterprise-Grade E-Commerce Platform',

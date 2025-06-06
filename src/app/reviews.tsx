@@ -7,12 +7,12 @@ import {
 } from '@/components/ui/carousel';
 import React from 'react';
 
-const Reviews = () => {
+const Testimonial = () => {
   return (
     <div className="w-full overflow-hidden border-y-4 border-neutral-500 bg-neutral-900 py-20 text-white">
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex flex-col gap-6 px-4">
-          <p className="text-2xl font-medium leading-tight tracking-wider md:text-4xl">
+          <p className="text-2xl font-semibold leading-tight tracking-wider md:text-4xl">
             What Our Clients Say <br />
             About Working With Us
           </p>
@@ -40,10 +40,10 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Testimonial;
 function Card({ cardData }) {
   return (
-    <div className="relative h-full rounded-xl border-2 border-neutral-700 bg-neutral-600/40 p-6 md:p-12">
+    <div className="relative mx-auto h-full max-w-[92vw] rounded-xl border-2 border-neutral-700 bg-neutral-600/40 p-6 md:p-12">
       <span className="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700"></span>
       <span className="absolute bottom-px right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700 blur-xl"></span>
       <p className="border-b border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">

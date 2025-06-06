@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 import Footer1 from './footer1';
 import { ChevronRight } from 'lucide-react';
@@ -34,10 +33,10 @@ import { FaqAccordion } from '@/components/faqAccordion';
 import Ratings from './ratings';
 import { ratingData } from '@/const/ratingData';
 import { ContactUs } from './contactUs';
-import Reviews from './reviews';
+import Testimonial from './reviews';
 import Tabs from '@/components/techohologiesOffered';
 import dayjs from 'dayjs';
-import Marque1 from './marque';
+import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
 
 const Home = () => {
@@ -65,10 +64,10 @@ const Home = () => {
       <ExperienceSection />
       <PartnerSection />
       <CaseStudy />
-      <Reviews />
+      <Testimonial />
       <BookCall setIsLeadOpen={setIsLeadOpen} />
       <TechnologiesOffered />
-      <Marque1 />
+      <WhyChooseUs />
       <ContactUs />
       <FaqAccordion />
       <BlogSection />
@@ -444,40 +443,14 @@ function ExperienceSection() {
       icon: TUserGroup,
     },
   ];
-  const experienceData2 = [
-    {
-      title: 'Experience',
-      icon: TBriefcase,
-      description:
-        'We have over 10 years of expertise providing exceptional solutions to multinational corporations, we have assisted numerous brands in thriving highly competitive markets.',
-    },
-    {
-      title: 'Innovation',
-      icon: TUserGroup,
-      description:
-        'Your idea will meet innovation at AV Technosys, your one-stop shop. We are always inspired when working on unconventional concepts.',
-    },
-    {
-      title: 'Assurance',
-      icon: TCertificate,
-      description:
-        'As a provider of AI-powered digital solutions with an outcome-driven approach, we guarantee growth and immediate results for our clients who are successful enterprises.',
-    },
-    {
-      title: 'Expertise',
-      icon: TUserPentagon,
-      description: `We specialize in delivering straightforward answers to complex issues. With our expertise, we’re ready to assist.`,
-    },
-  ];
 
   return (
-    <div className="w-full bg-yellow-200 from-white from-30% to-yellow-500 px-4 py-12 md:bg-gradient-to-br md:p-2 md:py-20">
-      <div className="mx-auto grid w-full max-w-7xl gap-6 md:grid-cols-12">
+    <div className="w-full bg-yellow-50/50 px-4 py-12 md:bg-gradient-to-br md:p-2 md:py-20">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 md:grid-cols-12">
         <div className="flex w-full flex-col gap-12 md:col-span-7">
-          <p className="max-w-xl text-3xl leading-tight tracking-wider md:mt-6">
-            Why{' '}
-            <span className="font-semibold text-yellow-500">AV Technosys</span>{' '}
-            Is the Strategic Choice for Your Project
+          <p className="max-w-xl text-3xl font-semibold leading-tight tracking-wider text-gray-800 md:mt-6">
+            Why <span className="text-yellow-500">AV Technosys</span> Is the
+            Strategic Choice for Your Project
           </p>
           <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 md:gap-y-10">
             {experienceData.map((item, idx) => {
@@ -505,8 +478,8 @@ function ExperienceSection() {
             })}
           </div>
         </div>
-        <div className="mt-6 grid w-full gap-6 sm:grid-cols-2 md:col-span-5 md:mt-0">
-          {experienceData2.map((item, idx) => {
+        <div className="mt-6 grid w-full md:col-span-5 md:mt-0">
+          {/* {experienceData2.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
@@ -524,7 +497,11 @@ function ExperienceSection() {
                 <p className="text-sm text-gray-600">{item.description}</p>
               </div>
             );
-          })}
+          })} */}
+          <img
+            className="h-full w-full rounded-md object-cover"
+            src="/new/experience-img.png"
+          />
         </div>
       </div>
     </div>
@@ -549,7 +526,7 @@ function TechnologiesOffered() {
 
 function BookCall({ setIsLeadOpen }) {
   return (
-    <div className="w-full px-6 py-8 md:py-20">
+    <div className="w-full px-6 py-8 md:py-16">
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse justify-between gap-4 md:flex-row">
         <div className="flex w-full flex-col gap-6 py-12 md:w-1/2">
           <div className="text-4xl font-medium leading-tight tracking-wide">
@@ -572,17 +549,19 @@ function BookCall({ setIsLeadOpen }) {
           </p>
           <button
             onClick={() => setIsLeadOpen(true)}
-            className="group mt-8 flex w-fit cursor-pointer items-center gap-1 rounded bg-purple-600 px-6 py-3 font-semibold text-white"
+            className="group mt-8 flex w-fit cursor-pointer items-center gap-1 rounded bg-neutral-800 px-6 py-3 font-semibold text-white"
           >
             Book A Free Demo{' '}
             <TArroeRight className="duration-300 group-hover:-rotate-45" />
           </button>
         </div>
-        <img
-          src="/new/bookacall.png"
-          alt=""
-          className="h-auto w-full max-w-md"
-        />
+        <div className="relative h-auto w-full max-w-lg">
+          <img
+            src="/new/bookacall.png"
+            alt=""
+            className="h-full w-full object-contain"
+          />
+        </div>
       </div>
     </div>
   );
@@ -660,7 +639,7 @@ function BlogSection() {
       <div className="mx-auto max-w-7xl text-black">
         <div className="mb-8 flex flex-col justify-between gap-4 xl:flex-row xl:items-center">
           <div>
-            <p className="mb-2 text-3xl font-semibold uppercase">
+            <p className="mb-2 text-3xl font-semibold capitalize">
               Our Latest Blogs
             </p>
             <p className="text-xl text-gray-600">
@@ -670,10 +649,13 @@ function BlogSection() {
           </div>
           <Link
             href={'/blog'}
-            className="flex h-fit w-fit cursor-pointer items-center gap-2 rounded bg-yellow-500 px-6 py-3 font-medium text-white duration-200 hover:bg-yellow-600"
+            className="group flex h-fit w-fit cursor-pointer items-center gap-2 rounded bg-yellow-500 px-6 py-3 font-medium text-white duration-200 hover:bg-yellow-600"
           >
-            <p>View All Blogs</p>
-            <TArroeRight size={20} />
+            <p className="font-medium">View All Blogs</p>
+            <TArroeRight
+              size={20}
+              className="duration-300 group-hover:-rotate-45"
+            />
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -752,3 +734,83 @@ function BlogCard({ blog }) {
 //     </div>
 //   );
 // }
+function WhyChooseUs() {
+  const data = [
+    {
+      title: 'Expertise Meets Innovation',
+      description:
+        'With over 14 years of global experience, we deliver scalable, future-ready software solutions built on innovation and trust.',
+      image: '/new/wcu1.jpeg',
+    },
+    {
+      title: 'End-to-End Services',
+      description:
+        'From development to deployment and beyond we offer complete support and maintenance to keep your business running seamlessly.',
+      image: '/new/wcu2.jpeg',
+    },
+    {
+      title: 'Client-Centric Approach',
+      description: `We tailor performance, security, and scalability solutions to match each client's unique goals and growth strategy.`,
+      image: '/new/wcu3.jpeg',
+    },
+  ];
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  return (
+    <div className="w-full px-4 py-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
+        <div className="relative w-full overflow-hidden">
+          <p className="h-full w-full text-center text-4xl font-extrabold text-neutral-400 md:translate-y-4 md:text-8xl xl:text-[10rem]">
+            Why Choose Us
+          </p>
+          <div className="absolute bottom-0 left-0 h-12 w-full from-white to-transparent md:h-20 md:bg-gradient-to-t"></div>
+        </div>
+        <div className="space-y-6 rounded-3xl border bg-gray-50 px-6 py-4 md:py-12">
+          {/* <p className="text-center text-5xl font-semibold">
+            Reimagined user experiences
+          </p> */}
+          <div className="grid-cols-2 items-center gap-6 lg:grid">
+            <div className="relative mx-auto hidden aspect-[3/4] h-full max-h-[36rem] w-auto overflow-hidden rounded-2xl lg:block">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={data[selectedIndex].image}
+                  src={data[selectedIndex].image}
+                  alt="experience image"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.4, ease: 'easeInOut' }}
+                  className="h-full w-full object-cover"
+                />
+              </AnimatePresence>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              {data.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  onHoverStart={() => setSelectedIndex(idx)}
+                  className={cn(
+                    'flex cursor-pointer gap-7 border-b py-4 opacity-100 duration-200 md:py-6 md:opacity-50',
+                    selectedIndex === idx && 'opacity-100'
+                  )}
+                >
+                  <div className="flex text-xl font-semibold md:text-3xl">
+                    {'0' + (idx + 1)}
+                  </div>
+                  <div className="space-y-2.5">
+                    <p className="text-xl font-semibold md:text-3xl">
+                      {item.title}
+                    </p>
+                    <p className="text-gray-700">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
