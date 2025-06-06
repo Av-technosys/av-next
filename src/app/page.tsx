@@ -74,6 +74,9 @@ function HeroSection({ setIsLeadOpen }) {
         muted
         loop
         autoPlay
+        playsInline
+        preload="auto"
+        poster="/new/video-img.png"
         className="absolute left-0 top-0 z-0 h-full w-full object-cover"
       >
         <source
