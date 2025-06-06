@@ -76,7 +76,10 @@ function HeroSection({ setIsLeadOpen }) {
         autoPlay
         className="absolute left-0 top-0 z-0 h-full w-full object-cover"
       >
-        <source src="/new/hero-bg-video.mp4" type="video/mp4" />
+        <source
+          src="https://av-blog.s3.ap-south-1.amazonaws.com/hserSection/hero-bg.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
