@@ -34,7 +34,7 @@ export function NavBarHome() {
         {/* Logo with animation */}
         <motion.div
           onClick={navigateHomePage}
-          initial={{ height: '3rem' }}
+          initial={{ height: '3.6rem' }}
           animate={{ height: !isScrolled ? '3.6rem' : '3rem' }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="flex-shrink-0 cursor-pointer"
