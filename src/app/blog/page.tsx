@@ -12,13 +12,21 @@ import ShowBlogs from './showBlogs';
 export const metadata: Metadata = {
   title: 'Blogs',
   description:
-    'Read all the lastest trends occurring in the it sector from AI to no-code development we cover all. Vist to know more',
+    'Read all the latest trends occurring in the IT sector — from AI to no-code development, we cover it all. Visit to know more.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/blog/',
   },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    title: 'Blogs',
+    description:
+      'Read all the latest trends occurring in the IT sector — from AI to no-code development, we cover it all. Visit to know more.',
+    url: 'https://www.avtechnosys.com/blog/',
+    siteName: 'AV Technosys',
+    type: 'website',
   },
 };
 

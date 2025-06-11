@@ -17,13 +17,21 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'We are a leading Web development company with a team of more than 100+ experienced developers. Know more about AV Technosys and our services by visiting us',
+    'AV Technosys is a leading web and mobile app development company with 100+ expert developers. Discover our mission, values, and full-service capabilities.',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/about-us',
+    canonical: 'https://www.avtechnosys.com/about-us/',
   },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    title: 'About Us - AV Technosys',
+    description:
+      'AV Technosys is a leading web and mobile app development company with 100+ expert developers. Discover our mission, values, and full-service capabilities.',
+    url: 'https://www.avtechnosys.com/about-us/',
+    siteName: 'AV Technosys',
+    type: 'website',
   },
 };
 
