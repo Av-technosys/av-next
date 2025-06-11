@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'Read all the lastest trends occurring in the it sector from AI to no-code development we cover all. Vist to know more',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/blog',
+    canonical: 'https://www.avtechnosys.com/blog/',
   },
   robots: {
     index: true,

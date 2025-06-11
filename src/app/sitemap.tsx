@@ -1,34 +1,36 @@
 import { MetadataRoute } from 'next';
+import { db } from '../../lib/db';
+import { blogTable } from '../../db/schema';
+
+const paths = [
+  '',
+  '/about-us',
+  '/career',
+  '/contact-us',
+  '/hire-us',
+  '/portfolio',
+  '/services',
+  '/blog',
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  return [
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about-us`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/career`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact-us`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/hire-us`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services`,
-      lastModified: new Date().toISOString(),
-    },
-  ];
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const pathEntries = paths.map((path) => ({
+    url: `${baseUrl}${path}/`,
+    lastModified: new Date().toISOString(),
+  }));
+
+  const blogData = await db
+    .select({
+      slug: blogTable.slug,
+    })
+    .from(blogTable);
+
+  const blogEntries = blogData.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}/`,
+    lastModified: new Date().toISOString(),
+  }));
+
+  return [...pathEntries, ...blogEntries];
 }

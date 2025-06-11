@@ -31,12 +31,12 @@ export async function generateMetadata(
     keywords: post?.tags,
     publisher: post?.userName,
     alternates: {
-      canonical: `https://www.avtechnosys.com/blog/${slug}`,
+      canonical: `https://www.avtechnosys.com/blog/${slug}/`,
     },
     openGraph: {
       title: post?.title,
       description: post?.metaDescription,
-      url: `https://www.avtechnosys.com/blog/${slug}`,
+      url: `https://www.avtechnosys.com/blog/${slug}/`,
       siteName: 'AV Technosys',
       images: [
         {

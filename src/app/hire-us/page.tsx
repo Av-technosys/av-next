@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Looking for a company from which you can hire developers in India? AV Technosys is a leading outsourcing company that has a vast pool of talent. Hire from us now!',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/hire-us',
+    canonical: 'https://www.avtechnosys.com/hire-us/',
   },
   robots: {
     index: true,
