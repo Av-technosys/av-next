@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent } from './ui/dialog';
@@ -11,6 +12,7 @@ import {
   TMobile,
   TRobot,
 } from './icons';
+import Image from 'next/image';
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -163,7 +165,7 @@ const TechonologyData = [
   [
     {
       name: 'React Native',
-      imgSrc: './react-native.svg',
+      imgSrc: '/react-native.svg',
       content: 'React Native',
       title: 'React Native: Build Cross-Platform Apps Faster',
       description:
@@ -178,7 +180,7 @@ const TechonologyData = [
     },
     {
       name: 'Xamarin',
-      imgSrc: './xamarin-icon.svg',
+      imgSrc: '/xamarin-icon.svg',
       alt: 'Xamarin',
       content: 'Xamarin',
       title: 'Xamarin: Build Cross-Platform Apps with .NET',
@@ -194,7 +196,7 @@ const TechonologyData = [
     },
     {
       name: 'Ionic',
-      imgSrc: './Ionic.svg',
+      imgSrc: '/Ionic.svg',
       alt: 'Ionic',
       content: 'Ionic',
       title: 'Ionic: Open Source Mobile UI Toolkit',
@@ -210,7 +212,7 @@ const TechonologyData = [
     },
     {
       name: 'Kotlin',
-      imgSrc: './kotlin.svg',
+      imgSrc: '/kotlin.svg',
       alt: 'Kotlin',
       content: 'Kotlin',
       title: 'Kotlin: Modern Language for Android Development',
@@ -226,7 +228,7 @@ const TechonologyData = [
     },
     {
       name: 'Flutter',
-      imgSrc: './flutter.svg',
+      imgSrc: '/flutter.svg',
       alt: 'Flutter',
       content: 'Flutter',
       title: 'Flutter: Build Natively Compiled Apps',
@@ -242,7 +244,7 @@ const TechonologyData = [
     },
     {
       name: 'Java',
-      imgSrc: './java.svg',
+      imgSrc: '/java.svg',
       alt: 'Java',
       content: 'Java',
       title: 'Java: Reliable and Versatile Programming Language',
@@ -258,7 +260,7 @@ const TechonologyData = [
     },
     {
       name: 'Xcode',
-      imgSrc: './xcode.svg',
+      imgSrc: '/xcode.svg',
       alt: 'Xcode',
       content: 'Xcode',
       title: 'Xcode: Apple’s IDE for iOS and macOS Development',
@@ -274,7 +276,7 @@ const TechonologyData = [
     },
     {
       name: 'Swift',
-      imgSrc: './swift.svg',
+      imgSrc: '/swift.svg',
       alt: 'Swift',
       content: 'Swift',
       title: 'Swift: Fast and Safe Programming for Apple Platforms',
@@ -293,7 +295,7 @@ const TechonologyData = [
   [
     {
       name: 'JavaScript',
-      imgSrc: './javascript.svg',
+      imgSrc: '/javascript.svg',
       alt: 'JavaScript',
       content: 'JavaScript',
       width: 50,
@@ -310,7 +312,7 @@ const TechonologyData = [
     },
     {
       name: 'TypeScript',
-      imgSrc: './typescript.svg',
+      imgSrc: '/typescript.svg',
       alt: 'TypeScript',
       content: 'TypeScript',
       width: 50,
@@ -327,7 +329,7 @@ const TechonologyData = [
     },
     {
       name: 'React.js',
-      imgSrc: './react-native.svg',
+      imgSrc: '/react-native.svg',
       alt: 'React.js',
       content: 'React.js',
       title: 'React.js: Build Dynamic User Interfaces',
@@ -343,7 +345,7 @@ const TechonologyData = [
     },
     {
       name: 'Angular',
-      imgSrc: './angular-icon.svg',
+      imgSrc: '/angular-icon.svg',
       alt: 'Angular',
       content: 'Angular',
       title: 'Angular: Framework for Scalable Web Applications',
@@ -359,7 +361,7 @@ const TechonologyData = [
     },
     {
       name: 'Vue.js',
-      imgSrc: './vue-js.svg',
+      imgSrc: '/vue-js.svg',
       alt: 'Vue.js',
       content: 'Vue.js',
       title: 'Vue.js: The Progressive JavaScript Framework',
@@ -375,7 +377,7 @@ const TechonologyData = [
     },
     {
       name: 'Bootstrap',
-      imgSrc: './bootstrap-icon.svg',
+      imgSrc: '/bootstrap-icon.svg',
       alt: 'Bootstrap',
       content: 'Bootstrap',
       title: 'Bootstrap: CSS Framework for Responsive Design',
@@ -391,7 +393,7 @@ const TechonologyData = [
     },
     {
       name: 'Material-UI',
-      imgSrc: './material-ui.svg',
+      imgSrc: '/material-ui.svg',
       alt: 'Material-UI',
       content: 'Material-ui',
       title: 'Material-UI: React Components for Material Design',
@@ -407,7 +409,7 @@ const TechonologyData = [
     },
     {
       name: 'Redux',
-      imgSrc: './redux.svg',
+      imgSrc: '/redux.svg',
       alt: 'Redux',
       content: 'Redux',
       title: 'Redux: Predictable State Management',
@@ -423,7 +425,7 @@ const TechonologyData = [
     },
     {
       name: 'jQuery',
-      imgSrc: './jquery-icon.svg',
+      imgSrc: '/jquery-icon.svg',
       alt: 'jQuery',
       content: 'Jquery',
       title: 'jQuery: Simplify JavaScript Development',
@@ -441,7 +443,7 @@ const TechonologyData = [
   [
     {
       name: 'JavaScript',
-      imgSrc: './javascript.svg',
+      imgSrc: '/javascript.svg',
       alt: 'Backend',
       content: 'JavaScript',
       title: 'JavaScript: Powering Full-Stack Development',
@@ -457,7 +459,7 @@ const TechonologyData = [
     },
     {
       name: 'TypeScript',
-      imgSrc: './typescript.svg',
+      imgSrc: '/typescript.svg',
       alt: 'Backend',
       content: 'TypeScript',
       title: 'TypeScript: Scalable Backend Solutions',
@@ -473,7 +475,7 @@ const TechonologyData = [
     },
     {
       name: 'Java',
-      imgSrc: './java.svg',
+      imgSrc: '/java.svg',
       alt: 'Backend',
       content: 'Java',
       title: 'Java: Enterprise-Grade Backend Development',
@@ -489,7 +491,7 @@ const TechonologyData = [
     },
     {
       name: 'Python',
-      imgSrc: './python.svg',
+      imgSrc: '/python.svg',
       alt: 'Backend',
       content: 'Python',
       title: 'Python: Flexible and Versatile Backend Language',
@@ -505,7 +507,7 @@ const TechonologyData = [
     },
     {
       name: 'PHP',
-      imgSrc: './php-icon.svg',
+      imgSrc: '/php-icon.svg',
       alt: 'Backend',
       content: 'PHP',
       title: 'PHP: The Language of the Web',
@@ -521,7 +523,7 @@ const TechonologyData = [
     },
     {
       name: 'Node.js',
-      imgSrc: './node-js.svg',
+      imgSrc: '/node-js.svg',
       alt: 'Backend',
       content: 'Node.js',
       title: 'Node.js: Fast and Scalable Server-Side Platform',
@@ -537,7 +539,7 @@ const TechonologyData = [
     },
     {
       name: 'Django',
-      imgSrc: './django.svg',
+      imgSrc: '/django.svg',
       alt: 'Backend',
       content: 'Django',
       title: 'Django: The Web Framework for Perfectionists',
@@ -553,7 +555,7 @@ const TechonologyData = [
     },
     {
       name: 'Laravel',
-      imgSrc: './laravel.svg',
+      imgSrc: '/laravel.svg',
       alt: 'Backend',
       content: 'Laravel',
       title: 'Laravel: Elegant PHP Framework',
@@ -569,7 +571,7 @@ const TechonologyData = [
     },
     {
       name: 'MySQL',
-      imgSrc: './mysql.svg',
+      imgSrc: '/mysql.svg',
       alt: 'Backend',
       content: 'MySQL',
       title: 'MySQL: Reliable Relational Database',
@@ -585,7 +587,7 @@ const TechonologyData = [
     },
     {
       name: 'MongoDB',
-      imgSrc: './mongo.svg',
+      imgSrc: '/mongo.svg',
       alt: 'Backend',
       content: 'MongoDB',
       title: 'MongoDB: Flexible NoSQL Database',
@@ -604,7 +606,7 @@ const TechonologyData = [
   [
     {
       name: 'TensorFlow',
-      imgSrc: './tenserflow.svg',
+      imgSrc: '/tenserflow.svg',
       alt: 'Machine Learning',
       content: 'TensorFlow',
       title: 'TensorFlow: End-to-End Machine Learning Platform',
@@ -620,7 +622,7 @@ const TechonologyData = [
     },
     {
       name: 'PyTorch',
-      imgSrc: './pytorch.svg',
+      imgSrc: '/pytorch.svg',
       alt: 'Machine Learning',
       content: 'PyTorch',
       title: 'PyTorch: Dynamic Deep Learning Framework',
@@ -636,7 +638,7 @@ const TechonologyData = [
     },
     {
       name: 'SciKit-Learn',
-      imgSrc: './scikit-learn.svg',
+      imgSrc: '/scikit-learn.svg',
       alt: 'Machine Learning',
       content: 'SciKit-Learn',
       title: 'SciKit-Learn: Simplifying Machine Learning',
@@ -652,7 +654,7 @@ const TechonologyData = [
     },
     {
       name: 'Keras',
-      imgSrc: './Keras.svg',
+      imgSrc: '/Keras.svg',
       alt: 'Machine Learning',
       content: 'Keras',
       title: 'Keras: User-Friendly Deep Learning Framework',
@@ -671,7 +673,7 @@ const TechonologyData = [
   [
     {
       name: 'TensorFlow',
-      imgSrc: './tenserflow.svg',
+      imgSrc: '/tenserflow.svg',
       alt: 'Machine Learning',
       content: 'TensorFlow',
       title: 'TensorFlow: End-to-End Machine Learning Platform',
@@ -687,7 +689,7 @@ const TechonologyData = [
     },
     {
       name: 'PyTorch',
-      imgSrc: './pytorch.svg',
+      imgSrc: '/pytorch.svg',
       alt: 'Machine Learning',
       content: 'PyTorch',
       title: 'PyTorch: Dynamic Deep Learning Framework',
@@ -703,7 +705,7 @@ const TechonologyData = [
     },
     {
       name: 'OpenCV',
-      imgSrc: './opencv.svg',
+      imgSrc: '/opencv.svg',
       alt: 'Machine Learning',
       content: 'OpenCV',
       title: 'OpenCV: Open Source Computer Vision Library',
@@ -719,7 +721,7 @@ const TechonologyData = [
     },
     {
       name: 'Keras',
-      imgSrc: './Keras.svg',
+      imgSrc: '/Keras.svg',
       alt: 'Machine Learning',
       content: 'Keras',
       title: 'Keras: User-Friendly Deep Learning Framework',
@@ -738,7 +740,7 @@ const TechonologyData = [
   [
     {
       name: 'Apache Spark',
-      imgSrc: './spark.svg',
+      imgSrc: '/spark.svg',
       alt: 'Machine Learning',
       content: 'Apache Spark',
       title: 'Apache Spark: Unified Analytics Engine for Big Data',
@@ -754,7 +756,7 @@ const TechonologyData = [
     },
     {
       name: 'Hadoop',
-      imgSrc: './hadoop.svg',
+      imgSrc: '/hadoop.svg',
       alt: 'Machine Learning',
       content: 'Hadoop',
       title: 'Hadoop: Framework for Distributed Storage and Processing',
@@ -770,7 +772,7 @@ const TechonologyData = [
     },
     {
       name: 'Apache Flink',
-      imgSrc: './flink.png',
+      imgSrc: '/flink.png',
       alt: 'Machine Learning',
       content: 'Apache Flink',
       title: 'Apache Flink: Real-Time Stream Processing Framework',
@@ -786,7 +788,7 @@ const TechonologyData = [
     },
     {
       name: 'Apache Storm',
-      imgSrc: './storm.svg',
+      imgSrc: '/storm.svg',
       alt: 'Machine Learning',
       content: 'Apache Storm',
       title: 'Apache Storm: Real-Time Processing System',
@@ -802,7 +804,7 @@ const TechonologyData = [
     },
     {
       name: 'Apache Kafka',
-      imgSrc: './kafka.png',
+      imgSrc: '/kafka.png',
       alt: 'Machine Learning',
       content: 'Apache Kafka',
       title: 'Apache Kafka: Distributed Event Streaming Platform',
@@ -821,7 +823,7 @@ const TechonologyData = [
   [
     {
       name: 'Shopify',
-      imgSrc: './shopify.svg',
+      imgSrc: '/shopify.svg',
       alt: 'Backend',
       content: 'Shopify',
       title: 'Shopify: Build Your Online Store Easily',
@@ -837,7 +839,7 @@ const TechonologyData = [
     },
     {
       name: 'Magento',
-      imgSrc: './magento.svg',
+      imgSrc: '/magento.svg',
       alt: 'Backend',
       content: 'Magento',
       title: 'Magento: Flexible and Scalable E-Commerce Platform',
@@ -853,7 +855,7 @@ const TechonologyData = [
     },
     {
       name: 'WordPress',
-      imgSrc: './wordpress.png',
+      imgSrc: '/wordpress.png',
       alt: 'Backend',
       content: 'WordPress',
       title: 'WordPress: The Ultimate CMS for Websites and Blogs',
@@ -868,8 +870,8 @@ const TechonologyData = [
       ],
     },
     {
-      name: 'WooCommerce',
-      imgSrc: './woocommerce.svg',
+      name: 'Woo Commerce',
+      imgSrc: '/woocommerce.svg',
       alt: 'Backend',
       content: 'WooCommerce',
       title: 'WooCommerce: E-Commerce for WordPress',
@@ -885,7 +887,7 @@ const TechonologyData = [
     },
     {
       name: 'Big Commerce',
-      imgSrc: './bigcommerce.webp',
+      imgSrc: '/bigcommerce.webp',
       alt: 'Backend',
       content: 'Big Commerce',
       title: 'Big Commerce: Enterprise-Grade E-Commerce Platform',
@@ -901,7 +903,7 @@ const TechonologyData = [
     },
     {
       name: 'Presta Shop',
-      imgSrc: './prestashop.svg',
+      imgSrc: '/prestashop.svg',
       alt: 'Backend',
       content: 'Presta Shop',
       title: 'PrestaShop: Open-Source E-Commerce Platform',
@@ -917,7 +919,7 @@ const TechonologyData = [
     },
     {
       name: 'Open Kart',
-      imgSrc: './opencart.svg',
+      imgSrc: '/opencart.svg',
       alt: 'Backend',
       content: 'Open Kart',
       title: 'OpenCart: Free and Open-Source Shopping Cart System',
@@ -933,7 +935,7 @@ const TechonologyData = [
     },
     {
       name: 'Salesforce Commerce Cloud',
-      imgSrc: './salesforce.svg',
+      imgSrc: '/salesforce.svg',
       alt: 'Backend',
       content: 'Salesforce Commerce Cloud',
       title: 'Salesforce Commerce Cloud: Cloud-Based E-Commerce Solution',
@@ -949,7 +951,7 @@ const TechonologyData = [
     },
     {
       name: 'React Commerce',
-      imgSrc: './react-native.svg',
+      imgSrc: '/react-native.svg',
       alt: 'Backend',
       content: 'React Commerce',
       title: 'React Commerce: Dynamic E-Commerce with React',
@@ -965,7 +967,7 @@ const TechonologyData = [
     },
     {
       name: 'Angular Commerce',
-      imgSrc: './angular-icon.svg',
+      imgSrc: '/angular-icon.svg',
       alt: 'Backend',
       content: 'Angular Commerce',
       title: 'Angular Commerce: Build E-Commerce with Angular',
@@ -981,7 +983,7 @@ const TechonologyData = [
     },
     {
       name: 'Vue StoreFront',
-      imgSrc: './Vuestorefront.svg',
+      imgSrc: '/Vuestorefront.svg',
       alt: 'Backend',
       content: 'Vue StoreFront',
       title: 'Vue Storefront: Headless PWA for E-Commerce',
@@ -993,22 +995,6 @@ const TechonologyData = [
         'Customization: Fully customizable frontend.',
         'Performance: Optimized for speed and SEO.',
         'Integration: Compatible with Magento, Shopify, and other platforms.',
-      ],
-    },
-    {
-      name: 'Laravel',
-      imgSrc: './laravel.svg',
-      alt: 'Backend',
-      content: 'Laravel',
-      title: 'Laravel: Elegant PHP Framework',
-      description:
-        'Laravel is a PHP framework for building robust and scalable web applications, including e-commerce platforms.',
-      features: [
-        'MVC Architecture: Clear separation of logic and UI.',
-        'Routing: Simplified and powerful URL routing system.',
-        'Security: Built-in mechanisms for securing applications.',
-        'Eloquent ORM: Intuitive database interactions.',
-        'Extensibility: Wide range of third-party packages.',
       ],
     },
   ],
@@ -1044,9 +1030,11 @@ function IconWithName({
       onClick={handleOnClick}
       className="flex cursor-pointer items-center gap-4 rounded-xl border-2 border-gray-200 bg-gray-100 px-3 py-4 duration-200 hover:bg-gray-200 md:px-5 lg:flex"
     >
-      <img
+      <Image
         className="h-6 w-auto object-contain md:h-10"
-        src={`./${item.imgSrc}`}
+        src={`${item.imgSrc}`}
+        height={100}
+        width={100}
         alt="Backend"
       />
       <h1 className="my-auto font-medium text-gray-800 md:text-xl">

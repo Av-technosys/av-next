@@ -9,17 +9,7 @@ import { cn } from '@/lib/utils';
 const Footer1 = ({ className = '' }) => {
   return (
     <>
-      <footer
-        className={cn(`fontTest lg:pt mt-10 bg-white text-black`, className)}
-      >
-        {/* <div className="mx-auto w-full max-w-7xl p-6 lg:pb-12">
-          <h4 className="py-2 text-2xl font-semibold md:text-6xl">
-            Contact Us
-          </h4>
-          <h6 className="py-4 text-2xl text-[#787878] duration-200 hover:text-white md:text-7xl">
-            sales@avtechnosys.com
-          </h6>
-        </div> */}
+      <footer className={cn(`fontTest lg:pt bg-gray-50 text-black`, className)}>
         <div className="mx-auto flex w-full max-w-7xl flex-col px-6 md:px-4">
           <div className="flex flex-col gap-6 py-8 md:flex-row">
             {footerData.map((item, idx) => {
@@ -27,7 +17,9 @@ const Footer1 = ({ className = '' }) => {
             })}
 
             <div className="mt-4 flex gap-4 text-gray-600 md:ml-auto md:mt-0 md:justify-end">
-              <Link href={'https://www.facebook.com/people/AV-Technosys/'}>
+              <Link
+                href={'https://www.facebook.com/profile.php?id=61556941457814'}
+              >
                 <Facebook
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
@@ -58,7 +50,7 @@ const Footer1 = ({ className = '' }) => {
             </div>
           </div>
         </div>
-        <div className="w-full bg-gray-100 py-4">
+        <div className="w-full border-t bg-gray-50 py-4">
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 md:flex-row">
             <div className="flex items-center gap-4">
               <a href="https://www.dmca.com/Protection/Status.aspx?id=d9f8c7fd-18f0-4b29-bdf1-d4b6e19ea6f3&refurl=https%3a%2f%2fwww.avtechnosys.com%2f&rlo=true">
@@ -185,16 +177,12 @@ const footerData = [
     name: 'Contact Info',
     links: [
       {
-        name: '+91 99830-34111',
-        link: 'tel:+919983034111',
+        name: '01414515354',
+        link: 'tel:01414515354',
       },
       {
         name: '+91 7877727352',
         link: 'tel:+917877727352',
-      },
-      {
-        name: '238, 2nd Floor, Mangalam Metropolis Tower, Purani Chungi, Vaishali Nagar, Jaipur, Rajasthan 302017',
-        link: '/',
       },
     ],
   },

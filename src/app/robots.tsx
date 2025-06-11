@@ -7,12 +7,13 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
         disallow: [
+          // Admin and API
           '/admin/',
           '/admin/*',
           '/api/',
           '/api/*',
 
-          // Disallow common file types from being indexed
+          // Disallow static files
           '/*.jpg$',
           '/*.jpeg$',
           '/*.png$',
@@ -25,6 +26,33 @@ export default function robots(): MetadataRoute.Robots {
           '/*.pdf$',
           '/*.doc$',
           '/*.docx$',
+
+          // Specific pages to block
+          '/how-to-develop-a-logistics-app/',
+          '/industries/',
+          '/car-rental-app-development/',
+          '/case-study/',
+          '/category/seo/',
+          '/why-is-content-marketing-important/',
+          '/golf-app-development-complete-guide/',
+          '/hire-dev/',
+          '/liquor-delivery-mobile-app-development/',
+          '/category/app-development/',
+          '/maintenance/',
+          '/healthcare-app-marketing-strategies/',
+          '/company/',
+          '/is-seo-still-relevant/',
+          '/ev-charging-app-development-complete-guide/',
+          '/futuristic-ai-app-ideas/',
+          '/real-estate-marketing-strategies/',
+          '/bumble-alternatives-15-apps-similar-to-bumble/',
+          '/ar-app-ideas/',
+          '/yoga-app-development/',
+          '/category/content-marketing/',
+          '/Hireus/',
+          '/company',
+          '/latest-web-development-trends/',
+          '/ultimate-marketing-strategy-for-ebook-app/',
         ],
       },
     ],
