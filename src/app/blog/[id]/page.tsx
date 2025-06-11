@@ -24,7 +24,9 @@ export async function generateMetadata(
   const [post] = await getBlogBySlug(slug);
 
   return {
-    title: post?.title,
+    title: {
+      absolute: post?.title || 'AV Technosys Blog',
+    },
     description: post?.metaDescription,
     keywords: post?.tags,
     publisher: post?.userName,
