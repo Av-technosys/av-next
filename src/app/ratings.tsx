@@ -1,8 +1,9 @@
 import React from 'react';
 import { ratingData } from '@/const/ratingData';
-const Ratings = () => {
+import { cn } from '@/lib/utils';
+const Ratings = ({className= ""}) => {
   return (
-    <div className="w-full bg-slate-950 px-4 py-8 md:hidden">
+    <div className={cn("w-full bg-slate-950 px-4 py-8 md:hidden",className)}>
       <div className="mx-auto grid w-full max-w-7xl grid-cols-2 items-center gap-4 gap-y-5 md:grid-cols-5 md:gap-y-8">
         {ratingData.map((item, index) => {
           return (
