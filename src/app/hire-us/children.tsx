@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { IconCloud } from '@/components/techIconGlob';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { cn } from '@/utils/cn';
@@ -22,17 +21,7 @@ const Chldren = () => {
               <p>Hire A</p>
               <span className="text-[#d5b676] md:text-white"> Developer</span>
             </h1>
-            <div className="rounded-3xl">
-              <video
-                className="ml-3 h-16 w-44 rounded-full object-cover lg:ml-7 lg:mt-7"
-                loop={true}
-                muted={true}
-                autoPlay={true}
-              >
-                <source src={'hirevideo.mp4'} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <div className="rounded-3xl"></div>
           </div>
 
           <p className="text-3xl font-semibold text-white lg:mt-4 lg:text-6xl">
@@ -48,10 +37,6 @@ const Chldren = () => {
               deliver quality results.
             </p>
           </div>
-        </div>
-
-        <div className="">
-          <IconCloud images={iCloudIcons} />
         </div>
       </div>
 
@@ -200,61 +185,6 @@ function StatsSection() {
     </motion.div>
   );
 }
-
-const iCloudIcons = [
-  './react-native.svg',
-  './xamarin-icon.svg',
-  './Ionic.svg',
-  './kotlin.svg',
-  './flutter.svg',
-  './java.svg',
-  './xcode.svg',
-  './swift.svg',
-  './javascript.svg',
-  './typescript.svg',
-  './react-native.svg',
-  './angular-icon.svg',
-  // './vue-js.svg',
-  './bootstrap-icon.svg',
-  './material-ui.svg',
-  './redux.svg',
-  // './jquery-icon.svg',
-  './javascript.svg',
-  './typescript.svg',
-  './java.svg',
-  './python.svg',
-  './php-icon.svg',
-  './node-js.svg',
-  './django.svg',
-  './laravel.svg',
-  './mysql.svg',
-  './mongo.svg',
-  './tenserflow.svg',
-  './pytorch.svg',
-  './scikit-learn.svg',
-  './Keras.svg',
-  './tenserflow.svg',
-  './pytorch.svg',
-  // './opencv.svg',
-  // './Keras.svg',
-  // './spark.svg',
-  // './hadoop.svg',
-  // './flink.svg',
-  // './storm.svg',
-  // './kafka.svg',
-  // './shopify.svg',
-  // './magento.svg',
-  // './wordpress-icon.svg',
-  // './woocommerce.svg',
-  // './bigcommerce.svg',
-  './prestashop.svg',
-  './opencart.svg',
-  './salesforce.svg',
-  './react-native.svg',
-  './angular-icon.svg',
-  // './Vuestorefront.svg',
-  './laravel.svg',
-];
 
 type HiringOption = {
   title: string;

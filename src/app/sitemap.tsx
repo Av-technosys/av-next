@@ -11,6 +11,8 @@ const paths = [
   '/portfolio',
   '/services',
   '/blog',
+  '/privacy-policy',
+  '/terms-and-conditions',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

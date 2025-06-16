@@ -4,12 +4,10 @@ import { Metadata } from 'next';
 import Cldren from './children';
 import { NavBarHome } from '@/components/navBar';
 import Header from './heroSection';
-import Link from 'next/link';
-import { TEmail, TLinkedin, TPhone } from '@/components/icons';
-import Image from 'next/image';
-import { LeadPopUp } from '@/components/leadPopUp';
-import { useState } from 'react';
-import { CEOInfo } from './CEOInfo';
+import { CEOInfo } from '@/components/CEOInfo';
+import { Locations } from '@/components/location';
+import { InsightAboutUs } from '@/conponents/InsightAboutUs';
+
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
@@ -39,6 +37,8 @@ const ContactUs = () => {
       <Header />
       <CEOInfo />
       <Cldren />
+      <InsightAboutUs />
+      <Locations />
       <Footer1 className="mt-0 border-t" />
     </div>
   );
