@@ -243,14 +243,15 @@ function AISection({ setIsLeadOpen }) {
             ))}
           </div>
 
+          <Link href="/ai-development-services">
           <button
-            onClick={() => setIsLeadOpen(true)}
             className="group relative mt-6 inline-flex w-fit overflow-hidden rounded-3xl border border-neutral-600 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Explore More
             <span className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800"></span>
             <span className="absolute bottom-0.5 left-0 h-[2px] w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800 opacity-0 blur-sm group-hover:opacity-100"></span>
           </button>
+          </Link>
         </div>
         <img
           src="/new/ai_image.webp"

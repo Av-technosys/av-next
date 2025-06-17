@@ -40,7 +40,7 @@ const Page = () => {
             your business.
           </p>
         </div>
-       <div className='md:w-[600px] md:pb-0 pb-5 p-1 md:p-3'>
+       <div className='md:w-[600px]  pb-5 p-1 md:p-3'>
          <div className="mx-auto w-[360px] rounded-3xl bg-white p-6 shadow-md">
           <h2 className="text-center text-1xl font-bold">Request a Callback</h2>
           <p className="text-center text-sm text-gray-600">
@@ -107,11 +107,11 @@ const Page = () => {
       <section className='max-w-7xl mx-auto'>
         <div className="bg-gray-200 md:flex items-center justify-between md:justify-around w-full px-4 md:px-8">
         <div className='md:w-[600px] md:p-3'>
-          <h1 className='md:text-4xl text-xl md:pt-0 pt-3 font-bold text-center md:font-extrabold'>Revolutionize Your Business with <br /> Custom AI Development</h1>
+          <h1 className='lg:text-4xl text-xl md:pt-0 pt-3 font-bold text-center md:font-extrabold'>Revolutionize Your Business with <br /> Custom AI Development</h1>
           <p className='text-[#212529] text-[14px] hidden md:block mt-5'>
             Av Technosys is a trusted AI development company, delivering innovative AI app development services to help businesses unlock new possibilities. Our expert artificial intelligence developers craft tailored solutions that improve efficiency and decision-making. Whether you need AI app development or advanced AI software development services, we have you covered with cutting-edge expertise.
           </p>
-          <p className='text-[#212529] text-[14px] hidden md:block mt-5'>
+          <p className='text-[#212529] text-[14px] hidden lg:block mt-5'>
            As a leading AI app development company, we specialize in building intelligent solutions that cater to diverse industries. From custom Artificial intelligence development services to enterprise-grade AI development solutions, our team ensures scalability and precision. Partner with JPLoft to redefine your operations with top-notch artificial intelligence services and innovative AI app developers at your service.
           </p>
         </div>
@@ -127,66 +127,66 @@ const Page = () => {
       </div>
      <div className='h-full w-full'>
          <div className="bg-[url('/new/ai_banner.webp')] pt-5   bg-cover bg-center h-92 w-full">
-          <h1 className='text-center text-[18px] md:text-4xl font-bold  text-white'>Expertise in Advanced AI Models for Tailored Solutions</h1>
+          <h1 className='text-center md:px-0 px-3 text-[18px] md:text-4xl font-bold  text-white'>Expertise in Advanced AI Models for Tailored Solutions</h1>
           <div className=" py-10 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-white">
         
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_gpt4.webp" alt="GPT-4" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">GPT-4</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_deepSeekAi.webp" alt="DeepSeek AI" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">DeepSeek AI</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_palm2.webp" alt="PaLM-2" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">PaLM-2</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_claude.webp" alt="Claude" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Claude</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/dell_e2.webp" alt="DALL-E 2" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">DALL-E 2</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_Whisper.webp" alt="Whisper" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Whisper</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_stable_diffusion.webp" alt="Stable Diffusion" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Stable Diffusion</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_microsoftphi2.webp" alt="Microsoft Phi-2" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Microsoft Phi-2</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_google_gemini.webp" alt="Google Gemini" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Google Gemini</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_vicuna.webp" alt="Vicuna" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Vicuna</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_mistralai.webp" alt="Mistral AI" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Mistral AI</span>
         </div>
 
-        <div className="bg-[#11113B] rounded-xl p-4 flex flex-col items-center">
+        <div className="bg-[#11113B] transition-transform duration-300 md:hover:scale-110  rounded-xl p-4 flex flex-col items-center">
           <img src="/new/ai_bloom560m.webp" alt="Bloom-560m" className="w-12 h-12 mb-3" />
           <span className="text-sm font-medium">Bloom-560m</span>
         </div>
@@ -198,10 +198,10 @@ const Page = () => {
      <section className='max-w-7xl mx-auto'>
         <div className='bg-[#f5f8ff] py-10'>
         <div className='flex px-5 justify-between bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)]'>
-        <div className='flex flex-col md:items-center justify-center gap-3'>
+        <div className='flex flex-col items-center justify-center gap-3'>
         <h1 className='text-white font-extrabold text-[16px] md:text-3xl'>Let’s Build Intelligent Solutions Together</h1>
         <p className='text-white hidden md:block text-[14px]'>Partner with the Best AI Development agency to Unlock Limitless Possibilities</p>
-        <button className='bg-[#ed1f24] text-white md:text-[16px] text-[12px] md:mt-0 mt-2 py-2 px-0 md:px-3 md:py-2 rounded-xl '>Get a Free Consultation</button>
+        <button className='bg-[#ed1f24] w-[150px] md:w-[250px] text-white md:text-[16px] text-[12px]  md:mt-0 mt-2 py-2 px-0 md:px-3 md:py-2 rounded-xl '>Get a Free Consultation</button>
         </div>
         <div className='py-14 md:py-0'>
             <img width="500px" className='md:w-[500px]  w-[300px]' src="/new/ai_btn_img1_new.webp" alt="ai-image" />
@@ -215,7 +215,7 @@ const Page = () => {
         <p className='text-center  my-5 text-[18px] md:text-[16px]'>At JPLoft, we excel in delivering cutting-edge AI development services. Our expertise spans across advanced technologies like machine learning, generative AI, and natural language processing, ensuring impactful solutions.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">    
         {/* Card 1 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border">
+        <div className="bg-white transition-transform duration-300 md:hover:scale-110  rounded-xl shadow-xl overflow-hidden border">
           <img src="/new/Generative_ai_img_nw.webp" alt="Generative AI" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-lg font-semibold mb-2">Generative AI</h2>
@@ -226,7 +226,7 @@ const Page = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border">
+        <div className="bg-white  transition-transform duration-300 md:hover:scale-110  rounded-xl shadow-xl overflow-hidden border">
           <img src="/new/Machine_Learning_img_nw.webp" alt="Machine Learning" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-lg font-semibold mb-2">Machine Learning</h2>
@@ -237,7 +237,7 @@ const Page = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border">
+        <div className="bg-white transition-transform duration-300 md:hover:scale-110  rounded-xl shadow-xl overflow-hidden border">
           <img src="/new/deep_learning_ai_nw.webp" alt="Deep Learning" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-lg font-semibold mb-2">Deep Learning</h2>
@@ -248,7 +248,7 @@ const Page = () => {
         </div>
 
         {/* Card 4 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border">
+        <div className="bg-white transition-transform duration-300 md:hover:scale-110  rounded-xl shadow-xl overflow-hidden border">
           <img src="/new/nlp_ai_nw.webp" alt="Natural Language Processing" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-lg font-semibold mb-2">Natural Language Processing</h2>
@@ -259,7 +259,7 @@ const Page = () => {
         </div>
 
         {/* Card 5 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border">
+        <div className="bg-white transition-transform duration-300 md:hover:scale-110  rounded-xl shadow-xl overflow-hidden border">
           <img src="/new/Robotic_Process_Automation_img_nw.webp" alt="Robotic Process Automation" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-lg font-semibold mb-2">Robotic Process Automation</h2>
@@ -270,7 +270,7 @@ const Page = () => {
         </div>
 
         {/* Card 6 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border">
+        <div className="bg-white transition-transform duration-300 md:hover:scale-110  rounded-xl shadow-xl overflow-hidden border">
           <img src="/new/Predictive_Analytics_img_nw.webp" alt="Predictive Analytics" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h2 className="text-lg font-semibold mb-2">Predictive Analytics</h2>
