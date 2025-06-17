@@ -12,10 +12,10 @@ import { HireDevelopersSection } from './HireDeveloperSection';
 import { TechnologiesOffered } from '@/components';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { ExperienceSections } from '@/conponents/experience';
-import { WhyChooseUs } from '@/conponents/WhyChooseUs';
 import { HeroSection } from './HeroSection';
 import { BlogSection } from '@/components/blogSection';
 import { ContactUs } from '@/components/contactUs';
+import { WhyChooseUs } from './WhyChooseUs';
 
 export const metadata: Metadata = {
   title: 'Hire Us',
