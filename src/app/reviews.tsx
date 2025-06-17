@@ -27,7 +27,7 @@ const Testimonial = () => {
           <Carousel
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 3000,
               }),
             ]}
             className=""
