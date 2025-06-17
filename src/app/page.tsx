@@ -367,25 +367,6 @@ function ExperienceSection() {
           </div>
         </div>
         <div className="mt-6 grid w-full md:col-span-5 md:mt-0">
-          {/* {experienceData2.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                className={cn(
-                  'flex w-full skew-x-3 cursor-pointer flex-col gap-3 rounded-xl border bg-white p-4 shadow-lg shadow-yellow-100 duration-200',
-                  idx % 2 === 0
-                    ? 'sm:-translate-y-4 hover:md:-translate-y-6'
-                    : 'sm:translate-y-4 hover:md:translate-y-2'
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <Icon stroke={2} className="size-7 shrink-0 text-gray-600" />
-                  <p className="text-2xl font-semibold">{item.title}</p>
-                </div>
-                <p className="text-sm text-gray-600">{item.description}</p>
-              </div>
-            );
-          })} */}
           <img
             className="h-full w-full rounded-md object-cover"
             src="/new/experience-img.png"
@@ -472,9 +453,6 @@ function WhyChooseUs() {
           <div className="absolute bottom-0 left-0 h-12 w-full from-white to-transparent md:h-20 md:bg-gradient-to-t"></div>
         </div>
         <div className="space-y-6 rounded-3xl border bg-gray-50 px-6 py-4 md:py-12">
-          {/* <p className="text-center text-5xl font-semibold">
-            Reimagined user experiences
-          </p> */}
           <div className="grid-cols-2 justify-center gap-6 lg:grid">
             <div className="relative mx-auto hidden aspect-[5/6] h-[34rem] w-auto overflow-hidden rounded-2xl lg:block">
               <AnimatePresence>
