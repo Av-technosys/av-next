@@ -88,7 +88,7 @@ const Page = () => {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="flex w-1/4 items-center gap-2 rounded-md border px-3 py-2">
+                    <div className="flex w-1/4  border-purple-900 focus:border-purple-700 items-center gap-2 rounded-md border px-3 py-2">
                       <img
                         src="https://flagcdn.com/in.svg"
                         alt="India Flag"
@@ -99,11 +99,11 @@ const Page = () => {
                     <input
                       type="tel"
                       placeholder="Phone Number *"
-                      className="w-3/4 rounded-md border px-3 py-2 focus:outline-none"
+                      className="w-3/4 border-purple-900 focus:border-purple-700 rounded-md border px-3 py-2 focus:outline-none"
                     />
                   </div>
 
-                  <select className="w-full rounded-md border px-3 py-2 text-gray-500 focus:outline-none">
+                  <select className="w-full  border-purple-900 focus:border-purple-700 rounded-md border px-3 py-2 text-gray-500 focus:outline-none">
                     <option>Budget</option>
                     <option>Less than $1,000</option>
                     <option>$1,000 - $5,000</option>
