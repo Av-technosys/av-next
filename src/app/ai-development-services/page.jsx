@@ -37,6 +37,7 @@ import Footer1 from '../footer1';
 import { InputText } from '@/components/inputText';
 import { InputTextArea } from '@/components/inputTextArea';
 import Image from 'next/image';
+import CustomInputNumber from '../contact-us/inputNumber';
 const Page = () => {
   return (
     <>
@@ -255,21 +256,14 @@ function HeroSectionAi() {
                 />
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="flex w-1/4 items-center gap-2 rounded-md border border-purple-900 px-3 py-[14px] focus:border-purple-700">
-                  <img
-                    src="https://flagcdn.com/in.svg"
-                    alt="India Flag"
-                    className="h-5 w-5"
-                  />
-                  <span className="text-sm">+91</span>
-                </div>
-                <input
-                  type="tel"
-                  placeholder="Phone Number *"
-                  className="w-3/4 rounded-md border border-purple-900 px-3 py-[13px] focus:border-purple-700 focus:outline-none"
-                />
-              </div>
+              <CustomInputNumber
+                            label="Phone Number"
+                            phone={formDetails.number}
+                            setPhone={(value) =>
+                              setFormDetails({ ...formDetails, number: value })
+                            }
+                            inputClass="bg-transparent !border-purple-900 focus:!border-purple-700"
+                          />
 
               <Select>
                 <SelectTrigger className="w-full py-6 border focus:border-purple-700  border-purple-900">
@@ -801,8 +795,8 @@ function AiEffectSection() {
         title={'Smart AI App Solutions Built for Your Business'}
         titleClass="text-black leading-normal"
       />
-      <div className="mx-auto flex flex-wrap items-center justify-center gap-2  lg:gap-2">
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+      <div className="grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/1min.jpg")`,
@@ -843,7 +837,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/image_data_labeling_ai_nw.jpg")`,
@@ -881,7 +875,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/Human_Activity_Recognition_ai_nw.jpg")`,
@@ -921,7 +915,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/bbject_detection_ai_new.jpg")`,
@@ -959,7 +953,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/pattern_recognition_ai_nw.jpg")`,
@@ -997,7 +991,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/speech_recognition_ai_nw.jpg")`,
@@ -1035,7 +1029,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/Semantic_Search_ai_nw.jpg")`,
@@ -1073,7 +1067,7 @@ function AiEffectSection() {
           </div>
         </div>
 
-        <div className="group relative h-[320px]  w-[500px] md:max-w-[360px] overflow-hidden rounded-lg shadow-lg lg:max-w-[300px]">
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
               backgroundImage: `url("/new/text_classification_ai_nw.jpg")`,
