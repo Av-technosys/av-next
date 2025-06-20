@@ -38,21 +38,22 @@ import { InputText } from '@/components/inputText';
 import { InputTextArea } from '@/components/inputTextArea';
 import Image from 'next/image';
 import CustomInputNumber from '../contact-us/inputNumber';
+import Link from 'next/link';
 const Page = () => {
   return (
     <>
       <NavBarHome />
       <HeroSectionAi />
-      <Ratings className="md:flex" />
+      <Ratings className="md:flex lg:rounded-full mb-10" />
       <TransformAiSection />
       <div className="my-4">
+        <ServiceSection />
         <SectionHeading
           className="mx-auto max-w-4xl"
           title="End-to-End AI Development Solutions Customized for Your Business "
           titleClass=" leading-snug"
           desc=" AV Technosys is a premier AI development company, helping businesses evolve with intelligent and transformative solutions."
         />
-        <ServiceSection />
       </div>
       <AdvancedAiExperts />
       <BuildSmartSolutions />
@@ -128,18 +129,22 @@ const serviceData = [
 
 function ServiceSection() {
   return (
-    <div className="h-full w-full border-y-4 border-neutral-500 bg-zinc-800">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6 py-12 md:pb-20">
+    <div className="h-full w-full   bg-white">
+      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6  md:pb-20">
         <SectionHeading
           className="text-center"
           title={'AI Consulting Services'}
-          titleClass="text-white"
+          titleClass="text-black"
           desc=" Smarter strategies with our expert AI consulting. We guide you in planning and implementing AI solutions for your business."
-          descClass={'text-gray-300'}
+          descClass={'text-black'}
         />
 
         <div className="">
           <HoverEffect items={serviceData} />
+        </div>
+         
+        <div className='w-full text-center mt-10 mx-auto '>
+          <button className='px-10 py-2 rounded-lg bg-[rgb(234,179,8)] text-white'>Let's Discuss Your Project</button>
         </div>
       </div>
     </div>
@@ -210,19 +215,25 @@ function HeroSectionAi() {
   });
 
   return (
-    <section className="bg-blue-100">
-      <div className="mx-auto max-w-7xl">
-        <div className="w-full px-2 relative  py-12  grid grid-cols-1 gap-6 md:grid-cols-2 lg:px-8">
-          <div className=" lg:sticky top-28 h-fit px-2  text-center md:w-full md:px-6  lg:text-left ">
-            <h1 className="text-4xl font-semibold md:text-5xl">
+    <section  style={{
+    backgroundImage: 'url("/new/herobg.jpg")',
+    backgroundSize: 'cover',
+    backgroundPosition : "center",
+    backgroundRepeat:"no-repeat" // or 'cover', see notes below
+  }} className="bg-blue-100 rounded-b-xl shadow-black shadow-md ">
+      <div className="mx-auto  max-w-7xl">
+        <div  className="w-full mb-10   px-2 relative  py-12  grid grid-cols-1 gap-6 md:grid-cols-2 lg:px-8">
+          <div className=" h-fit px-2 mt-10 text-center md:w-full md:px-6  lg:text-left ">
+            <h1 className="text-4xl text-white font-semibold md:text-5xl">
               AI Development <br /> Company
             </h1>
-            <p className="mt-5 text-sm text-gray-600 sm:text-base">
+            <p className="mt-5  text-sm text-white sm:text-base">
               At AV Technosys, we deliver custom AI development services to help
               businesses harness the full potential of Artificial Intelligence.
               Our smart solutions drive innovation, streamline operations, and
               boost efficiency.
             </p>
+            <Link href="/portfolio"><button className='bg-[rgb(234,179,8)] px-3 py-2 rounded-lg mt-4 text-white'>View Portfolio</button></Link>
           </div> 
           <div className="mx-auto md:w-full w-full max-w-md rounded-3xl bg-white p-6 shadow-md">
             <h2 className="text-center text-xl font-bold">
@@ -232,7 +243,7 @@ function HeroSectionAi() {
               We respond promptly, typically within{' '}
               <span className="font-semibold text-blue-600">10 minutes</span>
             </p>
-            <div className="mx-auto my-2 w-12 border-b-2 border-red-500"></div>
+            <div className="mx-auto my-2 w-12 border-b-2 border-[rgb(234,179,8)]"></div>
 
             <form className="space-y-4">
               <div className="flex gap-3">
@@ -280,7 +291,7 @@ function HeroSectionAi() {
               </Select>
 
               <InputTextArea
-                inputClass="bg-transparent border-purple-900 focus:border-purple-700"
+                inputClass="bg-transparent h-[50px] border-purple-900 focus:border-purple-700"
                 labelClass="bg-purple-950 w-fit rounded px-2 py-0.5 text-xs text-white"
                 label="Message"
                 value={formDetails.message}
@@ -290,7 +301,7 @@ function HeroSectionAi() {
               />
               <button
                 type="submit"
-                className="w-full rounded-lg bg-red-600 py-2 font-semibold text-white transition hover:bg-red-700"
+                className="w-full rounded-lg bg-[rgb(234,179,8)] py-2 font-semibold text-white transition"
               >
                 Submit
               </button>
@@ -327,13 +338,13 @@ tailored to diverse industries.
     </p>
   </div>
 
-  <div className="h-auto !max-w-sm p-3 mx-auto md:mx-0">
+  <div className="h-auto   p-3 mx-auto md:mx-0">
     <Image
-      src="/new/ai_image.webp"
+      src="/new/herobg2.jpg"
       height="400"
-      width="500"
+      width="700"
       alt="ai-robot"
-      className="h-full w-full object-contain"
+      className="h-full  rounded-lg object-contain"
     />
   </div>
 </div>

@@ -21,10 +21,10 @@ export const HoverEffect = ({ items, className = '' }) => {
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-yellow-100/50"
+                className="absolute inset-0 block h-full w-full rounded-3xl bg-gray-300"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -37,7 +37,7 @@ export const HoverEffect = ({ items, className = '' }) => {
                 }}
               />
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
           <Card>
             <CardIcon icon={item.icon} />
             <CardTitle>{item.name}</CardTitle>
@@ -53,7 +53,7 @@ export const Card = ({ className = '', children }) => {
   return (
     <div
       className={cn(
-        'relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-zinc-700 p-4 group-hover:border-slate-700',
+        'relative z-20 h-full w-full  overflow-hidden rounded-2xl border border-transparent bg-white border-gray-300 p-4 group-hover:bg-[rgb(234,179,8)]  group-hover:shadow-gray-500 shadow-lg',
         className
       )}
     >
@@ -71,7 +71,7 @@ export const CardTitle = ({ className = '', children }) => {
   return (
     <h4
       className={cn(
-        'mt-2 text-xl font-semibold tracking-wide text-zinc-100 md:mt-4 md:text-2xl',
+        'mt-2 text-xl font-semibold tracking-wide text-black md:mt-4 md:text-2xl',
         className
       )}
     >
@@ -83,7 +83,7 @@ export const CardDescription = ({ className = '', children }) => {
   return (
     <p
       className={cn(
-        'mt-4 leading-relaxed tracking-wide text-gray-300 md:mt-8',
+        'mt-4 leading-relaxed tracking-wide text-black md:mt-8',
         className
       )}
     >
