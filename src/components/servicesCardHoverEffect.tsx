@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
+import { img } from 'motion/react-client';
 
 import { useState } from 'react';
 
@@ -39,7 +40,8 @@ export const HoverEffect = ({ items, className = '' }) => {
             )}
           </AnimatePresence> */}
           <Card>
-            <CardIcon icon={item.icon} />
+            <CardIcon icon={item.img} />
+             {/* <img width="50px" src="/new/herobg2.jpg" alt="" /> */}
             <CardTitle>{item.name}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
@@ -53,7 +55,7 @@ export const Card = ({ className = '', children }) => {
   return (
     <div
       className={cn(
-        'relative z-20 h-full w-full  overflow-hidden rounded-2xl border border-transparent bg-white border-gray-300 p-4 group-hover:bg-[rgb(234,179,8)]  group-hover:shadow-gray-500 shadow-lg',
+        'relative z-20 h-full w-full bg-gradient-to-b from-[#f7f9f8] to-[#cedfde] overflow-hidden rounded-2xl border border-transparent bg-white border-gray-300 p-4    group-hover:shadow-gray-500 shadow-lg',
         className
       )}
     >
@@ -64,8 +66,9 @@ export const Card = ({ className = '', children }) => {
   );
 };
 export const CardIcon = ({ icon }) => {
-  const Icon = icon;
-  return <Icon size={32} color="white" />;
+  // const Icon = icon;
+  // <Icon size={32} color="white" />
+  return <img src={`/new/${icon}`} alt="" /> ;
 };
 export const CardTitle = ({ className = '', children }) => {
   return (

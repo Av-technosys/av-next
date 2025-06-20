@@ -46,16 +46,16 @@ const Page = () => {
       <HeroSectionAi />
       <Ratings className="md:flex lg:rounded-full mb-10" />
       <TransformAiSection />
-      <div className="my-4">
+      <AdvancedAiExperts />
+      <div className="mt-4">
         <ServiceSection />
-        <SectionHeading
+      </div>
+      <SectionHeading
           className="mx-auto max-w-4xl"
           title="End-to-End AI Development Solutions Customized for Your Business "
           titleClass=" leading-snug"
           desc=" AV Technosys is a premier AI development company, helping businesses evolve with intelligent and transformative solutions."
         />
-      </div>
-      <AdvancedAiExperts />
       <BuildSmartSolutions />
       <OurExpertsSection />
       <AiProjectCost />
@@ -72,58 +72,58 @@ export default Page;
 
 const serviceData = [
   {
-    name: 'AI Consulting Services',
-    icon: TMobileCode,
-    description:
-      'Smarter strategies with our expert AI consulting. We guide you in planning and implementing AI solutions for your business.',
-  },
-  {
     name: 'Generative AI Development',
-    icon: TSoftwareDevelopment,
+    img: "ai2.webp",
     description:
       'Fuel innovation with generative AI. From content creation to data insights, we build intelligent, creative AI systems.',
   },
   {
-    name: 'Smart AI Chatbots',
-    icon: TDigitalMarketing,
-    description:
-      'Deliver instant, intelligent support with AI-powered chatbots. We craft bots that engage, assist, and retain customers.',
-  },
-  {
     name: 'AI Product Development',
-    icon: TAi,
+    img: "ai4.webp",
     description:
       'Turn ideas into smart AI products. We develop scalable solutions built to meet your unique goals.',
   },
   {
+    name: 'Smart AI Chatbots',
+    img: "ai3.webp",
+    description:
+      'Deliver instant, intelligent support with AI-powered chatbots. We craft bots that engage, assist, and retain customers.',
+  },
+  {
     name: 'AI App Development',
-    icon: TDevops,
+    img: "ai5.webp",
     description:
       'Build future-ready apps with our AI app development services. Our team creates intelligent, user-centric applications.',
   },
-  {
-    name: 'AI as a Service',
-    icon: TUserCode,
-    description:
-      'Deploy AI faster with our AI-as-a-Service model. Use ready-made solutions that are easy to integrate and scale.',
-  },
-  {
+   {
     name: 'Enterprise AI Solutions',
-    icon: TDigitalMarketing,
+    img: "ai7.webp",
     description:
       'Enhance operations with enterprise-grade AI. From automation to analytics, we drive measurable business impact.',
   },
   {
-    name: 'AIOps Services',
-    icon: TSoftwareDevelopment,
+    name: 'AI as a Service',
+    img: "ai6.webp",
     description:
-      'Streamline IT with automated AIOps. Optimize performance, detect issues early, and boost infrastructure efficiency.',
+      'Deploy AI faster with our AI-as-a-Service model. Use ready-made solutions that are easy to integrate and scale.',
   },
   {
     name: 'Predictive Modelling Services',
-    icon: TMobileCode,
+    img: "ai9.webp",
     description:
       'Make smarter decisions with predictive modeling. We deliver accurate forecasts and actionable insights',
+  },
+   {
+    name: 'AI Consulting Services',
+    img: "ai1.webp",
+    description:
+      'Smarter strategies with our expert AI consulting. We guide you in planning and implementing AI solutions for your business.',
+  },
+  {
+    name: 'AIOps Services',
+    img: "ai8.webp",
+    description:
+      'Streamline IT with automated AIOps. Optimize performance, detect issues early, and boost infrastructure efficiency.',
   },
 ];
 
@@ -144,7 +144,7 @@ function ServiceSection() {
         </div>
          
         <div className='w-full text-center mt-10 mx-auto '>
-          <button className='px-10 py-2 rounded-lg bg-[rgb(234,179,8)] text-white'>Let's Discuss Your Project</button>
+          <button className='px-10 py-2 text-lg rounded-xl bg-[rgb(234,179,8)] text-white'>Let's Discuss Your Project</button>
         </div>
       </div>
     </div>
@@ -358,8 +358,8 @@ tailored to diverse industries.
 function AdvancedAiExperts() {
   return (
     <div className="h-full w-full">
-      <div className="h-92 mt-14 w-full bg-[url('/new/ai_banner.webp')] bg-cover bg-center pt-5">
-        <h1 className="my-4 px-3 text-center text-[25px] font-bold text-white md:my-10 md:px-0 md:text-4xl">
+      <div className="h-92 w-full border-gray-400 border rounded-lg pt-5">
+        <h1 className="my-4 px-3 text-center text-[25px] font-bold text-black md:my-4 md:px-0 md:text-4xl">
           Advanced AI Expertise, Personalized for You
         </h1>
         <div className="px-6 py-6">
@@ -384,17 +384,17 @@ function AdvancedAiExperts() {
 
             <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
               <img
-                src="/new/ai_palm2.webp"
+                src="/new/ai_google_gemini.webp"
                 alt="PaLM-2"
                 className="mb-3 h-12 w-12"
               />
-              <span className="text-sm font-medium">PaLM-2</span>
+              <span className="text-sm font-medium">Google Gemini</span>
             </div>
 
             <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
               <img
                 src="/new/ai_claude.webp"
-                alt="Claude"
+                alt="claude"
                 className="mb-3 h-12 w-12"
               />
               <span className="text-sm font-medium">Claude</span>
@@ -402,11 +402,11 @@ function AdvancedAiExperts() {
 
             <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
               <img
-                src="/new/dell_e2.webp"
+                src="/new/ai_microsoftphi2.webp"
                 alt="DALL-E 2"
                 className="mb-3 h-12 w-12"
               />
-              <span className="text-sm font-medium">DALL-E 2</span>
+              <span className="text-sm font-medium">Microsoft Phi-2</span>
             </div>
 
             <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
@@ -416,60 +416,6 @@ function AdvancedAiExperts() {
                 className="mb-3 h-12 w-12"
               />
               <span className="text-sm font-medium">Whisper</span>
-            </div>
-
-            <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
-              <img
-                src="/new/ai_stable_diffusion.webp"
-                alt="Stable Diffusion"
-                className="mb-3 h-12 w-12"
-              />
-              <span className="text-sm font-medium">Stable Diffusion</span>
-            </div>
-
-            <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
-              <img
-                src="/new/ai_microsoftphi2.webp"
-                alt="Microsoft Phi-2"
-                className="mb-3 h-12 w-12"
-              />
-              <span className="text-sm font-medium">Microsoft Phi-2</span>
-            </div>
-
-            <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
-              <img
-                src="/new/ai_google_gemini.webp"
-                alt="Google Gemini"
-                className="mb-3 h-12 w-12"
-              />
-              <span className="text-sm font-medium">Google Gemini</span>
-            </div>
-
-            <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
-              <img
-                src="/new/ai_vicuna.webp"
-                alt="Vicuna"
-                className="mb-3 h-12 w-12"
-              />
-              <span className="text-sm font-medium">Vicuna</span>
-            </div>
-
-            <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
-              <img
-                src="/new/ai_mistralai.webp"
-                alt="Mistral AI"
-                className="mb-3 h-12 w-12"
-              />
-              <span className="text-sm font-medium">Mistral AI</span>
-            </div>
-
-            <div className="flex flex-col items-center rounded-xl bg-[#11113B] p-4 transition-transform duration-300 md:hover:scale-110">
-              <img
-                src="/new/ai_bloom560m.webp"
-                alt="Bloom-560m"
-                className="mb-3 h-12 w-12"
-              />
-              <span className="text-sm font-medium">Bloom-560m</span>
             </div>
           </div>
         </div>

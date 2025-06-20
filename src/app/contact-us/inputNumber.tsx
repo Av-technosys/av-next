@@ -21,7 +21,7 @@ function CustomInputNumber({ label, phone, setPhone ,inputClass=""}) {
             animate={{ y: -20, opacity: 1 }}
             exit={{ y: 10, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-3 top-1 z-10 bg-white px-1 text-sm font-medium text-gray-600"
+            className="absolute left-3 top-1 z-10 bg-white px-1 text-xs mt-2 font-medium text-gray-600"
           >
             {label}
           </motion.label>
