@@ -1,38 +1,48 @@
-import Form1 from '../letsConnectForm';
-import Hero from '../hero';
 import Footer1 from '../footer1';
-import Header2 from '@/components/header2/header2';
-import ImageWithBorders from '../testCard';
-import PortfolioPage1 from './portfolio1';
 import { Metadata } from 'next';
-import projectData from './data.json';
+import { portfolioData } from '@/const';
+import { NavBarHome } from '@/components/navBar';
+import HeroSection from '@/components/titleGrid';
+import { BlogSection } from '@/components/blogSection';
+import { Locations } from '@/components/location';
+import { PortfolioList } from './portfolioList';
+import { GetLeadForm } from './getLeadForm';
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'Our Portfolio',
   description:
-    'AV Technosys has worked on several client projects across various industries like ecommerce, automative, and so on. Do check out this link to know more',
+    'Explore AV Technosys’ portfolio featuring diverse client projects across industries like eCommerce, automotive, healthcare, and more. See how we deliver innovation.',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/portfolio',
+    canonical: 'https://www.avtechnosys.com/portfolio/',
   },
   robots: {
-    index: true,
-    follow: false,
+    index: false,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Our Portfolio - AV Technosys',
+    description:
+      'Explore AV Technosys’ portfolio featuring diverse client projects across industries like eCommerce, automotive, healthcare, and more. See how we deliver innovation.',
+    url: 'https://www.avtechnosys.com/portfolio/',
+    siteName: 'AV Technosys',
+    type: 'website',
   },
 };
 
-const PortfolioPage = async () => {
+const PortfolioPage = () => {
   return (
-    <div className="w-full bg-[#1c1c1e] pt-3">
-      <Header2 />
-      <div className="relative">
-        {projectData?.map((item) => (
-          <PortfolioPage1 key={item.id} data={item} />
-        ))}
+    <div className="w-full bg-gray-50 text-black">
+      <NavBarHome />
+      <div className="mx-auto w-full max-w-7xl">
+        <HeroSection />
+        <div className="relative flex flex-col gap-6 px-4 py-12 md:flex-row">
+          <PortfolioList portfolioData={portfolioData} />
+        </div>
       </div>
-      <Form1 />
-      <Hero />
-      <ImageWithBorders />
-      <Footer1 />
+      <GetLeadForm />
+      <BlogSection />
+      <Locations />
+      <Footer1 className="bg-gray-50" />
     </div>
   );
 };

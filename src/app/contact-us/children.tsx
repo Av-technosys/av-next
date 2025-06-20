@@ -116,7 +116,7 @@ const Cldren = () => {
   };
 
   return (
-    <div className="py-20">
+    <div className="py-20 pb-0">
       {/* map  */}
       {/* <div className="h-8"></div>
       <div className="fontTest bg-[#1c1c1e] pb-10 pt-10 font-semibold text-white lg:h-[100vh] lg:pb-8 lg:pl-[80px] lg:pt-0">

@@ -28,10 +28,18 @@ import {
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
 import { LeadPopUp } from '@/components/leadPopUp';
+import Autoplay from 'embla-carousel-autoplay';
 
 export function CarouselDemo() {
   return (
-    <Carousel className="w-full max-w-none">
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 3000,
+        }),
+      ]}
+      className="w-full max-w-none"
+    >
       <CarouselContent>
         {cardsData.map((cardData, index) => (
           <CarouselItem key={index}>

@@ -7,6 +7,7 @@ import {
   IconBrandTeams,
   IconBrandX,
   IconBriefcase2,
+  IconCalendarTime,
   IconCertificate,
   IconChartAreaLine,
   IconChecks,
@@ -26,8 +27,10 @@ import {
   IconMessageChatbotFilled,
   IconPhone,
   IconRobot,
+  IconRocket,
   IconServer,
   IconShoppingCart,
+  IconThumbUp,
   IconUser,
   IconUserCode,
   IconUserPentagon,
@@ -134,4 +137,13 @@ export function TCart(props) {
 }
 export function TTeams(props) {
   return <IconBrandTeams {...props} />;
+}
+export function TRocket(props) {
+  return <IconRocket {...props} />;
+}
+export function TLike(props) {
+  return <IconThumbUp {...props} />;
+}
+export function TCalenderTime(props) {
+  return <IconCalendarTime {...props} />;
 }

@@ -1,16 +1,12 @@
 import React from 'react';
-import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
-import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
-import { ProjectDataSchema } from './types';
 import Link from 'next/link';
 import { ArrowUpRight, Check } from 'lucide-react';
 
 const PortfolioPage1 = ({ data }: { data: any }) => {
   return (
-    <div className="w-full bg-[#1c1c1e]">
-      <hr className="bg-white text-white" />
+    <div className="w-full">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-12 md:px-4">
-        <div className="flex md:h-[28rem] justify-between gap-6">
+        <div className="flex justify-between gap-6 md:h-[28rem]">
           <div className="flex h-full w-full flex-col justify-between gap-12 md:min-h-[26rem]">
             <ProjectLogo logo={data?.logo?.url} />
             <div className="block w-full md:hidden">
@@ -47,9 +43,7 @@ export default PortfolioPage1;
 function DesignToolsUsed() {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-3xl font-medium text-white md:text-4xl">
-        Design Tools Used
-      </p>
+      <p className="text-3xl font-medium md:text-4xl">Design Tools Used</p>
       <div className="flex w-full flex-wrap gap-2">
         {['./figma (1).svg', './Adode ai.svg', './photo.svg'].map((item) => (
           <div className="size-12">
@@ -64,9 +58,7 @@ function DesignToolsUsed() {
 function TechUsed({ techStack }: { techStack: string[] }) {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-3xl font-medium text-white md:text-4xl">
-        Technology Stack Used
-      </p>
+      <p className="text-3xl font-medium md:text-4xl">Technology Stack Used</p>
       <div className="grid w-full max-w-96 grid-cols-4 flex-wrap">
         {techStack?.map((item) => (
           <div className="">
@@ -88,7 +80,7 @@ function ProjectBreakDown({
   projectBreakDown: string[];
 }) {
   return (
-    <div className="text-white">
+    <div className="">
       <h1 className="text-3xl font-medium md:text-4xl lg:text-4xl">
         Project Breakdown
       </h1>
@@ -97,7 +89,7 @@ function ProjectBreakDown({
           {projectBreakDown?.map((item) => (
             <li className="flex gap-2">
               {' '}
-              <div className="mt-1 flex h-fit w-fit items-center justify-center rounded-full bg-white p-0.5">
+              <div className="mt-1 flex h-fit w-fit items-center justify-center rounded-full p-0.5">
                 <Check size={14} color=" black" />
               </div>
               {item}
@@ -111,17 +103,15 @@ function ProjectBreakDown({
 
 function Solutions({ solutions }) {
   return (
-    <div className="w-full max-w-lg text-xl font-semibold text-white lg:text-[32px]">
+    <div className="w-full max-w-lg text-xl font-semibold lg:text-[32px]">
       Solutions
       {Array.isArray(solutions) &&
         solutions.map((solution) => (
           <div className="px-2">
-            <h1 className="mt-2 font-normal text-white lg:mt-6">
-              {solution.title}
-            </h1>
-            <ul className="ml-5 mt-5 list-disc text-base md:text-xl font-normal lg:text-[1rem]">
+            <h1 className="mt-2 font-normal lg:mt-6">{solution.title}</h1>
+            <ul className="ml-5 mt-5 list-disc text-base font-normal md:text-xl lg:text-[1rem]">
               {solution?.points?.map((item: string) => (
-                <li className="text-gray-200">{item}</li>
+                <li className="text-gray-800">{item}</li>
               ))}
             </ul>
           </div>
@@ -153,10 +143,10 @@ function AboutProject({
 }) {
   return (
     <div className="flex w-full flex-col gap-4">
-      <p className="text-3xl font-semibold text-white">About {name}</p>
-      <p className="text-gray-300">{description}</p>
+      <p className="text-3xl font-semibold">About {name}</p>
+      <p className="text-gray-800">{description}</p>
       <Link
-        className="flex w-fit items-center gap-2 hover:gap-3 duration-200 rounded-md border px-3 py-2 text-white"
+        className="flex w-fit items-center gap-2 rounded-md border px-3 py-2 duration-200 hover:gap-3"
         href={projectLink}
       >
         <p>Visit Site</p>

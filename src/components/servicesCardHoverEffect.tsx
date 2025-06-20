@@ -1,10 +1,11 @@
+'use client';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
 import { img } from 'motion/react-client';
 
 import { useState } from 'react';
 
-export const HoverEffect = ({ items, className = '' }) => {
+export const HoverEffect = ({ items, className = '' }: any) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (

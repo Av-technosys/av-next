@@ -63,6 +63,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/x-icon" href="/new/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         {/* Google search console */}
         <meta
           name="google-site-verification"

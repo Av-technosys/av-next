@@ -29,6 +29,14 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
+import Autoplay from 'embla-carousel-autoplay';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { FaqAccordion } from '@/components/faqAccordion';
@@ -39,29 +47,62 @@ import { InputTextArea } from '@/components/inputTextArea';
 import Image from 'next/image';
 import CustomInputNumber from '../contact-us/inputNumber';
 import Link from 'next/link';
+import { PortfolioCrousel } from '../hire-us/crouselPortfolio';
+import { TechnologiesOffered } from '@/components';
+import { BlogSection } from '@/components/blogSection';
+import { ContactUs } from '@/components/contactUs';
+
 const Page = () => {
   return (
     <>
       <NavBarHome />
       <HeroSectionAi />
-      <Ratings className="md:flex lg:rounded-full mb-10" />
+      <Ratings className="md:flex  mb-10" />
       <TransformAiSection />
       <AdvancedAiExperts />
       <div className="mt-4">
         <ServiceSection />
+        <BuildSmartSolutions />
       </div>
-      <SectionHeading
-          className="mx-auto max-w-4xl"
-          title="End-to-End AI Development Solutions Customized for Your Business "
-          titleClass=" leading-snug"
-          desc=" AV Technosys is a premier AI development company, helping businesses evolve with intelligent and transformative solutions."
-        />
-      <BuildSmartSolutions />
+      <PortfolioCrousel/>
+       <TechnologiesOffered />
       <OurExpertsSection />
       <AiProjectCost />
       <SmartAiSolutions />
+       <section>
+        <SectionHeading
+          className="text-center"
+          title={'What Our Clients Say About Working With Us'}
+          titleClass="text-black"
+          desc=""
+          descClass={'text-black'}
+        />
+       <div className=" w-full">
+                <Carousel
+                  plugins={[
+                    Autoplay({
+                      delay: 3000,
+                    }),
+                  ]}
+                  className=""
+                >
+                  <CarouselContent>
+                    {cardData?.map((cardData, index) => (
+                      <CarouselItem key={index}>
+                        <Card cardData={cardData} />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="text-black" />
+                  <CarouselNext className="text-black" />
+                </Carousel>
+              </div>
+       </section>
+       <Whychooseus/>
       <AiEffectSection />
       <FaqAccordion />
+      <ContactUs/>
+      <BlogSection />
       <Locations />
       <Footer1 />
     </>
@@ -130,7 +171,7 @@ const serviceData = [
 function ServiceSection() {
   return (
     <div className="h-full w-full   bg-white">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6  md:pb-20">
+      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6  md:pb-10">
         <SectionHeading
           className="text-center"
           title={'AI Consulting Services'}
@@ -143,9 +184,7 @@ function ServiceSection() {
           <HoverEffect items={serviceData} />
         </div>
          
-        <div className='w-full text-center mt-10 mx-auto '>
-          <button className='px-10 py-2 text-lg rounded-xl bg-[rgb(234,179,8)] text-white'>Let's Discuss Your Project</button>
-        </div>
+        
       </div>
     </div>
   );
@@ -426,25 +465,25 @@ function AdvancedAiExperts() {
 
 function BuildSmartSolutions() {
   return (
-    <section className="mx-auto max-w-7xl">
-      <div className="pt-14 md:px-4">
-        <div className="flex justify-between bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)] px-5 md:rounded-[40px]">
-          <div className="flex flex-col items-center justify-center gap-3">
+    <section className="mx-auto mb-2 max-w-7xl">
+      <div className=" md:px-4">
+        <div className="flex justify-around bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)] px-5 md:rounded-[40px]">
+          <div className="flex flex-col items-center justify-center gap-5">
             <h1 className="text-[16px] font-extrabold text-white md:text-4xl">
               Build Smarter Solutions with Us
             </h1>
             <p className="text-[10px] text-white md:text-lg">
               Partner with Top AI Experts to Unlock Endless Potential
             </p>
-            <button className="mt-2 w-[150px] rounded-xl bg-[#ed1f24] px-0 py-2 text-[12px] text-white md:mt-0 md:w-[250px] md:px-3 md:py-2 md:text-[16px]">
+            <button className="mt-2 w-[150px] rounded-xl bg-sky-200 px-0 py-2 text-[12px] text-gray-600 font-semibold md:mt-0 md:w-[250px] md:px-3 md:py-2 md:text-[16px]">
               Get a Free Consultation
             </button>
           </div>
           <div className="py-14 md:py-0">
             <img
               width="500px"
-              className="w-[300px] md:w-[500px]"
-              src="/new/ai_btn_img1_new.webp"
+              className="w-[300px] md:w-[400px]"
+              src="/new/buildai2.png"
               alt="ai-image"
             />
           </div>
@@ -471,7 +510,7 @@ function OurExpertsSection() {
           {/* Card 1 */}
           <div className="overflow-hidden rounded-xl border bg-white shadow-xl transition-transform duration-300 md:hover:scale-105">
             <img
-              src="/new/Generative_ai_img_nw.webp"
+              src="/new/exp1.jpg"
               alt="Generative AI"
               className="h-48 w-full object-cover"
             />
@@ -488,7 +527,7 @@ function OurExpertsSection() {
           {/* Card 2 */}
           <div className="overflow-hidden rounded-xl border bg-white shadow-xl transition-transform duration-300 md:hover:scale-105">
             <img
-              src="/new/Machine_Learning_img_nw.webp"
+              src="/new/exp2.jpg"
               alt="Machine Learning"
               className="h-48 w-full object-cover"
             />
@@ -504,7 +543,7 @@ function OurExpertsSection() {
           {/* Card 3 */}
           <div className="overflow-hidden rounded-xl border bg-white shadow-xl transition-transform duration-300 md:hover:scale-105">
             <img
-              src="/new/deep_learning_ai_nw.webp"
+              src="/new/exp4.jpg"
               alt="Deep Learning"
               className="h-48 w-full object-cover"
             />
@@ -512,7 +551,7 @@ function OurExpertsSection() {
               <h2 className="mb-2 text-lg font-semibold">Deep Learning</h2>
               <p className="text-sm text-gray-600">
                 We develop deep learning solutions that mimic human
-                intelligence—ideal for image recognition, speech, and beyond.
+                intelligence, ideal for image recognition, speech, and beyond.
               </p>
             </div>
           </div>
@@ -520,7 +559,7 @@ function OurExpertsSection() {
           {/* Card 4 */}
           <div className="overflow-hidden rounded-xl border bg-white shadow-xl transition-transform duration-300 md:hover:scale-105">
             <img
-              src="/new/nlp_ai_nw.webp"
+              src="/new/exp3.jpg"
               alt="Natural Language Processing"
               className="h-48 w-full object-cover"
             />
@@ -538,7 +577,7 @@ function OurExpertsSection() {
           {/* Card 5 */}
           <div className="overflow-hidden rounded-xl border bg-white shadow-xl transition-transform duration-300 md:hover:scale-105">
             <img
-              src="/new/Robotic_Process_Automation_img_nw.webp"
+              src="/new/exp5.jpg"
               alt="Robotic Process Automation"
               className="h-48 w-full object-cover"
             />
@@ -556,7 +595,7 @@ function OurExpertsSection() {
           {/* Card 6 */}
           <div className="overflow-hidden rounded-xl border bg-white shadow-xl transition-transform duration-300 md:hover:scale-105">
             <img
-              src="/new/Predictive_Analytics_img_nw.webp"
+              src="/new/exp6.jpg"
               alt="Predictive Analytics"
               className="h-48 w-full object-cover"
             />
@@ -580,11 +619,11 @@ function AiProjectCost() {
   return (
     <section className="mx-auto mt-2 max-w-7xl md:mt-14">
       <div className="px-4 py-10 md:relative">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-gradient-to-br from-purple-600 via-pink-500 to-red-400 p-4 md:flex-row md:p-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-[#EAB308] p-4 md:flex-row md:p-16">
           {/* Left Image Section */}
           <div className="right-0 top-0 flex w-[250px] justify-center md:absolute md:w-[500px]">
             <img
-              src="/new/ai_btn_img2.webp"
+              src="/new/airobotmain.webp"
               alt="AI Development Visual"
               className="w-full max-w-sm object-contain"
             />
@@ -599,7 +638,7 @@ function AiProjectCost() {
               AV Technosys delivers AI app development with honest pricing and
               personalized solutions.
             </p>
-            <button className="rounded-full bg-red-500 px-6 py-3 font-semibold text-white shadow-md transition duration-300 hover:bg-red-600">
+            <button className="rounded-full bg-black px-6 py-3 font-semibold text-white shadow-md transition duration-300">
               Request a Free Quote
             </button>
           </div>
@@ -616,7 +655,7 @@ function SmartAiSolutions() {
         className="text-center"
         title={'Smart AI Applications for Every Industry '}
         titleClass="text-black leading-normal py-0"
-        desc="AV Technosys delivers industry-specific AI development services designed to drive innovation and business growth. With our deep expertise, we craft custom AI app solutions that align perfectly with the unique demands of each sector we serve."
+        desc="AV Technosys offers tailored AI development services to fuel innovation and growth with industry-specific, custom AI solutions."
         descClass={'text-gray-600 '}
       />
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -756,7 +795,7 @@ function AiEffectSection() {
         <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
-              backgroundImage: `url("/new/1min.jpg")`,
+              backgroundImage: `url("/new/smartai1.jpg")`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -764,9 +803,6 @@ function AiEffectSection() {
             className="h-full w-full"
           >
             <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon1.svg" width="30px" alt="" />
-              </div>
               <p className="mb-3 px-4">
                 Automating Manual <br /> Tasks
               </p>
@@ -774,7 +810,7 @@ function AiEffectSection() {
           </div>
 
           <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-3 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-xl leading-relaxed">
+            <p className="text-xl font-bold leading-relaxed">
               Automating Repetitive Tasks
             </p>
             <p className="text-sm">
@@ -788,7 +824,7 @@ function AiEffectSection() {
               <li>Custom AI solutions</li>
             </ul>
 
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors">
               Get in Touch
             </button>
           </div>
@@ -797,62 +833,21 @@ function AiEffectSection() {
         <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
-              backgroundImage: `url("/new/image_data_labeling_ai_nw.jpg")`,
+              backgroundImage: `url("/new/smartai3.jpg")`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'top',
             }}
             className="h-full w-full"
           >
             <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon2.svg" width="30px" alt="" />
-              </div>
-              <p className="mb-3 px-4">
-                Image <br />
-                Data Labelling
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">Image Data Labeling</p>
-            <p className="text-sm">
-              Simplify image workflows with precise data labeling for efficient
-              AI analysis and categorization.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Accurate annotations</li>
-              <li>Faster image processing</li>
-              <li>Scalable AI models</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
-          <div
-            style={{
-              backgroundImage: `url("/new/Human_Activity_Recognition_ai_nw.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon3.svg" width="30px" alt="" />
-              </div>
               <p className="mb-3 px-4">
                 Human Activity <br /> Recognition
               </p>
             </div>
           </div>
           <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg font-bold leading-relaxed">
               Human Activity Recognition
             </p>
             <p className="text-sm">
@@ -866,7 +861,42 @@ function AiEffectSection() {
               <li>Real-time insights</li>
             </ul>
 
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+
+         <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
+          <div
+            style={{
+              backgroundImage: `url("/new/text_classification_ai_nw.jpg")`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+            className="h-full w-full"
+          >
+            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
+              <p className="mb-3 px-4">
+                Text <br /> Classification
+              </p>
+            </div>
+          </div>
+          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-lg font-bold leading-relaxed">Text Classification</p>
+
+            <p className="text-sm">
+              Organize and analyze large volumes of text with intelligent
+              classification models.
+            </p>
+            <ul className="list-inside list-disc text-sm">
+              <li>Smart text grouping</li>
+              <li>Improved content handling</li>
+              <li>Efficient analysis</li>
+            </ul>
+
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors">
               Get in Touch
             </button>
           </div>
@@ -883,16 +913,13 @@ function AiEffectSection() {
             className="h-full w-full"
           >
             <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon4.svg" width="30px" alt="" />
-              </div>
               <p className="mb-3 px-4">
                 Object <br /> Detection
               </p>
             </div>
           </div>
           <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">Object Detection</p>
+            <p className="text-lg font-bold leading-relaxed">Object Detection</p>
             <p className="text-sm">
               Detect and identify objects accurately for use in retail,
               security, and automation.
@@ -904,7 +931,43 @@ function AiEffectSection() {
               <li>Scalable integration</li>
             </ul>
 
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors">
+              Get in Touch
+            </button>
+          </div>
+
+        </div>
+
+         <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
+          <div
+            style={{
+              backgroundImage: `url("/new/Semantic_Search_ai_nw.jpg")`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+            className="h-full w-full"
+          >
+            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
+              <p className="mb-3 px-4">
+                Semantic <br /> Search
+              </p>
+            </div>
+          </div>
+          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-lg font-bold leading-relaxed">Semantic Search</p>
+            <p className="text-sm">
+              Deliver smarter search results using AI that understands context
+              and meaning.
+            </p>
+
+            <ul className="list-inside list-disc text-sm">
+              <li>Relevant query results</li>
+              <li>Enhanced search experience</li>
+              <li>Scalable AI search tools</li>
+            </ul>
+
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors ">
               Get in Touch
             </button>
           </div>
@@ -913,7 +976,43 @@ function AiEffectSection() {
         <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
           <div
             style={{
-              backgroundImage: `url("/new/pattern_recognition_ai_nw.jpg")`,
+              backgroundImage: `url("/new/smartai2.jpg")`,
+              backgroundSize: 'cover',
+               backgroundPosition: 'bottom',
+              backgroundRepeat: 'no-repeat',
+            }}
+            className="h-full w-full"
+          >
+            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
+              <p className="mb-3 px-4">
+                Image <br />
+                Data Labelling
+              </p>
+            </div>
+          </div>
+          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+            <p className="text-lg font-bold leading-relaxed">Image Data Labeling</p>
+            <p className="text-sm">
+              Simplify image workflows with precise data labeling for efficient
+              AI analysis and categorization.
+            </p>
+
+            <ul className="list-inside list-disc text-sm">
+              <li>Accurate annotations</li>
+              <li>Faster image processing</li>
+              <li>Scalable AI models</li>
+            </ul>
+
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+
+        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
+          <div
+            style={{
+              backgroundImage: `url("/new/smartai5.jpg")`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -921,16 +1020,13 @@ function AiEffectSection() {
             className="h-full w-full"
           >
             <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon5.svg" width="30px" alt="" />
-              </div>
               <p className="mb-3 px-4">
                 Pattern <br /> Recognition
               </p>
             </div>
           </div>
           <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">Pattern Recognition</p>
+            <p className="text-lg font-bold leading-relaxed">Pattern Recognition</p>
             <p className="text-sm">
               Unlock trends and insights with AI that recognizes patterns for
               smarter decisions.
@@ -942,7 +1038,7 @@ function AiEffectSection() {
               <li>Smarter forecasting</li>
             </ul>
 
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors ">
               Get in Touch
             </button>
           </div>
@@ -959,16 +1055,13 @@ function AiEffectSection() {
             className="h-full w-full"
           >
             <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon6.svg" width="30px" alt="" />
-              </div>
               <p className="mb-3 px-4">
                 Speech <br /> Recognition
               </p>
             </div>
           </div>
           <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">Speech Recognition</p>
+            <p className="text-lg font-bold leading-relaxed">Speech Recognition</p>
             <p className="text-sm">
               Convert voice to text with advanced AI for natural and responsive
               interactions.
@@ -980,83 +1073,7 @@ function AiEffectSection() {
               <li>Accurate speech processing</li>
             </ul>
 
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
-          <div
-            style={{
-              backgroundImage: `url("/new/Semantic_Search_ai_nw.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon7.svg" width="30px" alt="" />
-              </div>
-              <p className="mb-3 px-4">
-                Semantic <br /> Search
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">Semantic Search</p>
-            <p className="text-sm">
-              Deliver smarter search results using AI that understands context
-              and meaning.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Relevant query results</li>
-              <li>Enhanced search experience</li>
-              <li>Scalable AI search tools</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg ">
-          <div
-            style={{
-              backgroundImage: `url("/new/text_classification_ai_nw.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <div className="ml-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white">
-                <img src="/new/ai_icon8.svg" width="30px" alt="" />
-              </div>
-              <p className="mb-3 px-4">
-                Text <br /> Classification
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg leading-relaxed">Text Classification</p>
-
-            <p className="text-sm">
-              Organize and analyze large volumes of text with intelligent
-              classification models.
-            </p>
-            <ul className="list-inside list-disc text-sm">
-              <li>Smart text grouping</li>
-              <li>Improved content handling</li>
-              <li>Efficient analysis</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#ed1f24] px-4 py-2 text-sm transition-colors hover:bg-red-700">
+            <button className="self-start rounded-full bg-[#EAB308] text-black px-4 py-2 text-sm transition-colors ">
               Get in Touch
             </button>
           </div>
@@ -1065,3 +1082,116 @@ function AiEffectSection() {
     </section>
   );
 }
+
+
+function Card({ cardData }) {
+  return (
+    <div className="relative mx-auto h-full max-w-[92vw] rounded-xl border-2 border-neutral-700 bg-black p-6 md:p-12">
+      <span className="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700"></span>
+      <span className="absolute bottom-px right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700 blur-xl"></span>
+      <p className="border-b border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">
+        {cardData.msg}
+      </p>
+      <div className="flex gap-6">
+        <img src={cardData.img} alt="" className="mt-6 size-20 rounded-xl" />
+        <div className="mt-auto pb-1">
+          <p className="mt-4 text-lg text-white font-semibold">{cardData.name}</p>
+          <p className="text-sm text-gray-400">{cardData.position}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const cardData = [
+  {
+    msg: 'AV Technosys turned our ideas into a seamless digital solution. Their team was reliable, responsive, and easy to work with. We truly valued their professionalism, attention to detail, and collaborative spirit throughout the project.',
+    name: 'Earl Duncan',
+    position: 'Founder, S4 Digi – Digital Marketing',
+    img: '/earlcan.png',
+  },
+  {
+    msg: 'Our app has seen a noticeable boost in user engagement since launch. AV Technosys delivered a high-quality product tailored to our needs. The team was efficient, responsive, and easy to collaborate with. We’re very satisfied with the results and their overall professionalism.',
+    name: 'Nitin',
+    position: 'Founder, Tavaga – Stock Consultancy',
+    img: '/nitin-tavaga.png',
+  },
+];
+
+function Whychooseus(){
+  return(
+    <div className="bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff]  px-4 py-12 my-14 md:px-16">
+  <div className="max-w-7xl mx-auto">
+    <div className="md:flex md:justify-between md:items-start gap-12">
+      {/* Left Section */}
+      <div className="md:w-1/2">
+        <h2 className="text-3xl md:text-4xl leading-normal font-bold text-black">
+          Why <span className='text-[#EAB308]'>AV Technosys</span> Is Your Ideal <br /> AI Development Partner
+
+        </h2>
+        <div className="w-16 h-[3px] bg-[#EAB308] mt-4 mb-6"></div>
+        <p className="text-[#1d1d1d] text-base leading-relaxed">
+          AV Technosys is a top AI development company delivering innovative, scalable, and custom AI solutions that help businesses automate processes, boost efficiency, and achieve sustainable growth. Our smart, industry-focused approach ensures every solution aligns perfectly with client goals.
+        </p>
+      </div>
+
+      {/* Right Section */}
+      <div className="md:w-1/2 space-y-8 mt-10 md:mt-0">
+        {/* Box 1 */}
+        <div className="flex items-start bg-white rounded-2xl p-4 shadow-sm">
+          <img
+            src="/new/w1.svg"
+            alt="Expert Team"
+            className="w-12 h-12 mr-4"
+          />
+          <div>
+            <h3 className="font-bold text-lg text-black mb-1">
+              Expert AI Team
+            </h3>
+            <p className="text-[#1d1d1d] text-sm">
+               Skilled developers building smart, impactful AI solutions.
+            </p>
+          </div>
+        </div>
+
+        {/* Box 2 */}
+        <div className="flex items-start bg-white rounded-2xl p-4 shadow-sm">
+          <img
+            src="/new/w2.svg"
+            alt="Custom Development"
+            className="w-12 h-12 mr-4"
+          />
+          <div>
+            <h3 className="font-bold text-lg text-black mb-1">
+             Custom AI Services
+            </h3>
+            <p className="text-[#1d1d1d] text-sm">
+               AI apps designed to fit your unique business needs.
+            </p>
+          </div>
+        </div>
+
+        {/* Box 3 */}
+        <div className="flex items-start bg-white rounded-2xl p-4 shadow-sm">
+          <img
+            src="/new/w3.svg"
+            alt="End-to-End Solutions"
+            className="w-12 h-12 mr-4"
+          />
+          <div>
+            <h3 className="font-bold text-lg text-black mb-1">
+              End-to-End Solutions
+            </h3>
+            <p className="text-[#1d1d1d] text-sm">
+               Complete AI development from planning to launch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  )
+}
+
+

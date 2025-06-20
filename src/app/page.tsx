@@ -30,12 +30,13 @@ import { CaseStudy } from './caseStudy';
 import { FaqAccordion } from '@/components/faqAccordion';
 import Ratings from './ratings';
 import { ratingData } from '@/const/ratingData';
-import { ContactUs } from './contactUs';
+// import { ContactUs } from '@/app/contact-us';
 import Testimonial from './reviews';
 import Tabs from '@/components/techohologiesOffered';
 import dayjs from 'dayjs';
 import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
+import { ContactUs } from '@/components/contactUs';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -55,7 +56,7 @@ const Home = () => {
       <BookCall setIsLeadOpen={setIsLeadOpen} />
       <TechnologiesOffered />
       <WhyChooseUs />
-      <ContactUs />
+      <ContactUs/>
       <FaqAccordion />
       <BlogSection />
       <Locations />
