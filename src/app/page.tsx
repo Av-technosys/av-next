@@ -61,7 +61,6 @@ const Home = () => {
       <BlogSection />
       <Locations />
       <Footer1 />
-
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
     </div>
   );
@@ -204,7 +203,7 @@ function ServiceSection() {
         />
 
         <div className="">
-          <HoverEffect items={serviceData} />
+          <HoverEffect items={serviceData} iconClassName={"!text-white"} />
         </div>
       </div>
     </div>

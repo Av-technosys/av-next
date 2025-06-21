@@ -181,7 +181,7 @@ function ServiceSection() {
         />
 
         <div className="">
-          <HoverEffect items={serviceData} />
+          <HoverEffect items={serviceData} shadow={"!bg-[#EAB308]"} iconClassName={"!text-black"} cartClassName={"!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde]  group-hover:shadow-gray-500 shadow-lg "} />
         </div>
          
         
