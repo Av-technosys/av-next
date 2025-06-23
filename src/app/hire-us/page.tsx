@@ -42,7 +42,7 @@ const HireusPage = () => {
       <PartnerWithUs />
       <HiringSteps />
       <TechnologiesOffered className={'mb-6'} />
-      <PortfolioCrousel  headingClass={"!hidden"}/>
+      <PortfolioCrousel />
 
       <ServiceSection className={'mt-6'} />
       <WhyChooseUs />
