@@ -12,14 +12,15 @@ import Link from 'next/link';
 import { SectionHeading } from '@/components/sectionHeading';
 import Autoplay from 'embla-carousel-autoplay';
 
-export function PortfolioCrousel() {
+export function PortfolioCrousel({headingClass = ""}) {
   return (
-    <div className="flex flex-col gap-2 px-4">
+    <div className="flex flex-col gap-2 mb-5 px-4">
       <SectionHeading
         title="Our Successful Projects"
         desc={
           'We take pride in delivering impactful digital solutions to our clients needs.'
         }
+        titleClass={headingClass}
       />
 
       <Carousel

@@ -13,7 +13,7 @@ import {
   TRobot,
 } from './icons';
 import Image from 'next/image';
-const Tabs = () => {
+const Tabs = ({colorchange = ""}) => {
   const [activeTab, setActiveTab] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState<any>(null);

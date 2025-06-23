@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Footer1 from './footer1';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/utils/cn';
+import Link from 'next/link';
 import { Cover } from './../components/ui/cover';
 
 import { InfoNav, NavBarHome } from './../components/navBar/index';
@@ -29,14 +30,13 @@ import { CaseStudy } from './caseStudy';
 import { FaqAccordion } from '@/components/faqAccordion';
 import Ratings from './ratings';
 import { ratingData } from '@/const/ratingData';
-import { ContactUs } from '../components/contactUs';
+// import { ContactUs } from '@/app/contact-us';
 import Testimonial from './reviews';
-import { TechnologiesOffered } from '@/components';
+import Tabs from '@/components/techohologiesOffered';
+import dayjs from 'dayjs';
 import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
-import { BlogSection } from '../components/blogSection';
-import { Locations } from '@/components/location';
-import { ExperienceSections } from '@/conponents/experience';
+import { ContactUs } from '@/components/contactUs';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -49,19 +49,18 @@ const Home = () => {
       <Ratings />
       <AISection setIsLeadOpen={setIsLeadOpen} />
       <ServiceSection />
-      <ExperienceSections />
+      <ExperienceSection />
       <PartnerSection />
       <CaseStudy />
       <Testimonial />
       <BookCall setIsLeadOpen={setIsLeadOpen} />
       <TechnologiesOffered />
       <WhyChooseUs />
-      <ContactUs />
+      <ContactUs/>
       <FaqAccordion />
       <BlogSection />
       <Locations />
       <Footer1 />
-
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
     </div>
   );
@@ -204,7 +203,7 @@ function ServiceSection() {
         />
 
         <div className="">
-          <HoverEffect items={serviceData} />
+          <HoverEffect items={serviceData} iconClassName={"!text-white"} />
         </div>
       </div>
     </div>
@@ -221,7 +220,7 @@ function AISection({ setIsLeadOpen }) {
   return (
     <div className="w-full px-3 py-8 pb-24 md:px-4">
       <SectionHeading
-        title="Grow more quickly with innovative tech solutions"
+        title="Grow more quickly with cutting-edge technology"
         desc="Innovative technologies are transforming app development, enabling smarter solutions and business growth"
       />
 
@@ -244,14 +243,15 @@ function AISection({ setIsLeadOpen }) {
             ))}
           </div>
 
+          <Link href="/ai-development-services">
           <button
-            onClick={() => setIsLeadOpen(true)}
             className="group relative mt-6 inline-flex w-fit overflow-hidden rounded-3xl border border-neutral-600 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Explore More
             <span className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800"></span>
             <span className="absolute bottom-0.5 left-0 h-[2px] w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800 opacity-0 blur-sm group-hover:opacity-100"></span>
           </button>
+          </Link>
         </div>
         <img
           src="/new/ai_image.webp"
@@ -292,6 +292,61 @@ function PartnerSection() {
             alt=""
           />
           {/* <img src="/new/review/google-cloud-partner.svg" alt="" /> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Locations() {
+  return (
+    <div className="w-full border-y-4 border-neutral-600 bg-neutral-800 px-4 py-16 text-white">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
+        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
+          <div className="h-20 w-full border-b pb-4 md:h-28">
+            <img
+              src="/new/review/hq-india.svg"
+              alt=""
+              className="h-full w-full object-contain"
+            />
+          </div>
+          <p className="text-center text-lg font-medium md:text-xl">INDIA</p>
+          <p className="text-center text-sm">
+            238, 2nd floor, Purani Chungi, <br />
+            DCM Road, Vaishali Nagar, <br />
+            Jaipur, Rajasthan, 302017 <br />
+            +91 9983034111
+          </p>
+        </div>
+        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
+          <div className="h-20 w-full border-b pb-4 md:h-28">
+            <img
+              src="/new/review/hq-uk.svg"
+              alt=""
+              className="h-full w-full object-contain"
+            />
+          </div>
+          <p className="text-center text-lg font-medium md:text-xl">UK</p>
+          <p className="text-center text-sm">
+            1-3 St Nicholas Street Worcester <br />
+            WR1 1UW, United Kingdom <br />
+            +44 7470994018
+          </p>
+        </div>
+        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
+          <div className="h-20 w-full border-b pb-4 md:h-28">
+            <img
+              src="/new/review/hq-uae.svg"
+              alt=""
+              className="h-full w-full object-contain"
+            />
+          </div>
+          <p className="text-center text-lg font-medium md:text-xl">UAE</p>
+          <p className="text-center text-sm">
+            M01, AL Mulla Building 2, <br />
+            Near Burj Nahar Mall, Deira, Dubai <br />
+            +971 521665467
+          </p>
         </div>
       </div>
     </div>
@@ -367,11 +422,46 @@ function ExperienceSection() {
           </div>
         </div>
         <div className="mt-6 grid w-full md:col-span-5 md:mt-0">
+          {/* {experienceData2.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                className={cn(
+                  'flex w-full skew-x-3 cursor-pointer flex-col gap-3 rounded-xl border bg-white p-4 shadow-lg shadow-yellow-100 duration-200',
+                  idx % 2 === 0
+                    ? 'sm:-translate-y-4 hover:md:-translate-y-6'
+                    : 'sm:translate-y-4 hover:md:translate-y-2'
+                )}
+              >
+                <div className="flex items-center gap-3">
+                  <Icon stroke={2} className="size-7 shrink-0 text-gray-600" />
+                  <p className="text-2xl font-semibold">{item.title}</p>
+                </div>
+                <p className="text-sm text-gray-600">{item.description}</p>
+              </div>
+            );
+          })} */}
           <img
             className="h-full w-full rounded-md object-cover"
             src="/new/experience-img.png"
           />
         </div>
+      </div>
+    </div>
+  );
+}
+
+function TechnologiesOffered() {
+  return (
+    // <div className="w-full bg-[#1c1c1e]">
+    <div className="w-full border-y-4 border-blue-300 bg-gradient-to-r from-[#0078F0] to-neutral-800">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-12 sm:gap-6 md:py-20">
+        <h1 className="py-4 text-3xl font-medium leading-tight tracking-wider text-gray-200 sm:text-4xl md:text-5xl">
+          Build Smarter with Advanced, <br />
+          Reliable{' '}
+          <span className="font-semibold text-white">Technologies</span>
+        </h1>
+        <Tabs />
       </div>
     </div>
   );
@@ -420,6 +510,139 @@ function BookCall({ setIsLeadOpen }) {
   );
 }
 
+function BlogSection() {
+  const blogsData = [
+    {
+      id: 'a0f7909a-b1aa-400a-814d-3d3563d8006b',
+      title: 'PetPooja Clone: Launch Your POS App in 2025',
+      metaDescription:
+        'Learn how to build a powerful PetPooja clone in 2025. Discover features, development steps, costs, and expert tips to launch and scale your custom restaurant POS app successfully.',
+      blogCategory: 'app-development',
+      image:
+        'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1748415691099',
+      tags: [
+        'PetPooja',
+        'PetPooja Clone',
+        'Mobile App Development Company',
+        'AV Technosys',
+        'POS App',
+        'PetPooja Clone App',
+      ],
+      date: '"2025-05-27T10:40:05.529Z"',
+      userImage:
+        'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+      userName: 'Ashish Bishnoi',
+      slug: 'petpooja-clone-build-launch-scale-your-pos-app-in-2025',
+      isVisible: true,
+    },
+    {
+      id: 'cf0b6717-afa2-412d-9460-5aae4e32054f',
+      title: 'How to Hire Dedicated E-commerce Developers in 2025',
+      metaDescription:
+        'How to hire dedicated e-commerce developers in 2025 tips, skills, and strategies to build your perfect online store.',
+      blogCategory: 'e-commerce',
+      image:
+        'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1748932534704',
+      tags: [
+        'Ecommerce App Development services',
+        'Hire Dedicated Ecommerce development',
+        'hire ecommerce developer',
+      ],
+      date: '"2025-06-03T06:23:05.271Z"',
+      userImage:
+        'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+      userName: 'Ashish Bishnoi',
+      slug: 'how-to-hire-dedicated-e-commerce-developers-in-2025',
+      isVisible: true,
+    },
+    {
+      id: '858d4a73-f440-4b02-8c71-9f4e0d21246a',
+      title: 'How to Develop a Food Delivery App: A Step-by-Step Guide',
+      metaDescription:
+        'Learn how to develop a food delivery app with this step-by-step guide covering planning, design, development, and launch to create a successful app.',
+      blogCategory: 'on-demand-app-development',
+      image:
+        'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1747908646244',
+      tags: [
+        'Food Delivery app',
+        'mobile app development services',
+        'web development company',
+        'food delivery app development company',
+      ],
+      date: '"2025-05-21T18:30:00.000Z"',
+      userImage:
+        'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+      userName: 'Ashish Bishnoi',
+      slug: 'how-to-develop-a-food-delivery-app-a-step-by-step-guide',
+      isVisible: true,
+    },
+  ];
+  return (
+    <div className="w-full bg-gray-100 px-4 py-12">
+      <div className="mx-auto max-w-7xl text-black">
+        <div className="mb-8 flex flex-col justify-between gap-4 xl:flex-row xl:items-center">
+          <div>
+            <p className="mb-2 text-3xl font-semibold capitalize">
+              Our Latest Blogs
+            </p>
+            <p className="text-xl text-gray-600">
+              Get the most recent information on trends, technology, and
+              development insights.
+            </p>
+          </div>
+          <Link
+            href={'/blog'}
+            className="group flex h-fit w-fit cursor-pointer items-center gap-2 rounded bg-yellow-500 px-6 py-3 font-medium text-white duration-200 hover:bg-yellow-600"
+          >
+            <p className="font-medium">View All Blogs</p>
+            <TArroeRight
+              size={20}
+              className="duration-300 group-hover:-rotate-45"
+            />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {blogsData?.map((blog: any, idx) => {
+            return <BlogCard key={idx} blog={blog} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BlogCard({ blog }) {
+  function formatDateToDDMMYYYY() {
+    return dayjs(JSON.parse(blog.date)).format('DD-MM-YYYY');
+  }
+
+  return (
+    <div key={blog.id} className="relative mb-4 flex flex-col gap-2">
+      <Link
+        href={`/blog/${blog?.slug}`}
+        className="relative h-auto w-full sm:h-56 sm:w-auto"
+      >
+        <img
+          className="h-auto w-full rounded-xl object-cover sm:h-full sm:w-auto"
+          src={blog.image}
+          alt={blog.title}
+        />
+      </Link>
+      <div className="flex gap-2 text-sm text-gray-600">
+        <p className="">{blog.userName}</p>
+        <p className=" ">{formatDateToDDMMYYYY()}</p>
+      </div>
+      <Link
+        href={`/blog/${blog?.slug}`}
+        className="line-clamp-2 text-lg font-semibold hover:underline"
+      >
+        {blog.title}
+      </Link>
+      <p className="line-clamp-2 text-gray-600">{blog.metaDescription}</p>
+    </div>
+  );
+}
+
 function WhyChooseUs() {
   const data = [
     {
@@ -453,9 +676,12 @@ function WhyChooseUs() {
           <div className="absolute bottom-0 left-0 h-12 w-full from-white to-transparent md:h-20 md:bg-gradient-to-t"></div>
         </div>
         <div className="space-y-6 rounded-3xl border bg-gray-50 px-6 py-4 md:py-12">
-          <div className="grid-cols-2 justify-center gap-6 lg:grid">
-            <div className="relative mx-auto hidden aspect-[5/6] h-[34rem] w-auto overflow-hidden rounded-2xl lg:block">
-              <AnimatePresence>
+          {/* <p className="text-center text-5xl font-semibold">
+            Reimagined user experiences
+          </p> */}
+          <div className="grid-cols-2 items-center gap-6 lg:grid">
+            <div className="relative mx-auto hidden aspect-[3/4] h-[34rem] w-auto overflow-hidden rounded-2xl lg:block">
+              <AnimatePresence mode="wait">
                 <motion.img
                   key={data[selectedIndex].image}
                   src={data[selectedIndex].image}
