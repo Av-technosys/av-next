@@ -37,6 +37,7 @@ const FintechPage = () => {
       <ServiceSection/>
       <FintechPopularity/>
       <FintechLetWorkTalk/>
+      <FintechStartProject/>
       <AiEffectSection/>
       <TechnologiesOffered />
       <FintechTestimonial/>
@@ -114,24 +115,23 @@ function Herosectionfintech() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col-reverse items-center justify-between gap-10 px-6 py-12 md:flex-row md:gap-0 md:px-16 lg:py-0">
             {/* Left Section */}
-            <div className="max-w-xs lg:max-w-lg">
-              <h2 className="text-2xl font-bold md:text-4xl">
+            <div className="!max-w-2xl !md:max-w-sm">
+              <h2 className="text-2xl font-bold text-center md:text-start lg:text-4xl">
                 <span className="text-[#EAB308]">FINTECH APP</span> <br className='md:block hidden'/>
                 <span className="text-black">DEVELOPMENT SERVICES</span>
               </h2>
-              <p className="mt-6 text-base text-gray-700 md:text-md">
+              <p className="mt-6 text-base text-center md:text-start text-gray-700 md:text-md">
                 With our top-notch Fintech app development services, you can
                 develop a one-of-a-kind FinTech product that stands apart from
-                the market to give you an edge over the competition.
+               
               </p>
-              <p className="mt-4 text-base text-gray-700 md:text-md">
+              <p className="mt-4 text-base text-center  md:text-start text-gray-700 md:text-md">
                 Looking to hire a Fintech app development company but don’t know
-                where to start? You have reached just the right place! Discuss
-                your idea today!
+                where to start? You have reached just the right place! 
               </p>
 
-              <div className="mt-8 flex gap-4">
-                <button className="rounded-md border border-gray-400 px-6 py-3 text-gray-700 hover:bg-gray-100">
+              <div className="mt-8 flex justify-center md:justify-start gap-4">
+                <button className="rounded-md border border-gray-400 px-6 py-3 text-gray-700 font-bold hover:bg-gray-200">
                   Talk to Expert
                 </button>
                 <button className="rounded-md bg-[#EAB308] px-6 py-3 text-white hover:bg-[#EAB308]">
@@ -141,7 +141,7 @@ function Herosectionfintech() {
             </div>
 
             {/* Right Section (Image) */}
-            <div className="w-full max-w-xl">
+            <div className="w-full max-w-sm md:max-w-xl">
               <img
                 src="/new/fintectnewbanner.png" // Update this to your actual path
                 alt="Fintech app UI"
@@ -165,16 +165,16 @@ function FintechSmartSolutions() {
         desc="At AV Technosys, we offer end-to-end fintech app development services modified to your user needs, helping you establish a solid position as a market leader."
         descClass={'text-gray-600 '}
       />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto  grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Card */}
-        <div className="rounded-xl bg-sky-100 duration-500 border-gray-300 border p-6 shadow-md transition-transform hover:scale-105  hover:shadow-xl hover:!bg-[#EAB308]">
+        <div className="rounded-xl  bg-sky-100 duration-500 border-gray-300 border p-6 shadow-md transition-transform hover:scale-105 hover:shadow-xl hover:!bg-[#EAB308]">
           <img
             src="/new/Banking_ai (2).webp"
             alt="FinTech"
             className="mb-4"
           />
           <h3 className="mb-2 text-lg font-semibold">FinTech & Banking</h3>
-          <p className="text-md text-gray-700">
+          <p className="text-md  text-gray-700">
             AI solutions for secure transactions, fraud detection, and
             personalized digital banking.
           </p>
@@ -299,7 +299,7 @@ function FintechProjectCost(){
             <img
               src="/new/cta-girl.png"
               alt="AI Development Visual"
-              className="max-w-xs object-contain"
+              className="max-w-[15rem] md:max-w-xs object-contain"
             />
           </div>
 
@@ -645,8 +645,9 @@ function ServiceSection() {
 
 function FintechPopularity(){
     return(
-      <div className='mx-auto max-w-7xl'>
-        <div className="bg-[#f9fbfd] px-6 py-12 md:px-16">
+    <div className= "bg-sky-50">
+        <div className='mx-auto max-w-7xl'>
+        <div className="px-6 py-12 md:px-16">
   {/* Heading */}
   <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10">
     Why to Invest In <span className="text-[#EAB308] font-extrabold text-3xl md:text-4xl">Customized Mobile App Development?</span>
@@ -711,129 +712,153 @@ function FintechPopularity(){
 </div>
 
       </div>
+    </div>
     )
 }
 
 function FintechLetWorkTalk(){
     return(
-        <div className='max-w-7xl mx-auto bg-[#f5f6f7]'>
+      <div className='bg-[#f5f6f7]'>
+         <div className='max-w-7xl mx-auto'>
          <SectionHeading
           className="text-center"
           title={'We Let Our Work Talk!'}
           desc=" No matter if you are looking for fintech app design services inancial app development services catering to all verticals."
         />
         <div className="px-6 py-5 md:px-16">
-       <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
-      <img
-        src="/new/wwu1.png" // Replace with actual image path
-        alt="Pay By Check Screens"
-        className="w-full max-w-[500px] object-contain"
-      />
-  
-
-    <div className="flex-1 bg-white p-8 flex flex-col justify-center">
-      <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
-        Pay by Check
-      </h3>
-      <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
-        Secure Financial Tool With ACH & EFT Support for Funds
-      </h4>
-      <p className="text-gray-600 text-sm md:text-base mb-6">
-        Envisioned to simplify online payments & manage financial assets,
-        PayByCheck was brought to life by implementing a series of financial
-        technologies that allow ACH & EFT support, making it convenient to
-        transfer & exchange currencies on the go!
-      </p>
-      <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
-        View Case Study
-      </button>
-    </div>
+        <div className="flex flex-col md:flex-row md:items-center p-4 overflow-hidden rounded-2xl bg-white">
+  {/* Image at top on mobile, left on desktop */}
+  <div className="w-full md:w-1/2">
+    <img
+      src="/new/wwu1.png"
+      alt="Pay By Check Screens"
+      className="w-full h-auto object-cover"
+    />
   </div>
+
+  {/* Text Content: bottom on mobile, right on desktop */}
+  <div className="w-full md:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+    <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
+      Pay by Check
+    </h3>
+    <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
+      Secure Financial Tool With ACH & EFT Support for Funds
+    </h4>
+    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+      Envisioned to simplify online payments & manage financial assets,
+      PayByCheck was brought to life by implementing a series of financial
+      technologies that allow ACH & EFT support, making it convenient to
+      transfer & exchange currencies on the go!
+    </p>
+    <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
+      View Case Study
+    </button>
+  </div>
+        </div>
         </div>
 
          <div className="px-6 py-5 md:px-16">
-         <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
-            <div className="flex-1 bg-white p-8 flex flex-col justify-center">
-      <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
-        CUT
-      </h3>
-      <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
-        Built A Dedicated E-Wallet Solution Catering to RMB & MMK Currencies
-      </h4>
-      <p className="text-gray-600 text-sm md:text-base mb-6">
-        With a vision to build a customized e-wallet app that caters to the unique demands of similar yet diverse markets of China & Myanmar. By integrating multiple currencies like RMB & MMK, we could deliver a seamless experience to the users, within the desired timeline.
-      </p>
-      <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
-        View Case Study
-      </button>
-    </div>
-      <img
-        src="/new/wwu2.png" // Replace with actual image path
-        alt="Pay By Check Screens"
-        className="w-full max-w-[500px] object-contain"
-      />
+         <div className="flex flex-col p-4 md:flex-row md:items-center overflow-hidden rounded-2xl bg-white">
+  {/* Text Section - Left on desktop, top on mobile */}
+  <div className="w-full md:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+    <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
+      CUT
+    </h3>
+    <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
+      Built A Dedicated E-Wallet Solution Catering to RMB & MMK Currencies
+    </h4>
+    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+      With a vision to build a customized e-wallet app that caters to the unique
+      demands of similar yet diverse markets of China & Myanmar. By integrating
+      multiple currencies like RMB & MMK, we could deliver a seamless experience
+      to the users, within the desired timeline.
+    </p>
+    <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
+      View Case Study
+    </button>
+  </div>
+
+  {/* Image Section - Right on desktop, bottom on mobile */}
+  <div className="w-full md:w-1/2">
+    <img
+      src="/new/wwu2.png"
+      alt="Pay By Check Screens"
+      className="w-full h-auto object-cover md:object-contain"
+    />
+  </div>
          </div>
+
         </div>
 
          <div className="px-6 py-5 md:px-16">
-       <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
-      <img
-        src="/new/wwu3.png" // Replace with actual image path
-        alt="Pay By Check Screens"
-        className="w-full max-w-[500px] object-contain"
-      />
-  
-
-    <div className="flex-1 bg-white p-8 flex flex-col justify-center">
-      <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
-        Pay by Check
-      </h3>
-      <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
-        Secure Financial Tool With ACH & EFT Support for Funds
-      </h4>
-      <p className="text-gray-600 text-sm md:text-base mb-6">
-        Envisioned to simplify online payments & manage financial assets,
-        PayByCheck was brought to life by implementing a series of financial
-        technologies that allow ACH & EFT support, making it convenient to
-        transfer & exchange currencies on the go!
-      </p>
-      <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
-        View Case Study
-      </button>
-    </div>
+     <div className="flex flex-col p-4 md:flex-row overflow-hidden md:items-center rounded-2xl bg-white">
+  {/* Image - on top for mobile, left for desktop */}
+  <div className="w-full md:w-1/2">
+    <img
+      src="/new/wwu3.png"
+      alt="Pay By Check Screens"
+      className="w-full h-auto object-cover md:object-contain"
+    />
   </div>
+
+  {/* Text content - below image on mobile, right on desktop */}
+  <div className="w-full md:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+    <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
+      Pay by Check
+    </h3>
+    <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
+      Secure Financial Tool With ACH & EFT Support for Funds
+    </h4>
+    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+      Envisioned to simplify online payments & manage financial assets,
+      PayByCheck was brought to life by implementing a series of financial
+      technologies that allow ACH & EFT support, making it convenient to
+      transfer & exchange currencies on the go!
+    </p>
+    <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
+      View Case Study
+    </button>
+  </div>
+    </div>
+
         </div>
 
          <div className="px-6 py-5 md:px-16">
-         <div className="flex flex-col overflow-hidden rounded-2xl md:flex-row">
-            <div className="flex-1 bg-white p-8 flex flex-col justify-center">
-      <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
+       <div className="flex flex-col p-4 md:flex-row overflow-hidden md:items-center rounded-2xl bg-white">
+  {/* Text Content - on top in mobile, left on desktop */}
+  <div className="w-full md:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+    <h3 className="text-2xl md:text-3xl font-bold text-black mb-2">
       MoneyMoov
-      </h3>
-      <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
-       A Multi-Currency E-Wallet App for Smooth Cross-Border Payments
-      </h4>
-      <p className="text-gray-600 text-sm md:text-base mb-6">
+    </h3>
+    <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
+      A Multi-Currency E-Wallet App for Smooth Cross-Border Payments
+    </h4>
+    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
       MoneyMoov was built to simplify currency exchange and international transactions. We delivered an e-wallet that converts funds to desired currencies and completes the transaction in real-time with additional features such as transaction history & more!
-      </p>
-      <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
-        View Case Study
-      </button>
-    </div>
-      <img
-        src="/new/wwu4.png" // Replace with actual image path
-        alt="Pay By Check Screens"
-        className="w-full max-w-[500px] object-contain"
-      />
-         </div>
+    </p>
+    <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
+      View Case Study
+    </button>
+  </div>
+
+  {/* Image - below text on mobile, right on desktop */}
+  <div className="w-full md:w-1/2">
+    <img
+      src="/new/wwu4.png"
+      alt="MoneyMoov App Screens"
+      className="w-full h-auto object-cover md:object-contain"
+    />
+  </div>
+       </div>
         </div>
         </div>
+      </div>
     )
 }
 
 function AiEffectSection() {
   return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-2 mb-5 md:mb-20">
+    <section className="mx-auto max-w-7xl bg-white px-8 md:px-4 py-2 mb-5 md:mb-20">
       <SectionHeading
         className="text-center"
         title={'Our Specialized FinTech App Solutions'}
@@ -1149,7 +1174,7 @@ const cardData = [
 
 function CardTestimonial({ cardData }) {
   return (
-    <div className="relative mx-auto h-full max-w-[92vw] rounded-xl border-2 border-neutral-700 bg-black p-6 md:p-12">
+    <div className="relative mx-auto h-full max-w-[96vw] rounded-xl border-2 border-neutral-700 bg-black p-6 md:p-12">
       <span className="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700"></span>
       <span className="absolute bottom-px right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700 blur-xl"></span>
       <p className="border-b border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">
@@ -1274,3 +1299,36 @@ function Whychooseus(){
 </div>
   )
 }
+
+function FintechStartProject(){
+     return (
+  <div className='bg-[#000]'>
+      <div className="mx-auto mt-2 max-w-7xl md:mt-14">
+      <div className="px-4 py-10 md:relative">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-[rgb(22,22,35)] p-4 md:flex-row md:p-16">
+          <div className="right-0 top-0 flex w-[250px] justify-center md:absolute md:w-[500px]">
+            <img
+              src="/new/male_btn.jpg"
+              alt="fintech Development Visual"
+              className="max-w-[15rem] md:max-w-xs object-contain"
+            />
+          </div>
+
+          <div className="text-center text-white max-w-sm lg:max-w-2xl md:text-left">
+            <h2 className="mb-4 text-xl font-extrabold  md:text-4xl">
+              Transform your FinTech ideas into reality
+            </h2>
+            <p className="mb-6 md:text-lg">
+             Hire our expert FinTech app developers and build a future-proof solution.
+            </p>
+            <button className="rounded-full bg-[#EAB308] px-6 py-3 font-semibold text-white shadow-md transition duration-300">
+              Request a Free Quote
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  );
+}
+

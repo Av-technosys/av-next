@@ -71,7 +71,7 @@ export const CardIcon = ({ icon,image }) => {
   if(Icon){
     return  <Icon size={32} color="white" />
   }else{
-    return <img src={`/new/${image}`} alt="" /> ;
+    return <img src={`/new/${image}`} width="70px" alt="" /> ;
   }
 
 };
