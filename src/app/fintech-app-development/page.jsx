@@ -157,7 +157,7 @@ function Herosectionfintech() {
 
 function FintechSmartSolutions() {
   return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-2 md:mb-20">
+    <section className="mx-auto max-w-7xl bg-white px-4 py-2 mt-2 md:mt-5 md:mb-20">
       <SectionHeading
         className="text-center"
         title={'Comprehensive FinTech App Development Services'}
@@ -525,7 +525,7 @@ function FintechAvoidMistakes(){
                       desc="Having undivided attention during the FinTech App development process help you avoid key mistakes and launch a reliable Fintech solution that users trust."
                       descClass={'text-gray-600  '}
                     />
-            <div className="grid gap-6 px-6 pb-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-3">
   
             <div className="rounded-xl border border-gray-300 p-6 shadow-sm bg-white hover:shadow-md hover:scale-105 duration-700 transition">
     <h3 className="text-2xl font-semibold text-black mb-3">
@@ -625,7 +625,7 @@ const serviceData = [
 function ServiceSection() {
   return (
     <div className="h-full w-full   bg-white">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6  md:pb-10">
+      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6 mt-4 md:mt-10  md:pb-10">
         <SectionHeading
           className="text-center"
           title={'Quality Fintech App Development Services for All!'}
@@ -721,11 +721,11 @@ function FintechLetWorkTalk(){
       <div className='bg-[#f5f6f7]'>
          <div className='max-w-7xl mx-auto'>
          <SectionHeading
-          className="text-center"
+          className="text-center "
           title={'We Let Our Work Talk!'}
           desc=" No matter if you are looking for fintech app design services inancial app development services catering to all verticals."
         />
-        <div className="px-6 py-5 md:px-16">
+        <div className="px-6 pb-5 md:px-16">
         <div className="flex flex-col md:flex-row md:items-center p-4 overflow-hidden rounded-2xl bg-white">
   {/* Image at top on mobile, left on desktop */}
   <div className="w-full md:w-1/2">
@@ -744,7 +744,7 @@ function FintechLetWorkTalk(){
     <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
       Secure Financial Tool With ACH & EFT Support for Funds
     </h4>
-    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+    <p className="text-sm md:text-base hidden md:block text-gray-600 mb-6">
       Envisioned to simplify online payments & manage financial assets,
       PayByCheck was brought to life by implementing a series of financial
       technologies that allow ACH & EFT support, making it convenient to
@@ -767,7 +767,7 @@ function FintechLetWorkTalk(){
     <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
       Built A Dedicated E-Wallet Solution Catering to RMB & MMK Currencies
     </h4>
-    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+    <p className="text-sm md:text-base hidden md:block text-gray-600 mb-6">
       With a vision to build a customized e-wallet app that caters to the unique
       demands of similar yet diverse markets of China & Myanmar. By integrating
       multiple currencies like RMB & MMK, we could deliver a seamless experience
@@ -809,7 +809,7 @@ function FintechLetWorkTalk(){
     <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
       Secure Financial Tool With ACH & EFT Support for Funds
     </h4>
-    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+    <p className="text-sm md:text-base hidden md:block text-gray-600 mb-6">
       Envisioned to simplify online payments & manage financial assets,
       PayByCheck was brought to life by implementing a series of financial
       technologies that allow ACH & EFT support, making it convenient to
@@ -833,7 +833,7 @@ function FintechLetWorkTalk(){
     <h4 className="text-lg md:text-xl text-gray-800 font-medium mb-4">
       A Multi-Currency E-Wallet App for Smooth Cross-Border Payments
     </h4>
-    <p className="text-sm md:text-base md:hidden text-gray-600 mb-6">
+    <p className="text-sm md:text-base hidden md:block text-gray-600 mb-6">
       MoneyMoov was built to simplify currency exchange and international transactions. We delivered an e-wallet that converts funds to desired currencies and completes the transaction in real-time with additional features such as transaction history & more!
     </p>
     <button className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white px-6 py-3 rounded-md w-fit hover:opacity-90 transition">
@@ -1174,7 +1174,7 @@ const cardData = [
 
 function CardTestimonial({ cardData }) {
   return (
-    <div className="relative mx-auto h-full max-w-[96vw] rounded-xl border-2 border-neutral-700 bg-black p-6 md:p-12">
+    <div className="relative mx-auto h-full max-w-7xl  rounded-xl border-2 border-neutral-700 bg-black p-6 md:p-12">
       <span className="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700"></span>
       <span className="absolute bottom-px right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700 blur-xl"></span>
       <p className="border-b border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">
