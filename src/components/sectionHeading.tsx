@@ -6,7 +6,7 @@ export const SectionHeading = ({
   className = '',
   titleClass = '',
   descClass = '',
-}) => {
+}: any) => {
   return (
     <div
       className={cn('mx-auto w-full max-w-7xl px-2 py-8 md:py-12', className)}

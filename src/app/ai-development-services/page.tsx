@@ -31,11 +31,14 @@ import Image from 'next/image';
 import CustomInputNumber from '../contact-us/inputNumber';
 import Link from 'next/link';
 import { PortfolioCrousel } from '../hire-us/crouselPortfolio';
-import { TechnologiesOffered } from '@/components';
+import { AIButton, TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
 import { ContactUs } from '@/components/contactUs';
 import AdvancedAiExperts from './AdvanceAIExperts';
 import SmartAiSolutions from './SmartAISolutions';
+import BuildSmartSolutions from './BuildSmartSolution';
+import AiProjectCost from './AIProjectCons';
+import { AiEffectSection } from './AIEffectSection';
 
 const Page = () => {
   return (
@@ -269,26 +272,13 @@ function HeroSection() {
             every solution aligns perfectly with client goals.
           </p>
 
-          {/* <div className="mt-16">
-            <a
-              href="#consult"
-              className="rounded-md border-cyan-400 px-6 py-3 text-sm font-semibold text-cyan-400 transition-all hover:bg-cyan-400 hover:text-black"
+          <div>
+            <AIButton
+              borderRadius="0.62rem"
+              className="border-neutral-200 bg-transparent font-semibold text-white"
             >
               CONSULT OUR AI EXPERTS
-            </a>
-            <div className="animate-spin absolute left-0 top-0 h-full w-full border-t"></div>
-          </div> */}
-
-          <div className="group relative mx-auto mt-16 w-fit">
-            <a
-              href="#consult"
-              className="relative z-10 inline-block rounded-md border border-cyan-400 px-6 py-3 text-sm font-semibold text-cyan-400 transition-all hover:bg-cyan-400 hover:text-black"
-            >
-              CONSULT OUR AI EXPERTS
-            </a>
-
-            {/* Rotating border animation */}
-            {/* <span className="before:animate-border-spin pointer-events-none absolute inset-0 rounded-md before:absolute before:inset-0 before:rounded-md before:border-t-2 before:border-cyan-400 before:content-['']"></span> */}
+            </AIButton>
           </div>
         </div>
       </div>
@@ -458,38 +448,6 @@ function TransformAiSection() {
   );
 }
 
-function BuildSmartSolutions() {
-  return (
-    <div className="w-full">
-      <section className="mx-auto w-full max-w-7xl py-6 md:py-0">
-        <div className="text-center md:px-4">
-          <div className="flex justify-around bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)] px-5 py-6 md:rounded-3xl md:py-3">
-            <div className="flex flex-col items-center justify-center gap-5">
-              <h1 className="text-3xl font-bold text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-4xl">
-                Build Smarter Solutions with Us
-              </h1>
-              <p className="text-lg text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-lg">
-                Partner with Top AI Experts to Unlock Endless Potential
-              </p>
-              <button className="mt-2 rounded-xl bg-sky-200 px-4 py-2 text-base font-semibold text-gray-600 md:mt-0 md:px-3 md:py-2">
-                Get a Free Consultation
-              </button>
-            </div>
-            <div className="hidden py-14 md:block md:py-0">
-              <img
-                width="500px"
-                className="w-[300px] md:w-[400px]"
-                src="/new/buildai2.png"
-                alt="ai-image"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-
 function OurExpertsSection() {
   const aiExpertiseCards = [
     {
@@ -565,178 +523,6 @@ function OurExpertsSection() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-
-function AiProjectCost() {
-  return (
-    <section className="mx-auto mt-2 max-w-7xl md:mt-14">
-      <div className="px-4 py-10 md:relative">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-3xl bg-[#EAB308] px-4 py-6 md:flex-row md:p-16">
-          {/* Left Image Section */}
-          <div className="right-0 top-0 flex w-[250px] justify-center md:absolute md:w-[500px]">
-            <img
-              src="/new/airobotmain.webp"
-              alt="AI Development Visual"
-              className="w-full max-w-sm object-contain"
-            />
-          </div>
-
-          {/* Right Text Section */}
-          <div className="w-full text-center text-white md:w-1/2 md:text-left">
-            <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
-              Find Out What Your AI Project Will Cost
-            </h2>
-            <p className="mb-6 font-medium md:text-lg">
-              AV Technosys delivers AI app development with honest pricing and
-              personalized solutions.
-            </p>
-            <button className="rounded-full bg-neutral-950 px-6 py-3 font-semibold text-white shadow-md transition duration-200 hover:bg-neutral-800">
-              Request a Free Quote
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function AiEffectSection() {
-  const aiFeatures = [
-    {
-      image: '/new/smartai1.jpg',
-      title: 'Automating Manual Tasks',
-      hoverTitle: 'Automating Repetitive Tasks',
-      description:
-        'Automate tasks, boost productivity, and streamline operations with smart AI solutions.',
-      points: [
-        'Task automation',
-        'Increased productivity',
-        'Custom AI solutions',
-      ],
-    },
-    {
-      image: '/new/smartai3.jpg',
-      title: 'Human Activity Recognition',
-      hoverTitle: 'Human Activity Recognition',
-      description:
-        'Use AI to monitor and analyze human movements in real time for smarter applications.',
-      points: ['Motion tracking', 'Behavior analysis', 'Real-time insights'],
-    },
-    {
-      image: '/new/text_classification_ai_nw.jpg',
-      title: 'Text Classification',
-      hoverTitle: 'Text Classification',
-      description:
-        'Organize and analyze large volumes of text with intelligent classification models.',
-      points: [
-        'Smart text grouping',
-        'Improved content handling',
-        'Efficient analysis',
-      ],
-    },
-    {
-      image: '/new/bbject_detection_ai_new.jpg',
-      title: 'Object Detection',
-      hoverTitle: 'Object Detection',
-      description:
-        'Detect and identify objects accurately for use in retail, security, and automation.',
-      points: ['Real-time detection', 'High accuracy', 'Scalable integration'],
-    },
-    {
-      image: '/new/Semantic_Search_ai_nw.jpg',
-      title: 'Semantic Search',
-      hoverTitle: 'Semantic Search',
-      description:
-        'Deliver smarter search results using AI that understands context and meaning.',
-      points: [
-        'Relevant query results',
-        'Enhanced search experience',
-        'Scalable AI search tools',
-      ],
-    },
-    {
-      image: '/new/smartai2.jpg',
-      title: 'Image Data Labelling',
-      hoverTitle: 'Image Data Labeling',
-      description:
-        'Simplify image workflows with precise data labeling for efficient AI analysis and categorization.',
-      points: [
-        'Accurate annotations',
-        'Faster image processing',
-        'Scalable AI models',
-      ],
-    },
-    {
-      image: '/new/smartai5.jpg',
-      title: 'Pattern Recognition',
-      hoverTitle: 'Pattern Recognition',
-      description:
-        'Unlock trends and insights with AI that recognizes patterns for smarter decisions.',
-      points: [
-        'Predictive algorithms',
-        'Data-driven insights',
-        'Smarter forecasting',
-      ],
-    },
-    {
-      image: '/new/speech_recognition_ai_nw.jpg',
-      title: 'Speech Recognition',
-      hoverTitle: 'Speech Recognition',
-      description:
-        'Convert voice to text with advanced AI for natural and responsive interactions.',
-      points: [
-        'Voice-to-text conversion',
-        'Language understanding',
-        'Accurate speech processing',
-      ],
-    },
-  ];
-
-  return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-2 pt-6">
-      <SectionHeading
-        className="text-center"
-        title={'Smart AI App Solutions Built for Your Business'}
-      />
-      <div className="grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {aiFeatures.map((item, index) => (
-          <div
-            key={index}
-            className="group relative h-[330px] overflow-hidden rounded-xl shadow-lg"
-          >
-            <div
-              style={{
-                backgroundImage: `url(${item.image})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-              }}
-              className="h-full w-full"
-            >
-              <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-                <p className="mb-3 w-48 px-4">{item.title}</p>
-              </div>
-            </div>
-
-            <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-              <p className="text-lg font-bold leading-relaxed">
-                {item.hoverTitle}
-              </p>
-              <p className="text-sm">{item.description}</p>
-              <ul className="list-inside list-disc text-sm">
-                {item.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-              <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors">
-                Get in Touch
-              </button>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );

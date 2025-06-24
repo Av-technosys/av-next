@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 import { LoaderCircle } from 'lucide-react';
 import { submitLeadForm } from '../../lib';
 import { ZContactUser } from '@/ZTypes/contact';
+import { DialogTitle } from '@radix-ui/react-dialog';
 
 export function LeadPopUp({ isOpen, setIsOpen }) {
   const [formDetails, setFormDetails] = useState({
@@ -64,6 +65,7 @@ export function LeadPopUp({ isOpen, setIsOpen }) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="flex max-h-[86vh] w-full gap-0 overflow-y-auto p-0 sm:max-w-4xl">
+        <DialogTitle className="hidden"></DialogTitle>
         <div className="relative hidden h-auto w-full min-w-96 overflow-hidden rounded-lg md:block">
           <Image
             src="/new/popUpImage.jpeg"
