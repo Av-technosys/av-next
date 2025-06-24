@@ -39,6 +39,7 @@ import SmartAiSolutions from './SmartAISolutions';
 import BuildSmartSolutions from './BuildSmartSolution';
 import AiProjectCost from './AIProjectCons';
 import { AiEffectSection } from './AIEffectSection';
+import { blogsAI } from '@/cosnt';
 
 const Page = () => {
   return (
@@ -46,7 +47,7 @@ const Page = () => {
       <NavBarHome />
       {/* <HeroSectionAi /> */}
       <HeroSection />
-      <Ratings className="mb-10 md:flex" />
+      <Ratings className="md:flex" />
       <TransformAiSection />
       <AdvancedAiExperts />
       <div className="mt-4">
@@ -88,7 +89,7 @@ const Page = () => {
       <AiEffectSection />
       <FaqAccordion />
       <ContactUs />
-      <BlogSection />
+      <BlogSection data={blogsAI} />
       <Locations />
       <Footer1 />
     </>
@@ -274,133 +275,11 @@ function HeroSection() {
 
           <div>
             <AIButton
-              borderRadius="0.62rem"
+              borderRadius="1.75rem"
               className="border-neutral-200 bg-transparent font-semibold text-white"
             >
               CONSULT OUR AI EXPERTS
             </AIButton>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function HeroSectionAi() {
-  const [formDetails, setFormDetails] = useState({
-    name: '',
-    email: '',
-    message: '',
-    number: '+91',
-  });
-
-  return (
-    <section
-      style={{
-        backgroundImage: 'url("/new/herobg.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-      className="rounded-b-xl bg-blue-100 shadow-md shadow-black"
-    >
-      <div className="mx-auto max-w-7xl">
-        <div className="relative mb-10 grid w-full grid-cols-1 gap-6 px-2 py-12 md:grid-cols-2 lg:px-8">
-          <div className="mt-10 h-fit px-2 text-center md:w-full md:px-6 lg:text-left">
-            <h1 className="text-4xl font-semibold text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-5xl">
-              AI Development <br /> Company
-            </h1>
-            <p className="mt-5 text-base font-medium text-gray-100 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-lg">
-              At AV Technosys, we deliver custom AI development services to help
-              businesses harness the full potential of Artificial Intelligence.
-              Our smart solutions drive innovation, streamline operations, and
-              boost efficiency.
-            </p>
-            <Link href="/portfolio">
-              <button className="mt-4 rounded-lg bg-yellow-500 px-4 py-2 font-semibold text-white duration-200 hover:bg-yellow-600">
-                View Portfolio
-              </button>
-            </Link>
-          </div>
-          <div className="mx-auto w-full max-w-md rounded-3xl bg-white p-6 shadow-md md:w-full">
-            <h2 className="text-center text-xl font-semibold text-neutral-700">
-              Request a Callback
-            </h2>
-            <p className="mt-1 text-center text-gray-600 md:text-xs">
-              We respond promptly, typically within{' '}
-              <span className="font-semibold text-blue-600">10 minutes</span>
-            </p>
-            <div className="mx-auto my-2 w-12 border-b-2 border-[rgb(234,179,8)]"></div>
-
-            <form className="space-y-4">
-              <div className="flex gap-3">
-                <InputText
-                  inputClass="bg-transparent border-purple-900 focus:border-purple-700"
-                  labelClass="bg-purple-950 rounded px-2 py-0.5 text-xs text-white"
-                  label="Full Name"
-                  value={formDetails.name}
-                  setValue={(value) =>
-                    setFormDetails({ ...formDetails, name: value })
-                  }
-                />
-                <InputText
-                  inputClass="bg-transparent border-purple-900 focus:border-purple-700"
-                  labelClass="bg-purple-950 rounded px-2 py-0.5 text-xs text-white"
-                  label="Email"
-                  value={formDetails.email}
-                  setValue={(value) =>
-                    setFormDetails({ ...formDetails, email: value })
-                  }
-                />
-              </div>
-
-              <CustomInputNumber
-                label="Phone Number"
-                phone={formDetails.number}
-                setPhone={(value) =>
-                  setFormDetails({ ...formDetails, number: value })
-                }
-                inputClass="bg-transparent !border-purple-900 focus:!border-purple-700"
-              />
-
-              <Select>
-                <SelectTrigger className="w-full border border-purple-900 py-6 focus:border-purple-700">
-                  <SelectValue placeholder="Select a Budget" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectItem value="Less than $1,000">
-                      Less than $1,000
-                    </SelectItem>
-                    <SelectItem value="$1,000 - $5,000">
-                      $1,000 - $5,000
-                    </SelectItem>
-                    <SelectItem value="$5,000 - $10,000">
-                      $5,000 - $10,000
-                    </SelectItem>
-                    <SelectItem value="More than $5,000">
-                      More than $5,000
-                    </SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-
-              <InputTextArea
-                inputClass="bg-transparent  border-purple-900 focus:border-purple-700"
-                labelClass="bg-purple-950 w-fit rounded px-2 py-0.5 text-xs text-white"
-                label="Message"
-                value={formDetails.message}
-                setValue={(value) =>
-                  setFormDetails({ ...formDetails, message: value })
-                }
-              />
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-[rgb(234,179,8)] py-2 font-semibold text-white transition"
-              >
-                Submit
-              </button>
-            </form>
           </div>
         </div>
       </div>

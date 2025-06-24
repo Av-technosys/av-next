@@ -152,7 +152,7 @@ ListItem.displayName = 'ListItem';
 function MobileNav({ navLinks, components }) {
   return (
     <div className="mb-4 flex h-full lg:hidden">
-      <div className="mt-4 flex h-full max-h-[72vh] w-full flex-col overflow-y-auto overflow-x-hidden">
+      <div className="flex h-full max-h-[72vh] w-full flex-col overflow-y-auto overflow-x-hidden md:mt-4">
         <DropdownMenu components={components} />
         {navLinks.map((item) => {
           return (
