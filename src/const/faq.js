@@ -266,3 +266,101 @@ export const contactFawData = [
     ),
   },
 ];
+
+export const fintechFawData = [
+  {
+    value: 'faq-1',
+    question: 'How much time does it take to develop a fintech app?',
+    answer: (
+      <p>
+        The development timeline depends on the app’s complexity, features, and platform. On average, a basic fintech app takes 3–4 months, while a fully-featured solution with advanced integrations can take 6–9 months or more.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How much does it cost to develop a fintech app?',
+    answer: (
+      <p>
+        Costs vary based on functionality, design, compliance, and development hours. A simple app may start at $15,000–$25,000, while a complex, enterprise-level fintech app can range from $50,000 to $150,000+.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What types of fintech apps does your company develop?',
+    answer: (
+
+      <>
+        <p> We develop a wide range of fintech solutions, including:</p>
+           <ul className="list-disc pl-4">
+          <li>Mobile banking apps Investment & trading platforms</li>
+          <li>Digital wallets</li>
+          <li>Loan and credit management apps</li>
+          <li>Insurtech solutions</li>
+          <li>RegTech and compliance apps</li>
+          <li>Personal finance management tools</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What are the advantages of a fintech app solution for my business?',
+    answer: (
+      <p>
+        A fintech app can streamline operations, improve customer experience, boost engagement, enable real-time transactions, and enhance data insights, ultimately driving growth and innovation in your financial services.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: ' What security compliances will you use for my fintech solution?',
+    answer: (
+     <>
+     <ul className="list-disc pl-4">
+        <li>We strictly follow industry-standard compliances like:</li>
+        <li>GDPR</li>
+        <li>PCI-DSS</li>
+        <li>ISO/IEC 27001</li>
+        <li>SOC 2</li>
+        <li>KYC/AML guidelines Additionally, we implement encryption, multi-factor authentication, and secure APIs to protect sensitive data.</li>
+      </ul>
+     </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'What technologies do you use to develop fintech apps?',
+    answer: (
+     <>
+      <ul className="pl-4 list-disc">
+        <li>We use a modern tech stack including:</li>
+        <li>Frontend: React Native, Flutter, Swift, Kotlin</li>
+        <li>Backend: Node.js, Python, Java, .NET
+            Database: PostgreSQL, MongoDB, Firebase</li>
+        <li>Cloud: AWS, Azure, Google Cloud</li>
+        <li>Security Tools: OAuth 2.0, JWT, SSL, biometric authentication</li>
+      </ul>
+     </>
+    ),
+  },
+  {
+    value: 'faq-7',
+    question: 'Will you sign an NDA to protect my fintech app idea?',
+    answer: (
+      <p>
+       Yes, absolutely. We are committed to confidentiality and will sign a Non-Disclosure Agreement (NDA) before discussing or starting your project.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-8',
+    question: 'How can I track the progress of my fintech project?',
+    answer: (
+      <p>
+        We offer complete transparency through tools like Jira, Trello, or Asana. You'll receive regular updates, demo builds, and milestone reports to monitor the progress throughout the development lifecycle.
+      </p>
+    ),
+  },
+];
