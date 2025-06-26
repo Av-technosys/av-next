@@ -29,6 +29,7 @@ import {
 import { cn } from '@/lib/utils';
 import { LeadPopUp } from '@/components/leadPopUp';
 import Autoplay from 'embla-carousel-autoplay';
+import Image from 'next/image';
 
 export function CarouselDemo() {
   return (
@@ -60,7 +61,9 @@ function Card({ cardData }) {
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <div>
         <div className="flex items-center gap-4">
-          <img
+          <Image
+            height={100}
+            width={100}
             className="size-12 rounded-md md:size-16"
             src={cardData.logo}
             alt=""
@@ -93,16 +96,20 @@ function Card({ cardData }) {
           <p className="text-sm">Available on: </p>
           <div className="flex items-center gap-4">
             {cardData.isPlaystoreAvailable && (
-              <img
-                src="./new/google_play_store.webp"
-                className="h-auto max-w-28 object-contain"
+              <Image
+                width={400}
+                height={250}
+                src="/new/google_play_store.webp"
+                className="h-24 w-auto max-w-28 object-contain"
                 alt=""
               />
             )}
             {cardData.isAppStoreAvailable && (
-              <img
-                src="./new/app_store.webp"
-                className="h-auto max-w-28 object-contain"
+              <Image
+                width={400}
+                height={250}
+                src="/new/app_store.webp"
+                className="h-24 w-auto max-w-28 object-contain"
                 alt=""
               />
             )}
@@ -129,7 +136,9 @@ function Card({ cardData }) {
           cardData.bgClass
         )}
       >
-        <img
+        <Image
+          width={500}
+          height={400}
           src={cardData.image}
           className="h-full w-full object-contain"
           alt=""

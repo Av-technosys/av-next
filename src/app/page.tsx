@@ -38,6 +38,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
 import { ContactUs } from '@/components/contactUs';
 import { Locations } from '@/components/Location';
+import Image from 'next/image';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -117,7 +118,9 @@ function HeroSection({ setIsLeadOpen }) {
                 <div className="w-full border-l first:border-none">
                   <div className="mx-auto mr-auto flex w-fit flex-col gap-2">
                     <p className="text-white">{item.title}</p>
-                    <img
+                    <Image
+                      width={400}
+                      height={400}
                       src={item.image}
                       className="mr-auto h-10 w-auto"
                       alt=""
@@ -125,7 +128,9 @@ function HeroSection({ setIsLeadOpen }) {
                     <div className="mx-auto flex items-center gap-2">
                       <p className="text-white">{item.stars + ' / 5'}</p>
                       {Array.from({ length: item.stars }, (_, index) => (
-                        <img
+                        <Image
+                          width={50}
+                          height={50}
                           src="/new/review/top-star.svg"
                           className="h-4 w-auto"
                           alt=""
@@ -134,7 +139,9 @@ function HeroSection({ setIsLeadOpen }) {
                       ))}
 
                       {item.stars % 1 !== 0 && (
-                        <img
+                        <Image
+                          width={50}
+                          height={50}
                           src="/new/review/top-star-47.svg"
                           className="h-4 w-auto"
                           alt=""
@@ -252,11 +259,15 @@ function AISection({ setIsLeadOpen }) {
             </button>
           </Link>
         </div>
-        <img
-          src="/new/ai_image.webp"
-          className="h-full max-h-[20rem] w-fit object-contain lg:max-h-[26rem]"
-          alt=""
-        />
+        <div className="h-full w-full">
+          <Image
+            height={400}
+            width={400}
+            src="/new/ai_image.webp"
+            className="h-full max-h-[20rem] w-auto object-contain lg:max-h-[26rem]"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );
@@ -270,27 +281,34 @@ function PartnerSection() {
           Strategic Partnerships as a Catalyst for Business Growth{' '}
         </p>
         <div className="mt-8 grid w-full grid-cols-2 items-center justify-end gap-6 sm:grid-cols-4 md:mt-0 md:gap-12">
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-12"
             src="/new/review/aws-partner.svg"
             alt=""
           />
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-9"
             src="/new/review/mongodb-partner.svg"
             alt=""
           />
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-9"
             src="/new/review/cloudinary-partner.svg"
             alt=""
           />
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-12"
             src="/new/review/google-cloud-partner.svg"
             alt=""
           />
-          {/* <img src="/new/review/google-cloud-partner.svg" alt="" /> */}
         </div>
       </div>
     </div>
@@ -385,9 +403,12 @@ function ExperienceSection() {
               </div>
             );
           })} */}
-          <img
+          <Image
+            width={500}
+            height={500}
             className="h-full w-full rounded-md object-cover"
             src="/new/experience-img.png"
+            alt=""
           />
         </div>
       </div>
@@ -443,7 +464,9 @@ function BookCall({ setIsLeadOpen }) {
           </button>
         </div>
         <div className="relative h-auto w-full max-w-lg">
-          <img
+          <Image
+            height={500}
+            width={500}
             src="/new/bookacall.png"
             alt=""
             className="h-full w-full object-contain"
@@ -566,7 +589,9 @@ function BlogCard({ blog }) {
         href={`/blog/${blog?.slug}`}
         className="relative h-auto w-full sm:h-56 sm:w-auto"
       >
-        <img
+        <Image
+          height={500}
+          width={500}
           className="h-auto w-full rounded-xl object-cover sm:h-full sm:w-auto"
           src={blog.image}
           alt={blog.title}
