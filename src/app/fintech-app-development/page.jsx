@@ -4,6 +4,8 @@ import React from 'react';
 import Ratings from '../ratings';
 import { SectionHeading } from '@/components/sectionHeading';
 import { TArroeRight } from '@/components/icons';
+import Fintecheffect from '@/app/fintech-app-development/fintecheffect'
+import Fintechsmartsolution from '@/app/fintech-app-development/fintechsmartsolution'
 
 import {
   Carousel,
@@ -29,14 +31,14 @@ const FintechPage = () => {
       <NavBarHome />
       <Herosectionfintech />
       <Ratings className="mt-7 md:flex" />
-      <FintechSmartSolutions />
+      <Fintechsmartsolution/>
       <FintechProjectCost />
       <FintechSlider />
       <FintechAvoidMistakes />
       <ServiceSection />
       <FintechPopularity />
       <FintechStartProject />
-      <AiEffectSection />
+      <Fintecheffect/>
       <TechnologiesOffered />
       <FintechTestimonial />
       <Whychooseus />
@@ -111,13 +113,13 @@ function Herosectionfintech() {
     <>
       <section className="bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col-reverse items-center justify-between gap-10 px-6 py-12 md:my-16 md:flex-row md:gap-0 md:px-16 lg:py-0">
+          <div className="flex flex-col-reverse items-center justify-between gap-10 px-6 py-12 lg:my-16 md:flex-row md:gap-0 md:px-16 lg:py-0">
             {/* Left Section */}
-            <div className="!md:max-w-sm !max-w-2xl">
-              <h2 className="text-center text-2xl font-bold md:text-start lg:text-5xl">
+            <div className="md:max-w-sm  lg:!max-w-2xl">
+              <h2 className="text-center text-2xl font-bold md:text-start md:text-3xl lg:text-5xl">
                 <span className="text-[#EAB308]">FINTECH APP</span>{' '}
                 <br className="hidden md:block" />
-                <p className="mt-5 text-black">DEVELOPMENT SERVICES</p>
+                <p className="lg:mt-5 text-black">DEVELOPMENT SERVICES</p>
               </h2>
               <p className="mt-6 text-center text-base text-gray-700 md:text-start md:text-lg">
                 Stand out in the competitive FinTech landscape with our premium
@@ -156,107 +158,6 @@ function Herosectionfintech() {
   );
 }
 
-function FintechSmartSolutions() {
-  return (
-    <section className="mx-auto mt-2 max-w-7xl bg-white px-4 py-2 md:mb-20 md:mt-5">
-      <SectionHeading
-        className="text-center"
-        title={
-          'Complete FinTech App Development Services for Next-Gen Businesses'
-        }
-        titleClass="text-black leading-normal py-0 px-10"
-        desc="Whether you need expert fintech app design or reliable fintech consulting, AV Technosys is your go-to partner. We deliver top-tier financial app development solutions to meet the unique needs of every business vertical."
-        descClass={'text-gray-600 '}
-      />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {/* Card */}
-
-        <div className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:scale-105 hover:!bg-[#EAB308] hover:shadow-xl">
-          <img src="/new/videoapp_ic6[1].svg" alt="FinTech" className="mb-4" />
-          <h3 className="mb-2 text-lg font-semibold">
-            FinTech Platform Development
-          </h3>
-          <p className="text-md text-gray-700">
-            Create scalable, high-performance platforms to simplify finances and
-            boost productivity.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:scale-105 hover:!bg-[#EAB308] hover:shadow-xl">
-          <img
-            src="/new/socialapp_ic4 (1)[1].svg"
-            alt="Healthcare"
-            className="mb-4"
-          />
-          <h3 className="mb-2 text-lg font-semibold">
-            FinTech App Consultation
-          </h3>
-          <p className="text-md text-gray-700">
-            Get expert guidance to shape and refine your fintech app idea from
-            concept to launch.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:scale-105 hover:!bg-[#EAB308] hover:shadow-xl">
-          <img
-            src="/new/socialapp_ic2[1].svg"
-            alt="Insurance"
-            className="mb-4"
-          />
-          <h3 className="mb-2 text-lg font-semibold">
-            UI/UX Design for FinTech Apps
-          </h3>
-          <p className="text-md text-gray-700">
-            Deliver smooth, intuitive, and visually appealing user experiences
-            with our UI/UX services.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:scale-105 hover:!bg-[#EAB308] hover:shadow-xl">
-          <img src="/new/ewalletapp_ic5[1].svg" alt="Retail" className="mb-4" />
-          <h3 className="mb-2 text-lg font-semibold">
-            App Maintenance & Support
-          </h3>
-          <p className="text-md text-gray-700">
-            Keep your fintech app secure, updated, and optimized with our
-            reliable support services.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:scale-105 hover:!bg-[#EAB308] hover:shadow-xl">
-          <img
-            src="/new/loanapp_ic6[1] (1).svg"
-            alt="Manufacturing"
-            className="mb-4"
-          />
-          <h3 className="mb-2 text-lg font-semibold">
-            FinTech API Integration
-          </h3>
-          <p className="text-md text-gray-700">
-            Enhance app performance with seamless API integration for real-time
-            data and connectivity.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:scale-105 hover:!bg-[#EAB308] hover:shadow-xl">
-          <img
-            src="/new/educationapp_ic1[1] (1).svg"
-            alt="Supply Chain"
-            className="mb-4"
-          />
-          <h3 className="mb-2 text-lg font-semibold">
-            Custom FinTech App Development
-          </h3>
-          <p className="text-md text-gray-700">
-            We build tailor-made fintech apps designed to match your business
-            goals and user needs.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function FintechProjectCost() {
   return (
     <section className="mx-auto mt-2 max-w-7xl md:mt-14">
@@ -270,11 +171,11 @@ function FintechProjectCost() {
             />
           </div>
 
-          <div className="w-full text-center text-white md:max-w-2xl md:text-left">
-            <h2 className="mb-4 text-xl font-extrabold md:text-4xl">
+          <div className="w-full text-center text-white md:max-w-md  lg:max-w-2xl md:text-left">
+            <h2 className="mb-4 text-xl font-extrabold md:text-2xl lg:text-4xl">
               AV Technosys Makes Fintech App Development Effortless.
             </h2>
-            <p className="mb-6 md:text-lg">
+            <p className="mb-6 lg:text-lg">
               Fintech apps are tough to build, unless you're backed by our
               expert development team.
             </p>
@@ -294,6 +195,7 @@ function FintechSlider() {
       <SectionHeading
         title=" We build impactful mobile and web apps"
         desc="Here is how we have created a success story for brands dreaming big and something exceptional."
+        titleClass="leading-tight"
       />
       <div className="mx-auto w-full max-w-7xl px-1">
         {/* <Card1 /> */}
@@ -594,12 +496,13 @@ function ServiceSection() {
           className="text-center"
           title={'Reliable Fintech App Development for Every Business!'}
           desc="Whether you need fintech app design or expert consulting, AV Technosys delivers top-quality, efficient solutions tailored to all financial sectors."
+          titleClass="leading-tight"
         />
 
         <div className="">
           <HoverEffect
             items={serviceData}
-            shadow={'!bg-[#EAB308]'}
+            shadow={'!bg-white'}
             iconClassName={'!text-black'}
             cartClassName={
               '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde]  group-hover:shadow-gray-500 shadow-lg '
@@ -710,314 +613,6 @@ function FintechPopularity() {
   );
 }
 
-function AiEffectSection() {
-  return (
-    <section className="mx-auto mb-5 max-w-7xl bg-white px-8 py-2 md:mb-20 md:px-4">
-      <SectionHeading
-        className="text-center"
-        title={'Our Specialized FinTech App Solutions'}
-        titleClass="text-black leading-normal"
-      />
-      <div className="grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect1.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Mobile <br /> Banking Apps
-              </p>
-            </div>
-          </div>
-
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-3 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-xl font-bold leading-relaxed">
-              Automating Repetitive Tasks
-            </p>
-            <p className="text-sm">
-              Streamline operations and increase efficiency by automating
-              routine business processes with intelligent AI tools.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Smart task automation</li>
-              <li>Enhanced workflow productivity</li>
-              <li>Tailored AI integrations</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect3.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Text <br /> Classification
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">
-              Text Classification
-            </p>
-
-            <p className="text-sm">
-              Classify and organize vast amounts of text data efficiently with
-              AI-powered models that understand content and context.
-            </p>
-            <ul className="list-inside list-disc text-sm">
-              <li>Intelligent text sorting</li>
-              <li>Better content management</li>
-              <li>Scalable analysis tools</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect4.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Object <br /> Detection
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">
-              Object Detection
-            </p>
-            <p className="text-sm">
-              Empower applications with the ability to detect and identify
-              objects accurately in real-time for use in various industries.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Instant object identification</li>
-              <li>Precision and reliability</li>
-              <li>Scalable across sectors</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect2.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Human Activity <br /> Recognition
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">
-              Human Activity Recognition
-            </p>
-            <p className="text-sm">
-              Leverage AI to track and understand human motion in real-time for
-              more intelligent, responsive systems.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Real-time motion tracking</li>
-              <li>Advanced behavior analysis</li>
-              <li>Actionable insights</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect8.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Speech <br /> Recognition
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">
-              Speech Recognition
-            </p>
-            <p className="text-sm">
-              Transform voice into text with high-accuracy speech recognition
-              systems powered by AI.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Real-time transcription</li>
-              <li>Multi-language support</li>
-              <li>Ideal for voice-enabled apps</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect5.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Semantic <br /> Search
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">Semantic Search</p>
-            <p className="text-sm">
-              Deliver highly relevant results with AI that understands user
-              intent, not just keywords.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Context-aware search results</li>
-              <li>Improved user experience</li>
-              <li>AI-driven search capabilities</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect7.jpg")`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Pattern <br /> Recognition
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">
-              Pattern Recognition
-            </p>
-            <p className="text-sm">
-              Detect trends, correlations, and anomalies in your data with AI
-              that uncovers patterns for better forecasting and strategy.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Predictive data analysis</li>
-              <li>Informed business decisions</li>
-              <li>Trend identification tools</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-
-        <div className="group relative h-[330px] overflow-hidden rounded-lg shadow-lg">
-          <div
-            style={{
-              backgroundImage: `url("/new/fintecheffect6.jpg")`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'bottom',
-              backgroundRepeat: 'no-repeat',
-            }}
-            className="h-full w-full"
-          >
-            <div className="flex h-full w-full flex-col items-start justify-end gap-2 bg-gradient-to-t from-black to-transparent font-bold text-white">
-              <p className="mb-3 px-4">
-                Image <br />
-                Data Labelling
-              </p>
-            </div>
-          </div>
-          <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-            <p className="text-lg font-bold leading-relaxed">
-              Image Data Labeling
-            </p>
-            <p className="text-sm">
-              Accelerate your computer vision projects with accurate image
-              annotation and data labeling services.
-            </p>
-
-            <ul className="list-inside list-disc text-sm">
-              <li>Precise image tagging</li>
-              <li>Optimized image pipelines</li>
-              <li>Supports scalable AI development</li>
-            </ul>
-
-            <button className="self-start rounded-full bg-[#EAB308] px-4 py-2 text-sm text-black transition-colors duration-500 hover:scale-105">
-              Get in Touch
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 const cardData = [
   {
@@ -1163,23 +758,22 @@ function Whychooseus() {
     </div>
   );
 }
-
 function FintechStartProject() {
   return (
     <div>
       <div className="mx-auto mt-2 max-w-7xl md:mt-14">
         <div className="px-4 py-10 md:relative">
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-[rgb(22,22,35)] p-4 md:flex-row md:p-16">
-            <div className="right-[40px] top-[-40px] flex w-[250px] justify-center md:absolute md:w-[500px]">
+            <div className="lg:right-[40px] md:right-0 md:top-[20px] lg:top-[-40px] flex w-[250px] justify-center md:absolute md:w-[500px]">
               <img
                 src="/new/mockup-responsive[1].png"
                 alt="fintech Development Visual"
-                className="max-w-[20rem] object-contain md:max-w-xl"
+                className="max-w-[20rem] object-contain md:max-w-md lg:max-w-xl"
               />
             </div>
 
             <div className="max-w-sm text-center text-white md:text-left lg:max-w-2xl">
-              <h2 className="mb-4 text-xl font-extrabold md:text-4xl">
+              <h2 className="mb-4 text-xl font-extrabold md:text-3xl lg:text-4xl">
                 Transform Your FinTech Idea into a Future-Ready App
               </h2>
               <p className="mb-6 md:text-lg">
