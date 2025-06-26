@@ -4,8 +4,8 @@ import React from 'react';
 import Ratings from '../ratings';
 import { SectionHeading } from '@/components/sectionHeading';
 import { TArroeRight } from '@/components/icons';
-import Fintecheffect from '@/app/fintech-app-development/fintecheffect'
-import Fintechsmartsolution from '@/app/fintech-app-development/fintechsmartsolution'
+import Fintecheffect from '@/app/fintech-app-development/fintecheffect';
+import Fintechsmartsolution from '@/app/fintech-app-development/fintechsmartsolution';
 
 import {
   Carousel,
@@ -24,6 +24,9 @@ import { BlogSection } from '@/components/blogSection';
 import Footer1 from '../footer1';
 import { ContactUs } from '@/components/contactUs';
 import { fintechFawData } from '@/const';
+import Herosectionfintech from './HeroSection';
+import FintechProjectCost from './FintechProjectCost';
+import FintechStartProject from './FintechStartProject';
 
 const FintechPage = () => {
   return (
@@ -31,14 +34,14 @@ const FintechPage = () => {
       <NavBarHome />
       <Herosectionfintech />
       <Ratings className="mt-7 md:flex" />
-      <Fintechsmartsolution/>
+      <Fintechsmartsolution />
       <FintechProjectCost />
       <FintechSlider />
       <FintechAvoidMistakes />
       <ServiceSection />
       <FintechPopularity />
       <FintechStartProject />
-      <Fintecheffect/>
+      <Fintecheffect />
       <TechnologiesOffered />
       <FintechTestimonial />
       <Whychooseus />
@@ -108,87 +111,6 @@ function Locations() {
   );
 }
 
-function Herosectionfintech() {
-  return (
-    <>
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col-reverse items-center justify-between gap-10 px-6 py-12 lg:my-16 md:flex-row md:gap-0 md:px-16 lg:py-0">
-            {/* Left Section */}
-            <div className="md:max-w-sm  lg:!max-w-2xl">
-              <h2 className="text-center text-2xl font-bold md:text-start md:text-3xl lg:text-5xl">
-                <span className="text-[#EAB308]">FINTECH APP</span>{' '}
-                <br className="hidden md:block" />
-                <p className="lg:mt-5 text-black">DEVELOPMENT SERVICES</p>
-              </h2>
-              <p className="mt-6 text-center text-base text-gray-700 md:text-start md:text-lg">
-                Stand out in the competitive FinTech landscape with our premium
-                app development services. We help you create innovative,
-                tailor-made FinTech solutions that give your business a
-                definitive edge in the market.
-              </p>
-              <p className="mt-4 text-center text-base text-gray-700 md:text-start md:text-lg">
-                Want to build a powerful FinTech app but unsure where to begin?
-                You're in the right place, let's turn your idea into reality.
-                Connect with us today!
-              </p>
-
-              <div className="mt-8 flex justify-center gap-4 md:justify-start">
-                <button className="rounded-md border border-gray-400 px-6 py-3 font-bold text-gray-700 hover:bg-gray-200">
-                  Talk to Expert
-                </button>
-                <button className="rounded-md bg-[#EAB308] px-6 py-3 text-lg text-white duration-500 hover:scale-105 hover:bg-[#EAB308]">
-                  Get a Quote
-                </button>
-              </div>
-            </div>
-
-            {/* Right Section (Image) */}
-            <div className="w-full max-w-sm md:max-w-xl">
-              <img
-                src="/new/643fe95aad9d6f5a08890904_fintech mockup[1].png"
-                alt="Fintech app UI"
-                className="animate-float w-full object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
-function FintechProjectCost() {
-  return (
-    <section className="mx-auto mt-2 max-w-7xl md:mt-14">
-      <div className="px-4 py-10 md:relative">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-gray-400 p-4 md:flex-row md:p-16">
-          <div className="right-0 top-[-35px] flex w-[250px] justify-center md:absolute md:w-[500px]">
-            <img
-              src="/new/cta-girl.png"
-              alt="AI Development Visual"
-              className="max-w-[15rem] object-contain md:max-w-xs"
-            />
-          </div>
-
-          <div className="w-full text-center text-white md:max-w-md  lg:max-w-2xl md:text-left">
-            <h2 className="mb-4 text-xl font-extrabold md:text-2xl lg:text-4xl">
-              AV Technosys Makes Fintech App Development Effortless.
-            </h2>
-            <p className="mb-6 lg:text-lg">
-              Fintech apps are tough to build, unless you're backed by our
-              expert development team.
-            </p>
-            <button className="rounded-full bg-black px-6 py-3 font-semibold text-white shadow-md transition duration-300">
-              Request a Free Quote
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function FintechSlider() {
   return (
     <div className="w-full p-1 pb-7 sm:px-2">
@@ -205,7 +127,7 @@ function FintechSlider() {
   );
 }
 
-export function CarouselDemo() {
+function CarouselDemo() {
   return (
     <Carousel
       plugins={[
@@ -346,7 +268,7 @@ const cardsData = [
     logo: '/new/bumbleLogo.webp',
     color: '#F07000',
     desc: 'Bumble is a popular dating app on Android and iOS, known for its GPS-based matching and women-first approach. It connects people for dating, friendship, or networking. AV Technosys helped a client create a similar app with these key features.',
-    // 'A dating app like Bumble is one of the most popular social and dating platforms, available on both Android and iOS. With GPS capabilities and a unique women-first approach, Bumble connects users based on location, interests, and intent whether for dating, friendship, or networking. See how AV Technosys, a dating app development company, helped its client build a Bumble-like experience',
+
     downloads: '5Cr+',
     rating: '4.2/5',
     industry: 'Online Dating / Social Networking',
@@ -505,7 +427,7 @@ function ServiceSection() {
             shadow={'!bg-white'}
             iconClassName={'!text-black'}
             cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde]  group-hover:shadow-gray-500 shadow-lg '
+              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg '
             }
           />
         </div>
@@ -516,9 +438,9 @@ function ServiceSection() {
 
 function FintechPopularity() {
   return (
-    <div className="bg-sky-50">
+    <div className="mt-6 border-y-4 border-sky-100 bg-sky-50">
       <div className="mx-auto max-w-7xl">
-        <div className="px-6 py-12 md:px-16">
+        <div className="px-6 py-16 md:px-16">
           {/* Heading */}
           <h2 className="mb-10 text-center text-2xl font-semibold md:text-3xl">
             Top Reasons to Invest in{' '}
@@ -534,7 +456,7 @@ function FintechPopularity() {
               <img
                 src="/new/fp1.png"
                 alt="Market"
-                className="mx-auto mb-2 h-10 w-10"
+                className="mx-auto mb-2 size-9"
               />
               <p className="text-2xl font-bold">$330.40 B+</p>
               <p className="text-sm text-gray-600">Market Size</p>
@@ -543,7 +465,7 @@ function FintechPopularity() {
               <img
                 src="/new/fp2.webp"
                 alt="Growth"
-                className="mx-auto mb-2 h-10 w-10"
+                className="mx-auto mb-2 size-9"
               />
               <p className="text-2xl font-bold">14.5%</p>
               <p className="text-sm text-gray-600">Consistent Growth Rate</p>
@@ -552,7 +474,7 @@ function FintechPopularity() {
               <img
                 src="/new/fp4.webp"
                 alt="Downloads"
-                className="mx-auto mb-2 h-10 w-10"
+                className="mx-auto mb-2 size-9"
               />
               <p className="text-2xl font-bold">37 B+</p>
               <p className="text-sm text-gray-600">Global App Downloads</p>
@@ -613,7 +535,6 @@ function FintechPopularity() {
   );
 }
 
-
 const cardData = [
   {
     msg: 'AV Technosys turned our ideas into a seamless digital solution. Their team was reliable, responsive, and easy to work with. We truly valued their professionalism, attention to detail, and collaborative spirit throughout the project.',
@@ -652,7 +573,7 @@ function CardTestimonial({ cardData }) {
 
 function FintechTestimonial() {
   return (
-    <section>
+    <section className="py-6">
       <SectionHeading
         className="text-center"
         title={'What Our Clients Say About Working With Us'}
@@ -685,18 +606,23 @@ function FintechTestimonial() {
 }
 function Whychooseus() {
   return (
-    <div className="my-14 bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-12 md:px-16">
+    <div className="my-14 border-y-4 border-[#C8D7F3] bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-16 md:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="gap-12 md:flex md:items-start md:justify-between">
           {/* Left Section */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold leading-normal text-black md:text-4xl">
-              Why Choose <span className="text-[#EAB308]">AV Technosys</span> for FinTech App Development <br /> Needs?
+              Why Choose <span className="text-[#EAB308]">AV Technosys</span>{' '}
+              for FinTech App Development <br /> Needs?
             </h2>
             <div className="mb-6 mt-4 h-[3px] w-16 bg-[#EAB308]"></div>
             <p className="text-base leading-relaxed text-[#1d1d1d]">
-              With more than 10 years of experience, AV Technosys stands out as a leading fintech application development company, specializing in crafting innovative and tailored digital solutions. Our skilled team focuses on building fintech apps that align perfectly with the evolving financial ecosystem. Partner with us to turn your fintech vision into a powerful, market-ready application.
-
+              With more than 10 years of experience, AV Technosys stands out as
+              a leading fintech application development company, specializing in
+              crafting innovative and tailored digital solutions. Our skilled
+              team focuses on building fintech apps that align perfectly with
+              the evolving financial ecosystem. Partner with us to turn your
+              fintech vision into a powerful, market-ready application.
             </p>
           </div>
 
@@ -714,7 +640,9 @@ function Whychooseus() {
                   Experienced Team
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                   Our seasoned team brings years of hands-on experience, delivering high-quality fintech app development solutions tailored exclusively to your project’s needs.
+                  Our seasoned team brings years of hands-on experience,
+                  delivering high-quality fintech app development solutions
+                  tailored exclusively to your project’s needs.
                 </p>
               </div>
             </div>
@@ -731,7 +659,9 @@ function Whychooseus() {
                   Cost-Effective
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                   We ensure maximum value for your investment by offering cost-efficient fintech development without compromising on quality, helping your brand stand out like never before.
+                  We ensure maximum value for your investment by offering
+                  cost-efficient fintech development without compromising on
+                  quality, helping your brand stand out like never before.
                 </p>
               </div>
             </div>
@@ -748,7 +678,9 @@ function Whychooseus() {
                   Customized Solutions
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                   We craft fintech solutions that are fully customized to align with your business model, delivering seamless integration and an enhanced user experience in the competitive fintech space.
+                  We craft fintech solutions that are fully customized to align
+                  with your business model, delivering seamless integration and
+                  an enhanced user experience in the competitive fintech space.
                 </p>
               </div>
             </div>
@@ -758,35 +690,58 @@ function Whychooseus() {
     </div>
   );
 }
-function FintechStartProject() {
-  return (
-    <div>
-      <div className="mx-auto mt-2 max-w-7xl md:mt-14">
-        <div className="px-4 py-10 md:relative">
-          <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-[rgb(22,22,35)] p-4 md:flex-row md:p-16">
-            <div className="lg:right-[40px] md:right-0 md:top-[20px] lg:top-[-40px] flex w-[250px] justify-center md:absolute md:w-[500px]">
-              <img
-                src="/new/mockup-responsive[1].png"
-                alt="fintech Development Visual"
-                className="max-w-[20rem] object-contain md:max-w-md lg:max-w-xl"
-              />
-            </div>
 
-            <div className="max-w-sm text-center text-white md:text-left lg:max-w-2xl">
-              <h2 className="mb-4 text-xl font-extrabold md:text-3xl lg:text-4xl">
-                Transform Your FinTech Idea into a Future-Ready App
-              </h2>
-              <p className="mb-6 md:text-lg">
-                Hire expert FinTech app developers to turn your vision into a
-                secure, scalable, and future-ready digital solution.
-              </p>
-              <button className="rounded-full bg-[#EAB308] px-6 py-3 font-semibold text-white shadow-md transition duration-300">
-                Request a Free Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+const blogData = [
+  {
+    id: 'd4949bae-5fba-48ab-b1b0-d0fe4b7d0029',
+    title: 'How AI Is Transforming Fintech: Key Trends and Real Benefits',
+    metaDescription:
+      'Discover how AI is reshaping fintech with key trends and real-world benefits driving innovation in 2025.',
+    blogCategory: 'fintech',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750671428713',
+    tags: [
+      'Fintech App Development Services',
+      'Mobile App Development Company',
+      'AI in Fintech',
+      'Fintech',
+    ],
+    date: '"2025-05-07T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+    userName: 'Ashish Bishnoi',
+    slug: 'how-ai-is-transforming-fintech-key-trends-and-real-benefits',
+  },
+  {
+    id: '41d9b436-638b-482a-b586-e7c7a1c8f747',
+    title: 'How Regulatory Changes Will Impact Fintech in 2025',
+    metaDescription:
+      'Explore how new regulatory changes will shape the future of fintech in 2025 and beyond.',
+    blogCategory: 'fintech',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750672066669',
+    tags: [
+      'Fintech App Development Services',
+      'FIntech',
+      'Mobile App Development',
+    ],
+    date: '"2025-05-08T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/veer-gu.jpeg',
+    userName: 'Veer choudhary',
+    slug: 'how-regulatory-changes-will-impact-fintech-in-2025',
+  },
+  {
+    id: 'a6b89d5e-a1d3-4336-b759-6f08977ec0c7',
+    title: '50 Fintech Statistics You Need To Know for 2025',
+    metaDescription:
+      'Uncover 50 must-know fintech stats for 2025 shaping the future of finance and technology.',
+    blogCategory: 'fintech',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750830348629',
+    tags: ['fintech app development', 'app development', 'fintech statistics'],
+    date: '"2025-06-11T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+    userName: 'Ashish Bishnoi',
+    slug: '50-fintech-statistics-you-need-to-know-for-2025',
+    isVisible: true,
+  },
+];

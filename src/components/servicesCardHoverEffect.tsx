@@ -5,7 +5,13 @@ import { img } from 'motion/react-client';
 
 import { useState } from 'react';
 
-export const HoverEffect = ({ items, className = '',cartClassName="",shadow="",iconClassName="" }: any) => {
+export const HoverEffect = ({
+  items,
+  className = '',
+  cartClassName = '',
+  shadow = '',
+  iconClassName = '',
+}: any) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -26,7 +32,10 @@ export const HoverEffect = ({ items, className = '',cartClassName="",shadow="",i
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className={cn("absolute inset-0 block h-full w-full rounded-3xl bg-yellow-100/50",shadow)}
+                className={cn(
+                  'absolute inset-0 block h-full w-full rounded-3xl bg-yellow-100/50',
+                  shadow
+                )}
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -41,10 +50,12 @@ export const HoverEffect = ({ items, className = '',cartClassName="",shadow="",i
             )}
           </AnimatePresence>
           <Card cartClassName={cartClassName}>
-            <CardIcon icon={item.icon} image={item.img}  />
-             {/* <img width="50px" src="/new/herobg2.jpg" alt="" /> */}
+            <CardIcon icon={item.icon} image={item.img} />
+            {/* <img width="50px" src="/new/herobg2.jpg" alt="" /> */}
             <CardTitle iconClassName={iconClassName}>{item.name}</CardTitle>
-            <CardDescription iconClassName={iconClassName} >{item.description}</CardDescription>
+            <CardDescription iconClassName={iconClassName}>
+              {item.description}
+            </CardDescription>
           </Card>
         </a>
       ))}
@@ -52,11 +63,11 @@ export const HoverEffect = ({ items, className = '',cartClassName="",shadow="",i
   );
 };
 
-export const Card = ({ className = '', children, cartClassName="" }) => {
+export const Card = ({ className = '', children, cartClassName = '' }) => {
   return (
     <div
       className={cn(
-        'relative z-20 h-full w-full duration-500   overflow-hidden rounded-2xl border border-transparent bg-[rgb(63,63,70)] border-gray-300 p-4',
+        'relative z-20 h-full w-full overflow-hidden rounded-2xl border border-gray-300 border-transparent bg-[rgb(63,63,70)] p-4 duration-500',
         cartClassName
       )}
     >
@@ -66,16 +77,15 @@ export const Card = ({ className = '', children, cartClassName="" }) => {
     </div>
   );
 };
-export const CardIcon = ({ icon,image }) => {
+export const CardIcon = ({ icon, image }) => {
   const Icon = icon;
-  if(Icon){
-    return  <Icon size={32} color="white" />
-  }else{
-    return <img src={`/new/${image}`} width="70px" alt="" /> ;
+  if (Icon) {
+    return <Icon size={32} color="white" />;
+  } else {
+    return <img src={`/new/${image}`} width="70px" alt="" />;
   }
-
 };
-export const CardTitle = ({ className = '', children ,iconClassName="" }) => {
+export const CardTitle = ({ className = '', children, iconClassName = '' }) => {
   return (
     <h4
       className={cn(
@@ -87,7 +97,11 @@ export const CardTitle = ({ className = '', children ,iconClassName="" }) => {
     </h4>
   );
 };
-export const CardDescription = ({ className = '', children,iconClassName="" }) => {
+export const CardDescription = ({
+  className = '',
+  children,
+  iconClassName = '',
+}) => {
   return (
     <p
       className={cn(
