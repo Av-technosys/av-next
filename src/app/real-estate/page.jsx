@@ -2,22 +2,40 @@ import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import Ratings from '../ratings';
 import { BlogSection } from '@/components/blogSection';
+import RealEstateTechnology from '@/app/real-estate/realEstatetechnologies'
+import RealEstateConquere from '@/app/real-estate/realEstateConquere'
+import Rating2 from "../../components/rating2"
+import RealstateAppServices from "@/app/real-estate/realEstateAppServices";
+import RealEstateProjectCost from '@/app/real-estate/realEstateProjectCost';
+import RealEstateAppClone from '@/app/real-estate/realEstateAppClone';
+import RealEstateTestimonial from '@/app/real-estate/realEstateTestimonial';
 
 import Footer1 from '../footer1';
+import { FaqAccordion } from '@/components/faqAccordion';
+import { TechnologiesOffered } from '@/components';
+import { SectionHeading } from '@/components/sectionHeading';
+import { ContactUs } from '@/components/contactUs';
+import { realEstateFawData } from '@/const';
 
 const RealEstatePage = () => {
   return (
     <>
       <NavBarHome />
       <RealestateHero />
-      <RealestateAVandVR />
-      <Ratings className="md:flex" />
       <RealstateRevolution />
-      <RealstateConquereTrill />
+      <Rating2/>
+      <RealstateAppServices/>
+      <RealEstateProjectCost/>
+      <RealEstateAppClone/>
+      <TechnologiesOffered />
+      <RealEstateTestimonial/>
+      <RealestateAVandVR />
+      <RealEstateTechnology/>
+      <RealEstateConquere/>
       <RealstateHireDevelopers />
-      <RealstateTechnologyused />
-      <RealstateLookingforApp />
       <Realstatewhychooseus />
+      <FaqAccordion data={realEstateFawData} />
+      <ContactUs />
       <BlogSection />
       <Locations />
       <Footer1 />
@@ -81,182 +99,93 @@ function Locations() {
     </div>
   );
 }
-
 function RealestateHero() {
   return (
     <div
-      className="h-[500px]"
+      className="h-auto"
       style={{
-        backgroundImage: "url('/new/real-estate-banner.webp')",
+        backgroundImage: "url('/new/rebanner.jpg')",
+        backgroundPosition: "top",
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       }}
     >
       <div className="mx-auto flex h-[500px] max-w-7xl flex-col items-center justify-center gap-1 rounded-none !px-8 text-center text-white">
-        <span className="text-2xl font-bold md:text-4xl lg:text-6xl">
+        <span className="text-3xl font-bold md:text-4xl lg:text-6xl">
           Real Estate
         </span>
         <h1 className="text-2xl font-bold md:text-4xl lg:text-6xl">
           App Development Company
         </h1>
-        <p className="mt-0 md:mt-4 lg:mt-6">
-          Navigating the future of real-estate with next-gen tech-driven custom
-          applications
+        <p className="mt-2 text-lg md:mt-4 lg:mt-6">
+          Transforming real estate with next-generation, custom-built technology solutions
         </p>
+        <button className='text-white border mt-5 border-white rounded-full px-3 py-2 hover:text-black hover:bg-white duration-300 hover:scale-105'>Consults Our Experts</button>
       </div>
     </div>
   );
 }
-
 function RealestateAVandVR() {
   return (
-    <section className="bg-white px-6 py-16 md:px-12 lg:px-20">
+    <section className="bg-sky-100 px-6 py-16 md:px-12 lg:px-20">
       <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
-        <div>
-          <h2 className="mb-6 text-xl font-bold text-gray-900 md:text-2xl lg:text-4xl">
-            Real Estate App Development Solutions with AR & VR
+         <div className="relative">
+          <img
+            src="/new/rsgirl.jpg" // Replace with your actual image path
+            alt="Woman using AR/VR"
+            className="relative z-10 max-h-[500px] w-full rounded-xl object-cover shadow-lg"
+          />
+        </div>
+
+        <div className='text-center md:text-start flex flex-col items-center md:items-start'>
+          <h2 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl ">
+            Smart Real Estate App Solutions Integrating AR & VR Experiences
           </h2>
           <p className="mb-4 text-base text-gray-700 lg:text-lg">
-            In the world of 3D, 4D and 7D, the dimension is increasing and
-            getting better in visual experience. VR is computer-generated
-            stimulation that makes you see the reality of how it will look like
-            after completion. When digital information is overlayed on the
-            actual physical world, it is termed as Augmented Reality. The camera
-            targets the pictures and sensors make you view the real-type
-            picture.
+            In today’s era of immersive technologies like 3D, 4D, and beyond, AR and VR are revolutionizing how we view spaces, especially in real estate. Virtual Reality (VR) creates lifelike, computer-generated environments that help buyers visualize completed properties. Augmented Reality (AR) overlays digital elements onto real-world settings using cameras and sensors. These technologies allow real estate agents offer interactive, remote property tours, making it easier for clients to explore multiple homes without being physically present. It not only enhances the buyer experience but also shortens the sales cycle significantly.
+
           </p>
-          <p className="mb-4 text-base text-gray-700 lg:text-lg">
-            The action of AR and VR is covering every sector of the industry and
-            real estate doesn’t seem to be untouched by it. Augmented reality
-            and real estate are walking hand-in-hand to lead a drastic
-            revolution in the industry. The use of AR AND VR technology has made
-            the real estate industry a luxurious business. Tour the property
-            without seeing them in a person. Being an agent is a tough task to
-            make the clients tour several properties in a day. Virtual reality
-            in real estate industry helps to witness your property.
-          </p>
+          
 
           <button className="mt-4 flex items-center gap-2 rounded-full bg-[#EAB308] px-6 py-3 font-medium text-white shadow-sm transition-all hover:scale-105 hover:bg-[#CA8A04] hover:text-white">
             Connect with us Now
             <span className="text-lg">&#8594;</span>
           </button>
         </div>
-
-        <div className="relative">
-          <div className="absolute -left-10 -top-10 z-0 hidden h-36 w-36 rounded-full bg-primary/10 md:block" />
-          <img
-            src="/new/realestatewomen.webp" // Replace with your actual image path
-            alt="Woman using AR/VR"
-            className="relative z-10 max-h-[500px] w-full rounded-xl object-cover shadow-lg"
-          />
-        </div>
       </div>
     </section>
   );
 }
-
 function RealstateRevolution() {
   return (
     <section className="bg-[#f6faff] px-6 py-16 md:px-12 lg:px-20">
       <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
-        <div className="relative flex justify-center">
+        <div >
+          <h2 className="mb-6 text-2xl font-bold leading-tight text-gray-900 md:text-3xl lg:text-4xl">
+            Transform Your Property Business with Custom Real Estate App Solutions
+          </h2>
+          <p className="mb-4 text-base text-gray-700 lg:text-lg">
+            AV Technosys is a trusted real estate app development company that empowers property businesses with innovative, tech-driven solutions. Our custom apps streamline operations, enhance user experience, and improve sales efficiency. With years of industry expertise, we build scalable and user-centric platforms for the ever-evolving real estate market. Partner with us to take your property business to the next level.
+          </p>
+        </div>
+         <div className="relative flex justify-center">
           <img
-            src="/new/realestateapppic.webp" // Replace with your background image
+            src="/new/bannerofre2.jpg" // Replace with your background image
             alt="City Background"
             className="h-auto w-full rounded-lg object-cover"
           />
-        </div>
-
-        <div>
-          <h2 className="mb-6 text-xl font-bold leading-tight text-gray-900 md:text-2xl lg:text-4xl">
-            Revolutionize Your Property Business with Real Estate App
-            Development
-          </h2>
-          <p className="mb-4 text-base text-gray-700 lg:text-lg">
-            JPloft, a premier real estate app development company, empowers
-            businesses with cutting-edge real estate app solutions.we craft apps
-            that Our solutions ensure streamlined processes, boosting efficiency
-            and user satisfaction.
-          </p>
-          <p className="text-base text-gray-700 lg:text-lg">
-            With years of expertise in real estate application development, we
-            specialize in creating user-centric platforms. property market.
-            Partner with us for innovative real estate app development services
-            tailored to your needs.
-          </p>
         </div>
       </div>
     </section>
   );
 }
-
-function RealstateConquereTrill() {
-  return (
-    <div className="rounded-3xl bg-[#fff5ef] px-6 py-12 md:px-12 lg:px-20">
-      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row">
-        <div className="md:w-1/2">
-          <h2 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
-            <span className="text-orange-500">Conquer $ Trillion</span>
-            <br />
-            Industry With Real Estate Software Development
-          </h2>
-          <p className="text-base leading-relaxed text-gray-700 md:text-lg">
-            Real estate market in the United States of America is projected to
-            reach $2.80 trillion by 2028, offering explosive growth and
-            unmatched revenue generation opportunities. Exploit the opportunity
-            with tailored real estate software development services and create a
-            solution that helps your business grow while offering value to your
-            end users.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:w-1/2">
-          <div className="rounded-xl bg-[#ffa876] bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">80% Buyers Use Apps</div>
-            <p className="text-sm text-gray-800">
-              Statistics show us more than 80% of potential homebuyers start
-              their property search via real estate apps.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-[#ffa876] bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">
-              90% Agents Support Apps
-            </div>
-            <p className="text-sm text-gray-800">
-              90%+ real estate agents believe apps improve user experience,
-              driving customer satisfaction and higher conversion rates.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-[#ffa876] bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">30% Dedicated Apps</div>
-            <p className="text-sm text-gray-800">
-              Real estate mobile apps are so successful that more than 30% of
-              real estate companies have dedicated real estate solutions.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-[#ffa876] bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">15% Boost In Sales</div>
-            <p className="text-sm text-gray-800">
-              Not only do real estate mobile apps deliver a 15% sales boost, but
-              they also improve market ROI by 25%.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function RealstateHireDevelopers() {
   return (
-    <div className="rounded-3xl bg-[#f4f9fc] px-6 py-12 md:py-20">
+    <div className="rounded-3xl bg-[#f4f9fc] px-6 py-7 md:py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 lg:flex-row">
-        <div className="lg:w-1/2">
+        <div className="lg:max-w-xl">
           <img
-            src="/new/hiredevelopers.webp"
+            src="/new/real-estate-firm[2].png"
             alt="dev1"
             className="h-full w-full rounded-xl object-cover"
           />
@@ -267,20 +196,10 @@ function RealstateHireDevelopers() {
             Hire Real Estate App Developers
           </h2>
           <p className="mb-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            Looking for experienced real estate app developers? JPloft offers a
-            team of skilled professionals specializing in real estate
-            application development. From real estate web app development to
-            mobile apps, our developers craft customized solutions to meet your
-            business goals and deliver outstanding results for your property
-            platform.
+            AV Technosys offers a dedicated team of professionals skilled in building high-performance real estate web and mobile applications. We create tailored solutions that align with your business goals and enhance your property platform’s impact.
           </p>
           <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg">
-            When you hire real estate app developers from JPloft, you gain
-            access to expertise in cutting-edge technologies and innovative real
-            estate app development services. Our developers focus on
-            scalability, seamless user experiences, and timely delivery to
-            ensure your app becomes a market leader in the competitive real
-            estate industry.
+           By hiring real estate app developers from AV Technosys, you gain access to cutting-edge technology, scalable architecture, and user-centric design. Our focus on innovation, seamless UX, and on-time delivery ensures your app stands out in the competitive real estate market.
           </p>
           <button className="rounded-full bg-[#EAB308] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#CA8A04] md:text-base">
             Hire Real Estate App Developers
@@ -290,148 +209,6 @@ function RealstateHireDevelopers() {
     </div>
   );
 }
-
-function RealstateLookingforApp() {
-  return (
-    <div
-      style={{
-        backgroundImage: "url('/new/revenu-app-bg.webp')",
-        backgroundPosition: 'center left',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }}
-      className="mb-10"
-    >
-      <div className="mx-auto max-w-7xl">
-        <div className="flex flex-wrap items-center justify-around">
-          <div className="flex flex-col items-start justify-start gap-5 p-8 lg:max-w-sm lg:p-0">
-            <h1 className="text-2xl font-bold">
-              <span className="text-white">Looking to Build a</span>{' '}
-              Revenue-Generating{' '}
-              <span className="text-white">Real Estate App?</span>
-            </h1>
-            <p className="text-sm text-white">
-              We help agencies, brokers, and investors make their mark through a
-              scalable real estate application.
-            </p>
-            <button className="rounded-lg bg-black px-4 py-2 text-white duration-300 hover:scale-105">
-              Get A Cost Estimate
-            </button>
-          </div>
-          <div className="max-w-xs md:max-w-sm">
-            <img
-              src="/new/revenue-mobile-img.webp"
-              className="h-full w-full"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function RealstateTechnologyused() {
-  return (
-    <div className="bg-white px-6 py-12">
-      <div className="mx-auto max-w-7xl text-center">
-        <h2 className="mb-2 text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl">
-          Advanced Technologies We Use for Real Estate App Development
-        </h2>
-        <div className="mx-auto mb-10 mt-4 h-1 w-24 rounded-full bg-[#EAB308]"></div>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-500 hover:scale-105 hover:shadow-xl">
-            <img
-              src="/new/tors1.svg"
-              alt="AI Icon"
-              className="mb-4 h-10 w-10"
-            />
-            <h3 className="mb-1 text-lg font-bold">
-              Artificial Intelligence (AI)
-            </h3>
-            <p className="text-sm text-gray-700">
-              We utilize AI for features like personalized recommendations,
-              property valuation, and virtual assistants. AI enhances user
-              engagement and decision-making capabilities.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-500 hover:scale-105 hover:shadow-xl">
-            <img
-              src="/new/tors2.svg"
-              alt="Cloud Icon"
-              className="mb-4 h-10 w-10"
-            />
-            <h3 className="mb-1 text-lg font-bold">Cloud Computing</h3>
-            <p className="text-sm text-gray-700">
-              With cloud integration, our apps provide secure data storage,
-              scalability and easy access to property information, ensuring
-              smooth and seamless operations.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-500 hover:scale-105 hover:shadow-xl">
-            <img
-              src="/new/tors3.svg"
-              alt="ML Icon"
-              className="mb-4 h-10 w-10"
-            />
-            <h3 className="mb-1 text-lg font-bold">Machine Learning (ML)</h3>
-            <p className="text-sm text-gray-700">
-              Our apps leverage ML for predictive analytics, market trend
-              forecasting, and dynamic search capabilities. ML empowers smarter
-              property management.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-500 hover:scale-105 hover:shadow-xl">
-            <img
-              src="/new/tors4.svg"
-              alt="Blockchain Icon"
-              className="mb-4 h-10 w-10"
-            />
-            <h3 className="mb-1 text-lg font-bold">Blockchain Technology</h3>
-            <p className="text-sm text-gray-700">
-              Blockchain ensures secure and transparent transactions in real
-              estate application development. It simplifies payments, contracts,
-              and document management processes.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-500 hover:scale-105 hover:shadow-xl">
-            <img
-              src="/new/tors5.svg"
-              alt="IoT Icon"
-              className="mb-4 h-10 w-10"
-            />
-            <h3 className="mb-1 text-lg font-bold">IoT Integration</h3>
-            <p className="text-sm text-gray-700">
-              We incorporate IoT for smart home controls and real-time property
-              monitoring, adding modern convenience to custom real estate app
-              development.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-500 hover:scale-105 hover:shadow-xl">
-            <img
-              src="/new/tors6.svg"
-              alt="AR Icon"
-              className="mb-4 h-10 w-10"
-            />
-            <h3 className="mb-1 text-lg font-bold">Augmented Reality (AR)</h3>
-            <p className="text-sm text-gray-700">
-              AR enables virtual property tours, offering immersive 3D
-              experiences. It’s a game-changer for remote property exploration
-              and engagement.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Realstatewhychooseus() {
   return (
     <div className="mt-12 bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-16 md:px-16">
@@ -439,64 +216,46 @@ function Realstatewhychooseus() {
         <div className="gap-12 md:flex md:items-start md:justify-between">
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold leading-normal text-black md:text-4xl">
-              Why <span className="text-[#EAB308]">AV Technosys</span> Is Your
-              Ideal <br /> Real State App Development Partner
+              Why Choose <span className="text-[#EAB308]">AV Technosys </span> for Real Estate App Development?
             </h2>
             <div className="mb-6 mt-4 h-[3px] w-16 bg-[#EAB308]"></div>
             <p className="text-base leading-relaxed text-[#1d1d1d]">
-              AV Technosys is a top AI development company delivering
-              innovative, scalable, and custom AI solutions that help businesses
-              automate processes, boost efficiency, and achieve sustainable
-              growth. Our smart, industry-focused approach ensures every
-              solution aligns perfectly with client goals.
+             AV Technosys stands as a trusted leader in real estate app development, offering end-to-end, tailor-made digital solutions that combine cutting-edge technology, deep industry expertise, and a user-centric approach. From intuitive mobile platforms to advanced backend systems, we empower agencies, brokers, and property businesses with scalable, high-performance apps backed by continuous support and innovation at every stage.
             </p>
           </div>
 
           <div className="mt-10 space-y-8 md:mt-0 md:w-1/2">
-            <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w1.svg"
-                alt="Expert Team"
-                className="mr-4 h-12 w-12"
-              />
+            <div className="flex items-start hover:scale-105 duration-500 rounded-2xl bg-white p-4 shadow-sm">
               <div>
                 <h3 className="mb-1 text-lg font-bold text-black">
-                  Expert AI Team
+                  Industry Expertise
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                  Skilled developers building smart, impactful AI solutions.
+                   With deep experience in real estate mobile app development, we deliver innovative, market-ready solutions that elevate your property business.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w2.svg"
-                alt="Custom Development"
-                className="mr-4 h-12 w-12"
-              />
+            <div className="flex items-start hover:scale-105 duration-500 rounded-2xl bg-white p-4 shadow-sm">
+              
               <div>
                 <h3 className="mb-1 text-lg font-bold text-black">
-                  Custom AI Services
+                  Custom Solutions
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                  AI apps designed to fit your unique business needs.
+                   We specialize in building tailored real estate apps, aligning every feature with your business goals and user expectations for maximum impact.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w3.svg"
-                alt="End-to-End Solutions"
-                className="mr-4 h-12 w-12"
-              />
+            <div className="flex items-start hover:scale-105 duration-500 rounded-2xl bg-white p-4 shadow-sm">
+              
               <div>
                 <h3 className="mb-1 text-lg font-bold text-black">
-                  End-to-End Solutions
+                  End-to-End Development
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                  Complete AI development from planning to launch.
+                  From initial design to final deployment, we manage the complete development lifecycle, ensuring smooth execution and timely delivery.
                 </p>
               </div>
             </div>
@@ -506,3 +265,4 @@ function Realstatewhychooseus() {
     </div>
   );
 }
+

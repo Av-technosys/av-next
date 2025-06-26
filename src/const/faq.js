@@ -266,3 +266,50 @@ export const contactFawData = [
     ),
   },
 ];
+
+
+export const realEstateFawData=[
+  {
+    value: 'faq-1',
+    question: 'What Is Real Estate App Development?',
+    answer: (
+      <p>
+        Real estate app development involves creating mobile or web-based applications tailored to the needs of the property market. These apps help buyers, sellers, agents, and investors connect, communicate, and carry out property transactions more efficiently through features like property listings, virtual tours, map integrations, and more.
+      </p>
+    ),
+  },{
+    value: 'faq-2',
+    question: 'How Much Does It Cost to Develop a Real Estate App?',
+    answer: (
+      <p>
+       The cost of developing a real estate app varies based on its complexity, features, design requirements, and platform (iOS, Android, or both). A basic app may start around $5,000–$10,000, while feature-rich solutions like Zillow or Realtor can cost $25,000–$100,000+. Get in touch with us for a tailored estimate.
+
+      </p>
+    ),
+  },{
+    value: 'faq-3',
+    question: 'How Long Does It Take to Build a Real Estate App?',
+    answer: (
+      <p>
+        The development timeline depends on the app's functionality and customization level. A simple app may take 6–8 weeks, whereas a complex, fully-featured platform could require 3–6 months or more. We follow agile development to ensure transparency and faster delivery.
+      </p>
+    ),
+  },{
+    value: 'faq-4',
+    question: 'Why Choose AV Technosys for Real Estate App Development?',
+    answer: (
+      <p>
+        AV Technosys combines industry expertise, innovative technology, and client-focused strategies to deliver high-performance real estate apps. We offer end-to-end services—from consultation and UI/UX design to development, testing, and support, ensuring your app meets business goals and exceeds user expectations.
+
+      </p>
+    ),
+  },{
+    value: 'faq-5',
+    question: 'How Can I Build a Real Estate App Like Zillow?',
+    answer: (
+      <p>
+        To create an app like Zillow, you’ll need a well-planned strategy that includes market research, feature selection, UI/UX design, backend development, third-party integrations (like maps or MLS), and testing. Working with an experienced app development team like AV Technosys ensures your app is built to scale with modern, user-friendly features and smooth performance
+      </p>
+    ),
+  },
+]

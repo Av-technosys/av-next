@@ -1,5 +1,6 @@
 import React from 'react';
 import { ratingData } from '@/const/ratingData';
+
 import { cn } from '@/lib/utils';
 const Ratings = ({className= ""}) => {
   return (
