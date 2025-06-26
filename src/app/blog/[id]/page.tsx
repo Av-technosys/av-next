@@ -11,6 +11,8 @@ import { NavBarHome } from '@/components/navBar';
 import { TableOfContents } from './tableOfContext';
 import { TArroeRight } from '@/components/icons';
 
+export const revalidate = 604800;
+
 type Props = {
   params: Promise<{ id: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -123,7 +125,6 @@ const Page = async (context: any) => {
           <QueryForm slug={slug} />
         </div>
       </div>
-      {/* <div className="mt-24 h-16 bg-gradient-to-b from-white to-gray-200"></div> */}
       <div className="mt-12 w-full bg-gray-100 px-4 py-12">
         <div className="mx-auto max-w-7xl text-black">
           <div className="mb-8 flex flex-col justify-between gap-4 xl:flex-row xl:items-center">

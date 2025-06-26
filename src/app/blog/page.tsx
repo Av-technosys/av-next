@@ -1,13 +1,12 @@
 import Footer1 from '../footer1';
 
 import { getAllBlogsMetaDeta } from './../../../lib/index';
-import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
 import { Metadata } from 'next';
 import { NavBarHome } from '@/components/navBar';
-import { blogCategories } from '@/const';
 import { blogCategorySummery } from '@/const/blogCategories';
 import ShowBlogs from './showBlogs';
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Blogs',

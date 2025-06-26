@@ -48,8 +48,8 @@ const components = [
       'Build fast, SEO-friendly websites with expert development services.',
   },
   {
-    title: 'App Development',
-    href: '/services',
+    title: 'Mobile App Development',
+    href: '/mobile-app-development',
     description: 'Fast, custom mobile apps for iOS and Android.',
   },
   {
