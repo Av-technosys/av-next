@@ -39,7 +39,7 @@ const RealEstateConquere = () => {
          {
           RealConquereAndTrill?.map((item,index)=>{
             return(
-                <div key={index} className={`rounded-xl bg-${item.bgcolor}  hover:scale-105 duration-500  text-white bg-opacity-70 p-5 text-center shadow-md`}>
+                <div key={index} className={`rounded-xl bg-${item?.bgcolor}  hover:scale-105 duration-500  text-white bg-opacity-70 p-5 text-center shadow-md`}>
             <div className="mb-2 text-xl font-bold">{item.heading}</div>
             <p className="text-sm text-white">
               {item.description}

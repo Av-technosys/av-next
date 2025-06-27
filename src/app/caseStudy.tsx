@@ -2,9 +2,9 @@
 import { TArroeRight } from '@/components/icons';
 import { SectionHeading } from '@/components/sectionHeading';
 
-export const CaseStudy = () => {
+export const CaseStudy = ({className=""}) => {
   return (
-    <div className="w-full p-1 py-12 pb-20 sm:px-2">
+    <div className={cn("w-full p-1 py-12 pb-20 sm:px-2",className)}>
       <SectionHeading
         title="We build impactful mobile and web apps"
         desc=" Here is how we have created a success story for brands dreaming big and something exceptional."
