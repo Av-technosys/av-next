@@ -5,7 +5,7 @@ import Cldren from './children';
 import { NavBarHome } from '@/components/navBar';
 import Header from './heroSection';
 import { CEOInfo } from '@/components/CEOInfo';
-import { Locations } from '@/components/location';
+import { Locations } from '@/components/Location';
 import { InsightAboutUs } from '@/conponents/InsightAboutUs';
 
 export const metadata: Metadata = {
@@ -32,7 +32,6 @@ export const metadata: Metadata = {
 const ContactUs = () => {
   return (
     <div className="bg-white pt-3">
-      {/* <Header2 /> */}
       <NavBarHome />
       <Header />
       <CEOInfo />

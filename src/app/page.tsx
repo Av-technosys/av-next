@@ -37,6 +37,7 @@ import dayjs from 'dayjs';
 import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
 import { ContactUs } from '@/components/contactUs';
+import { Locations } from '@/components/Location';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -56,7 +57,7 @@ const Home = () => {
       <BookCall setIsLeadOpen={setIsLeadOpen} />
       <TechnologiesOffered />
       <WhyChooseUs />
-      <ContactUs/>
+      <ContactUs />
       <FaqAccordion />
       <BlogSection />
       <Locations />
@@ -203,7 +204,7 @@ function ServiceSection() {
         />
 
         <div className="">
-          <HoverEffect items={serviceData} iconClassName={"!text-white"} />
+          <HoverEffect items={serviceData} iconClassName={'!text-white'} />
         </div>
       </div>
     </div>
@@ -244,13 +245,11 @@ function AISection({ setIsLeadOpen }) {
           </div>
 
           <Link href="/ai-development-services">
-          <button
-            className="group relative mt-6 inline-flex w-fit overflow-hidden rounded-3xl border border-neutral-600 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-          >
-            Explore More
-            <span className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800"></span>
-            <span className="absolute bottom-0.5 left-0 h-[2px] w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800 opacity-0 blur-sm group-hover:opacity-100"></span>
-          </button>
+            <button className="group relative mt-6 inline-flex w-fit overflow-hidden rounded-3xl border border-neutral-600 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              Explore More
+              <span className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800"></span>
+              <span className="absolute bottom-0.5 left-0 h-[2px] w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800 opacity-0 blur-sm group-hover:opacity-100"></span>
+            </button>
           </Link>
         </div>
         <img
@@ -292,61 +291,6 @@ function PartnerSection() {
             alt=""
           />
           {/* <img src="/new/review/google-cloud-partner.svg" alt="" /> */}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Locations() {
-  return (
-    <div className="w-full border-y-4 border-neutral-600 bg-neutral-800 px-4 py-16 text-white">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-india.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">INDIA</p>
-          <p className="text-center text-sm">
-            238, 2nd floor, Purani Chungi, <br />
-            DCM Road, Vaishali Nagar, <br />
-            Jaipur, Rajasthan, 302017 <br />
-            +91 9983034111
-          </p>
-        </div>
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uk.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">UK</p>
-          <p className="text-center text-sm">
-            1-3 St Nicholas Street Worcester <br />
-            WR1 1UW, United Kingdom <br />
-            +44 7470994018
-          </p>
-        </div>
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uae.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">UAE</p>
-          <p className="text-center text-sm">
-            M01, AL Mulla Building 2, <br />
-            Near Burj Nahar Mall, Deira, Dubai <br />
-            +971 521665467
-          </p>
         </div>
       </div>
     </div>

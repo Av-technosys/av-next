@@ -267,6 +267,247 @@ export const contactFawData = [
   },
 ];
 
+export const mobileServiceFAQ = [
+  {
+    value: 'item-1',
+    question:
+      'What services does your custom mobile app development company offer?',
+    answer: (
+      <p>
+        We offer end-to-end mobile app development services including idea
+        validation, UI/UX design, native and cross-platform development,
+        backend/API integration, QA & testing, app deployment, and post-launch
+        maintenance. Our solutions are fully customized to match your business
+        goals.
+      </p>
+    ),
+  },
+  {
+    value: 'item-2',
+    question: 'Do you specialize in developing apps for iOS, Android, or both?',
+    answer: (
+      <p>
+        We specialize in building high-performance mobile apps for both iOS and
+        Android platforms. Whether you need a native app or a cross-platform
+        solution, our team can deliver seamless experiences across all devices.
+      </p>
+    ),
+  },
+  {
+    value: 'item-3',
+    question: 'How much does mobile app development cost?',
+    answer: (
+      <p>
+        The cost depends on various factors such as app complexity, features,
+        design, platform(s), and third-party integrations. On average, custom
+        app development can range from $5,000 to $100,000+. We provide tailored
+        quotes after a detailed consultation.
+      </p>
+    ),
+  },
+  {
+    value: 'item-4',
+    question: 'How long does it take to develop a mobile app?',
+    answer: (
+      <p>
+        The development timeline typically ranges from 6 to 20 weeks, depending
+        on the project scope, design requirements, features, and testing needs.
+        We also offer agile development for faster MVP delivery.
+      </p>
+    ),
+  },
+  {
+    value: 'item-5',
+    question: 'What is your app development process?',
+    answer: (
+      <ul className="list-disc space-y-1 pl-4">
+        <li>Requirement Analysis</li>
+        <li>Wireframing & UI/UX Design</li>
+        <li>Development (Frontend + Backend)</li>
+        <li>Testing & QA</li>
+        <li>Deployment to App Stores</li>
+        <li>Ongoing Support & Updates</li>
+      </ul>
+    ),
+  },
+  {
+    value: 'item-6',
+    question:
+      'Do you provide app maintenance and updates after the app is launched?',
+    answer: (
+      <p>
+        Yes, we offer comprehensive maintenance and support services, including
+        bug fixes, performance monitoring, regular updates, new feature
+        integrations, and compatibility adjustments with the latest OS versions.
+      </p>
+    ),
+  },
+  {
+    value: 'item-7',
+    question: 'Can you help with app design and user experience (UX)?',
+    answer: (
+      <p>
+        Absolutely. Our in-house UI/UX experts design intuitive and visually
+        appealing interfaces that enhance user engagement and ensure seamless
+        navigation across your app.
+      </p>
+    ),
+  },
+  {
+    value: 'item-8',
+    question: 'Do you develop both native and hybrid apps?',
+    answer: (
+      <p>
+        Yes, we develop both native apps (using Swift for iOS and Kotlin for
+        Android) and hybrid/cross-platform apps using technologies like Flutter
+        and React Native, tailored to your project's needs and budget.
+      </p>
+    ),
+  },
+  {
+    value: 'item-9',
+    question: 'How do you ensure the security of the mobile apps you develop?',
+    answer: (
+      <p>
+        Security is a top priority. We implement best practices like secure
+        authentication, encrypted data storage, secure APIs, code obfuscation,
+        and regular vulnerability testing to ensure your app and user data are
+        fully protected.
+      </p>
+    ),
+  },
+  {
+    value: 'item-10',
+    question: 'Can you integrate third-party services and APIs into the app?',
+    answer: (
+      <p>
+        Yes, we have extensive experience integrating third-party services such
+        as payment gateways, CRMs, analytics tools, chat platforms, maps, social
+        logins, and more to enhance app functionality.
+      </p>
+    ),
+  },
+];
+
+export const AIDevelopmentServiceFAQ = [
+  {
+    value: 'item-1',
+    question: 'What are the benefits of choosing custom AI development?',
+    answer: (
+      <p>
+        Custom AI development allows you to build solutions specifically
+        designed around your business needs. This ensures better accuracy,
+        higher efficiency, and scalable results that generic tools often can’t
+        offer.
+      </p>
+    ),
+  },
+  {
+    value: 'item-2',
+    question: 'Why should I integrate AI into my business operations?',
+    answer: (
+      <p>
+        Integrating AI helps automate tasks, improve decision-making, boost
+        productivity, and deliver more personalized experiences—making your
+        business smarter and more competitive.
+      </p>
+    ),
+  },
+  {
+    value: 'item-3',
+    question: 'How do AI models actually work?',
+    answer: (
+      <p>
+        AI models use large datasets and algorithms to learn patterns, make
+        predictions, and improve over time. Depending on the use case, these
+        models can classify data, recognize images, understand speech, or even
+        mimic human decision-making.
+      </p>
+    ),
+  },
+  {
+    value: 'item-4',
+    question: 'What kinds of AI solutions do you develop?',
+    answer: (
+      <p>
+        We build a wide range of AI solutions, including chatbots, predictive
+        analytics systems, image and voice recognition tools, recommendation
+        engines, NLP-based applications, and process automation tools across
+        industries.
+      </p>
+    ),
+  },
+  {
+    value: 'item-5',
+    question: 'What technologies do you use in AI application development?',
+    answer: (
+      <p>
+        Our tech stack includes Python, TensorFlow, PyTorch, Keras, OpenCV,
+        Scikit-learn, and cloud platforms like AWS, Azure, and Google Cloud for
+        scalable AI deployments.
+      </p>
+    ),
+  },
+  {
+    value: 'item-6',
+    question:
+      'What is the typical timeline for planning and executing an AI project?',
+    answer: (
+      <p>
+        It usually takes 1–2 weeks to define the scope and project roadmap.
+        Depending on the complexity, development and deployment may take
+        anywhere from 2 to 6 months.
+      </p>
+    ),
+  },
+  {
+    value: 'item-7',
+    question: 'How do you ensure the security of AI projects?',
+    answer: (
+      <p>
+        We implement strict data encryption, access control, and secure APIs. We
+        also follow industry best practices like GDPR compliance, secure model
+        training, and regular vulnerability assessments.
+      </p>
+    ),
+  },
+  {
+    value: 'item-8',
+    question: 'What is the estimated cost of building an AI-based application?',
+    answer: (
+      <p>
+        The cost can vary widely based on project complexity, required features,
+        and development hours. On average, a custom AI app can range from
+        $15,000 to $100,000 or more.
+      </p>
+    ),
+  },
+  {
+    value: 'item-9',
+    question: 'How long does it take to develop a full AI-based product?',
+    answer: (
+      <p>
+        Development timelines vary based on the scope, but most AI projects take
+        between 8 to 24 weeks, including research, model training, testing, and
+        deployment.
+      </p>
+    ),
+  },
+  {
+    value: 'item-10',
+    question:
+      'What should I consider when choosing an AI app development company?',
+    answer: (
+      <p>
+        Look for experience, a strong AI portfolio, tech expertise,
+        industry-specific knowledge, client reviews, and ongoing support
+        services. A reliable company will understand your business goals and
+        translate them into impactful AI solutions.
+      </p>
+    ),
+  },
+];
+
 
 export const realEstateFawData=[
   {

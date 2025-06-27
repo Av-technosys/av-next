@@ -1,35 +1,11 @@
-'use client';
-import { useState } from 'react';
 import Ratings from '../ratings';
 import { SectionHeading } from '@/components/sectionHeading';
-
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-
-import Autoplay from 'embla-carousel-autoplay';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { NavBarHome } from '@/components/navBar';
 import Footer1 from '../footer1';
-import { InputText } from '@/components/inputText';
-import { InputTextArea } from '@/components/inputTextArea';
 import Image from 'next/image';
-import CustomInputNumber from '../contact-us/inputNumber';
-import Link from 'next/link';
 import { PortfolioCrousel } from '../hire-us/crouselPortfolio';
 import { AIButton, TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
@@ -40,6 +16,33 @@ import BuildSmartSolutions from './BuildSmartSolution';
 import AiProjectCost from './AIProjectCons';
 import { AiEffectSection } from './AIEffectSection';
 import { blogsAI } from '@/cosnt';
+import { AIDevelopmentServiceFAQ } from '@/const';
+import { Metadata } from 'next';
+import TestimonilaCrousel from '@/components/testimonilaCrousel';
+import { Locations } from '@/components/Location';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'AI Development Services | AI Development Company | AV Technosys',
+  },
+  description:
+    'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/ai-development-services/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'AI Development Services | AI Development Company | AV Technosys',
+    description:
+      'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
+    url: 'https://www.avtechnosys.com/ai-development-services/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
@@ -65,29 +68,12 @@ const Page = () => {
           title={'What Our Clients Say About Working With Us'}
         />
         <div className="mx-auto w-full max-w-7xl px-6">
-          <Carousel
-            plugins={[
-              Autoplay({
-                delay: 3000,
-              }),
-            ]}
-            className=""
-          >
-            <CarouselContent>
-              {cardData?.map((cardData, index) => (
-                <CarouselItem key={index}>
-                  <Card cardData={cardData} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-black" />
-            <CarouselNext className="text-black" />
-          </Carousel>
+          <TestimonilaCrousel cardClassName=" bg-neutral-900" />
         </div>
       </section>
       <Whychooseus />
       <AiEffectSection />
-      <FaqAccordion />
+      <FaqAccordion data={AIDevelopmentServiceFAQ} />
       <ContactUs />
       <BlogSection data={blogsAI} />
       <Locations />
@@ -177,61 +163,6 @@ function ServiceSection() {
               '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde]  group-hover:shadow-gray-500 shadow-lg '
             }
           />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Locations() {
-  return (
-    <div className="w-full border-y-4 border-neutral-600 bg-neutral-800 px-4 py-16 text-white">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-india.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">INDIA</p>
-          <p className="text-center text-sm">
-            238, 2nd floor, Purani Chungi, <br />
-            DCM Road, Vaishali Nagar, <br />
-            Jaipur, Rajasthan, 302017 <br />
-            +91 9983034111
-          </p>
-        </div>
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uk.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">UK</p>
-          <p className="text-center text-sm">
-            1-3 St Nicholas Street Worcester <br />
-            WR1 1UW, United Kingdom <br />
-            +44 7470994018
-          </p>
-        </div>
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uae.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">UAE</p>
-          <p className="text-center text-sm">
-            M01, AL Mulla Building 2, <br />
-            Near Burj Nahar Mall, Deira, Dubai <br />
-            +971 521665467
-          </p>
         </div>
       </div>
     </div>
@@ -406,42 +337,6 @@ function OurExpertsSection() {
     </section>
   );
 }
-
-function Card({ cardData }) {
-  return (
-    <div className="relative mx-auto h-full max-w-[92vw] rounded-xl border-2 border-neutral-700 bg-black p-6 md:p-12">
-      <span className="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700"></span>
-      <span className="absolute bottom-px right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700 blur-xl"></span>
-      <p className="border-b border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">
-        {cardData.msg}
-      </p>
-      <div className="flex gap-6">
-        <img src={cardData.img} alt="" className="mt-6 size-20 rounded-xl" />
-        <div className="mt-auto pb-1">
-          <p className="mt-4 text-lg font-semibold text-white">
-            {cardData.name}
-          </p>
-          <p className="text-sm text-gray-400">{cardData.position}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const cardData = [
-  {
-    msg: 'AV Technosys turned our ideas into a seamless digital solution. Their team was reliable, responsive, and easy to work with. We truly valued their professionalism, attention to detail, and collaborative spirit throughout the project.',
-    name: 'Earl Duncan',
-    position: 'Founder, S4 Digi – Digital Marketing',
-    img: '/earlcan.png',
-  },
-  {
-    msg: 'Our app has seen a noticeable boost in user engagement since launch. AV Technosys delivered a high-quality product tailored to our needs. The team was efficient, responsive, and easy to collaborate with. We’re very satisfied with the results and their overall professionalism.',
-    name: 'Nitin',
-    position: 'Founder, Tavaga – Stock Consultancy',
-    img: '/nitin-tavaga.png',
-  },
-];
 
 function Whychooseus() {
   return (

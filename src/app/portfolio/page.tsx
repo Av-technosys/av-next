@@ -4,7 +4,7 @@ import { portfolioData } from '@/const';
 import { NavBarHome } from '@/components/navBar';
 import HeroSection from '@/components/titleGrid';
 import { BlogSection } from '@/components/blogSection';
-import { Locations } from '@/components/location';
+import { Locations } from '@/components/Location';
 import { PortfolioList } from './portfolioList';
 import { GetLeadForm } from './getLeadForm';
 
