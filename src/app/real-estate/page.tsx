@@ -9,6 +9,8 @@ import RealstateAppServices from "@/app/real-estate/realEstateAppServices";
 import RealEstateProjectCost from '@/app/real-estate/realEstateProjectCost';
 import RealEstateAppClone from '@/app/real-estate/realEstateAppClone';
 import RealEstateTestimonial from '@/app/real-estate/realEstateTestimonial';
+import RealEstateAVandVR from '@/app/real-estate/realEstateAVandVR';
+import RealEstateHiredev from '@/app/real-estate/realEstateHiredev';
 
 import Footer1 from '../footer1';
 import { FaqAccordion } from '@/components/faqAccordion';
@@ -16,12 +18,13 @@ import { TechnologiesOffered } from '@/components';
 import { SectionHeading } from '@/components/sectionHeading';
 import { ContactUs } from '@/components/contactUs';
 import { realEstateFawData } from '@/const';
+import RealEstateHero from "@/app/real-estate/realEstateHero"
 
 const RealEstatePage = () => {
   return (
     <>
       <NavBarHome />
-      <RealestateHero />
+      <RealEstateHero/>
       <RealstateRevolution />
       <Rating2/>
       <RealstateAppServices/>
@@ -29,10 +32,10 @@ const RealEstatePage = () => {
       <RealEstateAppClone/>
       <TechnologiesOffered />
       <RealEstateTestimonial/>
-      <RealestateAVandVR />
+      <RealEstateAVandVR/>
       <RealEstateTechnology/>
       <RealEstateConquere/>
-      <RealstateHireDevelopers />
+      <RealEstateHiredev/>
       <Realstatewhychooseus />
       <FaqAccordion data={realEstateFawData} />
       <ContactUs />
@@ -99,63 +102,6 @@ function Locations() {
     </div>
   );
 }
-function RealestateHero() {
-  return (
-    <div
-      className="h-auto"
-      style={{
-        backgroundImage: "url('/new/rebanner.jpg')",
-        backgroundPosition: "top",
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}
-    >
-      <div className="mx-auto flex h-[500px] max-w-7xl flex-col items-center justify-center gap-1 rounded-none !px-8 text-center text-white">
-        <span className="text-3xl font-bold md:text-4xl lg:text-6xl">
-          Real Estate
-        </span>
-        <h1 className="text-2xl font-bold md:text-4xl lg:text-6xl">
-          App Development Company
-        </h1>
-        <p className="mt-2 text-lg md:mt-4 lg:mt-6">
-          Transforming real estate with next-generation, custom-built technology solutions
-        </p>
-        <button className='text-white border mt-5 border-white rounded-full px-3 py-2 hover:text-black hover:bg-white duration-300 hover:scale-105'>Consults Our Experts</button>
-      </div>
-    </div>
-  );
-}
-function RealestateAVandVR() {
-  return (
-    <section className="bg-sky-100 px-6 py-16 md:px-12 lg:px-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
-         <div className="relative">
-          <img
-            src="/new/rsgirl.jpg" // Replace with your actual image path
-            alt="Woman using AR/VR"
-            className="relative z-10 max-h-[500px] w-full rounded-xl object-cover shadow-lg"
-          />
-        </div>
-
-        <div className='text-center md:text-start flex flex-col items-center md:items-start'>
-          <h2 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl ">
-            Smart Real Estate App Solutions Integrating AR & VR Experiences
-          </h2>
-          <p className="mb-4 text-base text-gray-700 lg:text-lg">
-            In today’s era of immersive technologies like 3D, 4D, and beyond, AR and VR are revolutionizing how we view spaces, especially in real estate. Virtual Reality (VR) creates lifelike, computer-generated environments that help buyers visualize completed properties. Augmented Reality (AR) overlays digital elements onto real-world settings using cameras and sensors. These technologies allow real estate agents offer interactive, remote property tours, making it easier for clients to explore multiple homes without being physically present. It not only enhances the buyer experience but also shortens the sales cycle significantly.
-
-          </p>
-          
-
-          <button className="mt-4 flex items-center gap-2 rounded-full bg-[#EAB308] px-6 py-3 font-medium text-white shadow-sm transition-all hover:scale-105 hover:bg-[#CA8A04] hover:text-white">
-            Connect with us Now
-            <span className="text-lg">&#8594;</span>
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-}
 function RealstateRevolution() {
   return (
     <section className="bg-[#f6faff] px-6 py-16 md:px-12 lg:px-20">
@@ -179,36 +125,7 @@ function RealstateRevolution() {
     </section>
   );
 }
-function RealstateHireDevelopers() {
-  return (
-    <div className="rounded-3xl bg-[#f4f9fc] px-6 py-7 md:py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 lg:flex-row">
-        <div className="lg:max-w-xl">
-          <img
-            src="/new/real-estate-firm[2].png"
-            alt="dev1"
-            className="h-full w-full rounded-xl object-cover"
-          />
-        </div>
 
-        <div className="text-center lg:w-1/2 lg:text-left">
-          <h2 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl">
-            Hire Real Estate App Developers
-          </h2>
-          <p className="mb-4 text-base leading-relaxed text-gray-700 md:text-lg">
-            AV Technosys offers a dedicated team of professionals skilled in building high-performance real estate web and mobile applications. We create tailored solutions that align with your business goals and enhance your property platform’s impact.
-          </p>
-          <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg">
-           By hiring real estate app developers from AV Technosys, you gain access to cutting-edge technology, scalable architecture, and user-centric design. Our focus on innovation, seamless UX, and on-time delivery ensures your app stands out in the competitive real estate market.
-          </p>
-          <button className="rounded-full bg-[#EAB308] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#CA8A04] md:text-base">
-            Hire Real Estate App Developers
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
 function Realstatewhychooseus() {
   return (
     <div className="mt-12 bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-16 md:px-16">

@@ -1,6 +1,28 @@
 import React from 'react';
 
 const RealEstateConquere = () => {
+   const RealConquereAndTrill=[
+    {
+      heading:"80% of Buyers Use Apps",
+      description:"Over 80% of homebuyers begin their property search through real estate mobile apps, making it a crucial digital touchpoint.",
+      bgcolor:"black"
+    },
+    {
+      heading:"15% Increase in Sales",
+      description:"Real estate apps contribute to a 15% rise in sales and can improve overall ROI by up to 25%",
+      bgcolor:"orange-400"
+    },
+    {
+      heading:"90% of Agents Endorse Apps",
+      description:" More than 90% of real estate agents agree that apps enhance user experience and boost conversion rates.",
+      bgcolor:"orange-400"
+    },
+    {
+      heading:"30% of Companies Have Dedicated Apps",
+      description:"Driven by success, over 30% of real estate firms now use dedicated mobile apps to streamline operations and client interactions.",
+      bgcolor:"black"
+    },
+   ]
      return (
     <div className="rounded-3xl bg-gray-200 px-6 py-12 md:px-12 lg:px-20">
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row">
@@ -14,35 +36,18 @@ const RealEstateConquere = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:w-1/2">
-          <div className="rounded-xl bg-black  hover:scale-105 duration-500 text-white bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">80% of Buyers Use Apps</div>
-            <p className="text-sm  text-white">
-              Over 80% of homebuyers begin their property search through real estate mobile apps, making it a crucial digital touchpoint.
-            </p>
-          </div>
-            <div className="rounded-xl bg-orange-400  hover:scale-105 duration-500 bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">15% Increase in Sales</div>
-            <p className="text-sm text-gray-800">
-              Real estate apps contribute to a 15% rise in sales and can improve overall ROI by up to 25%
-            </p>
-          </div>
-          <div className="rounded-xl bg-orange-400  hover:scale-105 duration-500 bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">
-              90% of Agents Endorse Apps
-
-            </div>
-            <p className="text-sm text-gray-800">
-              More than 90% of real estate agents agree that apps enhance user experience and boost conversion rates.
-
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-black  hover:scale-105 duration-500  text-white bg-opacity-70 p-5 text-center shadow-md">
-            <div className="mb-2 text-xl font-bold">30% of Companies Have Dedicated Apps</div>
+         {
+          RealConquereAndTrill?.map((item,index)=>{
+            return(
+                <div key={index} className={`rounded-xl bg-${item.bgcolor}  hover:scale-105 duration-500  text-white bg-opacity-70 p-5 text-center shadow-md`}>
+            <div className="mb-2 text-xl font-bold">{item.heading}</div>
             <p className="text-sm text-white">
-              Driven by success, over 30% of real estate firms now use dedicated mobile apps to streamline operations and client interactions.
+              {item.description}
             </p>
           </div>
+            )
+          })
+         }
         </div>
       </div>
     </div>
