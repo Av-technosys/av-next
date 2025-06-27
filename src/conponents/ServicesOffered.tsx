@@ -10,8 +10,7 @@ import {
 import { SectionHeading } from '@/components/sectionHeading';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { cn } from '@/lib/utils';
-
-export function ServiceSection({ className = '' }: any) {
+export function ServiceSection({ className }: { className?: string }) {
   return (
     <div
       className={cn(
@@ -29,7 +28,7 @@ export function ServiceSection({ className = '' }: any) {
         />
 
         <div className="">
-          <HoverEffect items={serviceData} />
+          <HoverEffect items={serviceData} iconClassName={'!text-white'} />
         </div>
       </div>
     </div>

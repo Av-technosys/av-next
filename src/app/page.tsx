@@ -9,28 +9,18 @@ import { Cover } from './../components/ui/cover';
 
 import { InfoNav, NavBarHome } from './../components/navBar/index';
 import {
-  TAi,
   TArroeRight,
   TBriefcase,
   TCircleTick,
   TCircularRelation,
   TCode,
-  TDevops,
-  TDigitalMarketing,
   TFlag,
-  TMobileCode,
-  TSoftwareDevelopment,
-  TUserCode,
   TUserGroup,
   TWorld,
 } from '@/components/icons';
-import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
-import { CaseStudy } from './caseStudy';
 import { FaqAccordion } from '@/components/faqAccordion';
-import Ratings from './ratings';
 import { ratingData } from '@/const/ratingData';
-// import { ContactUs } from '@/app/contact-us';
 import Testimonial from './reviews';
 import Tabs from '@/components/techohologiesOffered';
 import dayjs from 'dayjs';
@@ -39,6 +29,9 @@ import { LeadPopUp } from '@/components/leadPopUp';
 import { ContactUs } from '@/components/contactUs';
 import { Locations } from '@/components/Location';
 import Image from 'next/image';
+import { CaseStudy } from '@/components/caseStudy';
+import Ratings from '@/components/ratings';
+import { ServiceSection } from '@/conponents/ServicesOffered';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -153,65 +146,6 @@ function HeroSection({ setIsLeadOpen }) {
               );
             })}
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const serviceData = [
-  {
-    name: 'Mobile App Development',
-    icon: TMobileCode,
-    description:
-      'We build responsive, scalable, and secure mobile apps that turn your ideas into high-performing, future-ready solutions.',
-  },
-  {
-    name: 'Software Development',
-    icon: TSoftwareDevelopment,
-    description:
-      'We build custom software tailored to your industry boosting efficiency while we handle the tech, so you can focus on growth.',
-  },
-  {
-    name: 'Digital Marketing',
-    icon: TDigitalMarketing,
-    description:
-      'At AV Technosys, we turn digital disruption into growth with data-driven marketing, seamless customer journeys, and strategies that deliver real, scalable results.',
-  },
-  {
-    name: 'AI Development',
-    icon: TAi,
-    description:
-      'From strategy to support, our AI services turn complex models into real-world solutions that drive automation, efficiency, and smarter decisions.',
-  },
-  {
-    name: 'DevOps',
-    icon: TDevops,
-    description:
-      'Our DevOps services integrate development and operations to accelerate releases, improve code quality, and reduce time-to-market.',
-  },
-  {
-    name: 'Hire Dedicated Developers',
-    icon: TUserCode,
-    description:
-      'Boost your team with expert Indian developers offering faster turnaround, consistent quality, and dedicated focus.',
-  },
-];
-
-function ServiceSection() {
-  return (
-    <div className="h-full w-full border-y-4 border-neutral-500 bg-zinc-800">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6 py-12 md:pb-20">
-        <SectionHeading
-          className="text-center"
-          title={'We build impactful mobile and web apps'}
-          titleClass="text-white"
-          desc=" Here is how we have created a success story for brands dreaming big and something exceptional."
-          descClass={'text-gray-300'}
-        />
-
-        <div className="">
-          <HoverEffect items={serviceData} iconClassName={'!text-white'} />
         </div>
       </div>
     </div>

@@ -1,12 +1,8 @@
-import Ratings from '../ratings';
 import { SectionHeading } from '@/components/sectionHeading';
 
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { FaqAccordion } from '@/components/faqAccordion';
-import { NavBarHome } from '@/components/navBar';
-import Footer1 from '../footer1';
 import Image from 'next/image';
-import { PortfolioCrousel } from '../hire-us/crouselPortfolio';
 import { AIButton, TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
 import { ContactUs } from '@/components/contactUs';
@@ -20,6 +16,8 @@ import { AIDevelopmentServiceFAQ } from '@/const';
 import { Metadata } from 'next';
 import TestimonilaCrousel from '@/components/testimonilaCrousel';
 import { Locations } from '@/components/Location';
+import Ratings from '@/components/ratings';
+import PortfolioCrousel from '@/components/PortfolioCrousel';
 
 export const metadata: Metadata = {
   title: {
@@ -47,8 +45,6 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <NavBarHome />
-      {/* <HeroSectionAi /> */}
       <HeroSection />
       <Ratings className="md:flex" />
       <TransformAiSection />
@@ -77,7 +73,6 @@ const Page = () => {
       <ContactUs />
       <BlogSection data={blogsAI} />
       <Locations />
-      <Footer1 />
     </>
   );
 };

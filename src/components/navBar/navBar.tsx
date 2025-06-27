@@ -1,23 +1,13 @@
 'use client';
 import { NavigationMenuDemo } from './subMenu';
-import { Button } from '../ui/button';
 import { useEffect, useRef, useState } from 'react';
 import * as motion from 'motion/react-client';
 import { Menu, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { TEmail, TTeams } from '../icons';
-import { cn } from '@/lib/utils';
-import { useMotionValue } from 'framer-motion';
-import {
-  MotionValue,
-  stagger,
-  useAnimate,
-  useAnimationFrame,
-  useMotionTemplate,
-  useTransform,
-} from 'motion/react';
-import Image from 'next/image';
+import ContactUsButton from './ContactUs';
+import { AIButton } from './AIButton';
 
 export function NavBarHome() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,10 +16,6 @@ export function NavBarHome() {
   function navigateHomePage() {
     router.push('/');
   }
-  function navigateContactUs() {
-    router.push('/contact-us');
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 112);
@@ -40,13 +26,13 @@ export function NavBarHome() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white py-3 shadow-md md:py-3">
+    <div className="sticky top-0 z-50 max-h-[calc(100vh)] w-full overflow-y-auto bg-white py-3 shadow-md md:py-3 lg:h-auto lg:overflow-visible">
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 px-4">
         {/* Logo with animation */}
         <motion.div
           onClick={navigateHomePage}
-          initial={{ height: '3.6rem' }}
-          animate={{ height: !isScrolled ? '3.6rem' : '3rem' }}
+          initial={{ height: '3.4rem' }}
+          animate={{ height: !isScrolled ? '3.4rem' : '2.8rem' }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="flex-shrink-0 cursor-pointer"
         >
@@ -61,12 +47,7 @@ export function NavBarHome() {
         <div className="hidden items-center gap-4 lg:flex">
           <AIButton />
           <NavigationMenuDemo />
-          <Button
-            onClick={navigateContactUs}
-            className="bg-yellow-500 uppercase text-white hover:bg-yellow-600"
-          >
-            Contact Us
-          </Button>
+          <ContactUsButton />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -88,12 +69,7 @@ export function NavBarHome() {
               <AIButton />
             </div>
             <NavigationMenuDemo />
-            <Button
-              onClick={navigateContactUs}
-              className="w-full bg-yellow-500 uppercase text-white hover:bg-yellow-600"
-            >
-              Contact Us
-            </Button>
+            <ContactUsButton className="w-full" />
           </div>
         </div>
       )}
@@ -121,227 +97,3 @@ export function InfoNav() {
     </div>
   );
 }
-
-export function AIButton({
-  borderRadius = '1.75rem',
-  as: Component = 'button',
-  containerClassName,
-  borderClassName,
-  duration,
-  className,
-  ...otherProps
-}: any) {
-  return (
-    <Component
-      className={cn(
-        'relative overflow-hidden bg-transparent p-[2px] text-xl duration-200 hover:-translate-y-1 hover:bg-[#FFBF00] hover:shadow-[0px_5px_15px_rgba(0,0,0,0.35)] hover:shadow-[#FFBF00]',
-        containerClassName
-      )}
-      style={{
-        borderRadius: borderRadius,
-      }}
-      {...otherProps}
-    >
-      <div
-        className="absolute inset-0"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
-      >
-        <MovingBorder duration={duration} rx="30%" ry="30%">
-          <div
-            className={cn(
-              'h-20 w-20 bg-[radial-gradient(#FFBF00_60%,transparent_60%)] opacity-[0.8]',
-              borderClassName
-            )}
-          />
-        </MovingBorder>
-      </div>
-      <Link
-        href={'/ai-development-services/'}
-        className={cn(
-          'relative flex h-full w-full items-center justify-center space-x-2 px-4 py-1 text-sm font-semibold text-neutral-800 antialiased backdrop-blur-xl',
-          className
-        )}
-        style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
-        }}
-      >
-        <Image
-          src="/new/AI_btn_logo.png"
-          width={32}
-          height={32}
-          className="h-9 w-auto object-contain md:h-7"
-          alt="Logo"
-        />
-        <TextGenerateEffect />
-      </Link>
-    </Component>
-  );
-}
-
-const MovingBorder = ({
-  children,
-  duration = 3000,
-  rx,
-  ry,
-  ...otherProps
-}: {
-  children: React.ReactNode;
-  duration?: number;
-  rx?: string;
-  ry?: string;
-  [key: string]: any;
-}) => {
-  const pathRef = useRef<SVGRectElement | null>(null);
-  const progress: any = useMotionValue(0);
-  const [pathLength, setPathLength] = useState<number | null>(null);
-
-  useEffect(() => {
-    const checkAndSetPathLength = () => {
-      const el = pathRef.current;
-      if (el) {
-        const bbox = el.getBBox();
-        if (bbox.width > 0 && bbox.height > 0) {
-          try {
-            const length = el.getTotalLength();
-            if (length > 0) {
-              setPathLength(length);
-            }
-          } catch (e) {
-            console.warn('getTotalLength failed:', e);
-          }
-        }
-      }
-    };
-
-    const timeout = setTimeout(checkAndSetPathLength, 50);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useAnimationFrame((time) => {
-    if (!pathRef.current || !pathLength) return;
-
-    const pxPerMillisecond = pathLength / duration;
-    progress.set((time * pxPerMillisecond) % pathLength);
-  });
-
-  const x = useTransform(progress, (val: number) => {
-    if (!pathRef.current || !pathLength) return 0;
-    try {
-      return pathRef.current.getPointAtLength(val).x;
-    } catch {
-      return 0;
-    }
-  });
-
-  const y = useTransform(progress, (val: number) => {
-    if (!pathRef.current || !pathLength) return 0;
-    try {
-      return pathRef.current.getPointAtLength(val).y;
-    } catch {
-      return 0;
-    }
-  });
-
-  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
-
-  return (
-    <>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        className="absolute h-full w-full"
-        width="100%"
-        height="100%"
-        {...otherProps}
-      >
-        <rect
-          fill="none"
-          width="100%"
-          height="100%"
-          rx={rx}
-          ry={ry}
-          ref={pathRef}
-        />
-      </svg>
-
-      {pathLength !== null && (
-        <motion.div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            display: 'inline-block',
-            transform,
-          }}
-        >
-          {children}
-        </motion.div>
-      )}
-    </>
-  );
-};
-
-const TextGenerateEffect = ({
-  className,
-  filter = true,
-  duration = 0.3,
-}: any) => {
-  const [scope, animate] = useAnimate();
-  let wordsArray = [
-    'S',
-    't',
-    'a',
-    'r',
-    't',
-    ' ',
-    'w',
-    'i',
-    't',
-    'h',
-    ' ',
-    'A',
-    'I',
-  ];
-
-  useEffect(() => {
-    animate(
-      'span',
-      {
-        opacity: 1,
-        filter: filter ? 'blur(0px)' : 'none',
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.1),
-      }
-    );
-  }, [scope.current]);
-
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className="text-black opacity-0"
-              style={{
-                filter: filter ? 'blur(6px)' : 'none',
-              }}
-            >
-              {word}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
-
-  return (
-    <div className={cn('font-semibold', className)}>
-      <div className=" ">
-        <div className="text-neutral-800">{renderWords()}</div>
-      </div>
-    </div>
-  );
-};

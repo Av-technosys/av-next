@@ -1,11 +1,9 @@
-import Footer1 from '../footer1';
 import { Metadata } from 'next';
 import { NavBarHome } from '@/components/navBar';
 import Link from 'next/link';
 import { Code, Globe, Laptop, Settings } from 'lucide-react';
 import Image from 'next/image';
 import HiringSteps from './HireDevelopPrecess.jsx';
-import { PortfolioCrousel } from './crouselPortfolio';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { contactFawData } from '@/const';
 import { HireDevelopersSection } from './HireDeveloperSection';
@@ -16,7 +14,8 @@ import { HeroSection } from './HeroSection';
 import { BlogSection } from '@/components/blogSection';
 import { ContactUs } from '@/components/contactUs';
 import { WhyChooseUs } from './WhyChooseUs';
-
+import PortfolioCrousel from '@/components/PortfolioCrousel';
+import Footer1 from './../footer1';
 export const metadata: Metadata = {
   title: 'Hire Us',
   description:

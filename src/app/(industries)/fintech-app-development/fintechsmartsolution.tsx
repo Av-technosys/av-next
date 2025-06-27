@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { SectionHeading } from '@/components/sectionHeading';
 import { motion } from 'motion/react';
