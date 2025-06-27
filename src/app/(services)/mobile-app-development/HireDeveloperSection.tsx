@@ -6,19 +6,19 @@ import { useState } from 'react';
 const developerTypes = [
   {
     name: 'Mobile App Developers',
-    bg: 'bg-gradient-to-r from-purple-300 to-blue-400',
+    bg: 'bg-gradient-to-r from-yellow-500 to-orange-300',
   },
   {
     name: 'Android Developers',
-    bg: 'bg-gradient-to-r from-blue-300 to-cyan-400',
+    bg: 'bg-gradient-to-r from-orange-300 to-[#ffeda0]',
   },
   {
     name: 'iOS Developers',
-    bg: 'bg-gradient-to-r from-pink-300 to-purple-400',
+    bg: 'bg-gradient-to-r from-[#9bb2e5] to-[#698cbf]',
   },
   {
     name: 'React Native Developers',
-    bg: 'bg-gradient-to-r from-purple-300 to-blue-300',
+    bg: 'bg-gradient-to-r from-[#6d90b9] to-[#bbc7dc]',
   },
 ];
 
@@ -39,12 +39,13 @@ export default function HireDevelopersSection() {
           24 Hours
         </h2>
         <p className="mt-4 leading-relaxed text-gray-700">
-          In today&apos;s fast-paced digital landscape, getting your project off
-          the ground without delay is crucial. At Nimble AppGenie, we understand
-          the importance of momentum, which is why we offer a unique service.
-          Our streamlined hiring process ensures that you have access to
-          top-tier talent exactly when you need it, minimizing downtime and
-          accelerating your project timeline.
+          In today’s competitive digital world, speed and efficiency are
+          everything. At AV Technosys, we understand that launching your project
+          on time is crucial to staying ahead. That’s why we offer a fast and
+          flexible hiring model, giving you instant access to skilled
+          professionals when you need them most. Our simplified onboarding
+          process reduces downtime and helps you accelerate development, keeping
+          your project on track and moving forward.
         </p>
 
         {/* Developer Type Buttons */}
