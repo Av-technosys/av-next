@@ -11,7 +11,7 @@ import {
 
 import { SectionHeading } from '@/components/sectionHeading';
 
-const RealEstateTestimonial = () => {
+const Testimonial = () => {
     const cardData = [
       {
         msg: 'AV Technosys turned our ideas into a seamless digital solution. Their team was reliable, responsive, and easy to work with. We truly valued their professionalism, attention to detail, and collaborative spirit throughout the project.',
@@ -76,4 +76,4 @@ const RealEstateTestimonial = () => {
     );
 }
 
-export default RealEstateTestimonial;
+export default Testimonial;

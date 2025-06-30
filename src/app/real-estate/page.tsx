@@ -1,6 +1,5 @@
 import { NavBarHome } from '@/components/navBar';
 import React from 'react';
-import Ratings from '../ratings';
 import { BlogSection } from '@/components/blogSection';
 import RealEstateTechnology from '@/app/real-estate/realEstatetechnologies'
 import RealEstateConquere from '@/app/real-estate/realEstateConquere'
@@ -8,7 +7,6 @@ import Rating2 from "../../components/rating2"
 import RealstateAppServices from "@/app/real-estate/realEstateAppServices";
 import RealEstateProjectCost from '@/app/real-estate/realEstateProjectCost';
 import RealEstateAppClone from '@/app/real-estate/realEstateAppClone';
-import RealEstateTestimonial from '@/app/real-estate/realEstateTestimonial';
 import RealEstateAVandVR from '@/app/real-estate/realEstateAVandVR';
 import RealEstateHiredev from '@/app/real-estate/realEstateHiredev';
 
@@ -19,6 +17,7 @@ import { SectionHeading } from '@/components/sectionHeading';
 import { ContactUs } from '@/components/contactUs';
 import { realEstateFawData } from '@/const';
 import RealEstateHero from "@/app/real-estate/realEstateHero"
+import Testimonial from "@/components/Testimonial"
 
 const RealEstatePage = () => {
   return (
@@ -31,7 +30,7 @@ const RealEstatePage = () => {
       <RealEstateProjectCost/>
       <RealEstateAppClone/>
       <TechnologiesOffered />
-      <RealEstateTestimonial/>
+      <Testimonial/>
       <RealEstateAVandVR/>
       <RealEstateTechnology/>
       <RealEstateConquere/>

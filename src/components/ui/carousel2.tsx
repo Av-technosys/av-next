@@ -68,9 +68,9 @@ export function CarouselSize() {
   <>
    <SectionHeading
      className="text-center"
-     title={'Other Trending Ecommerce Solutions'}
+     title={'More Trending Ecommerce Services'}
      titleClass="text-black"
-     desc="Explore Trending Solutions for Seamless Shopping Experiences and Unmatched Growth Potential. Revolutionize Your Online Store Today!"
+     desc="Discover Trending Solutions to Enhance Shopping Experiences and Boost Your Online Store’s Growth Today."
      descClass={'text-black'}
      />
     <Carousel
