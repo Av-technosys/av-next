@@ -671,3 +671,93 @@ export const realEstateFawData=[
     ),
   },
 ]
+
+
+export const ecommerceFawData=[
+  {
+    value: 'faq-1',
+    question: 'What is the cost of developing an ecommerce app?',
+    answer: (
+      <p>
+        The cost of an ecommerce app depends on its features, design, and complexity. A basic app may start around $5,000–$10,000, while advanced apps with custom integrations can go above $30,000.
+      </p>
+    ),
+  },{
+    value: 'faq-2',
+    question: 'How much does it cost to build an ecommerce platform?',
+    answer: (
+      <p>
+       Building a full-fledged ecommerce platform can cost anywhere from $10,000 to $50,000+, based on technology, scalability, and required functionalities.
+      </p>
+    ),
+  },{
+    value: 'faq-3',
+    question: ' What is the cost of creating an online food ordering app for restaurants?',
+    answer: (
+      <p>
+       Developing a restaurant food ordering app typically ranges between $5,000 and $25,000, depending on menu management, delivery tracking, payment integration, and design needs.
+      </p>
+    ),
+  },{
+    value: 'faq-4',
+    question: ' Why should I choose you for ecommerce development in the USA?',
+    answer: (
+      <p>
+        We deliver customised, scalable, and cost-effective ecommerce solutions with end-to-end support, ensuring your business grows efficiently in the competitive USA market.
+      </p>
+    ),
+  },{
+    value: 'faq-5',
+    question: 'Why is an ecommerce website essential for business owners?',
+    answer: (
+      <p>
+        An ecommerce website helps you reach a wider audience, operate 24/7, increase sales, and build strong customer relationships online.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: '  How do I choose the right platform for my ecommerce website?',
+    answer: (
+      <p>
+       Consider your budget, required features, scalability, and ease of management. Platforms like Shopify, Magento, and WooCommerce are popular choices based on these needs.
+      </p>
+    ),
+  },{
+    value: 'faq-7',
+    question: 'What is the process to develop a mobile app for my ecommerce store?',
+    answer: (
+      <p>
+        Start by defining your app’s purpose and features, hire an experienced app development team, design the UI/UX, develop backend and frontend, test thoroughly, and then launch on app stores.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-8',
+    question: ' How can I hire an ecommerce developer at a reasonable cost?',
+    answer: (
+      <p>
+       Look for experienced developers or agencies with a strong portfolio and transparent pricing. Outsourcing to countries with affordable rates can also save costs without compromising quality.
+      </p>
+    ),
+  },{
+    value: 'faq-9',
+    question: 'How long does it take to build an ecommerce app?',
+    answer: (
+      <p>
+       It typically takes 2 to 6 months depending on the app’s complexity, design requirements, and integration needs.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-10',
+    question: 'How do I build an ecommerce Android app?',
+    answer: (
+      <p>
+        Define your app features, design the UI/UX, choose the tech stack, develop backend APIs, integrate payment gateways, test the app, and then publish it on the Google Play Store with proper marketing.
+      </p>
+    ),
+  }
+]
+
+

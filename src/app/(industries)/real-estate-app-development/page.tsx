@@ -1,22 +1,23 @@
 import React from 'react';
 import { BlogSection } from '@/components/blogSection';
+
 import { FaqAccordion } from '@/components/faqAccordion';
 import { TechnologiesOffered } from '@/components';
 import { ContactUs } from '@/components/contactUs';
 import { realEstateFawData } from '@/const';
-import RealEstateHero from './realEstateHero';
 import Image from 'next/image';
 import { realEstateAppDevelopment } from '@/cosnt';
 import RealEstateAppServices from './realEstateAppServices';
+
+import Testimonial from '@/components/Testimonial';
+import RealEstateHero from './realEstateHero';
 import RealEstateProjectCost from './realEstateProjectCost';
 import RealEstateAppClone from './realEstateAppClone';
-import RealEstateTestimonial from './realEstateTestimonial';
 import RealEstateAVandVR from './realEstateAVandVR';
 import RealEstateConquere from './realEstateConquere';
 import RealEstateHiredev from './realEstateHiredev';
-import RealEstateTechnology from './realEstatetechnologies';
 import Rating2 from '@/components/rating2';
-
+import { Locations } from '@/components/Location';
 const RealEstatePage = () => {
   return (
     <>
@@ -27,11 +28,10 @@ const RealEstatePage = () => {
       <RealEstateProjectCost />
       <RealEstateAppClone />
       <TechnologiesOffered />
-      <RealEstateTestimonial />
       <RealEstateAVandVR />
-      <RealEstateTechnology />
       <RealEstateConquere />
       <RealEstateHiredev />
+      <Testimonial />
       <Realstatewhychooseus />
       <FaqAccordion data={realEstateFawData} />
       <ContactUs />
@@ -44,60 +44,6 @@ const RealEstatePage = () => {
 
 export default RealEstatePage;
 
-function Locations() {
-  return (
-    <div className="w-full border-y-4 border-neutral-600 bg-neutral-800 px-4 py-16 text-white">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-india.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">INDIA</p>
-          <p className="text-center text-sm">
-            238, 2nd floor, Purani Chungi, <br />
-            DCM Road, Vaishali Nagar, <br />
-            Jaipur, Rajasthan, 302017 <br />
-            +91 9983034111
-          </p>
-        </div>
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uk.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">UK</p>
-          <p className="text-center text-sm">
-            1-3 St Nicholas Street Worcester <br />
-            WR1 1UW, United Kingdom <br />
-            +44 7470994018
-          </p>
-        </div>
-        <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
-          <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uae.svg"
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <p className="text-center text-lg font-medium md:text-xl">UAE</p>
-          <p className="text-center text-sm">
-            M01, AL Mulla Building 2, <br />
-            Near Burj Nahar Mall, Deira, Dubai <br />
-            +971 521665467
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
 function RealstateRevolution() {
   return (
     <section className="bg-[#f6faff] px-6 py-16 md:px-10 lg:px-20">
@@ -119,7 +65,7 @@ function RealstateRevolution() {
         </div>
         <div className="relative flex justify-center">
           <Image
-            src="/new/bannerofre2.jpg" // Replace with your background image
+            src="/new/bannerofre2.jpg"
             width={400}
             height={400}
             alt="City Background"
@@ -149,7 +95,7 @@ function Realstatewhychooseus() {
               a user-centric approach. From intuitive mobile platforms to
               advanced backend systems, we empower agencies, brokers, and
               property businesses with scalable, high-performance apps backed by
-              continuous support and innovation at every stage.
+              continuous support and innovation at every stage.
             </p>
           </div>
 
@@ -188,7 +134,7 @@ function Realstatewhychooseus() {
                 <p className="text-sm text-[#1d1d1d]">
                   From initial design to final deployment, we manage the
                   complete development lifecycle, ensuring smooth execution and
-                  timely delivery.
+                  timely delivery.
                 </p>
               </div>
             </div>

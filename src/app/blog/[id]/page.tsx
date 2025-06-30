@@ -59,7 +59,6 @@ export async function generateMetadata(
 const Page = async (context: any) => {
   const slug = context.params.id;
   const [blogData] = await getBlogBySlug(slug);
-  console.log(blogData);
   const relatedBlogs = await getRelatedBlogs(blogData?.id);
 
   if (!blogData) {
