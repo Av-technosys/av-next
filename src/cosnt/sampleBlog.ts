@@ -131,3 +131,57 @@ export const blogsAI = [
     isVisible: true,
   },
 ];
+
+export const realEstateAppDevelopment = [
+  {
+    id: 'bac575fd-e44c-4e94-95a1-caee8f97a93c',
+    title: 'How to Create a Real Estate App: Full Development Guide',
+    metaDescription:
+      'Learn how to create a real estate app with this complete development guide covering features, tech stack, and cost.\n',
+    blogCategory: 'app-development',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750677147572',
+    tags: ['Real Estate App', 'Mobile App Development', 'App Development'],
+    date: '"2025-05-19T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/veer-gu.jpeg',
+    userName: 'Veer choudhary',
+    slug: 'how-to-create-a-real-estate-app-full-development-guide',
+    isVisible: true,
+  },
+  {
+    id: 'f5148278-ea43-4e5f-a9d4-15271b89925b',
+    title: 'PetPooja Clone: Launch Your POS App in 2025',
+    metaDescription:
+      'Build your PetPooja clone POS app in 2025 – fast, smart, and ready to deploy.\n',
+    blogCategory: 'app-development',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750670833688',
+    tags: [
+      'PetPooja Clone',
+      'PetPooja',
+      'App Development Company',
+      'POS App',
+      'PetPooja App Clone',
+    ],
+    date: '"2025-05-06T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/veer-gu.jpeg',
+    userName: 'Veer choudhary',
+    slug: 'petpooja-clone-build-launch-scale-your-pos-app-in-2025',
+    isVisible: true,
+  },
+  {
+    id: 'c71b1443-d47b-4624-89c3-86015ada6f7d',
+    title: 'How Much Does It Cost to Develop an App in London?',
+    metaDescription:
+      'Find out the average cost to develop a mobile app in London, including key factors that affect pricing.\n',
+    blogCategory: 'app-development',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750676739840',
+    tags: ['App in London', 'Mobile App Development', 'Cost to Develop'],
+    date: '"2025-05-17T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+    userName: 'Ashish Bishnoi',
+    slug: 'how-much-does-it-cost-to-develop-an-app-in-london',
+    isVisible: true,
+  },
+];

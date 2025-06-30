@@ -1,16 +1,15 @@
 import { NavBarHome } from '@/components/navBar';
 import React from 'react';
-import Ratings from '../ratings';
 import { BlogSection } from '@/components/blogSection';
-import RealEstateTechnology from '@/app/real-estate/realEstatetechnologies'
-import RealEstateConquere from '@/app/real-estate/realEstateConquere'
-import Rating2 from "../../components/rating2"
-import RealstateAppServices from "@/app/real-estate/realEstateAppServices";
-import RealEstateProjectCost from '@/app/real-estate/realEstateProjectCost';
-import RealEstateAppClone from '@/app/real-estate/realEstateAppClone';
-import RealEstateTestimonial from '@/app/real-estate/realEstateTestimonial';
-import RealEstateAVandVR from '@/app/real-estate/realEstateAVandVR';
-import RealEstateHiredev from '@/app/real-estate/realEstateHiredev';
+import RealEstateTechnology from '@/app/real-estate-app-development/realEstatetechnologies';
+import RealEstateConquere from '@/app/real-estate-app-development/realEstateConquere';
+import Rating2 from '../../components/rating2';
+import RealstateAppServices from '@/app/real-estate-app-development/realEstateAppServices';
+import RealEstateProjectCost from '@/app/real-estate-app-development/realEstateProjectCost';
+import RealEstateAppClone from '@/app/real-estate-app-development/realEstateAppClone';
+import RealEstateTestimonial from '@/app/real-estate-app-development/realEstateTestimonial';
+import RealEstateAVandVR from '@/app/real-estate-app-development/realEstateAVandVR';
+import RealEstateHiredev from '@/app/real-estate-app-development/realEstateHiredev';
 
 import Footer1 from '../footer1';
 import { FaqAccordion } from '@/components/faqAccordion';
@@ -18,28 +17,31 @@ import { TechnologiesOffered } from '@/components';
 import { SectionHeading } from '@/components/sectionHeading';
 import { ContactUs } from '@/components/contactUs';
 import { realEstateFawData } from '@/const';
-import RealEstateHero from "@/app/real-estate/realEstateHero"
+import RealEstateHero from './realEstateHero';
+import Image from 'next/image';
+import { realEstateAppDevelopment } from '@/cosnt';
 
 const RealEstatePage = () => {
   return (
     <>
       <NavBarHome />
-      <RealEstateHero/>
+      <RealEstateHero />
       <RealstateRevolution />
-      <Rating2/>
-      <RealstateAppServices/>
-      <RealEstateProjectCost/>
-      <RealEstateAppClone/>
+
+      <RealstateAppServices />
+      <RealEstateProjectCost />
+      <RealEstateAppClone />
       <TechnologiesOffered />
-      <RealEstateTestimonial/>
-      <RealEstateAVandVR/>
-      <RealEstateTechnology/>
-      <RealEstateConquere/>
-      <RealEstateHiredev/>
+      <RealEstateTestimonial />
+      <RealEstateAVandVR />
+      <RealEstateTechnology />
+      <RealEstateConquere />
+      <RealEstateHiredev />
       <Realstatewhychooseus />
       <FaqAccordion data={realEstateFawData} />
       <ContactUs />
-      <BlogSection />
+      <BlogSection data={realEstateAppDevelopment} />
+      <Rating2 />
       <Locations />
       <Footer1 />
     </>
@@ -104,19 +106,28 @@ function Locations() {
 }
 function RealstateRevolution() {
   return (
-    <section className="bg-[#f6faff] px-6 py-16 md:px-12 lg:px-20">
+    <section className="bg-[#f6faff] px-6 py-16 md:px-10 lg:px-20">
       <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
-        <div >
+        <div>
           <h2 className="mb-6 text-2xl font-bold leading-tight text-gray-900 md:text-3xl lg:text-4xl">
-            Transform Your Property Business with Custom Real Estate App Solutions
+            Transform Your Property Business with Custom Real Estate App
+            Solutions
           </h2>
           <p className="mb-4 text-base text-gray-700 lg:text-lg">
-            AV Technosys is a trusted real estate app development company that empowers property businesses with innovative, tech-driven solutions. Our custom apps streamline operations, enhance user experience, and improve sales efficiency. With years of industry expertise, we build scalable and user-centric platforms for the ever-evolving real estate market. Partner with us to take your property business to the next level.
+            AV Technosys is a trusted real estate app development company that
+            empowers property businesses with innovative, tech-driven solutions.
+            Our custom apps streamline operations, enhance user experience, and
+            improve sales efficiency. With years of industry expertise, we build
+            scalable and user-centric platforms for the ever-evolving real
+            estate market. Partner with us to take your property business to the
+            next level.
           </p>
         </div>
-         <div className="relative flex justify-center">
-          <img
+        <div className="relative flex justify-center">
+          <Image
             src="/new/bannerofre2.jpg" // Replace with your background image
+            width={400}
+            height={400}
             alt="City Background"
             className="h-auto w-full rounded-lg object-cover"
           />
@@ -128,51 +139,62 @@ function RealstateRevolution() {
 
 function Realstatewhychooseus() {
   return (
-    <div className="mt-12 bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-16 md:px-16">
+    <div className="border-y-4 border-[#C1D7FF] bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-16 md:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="gap-12 md:flex md:items-start md:justify-between">
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold leading-normal text-black md:text-4xl">
-              Why Choose <span className="text-[#EAB308]">AV Technosys </span> for Real Estate App Development?
+              Why Choose <span className="text-[#EAB308]">AV Technosys </span>{' '}
+              for Real Estate App Development?
             </h2>
             <div className="mb-6 mt-4 h-[3px] w-16 bg-[#EAB308]"></div>
             <p className="text-base leading-relaxed text-[#1d1d1d]">
-             AV Technosys stands as a trusted leader in real estate app development, offering end-to-end, tailor-made digital solutions that combine cutting-edge technology, deep industry expertise, and a user-centric approach. From intuitive mobile platforms to advanced backend systems, we empower agencies, brokers, and property businesses with scalable, high-performance apps backed by continuous support and innovation at every stage.
+              AV Technosys stands as a trusted leader in real estate app
+              development, offering end-to-end, tailor-made digital solutions
+              that combine cutting-edge technology, deep industry expertise, and
+              a user-centric approach. From intuitive mobile platforms to
+              advanced backend systems, we empower agencies, brokers, and
+              property businesses with scalable, high-performance apps backed by
+              continuous support and innovation at every stage.
             </p>
           </div>
 
           <div className="mt-10 space-y-8 md:mt-0 md:w-1/2">
-            <div className="flex items-start hover:scale-105 duration-500 rounded-2xl bg-white p-4 shadow-sm">
+            <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm duration-500 hover:scale-105">
               <div>
                 <h3 className="mb-1 text-lg font-bold text-black">
                   Industry Expertise
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                   With deep experience in real estate mobile app development, we deliver innovative, market-ready solutions that elevate your property business.
+                  With deep experience in real estate mobile app development, we
+                  deliver innovative, market-ready solutions that elevate your
+                  property business.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start hover:scale-105 duration-500 rounded-2xl bg-white p-4 shadow-sm">
-              
+            <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm duration-500 hover:scale-105">
               <div>
                 <h3 className="mb-1 text-lg font-bold text-black">
                   Custom Solutions
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                   We specialize in building tailored real estate apps, aligning every feature with your business goals and user expectations for maximum impact.
+                  We specialize in building tailored real estate apps, aligning
+                  every feature with your business goals and user expectations
+                  for maximum impact.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start hover:scale-105 duration-500 rounded-2xl bg-white p-4 shadow-sm">
-              
+            <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm duration-500 hover:scale-105">
               <div>
                 <h3 className="mb-1 text-lg font-bold text-black">
                   End-to-End Development
                 </h3>
                 <p className="text-sm text-[#1d1d1d]">
-                  From initial design to final deployment, we manage the complete development lifecycle, ensuring smooth execution and timely delivery.
+                  From initial design to final deployment, we manage the
+                  complete development lifecycle, ensuring smooth execution and
+                  timely delivery.
                 </p>
               </div>
             </div>
@@ -182,4 +204,3 @@ function Realstatewhychooseus() {
     </div>
   );
 }
-
