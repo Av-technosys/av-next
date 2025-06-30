@@ -59,6 +59,7 @@ export async function generateMetadata(
 const Page = async (context: any) => {
   const slug = context.params.id;
   const [blogData] = await getBlogBySlug(slug);
+  console.log(blogData);
   const relatedBlogs = await getRelatedBlogs(blogData?.id);
 
   if (!blogData) {
@@ -67,7 +68,6 @@ const Page = async (context: any) => {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      {/* <Header2 /> */}
       <NavBarHome />
       <div className="mx-auto mt-12 grid max-w-screen-2xl grid-cols-12 gap-6 px-4">
         <div className="sticky top-24 col-span-3 hidden h-fit lg:block">

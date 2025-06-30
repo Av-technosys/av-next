@@ -11,6 +11,8 @@ import {
   IconCertificate,
   IconChartAreaLine,
   IconChecks,
+  IconChevronDown,
+  IconChevronRight,
   IconCircleCheckFilled,
   IconCirclesRelation,
   IconCloudHeart,
@@ -146,4 +148,10 @@ export function TLike(props) {
 }
 export function TCalenderTime(props) {
   return <IconCalendarTime {...props} />;
+}
+export function TChevronDown(props) {
+  return <IconChevronDown {...props} />;
+}
+export function TChevronRight(props) {
+  return <IconChevronRight {...props} />;
 }

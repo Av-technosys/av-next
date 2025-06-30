@@ -55,7 +55,6 @@ export const HoverEffect = ({
 
           <Card cartClassName={cartClassName}>
             <CardIcon icon={item.icon} image={item.img} />
-            {/* <img width="50px" src="/new/herobg2.jpg" alt="" /> */}
             <CardTitle iconClassName={iconClassName}>{item.name}</CardTitle>
             <CardDescription iconClassName={iconClassName}>
               {item.description}
@@ -86,14 +85,14 @@ export const CardIcon = ({ icon, image }) => {
   if (Icon) {
     return <Icon size={32} color="white" />;
   } else {
-    return <img src={`/new/${image}`} alt="" />;
+    return <img src={`/new/${image}`} className="h-16 w-auto" alt={image} />;
   }
 };
 export const CardTitle = ({ className = '', children, iconClassName = '' }) => {
   return (
     <h4
       className={cn(
-        'mt-2 text-xl font-semibold tracking-wide text-black md:mt-4 md:text-2xl',
+        'mt-2 text-xl font-semibold tracking-wide text-white md:mt-4 md:text-2xl',
         iconClassName
       )}
     >
@@ -109,7 +108,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        'mt-4 leading-relaxed tracking-wide text-black md:mt-8',
+        'mt-4 leading-relaxed tracking-wide text-gray-300 md:mt-8',
         iconClassName
       )}
     >

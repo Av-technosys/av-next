@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const Footer1 = ({ className = '' }) => {
   return (
@@ -54,7 +55,13 @@ const Footer1 = ({ className = '' }) => {
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 md:flex-row">
             <div className="flex items-center gap-4">
               <a href="https://www.dmca.com/Protection/Status.aspx?id=d9f8c7fd-18f0-4b29-bdf1-d4b6e19ea6f3&refurl=https%3a%2f%2fwww.avtechnosys.com%2f&rlo=true">
-                <img src="/new/review/dmca.png" className="h-12 w-auto" />
+                <Image
+                  alt="DMCA"
+                  width={100}
+                  height={100}
+                  src="/new/review/dmca.png"
+                  className="h-12 w-auto"
+                />
               </a>
               <p className="text-gray-700">
                 Copyright © 2025{' '}

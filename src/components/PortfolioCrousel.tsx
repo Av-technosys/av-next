@@ -1,20 +1,20 @@
 'use client';
-import { motion } from 'motion/react';
 import { portfolioData } from '@/const';
+
+import Link from 'next/link';
+import { SectionHeading } from '@/components/sectionHeading';
+import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '../../components/ui/carousel';
-import Link from 'next/link';
-import { SectionHeading } from '@/components/sectionHeading';
-import Autoplay from 'embla-carousel-autoplay';
+} from './ui/carousel';
 
-export function PortfolioCrousel({headingClass = ""}) {
+export default function PortfolioCrousel({ headingClass = '' }) {
   return (
-    <div className="flex flex-col gap-2 mb-5 px-4">
+    <div className="mb-5 flex flex-col gap-2 px-4">
       <SectionHeading
         title="Our Successful Projects"
         desc={

@@ -9,28 +9,18 @@ import { Cover } from './../components/ui/cover';
 
 import { InfoNav, NavBarHome } from './../components/navBar/index';
 import {
-  TAi,
   TArroeRight,
   TBriefcase,
   TCircleTick,
   TCircularRelation,
   TCode,
-  TDevops,
-  TDigitalMarketing,
   TFlag,
-  TMobileCode,
-  TSoftwareDevelopment,
-  TUserCode,
   TUserGroup,
   TWorld,
 } from '@/components/icons';
-import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
-import { CaseStudy } from './caseStudy';
 import { FaqAccordion } from '@/components/faqAccordion';
-import Ratings from './ratings';
 import { ratingData } from '@/const/ratingData';
-// import { ContactUs } from '@/app/contact-us';
 import Testimonial from './reviews';
 import Tabs from '@/components/techohologiesOffered';
 import dayjs from 'dayjs';
@@ -38,6 +28,10 @@ import { AnimatePresence, motion } from 'motion/react';
 import { LeadPopUp } from '@/components/leadPopUp';
 import { ContactUs } from '@/components/contactUs';
 import { Locations } from '@/components/Location';
+import Image from 'next/image';
+import { CaseStudy } from '@/components/caseStudy';
+import Ratings from '@/components/ratings';
+import { ServiceSection } from '@/conponents/ServicesOffered';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -117,7 +111,9 @@ function HeroSection({ setIsLeadOpen }) {
                 <div className="w-full border-l first:border-none">
                   <div className="mx-auto mr-auto flex w-fit flex-col gap-2">
                     <p className="text-white">{item.title}</p>
-                    <img
+                    <Image
+                      width={400}
+                      height={400}
                       src={item.image}
                       className="mr-auto h-10 w-auto"
                       alt=""
@@ -125,7 +121,9 @@ function HeroSection({ setIsLeadOpen }) {
                     <div className="mx-auto flex items-center gap-2">
                       <p className="text-white">{item.stars + ' / 5'}</p>
                       {Array.from({ length: item.stars }, (_, index) => (
-                        <img
+                        <Image
+                          width={50}
+                          height={50}
                           src="/new/review/top-star.svg"
                           className="h-4 w-auto"
                           alt=""
@@ -134,7 +132,9 @@ function HeroSection({ setIsLeadOpen }) {
                       ))}
 
                       {item.stars % 1 !== 0 && (
-                        <img
+                        <Image
+                          width={50}
+                          height={50}
                           src="/new/review/top-star-47.svg"
                           className="h-4 w-auto"
                           alt=""
@@ -146,65 +146,6 @@ function HeroSection({ setIsLeadOpen }) {
               );
             })}
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const serviceData = [
-  {
-    name: 'Mobile App Development',
-    icon: TMobileCode,
-    description:
-      'We build responsive, scalable, and secure mobile apps that turn your ideas into high-performing, future-ready solutions.',
-  },
-  {
-    name: 'Software Development',
-    icon: TSoftwareDevelopment,
-    description:
-      'We build custom software tailored to your industry boosting efficiency while we handle the tech, so you can focus on growth.',
-  },
-  {
-    name: 'Digital Marketing',
-    icon: TDigitalMarketing,
-    description:
-      'At AV Technosys, we turn digital disruption into growth with data-driven marketing, seamless customer journeys, and strategies that deliver real, scalable results.',
-  },
-  {
-    name: 'AI Development',
-    icon: TAi,
-    description:
-      'From strategy to support, our AI services turn complex models into real-world solutions that drive automation, efficiency, and smarter decisions.',
-  },
-  {
-    name: 'DevOps',
-    icon: TDevops,
-    description:
-      'Our DevOps services integrate development and operations to accelerate releases, improve code quality, and reduce time-to-market.',
-  },
-  {
-    name: 'Hire Dedicated Developers',
-    icon: TUserCode,
-    description:
-      'Boost your team with expert Indian developers offering faster turnaround, consistent quality, and dedicated focus.',
-  },
-];
-
-function ServiceSection() {
-  return (
-    <div className="h-full w-full border-y-4 border-neutral-500 bg-zinc-800">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6 py-12 md:pb-20">
-        <SectionHeading
-          className="text-center"
-          title={'We build impactful mobile and web apps'}
-          titleClass="text-white"
-          desc=" Here is how we have created a success story for brands dreaming big and something exceptional."
-          descClass={'text-gray-300'}
-        />
-
-        <div className="">
-          <HoverEffect items={serviceData} iconClassName={'!text-white'} />
         </div>
       </div>
     </div>
@@ -252,11 +193,15 @@ function AISection({ setIsLeadOpen }) {
             </button>
           </Link>
         </div>
-        <img
-          src="/new/ai_image.webp"
-          className="h-full max-h-[20rem] w-fit object-contain lg:max-h-[26rem]"
-          alt=""
-        />
+        <div className="h-full w-full">
+          <Image
+            height={400}
+            width={400}
+            src="/new/ai_image.webp"
+            className="h-full max-h-[20rem] w-auto object-contain lg:max-h-[26rem]"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );
@@ -270,27 +215,34 @@ function PartnerSection() {
           Strategic Partnerships as a Catalyst for Business Growth{' '}
         </p>
         <div className="mt-8 grid w-full grid-cols-2 items-center justify-end gap-6 sm:grid-cols-4 md:mt-0 md:gap-12">
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-12"
             src="/new/review/aws-partner.svg"
             alt=""
           />
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-9"
             src="/new/review/mongodb-partner.svg"
             alt=""
           />
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-9"
             src="/new/review/cloudinary-partner.svg"
             alt=""
           />
-          <img
+          <Image
+            height={100}
+            width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-12"
             src="/new/review/google-cloud-partner.svg"
             alt=""
           />
-          {/* <img src="/new/review/google-cloud-partner.svg" alt="" /> */}
         </div>
       </div>
     </div>
@@ -385,9 +337,12 @@ function ExperienceSection() {
               </div>
             );
           })} */}
-          <img
+          <Image
+            width={500}
+            height={500}
             className="h-full w-full rounded-md object-cover"
             src="/new/experience-img.png"
+            alt=""
           />
         </div>
       </div>
@@ -443,7 +398,9 @@ function BookCall({ setIsLeadOpen }) {
           </button>
         </div>
         <div className="relative h-auto w-full max-w-lg">
-          <img
+          <Image
+            height={500}
+            width={500}
             src="/new/bookacall.png"
             alt=""
             className="h-full w-full object-contain"
@@ -566,7 +523,9 @@ function BlogCard({ blog }) {
         href={`/blog/${blog?.slug}`}
         className="relative h-auto w-full sm:h-56 sm:w-auto"
       >
-        <img
+        <Image
+          height={500}
+          width={500}
           className="h-auto w-full rounded-xl object-cover sm:h-full sm:w-auto"
           src={blog.image}
           alt={blog.title}
