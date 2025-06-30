@@ -3,7 +3,7 @@ import { NavBarHome } from '@/components/navBar';
 import Link from 'next/link';
 import { Code, Globe, Laptop, Settings } from 'lucide-react';
 import Image from 'next/image';
-import HiringSteps from './HireDevelopPrecess.jsx';
+import HiringSteps from './HireDevelopPrecess';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { contactFawData } from '@/const';
 import { HireDevelopersSection } from './HireDeveloperSection';

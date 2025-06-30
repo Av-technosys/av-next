@@ -11,12 +11,6 @@ import { StickyScrollRevealDemo } from './developmentProcess';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { NavBarHome } from '@/components/navBar';
-import {
-  TCalenderTime,
-  TCertificate,
-  TMobile,
-  TRocket,
-} from '@/components/icons';
 import MissionVisionSection from './missionvisionSection';
 import { valuesData, whyAVData } from '@/const';
 import { CEOInfo } from '@/components/CEOInfo';

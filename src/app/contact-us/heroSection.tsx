@@ -1,11 +1,8 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import * as motion from 'motion/react-client';
 import CustomInputNumber from './inputNumber';
 
-import emailjs from '@emailjs/browser';
 import './Footer.css';
 
 import {
