@@ -116,7 +116,12 @@ const industryServices = {
     },
     {
       title: 'Ecommerce',
-      children: [{ title: 'Ecommerce Software Development', link: '/' }],
+      children: [
+        {
+          title: 'Ecommerce Software Development',
+          link: '/ecommerce-app-development',
+        },
+      ],
     },
     {
       title: 'Pet Care',

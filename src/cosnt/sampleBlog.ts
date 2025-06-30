@@ -131,3 +131,56 @@ export const blogsAI = [
     isVisible: true,
   },
 ];
+
+export const ecommerceAppDevelopment = [
+  {
+    id: 'f2004965-7660-4de9-8220-b8628dccc3e1',
+    title: 'A Complete Guide To E-Commerce App Development 2025',
+    metaDescription:
+      'Explore the complete 2025 guide to e-commerce app development, from features and tech stack to cost and trends.',
+    blogCategory: 'e-commerce',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750833627037',
+    tags: ['Ecommerce App Development', 'App Development', 'Ecommerce'],
+    date: '"2025-05-01T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/veer-gu.jpeg',
+    userName: 'Veer choudhary',
+    slug: 'a-complete-guide-to-e-commerce-app-development-2025',
+    isVisible: true,
+  },
+  {
+    id: '11ceceab-fd98-42a2-97de-2f0c09de1f93',
+    title: 'How to Hire Dedicated E-commerce Developers in 2025',
+    metaDescription:
+      'Find out how to hire skilled e-commerce developers in 2025 to build high-converting, scalable online stores.',
+    blogCategory: 'e-commerce',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750750473816',
+    tags: [
+      'Ecommerce development services',
+      'web development',
+      'hire dedicated ecommerce developer',
+    ],
+    date: '"2025-05-31T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/veer-gu.jpeg',
+    userName: 'Veer choudhary',
+    slug: 'how-to-hire-dedicated-e-commerce-developers-in-2025',
+    isVisible: true,
+  },
+  {
+    id: '29c09b02-b44b-4054-a7a3-e71edbd68042',
+    title:
+      'How to Build a D2C Ecommerce App: A Step-by-Step Guide for Business Owners',
+    metaDescription:
+      'Learn how to build a D2C ecommerce app with this step-by-step guide tailored for business owners in 2025.',
+    blogCategory: 'e-commerce',
+    image: 'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/1750832955010',
+    tags: ['D2C Ecommerce App', 'D2C', 'ecommerce app development'],
+    date: '"2025-06-19T18:30:00.000Z"',
+    userImage:
+      'https://av-blog.s3.ap-south-1.amazonaws.com/uploads/ashish-bishnoi.jpeg',
+    userName: 'Ashish Bishnoi',
+    slug: 'how-to-build-a-d2c-ecommerce-app-a-step-by-step-guide-for-business-owners',
+    isVisible: true,
+  },
+];
