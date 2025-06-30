@@ -10,7 +10,7 @@ export default function RealEstateProjectCost() {
     <section className="mx-auto mt-2 max-w-7xl md:mt-14">
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <div className="px-4 py-10 md:relative">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-3xl bg-sky-400 px-4 py-6 md:flex-row md:p-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-3xl bg-sky-300 px-4 py-6 md:flex-row md:p-16">
           {/* Left Image Section */}
           <div className="right-0 top-0 flex w-[250px] justify-center md:absolute md:w-[500px]">
             <Image

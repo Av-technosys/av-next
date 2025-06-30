@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import { SectionHeading } from '@/components/sectionHeading';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 const RealEstateAppServices = () => {
   const appDevServices = [
     {
@@ -42,7 +44,7 @@ const RealEstateAppServices = () => {
   ];
   return (
     <div className="bg-white px-6 py-12">
-      <div className="mx-auto max-w-7xl text-center">
+      <div className="mx-auto max-w-7xl">
         <SectionHeading
           className="text-center"
           title={'Real Estate App Development Services'}
@@ -54,9 +56,10 @@ const RealEstateAppServices = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {appDevServices?.map((item, index) => {
             return (
-              <div
+              <motion.div
+                whileHover={{ scale: 1.03 }}
                 key={index}
-                className="rounded-xl bg-slate-200 p-6 text-left shadow-md duration-300 hover:shadow-xl"
+                className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:bg-sky-200/60 hover:shadow-xl"
               >
                 <Image
                   width={100}
@@ -67,7 +70,7 @@ const RealEstateAppServices = () => {
                 />
                 <h3 className="mb-1 text-lg font-bold">{item.heading}</h3>
                 <p className="text-sm text-gray-700">{item.description}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

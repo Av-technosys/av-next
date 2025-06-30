@@ -1,6 +1,6 @@
 'use client';
 import { NavigationMenuDemo } from './subMenu';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as motion from 'motion/react-client';
 import { Menu, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';

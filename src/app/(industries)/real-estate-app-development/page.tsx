@@ -1,34 +1,29 @@
-import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import { BlogSection } from '@/components/blogSection';
-import RealEstateTechnology from '@/app/real-estate-app-development/realEstatetechnologies';
-import RealEstateConquere from '@/app/real-estate-app-development/realEstateConquere';
-import Rating2 from '../../components/rating2';
-import RealstateAppServices from '@/app/real-estate-app-development/realEstateAppServices';
-import RealEstateProjectCost from '@/app/real-estate-app-development/realEstateProjectCost';
-import RealEstateAppClone from '@/app/real-estate-app-development/realEstateAppClone';
-import RealEstateTestimonial from '@/app/real-estate-app-development/realEstateTestimonial';
-import RealEstateAVandVR from '@/app/real-estate-app-development/realEstateAVandVR';
-import RealEstateHiredev from '@/app/real-estate-app-development/realEstateHiredev';
-
-import Footer1 from '../footer1';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { TechnologiesOffered } from '@/components';
-import { SectionHeading } from '@/components/sectionHeading';
 import { ContactUs } from '@/components/contactUs';
 import { realEstateFawData } from '@/const';
 import RealEstateHero from './realEstateHero';
 import Image from 'next/image';
 import { realEstateAppDevelopment } from '@/cosnt';
+import RealEstateAppServices from './realEstateAppServices';
+import RealEstateProjectCost from './realEstateProjectCost';
+import RealEstateAppClone from './realEstateAppClone';
+import RealEstateTestimonial from './realEstateTestimonial';
+import RealEstateAVandVR from './realEstateAVandVR';
+import RealEstateConquere from './realEstateConquere';
+import RealEstateHiredev from './realEstateHiredev';
+import RealEstateTechnology from './realEstatetechnologies';
+import Rating2 from '@/components/rating2';
 
 const RealEstatePage = () => {
   return (
     <>
-      <NavBarHome />
       <RealEstateHero />
       <RealstateRevolution />
 
-      <RealstateAppServices />
+      <RealEstateAppServices />
       <RealEstateProjectCost />
       <RealEstateAppClone />
       <TechnologiesOffered />
@@ -43,7 +38,6 @@ const RealEstatePage = () => {
       <BlogSection data={realEstateAppDevelopment} />
       <Rating2 />
       <Locations />
-      <Footer1 />
     </>
   );
 };

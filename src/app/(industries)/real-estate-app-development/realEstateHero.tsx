@@ -16,7 +16,7 @@ const RealEstateHero = () => {
       }}
     >
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
-      <div className="mx-auto flex h-[500px] max-w-7xl flex-col items-center justify-center gap-1 rounded-none !px-8 text-center text-white">
+      <div className="mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center gap-1 rounded-none !px-8 text-center text-white">
         <span className="text-3xl font-bold md:text-4xl lg:text-6xl">
           Real Estate
         </span>

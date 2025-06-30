@@ -90,7 +90,12 @@ const industryServices = {
     },
     {
       title: 'Real Estate',
-      children: [{ title: 'Real Estate Software Development', link: '/' }],
+      children: [
+        {
+          title: 'Real Estate Software Development',
+          link: '/real-estate-app-development',
+        },
+      ],
     },
     {
       title: 'On Demand',
