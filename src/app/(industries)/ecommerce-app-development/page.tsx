@@ -24,11 +24,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      'Ecommerce Website Development Company | Ecommerce Web Development',
+    absolute: 'Ecommerce App Development Services for Your Business',
   },
   description:
-    'AV Technosys offers customised and innovative e-commerce website development services in the USA to build powerful online stores that drive sales.',
+    'Grow your online store with AV Technosys’ ecommerce app development services. Hire expert developers for custom, user-friendly apps that boost sales.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/ecommerce-app-development/',
   },
@@ -37,9 +36,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Ecommerce Website Development Company | Ecommerce Web Development',
+    title: 'Ecommerce App Development Services for Your Business',
     description:
-      'AV Technosys offers customised and innovative e-commerce website development services in the USA to build powerful online stores that drive sales.',
+      'Grow your online store with AV Technosys’ ecommerce app development services. Hire expert developers for custom, user-friendly apps that boost sales.',
     url: 'https://www.avtechnosys.com/ecommerce-app-development/',
     siteName: 'AV Technosys',
     type: 'website',
