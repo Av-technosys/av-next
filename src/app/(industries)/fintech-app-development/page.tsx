@@ -16,6 +16,33 @@ import { CaseStudy } from '@/components/caseStudy';
 import { Locations } from '@/components/Location';
 import TestimonilaCrousel from '@/components/testimonilaCrousel';
 import Ratings from '@/components/ratings';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'FinTech App Development Company - AV Technosys',
+  },
+  description:
+    'AV Technosys is a top FinTech app development company offering secure and innovative fintech app development services to transform your financial business.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/fintech-app-development/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'FinTech App Development Company - AV Technosys',
+
+    description:
+      'AV Technosys is a top FinTech app development company offering secure and innovative fintech app development services to transform your financial business.',
+    url: 'https://www.avtechnosys.com/fintech-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const FintechPage = () => {
   return (

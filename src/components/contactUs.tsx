@@ -55,29 +55,29 @@ export function ContactUs() {
 
   return (
     <div
-      style={{ background: 'linear-gradient(135deg, #1f1f1f, #6b21a8)' }}
-      className="w-full border-y-4 border-purple-400 px-4 py-20"
+      style={{ background: 'linear-gradient(135deg, #F0D099, #FDFFBF)' }}
+      className="w-full border-y-4 border-yellow-400 px-4 py-12"
     >
       <div className="mx-auto grid min-h-96 max-w-7xl grid-cols-1 flex-col items-center justify-between gap-16 md:grid-cols-2 md:gap-4">
-        <div className="space-y-12 text-white">
-          <p className="text-3xl font-medium leading-tight tracking-wider md:text-4xl">
+        <div className="space-y-12">
+          <p
+            style={{
+              lineHeight: '4rem',
+              wordSpacing: '0.3rem',
+            }}
+            className="text-3xl font-semibold text-neutral-800 md:text-5xl"
+          >
             Our Technology Experts Are Catalysts for Digital Transformation
           </p>
-          <p className="tracking-wider">
+          <p className="text-2xl font-medium tracking-wider text-neutral-700">
             Book a Free call with Our Experts and Start Building the Future
             Today.
           </p>
         </div>
-        <div
-          style={{
-            backgroundColor: 'rgba(31, 31, 31, 0.85)',
-            color: 'white',
-          }}
-          className="relative ml-auto flex h-full w-full max-w-lg flex-col gap-2.5 rounded-3xl px-6 py-3 pb-4 shadow-2xl shadow-purple-500"
-        >
+        <div className="relative ml-auto flex h-full w-full max-w-lg flex-col gap-2.5 rounded-3xl bg-white/40 px-6 py-3 pb-4 shadow-2xl shadow-yellow-300 backdrop-blur-md">
           <InputText
-            inputClass="bg-transparent border-purple-900 focus:border-purple-700"
-            labelClass="bg-purple-950 rounded px-2 py-0.5 text-xs text-white"
+            inputClass="bg-transparent border-yellow-900 focus:border-yellow-700"
+            labelClass="bg-yellow-950 rounded px-2 py-0.5 text-xs text-white"
             label="Full Name"
             value={formDetails.name}
             setValue={(value) =>
@@ -85,8 +85,8 @@ export function ContactUs() {
             }
           />
           <InputText
-            inputClass="bg-transparent border-purple-900 focus:border-purple-700"
-            labelClass="bg-purple-950 rounded px-2 py-0.5 text-xs text-white"
+            inputClass="bg-transparent border-yellow-900 focus:border-yellow-700"
+            labelClass="bg-yellow-950 rounded px-2 py-0.5 text-xs text-white"
             label="Email"
             value={formDetails.email}
             setValue={(value) =>
@@ -94,8 +94,8 @@ export function ContactUs() {
             }
           />
           <InputText
-            inputClass="bg-transparent border-purple-900 focus:border-purple-700"
-            labelClass="bg-purple-950 rounded px-2 py-0.5 text-xs text-white"
+            inputClass="bg-transparent border-yellow-900 focus:border-yellow-700"
+            labelClass="bg-yellow-950 rounded px-2 py-0.5 text-xs text-white"
             label="Number"
             value={formDetails.number}
             setValue={(value) =>
@@ -103,8 +103,8 @@ export function ContactUs() {
             }
           />
           <InputTextArea
-            inputClass="bg-transparent border-purple-900 focus:border-purple-700"
-            labelClass="bg-purple-950 w-fit rounded px-2 py-0.5 text-xs text-white"
+            inputClass="bg-transparent border-yellow-900 focus:border-yellow-700"
+            labelClass="bg-yellow-950 w-fit rounded px-2 py-0.5 text-xs text-white"
             label="Message"
             value={formDetails.message}
             setValue={(value) =>
@@ -117,7 +117,7 @@ export function ContactUs() {
             onClick={handleFormSubmit}
             disabled={loading}
             className={cn(
-              'my-2 cursor-pointer rounded-md bg-purple-900 px-4 py-2 text-center font-semibold text-white duration-200 hover:bg-purple-950',
+              'my-2 cursor-pointer rounded-md bg-yellow-900 px-4 py-2 text-center font-semibold text-white duration-200 hover:bg-yellow-950',
               loading && 'opacity-50'
             )}
           >

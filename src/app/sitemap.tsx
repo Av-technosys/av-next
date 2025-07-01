@@ -13,6 +13,11 @@ const paths = [
   '/blog',
   '/privacy-policy',
   '/terms-and-conditions',
+  '/fintech-app-development',
+  '/ecommerce-app-development',
+  '/real-estate-app-development',
+  '/ai-development-services',
+  '/mobile-app-development',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

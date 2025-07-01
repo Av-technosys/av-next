@@ -20,6 +20,31 @@ import Image from 'next/image';
 import Testimonial from '@/components/Testimonial';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Locations } from '@/components/Location';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      'Ecommerce Website Development Company | Ecommerce Web Development',
+  },
+  description:
+    'AV Technosys offers customised and innovative e-commerce website development services in the USA to build powerful online stores that drive sales.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/ecommerce-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Ecommerce Website Development Company | Ecommerce Web Development',
+    description:
+      'AV Technosys offers customised and innovative e-commerce website development services in the USA to build powerful online stores that drive sales.',
+    url: 'https://www.avtechnosys.com/ecommerce-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

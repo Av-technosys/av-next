@@ -18,6 +18,34 @@ import RealEstateConquere from './realEstateConquere';
 import RealEstateHiredev from './realEstateHiredev';
 import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Real Estate App Development Company - AV Technosys',
+  },
+  description:
+    'AV Technosys is a top real estate app development company offering cost-effective and scalable real estate app development services. Get a quote today.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/real-estate-app-development/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Real Estate App Development Company - AV Technosys',
+
+    description:
+      'AV Technosys is a top real estate app development company offering cost-effective and scalable real estate app development services. Get a quote today.',
+    url: 'https://www.avtechnosys.com/real-estate-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
+
 const RealEstatePage = () => {
   return (
     <>
