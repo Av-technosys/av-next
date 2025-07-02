@@ -1,16 +1,13 @@
 "use client"
 import { useState } from "react"
 
-const Showdetailseffect = () => {
+const OpenDetailsbox = () => {
     const[Details,setDetails]=useState({});
 
     function DetailsHandler(selectedObj){
       setDetails(selectedObj)
     }
     
-    const Fetchingdata=()=>{
-      
-    }
 
     return (
         <>
@@ -37,7 +34,7 @@ const Showdetailseffect = () => {
     );
 }
 
-export default Showdetailseffect;
+export default OpenDetailsbox;
 
 const columndata=[
     {

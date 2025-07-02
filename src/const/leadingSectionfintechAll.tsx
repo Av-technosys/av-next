@@ -1,13 +1,14 @@
+import { cn } from "@/lib/utils";
 import  Image from "next/image";
 
-const LeadingSectionfintechAll = ({details}) => {
+const LeadingSectionfintechAll = ({details , className=""}) => {
     return (
         <>
       <section className="py-16 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Content */}
-        <div className="order-2 md:order-1 text-center md:text-start">
+        <div className={cn("order-2 md:order-1 text-center md:text-start")}>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6">
             {details?.title}
           </h2>
@@ -20,7 +21,7 @@ const LeadingSectionfintechAll = ({details}) => {
         </div>
 
         {/* Right Video/Image */}
-        <div className="relative rounded-lg overflow-hidden shadow-lg">
+        <div className={cn("relative rounded-lg overflow-hidden shadow-lg",className)}>
           <Image
             src={`/new/${details?.image}`} // Replace with your image path
             alt="Fintech Trends 2025"
