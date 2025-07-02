@@ -7,15 +7,14 @@ import { TArroeRight } from "@/components/icons";
 const HeroSectionfintechAll = ({details}) => {
    const [isLeadOpen, setIsLeadOpen] = useState(false);
     return (
-        <section style={{ backgroundImage: `url('/new/${details?.image}')` , backgroundPosition:"center",backgroundSize:"cover" ,backgroundRepeat:"no-repeat" }}>
-          <div className="relative max-w-7xl mx-auto h-[500px]  flex items-center justify-center text-center px-4">
-      {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
+        <section className='flex items-center' style={{ backgroundImage: `url('/new/${details?.image}')` , backgroundPosition:"top",backgroundSize:"cover" ,backgroundRepeat:"no-repeat" }}>
+          <div className="max-w-7xl mx-auto min-h-96  flex items-center justify-center text-center px-4">
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <div className=" z-10 max-w-4xl flex flex-col items-center mx-auto">
         <h1 className="text-white text-3xl sm:text-3xl md:text-5xl  font-bold !leading-snug mb-6">
           {details?.title}
         </h1>
-        <p className="text-white text-lg sm:text-xl  font-medium mb-8">
+        <p className="text-white text-lg   font-medium mb-8">
           {details?.description}
         </p>
         <motion.button 

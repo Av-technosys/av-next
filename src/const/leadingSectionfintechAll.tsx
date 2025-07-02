@@ -7,14 +7,14 @@ const LeadingSectionfintechAll = ({details}) => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Content */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+        <div className="order-2 md:order-1 text-center md:text-start">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6">
             {details?.title}
           </h2>
           <p className="text-gray-700 mb-4">
             {details?.description1}
           </p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 md:hidden lg:block">
             {details?.description2}
           </p>
         </div>

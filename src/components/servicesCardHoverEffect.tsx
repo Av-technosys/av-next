@@ -54,7 +54,14 @@ export const HoverEffect = ({
           )}
 
           <Card cartClassName={cartClassName}>
-            <CardIcon icon={item.icon} image={item.img} />
+            {
+              (item.icon || item.img) && (
+            <CardIcon
+            
+             icon={item.icon} image={item.img} />
+              )
+            }
+
             <CardTitle iconClassName={iconClassName}>{item.name}</CardTitle>
             <CardDescription iconClassName={iconClassName}>
               {item.description}
