@@ -1048,6 +1048,66 @@ export const LoanlandingFawData = [
   },
 ];
 
+export const ItconsultingFawData = [
+  {
+    value: 'faq-1',
+    question: 'Which sectors or industries do your IT consulting services cater to?',
+    answer: (
+     <>
+        <p>We offer IT consulting services across various sectors including healthcare, finance, education, manufacturing, retail, real estate, logistics, and government. Our team understands the unique technological needs of each industry to provide customised, effective solutions that drive growth.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' What steps do you take to keep our IT systems and data secure?',
+    answer: (
+      <p>
+        We prioritise your data security through robust cybersecurity measures, regular system audits, secure network architecture, data encryption, and strict compliance with industry standards. Our team ensures all your IT assets are protected from potential threats and vulnerabilities.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What can we expect as deliverables from your IT consulting services?',
+    answer: (
+      <>
+      <p>
+           Our typical deliverables include detailed IT strategy reports, infrastructure assessment documents, technology implementation roadmaps, security enhancement plans, software recommendations, and ongoing performance monitoring and optimisation support.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'How do you identify the best IT solutions for our business challenges?',
+    answer: (
+      <>
+        <p> We begin with a thorough analysis of your current IT systems, business processes, and objectives. Based on this assessment, our consultants recommend solutions aligned with your goals, budget, and scalability requirements to ensure maximum efficiency and ROI.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: 'What is your process for onboarding and working with new IT consulting clients?',
+    answer: (
+      <>
+        <p> Our process involves an initial consultation to understand your needs, followed by a comprehensive assessment of your IT environment. We then propose a tailored solution plan, implement the recommended strategies, and provide continuous support to ensure success.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-6',
+    question: ' How will IT consulting benefit our organisation in the long run?',
+    answer: (
+      <>
+        <p>IT consulting improves your operational efficiency, reduces costs, enhances data security, and helps you adopt the latest technologies. In the long run, it enables your business to stay competitive, agile, and ready to adapt to market changes seamlessly.</p>
+      </>
+    ),
+  },
+   
+];
+
 
 
 

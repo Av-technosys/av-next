@@ -1,13 +1,24 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const OpenDetailsbox = () => {
     const[Details,setDetails]=useState({});
+    const[Defaultdata,setDefaultdata]=useState({})
 
     function DetailsHandler(selectedObj){
-      setDetails(selectedObj)
+      setDetails(selectedObj);
+      setDefaultdata({})
     }
     
+    function fetchdetails(){
+      setDefaultdata(columndata[0])
+    }
+
+    useEffect(
+        ()=>{
+            fetchdetails()
+        },[]
+    )
 
     return (
         <>
@@ -24,9 +35,9 @@ const OpenDetailsbox = () => {
                    </ul>
                 </div>
                 <div className="px-10 py-10 flex flex-col gap-3">
-                    <div style={{backgroundColor:"#b91c1c",padding:"5px"}} className="w-14 h-14 rounded-md"><img src={`/new/${Details?.image}`}   alt="image" /></div>
-                    <h1 className="text-xl font-bold">{Details.title}</h1>
-                    <p>{Details.description}</p>
+                    <div style={{backgroundColor:"#b91c1c",padding:"5px"}} className="w-14 h-14 rounded-md"><img src={`/new/${Defaultdata?.image || Details?.image}`}   alt="image" /></div>
+                    <h1 className="text-xl font-bold">{Defaultdata?.title || Details?.title}</h1>
+                    <p>{Defaultdata?.description || Details?.description}</p>
                 </div>
             </div>
            </div>

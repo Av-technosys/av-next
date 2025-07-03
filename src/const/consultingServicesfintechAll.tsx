@@ -22,7 +22,7 @@ const ConsultingServicesfintechAll = ({details,heading}) => {
             shadow={'!bg-[#EAB308]'}
             iconClassName={'!text-black'}
             cartClassName={
-              '!bg-white  !border-black group-hover:shadow-gray-500 shadow-lg '
+              '!bg-white border-2  border-red-500 group-hover:shadow-gray-500 shadow-lg '
             }
           />
         </div>
