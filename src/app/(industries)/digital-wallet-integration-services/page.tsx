@@ -16,6 +16,31 @@ import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
 import { DWalletFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'E-Wallet Integration for Apps and Websites',
+  },
+  description:
+    'AV Technosys offers secure, fast, and flexible digital wallet integration for your business.',
+  alternates: {
+    canonical:
+      'https://www.avtechnosys.com/digital-wallet-integration-services/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'E-Wallet Integration for Apps and Websites',
+    description:
+      'AV Technosys offers secure, fast, and flexible digital wallet integration for your business.',
+    url: 'https://www.avtechnosys.com/digital-wallet-integration-services/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

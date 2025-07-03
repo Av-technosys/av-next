@@ -1,15 +1,6 @@
 import Leadformservices from '@/components/leadformservices';
-import { NavBarHome } from '@/components/navBar';
 import Ratings from '@/components/ratings';
-import { SectionHeading } from '@/components/sectionHeading';
 import ServicesManaged from '@/components/servicesManaged';
-import ConsultingServicesfintechAll from '@/const/consultingServicesfintechAll';
-import HeroSectionfintechAll from '@/const/heroSectionfintechAll';
-import LeadingSectionfintechAll from '@/const/leadingSectionfintechAll';
-import React from 'react';
-import Opendetails from '@/const/openDetailsbox';
-import Whychoosefintechsection from '@/const/whychoosefintechsection';
-import ProjectCost from '@/const/costSectionfintech';
 import Servicesavoidmistakes from '@/components/servicesavoidmistakes';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { ItconsultingFawData } from '@/const';
@@ -20,46 +11,91 @@ import { ecommerceAppDevelopment } from '@/cosnt';
 import Testimonial from '@/app/reviews';
 import { TechnologiesOffered } from '@/components';
 import { CaseStudy } from '@/components/caseStudy';
+import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
+import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
+import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
+import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
+import ProjectCost from '@/components/costSectionfintech';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: {
+    absolute: 'IT Consulting Support & Services for Businesses',
+  },
+  description:
+    'AV Technosys provides expert IT consulting to support your projects and drive business growth.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/it-consulting-services/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'IT Consulting Support & Services for Businesses',
+    description:
+      'AV Technosys provides expert IT consulting to support your projects and drive business growth.',
+    url: 'https://www.avtechnosys.com/it-consulting-services/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
-    return (
-        <>
-            <HeroSectionfintechAll details={data} />
-            <Ratings className='md:flex mt-10'/>
-            <LeadingSectionfintechAll className="md:order-2" details={leadingdata}/>
-            <ServicesManaged services={services}/>
-            <Leadformservices details={leadformdata}/>
-            <Whychoosefintechsection heading={whychooseheading}  details={whychoosedata}/>
-            <CaseStudy />
-            <ConsultingServicesfintechAll heading={servicedataheading}  details={serviceData}/>
-            <ProjectCost details={costdata}/>
-            <ConsultingServicesfintechAll heading={trusteditconsulting}  details={trusteditconsultingdata}/>
-            <TechnologiesOffered />
-            <Servicesavoidmistakes heading={avoidmistakesheading} details={avoidmistakesdata}/>
-            <Testimonial/>
-            <FaqAccordion data={ItconsultingFawData} />
-            <ContactUs />
-            <BlogSection data={ecommerceAppDevelopment} />
-            <Locations />
-        </>
-    );
-}
+  return (
+    <>
+      <HeroSectionfintechAll details={data} />
+      <Ratings className="md:flex" />
+      <LeadingSectionfintechAll className="md:order-2" details={leadingdata} />
+      <ServicesManaged services={services} />
+      <Leadformservices details={leadformdata} />
+      <Whychoosefintechsection
+        heading={whychooseheading}
+        details={whychoosedata}
+      />
+      <CaseStudy />
+      <ConsultingServicesfintechAll
+        heading={servicedataheading}
+        details={serviceData}
+      />
+      <ProjectCost details={costdata} />
+      <ConsultingServicesfintechAll
+        heading={trusteditconsulting}
+        details={trusteditconsultingdata}
+      />
+      <TechnologiesOffered />
+      <Servicesavoidmistakes
+        heading={avoidmistakesheading}
+        details={avoidmistakesdata}
+      />
+      <Testimonial />
+      <FaqAccordion data={ItconsultingFawData} />
+      <ContactUs />
+      <BlogSection data={ecommerceAppDevelopment} />
+      <Locations />
+    </>
+  );
+};
 
 export default Page;
 
-const data={
-        title:"IT Consulting Services Company",
-        description:"We offer end-to-end enterprise IT consulting services, including cloud migration, business transformation, digital strategy, governance enhancement, and IT infrastructure support, to drive your organisation’s growth and efficiency.",
-        image:"it-consulting-banner.jpg"
-}
+const data = {
+  title: 'IT Consulting Services Company',
+  description:
+    'We offer end-to-end enterprise IT consulting services, including cloud migration, business transformation, digital strategy, governance enhancement, and IT infrastructure support, to drive your organisation’s growth and efficiency.',
+  image: 'it-consulting-banner.jpg',
+};
 
-const leadingdata={
-    title:"Transform Your Business with Modern IT Consulting Services",
-    description1:"In today’s rapidly evolving technological landscape, advancements emerge constantly, often overnight. New solutions that can transform your business are becoming available all the time. If you don’t leverage these opportunities, your competitors surely will. That’s why IT consulting has become essential in the modern business world.",
-    description2:"If you want your company to grow, integrating IT consulting into your strategic planning is vital. As experienced IT consultants, we identify the most effective technologies to implement your projects efficiently and support the management of your customers, teams, and business goals based on your unique requirements.",
-    image:"it-consultingpic.jpg"
-}  
+const leadingdata = {
+  title: 'Transform Your Business with Modern IT Consulting Services',
+  description1:
+    'In today’s rapidly evolving technological landscape, advancements emerge constantly, often overnight. New solutions that can transform your business are becoming available all the time. If you don’t leverage these opportunities, your competitors surely will. That’s why IT consulting has become essential in the modern business world.',
+  description2:
+    'If you want your company to grow, integrating IT consulting into your strategic planning is vital. As experienced IT consultants, we identify the most effective technologies to implement your projects efficiently and support the management of your customers, teams, and business goals based on your unique requirements.',
+  image: 'it-consultingpic.jpg',
+};
 
 const services = [
   {
@@ -100,16 +136,18 @@ const services = [
   },
 ];
 
-const leadformdata={
-    title:"Partner with Our IT Experts to Achieve Your Business Goals Today",
-    description:"Collaborate with our skilled IT team to build powerful digital solutions that help you reach your business goals faster and smarter.",
-    btn:"Get Consultation",
-    image:"projectCallGirl.webp"
-}
-const servicedataheading={
-    title:"Our IT Consulting Services That Drive Business Value",
-    description:"We combine years of experience with extensive technical expertise to reimagine your digital systems, identify key issues, and implement effective solutions that empower your business."
-}
+const leadformdata = {
+  title: 'Partner with Our IT Experts to Achieve Your Business Goals Today',
+  description:
+    'Collaborate with our skilled IT team to build powerful digital solutions that help you reach your business goals faster and smarter.',
+  btn: 'Get Consultation',
+  image: 'projectCallGirl.webp',
+};
+const servicedataheading = {
+  title: 'Our IT Consulting Services That Drive Business Value',
+  description:
+    'We combine years of experience with extensive technical expertise to reimagine your digital systems, identify key issues, and implement effective solutions that empower your business.',
+};
 const serviceData = [
   {
     name: 'IT Strategy Consulting',
@@ -148,46 +186,49 @@ const serviceData = [
       'We modernise your IT infrastructure by integrating advanced technologies such as ERP systems, analytics, and mobile solutions. This creates a robust digital foundation that increases productivity, strengthens capabilities, and drives business growth.',
   },
 ];
-const whychooseheading={
-      title:"Optimise Your Core Business with Expert IT Consulting",
-      description:"Experience remarkable growth and transformation across your business’s core functions with our advanced IT consulting services.",
-      image:"itconsultingwhyweneed.jpg"
-    }
-const whychoosedata=[
-      {
-        title: 'Supply Chain & Financial Management',
-        description:
-          ' Implement robust supply chain processes to enhance logistics and inventory management, while automating financial operations to improve accuracy, speed, and informed business decisions.',
-      },
-      {
-        title: ' Human Resource Management',
-        description:
-          ' Streamline HR processes to simplify administration, enhance talent acquisition, and effectively boost employee performance management.',
-      },
-      {
-        title: '. Data Analytics & Insights',
-        description:
-          'Use data analytics to gain deeper business insights, optimise daily operations, and support strategic, informed decision-making.',
-      },
-      {
-        title: ' Governance & Compliance Automation',
-        description:
-          ' Automate compliance workflows and reporting to ensure your business meets all data protection and regulatory requirements seamlessly.',
-      },
-    ]
-    
-const costdata={
-      title:"IT Consulting and Budgeting Services Aligned with Your Vision",
-      description :" Take your business to the next level with our strategic and growth-focused IT consulting",
-      image:"dev_girl[1].webp",
-      btn:"Consult with our Technical Advisor"
-}
-    
-const trusteditconsulting={
-    title:"Our Trusted Tools for Effective IT Consulting",
-    description:"At AV Technosys, we use advanced tools and technologies to provide IT consulting services that ensure effective processes, smooth communication, and strong cybersecurity for your business."
-}
-const trusteditconsultingdata= [
+const whychooseheading = {
+  title: 'Optimise Your Core Business with Expert IT Consulting',
+  description:
+    'Experience remarkable growth and transformation across your business’s core functions with our advanced IT consulting services.',
+  image: 'itconsultingwhyweneed.jpg',
+};
+const whychoosedata = [
+  {
+    title: 'Supply Chain & Financial Management',
+    description:
+      ' Implement robust supply chain processes to enhance logistics and inventory management, while automating financial operations to improve accuracy, speed, and informed business decisions.',
+  },
+  {
+    title: ' Human Resource Management',
+    description:
+      ' Streamline HR processes to simplify administration, enhance talent acquisition, and effectively boost employee performance management.',
+  },
+  {
+    title: '. Data Analytics & Insights',
+    description:
+      'Use data analytics to gain deeper business insights, optimise daily operations, and support strategic, informed decision-making.',
+  },
+  {
+    title: ' Governance & Compliance Automation',
+    description:
+      ' Automate compliance workflows and reporting to ensure your business meets all data protection and regulatory requirements seamlessly.',
+  },
+];
+
+const costdata = {
+  title: 'IT Consulting and Budgeting Services Aligned with Your Vision',
+  description:
+    ' Take your business to the next level with our strategic and growth-focused IT consulting',
+  image: 'dev_girl[1].webp',
+  btn: 'Consult with our Technical Advisor',
+};
+
+const trusteditconsulting = {
+  title: 'Our Trusted Tools for Effective IT Consulting',
+  description:
+    'At AV Technosys, we use advanced tools and technologies to provide IT consulting services that ensure effective processes, smooth communication, and strong cybersecurity for your business.',
+};
+const trusteditconsultingdata = [
   {
     name: 'Project Management Software',
     description:
@@ -220,25 +261,29 @@ const trusteditconsultingdata= [
   },
 ];
 
-const avoidmistakesheading={
-  title:"Next-Generation Tech Solutions for",
-  description:"At AV Technosys, we use the latest technologies to provide fast IT consultation services that boost efficiency, drive innovation, and help businesses grow in their digital journey."
-}
+const avoidmistakesheading = {
+  title: 'Next-Generation Tech Solutions for',
+  description:
+    'At AV Technosys, we use the latest technologies to provide fast IT consultation services that boost efficiency, drive innovation, and help businesses grow in their digital journey.',
+};
 
-const avoidmistakesdata=[
+const avoidmistakesdata = [
   {
-    title:"Advanced Technologies for Smarter Solutions",
-    description:" We harness AI/ML for predictive analytics and smarter decision-making, integrate IoT for real-time data and automation, and implement blockchain solutions to ensure security, transparency, and data integrity across your business operations.",
-    image:"servicesavoidmistakespic1.jpg"
+    title: 'Advanced Technologies for Smarter Solutions',
+    description:
+      ' We harness AI/ML for predictive analytics and smarter decision-making, integrate IoT for real-time data and automation, and implement blockchain solutions to ensure security, transparency, and data integrity across your business operations.',
+    image: 'servicesavoidmistakespic1.jpg',
   },
   {
-    title:"Data-Driven Insights & Enhanced Security",
-    description:"Using big data and advanced analytics, we uncover valuable insights to guide strategic decisions and growth opportunities. Our robust cybersecurity solutions protect your systems with threat detection, prevention, and response strategies to maintain business continuity.",
-    image:"servicesavoidmistakespic2.jpg"
+    title: 'Data-Driven Insights & Enhanced Security',
+    description:
+      'Using big data and advanced analytics, we uncover valuable insights to guide strategic decisions and growth opportunities. Our robust cybersecurity solutions protect your systems with threat detection, prevention, and response strategies to maintain business continuity.',
+    image: 'servicesavoidmistakespic2.jpg',
   },
   {
-    title:"Scalable Cloud & IT Infrastructure",
-    description:" Our cloud computing expertise provides scalable and flexible IT infrastructure, enabling your business to adapt quickly to changing demands while improving efficiency and reducing operational costs.",
-    image:"servicesavoidmistakespic3.jpg"
-  }
-]
+    title: 'Scalable Cloud & IT Infrastructure',
+    description:
+      ' Our cloud computing expertise provides scalable and flexible IT infrastructure, enabling your business to adapt quickly to changing demands while improving efficiency and reducing operational costs.',
+    image: 'servicesavoidmistakespic3.jpg',
+  },
+];

@@ -49,7 +49,7 @@ const serviceDropdownComponent = {
     },
     {
       title: 'IT- Consulting',
-      link: '/services',
+      link: '/it-consulting-services',
     },
   ],
 };

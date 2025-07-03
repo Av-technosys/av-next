@@ -14,12 +14,36 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
-import {
-  DWalletFawData,
-  LoanlandingFawData,
-  mobileBankingFawData,
-} from '@/const';
+import { LoanlandingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Professional Loan Lending App Development',
+  },
+  description:
+    'Loan lending app development for seamless user experience, secure transactions, and automated loan processing.',
+  alternates: {
+    canonical:
+      'https://www.avtechnosys.com/loan-lending-app-development-services/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Professional Loan Lending App Development',
+
+    description:
+      'Loan lending app development for seamless user experience, secure transactions, and automated loan processing.',
+    url: 'https://www.avtechnosys.com/loan-lending-app-development-services/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

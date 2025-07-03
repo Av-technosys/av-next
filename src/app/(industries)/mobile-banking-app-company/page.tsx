@@ -14,8 +14,35 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
-import { DWalletFawData, mobileBankingFawData } from '@/const';
+import { mobileBankingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Mobile Banking Software Development Services',
+  },
+  description:
+    'Secure, user-friendly mobile banking apps to enhance digital banking and streamline transactions.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/mobile-banking-app-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Mobile Banking Software Development Services',
+
+    description:
+      'Secure, user-friendly mobile banking apps to enhance digital banking and streamline transactions.',
+    url: 'https://www.avtechnosys.com/mobile-banking-app-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

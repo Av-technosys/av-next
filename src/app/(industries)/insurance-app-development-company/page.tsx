@@ -16,6 +16,33 @@ import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
 import { insuranceFawData, tradingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Trusted Insurance App Development Company',
+  },
+  description:
+    'AV Technosys offers scalable, efficient insurance app solutions for your business needs.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/insurance-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Trusted Insurance App Development Company',
+
+    description:
+      'AV Technosys offers scalable, efficient insurance app solutions for your business needs.',
+    url: 'https://www.avtechnosys.com/insurance-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

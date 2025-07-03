@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const LeadingSectionfintechAll = ({ details }) => {
+const LeadingSectionfintechAll = ({ className = '', details }: any) => {
   return (
     <>
       <section className="bg-white px-4 py-16 md:px-8 md:py-20">

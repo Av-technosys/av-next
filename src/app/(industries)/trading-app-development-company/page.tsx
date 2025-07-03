@@ -14,8 +14,34 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { SectionHeading } from '@/components/sectionHeading';
-import { aifintechFawData, tradingFawData } from '@/const';
+import { tradingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Top Companies for Trading Software Development | AV Technosys',
+  },
+  description:
+    'Build secure, scalable trading apps with our expert developers. Get custom stock, crypto, and forex platforms for your business.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/trading-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Top Companies for Trading Software Development | AV Technosys',
+    description:
+      'Build secure, scalable trading apps with our expert developers. Get custom stock, crypto, and forex platforms for your business.',
+    url: 'https://www.avtechnosys.com/trading-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
