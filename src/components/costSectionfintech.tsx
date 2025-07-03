@@ -18,7 +18,7 @@ export default function ProjectCost({details}) {
             />
           </div>
 
-          <div className="w-full text-center text-white md:max-w-md md:text-left lg:max-w-2xl">
+          <div className="w-full text-center text-white md:max-w-sm md:text-left lg:max-w-2xl">
             <h2 className="mb-4 text-xl font-extrabold md:text-2xl lg:text-4xl">
               {details?.title}
             </h2>
@@ -29,7 +29,7 @@ export default function ProjectCost({details}) {
               onClick={() => setIsLeadOpen(true)}
               className="rounded-full bg-black px-6 py-3 font-semibold text-white shadow-md transition duration-300"
             >
-              Request a Free Quote
+              {details?.btn || "Request a Free Quote"}
             </button>
           </div>
         </div>
