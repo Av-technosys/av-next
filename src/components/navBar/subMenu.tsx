@@ -73,12 +73,27 @@ const industryServices = {
           title: 'Finance App Development',
           link: '/fintech-app-development',
         },
-        { title: 'Trading App', link: '/' },
-        { title: 'AI in Fintech', link: '/' },
-        { title: 'Digital Wallet Integration', link: '/' },
-        { title: 'Insurance App Development', link: '/' },
-        { title: 'Mobile Banking App Development', link: '/' },
-        { title: 'Loan Lending App Development', link: '/' },
+        { title: 'Trading App', link: '/trading-app-development-company' },
+        {
+          title: 'AI in Fintech',
+          link: '/ai-fintech-app-development-services',
+        },
+        {
+          title: 'Digital Wallet Integration',
+          link: '/digital-wallet-integration-services',
+        },
+        {
+          title: 'Insurance App Development',
+          link: '/insurance-app-development-company',
+        },
+        {
+          title: 'Mobile Banking App Development',
+          link: '/mobile-banking-app-company',
+        },
+        {
+          title: 'Loan Lending App Development',
+          link: '/loan-lending-app-development-services',
+        },
       ],
     },
     {

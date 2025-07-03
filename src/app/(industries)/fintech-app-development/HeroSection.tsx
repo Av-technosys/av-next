@@ -52,7 +52,7 @@ export default function Herosectionfintech() {
               <img
                 src="/new/643fe95aad9d6f5a08890904_fintech mockup[1].png"
                 alt="Fintech app UI"
-                className="animate-float w-full object-contain"
+                className="w-full animate-float object-contain"
               />
             </div>
           </div>

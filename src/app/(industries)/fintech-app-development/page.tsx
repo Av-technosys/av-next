@@ -192,8 +192,10 @@ function ServiceSection() {
             shadow={'!bg-white'}
             iconClassName={'!text-black'}
             cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg '
+              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg'
             }
+            descriptionClassName={'text-neutral-500 text-sm'}
+            titleClassName={'text-neutral-800 '}
           />
         </div>
       </div>
