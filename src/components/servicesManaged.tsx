@@ -1,18 +1,19 @@
 import React from 'react';
 import { SectionHeading } from './sectionHeading';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
-const ServicesManaged = ({services}) => {
+const ServicesManaged = ({services,heading,className=""}) => {
     return (
     <section className="bg-gray-100 px-4 pb-12 pt-4">
       <SectionHeading
         className="text-center"
-        title={'How Managed IT Services Benefit Your Business'}
+        title={`${heading?.title}`}
         titleClass="text-black"
-        desc="Our IT consulting services help businesses optimise processes, automate workflows, and achieve greater efficiency, leading to accelerated growth and improved performance."
+        desc={`${heading?.description}`}
         descClass={'text-black'}
       />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 md:gap-4 md:px-3 lg:grid-cols-3">
+      <div className={cn("mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 md:gap-4 md:px-3 lg:grid-cols-3",className)}>
         {services.map((service, index) => (
           <div
             key={index}

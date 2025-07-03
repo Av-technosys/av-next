@@ -1,0 +1,140 @@
+import Testimonial from '@/app/reviews';
+import { TechnologiesOffered } from '@/components';
+import { BlogSection } from '@/components/blogSection';
+import { CaseStudy } from '@/components/caseStudy';
+import { ContactUs } from '@/components/contactUs';
+import { FaqAccordion } from '@/components/faqAccordion';
+import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
+import Leadformservices from '@/components/leadformservices';
+import { Locations } from '@/components/Location';
+import Rating2 from '@/components/rating2';
+import Ratings from '@/components/ratings';
+import ServicesManaged from '@/components/servicesManaged';
+
+import { ExperienceSections } from '@/conponents/experience';
+import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
+import { DigitalmarketingFawData } from '@/const';
+import { ecommerceAppDevelopment } from '@/cosnt';
+import React from 'react';
+
+const Page = () => {
+    return (
+        <>   
+            <HeroSectionfintechAll details={data} />
+            <Ratings className=" md:flex" />
+            <ServicesManaged className="lg:grid-cols-4" heading={servicesheading} services={services} />
+            <Leadformservices details={leadformdata} />
+            <CaseStudy className="py-0" />
+            <Whychoosefintechsection heading={whychooseheading} details={whychoosedata}/>
+            <Testimonial />
+            <ExperienceSections className="border-y-4 border-y-[#EAB308]" />
+            <FaqAccordion data={DigitalmarketingFawData} />
+            <ContactUs />
+            <BlogSection data={ecommerceAppDevelopment} />
+            <Rating2 />
+            <Locations />
+        </>
+    );
+}
+
+export default Page;
+
+const data = {
+  title: 'Digital Marketing Services',
+  description:
+    'AV Technosys has a team of certified digital marketing experts who deliver innovative solutions to boost your store’s traffic and help your business achieve greater success.',
+  image: 'digitalmarketingbanner3.jpg',
+  btn:"Discuss Your Project Idea "
+};
+
+const leadformdata = {
+  title: 'Looking for a Content or Digital Marketing Expert for Your Project?',
+  description:
+    'Join thousands of businesses that trust Hire Digital to find skilled content creators, social media strategists, SEO and PPC specialists, and PR professionals to elevate their brand.',
+  btn: 'Get Consultation',
+  image: 'projectCallGirl.webp',
+};
+
+const servicesheading={
+    title:"Explore Our Digital Marketing Services",
+    description:"AV Technosys delivers digital marketing solutions to effectively advertise your products and services in diverse categories."
+}
+const services = [
+  {
+    title: 'SEO Marketing',
+    description:
+      'We start with a comprehensive SEO audit to identify what’s holding back your website. Our digital marketing team then performs in-depth keyword research and implements effective on-page and off-page SEO strategies to boost your online presence.',
+    image: '/new/digimarkpic2.jpg',
+  },
+  {
+    title: 'Content Marketing',
+    description:
+      'Content is king, and our expert writers create original, plagiarism-free content enriched with relevant keywords. We avoid AI-generated text and keyword stuffing, ensuring high-quality content that drives organic traffic to your website.',
+    image: '/new/digimarkpic3.jpg',
+  },
+  {
+    title: 'Social Media Marketing',
+    description:
+      'We prioritise an omnichannel approach to promote your brand effectively. Our social media experts develop strategies that generate quality leads and grow your follower base, ensuring consistent and impactful marketing across all platforms.',
+    image: '/new/digimarkpic122.jpg',
+  },
+  {
+    title: 'PPC Ads',
+    description:
+      'Our PPC experts create high-ROI Google ad campaigns that drive more leads to your website and boost your brand’s visibility online.',
+    image: '/new/digimarkpic5.jpg',
+  },
+  {
+    title: 'Email Marketing',
+    description:
+      'We automate your email marketing campaigns to nurture new leads and maintain relationships with existing customers. Our experts design effective campaigns, write engaging content, and develop a solid strategy while providing you with regular performance updates.',
+    image: '/new/digimarkpic6.jpg',
+  },
+  {
+    title: 'Google Marketing',
+    description:
+      'Beyond Google Ads, we promote your business across platforms like Google My Business and Google Marketing Platform. We also integrate your account with Google Analytics to track performance and provide you with regular updates on your digital growth.',
+    image: '/new/digimarkpic7.jpg',
+  },
+  {
+    title: 'Sales',
+    description:
+      'In addition to digital marketing, our dedicated sales team promotes your products and services by directly connecting with potential customers through phone calls, chats, virtual meetings, and more.',
+    image: '/new/digimarkpic111.jpg',
+  },
+  {
+    title: 'Designing',
+    description:
+      'Our skilled UI/UX designers create eye-catching landing pages, website homepages, and apps that are optimised with relevant keywords. We ensure every design delivers a seamless, branded experience to your customers.',
+    image: '/new/digimarkpic1.jpg',
+  },
+];
+
+const whychooseheading = {
+  title: 'Digital Marketing Process',
+  description:
+    'We follow a structured process before starting any digital marketing project. ',
+  image: 'digitalmarketingpic.jpg',
+};
+const whychoosedata = [
+  {
+    title: 'Business Analysis',
+    description:
+      'We begin by understanding your business, its offerings, and unique selling points to ensure clear and targeted marketing.',
+  },
+  {
+    title: 'Strategic Planning',
+    description:
+      'Our team creates a detailed action plan with defined goals, strategies, and the tools needed to achieve desired results.',
+  },
+  {
+    title: 'Competitive Research & Launch',
+    description:
+      'We analyse your competitors to identify opportunities, then launch your campaigns using best practices to capture customer attention.',
+  },
+  {
+    title: ' Reporting & Optimisation',
+    description:
+      'You receive regular reports on campaign performance, and we continuously optimise strategies for maximum growth.',
+  },
+];

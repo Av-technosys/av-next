@@ -49,7 +49,7 @@ const Page = () => {
       <HeroSectionfintechAll details={data} />
       <Ratings className="md:flex" />
       <LeadingSectionfintechAll className="md:order-2" details={leadingdata} />
-      <ServicesManaged services={services} />
+      <ServicesManaged heading={servicesheading} services={services} />
       <Leadformservices details={leadformdata} />
       <Whychoosefintechsection
         heading={whychooseheading}
@@ -97,6 +97,10 @@ const leadingdata = {
   image: 'it-consultingpic.jpg',
 };
 
+const servicesheading={
+  title:"How Managed IT Services Benefit Your Business",
+  description:"Our IT consulting services help businesses optimise processes, automate workflows, and achieve greater efficiency, leading to accelerated growth and improved performance."
+}
 const services = [
   {
     title: 'Enhanced Efficiency',
