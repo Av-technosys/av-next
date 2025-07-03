@@ -1170,4 +1170,70 @@ export const DigitalmarketingFawData = [
    
 ];
 
+export const NoCodeFawData = [
+  {
+    value: 'faq-1',
+    question: 'With no-code technology, you can create a wide range of applications and websites without writing a single line of code. Some examples include:',
+    answer: (
+     <>
+        <p>Business websites: Professional websites for startups, SMEs, or personal brands with custom layouts and integrations.</p> 
+        <li>E-commerce stores: Online stores with product catalogues, payment gateways, and inventory management.</li>
+        <li>Mobile apps: Customer apps, booking apps, delivery apps, and internal management apps for both Android and iOS.</li>
+        <li>Dashboards & analytics portals: For visualising business data, reports, and performance metrics in real-time.</li>
+        <li>Workflow automation tools: Automating repetitive tasks and streamlining internal business processes.</li>
+        <li>Customer portals & CRMs: Platforms to manage leads, clients, and communication efficiently.</li>
+        <li>Booking and scheduling platforms: Apps for appointments, reservations, and calendar management.</li>
+        <li>Learning management systems: Online course platforms with user registration, progress tracking, and quizzes.</li>
+        <p>No-code platforms are versatile and ideal for businesses seeking quick, cost-effective, and manageable solutions.</p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' What is the duration of no-code development?',
+    answer: (
+     <>
+         <p>No-code development is significantly faster than traditional coding methods. The duration generally depends on the complexity and scale of the project</p>
+         <li>Simple websites or landing pages: 2-5 days</li>
+         <li>Business websites with multiple pages and integrations: 1-2 weeks</li>
+         <li>Basic mobile apps or MVPs: 2-4 weeks</li>
+         <li>Complex apps with advanced workflows and integrations: 4-6 weeks</li>
+         <p>Compared to traditional development, which may take months, no-code tools enable rapid development and quicker go-to-market timelines, making them ideal for startups and businesses with tight deadlines.</p>
+     </>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What are different platforms used for no-code development?',
+    answer: (
+     <>
+        <p>There are various no-code platforms available, each catering to different needs. Some of the popular ones include:</p> 
+        <li>Webflow: For responsive websites with custom designs.</li>
+        <li>Bubble: For creating complex web applications with workflows.</li>
+        <li>Adalo: For building mobile applications quickly.</li>
+        <li>Glide: To convert spreadsheets into apps easily.</li>
+        <li>Wix & Squarespace: For fast, aesthetic business websites and portfolios.</li>
+        <li>Zapier & Integromat (Make): For automating workflows by integrating different tools.</li>
+        <li>Airtable: Combines database functionalities with application building.</li>
+        <li>Salesforce & Pega: For CRM and business process management applications.</li>
+        <li>OutSystems & Mendix: For enterprise-grade no-code or low-code app development.</li>
+        <p>Choosing the right platform depends on your project requirements, scalability, and target users.</p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What is the cost of no-code development?',
+    answer: (
+      <>
+        <p>The cost of no-code development varies based on the complexity, features, and platform used. Generally, no-code projects are more affordable than traditional development. Approximate cost ranges are:</p>
+         <li>Simple websites or landing pages: ₹10,000 – ₹30,000 ($150 – $400)</li>
+        <li>Business websites with custom integrations: ₹30,000 – ₹80,000 ($400 – $1000)</li>
+        <li>Basic mobile apps or MVPs: ₹50,000 – ₹1,50,000 ($600 – $2000)</li>
+        <li>Complex apps with advanced workflows and automation: ₹1,50,000 – ₹5,00,000 ($2000 – $6000)</li>
+        <p>Costs depend on design complexity, features required, platform subscription fees, and ongoing maintenance. No-code development is ideal for businesses wanting to save time and development costs while launching quality digital products.</p>
+      </>
+    ),
+  },
+];
 
