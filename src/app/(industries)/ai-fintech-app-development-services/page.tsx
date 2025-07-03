@@ -1,66 +1,75 @@
-import { TechnologiesOffered } from "@/components";
-import { NavBarHome } from "@/components/navBar";
-import { SectionHeading } from "@/components/sectionHeading";
-import { HoverEffect } from "@/components/servicesCardHoverEffect";
-import Testimonial from "@/components/Testimonial";
-import ConsultingServicesfintechAll from "@/const/consultingServicesfintechAll";
-import ProjectCost from "@/const/costSectionfintech";
-import HeroSectionfintechAll from "@/const/heroSectionfintechAll";
-import LeadingSectionfintechAll from "@/const/leadingSectionfintechAll";
-import Whychoosefintechsection from "@/const/whychoosefintechsection";
-import Fintecheffect from "../fintech-app-development/fintecheffect";
-import { Locations } from "@/components/Location";
-import Rating2 from "@/components/rating2";
-import { BlogSection } from "@/components/blogSection";
-import { ContactUs } from "@/components/contactUs";
-import { aifintechFawData, ecommerceFawData } from "@/const";
-import { ecommerceAppDevelopment } from "@/cosnt";
-import { FaqAccordion } from "@/components/faqAccordion";
-
+import { TechnologiesOffered } from '@/components';
+import { NavBarHome } from '@/components/navBar';
+import { SectionHeading } from '@/components/sectionHeading';
+import { HoverEffect } from '@/components/servicesCardHoverEffect';
+import Testimonial from '@/components/Testimonial';
+import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
+import ProjectCost from '@/components/costSectionfintech';
+import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
+import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
+import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
+import Fintecheffect from '../fintech-app-development/fintecheffect';
+import { Locations } from '@/components/Location';
+import Rating2 from '@/components/rating2';
+import { BlogSection } from '@/components/blogSection';
+import { ContactUs } from '@/components/contactUs';
+import { aifintechFawData, ecommerceFawData } from '@/const';
+import { ecommerceAppDevelopment } from '@/cosnt';
+import { FaqAccordion } from '@/components/faqAccordion';
 
 const Page = () => {
-    return (
-        <>
-            <HeroSectionfintechAll details={data} />
-            <LeadingSectionfintechAll details={leadingdata}/>
-            <ConsultingServicesfintechAll heading={servicedataheading}  details={serviceData}/>
-            <ProjectCost details={costdata}/>
-            <FintechAvoidMistakes />
-            <TechnologiesOffered />
-            <Whychoosefintechsection heading={whychooseheading}  details={whychoosedata}/>
-            <ServiceSection/>
-            <Testimonial/>
-            <Fintecheffect/>
-            <FaqAccordion data={aifintechFawData} />
-            <ContactUs />
-            <BlogSection data={ecommerceAppDevelopment} />
-            <Rating2 />
-            <Locations />
-        </>
-    );
-}
+  return (
+    <>
+      <HeroSectionfintechAll details={data} />
+      <LeadingSectionfintechAll details={leadingdata} />
+      <ConsultingServicesfintechAll
+        heading={servicedataheading}
+        details={serviceData}
+      />
+      <ProjectCost details={costdata} />
+      <FintechAvoidMistakes />
+      <TechnologiesOffered />
+      <Whychoosefintechsection
+        heading={whychooseheading}
+        details={whychoosedata}
+      />
+      <ServiceSection />
+      <Testimonial />
+      <Fintecheffect />
+      <FaqAccordion data={aifintechFawData} />
+      <ContactUs />
+      <BlogSection data={ecommerceAppDevelopment} />
+      <Rating2 />
+      <Locations />
+    </>
+  );
+};
 
 export default Page;
 
-const data={
-        title:"Future Of AI In Fintech",
-        description:"Make use of next-generation AI to revolutionize your BFSI procedures. With our AI Fintech app development services, you can quickly and easily do fraud detection, real-time credit assessments, and customer personalization!",
-        image:"herofintechbanner.jpg"
-    }
+const data = {
+  title: 'Future Of AI In Fintech',
+  description:
+    'Make use of next-generation AI to revolutionize your BFSI procedures. With our AI Fintech app development services, you can quickly and easily do fraud detection, real-time credit assessments, and customer personalization!',
+  image: 'herofintechbanner.jpg',
+};
 
-const leadingdata={
-    title:"Your Trusted Partner in Finance Focused AI Software Development",
-    description1:"By simplifying complex financial procedures for both consumers and businesses to comprehend, our custom AI-driven app development has the potential to completely transform the banking sector. Developing applications that facilitate seamless transactions and adhere to stringent regulatory requirements for the highest level of data protection excites our dedicated crew.",
-    description2:"AI may be utilized to deliver advanced fraud detection, real-time risk assessment, and personalized financial advising services. By guaranteeing the secure, efficient, and intelligent administration of financial operations, our specially created fintech solutions bring innovation and confidence to your financial services. Increase Fintech in a Secure, Practical, and Economical Way.",
-    image:"leadingaifintech.jpg"
-}  
+const leadingdata = {
+  title: 'Your Trusted Partner in Finance Focused AI Software Development',
+  description1:
+    'By simplifying complex financial procedures for both consumers and businesses to comprehend, our custom AI-driven app development has the potential to completely transform the banking sector. Developing applications that facilitate seamless transactions and adhere to stringent regulatory requirements for the highest level of data protection excites our dedicated crew.',
+  description2:
+    'AI may be utilized to deliver advanced fraud detection, real-time risk assessment, and personalized financial advising services. By guaranteeing the secure, efficient, and intelligent administration of financial operations, our specially created fintech solutions bring innovation and confidence to your financial services. Increase Fintech in a Secure, Practical, and Economical Way.',
+  image: 'leadingaifintech.jpg',
+};
 
-const servicedataheading={
-    title:"How We Integrate AI into Fintech Solutions",
-    description:"Our AI solutions boost fintech apps with smarter security, automation, and data-driven insights."
-}
+const servicedataheading = {
+  title: 'How We Integrate AI into Fintech Solutions',
+  description:
+    'Our AI solutions boost fintech apps with smarter security, automation, and data-driven insights.',
+};
 
- const serviceData = [
+const serviceData = [
   {
     name: 'Custom AI Finance Apps',
     description:
@@ -68,28 +77,12 @@ const servicedataheading={
   },
   {
     name: 'Credit Risk Assessment',
-    description:
-      `AI is revolutionizing credit scoring in the FinTech sector by enabling smarter, data-driven risk assessments. With advanced algorithms, businesses can evaluate a borrower's creditworthiness more accurately, analyzing behavioral patterns, transaction history, and alternative data points. This leads to faster, fairer, and more reliable lending decisions, reducing risk while improving customer access to credit`
+    description: `AI is revolutionizing credit scoring in the FinTech sector by enabling smarter, data-driven risk assessments. With advanced algorithms, businesses can evaluate a borrower's creditworthiness more accurately, analyzing behavioral patterns, transaction history, and alternative data points. This leads to faster, fairer, and more reliable lending decisions, reducing risk while improving customer access to credit`,
   },
   {
     name: 'Financial Forecasts',
     description:
       'AI plays a key role in FinTech app development by analyzing complex data patterns and identifying emerging market trends. It enables both short- and long-term financial forecasting with high accuracy, offering valuable insights into investments, currency fluctuations, and economic shifts. These predictive capabilities help businesses and investors make informed, strategic decisions in real time.',
-  },
-  {
-    name: 'Algorithmic Trading',
-    description:
-      'AI-driven algorithms are revolutionizing the trading landscape by detecting unusual market activity and recommending timely trades, even for individual investors. These advanced systems process large volumes of financial data in real time, swiftly identify anomalies, and execute trades with high precision. The result is faster decision-making, minimized risk, and enhanced profitability in rapidly changing market environments.',
-  },
-  {
-    name: 'Robotic Process Automation (RPA)',
-    description:
-      'AI-powered Robotic Process Automation is streamlining operations across the FinTech industry by automating routine and time-consuming tasks. From handling customer inquiries and conducting security checks to processing loan applications and executing trades, RPA enhances efficiency and accuracy. It significantly accelerates approval processes for loans and mortgages by automatically reviewing and validating applicant data, reducing manual effort and improving turnaround time.',
-  },
-  {
-    name: 'AI Wallet Apps',
-    description:
-      'Experience seamless transactions with our AI-powered wallet apps. Designed with advanced security algorithms and predictive analytics, these apps offer users a fast, secure, and convenient payment experience. Benefit from enhanced user activity monitoring, intelligent fraud detection, and valuable data-driven insights to elevate your financial services.',
   },
   {
     name: 'AI Accounting Apps',
@@ -108,11 +101,12 @@ const servicedataheading={
   },
 ];
 
-const costdata={
-  title:"AV Technosys: Your Partner for AI-Powered Fintech Apps",
-  description :"Fintech apps are tough to build, unless you're backed by our expert development team.",
-  image:"Blue_Modern_Quote_LinkedIn_Post__5_-removebg-preview[1].png"
-}
+const costdata = {
+  title: 'AV Technosys: Your Partner for AI-Powered Fintech Apps',
+  description:
+    "Fintech apps are tough to build, unless you're backed by our expert development team.",
+  image: 'ai_service_cost.png',
+};
 function FintechAvoidMistakes() {
   return (
     <section className="mx-auto max-w-7xl bg-white px-4 py-2">
@@ -179,12 +173,13 @@ function FintechAvoidMistakes() {
   );
 }
 
-const whychooseheading={
-  title:"Why Choose AV Technosys for AI-Powered FinTech Solutions",
-  description:"Discover how AI is transforming the future of fintech. AV Technosys builds innovative AI-powered fintech solutions to enhance services and drive growth.",
-  image:"fintechwhychooserobot.jpg"
-}
-const whychoosedata=[
+const whychooseheading = {
+  title: 'Why Choose AV Technosys for AI-Powered FinTech Solutions',
+  description:
+    'Discover how AI is transforming the future of fintech. AV Technosys builds innovative AI-powered fintech solutions to enhance services and drive growth.',
+  image: 'fintechwhychooserobot.jpg',
+};
+const whychoosedata = [
   {
     title: 'Intelligent AI Deployment',
     description:
@@ -205,7 +200,7 @@ const whychoosedata=[
     description:
       'We prioritize data privacy and security in every FinTech application. Our solutions are backed by cutting-edge technologies, including Blockchain, to ensure compliance, trust, and resilience.',
   },
-]
+];
 
 const reliableData = [
   {
@@ -248,9 +243,9 @@ const reliableData = [
 function ServiceSection() {
   return (
     <div className="h-full w-full bg-white">
-      <div className="mx-auto mt-4 w-full max-w-7xl grid-cols-2 px-6  md:pb-10">
+      <div className="mx-auto mt-4 w-full max-w-7xl grid-cols-2 px-6 md:pb-10">
         <SectionHeading
-          className="text-center !pt-0"
+          className="!pt-0 text-center"
           title={'Reliable Fintech App Development for Every Business!'}
           desc="Whether you need fintech app design or expert consulting, AV Technosys delivers top-quality, efficient solutions tailored to all financial sectors."
           titleClass="leading-tight"
@@ -262,8 +257,10 @@ function ServiceSection() {
             shadow={'!bg-white'}
             iconClassName={'!text-black'}
             cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg '
+              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg'
             }
+            descriptionClassName={'text-neutral-500 text-sm'}
+            titleClassName={'text-neutral-800 '}
           />
         </div>
       </div>

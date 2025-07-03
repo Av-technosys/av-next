@@ -1,7 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
-import { img } from 'motion/react-client';
 
 import { useState } from 'react';
 
@@ -10,7 +9,8 @@ export const HoverEffect = ({
   className = '',
   cartClassName = '',
   shadow = '',
-  iconClassName = '',
+  titleClassName = '',
+  descriptionClassName = '',
   showAnimation = true,
 }: any) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
@@ -54,16 +54,12 @@ export const HoverEffect = ({
           )}
 
           <Card cartClassName={cartClassName}>
-            {
-              (item.icon || item.img) && (
-            <CardIcon
-            
-             icon={item.icon} image={item.img} />
-              )
-            }
+            {(item.icon || item.img) && (
+              <CardIcon icon={item.icon} image={item.img} />
+            )}
 
-            <CardTitle iconClassName={iconClassName}>{item.name}</CardTitle>
-            <CardDescription iconClassName={iconClassName}>
+            <CardTitle className={titleClassName}>{item.name}</CardTitle>
+            <CardDescription className={descriptionClassName}>
               {item.description}
             </CardDescription>
           </Card>
@@ -95,28 +91,24 @@ export const CardIcon = ({ icon, image }) => {
     return <img src={`/new/${image}`} className="h-16 w-auto" alt={image} />;
   }
 };
-export const CardTitle = ({ className = '', children, iconClassName = '' }) => {
+export const CardTitle = ({ className = '', children }) => {
   return (
     <h4
       className={cn(
         'mt-2 text-xl font-semibold tracking-wide text-white md:mt-4 md:text-2xl',
-        iconClassName
+        className
       )}
     >
       {children}
     </h4>
   );
 };
-export const CardDescription = ({
-  className = '',
-  children,
-  iconClassName = '',
-}) => {
+export const CardDescription = ({ className = '', children }) => {
   return (
     <p
       className={cn(
         'mt-4 leading-relaxed tracking-wide text-gray-300 md:mt-8',
-        iconClassName
+        className
       )}
     >
       {children}

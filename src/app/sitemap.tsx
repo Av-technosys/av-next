@@ -8,7 +8,6 @@ const paths = [
   '/career',
   '/contact-us',
   '/hire-us',
-  '/portfolio',
   '/services',
   '/blog',
   '/privacy-policy',
