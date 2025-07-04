@@ -1237,3 +1237,63 @@ export const NoCodeFawData = [
   },
 ];
 
+export const webDevFawData = [
+  {
+    value: 'faq-1',
+    question: ' What web development services does AV Technosys provide?',
+    answer: (
+     <>
+        <p> AV Technosys offers complete web development services including custom website development, web application development, e-commerce development, CMS solutions, web portal development, ERP solutions, and integration of emerging technologies like AI, IoT, and blockchain.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How much does it cost to develop a website with AV Technosys?',
+    answer: (
+      <p>
+        The cost varies depending on your project requirements, features, and complexity. A basic website may start from a few hundred dollars, while advanced web applications or e-commerce platforms may cost more. Contact us for a free detailed quote tailored to your needs.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Can I hire dedicated web developers from AV Technosys for my project?',
+    answer: (
+      <>
+      <p>
+         Yes, you can hire our dedicated web developers to work exclusively on your project. This ensures focused expertise, faster delivery, and better collaboration aligned with your business goals.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' How do you create a cohesive digital marketing strategy across different channels?',
+    answer: (
+      <>
+        <p>We develop integrated strategies by aligning goals and messaging across SEO, social media, email, and PPC to ensure consistency and reinforce brand identity on every platform.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: ' What is your web development process?',
+    answer: (
+      <>
+        <p> Our process includes understanding your requirements, planning and design, development, rigorous testing, deployment, and ongoing support. We follow an agile approach to ensure transparency, flexibility, and timely delivery at every stage.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-6',
+    question: ' Does AV Technosys offer web development outsourcing services?',
+    answer: (
+      <>
+        <p> Yes, we provide reliable web development outsourcing services for agencies, startups, and enterprises. Our team acts as your extended development arm, ensuring high-quality solutions delivered efficiently and cost-effectively.</p>
+      </>
+    ),
+  },
+   
+];
+
