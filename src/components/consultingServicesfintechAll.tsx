@@ -5,13 +5,13 @@ import React from 'react';
 const ConsultingServicesfintechAll = ({ details, heading }) => {
   return (
     <div className="h-full w-full bg-white">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6">
+      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-3">
         <SectionHeading
           className="text-center"
           title={`${heading?.title}`}
-          titleClass="text-black"
+          titleClass=" text-2xl sm:text-3xl md:text-4xl"
           desc={`${heading?.description}`}
-          descClass={'text-black'}
+          descClass={'text-neutral-700'}
         />
 
         <div className="">
@@ -23,7 +23,9 @@ const ConsultingServicesfintechAll = ({ details, heading }) => {
             cartClassName={
               '!bg-white  !border-neutral-400 group-hover:shadow-gray-500 shadow-lg '
             }
-            descriptionClassName={'text-neutral-500 text-sm'}
+            descriptionClassName={
+              'text-neutral-600 leading-relaxed tracking-wide'
+            }
             titleClassName={'text-neutral-800 '}
           />
         </div>

@@ -29,7 +29,7 @@ const Tabs = () => {
 
   return (
     <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-2">
-      <div className="h-96 bg-yellow-500 pr-2 text-neutral-900">
+      <div className="max-h-96 bg-yellow-500 pr-2 text-neutral-900">
         <div className="good-scrollbar flex max-h-72 cursor-pointer list-none flex-col overflow-y-auto scroll-smooth p-3 text-lg md:max-h-[24rem] md:p-4 md:text-xl">
           {tabs.map((tab, index) => {
             const Icon = tab.icon;
@@ -56,17 +56,11 @@ const Tabs = () => {
 
       {/* Content */}
       <div className="hide-scrollbar h-96 justify-between overflow-y-auto bg-white px-4 pb-10 [&>*]:gap-3">
-        {Array.from({ length: 7 }, (_, index) => (
-          <div key={index}>
-            {activeTab === index && (
-              <div className="mt-10 grid grid-cols-2 gap-4">
-                {TechonologyData[index].map((item: any, index: number) => (
-                  <IconWithName idx={index} item={item} key={item.name} />
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+        <div className="mt-10 grid grid-cols-2 gap-4">
+          {TechonologyData[activeTab].map((item: any, index: number) => (
+            <IconWithName idx={index} item={item} key={item.name} />
+          ))}
+        </div>
       </div>
     </div>
   );

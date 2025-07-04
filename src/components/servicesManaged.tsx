@@ -2,9 +2,9 @@ import React from 'react';
 import { SectionHeading } from './sectionHeading';
 import Image from 'next/image';
 
-const ServicesManaged = ({services}) => {
-    return (
-    <section className="bg-gray-100 px-4 pb-12 pt-4">
+const ServicesManaged = ({ services }) => {
+  return (
+    <section className="bg-gray-50 px-4 pb-12 pt-4">
       <SectionHeading
         className="text-center"
         title={'How Managed IT Services Benefit Your Business'}
@@ -19,10 +19,10 @@ const ServicesManaged = ({services}) => {
             className="flex w-full flex-col-reverse justify-end rounded-xl bg-white p-2 shadow-md transition duration-300 hover:shadow-xl"
           >
             <div className="mt-2 p-3">
-              <h3 className="mb-2 text-xl font-semibold text-gray-800">
+              <h3 className="mb-2 text-2xl font-semibold text-gray-800">
                 {service.title}
               </h3>
-              <p className="mb-4 text-sm text-gray-600">
+              <p className="mb-4 leading-relaxed tracking-wide text-gray-600">
                 {service.description}
               </p>
             </div>
@@ -38,6 +38,6 @@ const ServicesManaged = ({services}) => {
       </div>
     </section>
   );
-}
+};
 
 export default ServicesManaged;

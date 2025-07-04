@@ -60,13 +60,7 @@ export function ContactUs() {
     >
       <div className="mx-auto grid min-h-96 max-w-7xl grid-cols-1 flex-col items-center justify-between gap-16 md:grid-cols-2 md:gap-4">
         <div className="space-y-12">
-          <p
-            style={{
-              lineHeight: '4rem',
-              wordSpacing: '0.3rem',
-            }}
-            className="text-3xl font-semibold text-neutral-800 md:text-5xl"
-          >
+          <p className="text-3xl font-semibold !leading-snug text-neutral-800 md:text-5xl">
             Our Technology Experts Are Catalysts for Digital Transformation
           </p>
           <p className="text-2xl font-medium tracking-wider text-neutral-700">

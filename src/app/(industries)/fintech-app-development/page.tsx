@@ -1,6 +1,5 @@
 import React from 'react';
 import { SectionHeading } from '@/components/sectionHeading';
-import Fintecheffect from '@/app/(industries)/fintech-app-development/fintecheffect';
 import Fintechsmartsolution from '@/app/(industries)/fintech-app-development/fintechsmartsolution';
 
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
@@ -17,6 +16,11 @@ import { Locations } from '@/components/Location';
 import TestimonilaCrousel from '@/components/testimonilaCrousel';
 import Ratings from '@/components/ratings';
 import { Metadata } from 'next';
+import {
+  Fintecheffect,
+  ReliableFintechAppDevelopmentService,
+  ThreeCardAlternateimagePosition,
+} from '../conponents';
 
 export const metadata: Metadata = {
   title: {
@@ -52,8 +56,13 @@ const FintechPage = () => {
       <Fintechsmartsolution />
       <FintechProjectCost />
       <CaseStudy />
-      <FintechAvoidMistakes />
-      <ServiceSection />
+      <ThreeCardAlternateimagePosition
+        className="pb-8"
+        title="Avoid These Costly Mistakes in FinTech App Creation"
+        desc="Focused development helps avoid key fintech app mistakes and ensures a secure, reliable launch. Watch out for these common pitfalls."
+        mistakes={fintechMistakeCards}
+      />
+      <ReliableFintechAppDevelopmentService />
       <FintechPopularity />
       <FintechStartProject />
       <Fintecheffect />
@@ -69,139 +78,32 @@ const FintechPage = () => {
 };
 
 export default FintechPage;
-
-function FintechAvoidMistakes() {
-  return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-2">
-      <SectionHeading
-        className="text-center"
-        title={'Avoid These Costly Mistakes in FinTech App Creation'}
-        titleClass="text-black leading-normal py-0"
-        desc="Focused development helps avoid key fintech app mistakes and ensures a secure, reliable launch. Watch out for these common pitfalls."
-        descClass={'text-gray-600  '}
-      />
-      <div className="grid gap-6 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <h3 className="mb-3 text-2xl font-semibold text-black">
-            Skipping User-Centric Design
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            A poor UI/UX drives users away. Choose expert FinTech developers to
-            build clean, user-friendly interfaces.
-          </p>
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/fma1.svg" // replace with actual path
-              alt="Neglecting User-Centric Design"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/fma2.svg" // replace with actual path
-              alt="Ignoring Scalability"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-          <h3 className="my-3 text-2xl font-semibold text-black">
-            Not Planning for Scalability
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            Apps that can’t grow with demand will fail. Design with scalability
-            in mind from day one.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <h3 className="mb-3 text-2xl font-semibold text-black">
-            Weak Security Measures
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            Lack of strong security risks user trust. Ensure top-tier encryption
-            and safety protocols in your FinTech app.
-          </p>
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/fma3.svg" // replace with actual path
-              alt="Overlooking Security Features"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-const serviceData = [
+const fintechMistakeCards = [
   {
-    name: 'Custom FinTech App Development',
-    img: 'htmfa1.png',
+    title: 'Skipping User-Centric Design',
     description:
-      'Build feature-rich, custom fintech apps that make an impact. Our expert developers deliver tailored solutions to match your goals.',
+      'A poor UI/UX drives users away. Choose expert FinTech developers to build clean, user-friendly interfaces.',
+    img: '/new/fma1.svg',
+    alt: 'Neglecting User-Centric Design',
+    imageTop: false,
   },
   {
-    name: 'App Maintenance & Support',
-    img: 'htmfa2.png',
+    title: 'Not Planning for Scalability',
     description:
-      'Keep your app secure and up-to-date with our ongoing maintenance and support services designed for long-term performance.',
+      'Apps that can’t grow with demand will fail. Design with scalability in mind from day one.',
+    img: '/new/fma2.svg',
+    alt: 'Ignoring Scalability',
+    imageTop: true,
   },
   {
-    name: 'FinTech App Design Services',
-    img: 'htmfa3.png',
+    title: 'Weak Security Measures',
     description:
-      'Get clean, user-friendly designs that enhance usability and drive engagement with our intuitive UI/UX solutions.',
-  },
-  {
-    name: 'API Integration Services',
-    img: 'htmfa4.png',
-    description:
-      'Ensure seamless data exchange with reliable API integrations handled by our fintech tech specialists.',
-  },
-  {
-    name: 'Security Audits & Testing',
-    img: 'htmfa5.png',
-    description:
-      'Protect your app from vulnerabilities with regular security checks, testing, and compliance audits.',
-  },
-  {
-    name: 'FinTech Consulting Services',
-    img: 'htmfa6.png',
-    description:
-      'Got questions? Our consulting team is here to guide you through the entire fintech app development journey.',
+      'Lack of strong security risks user trust. Ensure top-tier encryption and safety protocols in your FinTech app.',
+    img: '/new/fma3.svg',
+    alt: 'Overlooking Security Features',
+    imageTop: false,
   },
 ];
-
-function ServiceSection() {
-  return (
-    <div className="h-full w-full bg-white">
-      <div className="mx-auto mt-4 w-full max-w-7xl grid-cols-2 px-6 md:mt-10 md:pb-10">
-        <SectionHeading
-          className="text-center"
-          title={'Reliable Fintech App Development for Every Business!'}
-          desc="Whether you need fintech app design or expert consulting, AV Technosys delivers top-quality, efficient solutions tailored to all financial sectors."
-          titleClass="leading-tight"
-        />
-
-        <div className="">
-          <HoverEffect
-            items={serviceData}
-            shadow={'!bg-white'}
-            iconClassName={'!text-black'}
-            cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg'
-            }
-            descriptionClassName={'text-neutral-500 text-sm'}
-            titleClassName={'text-neutral-800 '}
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function FintechPopularity() {
   return (
@@ -312,10 +214,11 @@ function FintechTestimonial() {
         desc=""
         descClass={'text-black'}
       />
-      <TestimonilaCrousel cardClassName="bg-black" />
+      <TestimonilaCrousel cardClassName="bg-neutral-900 text-white" />
     </section>
   );
 }
+
 function Whychooseus() {
   return (
     <div className="my-14 border-y-4 border-[#C8D7F3] bg-gradient-to-br from-[#e8f0fc] to-[#dce8ff] px-4 py-16 md:px-16">
