@@ -1357,4 +1357,43 @@ export const astrologyFawData = [
    
 ];
 
-
+export const astrologytemplefawdata=[
+  {
+    value: 'faq-1',
+    question: 'How much does it cost to develop temple management software?',
+    answer: (
+     <>
+        <p> The cost depends on the design, features, and complexity you choose. A basic temple management system may start from $5,000 to $10,000, while an advanced solution with multiple modules, integrations, and custom features can go up to $20,000 or more.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' How long does it take to build temple management software?',
+    answer: (
+      <p>
+          The development timeline varies based on features and modules. Generally, it takes 2-3 months for a basic system and 4-6 months for a full-featured, customized solution, including design, development, testing, and deployment.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' What are the main features of temple management software?',
+    answer: (
+      <>
+      <p>
+           Key features include donation management, event management, member & volunteer management, inventory management, accounting, live streaming, online booking, and communication modules, all integrated into a single system for smooth operations.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'How does temple management software benefit our temple?',
+    answer: (
+      <>
+        <p>  It streamlines daily operations, enhances transparency in finances, simplifies member and volunteer management, improves event planning, and strengthens communication with devotees, leading to better service and temple growth.</p>
+      </>
+    ),
+  }
+]

@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs"
-  ],
+, "src/components/astrologydetailsbox.jsx"  ],
   "exclude": ["node_modules"]
 }
