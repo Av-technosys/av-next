@@ -81,7 +81,7 @@ export function LeadPopUp({ isOpen, setIsOpen }) {
             width={800}
             height={450}
             className="h-auto w-full"
-            sizes="(max-width: 768px) 100vw, 800px"
+            sizes="(max-width: 768px) 1500px, 800px"
           />
           <div className="absolute top-6 flex flex-col gap-3 px-6">
             <p className="text-3xl font-bold text-white">
@@ -213,13 +213,18 @@ export function LeadPopUpTestimonial({ isOpen, setIsOpen }) {
       <DialogContent className="flex max-h-[86vh] w-full gap-0 overflow-y-auto p-0 sm:max-w-4xl">
         <DialogTitle className="hidden"></DialogTitle>
         <div className="relative hidden h-auto w-full min-w-96 overflow-hidden border-r-2 border-yellow-500/50 bg-yellow-50/50 p-6 md:block">
+          <Image
+            height={300}
+            width={300}
+            src="/new/popup_lead_background.png"
+            alt=""
+            className="absolute bottom-0 right-16 h-48 w-auto rotate-90"
+          />
           <h3 className="text-2xl font-semibold text-yellow-800">
             Leaving Already?
           </h3>
           <p className="mt-2 text-sm font-medium text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-            corrupti nisi recusandae minus nam, consequatur blanditiis iste a
-            velit cumque iure?
+            Hear from our clients and why 1000+ businesses trust AV Technosys
           </p>
           <Carousel
             plugins={[
@@ -243,7 +248,7 @@ export function LeadPopUpTestimonial({ isOpen, setIsOpen }) {
                     <p className="mt-7 text-lg font-semibold">
                       {itemData.name}
                     </p>
-                    <p className="mx-auto mt-0.5 w-fit rounded-3xl border px-3 py-1.5 text-xs font-medium">
+                    <p className="mx-auto mt-0.5 w-fit rounded-3xl border px-3 py-1.5 text-xs font-bold text-neutral-800">
                       {itemData.position}
                     </p>
                     <p className="mt-3 text-sm text-neutral-600">

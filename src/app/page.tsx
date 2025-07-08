@@ -5,7 +5,6 @@ import Footer1 from './footer1';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
-import { Cover } from './../components/ui/cover';
 
 import { InfoNav, NavBarHome } from './../components/navBar/index';
 import {
@@ -85,10 +84,7 @@ function HeroSection({ setIsLeadOpen }) {
         <div className="my-auto w-full">
           <h1 className="mb-4 text-4xl font-semibold text-white xl:text-5xl">
             Build Smarter.{' '}
-            <Cover className="text-yellow-400 hover:text-yellow-500">
-              Launch Faster.
-            </Cover>{' '}
-            Grow Bigger.
+            <span className="text-yellow-400">Launch Faster.</span> Grow Bigger.
           </h1>
           <p className="mb-6 text-lg text-gray-100 xl:text-xl">
             Partner with a top web and mobile app development company delivering
