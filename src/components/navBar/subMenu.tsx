@@ -29,7 +29,7 @@ const serviceDropdownComponent = {
   list: [
     {
       title: 'Digital Marketing',
-      link: '/services',
+      link: '/digital-marketing-services',
     },
     {
       title: 'Website Development',

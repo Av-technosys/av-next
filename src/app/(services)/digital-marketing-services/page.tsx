@@ -1,5 +1,4 @@
 import Testimonial from '@/app/reviews';
-import { TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
 import { CaseStudy } from '@/components/caseStudy';
 import { ContactUs } from '@/components/contactUs';
@@ -10,7 +9,6 @@ import { Locations } from '@/components/Location';
 import Rating2 from '@/components/rating2';
 import Ratings from '@/components/ratings';
 import ServicesManaged from '@/components/servicesManaged';
-
 import { ExperienceSections } from '@/conponents/experience';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { DigitalmarketingFawData } from '@/const';
@@ -18,24 +16,31 @@ import { ecommerceAppDevelopment } from '@/cosnt';
 import React from 'react';
 
 const Page = () => {
-    return (
-        <>   
-            <HeroSectionfintechAll details={data} />
-            <Ratings className=" md:flex" />
-            <ServicesManaged className="lg:grid-cols-4" heading={servicesheading} services={services} />
-            <Leadformservices details={leadformdata} />
-            <CaseStudy className="py-0" />
-            <Whychoosefintechsection heading={whychooseheading} details={whychoosedata}/>
-            <Testimonial />
-            <ExperienceSections className="border-y-4 border-y-[#EAB308]" />
-            <FaqAccordion data={DigitalmarketingFawData} />
-            <ContactUs />
-            <BlogSection data={ecommerceAppDevelopment} />
-            <Rating2 />
-            <Locations />
-        </>
-    );
-}
+  return (
+    <>
+      <HeroSectionfintechAll details={data} />
+      <Ratings className="md:flex" />
+      <ServicesManaged
+        className="lg:grid-cols-3"
+        heading={servicesheading}
+        services={services}
+      />
+      <Leadformservices details={leadformdata} />
+      <CaseStudy className="py-0" />
+      <Whychoosefintechsection
+        heading={whychooseheading}
+        details={whychoosedata}
+      />
+      <Testimonial />
+      <ExperienceSections className="border-y-4 border-y-[#EAB308]" />
+      <FaqAccordion data={DigitalmarketingFawData} />
+      <ContactUs />
+      <BlogSection data={ecommerceAppDevelopment} />
+      <Rating2 />
+      <Locations />
+    </>
+  );
+};
 
 export default Page;
 
@@ -44,7 +49,7 @@ const data = {
   description:
     'AV Technosys has a team of certified digital marketing experts who deliver innovative solutions to boost your store’s traffic and help your business achieve greater success.',
   image: 'digitalmarketingbanner3.jpg',
-  btn:"Discuss Your Project Idea "
+  btn: 'Discuss Your Project Idea ',
 };
 
 const leadformdata = {
@@ -55,10 +60,12 @@ const leadformdata = {
   image: 'projectCallGirl.webp',
 };
 
-const servicesheading={
-    title:"Explore Our Digital Marketing Services",
-    description:"AV Technosys delivers digital marketing solutions to effectively advertise your products and services in diverse categories."
-}
+const servicesheading = {
+  title: 'Explore Our Digital Marketing Services',
+  description:
+    'AV Technosys delivers digital marketing solutions to effectively advertise your products and services in diverse categories.',
+};
+
 const services = [
   {
     title: 'SEO Marketing',
@@ -78,12 +85,7 @@ const services = [
       'We prioritise an omnichannel approach to promote your brand effectively. Our social media experts develop strategies that generate quality leads and grow your follower base, ensuring consistent and impactful marketing across all platforms.',
     image: '/new/digimarkpic122.jpg',
   },
-  {
-    title: 'PPC Ads',
-    description:
-      'Our PPC experts create high-ROI Google ad campaigns that drive more leads to your website and boost your brand’s visibility online.',
-    image: '/new/digimarkpic5.jpg',
-  },
+
   {
     title: 'Email Marketing',
     description:
@@ -96,12 +98,7 @@ const services = [
       'Beyond Google Ads, we promote your business across platforms like Google My Business and Google Marketing Platform. We also integrate your account with Google Analytics to track performance and provide you with regular updates on your digital growth.',
     image: '/new/digimarkpic7.jpg',
   },
-  {
-    title: 'Sales',
-    description:
-      'In addition to digital marketing, our dedicated sales team promotes your products and services by directly connecting with potential customers through phone calls, chats, virtual meetings, and more.',
-    image: '/new/digimarkpic111.jpg',
-  },
+
   {
     title: 'Designing',
     description:
@@ -116,6 +113,7 @@ const whychooseheading = {
     'We follow a structured process before starting any digital marketing project. ',
   image: 'digitalmarketingpic.jpg',
 };
+
 const whychoosedata = [
   {
     title: 'Business Analysis',

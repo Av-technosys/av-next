@@ -2,9 +2,9 @@
 import { TArroeRight } from '@/components/icons';
 import { SectionHeading } from '@/components/sectionHeading';
 
-export const CaseStudy = ({className=""}) => {
+export const CaseStudy = ({ className = '' }) => {
   return (
-    <div className={cn("w-full p-1 py-12 pb-20 sm:px-2",className)}>
+    <div className={cn('w-full p-1 py-12 pb-20 sm:px-2', className)}>
       <SectionHeading
         title="We build impactful mobile and web apps"
         desc=" Here is how we have created a success story for brands dreaming big and something exceptional."
@@ -117,7 +117,7 @@ function Card({ cardData }) {
         </div>
         <button
           onClick={() => setIsLeadOpen(true)}
-          className="group mt-12 flex items-center gap-3 rounded-3xl bg-white px-4 py-1.5 font-semibold text-black ring-1 ring-yellow-100 duration-200 hover:gap-2"
+          className="group mt-4 flex items-center gap-3 rounded-3xl bg-white px-4 py-1.5 font-semibold text-black ring-1 ring-yellow-100 duration-200 hover:gap-2"
         >
           <p className="text-sm">View Case Study</p>
           <TArroeRight

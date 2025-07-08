@@ -62,10 +62,9 @@ export function ContactUs() {
         <div className="space-y-12">
           <p
             style={{
-              lineHeight: '4rem',
               wordSpacing: '0.3rem',
             }}
-            className="text-3xl font-semibold text-neutral-800 md:text-5xl"
+            className="text-3xl font-semibold leading-relaxed text-neutral-800 md:text-5xl md:leading-[4rem]"
           >
             Our Technology Experts Are Catalysts for Digital Transformation
           </p>
