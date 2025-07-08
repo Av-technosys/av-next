@@ -1397,3 +1397,64 @@ export const astrologytemplefawdata=[
     ),
   }
 ]
+
+export const healthcarefawdata=[
+  {
+    value: 'faq-1',
+    question: 'What is your approach to developing a healthcare app?',
+    answer: (
+     <>
+        <p>  We begin by understanding your goals and user needs, followed by detailed planning, UI/UX design, and secure development. Our team conducts thorough testing for performance and compliance before deployment, ensuring a smooth launch and ongoing support.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What healthcare app development services do you provide?',
+    answer: (
+      <p>
+          We offer end-to-end services, including app consulting, UI/UX design, development for Android and iOS, third-party API integrations, compliance solutions, maintenance, and upgrades for healthcare apps.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What experience does your team have in healthcare app development?',
+    answer: (
+      <>
+      <p>
+         Our team consists of highly experienced developers with expertise in building diverse healthcare apps such as telehealth, fitness, EMR, and patient engagement apps, all adhering to industry standards and regulations.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can you integrate third-party APIs with healthcare apps?',
+    answer: (
+      <>
+        <p> Yes, we seamlessly integrate third-party APIs like payment gateways, EHR/EMR systems, wearable devices, and telemedicine tools to enhance your app’s functionality.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: 'How do you ensure compliance with healthcare regulations like HIPAA?',
+    answer: (
+      <>
+      <p>
+          We strictly follow HIPAA and regional data protection laws by implementing strong encryption, secure authentication, and role-based access controls to ensure data privacy and compliance.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'Do you offer customised solutions for specific healthcare needs?',
+    answer: (
+      <>
+        <p> Absolutely. We build fully customised healthcare apps tailored to your unique requirements, workflows, and goals to provide maximum value to your patients and organisation.</p>
+      </>
+    ),
+  }
+]

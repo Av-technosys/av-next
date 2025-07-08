@@ -1,6 +1,7 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-const LeadingSectionfintechAll = ({ className = '', details }: any) => {
+const LeadingSectionfintechAll = ({ className = '', details ,imageclass=''}: any) => {
   return (
     <>
       <section className="bg-white px-4 py-16 md:px-8 md:py-20">
@@ -17,7 +18,7 @@ const LeadingSectionfintechAll = ({ className = '', details }: any) => {
           </div>
 
           {/* Right Video/Image */}
-          <div className="relative overflow-hidden rounded-lg shadow-lg">
+          <div className={cn("relative overflow-hidden rounded-lg shadow-lg",imageclass)}>
             <Image
               src={`/new/${details?.image}`} // Replace with your image path
               alt="Fintech Trends 2025"
