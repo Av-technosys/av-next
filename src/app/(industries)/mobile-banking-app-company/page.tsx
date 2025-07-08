@@ -6,7 +6,6 @@ import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
 import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import React from 'react';
-import Fintecheffect from '../fintech-app-development/fintecheffect';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { ContactUs } from '@/components/contactUs';
 import { BlogSection } from '@/components/blogSection';
@@ -17,6 +16,11 @@ import { SectionHeading } from '@/components/sectionHeading';
 import { mobileBankingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Metadata } from 'next';
+import {
+  Fintecheffect,
+  ReliableFintechAppDevelopmentService,
+  ThreeCardAlternateimagePosition,
+} from '../conponents';
 
 export const metadata: Metadata = {
   title: {
@@ -54,13 +58,18 @@ const Page = () => {
         details={serviceData}
       />
       <ProjectCost details={costdata} />
-      <DWalletAvoidMistakes />
+      <ThreeCardAlternateimagePosition
+        className="pb-8"
+        title="How We Develop Your Mobile Banking App"
+        desc="We adopt an agile development approach for mobile banking apps, enabling quicker launches without compromising on quality."
+        mistakes={dwalletMistakeCards}
+      />
       <TechnologiesOffered />
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}
       />
-      <ServiceSection />
+      <ReliableFintechAppDevelopmentService />
       <Testimonial />
       <Fintecheffect />
       <FaqAccordion data={mobileBankingFawData} />
@@ -148,80 +157,32 @@ const costdata = {
   image: 'btn-lady[1].webp',
 };
 
-function DWalletAvoidMistakes() {
-  return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-2">
-      <SectionHeading
-        className="text-center"
-        title={'How We Develop Your Mobile Banking App'}
-        titleClass="text-black leading-normal py-0"
-        desc="We adopt an agile development approach for mobile banking apps, enabling quicker launches without compromising on quality."
-        descClass={'text-gray-600  '}
-      />
-      <div className="grid gap-6 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <h3 className="mb-3 text-2xl font-semibold text-black">
-            Planning & Designing Your Banking App
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            We start by defining your project goals, understanding user needs,
-            and finalising key features like secure transactions and
-            authentication. Our team designs intuitive, user-friendly interfaces
-            using tools like Figma and Adobe XD to ensure seamless navigation
-            and engaging UI/UX.
-          </p>
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/avoidmistakestrading1.jpg" // replace with actual path
-              alt="Neglecting User-Centric Design"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/dwalletavoid.jpg" // replace with actual path
-              alt="Ignoring Scalability"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-          <h3 className="my-3 text-2xl font-semibold text-black">
-            Development & Security Implementation
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            We select a robust tech stack such as React Native or Flutter for
-            the front end and Node.js, Django, or Spring Boot for the backend.
-            Multi-layered security with 2FA, biometrics, and encryption ensures
-            data protection, while integrating APIs for KYC, credit scoring, and
-            payments enhances functionality.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <h3 className="mb-3 text-2xl font-semibold text-black">
-            Testing, Deployment & Post-Launch Support
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            Our QA team conducts thorough testing, including functional,
-            security, and load testing, before deploying your app on iOS and
-            Android with scalable cloud solutions. Post-launch, we provide
-            continuous monitoring, performance analytics, and regular updates to
-            keep your app secure and competitive.
-          </p>
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/avoidmistakestrading3.jpg" // replace with actual path
-              alt="Overlooking Security Features"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+const dwalletMistakeCards = [
+  {
+    title: 'Planning & Designing Your Banking App',
+    description:
+      'We start by defining your project goals, understanding user needs, and finalising key features like secure transactions and authentication. Our team designs intuitive, user-friendly interfaces using tools like Figma and Adobe XD to ensure seamless navigation and engaging UI/UX.',
+    img: '/new/avoidmistakestrading1.jpg',
+    alt: 'Neglecting User-Centric Design',
+    imageTop: false,
+  },
+  {
+    title: 'Development & Security Implementation',
+    description:
+      'We select a robust tech stack such as React Native or Flutter for the front end and Node.js, Django, or Spring Boot for the backend. Multi-layered security with 2FA, biometrics, and encryption ensures data protection, while integrating APIs for KYC, credit scoring, and payments enhances functionality.',
+    img: '/new/dwalletavoid.jpg',
+    alt: 'Ignoring Scalability',
+    imageTop: true,
+  },
+  {
+    title: 'Testing, Deployment & Post-Launch Support',
+    description:
+      'Our QA team conducts thorough testing, including functional, security, and load testing, before deploying your app on iOS and Android with scalable cloud solutions. Post-launch, we provide continuous monitoring, performance analytics, and regular updates to keep your app secure and competitive.',
+    img: '/new/avoidmistakestrading3.jpg',
+    alt: 'Overlooking Security Features',
+    imageTop: false,
+  },
+];
 
 const whychooseheading = {
   title: 'Advantages of a Mobile Banking App for Your Business',
@@ -251,70 +212,3 @@ const whychoosedata = [
       'Appeal to small enterprises by providing robust financial automation tools and integrating both personal and business banking in one seamless app.',
   },
 ];
-
-const reliableData = [
-  {
-    name: 'Custom FinTech App Development',
-    img: 'htmfa1.png',
-    description:
-      'Build feature-rich, custom fintech apps that make an impact. Our expert developers deliver tailored solutions to match your goals.',
-  },
-  {
-    name: 'App Maintenance & Support',
-    img: 'htmfa2.png',
-    description:
-      'Keep your app secure and up-to-date with our ongoing maintenance and support services designed for long-term performance.',
-  },
-  {
-    name: 'FinTech App Design Services',
-    img: 'htmfa3.png',
-    description:
-      'Get clean, user-friendly designs that enhance usability and drive engagement with our intuitive UI/UX solutions.',
-  },
-  {
-    name: 'API Integration Services',
-    img: 'htmfa4.png',
-    description:
-      'Ensure seamless data exchange with reliable API integrations handled by our fintech tech specialists.',
-  },
-  {
-    name: 'Security Audits & Testing',
-    img: 'htmfa5.png',
-    description:
-      'Protect your app from vulnerabilities with regular security checks, testing, and compliance audits.',
-  },
-  {
-    name: 'FinTech Consulting Services',
-    img: 'htmfa6.png',
-    description:
-      'Got questions? Our consulting team is here to guide you through the entire fintech app development journey.',
-  },
-];
-
-function ServiceSection() {
-  return (
-    <div className="h-full w-full bg-white">
-      <div className="mx-auto mt-4 w-full max-w-7xl grid-cols-2 px-6 md:pb-10">
-        <SectionHeading
-          className="!pt-0 text-center"
-          title={'Reliable Fintech App Development for Every Business!'}
-          desc="Whether you need fintech app design or expert consulting, AV Technosys delivers top-quality, efficient solutions tailored to all financial sectors."
-          titleClass="leading-tight"
-        />
-
-        <div className="">
-          <HoverEffect
-            items={reliableData}
-            shadow={'!bg-white'}
-            iconClassName={'!text-black'}
-            cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg'
-            }
-            descriptionClassName={'text-neutral-500 text-sm'}
-            titleClassName={'text-neutral-800 '}
-          />
-        </div>
-      </div>
-    </div>
-  );
-}

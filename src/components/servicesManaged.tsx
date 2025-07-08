@@ -20,10 +20,10 @@ const ServicesManaged = ({services,heading,className="",backgroundClass=""}) => 
             className="flex w-full flex-col-reverse justify-end rounded-xl bg-white p-2 shadow-md transition duration-300 hover:shadow-xl"
           >
             <div className="mt-2 p-3">
-              <h3 className="mb-2 text-xl font-semibold text-gray-800">
+              <h3 className="mb-2 text-2xl font-semibold text-gray-800">
                 {service.title}
               </h3>
-              <p className="mb-4 text-sm text-gray-600">
+              <p className="mb-4 leading-relaxed tracking-wide text-gray-600">
                 {service.description}
               </p>
             </div>
@@ -39,6 +39,6 @@ const ServicesManaged = ({services,heading,className="",backgroundClass=""}) => 
       </div>
     </section>
   );
-}
+};
 
 export default ServicesManaged;

@@ -54,7 +54,7 @@ export function StickyScrollRevealDemo() {
                   width={400}
                   height={200}
                   className="h-auto max-h-72 w-full rounded-2xl object-cover"
-                  sizes="(max-width: 122px) 20vw, 300px"
+                  sizes="(max-width: 122px) 200px, 300px"
                 />
               </div>
               <div className="w-full md:w-1/2">

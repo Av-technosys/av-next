@@ -6,7 +6,6 @@ import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
 import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import React from 'react';
-import Fintecheffect from '../fintech-app-development/fintecheffect';
 import { FaqAccordion } from '@/components/faqAccordion';
 import { ContactUs } from '@/components/contactUs';
 import { BlogSection } from '@/components/blogSection';
@@ -17,6 +16,11 @@ import { SectionHeading } from '@/components/sectionHeading';
 import { tradingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Metadata } from 'next';
+import {
+  Fintecheffect,
+  ReliableFintechAppDevelopmentService,
+  ThreeCardAlternateimagePosition,
+} from '../conponents';
 
 export const metadata: Metadata = {
   title: {
@@ -53,13 +57,18 @@ const Page = () => {
         details={serviceData}
       />
       <ProjectCost details={costdata} />
-      <TradingAvoidMistakes />
+      <ThreeCardAlternateimagePosition
+        className="pb-8"
+        title="Next-Gen Features for Trading Apps"
+        desc="Upgrade your trading app with next-gen features like AI insights, algorithmic trading, social trading, and advanced security for a seamless user experience."
+        mistakes={tradingMistakeCards}
+      />
       <TechnologiesOffered />
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}
       />
-      <ServiceSection />
+      <ReliableFintechAppDevelopmentService />
       <Testimonial />
       <Fintecheffect />
       <FaqAccordion data={tradingFawData} />
@@ -94,6 +103,7 @@ const servicedataheading = {
   description:
     'Learn how to build a high-performance trading app with essential steps, key features, and technology insights to create a secure and user-friendly stock trading platform.',
 };
+
 const serviceData = [
   {
     name: 'Preventing and Detecting Fraud',
@@ -133,76 +143,32 @@ const costdata = {
   image: 'btn-lady[1].webp',
 };
 
-function TradingAvoidMistakes() {
-  return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-2">
-      <SectionHeading
-        className="text-center"
-        title={'Next-Gen Features for Trading Apps'}
-        titleClass="text-black leading-normal py-0"
-        desc="Upgrade your trading app with next-gen features like AI insights, algorithmic trading, social trading, and advanced security for a seamless user experience."
-        descClass={'text-gray-600  '}
-      />
-      <div className="grid gap-6 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <h3 className="mb-3 text-2xl font-semibold text-black">
-            Smart & Automated Trading Solutions
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            Integrate AI-driven investment insights, algorithmic trading, and
-            robo-advisory services to automate portfolio management, personalise
-            recommendations, and enable emotion-free, strategic trading
-            execution.
-          </p>
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/avoidmistakestrading1.jpg" // replace with actual path
-              alt="Neglecting User-Centric Design"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/avoidmistakestrading2.jpg" // replace with actual path
-              alt="Ignoring Scalability"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-          <h3 className="my-3 text-2xl font-semibold text-black">
-            Engaging & Insightful User Experience
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            Empower users with social trading features, advanced charting and
-            technical analysis tools, real-time push notifications, voice search
-            commands, and in-app news updates for an interactive and informed
-            trading journey.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm transition duration-700 hover:scale-105 hover:shadow-md">
-          <h3 className="mb-3 text-2xl font-semibold text-black">
-            Secure & Seamless Transactions
-          </h3>
-          <p className="mb-4 text-sm text-gray-600">
-            Ensure robust security with biometric and multi-factor
-            authentication while offering seamless payment integrations for
-            quick deposits, withdrawals, and multi-currency wallet management.
-          </p>
-          <div className="w-full overflow-hidden rounded-xl">
-            <img
-              src="/new/avoidmistakestrading3.jpg" // replace with actual path
-              alt="Overlooking Security Features"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+const tradingMistakeCards = [
+  {
+    title: 'Smart & Automated Trading Solutions',
+    description:
+      'Integrate AI-driven investment insights, algorithmic trading, and robo-advisory services to automate portfolio management, personalise recommendations, and enable emotion-free, strategic trading execution.',
+    img: '/new/avoidmistakestrading1.jpg',
+    alt: 'Neglecting User-Centric Design',
+    imageTop: false,
+  },
+  {
+    title: 'Engaging & Insightful User Experience',
+    description:
+      'Empower users with social trading features, advanced charting and technical analysis tools, real-time push notifications, voice search commands, and in-app news updates for an interactive and informed trading journey.',
+    img: '/new/avoidmistakestrading2.jpg',
+    alt: 'Ignoring Scalability',
+    imageTop: true,
+  },
+  {
+    title: 'Secure & Seamless Transactions',
+    description:
+      'Ensure robust security with biometric and multi-factor authentication while offering seamless payment integrations for quick deposits, withdrawals, and multi-currency wallet management.',
+    img: '/new/avoidmistakestrading3.jpg',
+    alt: 'Overlooking Security Features',
+    imageTop: false,
+  },
+];
 
 const whychooseheading = {
   title: 'How We Develop Your Stock Trading App',
@@ -232,70 +198,3 @@ const whychoosedata = [
       'Post-launch, we provide continuous monitoring, regular updates, and feature enhancements to maintain performance, user satisfaction, and compliance with market regulations and evolving trends.',
   },
 ];
-
-const reliableData = [
-  {
-    name: 'Custom FinTech App Development',
-    img: 'htmfa1.png',
-    description:
-      'Build feature-rich, custom fintech apps that make an impact. Our expert developers deliver tailored solutions to match your goals.',
-  },
-  {
-    name: 'App Maintenance & Support',
-    img: 'htmfa2.png',
-    description:
-      'Keep your app secure and up-to-date with our ongoing maintenance and support services designed for long-term performance.',
-  },
-  {
-    name: 'FinTech App Design Services',
-    img: 'htmfa3.png',
-    description:
-      'Get clean, user-friendly designs that enhance usability and drive engagement with our intuitive UI/UX solutions.',
-  },
-  {
-    name: 'API Integration Services',
-    img: 'htmfa4.png',
-    description:
-      'Ensure seamless data exchange with reliable API integrations handled by our fintech tech specialists.',
-  },
-  {
-    name: 'Security Audits & Testing',
-    img: 'htmfa5.png',
-    description:
-      'Protect your app from vulnerabilities with regular security checks, testing, and compliance audits.',
-  },
-  {
-    name: 'FinTech Consulting Services',
-    img: 'htmfa6.png',
-    description:
-      'Got questions? Our consulting team is here to guide you through the entire fintech app development journey.',
-  },
-];
-
-function ServiceSection() {
-  return (
-    <div className="h-full w-full bg-white">
-      <div className="mx-auto mt-4 w-full max-w-7xl grid-cols-2 px-6 md:pb-10">
-        <SectionHeading
-          className="!pt-0 text-center"
-          title={'Reliable Fintech App Development for Every Business!'}
-          desc="Whether you need fintech app design or expert consulting, AV Technosys delivers top-quality, efficient solutions tailored to all financial sectors."
-          titleClass="leading-tight"
-        />
-
-        <div className="">
-          <HoverEffect
-            items={reliableData}
-            shadow={'!bg-white'}
-            iconClassName={'!text-black'}
-            cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#D6E9E8]  group-hover:shadow-gray-500 shadow-lg'
-            }
-            descriptionClassName={'text-neutral-500 text-sm'}
-            titleClassName={'text-neutral-800 '}
-          />
-        </div>
-      </div>
-    </div>
-  );
-}

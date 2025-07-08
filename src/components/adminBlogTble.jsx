@@ -33,6 +33,7 @@ const AdminBlogTble = ({ data }) => {
             <TableRow key={item.id}>
               <TableCell className="font-medium">
                 <Link
+                  prefetch={false}
                   className="hover:underline"
                   href={`/admin/blog/${item.slug}`}
                 >

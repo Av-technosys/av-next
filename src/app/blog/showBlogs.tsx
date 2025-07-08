@@ -80,10 +80,10 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
                 <Image
                   src={filteredBlogs[0]?.image}
                   alt=""
-                  width={800} // Or whatever default size makes sense
-                  height={450} // Maintains 16:9 ratio
+                  width={800}
+                  height={450}
                   className="h-auto w-full rounded-2xl"
-                  sizes="(max-width: 768px) 100vw, 800px"
+                  sizes="(max-width: 768px) 1500px, 800px"
                 />
               </div>
             </Link>
@@ -115,15 +115,19 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
 
           return (
             <div key={blog.id} className="relative mb-4 flex flex-col gap-2">
-              <Link href={`/blog/${blog?.slug}`} className="block w-full">
+              <Link
+                prefetch={false}
+                href={`/blog/${blog?.slug}`}
+                className="block w-full"
+              >
                 <div className="w-full overflow-hidden rounded-xl">
                   <Image
                     className="h-auto w-full"
                     src={blog.image}
                     alt={blog.title}
-                    width={800} // Use a realistic width
-                    height={450} // Use a realistic height that matches the desired ratio
-                    sizes="(max-width: 768px) 100vw, 800px" // For responsiveness
+                    width={800}
+                    height={450}
+                    sizes="(max-width: 768px) 1500px, 800px"
                   />
                 </div>
               </Link>

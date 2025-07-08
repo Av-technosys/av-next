@@ -153,11 +153,14 @@ function ServiceSection() {
           <HoverEffect
             showAnimation={false}
             items={serviceData}
-            shadow={'!bg-[#EAB308]'}
             iconClassName={'!text-black'}
             cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde]  group-hover:shadow-gray-500 shadow-lg '
+              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde] group-hover:shadow-gray-500 shadow-lg '
             }
+            descriptionClassName={
+              'text-neutral-600 leading-relaxed tracking-wide'
+            }
+            titleClassName={'text-neutral-800 '}
           />
         </div>
       </div>
@@ -169,19 +172,19 @@ function TransformAiSection() {
   return (
     <section className="bg-gray-200">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center gap-6 px-4 py-10 md:flex-row md:justify-around md:px-6">
+        <div className="flex flex-col items-center gap-6 px-4 py-16 md:flex-row md:justify-around md:px-6">
           <div className="md:max-w-md md:p-3 lg:max-w-xl">
             <h1 className="pt-10 text-center text-3xl font-bold md:pt-0 md:text-left md:font-semibold lg:text-4xl">
               Transform Your Business with Smart AI Solutions
             </h1>
-            <p className="mt-5 text-center text-sm text-gray-600 md:text-left">
+            <p className="mt-5 text-center text-gray-600 md:text-left">
               AV Technosys is a trusted name in AI development, offering
               cutting-edge AI app development services designed to help
               businesses capitalize on new opportunities. Our skilled AI
               developers deliver customized solutions that enhance operational
               efficiency and empower smarter decision-making.
             </p>
-            <p className="mt-5 hidden text-[14px] text-gray-600 lg:block">
+            <p className="mt-5 hidden text-gray-600 lg:block">
               Whether you're seeking advanced AI software development or custom
               AI app development services, our team brings deep technical
               expertise and a results-driven approach. As a top AI app

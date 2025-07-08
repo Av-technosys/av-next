@@ -45,7 +45,7 @@ function Card({
   return (
     <div
       className={cn(
-        'relative mx-auto h-full max-w-[92vw] overflow-hidden rounded-xl border-2 border-neutral-700 bg-neutral-600/40 p-6 md:p-12',
+        'relative mx-auto h-full max-w-[92vw] overflow-hidden rounded-xl border-2 border-neutral-700 bg-neutral-600/40 p-6 pb-12 md:p-12',
         cardClassName
       )}
     >
