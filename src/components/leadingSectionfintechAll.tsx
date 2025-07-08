@@ -1,7 +1,6 @@
-import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-const LeadingSectionfintechAll = ({ className = '', details ,imageclass=''}: any) => {
+const LeadingSectionfintechAll = ({ className = '', details }: any) => {
   return (
     <>
       <section className="mx-auto max-w-7xl bg-white px-4 py-8 sm:py-16 md:px-6 md:py-20">
@@ -20,7 +19,7 @@ const LeadingSectionfintechAll = ({ className = '', details ,imageclass=''}: any
           </div>
 
           {/* Right Video/Image */}
-          <div className={cn("relative overflow-hidden rounded-lg shadow-lg",imageclass)}>
+          <div className="relative overflow-hidden rounded-lg shadow-lg">
             <Image
               src={`/new/${details?.image}`}
               alt="Fintech Trends 2025"
