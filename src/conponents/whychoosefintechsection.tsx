@@ -10,10 +10,10 @@ const Whychoosefintechsection = ({ details, heading }) => {
             <h3 className="text-2xl font-semibold md:text-4xl">
               {heading?.title}
             </h3>
-            <p>{heading?.description}</p>
+            <p className="text-lg text-neutral-700">{heading?.description}</p>
           </div>
           <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2">
-            {details?.map((feature, index) => (
+            {details?.map((feature: any, index: number) => (
               <div
                 key={index}
                 className="flex items-start gap-4 rounded-xl border bg-white px-4 py-4"

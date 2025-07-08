@@ -1108,6 +1108,66 @@ export const ItconsultingFawData = [
    
 ];
 
+export const DigitalmarketingFawData = [
+  {
+    value: 'faq-1',
+    question: ' How do you incorporate psychology and behavioral science into your marketing campaigns?',
+    answer: (
+     <>
+        <p>We apply psychology and behavioral science principles such as urgency, social proof, and colour psychology to design campaigns that influence customer decisions positively and drive higher conversions.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' What are your core strategies for marketing B2B and B2C brands?',
+    answer: (
+      <p>
+         For B2B, we focus on lead generation through LinkedIn, email marketing, and industry-focused content. For B2C, we prioritise social media marketing, influencer outreach, engaging content, and PPC ads to boost brand awareness and sales.
 
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How do you utilise AI tools in your marketing and automation workflows?',
+    answer: (
+      <>
+      <p>
+          We use AI tools for audience analysis, behaviour prediction, personalised content creation, automated email marketing, and real-time campaign optimisation to maximise efficiency and results.
+
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' How do you create a cohesive digital marketing strategy across different channels?',
+    answer: (
+      <>
+        <p>We develop integrated strategies by aligning goals and messaging across SEO, social media, email, and PPC to ensure consistency and reinforce brand identity on every platform.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: ' Do you offer white-label digital marketing solutions for other agencies?',
+    answer: (
+      <>
+        <p> Yes, we provide white-label services, enabling agencies to expand their offerings with our expertise in SEO, PPC, content marketing, and social media under their own brand name.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-6',
+    question: 'How do you measure the success of your digital marketing campaigns?',
+    answer: (
+      <>
+        <p> We measure success using KPIs like website traffic, conversion rates, lead quality, cost per acquisition, engagement metrics, and ROI to ensure our strategies deliver tangible results for your business.</p>
+      </>
+    ),
+  },
+   
+];
 
 

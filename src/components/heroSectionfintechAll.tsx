@@ -30,7 +30,7 @@ const HeroSectionfintechAll = ({ details }) => {
             onClick={() => setIsLeadOpen(true)}
             className="flex items-center justify-center gap-2 rounded-full bg-[#EAB308] px-6 py-2 text-lg font-semibold text-white transition"
           >
-            Request Demo
+            {details.btn || "Request Demo"}
             <span className="text-2xl">
               {' '}
               <TArroeRight />

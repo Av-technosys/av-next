@@ -4,12 +4,15 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 
-
-const Leadformservices = ({details,className="",contentclassName=""}) => {
-    const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
+const Leadformservices = ({
+  details,
+  className = '',
+  contentclassName = '',
+}) => {
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
 
   return (
-    <div className="mx-auto mb-12 mt-20 w-full max-w-7xl px-4">
+    <div className="mx-auto mb-12 w-full max-w-7xl px-4 lg:mt-20">
       <LeadPopUp isOpen={isLeadFormOpen} setIsOpen={setIsLeadFormOpen} />
 
       <motion.div
@@ -24,29 +27,28 @@ const Leadformservices = ({details,className="",contentclassName=""}) => {
       >
         <img
           src={`/new/${details?.image}`}
-          className={cn("absolute bottom-0 left-6 hidden h-auto w-80 lg:block",className)}
+          className={cn(
+            'absolute bottom-0 left-6 hidden h-auto w-80 lg:block',
+            className
+          )}
           alt=""
         />
         <div className="hidden w-80 px-12 lg:block"></div>
         <div className="flex flex-col gap-6 text-white">
-          <p className="text-3xl font-semibold md:text-4xl">
-            {details?.title}
-          </p>
+          <p className="text-3xl font-semibold md:text-4xl">{details?.title}</p>
           <p className="text-sm tracking-wide md:text-base">
             {details?.description}
           </p>
           <button
             onClick={() => setIsLeadFormOpen(true)}
-            className="w-full rounded-md bg-white px-4 py-2 font-medium text-black sm:w-fit"
+            className="w-full rounded-lg bg-white px-4 py-2 font-medium text-black sm:w-fit"
           >
-           {details?.btn}
+            {details?.btn}
           </button>
         </div>
       </motion.div>
     </div>
   );
-}
+};
 
 export default Leadformservices;
-
-
