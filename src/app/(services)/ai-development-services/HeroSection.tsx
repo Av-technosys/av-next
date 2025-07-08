@@ -9,7 +9,7 @@ export function HeroSection() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -22,7 +22,7 @@ export function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/new/ai-hero-bg.jpeg" // replace with your actual background image
+          src="/new/ai-hero-bg.jpeg"
           alt="AI Background"
           className="h-full w-full object-cover object-center"
         />

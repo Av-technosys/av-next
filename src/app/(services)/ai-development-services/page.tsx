@@ -127,7 +127,7 @@ const serviceData = [
     name: 'AI Consulting Services',
     img: 'ai1.webp',
     description:
-      'Smarter strategies with our expert AI consulting. We guide you in planning and implementing AI solutions for your business.',
+      'Get expert AI consulting to streamline operations, boost efficiency, and drive growth.',
   },
   {
     name: 'AIOps Services',
@@ -140,7 +140,7 @@ const serviceData = [
 function ServiceSection() {
   return (
     <div className="h-full w-full bg-white">
-      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-6 pt-4 md:pb-16">
+      <div className="mx-auto w-full max-w-7xl grid-cols-2 px-4 pt-4 sm:px-6 md:pb-16">
         <SectionHeading
           className="text-center"
           title={'AI Consulting Services'}
@@ -170,7 +170,7 @@ function ServiceSection() {
 
 function TransformAiSection() {
   return (
-    <section className="bg-gray-200">
+    <section className="bg-gray-100">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center gap-6 px-4 py-16 md:flex-row md:justify-around md:px-6">
           <div className="md:max-w-md md:p-3 lg:max-w-xl">
@@ -269,7 +269,7 @@ function OurExpertsSection() {
           {aiExpertiseCards.map((card, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-2xl border bg-white shadow-sm transition-transform duration-300 hover:shadow-xl"
+              className="overflow-hidden rounded-2xl border bg-white shadow-sm duration-300 hover:shadow-xl"
             >
               <img
                 src={card.image}

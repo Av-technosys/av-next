@@ -6,11 +6,11 @@ import Image from 'next/image';
 export default function BuildSmartSolutions() {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
   return (
-    <div className="w-full">
+    <div className="mt-3 w-full">
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <section className="mx-auto w-full max-w-7xl md:py-0">
         <div className="text-center md:px-4">
-          <div className="flex justify-around bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)] px-5 py-6 md:rounded-3xl md:py-0">
+          <div className="flex justify-around bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)] px-5 py-12 md:rounded-3xl md:py-0">
             <div className="flex flex-col items-center justify-center gap-5">
               <h1 className="text-3xl font-bold text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-4xl">
                 Build Smarter Solutions with Us

@@ -15,7 +15,7 @@ export function AiEffectSection() {
         className="text-center"
         title={'Smart AI App Solutions Built for Your Business'}
       />
-      <div className="grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {aiFeatures.map((item, index) => (
           <div
             key={index}
