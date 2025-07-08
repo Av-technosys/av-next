@@ -1397,3 +1397,164 @@ export const astrologytemplefawdata=[
     ),
   }
 ]
+
+export const healthcarefawdata=[
+  {
+    value: 'faq-1',
+    question: 'What is your approach to developing a healthcare app?',
+    answer: (
+     <>
+        <p>  We begin by understanding your goals and user needs, followed by detailed planning, UI/UX design, and secure development. Our team conducts thorough testing for performance and compliance before deployment, ensuring a smooth launch and ongoing support.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What healthcare app development services do you provide?',
+    answer: (
+      <p>
+          We offer end-to-end services, including app consulting, UI/UX design, development for Android and iOS, third-party API integrations, compliance solutions, maintenance, and upgrades for healthcare apps.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What experience does your team have in healthcare app development?',
+    answer: (
+      <>
+      <p>
+         Our team consists of highly experienced developers with expertise in building diverse healthcare apps such as telehealth, fitness, EMR, and patient engagement apps, all adhering to industry standards and regulations.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can you integrate third-party APIs with healthcare apps?',
+    answer: (
+      <>
+        <p> Yes, we seamlessly integrate third-party APIs like payment gateways, EHR/EMR systems, wearable devices, and telemedicine tools to enhance your app’s functionality.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: 'How do you ensure compliance with healthcare regulations like HIPAA?',
+    answer: (
+      <>
+      <p>
+          We strictly follow HIPAA and regional data protection laws by implementing strong encryption, secure authentication, and role-based access controls to ensure data privacy and compliance.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'Do you offer customised solutions for specific healthcare needs?',
+    answer: (
+      <>
+        <p> Absolutely. We build fully customised healthcare apps tailored to your unique requirements, workflows, and goals to provide maximum value to your patients and organisation.</p>
+      </>
+    ),
+  }
+]
+export const Eventfawdata=[
+  {
+    value: 'faq-1',
+    question: 'How do you keep the app secure?',
+    answer: (
+     <>
+        <p> We implement robust security measures such as data encryption, secure APIs, multi-factor authentication, and regular security audits to protect user data and prevent unauthorized access.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How do you integrate third-party services into the app?',
+    answer: (
+      <p>
+          We integrate third-party services using secure APIs and SDKs, ensuring seamless compatibility and functionality. Each integration is thoroughly tested to maintain performance, security, and user experience.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How will the app handle high traffic during peak times?',
+    answer: (
+      <>
+      <p>
+            We design the app with scalable architecture and cloud infrastructure, allowing it to handle sudden spikes in user traffic efficiently without downtime, ensuring a smooth experience even during large events.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'How long does it take to build an event management app?',
+    answer: (
+      <>
+        <p> The development timeline depends on the app's complexity and features, but generally, an event management app takes 3 to 6 months from planning and design to development, testing, and launch.</p>
+      </>
+    ),
+  }
+]
+export const agrifawdata=[
+  {
+    value: 'faq-1',
+    question: ' How much does it cost to develop agricultural software?',
+    answer: (
+     <>
+        <p> The cost varies based on features, complexity, and integrations required. On average, agriculture software development can range from $10,000 to $50,000 or more, depending on your specific business needs.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How long does it take to build agriculture software?',
+    answer: (
+      <p>
+          The development timeline usually ranges between 3 to 6 months, depending on the software's complexity, number of features, and testing requirements.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' How can agriculture software benefit farm management?',
+    answer: (
+      <>
+      <p>
+          Agriculture software improves farm management by automating tasks, monitoring crop and livestock health, optimising resource usage, and providing real-time data insights for better decision-making.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'What types of agriculture software solutions do you provide?',
+    answer: (
+      <>
+        <p> We offer a wide range of solutions including farm management systems, livestock tracking software, AI-based agriculture apps, drone management software, food safety compliance software, and farm accounting solutions.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: ' What is AgriTech?',
+    answer: (
+      <>
+      <p>
+          AgriTech, or agricultural technology, involves using modern technologies like AI, IoT, and data analytics to enhance farming efficiency, productivity, and sustainability.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'Is AgriTech the future of farming?',
+    answer: (
+      <>
+        <p> Yes. AgriTech is transforming agriculture by enabling smarter farming practices, precision agriculture, reduced resource wastage, and higher yields, making it the future of sustainable farming.</p>
+      </>
+    ),
+  }
+]

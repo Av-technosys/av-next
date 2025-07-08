@@ -1,10 +1,11 @@
 'use client';
 
 import { LeadPopUp } from '@/components/leadPopUp';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function ProjectCost({ details }) {
+export default function ProjectCost({ details,className="" }) {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
   return (
     <section className="mx-auto mt-2 max-w-7xl md:mt-14">
@@ -17,7 +18,7 @@ export default function ProjectCost({ details }) {
               width={500}
               src={`/new/${details?.image}`}
               alt="AI Development Visual"
-              className="max-w-[15rem] object-contain md:max-w-xs"
+              className={cn("max-w-[15rem] object-contain md:max-w-xs",className)}
             />
           </div>
 
