@@ -1558,3 +1558,122 @@ export const agrifawdata=[
     ),
   }
 ]
+export const datingFawData = [
+  {
+    value: 'faq-1',
+    question: 'What essential features should a dating app have?',
+    answer: (
+     <>
+        <p>A dating app should include features like user registration, profile creation, geo-location, real-time chat, swipe or match functionality, push notifications, privacy settings, and admin management to ensure smooth and secure user experiences.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How much time does it take to build a dating app?',
+    answer: (
+      <p>
+        The development timeline depends on the complexity and features of your app. Typically, an MVP dating app takes around 3-6 months, while advanced apps with AI, video calls, and premium features may take 6-9 months or more.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Which technology stack is ideal for dating app development?',
+    answer: (
+      <>
+      <p>
+         We use modern technologies like React Native or Flutter for cross-platform apps, Swift for iOS, and Kotlin for Android. Backend development often uses Node.js, PHP (Laravel), or Python (Django) with secure databases like MySQL or MongoDB and cloud integration via AWS or Firebase.
+
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' How do you keep user data safe on a dating app?',
+    answer: (
+      <>
+        <p>We implement robust security measures such as end-to-end encryption, secure authentication (OAuth, 2FA), data encryption, and privacy compliance with standards like GDPR to protect user information and ensure trust.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: 'Do you offer support and maintenance post-launch?',
+    answer: (
+      <>
+        <p>Yes. We provide comprehensive support and maintenance services, including bug fixes, updates, feature enhancements, and security patches to keep your app running smoothly and aligned with market trends.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-6',
+    question: ' How can my dating app stand out from competitors?',
+    answer: (
+      <>
+        <p>We integrate unique features like AI matchmaking, virtual dates (metaverse), personalised recommendations, and niche community targeting to differentiate your app and attract a loyal user base.</p>
+      </>
+    ),
+  },
+   
+];
+export const travelFawData = [
+  {
+    value: 'faq-1',
+    question: ' What types of travel app development services do you provide?',
+    answer: (
+     <>
+        <p>  We offer end-to-end services, including app design, development, API integration, testing, and post-launch maintenance for travel businesses of all sizes.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: '  How long does it take to build a travel app?',
+    answer: (
+      <p>
+          The development timeline depends on features and complexity but typically ranges from 3 to 6 months for a fully functional travel app.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Which platforms do you build travel apps for?',
+    answer: (
+      <>
+      <p>
+           We develop travel apps for Android, iOS, and cross-platform to ensure maximum reach and seamless user experiences.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can you integrate APIs for services like hotel or flight bookings?',
+    answer: (
+      <>
+        <p>  Yes, we integrate third-party APIs for hotel, flight, car rentals, maps, and payment gateways to enhance app functionality.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: ' What are the must-have features in a travel app?',
+    answer: (
+      <>
+        <p> Key features include user profiles, booking systems, secure payments, real-time notifications, reviews, and easy navigation.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-6',
+    question: 'How do you protect user data in travel apps?',
+    answer: (
+      <>
+        <p> We implement advanced security measures such as data encryption, secure payment gateways, and compliance with data privacy standards to keep user data safe.</p>
+      </>
+    ),
+  },
+   
+];

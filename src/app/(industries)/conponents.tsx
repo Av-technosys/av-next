@@ -139,7 +139,7 @@ const reliableData = [
 ];
 
 
-const Fintecheffect = ({details,boxclass="",heading="",boxSize="",textStyle="",boxButton="",boxheadingclass=""}) => {
+const Fintecheffect = ({details,boxclass="",heading="",boxSize="",textStyle="",boxButton="",boxheadingclass="",hoverbgcolor=""}) => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
   return (
     <section className="mx-auto mb-5 max-w-7xl bg-white px-8 py-2 md:px-4">
@@ -170,7 +170,7 @@ const Fintecheffect = ({details,boxclass="",heading="",boxSize="",textStyle="",b
               </div>
             </div>
 
-            <div className="absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+            <div className={cn("absolute right-0 top-0 z-10 flex h-full w-full translate-x-full flex-col justify-start gap-4 bg-[#0079fe] p-4 text-white opacity-0 transition-all duration-700 ease-in-out group-hover:translate-x-0 group-hover:opacity-100",hoverbgcolor)}>
               <p className="text-lg font-bold leading-relaxed">
                 {item.overlayTitle}
               </p>

@@ -1,8 +1,9 @@
 import { SectionHeading } from '@/components/sectionHeading';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
+import { cn } from '@/lib/utils';
 import React from 'react';
 
-const ConsultingServicesfintechAll = ({ details, heading }) => {
+const ConsultingServicesfintechAll = ({ details, heading ,hoverclass=""}) => {
   return (
     <div className="h-full w-full bg-white">
       <div className="mx-auto w-full max-w-7xl grid-cols-2 px-3">
@@ -21,7 +22,7 @@ const ConsultingServicesfintechAll = ({ details, heading }) => {
             shadow={'!bg-[#EAB308]'}
             iconClassName={'!text-black'}
             cartClassName={
-              '!bg-white  !border-neutral-400 group-hover:shadow-gray-500 shadow-lg '
+              cn('!bg-white !border-neutral-400 group-hover:shadow-gray-500 shadow-lg ',hoverclass)
             }
             descriptionClassName={
               'text-neutral-600 leading-relaxed tracking-wide'

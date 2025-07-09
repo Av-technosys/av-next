@@ -22,7 +22,7 @@ const Page = () => {
         <>
              <HeroSectionfintechAll  details={data} />
              <Ratings className="md:flex" />
-             <LeadingSectionfintechAll imageclass="lg:ml-14 lg:w-[450px]" className="md:order-2" details={leadingdata} />
+             <LeadingSectionfintechAll imageclass="lg:ml-auto lg:w-[450px]" className="md:order-2" details={leadingdata} />
              <ServicesManaged heading={servicesheading} services={services} />
              <CaseStudy />
              <Whychoosefintechsection heading={whychooseheading} details={whychoosedata}/>

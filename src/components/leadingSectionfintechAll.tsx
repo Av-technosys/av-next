@@ -14,7 +14,7 @@ const LeadingSectionfintechAll = ({ className = '', details ,imageclass=''}: any
             <p className="mb-4 text-sm leading-normal tracking-wide text-gray-700 sm:text-base sm:leading-relaxed">
               {details?.description1}
             </p>
-            <p className="text-sm leading-normal tracking-wide text-gray-700 sm:leading-relaxed md:hidden lg:block">
+            <p className="text-sm leading-normal tracking-wide text-gray-700 sm:text-base sm:leading-relaxed md:hidden lg:block">
               {details?.description2}
             </p>
           </div>
