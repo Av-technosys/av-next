@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        // hostname: 'av-blog-web.s3.ap-south-1.amazonaws.com',
-        hostname: '**',
-        // port: '',
-        // pathname: 'cozzy.corner/**',
-      },
-    ],
+    // loader: 'imgix',
+    // path: 'https://ik.imagekit.io/avtechnosys/',
+    loader: 'custom',
+    loaderFile: './image/loader.js',
   },
   trailingSlash: true,
 };

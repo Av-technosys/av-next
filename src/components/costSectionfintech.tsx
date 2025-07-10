@@ -15,7 +15,7 @@ export default function ProjectCost({ details }) {
             <Image
               height={500}
               width={500}
-              src={`/new/${details?.image}`}
+              src={`/${details?.image}`}
               alt="AI Development Visual"
               className="max-w-[15rem] object-contain md:max-w-xs"
             />

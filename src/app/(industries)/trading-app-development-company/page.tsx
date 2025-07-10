@@ -140,7 +140,7 @@ const costdata = {
   title:
     'AV Technosys: Your Trusted Partner for High-Performance Trading App Development',
   description: '',
-  image: 'btn-lady[1].webp',
+  image: '/btn-lady_1_.webp',
 };
 
 const tradingMistakeCards = [
@@ -148,15 +148,15 @@ const tradingMistakeCards = [
     title: 'Smart & Automated Trading Solutions',
     description:
       'Integrate AI-driven investment insights, algorithmic trading, and robo-advisory services to automate portfolio management, personalise recommendations, and enable emotion-free, strategic trading execution.',
-    img: '/new/avoidmistakestrading1.jpg',
+    img: '/avoidmistakestrading1.jpg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
   {
     title: 'Engaging & Insightful User Experience',
     description:
-      'Empower users with social trading features, advanced charting and technical analysis tools, real-time push notifications, voice search commands, and in-app news updates for an interactive and informed trading journey.',
-    img: '/new/avoidmistakestrading2.jpg',
+      'Empower users with social trading features, advanced charting and technical analysis tools, real-time notifications, voice search commands, and in-app news updates for an interactive and informed trading journey.',
+    img: '/avoidmistakestrading2.jpg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -164,7 +164,7 @@ const tradingMistakeCards = [
     title: 'Secure & Seamless Transactions',
     description:
       'Ensure robust security with biometric and multi-factor authentication while offering seamless payment integrations for quick deposits, withdrawals, and multi-currency wallet management.',
-    img: '/new/avoidmistakestrading3.jpg',
+    img: '/avoidmistakestrading3.jpg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

@@ -1,6 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
+import Image from 'next/image';
 
 import { useState } from 'react';
 
@@ -83,14 +84,24 @@ export const Card = ({ className = '', children, cartClassName = '' }) => {
     </div>
   );
 };
+
 export const CardIcon = ({ icon, image }) => {
   const Icon = icon;
   if (Icon) {
     return <Icon size={32} color="white" />;
   } else {
-    return <img src={`/new/${image}`} className="h-16 w-auto" alt={image} />;
+    return (
+      <Image
+        width={100}
+        height={100}
+        src={`/${image}`}
+        className="h-14 w-auto"
+        alt={image}
+      />
+    );
   }
 };
+
 export const CardTitle = ({ className = '', children }) => {
   return (
     <h4
@@ -103,6 +114,7 @@ export const CardTitle = ({ className = '', children }) => {
     </h4>
   );
 };
+
 export const CardDescription = ({ className = '', children }) => {
   return (
     <p

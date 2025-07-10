@@ -99,7 +99,7 @@ function Card({ cardData }) {
               <Image
                 width={400}
                 height={250}
-                src="/new/google_play_store.webp"
+                src="/google_play_store.webp"
                 className="h-24 w-auto max-w-28 object-contain"
                 alt=""
               />
@@ -108,7 +108,7 @@ function Card({ cardData }) {
               <Image
                 width={400}
                 height={250}
-                src="/new/app_store.webp"
+                src="/app_store.webp"
                 className="h-24 w-auto max-w-28 object-contain"
                 alt=""
               />
@@ -151,7 +151,7 @@ function Card({ cardData }) {
 const cardsData = [
   {
     title: 'Astrotalk',
-    logo: '/new/astroLogo.webp',
+    logo: '/astroLogo.webp',
     color: '#F07000',
     desc: "Astrotalk is a dominant online astrology platform that connects users to verified astrologers worldwide. This case study will delve into Astrotalk's business model, growth models, and the competitive online astrology industry context.",
     downloads: '5Cr+',
@@ -159,12 +159,12 @@ const cardsData = [
     industry: 'Astrology & Spiritual Services',
     isPlaystoreAvailable: true,
     isAppStoreAvailable: true,
-    image: '/new/caseStudyAstro.webp',
+    image: '/caseStudyAstro.webp',
     bgClass: 'from-[#FFB22C] to-[#FA812F]',
   },
   {
     title: 'Uber',
-    logo: '/new/uberLogo.webp',
+    logo: '/uberLogo.webp',
     color: '#F07000',
     desc: 'Uber is a leading on-demand taxi app enabling real-time ride bookings via smartphones. AV Technosys helps startups and taxi businesses build scalable, feature-rich apps tailored to local markets.',
     downloads: '50Cr+',
@@ -172,26 +172,26 @@ const cardsData = [
     industry: 'Transportation & technology',
     isPlaystoreAvailable: true,
     isAppStoreAvailable: true,
-    image: '/new/caseStudyUber.webp',
+    image: '/caseStudyUber.webp',
     bgClass: 'from-[#7f7f7f] to-[#191919]',
   },
   {
     title: 'Bumble',
-    logo: '/new/bumbleLogo.webp',
+    logo: '/bumbleLogo.webp',
     color: '#F07000',
     desc: 'Bumble is a popular dating app on Android and iOS, known for its GPS-based matching and women-first approach. It connects people for dating, friendship, or networking. AV Technosys helped a client create a similar app with these key features.',
-    // 'A dating app like Bumble is one of the most popular social and dating platforms, available on both Android and iOS. With GPS capabilities and a unique women-first approach, Bumble connects users based on location, interests, and intent whether for dating, friendship, or networking. See how AV Technosys, a dating app development company, helped its client build a Bumble-like experience',
+
     downloads: '5Cr+',
     rating: '4.2/5',
     industry: 'Online Dating / Social Networking',
     isPlaystoreAvailable: true,
     isAppStoreAvailable: true,
-    image: '/new/caseStudybumble.webp',
+    image: '/caseStudybumble.webp',
     bgClass: 'from-[#FFB22C] to-[#FA812F]',
   },
   {
     title: 'Zillow',
-    logo: '/new/zillowLogo.webp',
+    logo: '/zillowLogo.webp',
     color: '#F07000',
     desc: 'Zillow is the best online real estate marketplace. It makes buying, selling, renting, or financing a house easy. This investigation assesses the disruptive innovations that Zillow has leveraged to attain great success and their effects on the real estate marketplaces business environment.',
     downloads: '5Cr+',
@@ -199,12 +199,12 @@ const cardsData = [
     industry: 'Online Real',
     isPlaystoreAvailable: true,
     isAppStoreAvailable: true,
-    image: '/new/caseStudyzillow.webp',
+    image: '/caseStudyzillow.webp',
     bgClass: 'from-[#4477CE] to-[#4070ff]',
   },
   {
     title: 'Zepto',
-    logo: '/new/zeptoLogo.webp',
+    logo: '/zeptoLogo.webp',
     color: '#F07000',
     desc: 'Zepto is transforming grocery delivery in India with ultra-fast doorstep service in just 10 minutes. From fresh fruits and veggies to dairy, snacks, and daily essentials, Zepto brings the store to your door instantly. Designed for busy urban lifestyles, Zepto offers speed, reliability, and a wide selection all at your fingertips.',
     downloads: '5Cr+',
@@ -212,7 +212,7 @@ const cardsData = [
     industry: 'Online Real',
     isPlaystoreAvailable: true,
     isAppStoreAvailable: true,
-    image: '/new/caseStudyzepto.webp',
+    image: '/caseStudyzepto.webp',
     bgClass: 'from-[#4A1594] to-[#370F6E]',
   },
 ];

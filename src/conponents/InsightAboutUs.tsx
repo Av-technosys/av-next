@@ -5,6 +5,7 @@ import {
   TMobile,
   TRocket,
 } from '@/components/icons';
+import Image from 'next/image';
 
 export function InsightAboutUs() {
   const awards = [
@@ -52,9 +53,11 @@ export function InsightAboutUs() {
           {awards.map((Item, idx) => {
             return (
               <div className="aspect-square h-full w-full rounded-xl border bg-gray-100 p-2">
-                <img
+                <Image
+                  width={300}
+                  height={300}
                   key={idx}
-                  src={`/new/review/${Item}`}
+                  src={`/review/${Item}`}
                   className="h-full w-full object-contain"
                   alt=""
                 />

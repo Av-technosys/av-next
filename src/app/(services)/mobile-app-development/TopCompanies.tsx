@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const TopCompanies = () => {
@@ -16,7 +17,13 @@ const TopCompanies = () => {
             key={item}
             className="w-full flex-1 rounded-md border px-4 py-2 shadow"
           >
-            <img src={item} className="m-auto h-10 w-auto" alt="" />
+            <Image
+              width={100}
+              height={100}
+              src={item}
+              className="m-auto h-10 w-auto"
+              alt=""
+            />
           </div>
         ))}
       </div>
@@ -27,14 +34,14 @@ const TopCompanies = () => {
 export default TopCompanies;
 
 const logoData = [
-  '/new/shaadi.webp',
-  '/new/cocacola.webp',
-  '/new/marutisuzuki.webp',
-  '/new/hero.webp',
-  '/new/adani.webp',
-  '/new/colgate.webp',
-  '/new/btn_lady.webp',
-  '/new/hdfc.webp',
-  '/new/samsung.webp',
-  '/new/mcdonalds.webp',
+  '/shaadi.webp',
+  '/cocacola.webp',
+  '/marutisuzuki.webp',
+  '/hero.webp',
+  '/adani.webp',
+  '/colgate.webp',
+  '/btn_lady.webp',
+  '/hdfc.webp',
+  '/samsung.webp',
+  '/mcdonalds.webp',
 ];

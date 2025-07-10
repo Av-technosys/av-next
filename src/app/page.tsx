@@ -31,6 +31,7 @@ import Image from 'next/image';
 import { CaseStudy } from '@/components/caseStudy';
 import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
+import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -120,7 +121,7 @@ function HeroSection({ setIsLeadOpen }) {
                         <Image
                           width={50}
                           height={50}
-                          src="/new/review/top-star.svg"
+                          src="/review/top-star.svg"
                           className="h-4 w-auto"
                           alt=""
                           key={index}
@@ -131,7 +132,7 @@ function HeroSection({ setIsLeadOpen }) {
                         <Image
                           width={50}
                           height={50}
-                          src="/new/review/top-star-47.svg"
+                          src="/review/top-star-47.svg"
                           className="h-4 w-auto"
                           alt=""
                         />
@@ -193,7 +194,7 @@ function AISection({ setIsLeadOpen }) {
           <Image
             height={400}
             width={400}
-            src="/new/ai_image.webp"
+            src="/ai_image.webp"
             className="h-full max-h-[20rem] w-auto object-contain lg:max-h-[26rem]"
             alt=""
           />
@@ -215,28 +216,28 @@ function PartnerSection() {
             height={100}
             width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-12"
-            src="/new/review/aws-partner.svg"
+            src="/review/aws-partner.svg"
             alt=""
           />
           <Image
             height={100}
             width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-9"
-            src="/new/review/mongodb-partner.svg"
+            src="/review/mongodb-partner.svg"
             alt=""
           />
           <Image
             height={100}
             width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-9"
-            src="/new/review/cloudinary-partner.svg"
+            src="/review/cloudinary-partner.svg"
             alt=""
           />
           <Image
             height={100}
             width={100}
             className="mx-auto h-10 w-auto md:mx-0 md:h-12"
-            src="/new/review/google-cloud-partner.svg"
+            src="/review/google-cloud-partner.svg"
             alt=""
           />
         </div>
@@ -318,7 +319,7 @@ function ExperienceSection() {
             width={500}
             height={500}
             className="h-full w-full rounded-md object-cover"
-            src="/new/experience-img.png"
+            src="/experience-img.png"
             alt=""
           />
         </div>
@@ -378,7 +379,7 @@ function BookCall({ setIsLeadOpen }) {
           <Image
             height={500}
             width={500}
-            src="/new/bookacall.png"
+            src="/bookacall.png"
             alt=""
             className="h-full w-full object-contain"
           />
@@ -504,7 +505,7 @@ function BlogCard({ blog }) {
           height={500}
           width={500}
           className="h-auto w-full rounded-xl object-cover sm:h-full sm:w-auto"
-          src={blog.image}
+          src={convertS3ToImageKit(blog.image)}
           alt={blog.title}
         />
       </Link>
@@ -556,9 +557,6 @@ function WhyChooseUs() {
           <div className="absolute bottom-0 left-0 h-12 w-full from-white to-transparent md:h-20 md:bg-gradient-to-t"></div>
         </div>
         <div className="space-y-6 rounded-3xl border bg-gray-50 px-6 py-4 md:py-12">
-          {/* <p className="text-center text-5xl font-semibold">
-            Reimagined user experiences
-          </p> */}
           <div className="grid-cols-2 items-center gap-6 lg:grid">
             <div className="relative mx-auto hidden aspect-[3/4] h-[34rem] w-auto overflow-hidden rounded-2xl lg:block">
               <AnimatePresence mode="wait">

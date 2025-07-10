@@ -14,7 +14,7 @@ const RealEstateHiredev = () => {
           <Image
             width={500}
             height={500}
-            src="/new/real-estate-firm[2].png"
+            src="/real-estate-firm_2_.png"
             alt="dev1"
             className="h-full w-full rounded-xl object-cover"
           />

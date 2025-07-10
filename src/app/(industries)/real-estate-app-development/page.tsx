@@ -93,7 +93,7 @@ function RealstateRevolution() {
         </div>
         <div className="relative flex justify-center">
           <Image
-            src="/new/bannerofre2.jpg"
+            src="/bannerofre2.jpg"
             width={400}
             height={400}
             alt="City Background"

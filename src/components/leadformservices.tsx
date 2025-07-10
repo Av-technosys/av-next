@@ -3,6 +3,7 @@ import { LeadPopUp } from '@/components/leadPopUp';
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const Leadformservices = ({
   details,
@@ -25,8 +26,10 @@ const Leadformservices = ({
         }}
         className="relative flex w-full gap-12 rounded-3xl bg-[linear-gradient(270deg,_#6a0dad,_#8e44ad,_#9b59b6,_#6a0dad)] bg-[length:300%_300%] px-6 py-8 md:py-12"
       >
-        <img
-          src={`/new/${details?.image}`}
+        <Image
+          height={100}
+          width={100}
+          src={`/${details?.image}`}
           className={cn(
             'absolute bottom-0 left-6 hidden h-auto w-80 lg:block',
             className

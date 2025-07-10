@@ -31,7 +31,7 @@ function Card() {
       title: 'Artificial intelligence',
       color: 'bg-slate-700/10',
       text: 'text-slate-700',
-      image: '/new/service/AImobileservice.jpeg',
+      image: '/service/AImobileservice.jpeg',
       description:
         'Use AV Technosys AI-powered apps to unlock more intelligent mobile experiences. To assist customers in making wise decisions, our products incorporate cutting-edge capabilities like picture recognition, natural language processing, and predictive analytics. These AI-powered applications increase efficiency, automate tedious chores, and personalize experiences, all of which increase industry profitability.',
     },
@@ -40,7 +40,7 @@ function Card() {
       title: 'Blockchain',
       color: 'bg-red-700/10',
       text: 'text-red-700',
-      image: '/new/service/blockchain-mobile-service.jpg',
+      image: '/service/blockchain-mobile-service.jpg',
       description:
         'Blockchain technology is reshaping traditional mobile app development by enhancing security, transparency, and operational efficiency. At AV Technosys, we integrate decentralized ledgers and smart contracts to ensure data accuracy, immutability, and trust. Our blockchain app development services cater to industries like finance, healthcare, and logistics, delivering secure, future-ready solutions that drive performance.',
     },
@@ -48,7 +48,7 @@ function Card() {
       title: 'AR/VR',
       color: 'bg-green-700/10',
       text: 'text-green-700',
-      image: '/new/service/ARVRService.jpeg',
+      image: '/service/ARVRService.jpeg',
       description:
         'Augmented Reality (AR) and Virtual Reality (VR) are transforming how users interact with the digital and physical world. At AV Technosys, we develop immersive AR/VR solutions for gaming, education, real estate, and e-commerce. With high-quality graphics and user-friendly interfaces, our applications offer engaging, creative, and meaningful experiences that reshape user interaction and perception.',
     },
@@ -56,7 +56,7 @@ function Card() {
       title: 'Metaverse',
       color: 'bg-indigo-700/10',
       text: 'text-indigo-700',
-      image: '/new/service/Metaverseservice.jpeg',
+      image: '/service/Metaverseservice.jpeg',
 
       description:
         "Step into the future with AV Technosys' metaverse-enabled mobile solutions. Our cutting-edge applications designed for communication, entertainment, and e-commerce combine immersive 3D environments with real-time interaction to elevate customer engagement. As the world embraces digital transformation, our metaverse apps unlock new levels of creativity and connection for your business.",
@@ -66,7 +66,7 @@ function Card() {
       title: 'IoT',
       color: 'bg-orange-700/10',
       text: 'text-orange-700',
-      image: '/new/service/IOTmobileservice.jpg',
+      image: '/service/IOTmobileservice.jpg',
       description:
         'Seamlessly connect and manage devices with IoT solutions from AV Technosys. Our IoT-enabled mobile applications provide real-time tracking, monitoring, and control across industries like healthcare, smart homes, and manufacturing. With expert integration and intuitive design, we deliver efficient, intelligent, and connected app experiences tailored to your business needs.',
     },
@@ -84,8 +84,7 @@ function Card() {
               key={item.title}
               className={cn(
                 'cursor-pointer rounded-full bg-gray-200 px-4 py-2 text-sm font-semibold tracking-wide text-gray-700 duration-200 hover:scale-105',
-                // item.color,
-                // item.text,
+
                 selectedCategory.title === item.title &&
                   'bg-blue-300 text-white ring-2 ring-blue-600'
               )}
@@ -106,12 +105,7 @@ function Card() {
             alt=""
           />
         </div>
-        <motion.div
-          // initial={{ opacity: 0.8, y: 8, filter: 'blur(4px)' }}
-          // animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          key={selectedCategory.title}
-          className="w-full space-y-5"
-        >
+        <motion.div key={selectedCategory.title} className="w-full space-y-5">
           <motion.h2
             initial={{ opacity: 0.8, y: 8, filter: 'blur(4px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}

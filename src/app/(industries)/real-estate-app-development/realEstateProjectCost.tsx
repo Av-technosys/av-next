@@ -16,7 +16,7 @@ export default function RealEstateProjectCost() {
             <Image
               width={500}
               height={500}
-              src="/new/real_estate_app_development_solutions[1].webp"
+              src="/real_estate_app_development_solutions_1_.webp"
               alt="AI Development Visual"
               className="w-full max-w-sm object-contain"
             />

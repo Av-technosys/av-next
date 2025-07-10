@@ -2,6 +2,7 @@
 import { LeadPopUp } from '@/components/leadPopUp';
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 export const HireDevelopersSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,10 @@ export const HireDevelopersSection = () => {
     <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center gap-8 px-6 py-12 md:flex-row md:gap-16 md:px-12 lg:px-12">
       <LeadPopUp isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="w-full md:w-1/2">
-        <img
-          src="/new/hire-us1.jpeg"
+        <Image
+          height={500}
+          width={500}
+          src="/hire-us1.jpeg"
           alt="Hire Developers"
           className="h-auto w-full rounded-md object-contain"
         />

@@ -99,7 +99,7 @@ function EmpoweringEcommerce() {
 
         <div className="flex w-full animate-float justify-center lg:w-1/2">
           <Image
-            src="/new/Blue Modern Quote LinkedIn Post (4)[1].png"
+            src="/Blue Modern Quote LinkedIn Post (4)_1_.png"
             alt="Ecommerce App Mockup"
             width={500}
             height={500}
@@ -115,39 +115,40 @@ const services = [
     title: 'Ecommerce Consulting Services',
     description:
       'Have an idea for an online store? Our ecommerce consulting services turn your vision into a successful business. We help you enhance operations and deliver smooth customer experiences with powerful ecommerce websites. Hire our expert developers to build your perfect online store today.',
-    image: '/new/ecomservices1.webp',
+    image: '/ecomservices1.webp',
   },
   {
     title: 'Custom Ecommerce Development',
     description:
       'Looking for flexible, customised ecommerce solutions? Our team builds robust applications with decoupled architectures for greater functionality. As a leading ecommerce development company in the USA, we deliver all types of ecommerce apps and websites at cost-effective prices.',
-    image: '/new/ecomservices2.webp',
+    image: '/ecomservices2.webp',
   },
   {
     title: 'Mobile Ecommerce App Development',
     description:
       'Want to take your retail store online? We create feature-rich mobile ecommerce apps to give your customers a seamless shopping experience anytime, anywhere. Share your requirements, and we’ll handle everything from design to launch.',
-    image: '/new/ecomservice4.webp',
+    image: '/ecomservice4.webp',
   },
   {
     title: 'Ecommerce Website Development',
     description:
       'Need a professional ecommerce website? Our skilled developers craft attractive, user-friendly sites to boost your online sales and grow your business. Let’s build a website that elevates your brand and drives results.',
-    image: '/new/ecomservice3.webp',
+    image: '/ecomservice3.webp',
   },
   {
     title: 'Ecommerce Migration & Porting',
     description:
       'Planning to upgrade your existing ecommerce platform? We provide fast and secure migration and porting services to enhance performance and profitability. Switch smoothly with the help of our experienced ecommerce development team.',
-    image: '/new/video5.webp',
+    image: '/video5.webp',
   },
   {
     title: 'Ecommerce Maintenance & Support',
     description:
       'Keep your ecommerce website and app running flawlessly with our maintenance and support services. We ensure your platform stays updated, secure, and efficient so your business never stops growing. Contact us for hassle-free support.',
-    image: '/new/video6.webp',
+    image: '/video6.webp',
   },
 ];
+
 function EcommerceServices() {
   return (
     <section className="bg-gray-100 px-4 pb-12 pt-4">
@@ -185,6 +186,7 @@ function EcommerceServices() {
     </section>
   );
 }
+
 const features = [
   {
     title: 'Extensive Domain Expertise',
@@ -242,7 +244,7 @@ function EcommerceFeatureSection() {
 
         <div className="order-1 col-span-6 mx-auto flex h-auto max-h-80 w-full max-w-96 items-center justify-center sm:max-h-none lg:order-2 lg:col-span-2">
           <Image
-            src="/new/eCommerce-App-Development-Services[1].webp"
+            src="/eCommerce-App-Development-Services_1_.webp"
             alt="Payment Mobile Illustration"
             width={500}
             height={500}
@@ -253,13 +255,14 @@ function EcommerceFeatureSection() {
     </section>
   );
 }
+
 function EndToEndSolution() {
   return (
     <section className="bg-black px-4 py-8 text-center text-white md:px-8 lg:text-start">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 lg:flex-row">
         <div className="relative flex w-full justify-center lg:w-1/2">
           <Image
-            src="/new/ecombanner-img[1].webp"
+            src="/ecombanner-img_1_.webp"
             alt="App Screen 1"
             width={500}
             height={500}
@@ -282,6 +285,7 @@ function EndToEndSolution() {
     </section>
   );
 }
+
 function ExperienceSection() {
   const experienceData = [
     {
@@ -355,7 +359,7 @@ function ExperienceSection() {
             width={500}
             height={500}
             className="h-full w-full rounded-md object-cover"
-            src="/new/experience-img.png"
+            src="/experience-img.png"
             alt=""
           />
         </div>
@@ -363,6 +367,7 @@ function ExperienceSection() {
     </div>
   );
 }
+
 const WhatMakesUsSection = () => {
   const Whatmakefeatures = [
     {
@@ -424,7 +429,7 @@ const WhatMakesUsSection = () => {
 
           <div className="sm:col-span-2 md:col-span-1 lg:col-span-2">
             <Image
-              src="/new/ai-banner.webp"
+              src="/ai-banner.webp"
               alt="E-commerce Payment"
               width={500}
               height={500}

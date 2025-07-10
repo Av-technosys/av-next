@@ -1,5 +1,6 @@
 import React from 'react';
 import { SectionHeading } from './sectionHeading';
+import Image from 'next/image';
 
 const Servicesavoidmistakes = ({ heading, details }) => {
   return (
@@ -25,8 +26,10 @@ const Servicesavoidmistakes = ({ heading, details }) => {
                 {detail?.description}
               </p>
               <div className="w-full overflow-hidden rounded-xl">
-                <img
-                  src={`/new/${detail?.image}`} // replace with actual path
+                <Image
+                  width={500}
+                  height={500}
+                  src={`/${detail?.image}`}
                   alt="Neglecting User-Centric Design"
                   className="h-auto w-full object-contain"
                 />

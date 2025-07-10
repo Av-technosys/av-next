@@ -21,7 +21,7 @@ const FroMultipalPlatform = () => {
           </p>
         </div>
         <Image
-          src={'/new/service/mobileappdevelopmentservice.png'}
+          src={'/service/mobileappdevelopmentservice.png'}
           alt=""
           width={700}
           height={700}

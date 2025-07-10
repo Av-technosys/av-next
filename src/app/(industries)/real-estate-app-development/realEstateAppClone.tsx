@@ -48,7 +48,7 @@ const RealEstateAppClone = () => {
                 <Image
                   width={300}
                   height={300}
-                  src={`/new/review/${item.img}`}
+                  src={`/review/${item.img}`}
                   alt="Redfin App Clone"
                   className="w-full rounded-lg"
                 />

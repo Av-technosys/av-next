@@ -8,31 +8,31 @@ const content = [
     title: 'Define & Analyze Requirements',
     description:
       'We kick things off by truly understanding what’s needed. By listening closely, we dig into user needs and explore all the possibilities. This solid foundation sets us up to create something that stands out and really makes an impact.',
-    image: '/new/process-1.jpeg',
+    image: '/process-1.jpeg',
   },
   {
     title: 'Sprint Planning',
     description:
       'No more guesswork  we break everything down into clear, achievable goals with specific timelines. Each sprint becomes a focused step toward success, ensuring that we’re all aligned and making progress together. Ready, set, go!',
-    image: '/new/process-2.jpeg',
+    image: '/process-2.jpeg',
   },
   {
     title: 'Design & Development',
     description:
       'Design and development go hand-in-hand here. We mix creative flair with technical know-how to craft innovative, intuitive solutions. It’s all about teamwork and turning those big ideas into something amazing - together!',
-    image: '/new/process-3.jpeg',
+    image: '/process-3.jpeg',
   },
   {
     title: 'Build & Implement',
     description:
       "Now the fun begins! We roll up our sleeves and transform plans into reality with precision. The result? A seamless experience that hits all the right notes and aligns perfectly with user needs. It's time to bring those ideas to life.",
-    image: '/new/process-4.jpeg',
+    image: '/process-4.jpeg',
   },
   {
     title: 'Review & Monitor Progress',
     description:
       'Success doesn’t stop at launch - we keep our eyes on the prize, continuously reviewing and tweaking to ensure everything’s on track. We stay agile, adapt when needed, and keep pushing to deliver even better results than expected. The journey is never over!',
-    image: '/new/process-5.jpeg',
+    image: '/process-5.jpeg',
   },
 ];
 

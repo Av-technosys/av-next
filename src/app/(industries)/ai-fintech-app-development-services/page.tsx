@@ -143,7 +143,7 @@ const fintechMistakes = [
     title: 'Skipping User-Centric Design',
     description:
       'A poor UI/UX drives users away. Choose expert FinTech developers to build clean, user-friendly interfaces.',
-    img: '/new/fma1.svg',
+    img: '/fma1.svg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
@@ -151,7 +151,7 @@ const fintechMistakes = [
     title: 'Not Planning for Scalability',
     description:
       'Apps that can’t grow with demand will fail. Design with scalability in mind from day one.',
-    img: '/new/fma2.svg',
+    img: '/fma2.svg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -159,7 +159,7 @@ const fintechMistakes = [
     title: 'Weak Security Measures',
     description:
       'Lack of strong security risks user trust. Ensure top-tier encryption and safety protocols in your FinTech app.',
-    img: '/new/fma3.svg',
+    img: '/fma3.svg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

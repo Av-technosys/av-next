@@ -39,7 +39,7 @@ export default function MissionVisionSection() {
         {/* Right Image */}
         <div className="flex-1">
           <Image
-            src="/new/about-mission.jpeg"
+            src="/about-mission.jpeg"
             alt="Mission Vision Illustration"
             width={600}
             height={500}

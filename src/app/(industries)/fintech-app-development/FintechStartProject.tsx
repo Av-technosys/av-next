@@ -1,6 +1,7 @@
 'use client';
 
 import { LeadPopUp } from '@/components/leadPopUp';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function FintechStartProject() {
@@ -12,8 +13,10 @@ export default function FintechStartProject() {
         <div className="px-4 py-10 md:relative">
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-[rgb(22,22,35)] p-4 md:flex-row md:p-16">
             <div className="flex w-[250px] justify-center md:absolute md:right-0 md:top-[20px] md:w-[500px] lg:right-[40px] lg:top-[-40px]">
-              <img
-                src="/new/mockup-responsive[1].png"
+              <Image
+                height={500}
+                width={500}
+                src="/mockup-responsive_1_.png"
                 alt="fintech Development Visual"
                 className="max-w-[20rem] object-contain md:max-w-md lg:max-w-xl"
               />

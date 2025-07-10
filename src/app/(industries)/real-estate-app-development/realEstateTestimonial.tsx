@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/carousel';
 
 import { SectionHeading } from '@/components/sectionHeading';
+import Image from 'next/image';
 
 const Testimonial = () => {
   const cardData = [
@@ -35,7 +36,13 @@ const Testimonial = () => {
           {cardData.msg}
         </p>
         <div className="flex gap-6">
-          <img src={cardData.img} alt="" className="mt-6 size-20 rounded-xl" />
+          <Image
+            height={100}
+            width={100}
+            src={cardData.img}
+            alt=""
+            className="mt-6 size-20 rounded-xl"
+          />
           <div className="mt-auto pb-1">
             <p className="mt-4 text-lg font-semibold text-white">
               {cardData.name}

@@ -76,7 +76,7 @@ export function LeadPopUp({ isOpen, setIsOpen }) {
         <DialogTitle className="hidden"></DialogTitle>
         <div className="relative hidden h-auto w-full min-w-96 overflow-hidden rounded-lg md:block">
           <Image
-            src="/new/popUpImage.jpeg"
+            src="/popUpImage.jpeg"
             alt="no image"
             width={800}
             height={450}
@@ -216,8 +216,8 @@ export function LeadPopUpTestimonial({ isOpen, setIsOpen }) {
           <Image
             height={300}
             width={300}
-            src="/new/popup_lead_background.png"
-            alt=""
+            src="/popup_lead_background.png"
+            alt="dots_BG"
             className="absolute bottom-0 right-16 h-48 w-auto rotate-90"
           />
           <h3 className="text-2xl font-semibold text-yellow-800">
@@ -240,7 +240,7 @@ export function LeadPopUpTestimonial({ isOpen, setIsOpen }) {
                   <div className="relative w-full rounded-xl border bg-white p-6 text-center">
                     <Image
                       src={itemData.img}
-                      alt=""
+                      alt="person_image"
                       width={100}
                       height={100}
                       className="absolute left-1/2 top-0 mx-auto mb-4 size-16 -translate-x-1/2 -translate-y-6 rounded-full"

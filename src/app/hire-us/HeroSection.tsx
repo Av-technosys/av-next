@@ -3,6 +3,7 @@
 import { LeadPopUp } from '@/components/leadPopUp';
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 export function HeroSection() {
   const highlights = [
@@ -55,8 +56,10 @@ export function HeroSection() {
         </div>
 
         <div className="hidden max-h-[32rem] w-full overflow-hidden lg:block">
-          <img
-            src="/new/hire-me.webp"
+          <Image
+            height={500}
+            width={500}
+            src="/hire-me.webp"
             className="h-auto max-h-[32rem] w-full object-contain"
             alt="Hire Me"
           />

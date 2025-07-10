@@ -2,6 +2,7 @@ import React from 'react';
 import { ratingData } from '@/const/ratingData';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 const Ratings = ({ className = '' }) => {
   return (
     <div className={cn('w-full bg-slate-950 px-4 py-8 md:hidden', className)}>
@@ -12,7 +13,9 @@ const Ratings = ({ className = '' }) => {
               <p className="text-xs font-medium text-neutral-200 md:text-sm">
                 {item.title}
               </p>
-              <img
+              <Image
+                width={100}
+                height={100}
                 src={item.image}
                 className="mr-auto h-6 w-auto md:h-10"
                 alt=""
@@ -20,19 +23,23 @@ const Ratings = ({ className = '' }) => {
               <div className="mr-auto flex items-center gap-2 [&>*]:hidden [&>*]:first:block [&>*]:last:block">
                 <p className="text-sm text-white">{item.stars + ' / 5'}</p>
                 {Array.from({ length: item.stars }, (_, index) => (
-                  <img
-                    src="/new/review/top-star.svg"
+                  <Image
+                    width={50}
+                    height={50}
+                    src="/review/top-star.svg"
                     className="h-3 w-auto"
-                    alt=""
+                    alt="*"
                     key={index}
                   />
                 ))}
 
                 {item.stars % 1 !== 0 && (
-                  <img
-                    src="/new/review/top-star-47.svg"
+                  <Image
+                    width={50}
+                    height={50}
+                    src="/review/top-star-47.svg"
                     className="h-3 w-auto"
-                    alt=""
+                    alt="*"
                   />
                 )}
               </div>

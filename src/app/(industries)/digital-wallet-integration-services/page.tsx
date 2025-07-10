@@ -137,7 +137,7 @@ const costdata = {
   title:
     'AV Technosys: Your Trusted Partner for High-Performance Digital Wallet Services App Development',
   description: '',
-  image: 'btn-lady[1].webp',
+  image: '/btn-lady_1_.webp',
 };
 
 const dwalletMistakeCards = [
@@ -145,7 +145,7 @@ const dwalletMistakeCards = [
     title: 'eWallets',
     description:
       'An eWallet, also known as a digital or electronic wallet, offers a simple and secure way to make online payments. With just a click or two, users can complete transactions effortlessly, making online shopping fast and convenient.',
-    img: '/new/avoidmistakestrading1.jpg',
+    img: '/avoidmistakestrading1.jpg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
@@ -153,7 +153,7 @@ const dwalletMistakeCards = [
     title: 'Buy Now, Pay Later (BNPL)',
     description:
       'BNPL services let you purchase items now and pay over time. This convenient borrowing method helps consumers manage their finances better by splitting payments, usually without any interest charges.',
-    img: '/new/dwalletavoid.jpg',
+    img: '/dwalletavoid.jpg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -161,7 +161,7 @@ const dwalletMistakeCards = [
     title: 'Mobile PoS',
     description:
       'mPOS systems offer retailers flexible, cost-effective payment solutions, streamlining transactions for both online and offline stores.',
-    img: '/new/avoidmistakestrading3.jpg',
+    img: '/avoidmistakestrading3.jpg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

@@ -15,7 +15,7 @@ const RealEstateAVandVR = () => {
           <Image
             width={500}
             height={500}
-            src="/new/rsgirl.jpg" // Replace with your actual image path
+            src="/rsgirl.jpg" // Replace with your actual image path
             alt="Woman using AR/VR"
             className="relative z-10 max-h-[500px] w-full rounded-xl object-cover shadow-lg"
           />

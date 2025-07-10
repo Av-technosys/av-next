@@ -2,6 +2,7 @@
 import React from 'react';
 import { SectionHeading } from '@/components/sectionHeading';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const Fintechsmartsolution = () => {
   return (
@@ -20,7 +21,13 @@ const Fintechsmartsolution = () => {
             key={index}
             className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:bg-sky-200/60 hover:shadow-xl"
           >
-            <img src={service.image} alt={service.alt} className="mb-4" />
+            <Image
+              height={50}
+              width={50}
+              src={service.image}
+              alt={service.alt}
+              className="mb-4 size-14"
+            />
             <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
             <p className="text-md text-gray-700">{service.description}</p>
           </motion.div>
@@ -34,42 +41,42 @@ export default Fintechsmartsolution;
 
 const fintechServices = [
   {
-    image: '/new/videoapp_ic6[1].svg',
+    image: '/videoapp_ic6_1_.svg',
     alt: 'FinTech',
     title: 'FinTech Platform Development',
     description:
       'Create scalable, high-performance platforms to simplify finances and boost productivity.',
   },
   {
-    image: '/new/socialapp_ic4 (1)[1].svg',
+    image: '/socialapp_ic4 (1)_1_.svg',
     alt: 'Healthcare',
     title: 'FinTech App Consultation',
     description:
       'Get expert guidance to shape and refine your fintech app idea from concept to launch.',
   },
   {
-    image: '/new/socialapp_ic2[1].svg',
+    image: '/socialapp_ic2_1_.svg',
     alt: 'Insurance',
     title: 'UI/UX Design for FinTech Apps',
     description:
       'Deliver smooth, intuitive, and visually appealing user experiences with our UI/UX services.',
   },
   {
-    image: '/new/ewalletapp_ic5[1].svg',
+    image: '/ewalletapp_ic5_1_.svg',
     alt: 'Retail',
     title: 'App Maintenance & Support',
     description:
       'Keep your fintech app secure, updated, and optimized with our reliable support services.',
   },
   {
-    image: '/new/loanapp_ic6[1] (1).svg',
+    image: '/loanapp_ic6_1_ (1).svg',
     alt: 'Manufacturing',
     title: 'FinTech API Integration',
     description:
       'Enhance app performance with seamless API integration for real-time data and connectivity.',
   },
   {
-    image: '/new/educationapp_ic1[1] (1).svg',
+    image: '/educationapp_ic1_1_ (1).svg',
     alt: 'Supply Chain',
     title: 'Custom FinTech App Development',
     description:

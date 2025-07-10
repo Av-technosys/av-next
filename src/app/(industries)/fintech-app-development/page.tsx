@@ -21,6 +21,7 @@ import {
   ReliableFintechAppDevelopmentService,
   ThreeCardAlternateimagePosition,
 } from '../conponents';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: {
@@ -83,7 +84,7 @@ const fintechMistakeCards = [
     title: 'Skipping User-Centric Design',
     description:
       'A poor UI/UX drives users away. Choose expert FinTech developers to build clean, user-friendly interfaces.',
-    img: '/new/fma1.svg',
+    img: '/fma1.svg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
@@ -91,7 +92,7 @@ const fintechMistakeCards = [
     title: 'Not Planning for Scalability',
     description:
       'Apps that can’t grow with demand will fail. Design with scalability in mind from day one.',
-    img: '/new/fma2.svg',
+    img: '/fma2.svg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -99,7 +100,7 @@ const fintechMistakeCards = [
     title: 'Weak Security Measures',
     description:
       'Lack of strong security risks user trust. Ensure top-tier encryption and safety protocols in your FinTech app.',
-    img: '/new/fma3.svg',
+    img: '/fma3.svg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },
@@ -122,8 +123,10 @@ function FintechPopularity() {
           {/* Top Stats */}
           <div className="mb-12 flex items-center justify-around gap-6 text-center md:flex-row md:gap-0">
             <div>
-              <img
-                src="/new/fp1.png"
+              <Image
+                width={100}
+                height={100}
+                src="/fp1.png"
                 alt="Market"
                 className="mx-auto mb-2 size-9"
               />
@@ -131,8 +134,10 @@ function FintechPopularity() {
               <p className="text-sm text-gray-600">Market Size</p>
             </div>
             <div>
-              <img
-                src="/new/fp2.webp"
+              <Image
+                width={100}
+                height={100}
+                src="/fp2.webp"
                 alt="Growth"
                 className="mx-auto mb-2 size-9"
               />
@@ -140,8 +145,10 @@ function FintechPopularity() {
               <p className="text-sm text-gray-600">Consistent Growth Rate</p>
             </div>
             <div>
-              <img
-                src="/new/fp4.webp"
+              <Image
+                width={100}
+                height={100}
+                src="/fp4.webp"
                 alt="Downloads"
                 className="mx-auto mb-2 size-9"
               />
@@ -155,7 +162,13 @@ function FintechPopularity() {
             {/* Card 1 */}
             <div className="relative rounded-2xl border border-gray-200 bg-white p-6 shadow-md">
               <div className="absolute -top-5 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAB308]">
-                <img src="/new/d-arrow.webp" alt="icon" className="h-5 w-5" />
+                <Image
+                  width={100}
+                  height={100}
+                  src="/d-arrow.webp"
+                  alt="icon"
+                  className="h-5 w-5"
+                />
               </div>
               <h3 className="mb-3 mt-6 text-lg font-semibold">
                 Growing Mobile App Adoption
@@ -172,7 +185,13 @@ function FintechPopularity() {
             {/* Card 2 */}
             <div className="relative rounded-2xl bg-[#EAB308] p-6 text-white shadow-md">
               <div className="absolute -top-5 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAB308]">
-                <img src="/new/d-arrow.webp" alt="icon" className="h-5 w-5" />
+                <Image
+                  width={100}
+                  height={100}
+                  src="/d-arrow.webp"
+                  alt="icon"
+                  className="h-5 w-5"
+                />{' '}
               </div>
               <h3 className="mb-3 mt-6 text-lg font-semibold">
                 Trusted by Industry Leaders
@@ -186,7 +205,13 @@ function FintechPopularity() {
             {/* Card 3 */}
             <div className="relative rounded-2xl border border-gray-200 bg-white p-6 shadow-md">
               <div className="absolute -top-5 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAB308]">
-                <img src="/new/d-arrow.webp" alt="icon" className="h-5 w-5" />
+                <Image
+                  width={100}
+                  height={100}
+                  src="/d-arrow.webp"
+                  alt="icon"
+                  className="h-5 w-5"
+                />{' '}
               </div>
               <h3 className="mb-3 mt-6 text-lg font-semibold">
                 Boosted Customer Engagement
@@ -245,8 +270,10 @@ function Whychooseus() {
           <div className="mt-10 space-y-8 md:mt-0 md:w-1/2">
             {/* Box 1 */}
             <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w1.svg"
+              <Image
+                width={100}
+                height={100}
+                src="/w1.svg"
                 alt="Expert Team"
                 className="mr-4 h-12 w-12"
               />
@@ -264,8 +291,10 @@ function Whychooseus() {
 
             {/* Box 2 */}
             <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w2.svg"
+              <Image
+                width={100}
+                height={100}
+                src="/w2.svg"
                 alt="Custom Development"
                 className="mr-4 h-12 w-12"
               />
@@ -283,8 +312,10 @@ function Whychooseus() {
 
             {/* Box 3 */}
             <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w3.svg"
+              <Image
+                width={100}
+                height={100}
+                src="/w3.svg"
                 alt="End-to-End Solutions"
                 className="mr-4 h-12 w-12"
               />

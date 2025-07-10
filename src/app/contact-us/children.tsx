@@ -117,25 +117,6 @@ const Cldren = () => {
 
   return (
     <div className="py-20 pb-0">
-      {/* map  */}
-      {/* <div className="h-8"></div>
-      <div className="fontTest bg-[#1c1c1e] pb-10 pt-10 font-semibold text-white lg:h-[100vh] lg:pb-8 lg:pl-[80px] lg:pt-0">
-        <h1 className="justify-center text-center text-2xl font-semibold lg:text-[4rem]">
-          Get in touch with our team
-        </h1>
-
-        <div className="absolute mt-8 lg:mt-14">
-          <img
-            className="opacity-100 hover:opacity-0"
-            src={'./map1.svg'}
-            alt=""
-          />
-        </div>
-        <div className="mt-8 opacity-0 duration-700 hover:opacity-100 lg:mt-14">
-          <img className="relative" src={'./map2.svg'} alt="" />
-        </div>
-      </div> */}
-
       {/* //daisy ui card */}
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-8 sm:grid-cols-2 md:px-4 lg:grid-cols-4 lg:gap-10">
         {ContactUsCardData.map((data: any, idx) => {

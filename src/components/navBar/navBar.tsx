@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { TEmail, TTeams } from '../icons';
 import ContactUsButton from './ContactUs';
 import { AIButton } from './AIButton';
+import Image from 'next/image';
 
 export function NavBarHome() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,8 +37,10 @@ export function NavBarHome() {
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="flex-shrink-0 cursor-pointer"
         >
-          <img
-            src="/new/new-logo.png"
+          <Image
+            width={100}
+            height={100}
+            src="/new-logo.png"
             className="h-full w-auto object-contain"
             alt="Logo"
           />

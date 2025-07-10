@@ -27,8 +27,10 @@ export default function HireDevelopersSection() {
   return (
     <section className="mx-auto mt-4 flex w-full max-w-7xl flex-col items-center gap-10 bg-white px-6 py-16 lg:flex-row">
       <LeadPopUp isOpen={isLeadPopUpOpen} setIsOpen={setIsLeadPopUpOpen} />
-      <img
-        src={'/new/service/hire-mobile-dev-service.jpeg'}
+      <Image
+        height={500}
+        width={500}
+        src={'/service/hire-mobile-dev-service.jpeg'}
         alt="Developer working on laptop"
         className="w-full max-w-md rounded-xl object-contain"
       />

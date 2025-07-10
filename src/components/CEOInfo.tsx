@@ -32,7 +32,7 @@ export function CEOInfo() {
             <Image
               width={200}
               height={200}
-              src="/new/ceo-service.jpeg"
+              src="/ceo-service.jpeg"
               className="rounded-full"
               alt="CEO image"
             />

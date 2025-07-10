@@ -1,6 +1,7 @@
 'use client';
 import { AIButton } from '@/components';
 import { LeadPopUpTestimonial } from '@/components/leadPopUp';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export function HeroSection() {
@@ -21,8 +22,10 @@ export function HeroSection() {
 
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/new/ai-hero-bg.jpeg"
+        <Image
+          width={1500}
+          height={1500}
+          src="/ai-hero-bg.jpeg"
           alt="AI Background"
           className="h-full w-full object-cover object-center"
         />

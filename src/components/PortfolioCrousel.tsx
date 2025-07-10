@@ -11,6 +11,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from './ui/carousel';
+import Image from 'next/image';
+import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 
 export default function PortfolioCrousel({ headingClass = '' }) {
   return (
@@ -56,8 +58,10 @@ export default function PortfolioCrousel({ headingClass = '' }) {
                     {item.technologies.map((item: string, idx: number) => {
                       return (
                         <div className="cursor-pointer rounded-full border bg-gray-100 p-[2px] duration-150 first:ml-0 hover:z-10 hover:scale-110">
-                          <img
-                            src={`/new/icons/${item}.bin`}
+                          <Image
+                            width={100}
+                            height={100}
+                            src={`/icons/${item}.bin`}
                             className="size-6 rounded-full"
                             alt=""
                           />
@@ -76,9 +80,11 @@ export default function PortfolioCrousel({ headingClass = '' }) {
                           key={idx}
                           className="h-auto min-w-44 rounded-md border p-1"
                         >
-                          <img
-                            src={image}
-                            className="h-full w-full rounded-md object-contain"
+                          <Image
+                            width={300}
+                            height={300}
+                            src={convertS3ToImageKit(image)}
+                            className="h-auto max-h-72 w-full rounded-md object-contain"
                             alt=""
                           />
                         </div>

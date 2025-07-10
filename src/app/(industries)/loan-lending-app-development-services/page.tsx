@@ -138,7 +138,7 @@ const costdata = {
   title:
     'AV Technosys: Your Trusted Partner for High-Performance Loan Lending App Development Services',
   description: '',
-  image: 'btn-lady[1].webp',
+  image: 'btn-lady_1_.webp',
 };
 
 const loanLendingMistakeCards = [
@@ -146,7 +146,7 @@ const loanLendingMistakeCards = [
     title: 'Our Mission & Vision',
     description:
       'At AV Technosys, we aim to revolutionise the financial industry with innovative fintech apps that enable faster transactions and enhanced security. We envision creating exceptional mobile apps and websites that drive digital transformation globally.',
-    img: '/new/avoidmistakestrading1.jpg',
+    img: '/avoidmistakestrading1.jpg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
@@ -154,7 +154,7 @@ const loanLendingMistakeCards = [
     title: 'Our Goal',
     description:
       'Our goal for 2025 is to empower more clients with cutting-edge digital solutions, surpassing our previous milestones and strengthening their market presence.',
-    img: '/new/dwalletavoid.jpg',
+    img: '/dwalletavoid.jpg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -162,7 +162,7 @@ const loanLendingMistakeCards = [
     title: 'Our Definition of Success',
     description:
       'For us, success means delivering growth-focused solutions that achieve client satisfaction and help businesses reach their objectives efficiently.',
-    img: '/new/avoidmistakestrading3.jpg',
+    img: '/avoidmistakestrading3.jpg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

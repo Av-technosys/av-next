@@ -59,7 +59,7 @@ const Footer1 = ({ className = '' }) => {
                   alt="DMCA"
                   width={100}
                   height={100}
-                  src="/new/review/dmca.png"
+                  src="/review/dmca.png"
                   className="h-12 w-auto"
                 />
               </a>

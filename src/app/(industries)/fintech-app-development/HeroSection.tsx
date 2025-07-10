@@ -1,5 +1,6 @@
 'use client';
 import { LeadPopUp } from '@/components/leadPopUp';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -49,8 +50,10 @@ export default function Herosectionfintech() {
 
             {/* Right Section (Image) */}
             <div className="w-full max-w-sm md:max-w-xl">
-              <img
-                src="/new/643fe95aad9d6f5a08890904_fintech mockup[1].png"
+              <Image
+                height={750}
+                width={750}
+                src="/643fe95aad9d6f5a08890904_fintech mockup_1_.png"
                 alt="Fintech app UI"
                 className="w-full animate-float object-contain"
               />

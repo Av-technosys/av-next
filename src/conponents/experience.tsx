@@ -8,6 +8,7 @@ import {
   TWorld,
 } from '@/components/icons';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export function ExperienceSections({ className = '' }: any) {
   const experienceData = [
@@ -83,28 +84,12 @@ export function ExperienceSections({ className = '' }: any) {
           </div>
         </div>
         <div className="mt-6 grid w-full md:col-span-5 md:mt-0">
-          {/* {experienceData2.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                className={cn(
-                  'flex w-full skew-x-3 cursor-pointer flex-col gap-3 rounded-xl border bg-white p-4 shadow-lg shadow-yellow-100 duration-200',
-                  idx % 2 === 0
-                    ? 'sm:-translate-y-4 hover:md:-translate-y-6'
-                    : 'sm:translate-y-4 hover:md:translate-y-2'
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <Icon stroke={2} className="size-7 shrink-0 text-gray-600" />
-                  <p className="text-2xl font-semibold">{item.title}</p>
-                </div>
-                <p className="text-sm text-gray-600">{item.description}</p>
-              </div>
-            );
-          })} */}
-          <img
+          <Image
+            width={100}
+            height={100}
+            alt="experience-img"
             className="h-full w-full rounded-md object-cover"
-            src="/new/experience-img.png"
+            src="/experience-img.png"
           />
         </div>
       </div>

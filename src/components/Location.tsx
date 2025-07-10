@@ -1,11 +1,15 @@
+import Image from 'next/image';
+
 export function Locations() {
   return (
     <div className="w-full border-y-4 border-neutral-600 bg-neutral-800 px-4 py-16 text-white">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
         <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
           <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-india.svg"
+            <Image
+              width={300}
+              height={300}
+              src="/review/hq-india.svg"
               alt=""
               className="h-full w-full object-contain"
             />
@@ -20,8 +24,10 @@ export function Locations() {
         </div>
         <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
           <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uk.svg"
+            <Image
+              width={300}
+              height={300}
+              src="/review/hq-uk.svg"
               alt=""
               className="h-full w-full object-contain"
             />
@@ -35,8 +41,10 @@ export function Locations() {
         </div>
         <div className="flex w-fit flex-col gap-2 opacity-70 hover:opacity-100">
           <div className="h-20 w-full border-b pb-4 md:h-28">
-            <img
-              src="/new/review/hq-uae.svg"
+            <Image
+              width={300}
+              height={300}
+              src="/review/hq-uae.svg"
               alt=""
               className="h-full w-full object-contain"
             />

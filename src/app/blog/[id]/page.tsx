@@ -10,6 +10,7 @@ import { QueryForm } from './queryForm';
 import { NavBarHome } from '@/components/navBar';
 import { TableOfContents } from './tableOfContext';
 import { TArroeRight } from '@/components/icons';
+import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 
 export const revalidate = 604800;
 
@@ -86,8 +87,10 @@ const Page = async (context: any) => {
           </div>
           <h1 className="text-3xl font-medium sm:text-4xl">{blogData.title}</h1>
           <p className="text-xl sm:text-2xl">{blogData.metaDescription}</p>
-          <img
-            src={blogData.image}
+          <Image
+            height={500}
+            width={500}
+            src={convertS3ToImageKit(blogData.image)}
             className="h-auto w-full object-contain"
             alt=""
           />

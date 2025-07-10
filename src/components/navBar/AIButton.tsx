@@ -48,7 +48,7 @@ export function AIButton({
         }}
       >
         <Image
-          src="/new/AI_btn_logo.png"
+          src="/AI_btn_logo.png"
           width={32}
           height={32}
           className="h-9 w-auto object-contain md:h-7"

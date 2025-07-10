@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const CustomMobileSection = () => {
@@ -15,9 +16,11 @@ const CustomMobileSection = () => {
           </p>
         </div>
       </div>
-      <img
+      <Image
+        height={500}
+        width={500}
         className="absolute bottom-0 right-0 hidden h-96 w-auto md:block"
-        src="/new/custom-mobile-solution.webp"
+        src="/custom-mobile-solution.webp"
         alt=""
       />
     </div>

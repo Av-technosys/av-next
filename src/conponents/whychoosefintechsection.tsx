@@ -33,7 +33,7 @@ const Whychoosefintechsection = ({ details, heading }) => {
 
         <div className="order-1 col-span-6 mx-auto hidden items-center justify-center lg:order-2 lg:col-span-2 lg:block">
           <Image
-            src={`/new/${heading?.image}`}
+            src={`/${heading?.image}`}
             alt="Payment Mobile Illustration"
             width={500}
             height={500}

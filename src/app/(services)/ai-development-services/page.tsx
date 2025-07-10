@@ -195,7 +195,7 @@ function TransformAiSection() {
 
           <div className="mx-auto h-auto p-3 md:mx-0">
             <Image
-              src="/new/herobg2.jpg"
+              src="/herobg2.jpg"
               height="400"
               width="700"
               alt="ai-robot"
@@ -211,42 +211,42 @@ function TransformAiSection() {
 function OurExpertsSection() {
   const aiExpertiseCards = [
     {
-      image: '/new/exp1.jpg',
+      image: '/exp1.jpg',
       alt: 'Generative AI',
       title: 'Generative AI',
       description:
         'We craft intelligent generative AI systems that create human-like content and ideas, driving innovation across industries.',
     },
     {
-      image: '/new/exp2.jpg',
+      image: '/exp2.jpg',
       alt: 'Machine Learning',
       title: 'Machine Learning',
       description:
         'Our expert-built ML models analyze complex data to automate workflows and support smarter, data-driven decisions.',
     },
     {
-      image: '/new/exp4.jpg',
+      image: '/exp4.jpg',
       alt: 'Deep Learning',
       title: 'Deep Learning',
       description:
         'We develop deep learning solutions that mimic human intelligence, ideal for image recognition, speech, and beyond.',
     },
     {
-      image: '/new/exp3.jpg',
+      image: '/exp3.jpg',
       alt: 'Natural Language Processing',
       title: 'Natural Language Processing (NLP)',
       description:
         'Our NLP solutions interpret and process human language to power chatbots, virtual assistants, and smarter communication tools.',
     },
     {
-      image: '/new/exp5.jpg',
+      image: '/exp5.jpg',
       alt: 'Robotic Process Automation',
       title: 'Robotic Process Automation (RPA)',
       description:
         'Automate repetitive tasks with precision using RPA, boosting productivity and reducing operational costs.',
     },
     {
-      image: '/new/exp6.jpg',
+      image: '/exp6.jpg',
       alt: 'Predictive Analytics',
       title: 'Predictive Analytics',
       description:
@@ -271,7 +271,9 @@ function OurExpertsSection() {
               key={index}
               className="overflow-hidden rounded-2xl border bg-white shadow-sm duration-300 hover:shadow-xl"
             >
-              <img
+              <Image
+                width={100}
+                height={100}
                 src={card.image}
                 alt={card.alt}
                 className="h-48 w-full object-cover duration-200"
@@ -313,8 +315,10 @@ function Whychooseus() {
           <div className="mt-10 space-y-8 md:mt-0 md:w-1/2">
             {/* Box 1 */}
             <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w1.svg"
+              <Image
+                width={100}
+                height={100}
+                src="/w1.svg"
                 alt="Expert Team"
                 className="mr-4 h-12 w-12"
               />
@@ -330,8 +334,10 @@ function Whychooseus() {
 
             {/* Box 2 */}
             <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w2.svg"
+              <Image
+                width={100}
+                height={100}
+                src="/w2.svg"
                 alt="Custom Development"
                 className="mr-4 h-12 w-12"
               />
@@ -347,8 +353,10 @@ function Whychooseus() {
 
             {/* Box 3 */}
             <div className="flex items-start rounded-2xl bg-white p-4 shadow-sm">
-              <img
-                src="/new/w3.svg"
+              <Image
+                width={100}
+                height={100}
+                src="/w3.svg"
                 alt="End-to-End Solutions"
                 className="mr-4 h-12 w-12"
               />

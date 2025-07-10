@@ -9,6 +9,7 @@ import {
 } from './ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const TestimonilaCrousel = ({ cardClassName = '' }: any) => {
   return (
@@ -55,7 +56,13 @@ function Card({
         {cardData.msg}
       </p>
       <div className="flex gap-6">
-        <img src={cardData.img} alt="" className="mt-6 size-20 rounded-xl" />
+        <Image
+          width={100}
+          height={100}
+          src={cardData.img}
+          alt="testimonial_image"
+          className="mt-6 size-20 rounded-xl"
+        />
         <div className="mt-auto pb-1">
           <p className="mt-4 text-lg font-semibold">{cardData.name}</p>
           <p className="text-sm text-gray-400">{cardData.position}</p>

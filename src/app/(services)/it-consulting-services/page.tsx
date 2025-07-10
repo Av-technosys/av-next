@@ -97,46 +97,47 @@ const leadingdata = {
   image: 'it-consultingpic.jpg',
 };
 
-const servicesheading={
-  title:"How Managed IT Services Benefit Your Business",
-  description:"Our IT consulting services help businesses optimise processes, automate workflows, and achieve greater efficiency, leading to accelerated growth and improved performance."
-}
+const servicesheading = {
+  title: 'How Managed IT Services Benefit Your Business',
+  description:
+    'Our IT consulting services help businesses optimise processes, automate workflows, and achieve greater efficiency, leading to accelerated growth and improved performance.',
+};
 const services = [
   {
     title: 'Enhanced Efficiency',
     description:
       'Our IT consulting services identify efficiency gaps, automate processes, and optimise workflows. This leads to higher productivity, better resource utilisation, and faster time-to-market for your products and services.',
-    image: '/new/itmanaged1.jpg',
+    image: '/itmanaged1.jpg',
   },
   {
     title: 'Cost Savings',
     description:
       'By leveraging IT expertise, businesses can identify and implement cost-saving strategies such as optimising infrastructure and deploying effective technology solutions. This reduces operational expenses, allowing funds to be redirected towards strategic initiatives that drive growth and innovation.',
-    image: '/new/itmanaged2.jpg',
+    image: '/itmanaged2.jpg',
   },
   {
     title: 'Strategic Alignment',
     description:
       'IT consulting aligns your technology strategies with your broader business goals. Our consultants ensure your IT investments directly support long-term growth, enhance competitive advantage, and create a unified technology approach for business success.',
-    image: '/new/itmanaged3.jpg',
+    image: '/itmanaged3.jpg',
   },
   {
     title: 'Security Risk Management',
     description:
       'We help minimise security risks and ensure compliance with industry standards by implementing robust security measures and frameworks. This protects sensitive data, maintains smooth operations, builds customer trust, and prevents costly legal issues.',
-    image: '/new/itmanaged4.jpg',
+    image: '/itmanaged4.jpg',
   },
   {
     title: 'Innovation Enablement',
     description:
       'Our consultants introduce and implement innovative technologies like AI, machine learning, and IoT, accelerating your organisation’s pace of innovation. This helps you enhance customer offerings and stay ahead in rapidly evolving markets.',
-    image: '/new/itmanaged5.jpg',
+    image: '/itmanaged5.jpg',
   },
   {
     title: 'Scalability and Flexibility',
     description:
       'We recommend scalable and flexible IT solutions, including cloud services, to help your business adapt to market changes with ease. Such flexibility ensures you can adjust resources quickly to meet seasonal demands or new growth opportunities, keeping your business agile and competitive.',
-    image: '/new/itmanaged6.jpg',
+    image: '/itmanaged6.jpg',
   },
 ];
 
@@ -147,11 +148,13 @@ const leadformdata = {
   btn: 'Get Consultation',
   image: 'projectCallGirl.webp',
 };
+
 const servicedataheading = {
   title: 'Our IT Consulting Services That Drive Business Value',
   description:
     'We combine years of experience with extensive technical expertise to reimagine your digital systems, identify key issues, and implement effective solutions that empower your business.',
 };
+
 const serviceData = [
   {
     name: 'IT Strategy Consulting',
@@ -190,12 +193,14 @@ const serviceData = [
       'We modernise your IT infrastructure by integrating advanced technologies such as ERP systems, analytics, and mobile solutions. This creates a robust digital foundation that increases productivity, strengthens capabilities, and drives business growth.',
   },
 ];
+
 const whychooseheading = {
   title: 'Optimise Your Core Business with Expert IT Consulting',
   description:
     'Experience remarkable growth and transformation across your business’s core functions with our advanced IT consulting services.',
   image: 'itconsultingwhyweneed.jpg',
 };
+
 const whychoosedata = [
   {
     title: 'Supply Chain & Financial Management',
@@ -223,7 +228,7 @@ const costdata = {
   title: 'IT Consulting and Budgeting Services Aligned with Your Vision',
   description:
     ' Take your business to the next level with our strategic and growth-focused IT consulting',
-  image: 'dev_girl[1].webp',
+  image: '/dev_girl_1_.webp',
   btn: 'Consult with our Technical Advisor',
 };
 

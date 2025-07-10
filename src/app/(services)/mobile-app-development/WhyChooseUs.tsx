@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const WhyChooseUs = () => {
@@ -28,8 +29,10 @@ const WhyChooseUs = () => {
       </div>
 
       <div className="flex w-full max-w-md justify-center">
-        <img
-          src="/new/service/why-av-for-mobile-development.png"
+        <Image
+          height={500}
+          width={500}
+          src="/service/why-av-for-mobile-development.png"
           alt="Av technosys Team"
           className="w-full max-w-md"
         />

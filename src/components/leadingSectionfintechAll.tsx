@@ -21,7 +21,7 @@ const LeadingSectionfintechAll = ({ className = '', details }: any) => {
           {/* Right Video/Image */}
           <div className="relative overflow-hidden rounded-lg shadow-lg">
             <Image
-              src={`/new/${details?.image}`}
+              src={`/${details?.image}`}
               alt="Fintech Trends 2025"
               width={500}
               height={500}

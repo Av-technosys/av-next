@@ -1,5 +1,6 @@
 import { TArroeRight } from '@/components/icons';
 import { blogsData } from '@/cosnt';
+import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -54,7 +55,7 @@ function BlogCard({ blog }) {
           height={500}
           width={500}
           className="h-auto w-full rounded-xl object-cover sm:h-full sm:w-auto"
-          src={blog.image}
+          src={convertS3ToImageKit(blog.image)}
           alt={blog.title}
         />
       </Link>

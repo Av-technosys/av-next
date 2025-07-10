@@ -33,7 +33,7 @@ export default function BuildSmartSolutions() {
                 width="400"
                 height="400"
                 className="w-[280px] md:w-[360px]"
-                src="/new/buildai2.png"
+                src="/buildai2.png"
                 alt="ai-image"
               />
             </div>

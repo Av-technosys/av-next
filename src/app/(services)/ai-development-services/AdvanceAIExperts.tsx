@@ -1,34 +1,35 @@
 'use client';
 import { AnimatePresence, motion } from 'motion/react';
+import Image from 'next/image';
 export default function AdvancedAiExperts() {
   const aiTools = [
     {
-      src: '/new/ai_gpt4.webp',
+      src: '/ai_gpt4.webp',
       alt: 'GPT-4',
       label: 'GPT-4',
     },
     {
-      src: '/new/ai_deepSeekAi.webp',
+      src: '/ai_deepSeekAi.webp',
       alt: 'DeepSeek AI',
       label: 'DeepSeek AI',
     },
     {
-      src: '/new/ai_google_gemini.webp',
+      src: '/ai_google_gemini.webp',
       alt: 'PaLM-2',
       label: 'Google Gemini',
     },
     {
-      src: '/new/ai_claude.webp',
+      src: '/ai_claude.webp',
       alt: 'claude',
       label: 'Claude',
     },
     {
-      src: '/new/ai_microsoftphi2.webp',
+      src: '/ai_microsoftphi2.webp',
       alt: 'DALL-E 2',
       label: 'Microsoft Phi-2',
     },
     {
-      src: '/new/ai_Whisper.png',
+      src: '/ai_Whisper.png',
       alt: 'Whisper',
       label: 'Whisper',
     },
@@ -50,7 +51,9 @@ export default function AdvancedAiExperts() {
                 transition={{ duration: 0.2, ease: 'easeInOut' }}
                 className="flex w-full flex-col items-center rounded-2xl bg-blue-950 px-4 py-6 duration-200 hover:bg-blue-900"
               >
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={tool.src}
                   alt={tool.alt}
                   className="mb-5 size-16 rounded-2xl"

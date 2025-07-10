@@ -154,7 +154,7 @@ const costdata = {
   title:
     'AV Technosys: Your Trusted Partner for High-Performance Mobile Banking App Development',
   description: '',
-  image: 'btn-lady[1].webp',
+  image: '/btn-lady_1_.webp',
 };
 
 const dwalletMistakeCards = [
@@ -162,7 +162,7 @@ const dwalletMistakeCards = [
     title: 'Planning & Designing Your Banking App',
     description:
       'We start by defining your project goals, understanding user needs, and finalising key features like secure transactions and authentication. Our team designs intuitive, user-friendly interfaces using tools like Figma and Adobe XD to ensure seamless navigation and engaging UI/UX.',
-    img: '/new/avoidmistakestrading1.jpg',
+    img: '/avoidmistakestrading1.jpg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
@@ -170,7 +170,7 @@ const dwalletMistakeCards = [
     title: 'Development & Security Implementation',
     description:
       'We select a robust tech stack such as React Native or Flutter for the front end and Node.js, Django, or Spring Boot for the backend. Multi-layered security with 2FA, biometrics, and encryption ensures data protection, while integrating APIs for KYC, credit scoring, and payments enhances functionality.',
-    img: '/new/dwalletavoid.jpg',
+    img: '/dwalletavoid.jpg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -178,7 +178,7 @@ const dwalletMistakeCards = [
     title: 'Testing, Deployment & Post-Launch Support',
     description:
       'Our QA team conducts thorough testing, including functional, security, and load testing, before deploying your app on iOS and Android with scalable cloud solutions. Post-launch, we provide continuous monitoring, performance analytics, and regular updates to keep your app secure and competitive.',
-    img: '/new/avoidmistakestrading3.jpg',
+    img: '/avoidmistakestrading3.jpg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

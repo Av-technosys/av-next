@@ -139,7 +139,7 @@ const costdata = {
   title:
     'AV Technosys: Your Trusted Partner for High-Performance Insurance App Development',
   description: '',
-  image: 'btn-lady[1].webp',
+  image: '/btn-lady_1_.webp',
 };
 
 const insuranceMistakeCards = [
@@ -147,7 +147,7 @@ const insuranceMistakeCards = [
     title: 'Project Analysis & Feature Planning',
     description:
       'Our process begins with in-depth discussions to understand your goals, requirements, and vision for the insurance app. Based on this, we compile a detailed list of features and functionalities tailored to your business needs.',
-    img: '/new/avoidmistakestrading1.jpg',
+    img: '/avoidmistakestrading1.jpg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
@@ -155,7 +155,7 @@ const insuranceMistakeCards = [
     title: 'Agile Development',
     description:
       'Once the features are finalised, our developers initiate the development phase using agile methodology. This ensures flexibility, faster iterations, and regular progress updates to keep you aligned at every stage.',
-    img: '/new/avoidmistakestrading2.jpg',
+    img: '/avoidmistakestrading2.jpg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
@@ -163,7 +163,7 @@ const insuranceMistakeCards = [
     title: 'Comprehensive Testing & Deployment',
     description:
       'After development, our quality assurance team conducts thorough testing to identify and resolve any bugs or issues. We ensure your app runs smoothly before deploying it for your customers’ use.',
-    img: '/new/avoidmistakestrading3.jpg',
+    img: '/avoidmistakestrading3.jpg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

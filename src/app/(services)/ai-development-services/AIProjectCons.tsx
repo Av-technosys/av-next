@@ -1,6 +1,7 @@
 'use client';
 import { LeadPopUp } from '@/components/leadPopUp';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function AiProjectCost() {
@@ -12,8 +13,10 @@ export default function AiProjectCost() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-3xl bg-[#EAB308] px-4 py-6 md:flex-row md:p-16">
           {/* Left Image Section */}
           <div className="right-0 top-0 flex w-[250px] justify-center md:absolute md:w-[500px]">
-            <img
-              src="/new/airobotmain.webp"
+            <Image
+              height={500}
+              width={500}
+              src="/airobotmain.webp"
               alt="AI Development Visual"
               className="w-full max-w-sm object-contain"
             />

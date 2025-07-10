@@ -71,39 +71,39 @@ const services = [
     title: 'SEO Marketing',
     description:
       'We start with a comprehensive SEO audit to identify what’s holding back your website. Our digital marketing team then performs in-depth keyword research and implements effective on-page and off-page SEO strategies to boost your online presence.',
-    image: '/new/digimarkpic2.jpg',
+    image: '/digimarkpic2.jpg',
   },
   {
     title: 'Content Marketing',
     description:
       'Content is king, and our expert writers create original, plagiarism-free content enriched with relevant keywords. We avoid AI-generated text and keyword stuffing, ensuring high-quality content that drives organic traffic to your website.',
-    image: '/new/digimarkpic3.jpg',
+    image: '/digimarkpic3.jpg',
   },
   {
     title: 'Social Media Marketing',
     description:
       'We prioritise an omnichannel approach to promote your brand effectively. Our social media experts develop strategies that generate quality leads and grow your follower base, ensuring consistent and impactful marketing across all platforms.',
-    image: '/new/digimarkpic122.jpg',
+    image: '/digimarkpic122.jpg',
   },
 
   {
     title: 'Email Marketing',
     description:
       'We automate your email marketing campaigns to nurture new leads and maintain relationships with existing customers. Our experts design effective campaigns, write engaging content, and develop a solid strategy while providing you with regular performance updates.',
-    image: '/new/digimarkpic6.jpg',
+    image: '/digimarkpic6.jpg',
   },
   {
     title: 'Google Marketing',
     description:
       'Beyond Google Ads, we promote your business across platforms like Google My Business and Google Marketing Platform. We also integrate your account with Google Analytics to track performance and provide you with regular updates on your digital growth.',
-    image: '/new/digimarkpic7.jpg',
+    image: '/digimarkpic7.jpg',
   },
 
   {
     title: 'Designing',
     description:
       'Our skilled UI/UX designers create eye-catching landing pages, website homepages, and apps that are optimised with relevant keywords. We ensure every design delivers a seamless, branded experience to your customers.',
-    image: '/new/digimarkpic1.jpg',
+    image: '/digimarkpic1.jpg',
   },
 ];
 

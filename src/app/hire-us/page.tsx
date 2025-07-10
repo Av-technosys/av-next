@@ -139,83 +139,83 @@ const DedicatedDevelopersSection = () => {
 const developerServices = [
   {
     title: 'Hire App Developers',
-    image: '/new/hire-us/1.png',
+    image: '/hire-us/1.png',
     description:
       'Our app developers are proficient in a wide range of technologies and frameworks, delivering custom-built mobile solutions that align with your business goals and technical requirements.',
   },
   {
     title: 'Hire iOS Developers',
-    image: '/new/hire-us/2.png',
+    image: '/hire-us/2.png',
 
     description:
       'Our iOS developers specialize in designing sleek, intuitive apps for Apple devices. Using the latest tools and technologies, they deliver high-performance applications tailored for the iOS ecosystem.',
   },
   {
     title: 'Hire Android Developers',
-    image: '/new/hire-us/3.png',
+    image: '/hire-us/3.png',
 
     description:
       'Our Android developers are experts at building scalable, feature-rich applications compatible across a wide range of Android devices and OS versions.',
   },
   {
     title: 'Hire React Native Developers',
-    image: '/new/hire-us/4.png',
+    image: '/hire-us/4.png',
 
     description:
       'Our React Native developers create powerful cross-platform apps using a single codebase, providing a cost-effective solution without compromising on performance or quality.',
   },
   {
     title: 'Hire Web Developers',
-    image: '/new/hire-us/5.png',
+    image: '/hire-us/5.png',
 
     description:
       'Our web developers are skilled in various web technologies and frameworks, building responsive, visually appealing, and highly functional websites tailored to your business objectives.',
   },
   {
     title: 'Hire Laravel Developers',
-    image: '/new/hire-us/6.png',
+    image: '/hire-us/6.png',
 
     description:
       'Our Laravel developers build secure and scalable web applications using the Laravel framework, known for its elegant syntax, powerful features, and development efficiency.',
   },
   {
     title: 'Hire Magento Developers',
-    image: '/new/hire-us/7.png',
+    image: '/hire-us/7.png',
 
     description:
       'Our Magento developers craft robust and flexible e-commerce solutions that enhance user experience and drive conversions, ensuring a smooth and secure online shopping journey.',
   },
   {
     title: 'Hire Node.js Developers',
-    image: '/new/hire-us/8.png',
+    image: '/hire-us/8.png',
 
     description:
       'Our Node.js developers create high-speed, scalable server-side applications using JavaScript, perfect for real-time solutions such as chat apps, APIs, and data-heavy platforms.',
   },
   {
     title: 'Hire AngularJS Developers',
-    image: '/new/hire-us/9.png',
+    image: '/hire-us/9.png',
 
     description:
       'Our AngularJS developers specialize in building dynamic single-page applications (SPAs), delivering seamless performance and interactive user experiences with modern frontend architecture.',
   },
   {
     title: 'Hire Python Developers',
-    image: '/new/hire-us/10.png',
+    image: '/hire-us/10.png',
 
     description:
       'Our Python developers leverage the simplicity and versatility of Python to build scalable applications across diverse domains, from automation to machine learning and web development.',
   },
   {
     title: 'Hire PHP Developers',
-    image: '/new/hire-us/11.png',
+    image: '/hire-us/11.png',
 
     description:
       'Our PHP developers build reliable and flexible server-side applications, using the power of PHP to deliver cost-effective and performance-oriented web solutions.',
   },
   {
     title: 'Hire Software Developers UK',
-    image: '/new/hire-us/12.png',
+    image: '/hire-us/12.png',
 
     description:
       'Our UK-based software developers offer custom software development services aligned with regional standards, ensuring high-quality, compliant, and efficient solutions for businesses in the UK.',
@@ -269,8 +269,10 @@ function PartnerWithUs() {
   return (
     <div className="mt-12 w-full bg-neutral-900">
       <div className="relative mx-auto w-full max-w-7xl grid-cols-2 gap-4 md:grid xl:grid-cols-3">
-        <img
-          src="/new/partnerUs.webp"
+        <Image
+          width={100}
+          height={100}
+          src="/partnerUs.webp"
           alt=" partner image"
           className="absolute bottom-0 left-12 hidden h-auto w-80 md:block xl:left-24"
         />

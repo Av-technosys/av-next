@@ -1,5 +1,7 @@
 'use client';
+import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 import { AnimatePresence, motion } from 'motion/react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export function PortfolioList({ portfolioData }: { portfolioData: any }) {
@@ -32,8 +34,10 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
                 {item.technologies.map((item: string, idx: number) => {
                   return (
                     <div className="cursor-pointer rounded-full border bg-gray-100 p-[2px] duration-150 first:ml-0 hover:z-10 hover:scale-110">
-                      <img
-                        src={`/new/icons/${item}.bin`}
+                      <Image
+                        width={100}
+                        height={100}
+                        src={`/icons/${item}.bin`}
                         className="size-6 rounded-full"
                         alt=""
                       />
@@ -52,9 +56,11 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
                       key={idx}
                       className="h-auto min-w-44 rounded-md border p-1"
                     >
-                      <img
-                        src={image}
-                        className="h-full w-full rounded-md object-contain"
+                      <Image
+                        width={500}
+                        height={500}
+                        src={convertS3ToImageKit(image)}
+                        className="h-full max-h-72 w-full rounded-md object-contain"
                         alt=""
                       />
                     </div>
