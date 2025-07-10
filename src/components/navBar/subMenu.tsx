@@ -33,7 +33,7 @@ const serviceDropdownComponent = {
     },
     {
       title: 'Website Development',
-      link: '/services',
+      link: '/website-development-services',
     },
     {
       title: 'Mobile App Development',
@@ -41,11 +41,11 @@ const serviceDropdownComponent = {
     },
     {
       title: 'No-Code/Low-Code',
-      link: '/services',
+      link: '/no-code-software-development',
     },
     {
       title: 'E-commerce',
-      link: '/services',
+      link: '/ecommerce-app-development',
     },
     {
       title: 'IT- Consulting',

@@ -625,93 +625,127 @@ export const AIDevelopmentServiceFAQ = [
   },
 ];
 
-
-export const realEstateFawData=[
+export const realEstateFawData = [
   {
     value: 'faq-1',
     question: 'What Is Real Estate App Development?',
     answer: (
       <p>
-        Real estate app development involves creating mobile or web-based applications tailored to the needs of the property market. These apps help buyers, sellers, agents, and investors connect, communicate, and carry out property transactions more efficiently through features like property listings, virtual tours, map integrations, and more.
+        Real estate app development involves creating mobile or web-based
+        applications tailored to the needs of the property market. These apps
+        help buyers, sellers, agents, and investors connect, communicate, and
+        carry out property transactions more efficiently through features like
+        property listings, virtual tours, map integrations, and more.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-2',
     question: 'How Much Does It Cost to Develop a Real Estate App?',
     answer: (
       <p>
-       The cost of developing a real estate app varies based on its complexity, features, design requirements, and platform (iOS, Android, or both). A basic app may start around $5,000–$10,000, while feature-rich solutions like Zillow or Realtor can cost $25,000–$100,000+. Get in touch with us for a tailored estimate.
-
+        The cost of developing a real estate app varies based on its complexity,
+        features, design requirements, and platform (iOS, Android, or both). A
+        basic app may start around $5,000–$10,000, while feature-rich solutions
+        like Zillow or Realtor can cost $25,000–$100,000+. Get in touch with us
+        for a tailored estimate.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-3',
     question: 'How Long Does It Take to Build a Real Estate App?',
     answer: (
       <p>
-        The development timeline depends on the app's functionality and customization level. A simple app may take 6–8 weeks, whereas a complex, fully-featured platform could require 3–6 months or more. We follow agile development to ensure transparency and faster delivery.
+        The development timeline depends on the app's functionality and
+        customization level. A simple app may take 6–8 weeks, whereas a complex,
+        fully-featured platform could require 3–6 months or more. We follow
+        agile development to ensure transparency and faster delivery.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-4',
     question: 'Why Choose AV Technosys for Real Estate App Development?',
     answer: (
       <p>
-        AV Technosys combines industry expertise, innovative technology, and client-focused strategies to deliver high-performance real estate apps. We offer end-to-end services—from consultation and UI/UX design to development, testing, and support, ensuring your app meets business goals and exceeds user expectations.
-
+        AV Technosys combines industry expertise, innovative technology, and
+        client-focused strategies to deliver high-performance real estate apps.
+        We offer end-to-end services—from consultation and UI/UX design to
+        development, testing, and support, ensuring your app meets business
+        goals and exceeds user expectations.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-5',
     question: 'How Can I Build a Real Estate App Like Zillow?',
     answer: (
       <p>
-        To create an app like Zillow, you’ll need a well-planned strategy that includes market research, feature selection, UI/UX design, backend development, third-party integrations (like maps or MLS), and testing. Working with an experienced app development team like AV Technosys ensures your app is built to scale with modern, user-friendly features and smooth performance
+        To create an app like Zillow, you’ll need a well-planned strategy that
+        includes market research, feature selection, UI/UX design, backend
+        development, third-party integrations (like maps or MLS), and testing.
+        Working with an experienced app development team like AV Technosys
+        ensures your app is built to scale with modern, user-friendly features
+        and smooth performance
       </p>
     ),
   },
-]
+];
 
-
-export const ecommerceFawData=[
+export const ecommerceFawData = [
   {
     value: 'faq-1',
     question: 'What is the cost of developing an ecommerce app?',
     answer: (
       <p>
-        The cost of an ecommerce app depends on its features, design, and complexity. A basic app may start around $5,000–$10,000, while advanced apps with custom integrations can go above $30,000.
+        The cost of an ecommerce app depends on its features, design, and
+        complexity. A basic app may start around $5,000–$10,000, while advanced
+        apps with custom integrations can go above $30,000.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-2',
     question: 'How much does it cost to build an ecommerce platform?',
     answer: (
       <p>
-       Building a full-fledged ecommerce platform can cost anywhere from $10,000 to $50,000+, based on technology, scalability, and required functionalities.
+        Building a full-fledged ecommerce platform can cost anywhere from
+        $10,000 to $50,000+, based on technology, scalability, and required
+        functionalities.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-3',
-    question: ' What is the cost of creating an online food ordering app for restaurants?',
+    question:
+      ' What is the cost of creating an online food ordering app for restaurants?',
     answer: (
       <p>
-       Developing a restaurant food ordering app typically ranges between $5,000 and $25,000, depending on menu management, delivery tracking, payment integration, and design needs.
+        Developing a restaurant food ordering app typically ranges between
+        $5,000 and $25,000, depending on menu management, delivery tracking,
+        payment integration, and design needs.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-4',
     question: ' Why should I choose you for ecommerce development in the USA?',
     answer: (
       <p>
-        We deliver customised, scalable, and cost-effective ecommerce solutions with end-to-end support, ensuring your business grows efficiently in the competitive USA market.
+        We deliver customised, scalable, and cost-effective ecommerce solutions
+        with end-to-end support, ensuring your business grows efficiently in the
+        competitive USA market.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-5',
     question: 'Why is an ecommerce website essential for business owners?',
     answer: (
       <p>
-        An ecommerce website helps you reach a wider audience, operate 24/7, increase sales, and build strong customer relationships online.
+        An ecommerce website helps you reach a wider audience, operate 24/7,
+        increase sales, and build strong customer relationships online.
       </p>
     ),
   },
@@ -720,15 +754,21 @@ export const ecommerceFawData=[
     question: '  How do I choose the right platform for my ecommerce website?',
     answer: (
       <p>
-       Consider your budget, required features, scalability, and ease of management. Platforms like Shopify, Magento, and WooCommerce are popular choices based on these needs.
+        Consider your budget, required features, scalability, and ease of
+        management. Platforms like Shopify, Magento, and WooCommerce are popular
+        choices based on these needs.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-7',
-    question: 'What is the process to develop a mobile app for my ecommerce store?',
+    question:
+      'What is the process to develop a mobile app for my ecommerce store?',
     answer: (
       <p>
-        Start by defining your app’s purpose and features, hire an experienced app development team, design the UI/UX, develop backend and frontend, test thoroughly, and then launch on app stores.
+        Start by defining your app’s purpose and features, hire an experienced
+        app development team, design the UI/UX, develop backend and frontend,
+        test thoroughly, and then launch on app stores.
       </p>
     ),
   },
@@ -737,15 +777,19 @@ export const ecommerceFawData=[
     question: ' How can I hire an ecommerce developer at a reasonable cost?',
     answer: (
       <p>
-       Look for experienced developers or agencies with a strong portfolio and transparent pricing. Outsourcing to countries with affordable rates can also save costs without compromising quality.
+        Look for experienced developers or agencies with a strong portfolio and
+        transparent pricing. Outsourcing to countries with affordable rates can
+        also save costs without compromising quality.
       </p>
     ),
-  },{
+  },
+  {
     value: 'faq-9',
     question: 'How long does it take to build an ecommerce app?',
     answer: (
       <p>
-       It typically takes 2 to 6 months depending on the app’s complexity, design requirements, and integration needs.
+        It typically takes 2 to 6 months depending on the app’s complexity,
+        design requirements, and integration needs.
       </p>
     ),
   },
@@ -754,26 +798,36 @@ export const ecommerceFawData=[
     question: 'How do I build an ecommerce Android app?',
     answer: (
       <p>
-        Define your app features, design the UI/UX, choose the tech stack, develop backend APIs, integrate payment gateways, test the app, and then publish it on the Google Play Store with proper marketing.
+        Define your app features, design the UI/UX, choose the tech stack,
+        develop backend APIs, integrate payment gateways, test the app, and then
+        publish it on the Google Play Store with proper marketing.
       </p>
     ),
-  }
-]
+  },
+];
 
 export const aifintechFawData = [
   {
     value: 'faq-1',
     question: 'What AI Capabilities Can Be Integrated into a FinTech App?',
     answer: (
-     <>
-        <p> AI offers a wide range of features that can be embedded into your FinTech application, including:</p>
+      <>
+        <p>
+          {' '}
+          AI offers a wide range of features that can be embedded into your
+          FinTech application, including:
+        </p>
         <ul className="list-disc pl-4">
           <li>Smart chatbots for instant customer support</li>
           <li>Credit risk analysis using alternative data</li>
           <li>Fraud detection through behavioral analytics</li>
           <li>Personalized financial recommendations</li>
           <li>Predictive analytics for market trends</li>
-          <li>Automated trading and investment suggestions These features enhance user engagement, operational efficiency, and overall app intelligence</li>
+          <li>
+            Automated trading and investment suggestions These features enhance
+            user engagement, operational efficiency, and overall app
+            intelligence
+          </li>
         </ul>
       </>
     ),
@@ -783,7 +837,12 @@ export const aifintechFawData = [
     question: 'Is My Data Secure in an AI-Powered FinTech App?',
     answer: (
       <p>
-        Absolutely. Data security is a top priority in AI-integrated FinTech apps. By using encryption, multi-factor authentication, secure APIs, and technologies like Blockchain, we ensure your sensitive financial data is protected from unauthorized access and breaches. Regular audits and compliance with regulations (like GDPR, PCI-DSS) further strengthen the security framework.
+        Absolutely. Data security is a top priority in AI-integrated FinTech
+        apps. By using encryption, multi-factor authentication, secure APIs, and
+        technologies like Blockchain, we ensure your sensitive financial data is
+        protected from unauthorized access and breaches. Regular audits and
+        compliance with regulations (like GDPR, PCI-DSS) further strengthen the
+        security framework.
       </p>
     ),
   },
@@ -792,7 +851,11 @@ export const aifintechFawData = [
     question: 'How Does AI Improve the Efficiency of a FinTech App?',
     answer: (
       <p>
-       AI increases efficiency by automating repetitive tasks, speeding up decision-making, and offering personalized services. Whether it's real-time fraud detection, instant loan approval, or auto-generated financial reports, AI helps reduce operational costs, minimize human error, and deliver faster, smarter results to users.
+        AI increases efficiency by automating repetitive tasks, speeding up
+        decision-making, and offering personalized services. Whether it's
+        real-time fraud detection, instant loan approval, or auto-generated
+        financial reports, AI helps reduce operational costs, minimize human
+        error, and deliver faster, smarter results to users.
       </p>
     ),
   },
@@ -801,11 +864,20 @@ export const aifintechFawData = [
     question: 'How Much Does It Cost to Develop an AI-Driven FinTech App?',
     answer: (
       <>
-        <p>The cost of developing an AI-powered FinTech app depends on various factors, such as app complexity, number of features, platform (iOS, Android, or both), third-party integrations, and required security layers. On average:</p>
+        <p>
+          The cost of developing an AI-powered FinTech app depends on various
+          factors, such as app complexity, number of features, platform (iOS,
+          Android, or both), third-party integrations, and required security
+          layers. On average:
+        </p>
         <ul className="list-disc pl-4">
           <li>Basic AI features: $20,000–$40,000</li>
           <li>Mid-level apps: $50,000–$100,000</li>
-          <li>Advanced enterprise-grade apps: $100,000+ For a more accurate estimate, it's best to consult with a development team based on your specific requirements.</li>
+          <li>
+            Advanced enterprise-grade apps: $100,000+ For a more accurate
+            estimate, it's best to consult with a development team based on your
+            specific requirements.
+          </li>
         </ul>
       </>
     ),
@@ -817,35 +889,62 @@ export const tradingFawData = [
     value: 'faq-1',
     question: 'How long does it take to develop a stock trading app?',
     answer: (
-     <>
-        <p> The timeline for developing a trading app depends on the features, complexity, and integrations required. On average, it takes around 3 to 6 months for a robust, fully tested trading app with real-time data, secure logins, portfolio management, and advanced charting tools. We provide a detailed project plan after understanding your exact requirements to ensure timely delivery.</p> 
+      <>
+        <p>
+          {' '}
+          The timeline for developing a trading app depends on the features,
+          complexity, and integrations required. On average, it takes around 3
+          to 6 months for a robust, fully tested trading app with real-time
+          data, secure logins, portfolio management, and advanced charting
+          tools. We provide a detailed project plan after understanding your
+          exact requirements to ensure timely delivery.
+        </p>
       </>
     ),
   },
   {
     value: 'faq-2',
-    question: ' What measures do you take to ensure compliance with financial regulations?',
+    question:
+      ' What measures do you take to ensure compliance with financial regulations?',
     answer: (
       <p>
-        We prioritise compliance by thoroughly understanding local and international financial regulations such as SEBI (India), FINRA (USA), or GDPR (Europe). Our team implements secure data handling, encryption standards, KYC/AML procedures, and audit trails to keep your app aligned with legal and security standards, avoiding penalties and ensuring user trust.
+        We prioritise compliance by thoroughly understanding local and
+        international financial regulations such as SEBI (India), FINRA (USA),
+        or GDPR (Europe). Our team implements secure data handling, encryption
+        standards, KYC/AML procedures, and audit trails to keep your app aligned
+        with legal and security standards, avoiding penalties and ensuring user
+        trust.
       </p>
     ),
   },
   {
     value: 'faq-3',
-    question: 'Do you provide maintenance and support after the app is launched?',
+    question:
+      'Do you provide maintenance and support after the app is launched?',
     answer: (
       <p>
-        Yes, we offer comprehensive maintenance and support services post-launch. This includes bug fixes, security updates, server monitoring, feature enhancements, and version upgrades to ensure your trading app runs smoothly, remains secure, and stays compatible with changing technologies and compliance norms.
+        Yes, we offer comprehensive maintenance and support services
+        post-launch. This includes bug fixes, security updates, server
+        monitoring, feature enhancements, and version upgrades to ensure your
+        trading app runs smoothly, remains secure, and stays compatible with
+        changing technologies and compliance norms.
       </p>
     ),
   },
   {
     value: 'faq-4',
-    question: 'How can I get started with your trading app development services?',
+    question:
+      'How can I get started with your trading app development services?',
     answer: (
       <>
-        <p> Getting started is simple. Contact us through our website or email, and our team will schedule a consultation to understand your goals and project requirements. After finalising the scope and proposal, we initiate the development process with dedicated project managers, ensuring seamless communication and delivery at every stage.</p>
+        <p>
+          {' '}
+          Getting started is simple. Contact us through our website or email,
+          and our team will schedule a consultation to understand your goals and
+          project requirements. After finalising the scope and proposal, we
+          initiate the development process with dedicated project managers,
+          ensuring seamless communication and delivery at every stage.
+        </p>
       </>
     ),
   },
@@ -856,8 +955,18 @@ export const insuranceFawData = [
     value: 'faq-1',
     question: ' How Much Does It Cost To Develop A Custom Insurance App?',
     answer: (
-     <>
-        <p>The cost of developing a custom insurance app varies based on your specific requirements, features, and target platforms (iOS, Android, or both). On average, a basic insurance app with essential features like policy management, claim filing, and customer support can range from $20,000 to $50,000. However, if you require advanced functionalities such as AI-based claim assessment, real-time chat support, third-party integrations, and high-level data encryption, the cost can go up to $80,000 or more. We provide detailed project estimates after understanding your business goals and technical needs.</p> 
+      <>
+        <p>
+          The cost of developing a custom insurance app varies based on your
+          specific requirements, features, and target platforms (iOS, Android,
+          or both). On average, a basic insurance app with essential features
+          like policy management, claim filing, and customer support can range
+          from $20,000 to $50,000. However, if you require advanced
+          functionalities such as AI-based claim assessment, real-time chat
+          support, third-party integrations, and high-level data encryption, the
+          cost can go up to $80,000 or more. We provide detailed project
+          estimates after understanding your business goals and technical needs.
+        </p>
       </>
     ),
   },
@@ -866,28 +975,51 @@ export const insuranceFawData = [
     question: ' How Do You Guarantee The Security Of My Insurance Application?',
     answer: (
       <p>
-        We prioritise data security by implementing end-to-end encryption, secure APIs, and robust user authentication mechanisms such as multi-factor authentication (MFA). Our team follows OWASP security standards, ensures GDPR and HIPAA compliance if applicable, and conducts regular vulnerability assessments and penetration testing. We also integrate role-based access controls to protect sensitive user and policyholder data from unauthorised access.
+        We prioritise data security by implementing end-to-end encryption,
+        secure APIs, and robust user authentication mechanisms such as
+        multi-factor authentication (MFA). Our team follows OWASP security
+        standards, ensures GDPR and HIPAA compliance if applicable, and conducts
+        regular vulnerability assessments and penetration testing. We also
+        integrate role-based access controls to protect sensitive user and
+        policyholder data from unauthorised access.
       </p>
     ),
   },
   {
     value: 'faq-3',
-    question: ' What Steps Are Involved In Your Insurance App Development Process?',
+    question:
+      ' What Steps Are Involved In Your Insurance App Development Process?',
     answer: (
       <>
-      <p>
-         Our insurance app development process includes:
-      </p>
-       <ul className="list-disc pl-4">
-          <li>Requirement Analysis: Understanding your business objectives and app goals.</li>
-          <li>Feature Planning & Roadmap: Defining app modules and functionalities.</li>
-          <li>UI/UX Design: Creating intuitive and engaging user interfaces.</li>
-          <li>Development: Coding the app with a focus on performance, scalability, and security.</li>
-          <li>Testing: Rigorous QA to ensure bug-free and seamless functionality.</li>
-          <li>Deployment: Launching the app on app stores or enterprise servers.</li>
-          <li>Post-Launch Support: Ongoing maintenance, updates, and feature enhancements.</li>
+        <p>Our insurance app development process includes:</p>
+        <ul className="list-disc pl-4">
+          <li>
+            Requirement Analysis: Understanding your business objectives and app
+            goals.
+          </li>
+          <li>
+            Feature Planning & Roadmap: Defining app modules and
+            functionalities.
+          </li>
+          <li>
+            UI/UX Design: Creating intuitive and engaging user interfaces.
+          </li>
+          <li>
+            Development: Coding the app with a focus on performance,
+            scalability, and security.
+          </li>
+          <li>
+            Testing: Rigorous QA to ensure bug-free and seamless functionality.
+          </li>
+          <li>
+            Deployment: Launching the app on app stores or enterprise servers.
+          </li>
+          <li>
+            Post-Launch Support: Ongoing maintenance, updates, and feature
+            enhancements.
+          </li>
         </ul>
-        </>
+      </>
     ),
   },
   {
@@ -895,7 +1027,15 @@ export const insuranceFawData = [
     question: 'How Long Does It Take To Build An Insurance App?',
     answer: (
       <>
-        <p> The development timeline depends on app complexity and feature set. A basic insurance app typically takes 3-4 months, while a feature-rich app with advanced integrations, AI modules, and robust security measures may take 6-9 months from requirement gathering to launch. We follow an Agile approach, delivering the app in milestones to ensure transparency and faster time-to-market.</p>
+        <p>
+          {' '}
+          The development timeline depends on app complexity and feature set. A
+          basic insurance app typically takes 3-4 months, while a feature-rich
+          app with advanced integrations, AI modules, and robust security
+          measures may take 6-9 months from requirement gathering to launch. We
+          follow an Agile approach, delivering the app in milestones to ensure
+          transparency and faster time-to-market.
+        </p>
       </>
     ),
   },
@@ -906,17 +1046,31 @@ export const DWalletFawData = [
     value: 'faq-1',
     question: ' What Exactly Is A Digital Wallet And How Does It Work?',
     answer: (
-     <>
-        <p>A digital wallet, or e-wallet, is a secure software-based system that stores users’ payment information, enabling them to make fast and seamless online or mobile payments. It can also store digital assets like gift cards, loyalty points, and IDs. Users simply link their bank account or card, and the wallet processes transactions without requiring manual entry of payment details each time, enhancing convenience and security.</p> 
+      <>
+        <p>
+          A digital wallet, or e-wallet, is a secure software-based system that
+          stores users’ payment information, enabling them to make fast and
+          seamless online or mobile payments. It can also store digital assets
+          like gift cards, loyalty points, and IDs. Users simply link their bank
+          account or card, and the wallet processes transactions without
+          requiring manual entry of payment details each time, enhancing
+          convenience and security.
+        </p>
       </>
     ),
   },
   {
     value: 'faq-2',
-    question: ' How Much Does It Cost To Integrate A Digital Wallet Into My Store?',
+    question:
+      ' How Much Does It Cost To Integrate A Digital Wallet Into My Store?',
     answer: (
       <p>
-       The cost of integrating a digital wallet depends on your store’s platform, required features, and security standards. On average, basic integration starts from $5,000 to $10,000. However, advanced integrations with multi-currency support, fraud detection, and custom features can cost $15,000 or more. We provide a detailed estimate after assessing your specific requirements and operational goals.
+        The cost of integrating a digital wallet depends on your store’s
+        platform, required features, and security standards. On average, basic
+        integration starts from $5,000 to $10,000. However, advanced
+        integrations with multi-currency support, fraud detection, and custom
+        features can cost $15,000 or more. We provide a detailed estimate after
+        assessing your specific requirements and operational goals.
       </p>
     ),
   },
@@ -925,10 +1079,15 @@ export const DWalletFawData = [
     question: 'What Is The Typical Timeline For Digital Wallet Integration?',
     answer: (
       <>
-      <p>
-         The integration timeline varies based on your platform and the wallet provider’s API complexity. Generally, it takes 2 to 4 weeks for a basic integration, including compatibility checks, API setup, and testing. For more advanced features or multi-platform integration, it may extend to 6-8 weeks to ensure a secure and seamless payment experience.
-      </p>
-        </>
+        <p>
+          The integration timeline varies based on your platform and the wallet
+          provider’s API complexity. Generally, it takes 2 to 4 weeks for a
+          basic integration, including compatibility checks, API setup, and
+          testing. For more advanced features or multi-platform integration, it
+          may extend to 6-8 weeks to ensure a secure and seamless payment
+          experience.
+        </p>
+      </>
     ),
   },
   {
@@ -936,28 +1095,47 @@ export const DWalletFawData = [
     question: 'Why Should I Add A Digital Wallet To My Business Platform?',
     answer: (
       <>
-        <p>Integrating a digital wallet offers multiple benefits, including faster transactions, enhanced security through tokenisation and encryption, improved customer experience, and higher conversion rates due to simplified checkout processes. Additionally, it supports loyalty programs and personalised promotions, driving user retention and increasing sales.</p>
+        <p>
+          Integrating a digital wallet offers multiple benefits, including
+          faster transactions, enhanced security through tokenisation and
+          encryption, improved customer experience, and higher conversion rates
+          due to simplified checkout processes. Additionally, it supports
+          loyalty programs and personalised promotions, driving user retention
+          and increasing sales.
+        </p>
       </>
     ),
   },
-   {
+  {
     value: 'faq-5',
     question: ' Do You Also Assist With Designing The Project Interface?',
     answer: (
       <>
-        <p> Yes, we provide end-to-end services, including user interface and experience design. Our team ensures the digital wallet is not only technically integrated but also visually aligned with your brand, offering a seamless and intuitive experience to your users.</p>
+        <p>
+          {' '}
+          Yes, we provide end-to-end services, including user interface and
+          experience design. Our team ensures the digital wallet is not only
+          technically integrated but also visually aligned with your brand,
+          offering a seamless and intuitive experience to your users.
+        </p>
       </>
     ),
   },
-   {
+  {
     value: 'faq-6',
     question: ' What Types Of Applications Can You Develop Using Angular?',
     answer: (
       <>
-        <p>Using Angular, we develop a wide range of applications such as dynamic single-page apps (SPAs), enterprise-grade web apps, progressive web apps (PWAs), real-time chat apps, eCommerce platforms, and dashboards. Its robust framework ensures high performance, scalability, and maintainability for complex business applications.</p>
+        <p>
+          Using Angular, we develop a wide range of applications such as dynamic
+          single-page apps (SPAs), enterprise-grade web apps, progressive web
+          apps (PWAs), real-time chat apps, eCommerce platforms, and dashboards.
+          Its robust framework ensures high performance, scalability, and
+          maintainability for complex business applications.
+        </p>
       </>
     ),
-  }
+  },
 ];
 
 export const mobileBankingFawData = [
@@ -965,17 +1143,27 @@ export const mobileBankingFawData = [
     value: 'faq-1',
     question: ' How much does it cost to develop a mobile banking app?',
     answer: (
-     <>
-        <p> The cost to develop a mobile banking app varies based on features, complexity, platform choice, and security requirements. On average, it ranges from $30,000 to $150,000. Advanced integrations, high-level security, and custom designs may increase the budget further.</p> 
+      <>
+        <p>
+          {' '}
+          The cost to develop a mobile banking app varies based on features,
+          complexity, platform choice, and security requirements. On average, it
+          ranges from $30,000 to $150,000. Advanced integrations, high-level
+          security, and custom designs may increase the budget further.
+        </p>
       </>
     ),
   },
   {
     value: 'faq-2',
-    question: ' Do you offer customised mobile banking app development services?',
+    question:
+      ' Do you offer customised mobile banking app development services?',
     answer: (
       <p>
-        Yes, we specialise in building fully customised mobile banking apps tailored to your business goals and user needs. From UI/UX design to backend development and security, our team ensures your app aligns with your branding and operational requirements.
+        Yes, we specialise in building fully customised mobile banking apps
+        tailored to your business goals and user needs. From UI/UX design to
+        backend development and security, our team ensures your app aligns with
+        your branding and operational requirements.
       </p>
     ),
   },
@@ -984,10 +1172,13 @@ export const mobileBankingFawData = [
     question: 'How long does it take to develop a mobile banking app?',
     answer: (
       <>
-      <p>
-          Typically, developing a mobile banking app takes 4 to 9 months, depending on the app’s features, integrations, and compliance requirements. We follow an agile approach to deliver MVPs faster and implement advanced functionalities in planned phases.
-      </p>
-        </>
+        <p>
+          Typically, developing a mobile banking app takes 4 to 9 months,
+          depending on the app’s features, integrations, and compliance
+          requirements. We follow an agile approach to deliver MVPs faster and
+          implement advanced functionalities in planned phases.
+        </p>
+      </>
     ),
   },
   {
@@ -995,11 +1186,16 @@ export const mobileBankingFawData = [
     question: 'What essential features should a mobile banking app include?',
     answer: (
       <>
-        <p> Key features include secure user authentication, account management, real-time fund transfers, transaction history, bill payments, notifications, customer support integration, and robust security protocols like 2FA, biometrics, and data encryption for user safety.</p>
+        <p>
+          {' '}
+          Key features include secure user authentication, account management,
+          real-time fund transfers, transaction history, bill payments,
+          notifications, customer support integration, and robust security
+          protocols like 2FA, biometrics, and data encryption for user safety.
+        </p>
       </>
     ),
   },
-   
 ];
 
 export const LoanlandingFawData = [
@@ -1007,13 +1203,27 @@ export const LoanlandingFawData = [
     value: 'faq-1',
     question: ' What is the process to build a loan lending app?',
     answer: (
-     <>
-        <p>Developing a loan lending app involves several steps:</p> 
-        <li>Planning & Analysis: Define project goals, target users, and app features.</li>
-        <li>Design: Create user-friendly UI/UX designs for smooth navigation.</li>
-        <li>Development: Code the app and integrate necessary functionalities like loan calculators, KYC, and payment gateways.</li>
-        <li>Testing: Conduct rigorous testing for security, performance, and usability.</li>
-        <li>Deployment & Support: Launch the app on platforms and provide continuous updates and maintenance.</li>
+      <>
+        <p>Developing a loan lending app involves several steps:</p>
+        <li>
+          Planning & Analysis: Define project goals, target users, and app
+          features.
+        </li>
+        <li>
+          Design: Create user-friendly UI/UX designs for smooth navigation.
+        </li>
+        <li>
+          Development: Code the app and integrate necessary functionalities like
+          loan calculators, KYC, and payment gateways.
+        </li>
+        <li>
+          Testing: Conduct rigorous testing for security, performance, and
+          usability.
+        </li>
+        <li>
+          Deployment & Support: Launch the app on platforms and provide
+          continuous updates and maintenance.
+        </li>
       </>
     ),
   },
@@ -1022,7 +1232,9 @@ export const LoanlandingFawData = [
     question: 'How much does it cost to build a loan lending app?',
     answer: (
       <p>
-       The cost of developing a loan lending app generally ranges from $30,000 to $120,000, depending on features, platform choice, design complexity, and compliance requirements.
+        The cost of developing a loan lending app generally ranges from $30,000
+        to $120,000, depending on features, platform choice, design complexity,
+        and compliance requirements.
       </p>
     ),
   },
@@ -1031,10 +1243,11 @@ export const LoanlandingFawData = [
     question: 'How much time does it take to develop a loan lending app?',
     answer: (
       <>
-      <p>
-          Developing a loan lending app typically takes 4 to 8 months, based on app complexity, integrations, and testing phases.
-      </p>
-        </>
+        <p>
+          Developing a loan lending app typically takes 4 to 8 months, based on
+          app complexity, integrations, and testing phases.
+        </p>
+      </>
     ),
   },
   {
@@ -1042,7 +1255,12 @@ export const LoanlandingFawData = [
     question: 'How do loan lending apps work?',
     answer: (
       <>
-        <p>  Loan lending apps connect borrowers with lenders digitally. Users can register, complete KYC, apply for loans, check eligibility, get approvals, and manage repayments securely within the app</p>
+        <p>
+          {' '}
+          Loan lending apps connect borrowers with lenders digitally. Users can
+          register, complete KYC, apply for loans, check eligibility, get
+          approvals, and manage repayments securely within the app
+        </p>
       </>
     ),
   },
@@ -1051,10 +1269,17 @@ export const LoanlandingFawData = [
 export const ItconsultingFawData = [
   {
     value: 'faq-1',
-    question: 'Which sectors or industries do your IT consulting services cater to?',
+    question:
+      'Which sectors or industries do your IT consulting services cater to?',
     answer: (
-     <>
-        <p>We offer IT consulting services across various sectors including healthcare, finance, education, manufacturing, retail, real estate, logistics, and government. Our team understands the unique technological needs of each industry to provide customised, effective solutions that drive growth.</p> 
+      <>
+        <p>
+          We offer IT consulting services across various sectors including
+          healthcare, finance, education, manufacturing, retail, real estate,
+          logistics, and government. Our team understands the unique
+          technological needs of each industry to provide customised, effective
+          solutions that drive growth.
+        </p>
       </>
     ),
   },
@@ -1063,111 +1288,393 @@ export const ItconsultingFawData = [
     question: ' What steps do you take to keep our IT systems and data secure?',
     answer: (
       <p>
-        We prioritise your data security through robust cybersecurity measures, regular system audits, secure network architecture, data encryption, and strict compliance with industry standards. Our team ensures all your IT assets are protected from potential threats and vulnerabilities.
+        We prioritise your data security through robust cybersecurity measures,
+        regular system audits, secure network architecture, data encryption, and
+        strict compliance with industry standards. Our team ensures all your IT
+        assets are protected from potential threats and vulnerabilities.
       </p>
     ),
   },
   {
     value: 'faq-3',
-    question: 'What can we expect as deliverables from your IT consulting services?',
+    question:
+      'What can we expect as deliverables from your IT consulting services?',
     answer: (
       <>
-      <p>
-           Our typical deliverables include detailed IT strategy reports, infrastructure assessment documents, technology implementation roadmaps, security enhancement plans, software recommendations, and ongoing performance monitoring and optimisation support.
-      </p>
-        </>
+        <p>
+          Our typical deliverables include detailed IT strategy reports,
+          infrastructure assessment documents, technology implementation
+          roadmaps, security enhancement plans, software recommendations, and
+          ongoing performance monitoring and optimisation support.
+        </p>
+      </>
     ),
   },
   {
     value: 'faq-4',
-    question: 'How do you identify the best IT solutions for our business challenges?',
+    question:
+      'How do you identify the best IT solutions for our business challenges?',
     answer: (
       <>
-        <p> We begin with a thorough analysis of your current IT systems, business processes, and objectives. Based on this assessment, our consultants recommend solutions aligned with your goals, budget, and scalability requirements to ensure maximum efficiency and ROI.</p>
+        <p>
+          {' '}
+          We begin with a thorough analysis of your current IT systems, business
+          processes, and objectives. Based on this assessment, our consultants
+          recommend solutions aligned with your goals, budget, and scalability
+          requirements to ensure maximum efficiency and ROI.
+        </p>
       </>
     ),
   },
-   {
+  {
     value: 'faq-5',
-    question: 'What is your process for onboarding and working with new IT consulting clients?',
+    question:
+      'What is your process for onboarding and working with new IT consulting clients?',
     answer: (
       <>
-        <p> Our process involves an initial consultation to understand your needs, followed by a comprehensive assessment of your IT environment. We then propose a tailored solution plan, implement the recommended strategies, and provide continuous support to ensure success.</p>
+        <p>
+          {' '}
+          Our process involves an initial consultation to understand your needs,
+          followed by a comprehensive assessment of your IT environment. We then
+          propose a tailored solution plan, implement the recommended
+          strategies, and provide continuous support to ensure success.
+        </p>
       </>
     ),
   },
-   {
+  {
     value: 'faq-6',
-    question: ' How will IT consulting benefit our organisation in the long run?',
+    question:
+      ' How will IT consulting benefit our organisation in the long run?',
     answer: (
       <>
-        <p>IT consulting improves your operational efficiency, reduces costs, enhances data security, and helps you adopt the latest technologies. In the long run, it enables your business to stay competitive, agile, and ready to adapt to market changes seamlessly.</p>
+        <p>
+          IT consulting improves your operational efficiency, reduces costs,
+          enhances data security, and helps you adopt the latest technologies.
+          In the long run, it enables your business to stay competitive, agile,
+          and ready to adapt to market changes seamlessly.
+        </p>
       </>
     ),
   },
-   
 ];
 
 export const DigitalmarketingFawData = [
   {
     value: 'faq-1',
-    question: ' How do you incorporate psychology and behavioral science into your marketing campaigns?',
+    question:
+      ' How do you incorporate psychology and behavioral science into your marketing campaigns?',
     answer: (
-     <>
-        <p>We apply psychology and behavioral science principles such as urgency, social proof, and colour psychology to design campaigns that influence customer decisions positively and drive higher conversions.</p> 
+      <>
+        <p>
+          We apply psychology and behavioral science principles such as urgency,
+          social proof, and colour psychology to design campaigns that influence
+          customer decisions positively and drive higher conversions.
+        </p>
       </>
     ),
   },
   {
     value: 'faq-2',
-    question: ' What are your core strategies for marketing B2B and B2C brands?',
+    question:
+      ' What are your core strategies for marketing B2B and B2C brands?',
     answer: (
       <p>
-         For B2B, we focus on lead generation through LinkedIn, email marketing, and industry-focused content. For B2C, we prioritise social media marketing, influencer outreach, engaging content, and PPC ads to boost brand awareness and sales.
-
+        For B2B, we focus on lead generation through LinkedIn, email marketing,
+        and industry-focused content. For B2C, we prioritise social media
+        marketing, influencer outreach, engaging content, and PPC ads to boost
+        brand awareness and sales.
       </p>
     ),
   },
   {
     value: 'faq-3',
-    question: 'How do you utilise AI tools in your marketing and automation workflows?',
+    question:
+      'How do you utilise AI tools in your marketing and automation workflows?',
     answer: (
       <>
-      <p>
-          We use AI tools for audience analysis, behaviour prediction, personalised content creation, automated email marketing, and real-time campaign optimisation to maximise efficiency and results.
-
-      </p>
-        </>
+        <p>
+          We use AI tools for audience analysis, behaviour prediction,
+          personalised content creation, automated email marketing, and
+          real-time campaign optimisation to maximise efficiency and results.
+        </p>
+      </>
     ),
   },
   {
     value: 'faq-4',
-    question: ' How do you create a cohesive digital marketing strategy across different channels?',
+    question:
+      ' How do you create a cohesive digital marketing strategy across different channels?',
     answer: (
       <>
-        <p>We develop integrated strategies by aligning goals and messaging across SEO, social media, email, and PPC to ensure consistency and reinforce brand identity on every platform.</p>
+        <p>
+          We develop integrated strategies by aligning goals and messaging
+          across SEO, social media, email, and PPC to ensure consistency and
+          reinforce brand identity on every platform.
+        </p>
       </>
     ),
   },
-   {
+  {
     value: 'faq-5',
-    question: ' Do you offer white-label digital marketing solutions for other agencies?',
+    question:
+      ' Do you offer white-label digital marketing solutions for other agencies?',
     answer: (
       <>
-        <p> Yes, we provide white-label services, enabling agencies to expand their offerings with our expertise in SEO, PPC, content marketing, and social media under their own brand name.</p>
+        <p>
+          {' '}
+          Yes, we provide white-label services, enabling agencies to expand
+          their offerings with our expertise in SEO, PPC, content marketing, and
+          social media under their own brand name.
+        </p>
       </>
     ),
   },
-   {
+  {
     value: 'faq-6',
-    question: 'How do you measure the success of your digital marketing campaigns?',
+    question:
+      'How do you measure the success of your digital marketing campaigns?',
     answer: (
       <>
-        <p> We measure success using KPIs like website traffic, conversion rates, lead quality, cost per acquisition, engagement metrics, and ROI to ensure our strategies deliver tangible results for your business.</p>
+        <p>
+          {' '}
+          We measure success using KPIs like website traffic, conversion rates,
+          lead quality, cost per acquisition, engagement metrics, and ROI to
+          ensure our strategies deliver tangible results for your business.
+        </p>
       </>
     ),
   },
-   
 ];
 
+export const NoCodeFawData = [
+  {
+    value: 'faq-1',
+    question:
+      'With no-code technology, you can create a wide range of applications and websites without writing a single line of code. Some examples include:',
+    answer: (
+      <>
+        <p>
+          Business websites: Professional websites for startups, SMEs, or
+          personal brands with custom layouts and integrations.
+        </p>
+        <li>
+          E-commerce stores: Online stores with product catalogues, payment
+          gateways, and inventory management.
+        </li>
+        <li>
+          Mobile apps: Customer apps, booking apps, delivery apps, and internal
+          management apps for both Android and iOS.
+        </li>
+        <li>
+          Dashboards & analytics portals: For visualising business data,
+          reports, and performance metrics in real-time.
+        </li>
+        <li>
+          Workflow automation tools: Automating repetitive tasks and
+          streamlining internal business processes.
+        </li>
+        <li>
+          Customer portals & CRMs: Platforms to manage leads, clients, and
+          communication efficiently.
+        </li>
+        <li>
+          Booking and scheduling platforms: Apps for appointments, reservations,
+          and calendar management.
+        </li>
+        <li>
+          Learning management systems: Online course platforms with user
+          registration, progress tracking, and quizzes.
+        </li>
+        <p>
+          No-code platforms are versatile and ideal for businesses seeking
+          quick, cost-effective, and manageable solutions.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' What is the duration of no-code development?',
+    answer: (
+      <>
+        <p>
+          No-code development is significantly faster than traditional coding
+          methods. The duration generally depends on the complexity and scale of
+          the project
+        </p>
+        <li>Simple websites or landing pages: 2-5 days</li>
+        <li>
+          Business websites with multiple pages and integrations: 1-2 weeks
+        </li>
+        <li>Basic mobile apps or MVPs: 2-4 weeks</li>
+        <li>
+          Complex apps with advanced workflows and integrations: 4-6 weeks
+        </li>
+        <p>
+          Compared to traditional development, which may take months, no-code
+          tools enable rapid development and quicker go-to-market timelines,
+          making them ideal for startups and businesses with tight deadlines.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What are different platforms used for no-code development?',
+    answer: (
+      <>
+        <p>
+          There are various no-code platforms available, each catering to
+          different needs. Some of the popular ones include:
+        </p>
+        <li>Webflow: For responsive websites with custom designs.</li>
+        <li>Bubble: For creating complex web applications with workflows.</li>
+        <li>Adalo: For building mobile applications quickly.</li>
+        <li>Glide: To convert spreadsheets into apps easily.</li>
+        <li>
+          Wix & Squarespace: For fast, aesthetic business websites and
+          portfolios.
+        </li>
+        <li>
+          Zapier & Integromat (Make): For automating workflows by integrating
+          different tools.
+        </li>
+        <li>
+          Airtable: Combines database functionalities with application building.
+        </li>
+        <li>
+          Salesforce & Pega: For CRM and business process management
+          applications.
+        </li>
+        <li>
+          OutSystems & Mendix: For enterprise-grade no-code or low-code app
+          development.
+        </li>
+        <p>
+          Choosing the right platform depends on your project requirements,
+          scalability, and target users.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What is the cost of no-code development?',
+    answer: (
+      <>
+        <p>
+          The cost of no-code development varies based on the complexity,
+          features, and platform used. Generally, no-code projects are more
+          affordable than traditional development. Approximate cost ranges are:
+        </p>
+        <li>
+          Simple websites or landing pages: ₹10,000 – ₹30,000 ($150 – $400)
+        </li>
+        <li>
+          Business websites with custom integrations: ₹30,000 – ₹80,000 ($400 –
+          $1000)
+        </li>
+        <li>Basic mobile apps or MVPs: ₹50,000 – ₹1,50,000 ($600 – $2000)</li>
+        <li>
+          Complex apps with advanced workflows and automation: ₹1,50,000 –
+          ₹5,00,000 ($2000 – $6000)
+        </li>
+        <p>
+          Costs depend on design complexity, features required, platform
+          subscription fees, and ongoing maintenance. No-code development is
+          ideal for businesses wanting to save time and development costs while
+          launching quality digital products.
+        </p>
+      </>
+    ),
+  },
+];
 
+export const webDevFawData = [
+  {
+    value: 'faq-1',
+    question: ' What web development services does AV Technosys provide?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          AV Technosys offers complete web development services including custom
+          website development, web application development, e-commerce
+          development, CMS solutions, web portal development, ERP solutions, and
+          integration of emerging technologies like AI, IoT, and blockchain.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How much does it cost to develop a website with AV Technosys?',
+    answer: (
+      <p>
+        The cost varies depending on your project requirements, features, and
+        complexity. A basic website may start from a few hundred dollars, while
+        advanced web applications or e-commerce platforms may cost more. Contact
+        us for a free detailed quote tailored to your needs.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question:
+      'Can I hire dedicated web developers from AV Technosys for my project?',
+    answer: (
+      <>
+        <p>
+          Yes, you can hire our dedicated web developers to work exclusively on
+          your project. This ensures focused expertise, faster delivery, and
+          better collaboration aligned with your business goals.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question:
+      ' How do you create a cohesive digital marketing strategy across different channels?',
+    answer: (
+      <>
+        <p>
+          We develop integrated strategies by aligning goals and messaging
+          across SEO, social media, email, and PPC to ensure consistency and
+          reinforce brand identity on every platform.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: ' What is your web development process?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Our process includes understanding your requirements, planning and
+          design, development, rigorous testing, deployment, and ongoing
+          support. We follow an agile approach to ensure transparency,
+          flexibility, and timely delivery at every stage.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: ' Does AV Technosys offer web development outsourcing services?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Yes, we provide reliable web development outsourcing services for
+          agencies, startups, and enterprises. Our team acts as your extended
+          development arm, ensuring high-quality solutions delivered efficiently
+          and cost-effectively.
+        </p>
+      </>
+    ),
+  },
+];
