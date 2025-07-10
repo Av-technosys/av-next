@@ -1,9 +1,10 @@
 'use client';
 import { LeadPopUp } from '@/components/leadPopUp';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Astrologyhomesection({details}) {
+export default function Astrologyhomesection({details,imageclass=""}) {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   return (
     <>
@@ -43,7 +44,7 @@ export default function Astrologyhomesection({details}) {
             </div>
 
             {/* Right Section (Image) */}
-            <div className="w-full max-w-sm md:max-w-xl">
+            <div className={cn("w-full max-w-sm md:max-w-xl",imageclass)}>
               <img
                 src={`/new/${details?.image}`}
                 alt="Fintech app UI"

@@ -8,7 +8,7 @@ import Fintecheffect, { ThreeCardAlternateimagePosition } from '../conponents';
 import ProjectCost from '@/components/costSectionfintech';
 import AstrologyAVandVR from '@/components/astrologyARVRsection';
 import { FaqAccordion } from '@/components/faqAccordion';
-import { astrologyFawData, travelFawData } from '@/const';
+import { astrologyFawData, restaurantFawData, travelFawData } from '@/const';
 import { ContactUs } from '@/components/contactUs';
 import { BlogSection } from '@/components/blogSection';
 import { ecommerceAppDevelopment } from '@/cosnt';
@@ -24,15 +24,15 @@ const Page = () => {
         <>
             <HeroSectionfintechAll  details={data} />
             <Ratings className="md:flex" />
-            <LeadingSectionfintechAll imageclass="lg:w-[500px] lg:ml-auto animate-float"  className="md:order-2 " details={leadingdata} />
-            <AiAstrologySection heading={aiastrologyheading} details={aiastrologydetails}/>
+            <LeadingSectionfintechAll imageclass="lg:w-[500px] lg:ml-auto "  className="md:order-2 " details={leadingdata} />
+            <AiAstrologySection imageclass="shadow-none" heading={aiastrologyheading} details={aiastrologydetails}/>
             <CaseStudy/>
-            <ProjectCost className="md:max-w-sm " details={costdata} />
+            <ProjectCost imageclass=' lg:top-[-65px]' className="lg:max-w-sm " details={costdata} />
             <AstrologyAVandVR details={ARandVRdetails}/>
-            <ThreeCardAlternateimagePosition className="pb-8" title="Common Mistakes to Avoid When Developing a Travel App" desc="Great ideas need flawless execution. Avoid these common mistakes to make your travel app a success." mistakes={travelMistakeCards}/>
-            <Fintecheffect boxheadingclass="md:text-2xl" boxButton={"I'M INTERESTED"} textStyle="my-5" boxSize="h-[350px]" heading={"Travel App Developement Services"}  details={datingEffectData}/>
+            <ThreeCardAlternateimagePosition className="pb-8" title="Restaurant App Development: Mistakes You Should Avoid" desc="Developing a restaurant management app needs strategic planning. Avoiding common mistakes helps create a smooth user experience, boost engagement, and drive lasting growth for your restaurant business." mistakes={restaurentMistakeCards}/>
+            <Fintecheffect hoverbgcolor="bg-orange-500" boxheadingclass="md:text-2xl" boxButton={"I'M INTERESTED"} textStyle="my-5" boxSize="h-[370px]" heading={"Restaurant App Developement Services"}  details={restaurantEffectData}/>
             <Testimonial/>
-            <FaqAccordion data={travelFawData} />
+            <FaqAccordion data={restaurantFawData} />
             <ContactUs />
             <BlogSection data={ecommerceAppDevelopment} />
             <Rating2 />
@@ -46,7 +46,7 @@ const data = {
   title: 'Restaurant App Development Company',
   description:
     'We build customised, feature-packed restaurant apps that simplify ordering, improve customer experience, and increase your sales.',
-  image: 'travelban3.jpg',
+  image: 'restaurentbanner.png',
 };
 const leadingdata = {
   title: 'Boost Your Business with Restaurant App Development',
@@ -54,7 +54,7 @@ const leadingdata = {
     'A strong restaurant app simplifies online ordering, reservations, and customer interactions. It streamlines operations, reduces wait times, and enhances your service experience with intuitive design and powerful features.',
   description2:
     'As a leading restaurant app development company, we build customised solutions for cafés, restaurants, and large chains. Our apps include real-time tracking, secure payments, and personalised recommendations to keep your customers engaged and satisfied.',
-  image: 'travel-concept-with-worldwide-landmarks.jpg',
+  image: 'f8[1].png',
 };
 
 const servicedataheading = {
@@ -123,73 +123,73 @@ const AppcloneHeading={
       img: 'kayak_App_Clone (1).webp',
     },
 ];
-const datingEffectData = [
+const restaurantEffectData = [
   {
-    bgImage: '/new/flight-booking-app.webp',
-    title: 'Flight Booking App',
-    overlayTitle: 'Flight Booking App',
+    bgImage: '/new/Table-Reservation-Apps (1).webp',
+    title: 'Restaurant Booking Apps',
+    overlayTitle: 'Restaurant Booking Apps',
     description:
-      '',
+      'Streamline table reservations with apps that offer real-time availability, waitlist handling, and automatic reminders for diners.',
     features: [
-      ' Live ticket availability',
-      ' Secure payments',
-      'Booking alerts',
+      'Instant table bookings',
+      'Live availability updates',
+      'Automated alerts',
     ],
   },
   {
-    bgImage: '/new/trip-planner-app.webp',
-    title: 'Trip Planner App',
-    overlayTitle: 'Trip Planner App',
+    bgImage: '/new/Restaurant-Finder-Apps.webp',
+    title: 'Restaurant Finder Apps',
+    overlayTitle: 'Restaurant Finder Apps',
     description:
-      '',
+      'Make it easier for users to find new dining spots with apps that include detailed listings, smart filters, and GPS-based recommendations.',
     features: [
-      'Trip scheduling',
-      'Budget management',
-      'Destination suggestions',
+      ' Nearby restaurant search',
+      'Easy-to-use filters',
+      'Location-based suggestions',
     ],
   },
   {
-    bgImage: '/new/tour-guide-app.webp',
-    title: 'Tour Guide App',
-    overlayTitle: 'Tour Guide App',
+    bgImage: '/new/Restaurant-Discount-Apps.webp',
+    title: 'Restaurant Discount Apps',
+    overlayTitle: 'Restaurant Discount Apps',
     description:
-      '',
+      'Increase customer loyalty by providing apps with personalised deals, loyalty programmes, and instant discount notifications.',
     features: [
-      ' Location-based guides',
-      'Multi-language support',
-      'Offline access',
+      'Exclusive offers',
+      'Rewards system',
+      'Real-time notifications',
     ],
   },
   {
-    bgImage: '/new/travel-agent-app.webp',
-    title: 'Travel Agent App',
-    overlayTitle: 'Travel Agent App',
+    bgImage: '/new/Restaurant-Review-Apps.webp',
+    title: 'Restaurant Review Apps',
+    overlayTitle: 'Restaurant Review Apps',
     description:
-      '',
+      'Build trust with apps that let customers share reviews, rate restaurants, and post their dining experiences easily.',
     features: [
-      ' Booking management',
-      'Commission tracking',
-      'Customer notifications',
+      'Customer reviews',
+      'Ratings feature',
+      'Social sharing options',
     ],
   },
 ];
 const costdata = {
-  title: 'Ready to Transform Your Travel Business with AV Technosys?',
+  title: 'Looking to Build a Restaurant App?',
   description:
-    'Let’s build a seamless, innovative travel app that drives your growth and success.',
-  image: 'Travel-Tourism-Main[1].png',
+    'Ready to Transform Your Restaurant with a Custom App? Let’s Begin!',
+  image: 'Restaurant-App-Cover[1].png',
   btn: 'Request A Free Demo Call',
 };
 const ARandVRdetails={
-    title:"Hire Skilled Travel App Developers for Your Project",
-    description1:"Want to turn your travel app idea into reality? Our expert developers deliver innovative, feature-rich travel apps tailored to your business goals. With deep industry experience, we create apps that stand out and drive growth.",
-    description2:"At AV Technosys, our seamless hiring process connects you with dedicated developers focused on quality, scalability, and on-time delivery. From custom app development to ongoing support, we’re here to bring your vision to life and keep you ahead in the competitive travel market.",
+    title:"Hire Skilled Restaurant App Developers for Your Project",
+    description1:"Want to turn your restaurant app idea into reality? Our expert developers deliver innovative, feature-rich restaurant apps tailored to your business goals. With deep industry experience, we create apps that stand out and drive growth.",
+    description2:"At AV Technosys, our seamless hiring process connects you with dedicated developers focused on quality, scalability, and on-time delivery. From custom app development to ongoing support, we’re here to bring your vision to life and keep you ahead in the competitive restaurant market.",
     image:"hire-banner-img[1].webp"
 }
 const aiastrologyheading={
     title:"Our Range of Restaurant App Development Services",
     description:"We offer complete app development services to deliver a smooth digital experience for your customers while simplifying your restaurant operations.",
-    image:"Blue_Modern_Quote_LinkedIn_Post__10_-removebg-preview[1].png"
+    image:"restaurent-app-hire[1].webp"
 }
 
 const aiastrologydetails = [
@@ -218,28 +218,28 @@ const aiastrologydetails = [
     desc: ' Enhance user experience with intuitive, visually attractive designs that improve navigation and drive customer satisfaction and loyalty.',
   },
 ];
-const travelMistakeCards = [
+const restaurentMistakeCards = [
   {
-    title: 'Neglecting User Experience',
+    title: ' Not Customising for Your Restaurant',
     description:
-      'Focusing only on features and ignoring usability can drive users away. Ensure your travel app is intuitive, fast, and easy to navigate for maximum engagement.',
-    img: '/new/neglecting-user-experience-travel.svg',
+      ' Using generic app solutions won’t suit your specific needs. Your app should reflect your restaurant type, be it fine dining, quick service, or a cloud kitchen.',
+    img: '/new/restaurent_customization_needs.svg',
     alt: 'Neglecting User-Centric Design',
     imageTop: false,
   },
   {
-    title: 'Overlooking Scalability',
+    title: 'Complex Ordering Experience',
     description:
-      'If your app isn’t built to scale, it will struggle as your user base grows. Invest in scalable development to support future traffic, updates, and new features smoothly.',
-    img: '/new/overlooking-scalability-travel.svg',
+      ' If ordering is confusing or slow, customers will leave. Keep navigation simple, loading fast, and menus clear to boost conversions.',
+    img: '/new/restaurent_complicated_ordering_process.svg',
     alt: 'Ignoring Scalability',
     imageTop: true,
   },
   {
-    title: 'Ignoring Market Trends',
+    title: 'Skipping Regular Maintenance',
     description:
-      'Not adopting trends like AI trip planning or voice search can leave your app behind competitors. Stay updated with innovative features to keep your app relevant and competitive.',
-    img: '/new/ignoring-market-trends-travel.svg',
+      ' Without consistent updates and support, your app may become slow, insecure, or outdated. Ongoing maintenance ensures top performance and security.',
+    img: '/new/restaurent_lack_app_maintenance.svg',
     alt: 'Overlooking Security Features',
     imageTop: false,
   },

@@ -194,7 +194,6 @@ const aiastrologyheading={
     description:"We build secure, user-friendly dating apps from design to launch, ensuring your app stands out and succeeds in the market.",
     image:"robotai.jpg"
 }
-
 const aiastrologydetails = [
   {
     title: 'Android Dating App Development',

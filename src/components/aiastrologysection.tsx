@@ -1,6 +1,7 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const AiAstrologySection = ({details,heading}) => {
+const AiAstrologySection = ({details,heading,imageclass=""}) => {
   return (
     <section className="px-4 py-10 bg-gray-100">
       <div className="max-w-7xl mx-auto text-center">
@@ -19,7 +20,7 @@ const AiAstrologySection = ({details,heading}) => {
                 alt="Astrology App"
                 width={500}
                 height={500}
-                className="rounded-xl shadow-md w-full"
+                className={cn("rounded-xl shadow-md w-full",imageclass)}
               />
             </div>
           </div>

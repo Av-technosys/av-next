@@ -1677,3 +1677,213 @@ export const travelFawData = [
   },
    
 ];
+export const restaurantFawData = [
+  {
+    value: 'faq-1',
+    question: 'What features can be included in my food delivery app?',
+    answer: (
+     <>
+        <p>We can integrate features like real-time order tracking, multiple payment gateways, restaurant and menu listings, push notifications, reviews and ratings, promo codes, contactless delivery options, and admin dashboards to manage operations efficiently.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How long does it take to develop a food delivery app?',
+    answer: (
+      <p>
+         The development duration depends on the app’s complexity and features but typically ranges between 3 to 6 months for a fully functional, customised food delivery application.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' How long do you provide maintenance and support after the app launch?',
+    answer: (
+      <>
+      <p>
+         We offer flexible post-launch maintenance and support plans ranging from 3 months to annual contracts, ensuring your app remains updated, secure, and bug-free.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What is the cost to develop a food delivery app?',
+    answer: (
+      <>
+        <p>The cost varies based on features, design complexity, and chosen platforms. On average, a standard food delivery app may cost anywhere between $15,000 to $50,000. For precise estimation, we analyse your specific requirements and business goals.</p>
+      </>
+    ),
+  },
+];
+export const petcareFawData = [
+  {
+    value: 'faq-1',
+    question: 'What are the best technologies for building a pet care app?',
+    answer: (
+     <>
+        <p>Popular choices include Flutter or React Native for cross-platform apps, Firebase for real-time database and push notifications, and AWS or Google Cloud for scalable backend support.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How do I increase downloads for my pet care app?',
+    answer: (
+      <p>
+       Use app store optimization (ASO), targeted social media campaigns, collaborations with pet influencers, and offer introductory discounts or referral bonuses to attract users.
+
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How can I stay updated with trends in pet care app development?',
+    answer: (
+      <>
+      <p>
+         Follow top pet tech blogs, join veterinary and pet care forums, attend industry webinars, and consult with your app development team for tech updates and feature innovations.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What is the cost of developing a pet care app?',
+    answer: (
+      <>
+        <p>Depending on complexity, platform choice, and features, development can range from $10,000 to $50,000 or more, including design, backend setup, and basic maintenance.
+</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: 'How can I make my pet care app profitable?',
+    answer: (
+      <>
+        <p>Monetise through subscription plans, in-app purchases (like pet food or grooming bookings), featured listings for pet businesses, and commission models for services booked via the app.</p>
+      </>
+    ),
+  },
+
+];
+export const vaterinaryFawData = [
+  {
+    value: 'faq-1',
+    question: 'What exactly is an on-demand veterinary app?',
+    answer: (
+     <>
+        <p> An on-demand veterinary app is a digital platform that connects pet owners with licensed veterinarians, enabling them to book virtual or in-person consultations quickly without visiting a clinic physically.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What key features should an on-demand veterinary app have?',
+    answer: (
+      <p>
+        Such apps should include user registration, vet profiles, appointment booking, secure payments, medical record management, in-app chat or video calls, notifications, and GPS for nearby vet services.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How long does it take to develop an on-demand vet app?',
+    answer: (
+      <>
+      <p>
+          The development timeline varies based on complexity, but a standard on-demand vet app usually takes 3 to 6 months, including planning, design, development, and testing.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'What is the cost of building a veterinarian on-demand app?',
+    answer: (
+      <>
+        <p> The cost depends on features, platforms, and the location of developers. Generally, creating a fully functional veterinarian on-demand app ranges from $15,000 to $50,000 or more, depending on its scale and integrations.</p>
+      </>
+    ),
+  },
+];
+export const petfoodDeliveryFawData = [
+  {
+    value: 'faq-1',
+    question: 'What exactly is a pet food delivery app?',
+    answer: (
+     <>
+        <p>A pet food delivery app lets pet owners order food and supplies for their pets online and get them delivered to their doorstep quickly and easily.</p> 
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How do these apps function?',
+    answer: (
+      <p>
+       Users browse products, add them to their cart, choose delivery options, make payments, and track orders in real time within the app.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Do these apps charge for delivery?',
+    answer: (
+      <>
+      <p>
+         Most apps charge a standard delivery fee, but some offer free delivery on minimum order amounts or for subscription users.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can I set up automatic repeat orders?',
+    answer: (
+      <>
+        <p>Yes, many apps allow you to schedule recurring deliveries so your pet never runs out of essentials.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-5',
+    question: 'Is order tracking available?',
+    answer: (
+      <>
+        <p>Absolutely. You can track your order status and delivery in real time directly through the app.</p>
+      </>
+    ),
+  },
+ {
+    value: 'faq-6',
+    question: 'What payment options can I use?',
+    answer: (
+      <>
+      <p>
+         Pet food delivery apps typically accept credit/debit cards, net banking, UPI, and digital wallets for secure transactions.
+      </p>
+        </>
+    ),
+  },
+  {
+    value: 'faq-7',
+    question: 'Can I return or replace items?',
+    answer: (
+      <>
+        <p>Most apps offer easy return or exchange policies for damaged, incorrect, or unsatisfactory products within their terms.</p>
+      </>
+    ),
+  },
+   {
+    value: 'faq-8',
+    question: 'Is my data secure on these apps?',
+    answer: (
+      <>
+        <p>Yes, trusted apps use strong data security measures and encryption to protect your personal and payment information.</p>
+      </>
+    ),
+  },
+];
