@@ -1,8 +1,9 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-const AiAstrologySection = ({ details, heading }) => {
+const AiAstrologySection = ({ details, heading, imageclass = '' }) => {
   return (
-    <section className="bg-gray-50 px-4 py-16">
+    <section className="bg-gray-100 px-4 py-10">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
           {heading?.title}
@@ -19,15 +20,15 @@ const AiAstrologySection = ({ details, heading }) => {
                 alt="Astrology App"
                 width={500}
                 height={500}
-                className="w-full rounded-xl shadow-md"
+                className={cn('w-full rounded-xl shadow-md', imageclass)}
               />
             </div>
           </div>
-          <div className="grid gap-4 text-left sm:grid-cols-2">
+          <div className="grid gap-6 text-left sm:grid-cols-2">
             {details?.map((item, idx) => (
               <div
                 key={idx}
-                className="rounded-md border border-gray-200 bg-white p-4 shadow"
+                className="rounded-md border border-gray-200 bg-white p-3 shadow"
               >
                 <h4 className="text-lg font-semibold">{item.title}</h4>
                 <p className="mt-1 text-sm text-gray-600">{item.desc}</p>

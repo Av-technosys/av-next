@@ -1,10 +1,11 @@
 'use client';
 import { LeadPopUp } from '@/components/leadPopUp';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Astrologyhomesection({ details }) {
+export default function Astrologyhomesection({ details, imageclass = '' }) {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
   return (
     <>
@@ -30,13 +31,13 @@ export default function Astrologyhomesection({ details }) {
               <div className="mt-8 flex justify-center gap-4 md:justify-start">
                 <Link
                   href={'/contact-us'}
-                  className="rounded-md border border-gray-400 px-6 py-3 font-semibold text-gray-700 duration-300 hover:bg-gray-100"
+                  className="rounded-md border border-gray-400 px-6 py-3 font-medium text-gray-700 duration-300 hover:bg-gray-100"
                 >
                   Talk to Expert
                 </Link>
                 <button
                   onClick={() => setIsLeadFormOpen(true)}
-                  className="rounded-md bg-yellow-500 px-6 py-3 text-lg font-semibold text-white duration-300 hover:bg-yellow-600"
+                  className="rounded-md bg-yellow-500 px-6 py-3 text-lg font-medium text-white duration-300 hover:bg-yellow-600"
                 >
                   Get a Quote
                 </button>

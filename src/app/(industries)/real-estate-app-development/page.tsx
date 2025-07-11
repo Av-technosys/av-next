@@ -51,10 +51,9 @@ const RealEstatePage = () => {
     <>
       <RealEstateHero />
       <RealstateRevolution />
-
       <RealEstateAppServices />
       <RealEstateProjectCost />
-      <RealEstateAppClone />
+      <RealEstateAppClone heading={AppcloneHeading} details={Appclone} />
       <TechnologiesOffered />
       <RealEstateAVandVR />
       <RealEstateConquere />
@@ -172,3 +171,29 @@ function Realstatewhychooseus() {
     </div>
   );
 }
+
+const AppcloneHeading = {
+  title: 'Real Estate App Clone Solutions',
+  description:
+    ' AV Technosys, we specialize in real estate app development and offerpowerful clone solutions of top-performing platforms. Our apps arescalable, secure, and fully for your business objectives.',
+};
+const Appclone = [
+  {
+    heading: 'Zillow App Clone',
+    description:
+      'Our Zillow clone app delivers a robust, user-friendly solution for property listings, advanced filtering, and effortless property booking.',
+    img: 'zillow_clone_app.webp',
+  },
+  {
+    heading: 'Realtor App Clone',
+    description:
+      'Launch a feature-rich Realtor.com-style app with smart comparisons, modern UI, and smooth navigation to enhance user engagement.',
+    img: 'redfin_App_Clone.webp',
+  },
+  {
+    heading: 'Redfin App Clone',
+    description:
+      'Create a Redfin-style real estate app with live property updates, dynamic map views, and built-in tools for smooth agent and buyer communication.',
+    img: 'realtorcom_App_Clone.webp',
+  },
+];

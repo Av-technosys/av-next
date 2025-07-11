@@ -1,6 +1,11 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-const LeadingSectionfintechAll = ({ className = '', details }: any) => {
+const LeadingSectionfintechAll = ({
+  className = '',
+  details,
+  imageclass = '',
+}: any) => {
   return (
     <>
       <section className="mx-auto max-w-7xl bg-white px-4 py-8 sm:py-16 md:px-6 md:py-20">
@@ -13,13 +18,18 @@ const LeadingSectionfintechAll = ({ className = '', details }: any) => {
             <p className="mb-4 text-sm leading-normal tracking-wide text-gray-700 sm:text-base sm:leading-relaxed">
               {details?.description1}
             </p>
-            <p className="text-sm leading-normal tracking-wide text-gray-700 sm:leading-relaxed md:hidden lg:block">
+            <p className="text-sm leading-normal tracking-wide text-gray-700 sm:text-base sm:leading-relaxed md:hidden lg:block">
               {details?.description2}
             </p>
           </div>
 
           {/* Right Video/Image */}
-          <div className="relative overflow-hidden rounded-lg">
+          <div
+            className={cn(
+              'relative overflow-hidden rounded-lg shadow-lg',
+              imageclass
+            )}
+          >
             <Image
               src={`/${details?.image}`}
               alt="Fintech Trends 2025"

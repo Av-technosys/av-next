@@ -1,4 +1,5 @@
 import Testimonial from '@/app/reviews';
+import { TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
 import { CaseStudy } from '@/components/caseStudy';
 import { ContactUs } from '@/components/contactUs';
@@ -9,6 +10,7 @@ import { Locations } from '@/components/Location';
 import Rating2 from '@/components/rating2';
 import Ratings from '@/components/ratings';
 import ServicesManaged from '@/components/servicesManaged';
+
 import { ExperienceSections } from '@/conponents/experience';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { DigitalmarketingFawData } from '@/const';
@@ -21,7 +23,7 @@ const Page = () => {
       <HeroSectionfintechAll details={data} />
       <Ratings className="md:flex" />
       <ServicesManaged
-        className="lg:grid-cols-3"
+        className="lg:grid-cols-4"
         heading={servicesheading}
         services={services}
       />
@@ -66,7 +68,6 @@ const servicesheading = {
   description:
     'AV Technosys delivers digital marketing solutions to effectively advertise your products and services in diverse categories.',
 };
-
 const services = [
   {
     title: 'SEO Marketing',
@@ -86,7 +87,12 @@ const services = [
       'We prioritise an omnichannel approach to promote your brand effectively. Our social media experts develop strategies that generate quality leads and grow your follower base, ensuring consistent and impactful marketing across all platforms.',
     image: '/digimarkpic122.jpg',
   },
-
+  {
+    title: 'PPC Ads',
+    description:
+      'Our PPC experts create high-ROI Google ad campaigns that drive more leads to your website and boost your brand’s visibility online.',
+    image: '/digimarkpic5.jpg',
+  },
   {
     title: 'Email Marketing',
     description:
@@ -99,7 +105,12 @@ const services = [
       'Beyond Google Ads, we promote your business across platforms like Google My Business and Google Marketing Platform. We also integrate your account with Google Analytics to track performance and provide you with regular updates on your digital growth.',
     image: '/digimarkpic7.jpg',
   },
-
+  {
+    title: 'Sales',
+    description:
+      'In addition to digital marketing, our dedicated sales team promotes your products and services by directly connecting with potential customers through phone calls, chats, virtual meetings, and more.',
+    image: '/digimarkpic111.jpg',
+  },
   {
     title: 'Designing',
     description:
@@ -114,7 +125,6 @@ const whychooseheading = {
     'We follow a structured process before starting any digital marketing project. ',
   image: 'digitalmarketingpic.jpg',
 };
-
 const whychoosedata = [
   {
     title: 'Business Analysis',

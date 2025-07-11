@@ -130,12 +130,12 @@ const industryServices = {
     {
       title: 'Media & Entertainment',
       children: [
-        { title: 'Events', link: '/' },
-        { title: 'Restaurants', link: '/' },
-        { title: 'Agriculture', link: '/' },
-        { title: 'Travel', link: '/' },
-        { title: 'Healthcare', link: '/' },
-        { title: 'Dating', link: '/' },
+        { title: 'Events', link: '/event-management-app-development' },
+        { title: 'Restaurants', link: '/restaurant-app-development-company' },
+        { title: 'Agriculture', link: '/agriculture-software-development' },
+        { title: 'Travel', link: '/travel-app-development-company' },
+        { title: 'Healthcare', link: '/healthcare-software-development' },
+        { title: 'Dating', link: '/dating-app-development' },
       ],
     },
     {
@@ -150,14 +150,15 @@ const industryServices = {
     {
       title: 'Pet Care',
       children: [
-        { title: 'Pet Care App Development', link: '/' },
-        { title: 'Veterinary App', link: '/' },
-        { title: 'Pet Food Delivery App', link: '/' },
-        { title: 'Pet Exercise Tracker', link: '/' },
-        { title: 'Pet Training App', link: '/' },
-        { title: 'Pet Social Networking', link: '/' },
-        { title: 'Dog Walker App', link: '/' },
-        { title: 'Dog Park Tracker', link: '/' },
+        {
+          title: 'Pet Care App Development',
+          link: '/pet-care-app-development-company',
+        },
+        { title: 'Veterinary App', link: '/veterinary-app-development' },
+        {
+          title: 'Pet Food Delivery App',
+          link: '/pet-food-delivery-app-development',
+        },
       ],
     },
   ],

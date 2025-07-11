@@ -6,3 +6,4 @@ export * from './astrologydetailsbox';
 export * from './aiastrologysection';
 export * from './astrologyARVRsection';
 export * from './astrologyhomesection';
+export * from './petGrooming';

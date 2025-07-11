@@ -1828,3 +1828,662 @@ export const astrologytemplefawdata = [
     ),
   },
 ];
+
+export const healthcarefawdata = [
+  {
+    value: 'faq-1',
+    question: 'What is your approach to developing a healthcare app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          We begin by understanding your goals and user needs, followed by
+          detailed planning, UI/UX design, and secure development. Our team
+          conducts thorough testing for performance and compliance before
+          deployment, ensuring a smooth launch and ongoing support.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What healthcare app development services do you provide?',
+    answer: (
+      <p>
+        We offer end-to-end services, including app consulting, UI/UX design,
+        development for Android and iOS, third-party API integrations,
+        compliance solutions, maintenance, and upgrades for healthcare apps.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question:
+      'What experience does your team have in healthcare app development?',
+    answer: (
+      <>
+        <p>
+          Our team consists of highly experienced developers with expertise in
+          building diverse healthcare apps such as telehealth, fitness, EMR, and
+          patient engagement apps, all adhering to industry standards and
+          regulations.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can you integrate third-party APIs with healthcare apps?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Yes, we seamlessly integrate third-party APIs like payment gateways,
+          EHR/EMR systems, wearable devices, and telemedicine tools to enhance
+          your app’s functionality.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question:
+      'How do you ensure compliance with healthcare regulations like HIPAA?',
+    answer: (
+      <>
+        <p>
+          We strictly follow HIPAA and regional data protection laws by
+          implementing strong encryption, secure authentication, and role-based
+          access controls to ensure data privacy and compliance.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question:
+      'Do you offer customised solutions for specific healthcare needs?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Absolutely. We build fully customised healthcare apps tailored to your
+          unique requirements, workflows, and goals to provide maximum value to
+          your patients and organisation.
+        </p>
+      </>
+    ),
+  },
+];
+export const Eventfawdata = [
+  {
+    value: 'faq-1',
+    question: 'How do you keep the app secure?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          We implement robust security measures such as data encryption, secure
+          APIs, multi-factor authentication, and regular security audits to
+          protect user data and prevent unauthorized access.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How do you integrate third-party services into the app?',
+    answer: (
+      <p>
+        We integrate third-party services using secure APIs and SDKs, ensuring
+        seamless compatibility and functionality. Each integration is thoroughly
+        tested to maintain performance, security, and user experience.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How will the app handle high traffic during peak times?',
+    answer: (
+      <>
+        <p>
+          We design the app with scalable architecture and cloud infrastructure,
+          allowing it to handle sudden spikes in user traffic efficiently
+          without downtime, ensuring a smooth experience even during large
+          events.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'How long does it take to build an event management app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          The development timeline depends on the app's complexity and features,
+          but generally, an event management app takes 3 to 6 months from
+          planning and design to development, testing, and launch.
+        </p>
+      </>
+    ),
+  },
+];
+export const agrifawdata = [
+  {
+    value: 'faq-1',
+    question: ' How much does it cost to develop agricultural software?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          The cost varies based on features, complexity, and integrations
+          required. On average, agriculture software development can range from
+          $10,000 to $50,000 or more, depending on your specific business needs.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How long does it take to build agriculture software?',
+    answer: (
+      <p>
+        The development timeline usually ranges between 3 to 6 months, depending
+        on the software's complexity, number of features, and testing
+        requirements.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' How can agriculture software benefit farm management?',
+    answer: (
+      <>
+        <p>
+          Agriculture software improves farm management by automating tasks,
+          monitoring crop and livestock health, optimising resource usage, and
+          providing real-time data insights for better decision-making.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'What types of agriculture software solutions do you provide?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          We offer a wide range of solutions including farm management systems,
+          livestock tracking software, AI-based agriculture apps, drone
+          management software, food safety compliance software, and farm
+          accounting solutions.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: ' What is AgriTech?',
+    answer: (
+      <>
+        <p>
+          AgriTech, or agricultural technology, involves using modern
+          technologies like AI, IoT, and data analytics to enhance farming
+          efficiency, productivity, and sustainability.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'Is AgriTech the future of farming?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Yes. AgriTech is transforming agriculture by enabling smarter farming
+          practices, precision agriculture, reduced resource wastage, and higher
+          yields, making it the future of sustainable farming.
+        </p>
+      </>
+    ),
+  },
+];
+export const datingFawData = [
+  {
+    value: 'faq-1',
+    question: 'What essential features should a dating app have?',
+    answer: (
+      <>
+        <p>
+          A dating app should include features like user registration, profile
+          creation, geo-location, real-time chat, swipe or match functionality,
+          push notifications, privacy settings, and admin management to ensure
+          smooth and secure user experiences.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How much time does it take to build a dating app?',
+    answer: (
+      <p>
+        The development timeline depends on the complexity and features of your
+        app. Typically, an MVP dating app takes around 3-6 months, while
+        advanced apps with AI, video calls, and premium features may take 6-9
+        months or more.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Which technology stack is ideal for dating app development?',
+    answer: (
+      <>
+        <p>
+          We use modern technologies like React Native or Flutter for
+          cross-platform apps, Swift for iOS, and Kotlin for Android. Backend
+          development often uses Node.js, PHP (Laravel), or Python (Django) with
+          secure databases like MySQL or MongoDB and cloud integration via AWS
+          or Firebase.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' How do you keep user data safe on a dating app?',
+    answer: (
+      <>
+        <p>
+          We implement robust security measures such as end-to-end encryption,
+          secure authentication (OAuth, 2FA), data encryption, and privacy
+          compliance with standards like GDPR to protect user information and
+          ensure trust.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'Do you offer support and maintenance post-launch?',
+    answer: (
+      <>
+        <p>
+          Yes. We provide comprehensive support and maintenance services,
+          including bug fixes, updates, feature enhancements, and security
+          patches to keep your app running smoothly and aligned with market
+          trends.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: ' How can my dating app stand out from competitors?',
+    answer: (
+      <>
+        <p>
+          We integrate unique features like AI matchmaking, virtual dates
+          (metaverse), personalised recommendations, and niche community
+          targeting to differentiate your app and attract a loyal user base.
+        </p>
+      </>
+    ),
+  },
+];
+export const travelFawData = [
+  {
+    value: 'faq-1',
+    question: ' What types of travel app development services do you provide?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          We offer end-to-end services, including app design, development, API
+          integration, testing, and post-launch maintenance for travel
+          businesses of all sizes.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: '  How long does it take to build a travel app?',
+    answer: (
+      <p>
+        The development timeline depends on features and complexity but
+        typically ranges from 3 to 6 months for a fully functional travel app.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Which platforms do you build travel apps for?',
+    answer: (
+      <>
+        <p>
+          We develop travel apps for Android, iOS, and cross-platform to ensure
+          maximum reach and seamless user experiences.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question:
+      'Can you integrate APIs for services like hotel or flight bookings?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Yes, we integrate third-party APIs for hotel, flight, car rentals,
+          maps, and payment gateways to enhance app functionality.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: ' What are the must-have features in a travel app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Key features include user profiles, booking systems, secure payments,
+          real-time notifications, reviews, and easy navigation.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'How do you protect user data in travel apps?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          We implement advanced security measures such as data encryption,
+          secure payment gateways, and compliance with data privacy standards to
+          keep user data safe.
+        </p>
+      </>
+    ),
+  },
+];
+export const restaurantFawData = [
+  {
+    value: 'faq-1',
+    question: 'What features can be included in my food delivery app?',
+    answer: (
+      <>
+        <p>
+          We can integrate features like real-time order tracking, multiple
+          payment gateways, restaurant and menu listings, push notifications,
+          reviews and ratings, promo codes, contactless delivery options, and
+          admin dashboards to manage operations efficiently.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How long does it take to develop a food delivery app?',
+    answer: (
+      <p>
+        The development duration depends on the app’s complexity and features
+        but typically ranges between 3 to 6 months for a fully functional,
+        customised food delivery application.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question:
+      ' How long do you provide maintenance and support after the app launch?',
+    answer: (
+      <>
+        <p>
+          We offer flexible post-launch maintenance and support plans ranging
+          from 3 months to annual contracts, ensuring your app remains updated,
+          secure, and bug-free.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What is the cost to develop a food delivery app?',
+    answer: (
+      <>
+        <p>
+          The cost varies based on features, design complexity, and chosen
+          platforms. On average, a standard food delivery app may cost anywhere
+          between $15,000 to $50,000. For precise estimation, we analyse your
+          specific requirements and business goals.
+        </p>
+      </>
+    ),
+  },
+];
+export const petcareFawData = [
+  {
+    value: 'faq-1',
+    question: 'What are the best technologies for building a pet care app?',
+    answer: (
+      <>
+        <p>
+          Popular choices include Flutter or React Native for cross-platform
+          apps, Firebase for real-time database and push notifications, and AWS
+          or Google Cloud for scalable backend support.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How do I increase downloads for my pet care app?',
+    answer: (
+      <p>
+        Use app store optimization (ASO), targeted social media campaigns,
+        collaborations with pet influencers, and offer introductory discounts or
+        referral bonuses to attract users.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How can I stay updated with trends in pet care app development?',
+    answer: (
+      <>
+        <p>
+          Follow top pet tech blogs, join veterinary and pet care forums, attend
+          industry webinars, and consult with your app development team for tech
+          updates and feature innovations.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' What is the cost of developing a pet care app?',
+    answer: (
+      <>
+        <p>
+          Depending on complexity, platform choice, and features, development
+          can range from $10,000 to $50,000 or more, including design, backend
+          setup, and basic maintenance.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'How can I make my pet care app profitable?',
+    answer: (
+      <>
+        <p>
+          Monetise through subscription plans, in-app purchases (like pet food
+          or grooming bookings), featured listings for pet businesses, and
+          commission models for services booked via the app.
+        </p>
+      </>
+    ),
+  },
+];
+export const vaterinaryFawData = [
+  {
+    value: 'faq-1',
+    question: 'What exactly is an on-demand veterinary app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          An on-demand veterinary app is a digital platform that connects pet
+          owners with licensed veterinarians, enabling them to book virtual or
+          in-person consultations quickly without visiting a clinic physically.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What key features should an on-demand veterinary app have?',
+    answer: (
+      <p>
+        Such apps should include user registration, vet profiles, appointment
+        booking, secure payments, medical record management, in-app chat or
+        video calls, notifications, and GPS for nearby vet services.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How long does it take to develop an on-demand vet app?',
+    answer: (
+      <>
+        <p>
+          The development timeline varies based on complexity, but a standard
+          on-demand vet app usually takes 3 to 6 months, including planning,
+          design, development, and testing.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'What is the cost of building a veterinarian on-demand app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          The cost depends on features, platforms, and the location of
+          developers. Generally, creating a fully functional veterinarian
+          on-demand app ranges from $15,000 to $50,000 or more, depending on its
+          scale and integrations.
+        </p>
+      </>
+    ),
+  },
+];
+export const petfoodDeliveryFawData = [
+  {
+    value: 'faq-1',
+    question: 'What exactly is a pet food delivery app?',
+    answer: (
+      <>
+        <p>
+          A pet food delivery app lets pet owners order food and supplies for
+          their pets online and get them delivered to their doorstep quickly and
+          easily.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How do these apps function?',
+    answer: (
+      <p>
+        Users browse products, add them to their cart, choose delivery options,
+        make payments, and track orders in real time within the app.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'Do these apps charge for delivery?',
+    answer: (
+      <>
+        <p>
+          Most apps charge a standard delivery fee, but some offer free delivery
+          on minimum order amounts or for subscription users.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can I set up automatic repeat orders?',
+    answer: (
+      <>
+        <p>
+          Yes, many apps allow you to schedule recurring deliveries so your pet
+          never runs out of essentials.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'Is order tracking available?',
+    answer: (
+      <>
+        <p>
+          Absolutely. You can track your order status and delivery in real time
+          directly through the app.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'What payment options can I use?',
+    answer: (
+      <>
+        <p>
+          Pet food delivery apps typically accept credit/debit cards, net
+          banking, UPI, and digital wallets for secure transactions.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-7',
+    question: 'Can I return or replace items?',
+    answer: (
+      <>
+        <p>
+          Most apps offer easy return or exchange policies for damaged,
+          incorrect, or unsatisfactory products within their terms.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-8',
+    question: 'Is my data secure on these apps?',
+    answer: (
+      <>
+        <p>
+          Yes, trusted apps use strong data security measures and encryption to
+          protect your personal and payment information.
+        </p>
+      </>
+    ),
+  },
+];
