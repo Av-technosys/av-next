@@ -83,7 +83,8 @@ const data = {
   title: 'Digital Wallet Integration Services',
   description:
     'Want to boost your store’s user experience with a digital wallet integration? AV Technosys offers smooth and efficient integration services to keep your operations running without interruptions or revenue loss.',
-  image: 'dwalletbanner.jpg',
+  image:
+    'https://ik.imagekit.io/avtechnosys/dwalletbanner.jpg?updatedAt=1752122025199',
 };
 
 const leadingdata = {

@@ -48,7 +48,8 @@ const data = {
   title: 'Digital Marketing Services',
   description:
     'AV Technosys has a team of certified digital marketing experts who deliver innovative solutions to boost your store’s traffic and help your business achieve greater success.',
-  image: 'digitalmarketingbanner3.jpg',
+  image:
+    'https://ik.imagekit.io/avtechnosys/digitalmarketingbanner3.jpg?updatedAt=1752122023439',
   btn: 'Discuss Your Project Idea ',
 };
 

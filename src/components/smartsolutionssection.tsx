@@ -2,11 +2,22 @@
 import React from 'react';
 import { SectionHeading } from '@/components/sectionHeading';
 import { motion } from 'motion/react';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-const Smartsolutionsection = ({ details, heading }) => {
+const Smartsolutionsection = ({
+  details,
+  heading,
+  className = '',
+  backgroundclass = '',
+}) => {
   return (
-    <section className="mx-auto mt-2 max-w-7xl bg-white px-4 md:mb-20">
+    <section
+      className={cn(
+        'mx-auto mt-2 max-w-7xl bg-white px-4 md:mb-20',
+        backgroundclass
+      )}
+    >
       <SectionHeading
         className="!pt-0"
         title={heading?.title}
@@ -18,11 +29,14 @@ const Smartsolutionsection = ({ details, heading }) => {
           <motion.div
             whileHover={{ scale: 1.03 }}
             key={index}
-            className="rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:bg-sky-200/60 hover:shadow-xl"
+            className={cn(
+              'rounded-xl border border-gray-300 bg-sky-100 p-6 shadow-md transition-transform duration-500 hover:bg-sky-200/60 hover:shadow-xl',
+              className
+            )}
           >
             <Image
-              height={100}
-              width={100}
+              height={50}
+              width={50}
               src={service.image}
               alt={service.alt}
               className="mb-4 size-14"

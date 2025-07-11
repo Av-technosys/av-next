@@ -73,7 +73,7 @@ export function ContactUs() {
             Today.
           </p>
         </div>
-        <div className="relative ml-auto flex h-full w-full max-w-lg flex-col gap-2.5 rounded-3xl bg-white/40 px-6 py-3 pb-4 shadow-2xl shadow-yellow-300 backdrop-blur-md">
+        <div className="relative mx-auto flex h-full w-full max-w-lg flex-col gap-2.5 rounded-3xl bg-white/40 px-6 py-3 pb-4 shadow-2xl shadow-yellow-300 backdrop-blur-md md:ml-auto">
           <InputText
             inputClass="bg-transparent border-yellow-900 focus:border-yellow-700"
             labelClass="bg-yellow-950 rounded px-2 py-0.5 text-xs text-white"

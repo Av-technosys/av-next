@@ -47,7 +47,7 @@ export const rating2Data = [
     image: '/review/r26.png',
   },
   {
-    image: '/review/extract[1].webp',
+    image: '/review/extract_1_.webp',
   },
   {
     image: '/review/r21.png',
@@ -68,6 +68,6 @@ export const rating2Data = [
     image: '/review/r26.png',
   },
   {
-    image: '/review/extract[1].webp',
+    image: '/review/extract_1_.webp',
   },
 ];

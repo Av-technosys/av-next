@@ -86,7 +86,8 @@ const data = {
   title: 'Trading App Development Company',
   description:
     'Planning to launch a trading app? Partner with our experienced FinTech developers to create a powerful, feature-rich platform.',
-  image: 'tradingbanner.jpg',
+  image:
+    'https://ik.imagekit.io/avtechnosys/tradingbanner.jpg?updatedAt=1752122104277',
 };
 
 const leadingdata = {

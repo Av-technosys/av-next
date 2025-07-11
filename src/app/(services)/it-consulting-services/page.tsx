@@ -85,7 +85,8 @@ const data = {
   title: 'IT Consulting Services Company',
   description:
     'We offer end-to-end enterprise IT consulting services, including cloud migration, business transformation, digital strategy, governance enhancement, and IT infrastructure support, to drive your organisation’s growth and efficiency.',
-  image: 'it-consulting-banner.jpg',
+  image:
+    'https://ik.imagekit.io/avtechnosys/it-consulting-banner.jpg?updatedAt=1752122059944',
 };
 
 const leadingdata = {

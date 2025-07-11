@@ -1678,3 +1678,153 @@ export const webDevFawData = [
     ),
   },
 ];
+
+export const astrologyFawData = [
+  {
+    value: 'faq-1',
+    question: ' What is the process to develop an astrology app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          The process starts with understanding your business goals and
+          finalizing app features. Next, we create a detailed design (UI/UX),
+          followed by backend and frontend development. After thorough testing
+          for performance, security, and accuracy of astrological calculations,
+          the app is deployed on the app stores and maintained with regular
+          updates and improvements.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question:
+      ' How long does it take to develop an astrology and horoscope app?',
+    answer: (
+      <p>
+        The development timeline depends on the app’s complexity and features. A
+        basic astrology app may take 2-3 months, while a full-featured app with
+        AI, live consultations, and eCommerce integrations can take 4-6 months
+        or more.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' What is the cost of developing an astrology app?',
+    answer: (
+      <>
+        <p>
+          The cost varies based on features, platforms, design, and
+          integrations. On average, developing an astrology app can range from
+          $10,000 to $50,000+, depending on your specific requirements and the
+          development company you choose.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can my astrology app be available on both Android and iOS?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Yes. We develop apps for both Android and iOS platforms, ensuring
+          maximum user reach. You can opt for native development for each
+          platform or cross-platform solutions to optimize costs and timelines.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: ' Can my horoscope app have customized features?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          Absolutely. Your app can include customized features like daily
+          horoscopes, kundli matching, live chat with astrologers, AI-powered
+          predictions, eCommerce for remedies, and personalized dashboards –
+          tailored entirely to your business model and user needs.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'How can I generate revenue from my astrology app?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          You can monetize your astrology app through various models such as
+          in-app purchases, premium subscriptions, live consultation fees,
+          advertisement placements, selling astrology products or remedies, and
+          offering personalized paid reports.
+        </p>
+      </>
+    ),
+  },
+];
+
+export const astrologytemplefawdata = [
+  {
+    value: 'faq-1',
+    question: 'How much does it cost to develop temple management software?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          The cost depends on the design, features, and complexity you choose. A
+          basic temple management system may start from $5,000 to $10,000, while
+          an advanced solution with multiple modules, integrations, and custom
+          features can go up to $20,000 or more.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' How long does it take to build temple management software?',
+    answer: (
+      <p>
+        The development timeline varies based on features and modules.
+        Generally, it takes 2-3 months for a basic system and 4-6 months for a
+        full-featured, customized solution, including design, development,
+        testing, and deployment.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' What are the main features of temple management software?',
+    answer: (
+      <>
+        <p>
+          Key features include donation management, event management, member &
+          volunteer management, inventory management, accounting, live
+          streaming, online booking, and communication modules, all integrated
+          into a single system for smooth operations.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'How does temple management software benefit our temple?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          It streamlines daily operations, enhances transparency in finances,
+          simplifies member and volunteer management, improves event planning,
+          and strengthens communication with devotees, leading to better service
+          and temple growth.
+        </p>
+      </>
+    ),
+  },
+];

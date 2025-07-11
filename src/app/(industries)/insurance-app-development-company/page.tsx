@@ -86,7 +86,8 @@ const data = {
   title: 'Insurance App Development Company',
   description:
     'AV Technosys is a leading insurance app development company that delivers creative and scalable solutions, empowering insurance firms to expand internationally and enhance their digital capabilities.',
-  image: 'insurancebanner.jpg',
+  image:
+    'https://ik.imagekit.io/avtechnosys/insurancebanner.jpg?updatedAt=1752122059687',
 };
 
 const leadingdata = {

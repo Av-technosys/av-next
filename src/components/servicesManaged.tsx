@@ -3,9 +3,14 @@ import { SectionHeading } from './sectionHeading';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
-const ServicesManaged = ({ services, heading, className = '' }) => {
+const ServicesManaged = ({
+  services,
+  heading,
+  className = '',
+  backgroundClass = '',
+}) => {
   return (
-    <section className="bg-gray-50 px-4 pb-20 pt-8">
+    <section className={cn('bg-gray-50 px-4 pb-12 pt-4', backgroundClass)}>
       <SectionHeading
         className="text-center"
         title={`${heading?.title}`}

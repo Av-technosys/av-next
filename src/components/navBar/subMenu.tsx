@@ -60,8 +60,14 @@ const industryServices = {
     {
       title: 'Astrology',
       children: [
-        { title: 'Astrology App Development', link: '/' },
-        { title: 'Temple Management Software', link: '/' },
+        {
+          title: 'Astrology App Development',
+          link: '/astrology-app-development',
+        },
+        {
+          title: 'Temple Management Software',
+          link: '/temple-management-software',
+        },
       ],
     },
     {

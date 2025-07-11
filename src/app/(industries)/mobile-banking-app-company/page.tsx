@@ -86,7 +86,8 @@ const data = {
   title: 'Mobile Banking App Development Company',
   description:
     'We build secure, scalable mobile banking apps with features like easy account management and instant transfers. Partner with us to create a powerful banking app that keeps you ahead of the competition.',
-  image: 'mobileappbanner.jpg',
+  image:
+    'https://ik.imagekit.io/avtechnosys/mobileappbanner.jpg?updatedAt=1752122073652',
 };
 
 const leadingdata = {
