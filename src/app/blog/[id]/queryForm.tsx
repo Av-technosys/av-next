@@ -37,7 +37,8 @@ export function QueryForm({ slug }) {
       <div
         className="relative h-32 w-full"
         style={{
-          backgroundImage: "url('/new/blog-form-image.jpeg')",
+          backgroundImage:
+            "url('https://ik.imagekit.io/avtechnosys/blog-form-image.jpeg?updatedAt=1752122010093')",
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}

@@ -100,7 +100,7 @@ const Page = async (context: any) => {
               <Image
                 height={64}
                 width={64}
-                src={blogData.userImage as string}
+                src={convertS3ToImageKit(blogData.userImage as string)}
                 className="rounded-full"
                 alt=""
               />
