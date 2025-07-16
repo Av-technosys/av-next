@@ -69,8 +69,7 @@ const data = {
   title: 'Restaurant App Development Company',
   description:
     'We build customised, feature-packed restaurant apps that simplify ordering, improve customer experience, and increase your sales.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/restaurentbanner.png?updatedAt=1752224039154',
+  image: 'https://ik.imagekit.io/avtechnosys/restaurentbanner.png',
 };
 const leadingdata = {
   title: 'Boost Your Business with Restaurant App Development',

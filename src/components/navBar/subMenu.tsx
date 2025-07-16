@@ -103,8 +103,11 @@ const industryServices = {
     {
       title: 'Education',
       children: [
-        { title: 'LMS Development Company', link: '/' },
-        { title: 'EdTech Software Development', link: '/' },
+        { title: 'LMS Development Company', link: '/lms-development-company' },
+        {
+          title: 'EdTech Software Development',
+          link: '/education-app-development-company',
+        },
       ],
     },
     {
@@ -119,12 +122,15 @@ const industryServices = {
     {
       title: 'On Demand',
       children: [
-        { title: 'On Demand App Development', link: '/' },
-        { title: 'Laundry App', link: '/' },
-        { title: 'Doctor on Demand', link: '/' },
-        { title: 'On Demand Home Services', link: '/' },
-        { title: 'Salon App Development', link: '/' },
-        { title: 'Ticket Booking App Development', link: '/' },
+        { title: 'Laundry App', link: '/laundry-app-development' },
+        {
+          title: 'Doctor on Demand',
+          link: '/doctor-on-demand-app-development',
+        },
+        {
+          title: 'Salon App Development',
+          link: '/beauty-salon-app-development-company',
+        },
       ],
     },
     {

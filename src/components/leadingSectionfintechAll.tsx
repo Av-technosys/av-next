@@ -5,13 +5,14 @@ const LeadingSectionfintechAll = ({
   className = '',
   details,
   imageclass = '',
+  orderclass = '',
 }: any) => {
   return (
     <>
       <section className="mx-auto max-w-7xl bg-white px-4 py-8 sm:py-16 md:px-6 md:py-20">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           {/* Left Content */}
-          <div className="text-center md:text-start">
+          <div className={cn('text-center md:text-start', orderclass)}>
             <h2 className="mb-6 text-2xl font-bold text-black md:text-3xl lg:text-4xl">
               {details?.title}
             </h2>

@@ -53,8 +53,7 @@ const data = {
   title: 'Event Management App Development Company',
   description:
     'Streamline your events with AV Technosys’ powerful event management apps. Automate processes and grow your business with ease.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/eventbanner.jpg?updatedAt=1752224014212',
+  image: 'https://ik.imagekit.io/avtechnosys/eventbanner.jpg',
 };
 
 const leadingdata = {

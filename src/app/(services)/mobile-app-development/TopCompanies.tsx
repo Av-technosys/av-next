@@ -1,10 +1,16 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
-const TopCompanies = () => {
+const TopCompanies = ({ className }: { className?: string }) => {
   return (
     <>
-      <div className="mx-auto flex w-full max-w-7xl items-center px-4 py-6">
+      <div
+        className={cn(
+          'mx-auto flex w-full max-w-7xl items-center px-4 py-6',
+          className
+        )}
+      >
         <div className="h-0.5 w-full flex-1 rounded bg-gray-300"></div>
         <div className="px-6 text-center font-semibold text-neutral-600">
           Trusted by Corporations, Enterprises, And Startups.
