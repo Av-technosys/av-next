@@ -14,7 +14,34 @@ import Rating2 from '@/components/rating2';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { LMSFawData, SalonFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'LMS Development Company | Innovative Learning Apps',
+  },
+  description:
+    'Hire AV Technosys for expert LMS development and advanced custom e-learning solutions.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/lms-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'LMS Development Company | Innovative Learning Apps',
+
+    description:
+      'Hire AV Technosys for expert LMS development and advanced custom e-learning solutions.',
+    url: 'https://www.avtechnosys.com/lms-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

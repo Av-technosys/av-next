@@ -15,8 +15,34 @@ import Rating2 from '@/components/rating2';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { SalonFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Salon App Development Company | Beauty Salon App Development',
+  },
+  description:
+    'As a beauty salon app developer, AV Technosys builds on-demand apps that help salons connect with clients easily.',
+  alternates: {
+    canonical:
+      'https://www.avtechnosys.com/beauty-salon-app-development-company/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Salon App Development Company | Beauty Salon App Development',
+
+    description:
+      'As a beauty salon app developer, AV Technosys builds on-demand apps that help salons connect with clients easily.',
+    url: 'https://www.avtechnosys.com/beauty-salon-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

@@ -19,12 +19,36 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import TopCompanies from '../mobile-app-development/TopCompanies';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'AI Agent Development Services by Industry Experts',
+  },
+  description:
+    'AV Technosys builds smart AI agents to transform your business. Connect with us today.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/ai-agent-development-company/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'AI Agent Development Services by Industry Experts',
+    description:
+      'AV Technosys builds smart AI agents to transform your business. Connect with us today.',
+    url: 'https://www.avtechnosys.com/ai-agent-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
     <>
       <HeroSectionAiAgent />
-      <TopCompanies />
+      <TopCompanies className="py-8" />
       <TransformAiSection />
       <AiAstrologySection
         heading={aiastrologyheading}
@@ -106,7 +130,7 @@ function TransformAiSection() {
 const aiastrologyheading = {
   title: 'Our AI Agent Development Services',
   description:
-    'Access end-to-end AI agent development – from concept to launch – with solutions tailored to your business goals.',
+    'Access end-to-end AI agent development services from concept to launch with solutions tailored to your business goals.',
   image: '12002312_2_.webp',
 };
 

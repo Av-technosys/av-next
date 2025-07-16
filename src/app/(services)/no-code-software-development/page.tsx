@@ -8,7 +8,6 @@ import { FaqAccordion } from '@/components/faqAccordion';
 import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
 import { Locations } from '@/components/Location';
 import Rating2 from '@/components/rating2';
-import Ratings from '@/components/ratings';
 import { SectionHeading } from '@/components/sectionHeading';
 import Serviceswhychoose from '@/components/serviceswhychoose';
 import { ExperienceSections } from '@/conponents/experience';
@@ -19,6 +18,30 @@ import Image from 'next/image';
 import React from 'react';
 import TopCompanies from '../mobile-app-development/TopCompanies';
 import { cn } from '@/lib/utils';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Best No-Code Developers & Software Solutions Company',
+  },
+  description:
+    'Boost your projects with AV Technosys’ no-code development services, delivering fast, reliable software solutions to meet your needs.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/no-code-software-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Best No-Code Developers & Software Solutions Company',
+    description:
+      'Boost your projects with AV Technosys’ no-code development services, delivering fast, reliable software solutions to meet your needs.',
+    url: 'https://www.avtechnosys.com/no-code-software-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

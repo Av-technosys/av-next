@@ -44,8 +44,8 @@ const serviceDropdownComponent = {
       link: '/no-code-software-development',
     },
     {
-      title: 'E-commerce',
-      link: '/ecommerce-app-development',
+      title: 'AI Agent Development',
+      link: '/ai-agent-development-company',
     },
     {
       title: 'IT- Consulting',

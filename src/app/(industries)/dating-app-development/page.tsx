@@ -16,6 +16,31 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import Testimonial from '@/app/reviews';
 import AiAstrologySection from '@/components/aiastrologysection';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Best Dating App Development Company - AV Technosys',
+  },
+  description:
+    'We build dating apps with real-time chat, geolocation, secure logins, and smart matching for all platforms',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/dating-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Best Dating App Development Company - AV Technosys',
+
+    description:
+      'We build dating apps with real-time chat, geolocation, secure logins, and smart matching for all platforms',
+    url: 'https://www.avtechnosys.com/dating-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

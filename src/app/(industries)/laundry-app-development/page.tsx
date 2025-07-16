@@ -14,6 +14,7 @@ import Rating2 from '@/components/rating2';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { astrologyFawData, laundryFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
 
 const data = [
@@ -53,6 +54,30 @@ const data = [
       'Vendors can easily update service pricing, offers, and availability directly from the dashboard.',
   },
 ];
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      'Laundry App Development Company | Laundry App Development Services',
+  },
+  description:
+    'Choose AV Technosys for powerful and easy-to-use temple management software solutions',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/laundry-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Laundry App Development Company | Laundry App Development Services',
+    description:
+      'Choose AV Technosys for powerful and easy-to-use temple management software solutions',
+    url: 'https://www.avtechnosys.com/laundry-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

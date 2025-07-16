@@ -4,12 +4,9 @@ import React from 'react';
 
 const TopCompanies = ({ className }: { className?: string }) => {
   return (
-    <>
+    <div className={className}>
       <div
-        className={cn(
-          'mx-auto flex w-full max-w-7xl items-center px-4 py-6',
-          className
-        )}
+        className={cn('mx-auto flex w-full max-w-7xl items-center px-4 py-6')}
       >
         <div className="h-0.5 w-full flex-1 rounded bg-gray-300"></div>
         <div className="px-6 text-center font-semibold text-neutral-600">
@@ -33,7 +30,7 @@ const TopCompanies = ({ className }: { className?: string }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

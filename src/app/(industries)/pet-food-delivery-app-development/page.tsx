@@ -16,6 +16,31 @@ import { datingFawData, petcareFawData, petfoodDeliveryFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import React from 'react';
 import { ThreeCardAlternateimagePosition } from '../conponents';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Pet Food Delivery App Development Services',
+  },
+  description:
+    'Grow with AV Technosys’ pet food delivery app development, innovative, scalable solutions for your business',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/pet-food-delivery-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Pet Food Delivery App Development Services',
+
+    description:
+      'Grow with AV Technosys’ pet food delivery app development, innovative, scalable solutions for your business',
+    url: 'https://www.avtechnosys.com/pet-food-delivery-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

@@ -21,7 +21,7 @@ const OnDemanddetailsSection = ({ details, heading }) => {
           <h1 className="text-center text-3xl font-bold md:text-4xl">
             {heading?.title}
           </h1>
-          <div className="my-4 h-[2px] w-24 bg-yellow-400"></div>
+          <div className="my-4 h-[2px] w-52 bg-yellow-400"></div>
 
           <div className="grid w-full grid-cols-1 items-center gap-6 md:grid-cols-2">
             <div className="flex justify-center">
@@ -35,7 +35,7 @@ const OnDemanddetailsSection = ({ details, heading }) => {
             </div>
 
             <div className="max-h-[400px] overflow-y-auto p-2 pr-3 md:p-5">
-              <ul className="space-y-4">
+              <ul className="space-y-6">
                 {details?.map((item, index) => (
                   <li key={index}>
                     <p className="text-base font-semibold">✅ {item.title}</p>

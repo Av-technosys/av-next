@@ -17,6 +17,33 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { educationFawData } from '@/const';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'E-learning app development company | AV Technosys',
+  },
+  description:
+    'Get scalable, interactive e-learning apps built by AV Technosys for schools, startups, and enterprises.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/education-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'E-learning app development company | AV Technosys',
+
+    description:
+      'Get scalable, interactive e-learning apps built by AV Technosys for schools, startups, and enterprises.',
+    url: 'https://www.avtechnosys.com/education-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

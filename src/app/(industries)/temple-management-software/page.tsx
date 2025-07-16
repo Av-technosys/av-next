@@ -13,7 +13,31 @@ import ServicesManaged from '@/components/servicesManaged';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { astrologytemplefawdata, ItconsultingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Temple Management Software Development Services | AV Technosys',
+  },
+  description:
+    'Choose AV Technosys for powerful and easy-to-use temple management software solutions.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/temple-management-software/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Temple Management Software Development Services | AV Technosys',
+    description:
+      'Choose AV Technosys for powerful and easy-to-use temple management software solutions.',
+    url: 'https://www.avtechnosys.com/temple-management-software/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
