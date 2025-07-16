@@ -2487,3 +2487,460 @@ export const petfoodDeliveryFawData = [
     ),
   },
 ];
+export const laundryFawData = [
+  {
+    value: 'faq-1',
+    question: 'What unique features can be added to my laundry app?',
+    answer: (
+      <>
+        <p>
+          We can integrate advanced features such as real-time order tracking,
+          AI-based scheduling, automated billing, loyalty programs, route
+          optimisation for pickups, in-app chat support, and IoT integration for
+          live machine monitoring to make your app stand out in the market.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: ' How can a laundry app generate revenue for my business?',
+    answer: (
+      <p>
+        Your laundry app can earn through multiple streams, including service
+        charges, surge pricing for urgent orders, subscription plans for regular
+        customers, in-app advertisements, featured listings for partnered
+        laundry services, and commission-based models if you build an aggregator
+        platform.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' What is the estimated cost of developing a laundry app?',
+    answer: (
+      <>
+        <p>
+          The cost varies based on complexity, platform (iOS, Android, or both),
+          design requirements, tech stack, and feature set. A basic app may cost
+          around $8,000 – $12,000, while advanced apps with custom features,
+          admin panels, and integrations can go upwards of $20,000–$30,000.
+          Contact us for an accurate quote tailored to your needs.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Can you build a laundry app that works on all platforms?',
+    answer: (
+      <>
+        <p>
+          Yes, we specialise in cross-platform app development using frameworks
+          like Flutter and React Native. This ensures your laundry app runs
+          seamlessly on both Android and iOS, reducing development time and
+          costs while reaching a wider audience efficiently.
+        </p>
+      </>
+    ),
+  },
+];
+export const SalonFawData = [
+  {
+    value: 'faq-1',
+    question: 'Why Partner with AV Technosys for Salon App Development?',
+    answer: (
+      <>
+        <p>
+          AV Technosys has years of experience in developing salon apps with
+          user-friendly designs, powerful features, and scalable solutions. Our
+          team ensures on-time delivery, robust security, and customised apps
+          tailored to your business goals, making us a reliable development
+          partner.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How Much Does It Cost to Develop a Salon App?',
+    answer: (
+      <p>
+        The cost of creating a salon app varies based on its complexity,
+        features, platform (iOS/Android), and design requirements. On average,
+        development can range from $5,000 to $25,000 or more for advanced,
+        feature-rich apps. Contact us for a detailed cost estimate as per your
+        project needs.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'How Long Does It Take to Develop a Salon App?',
+    answer: (
+      <>
+        <p>
+          The timeline depends on your app's features and design. A basic salon
+          app may take 2-3 months, while complex apps with integrations, admin
+          panels, and advanced features can take 4-6 months. We ensure timely
+          delivery with quality.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'Will AV Technosys Sign a Non-Disclosure Agreement (NDA)?',
+    answer: (
+      <>
+        <p>
+          Yes, we prioritise your data security and business confidentiality. AV
+          Technosys signs an NDA before project initiation to protect your app
+          idea and ensure complete confidentiality.
+        </p>
+      </>
+    ),
+  },
+];
+export const DoctorFawData = [
+  {
+    value: 'faq-1',
+    question: 'How much does it cost to build a Doctor On-Demand app?',
+    answer: (
+      <>
+        <p>
+          The cost of creating a doctor on-demand app depends on features, app
+          complexity, platforms (Android, iOS, or both), design, and developer
+          rates. On average, it ranges between $15,000 to $50,000+, with
+          advanced features or integrations increasing the price.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question:
+      'What customised solutions do you offer for doctor on-demand app development?',
+    answer: (
+      <p>
+        We provide tailored solutions such as telemedicine integration,
+        appointment scheduling systems, e-prescriptions, patient health record
+        management, video consultations, and admin panels to suit your clinic or
+        hospital’s specific workflow and goals.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question:
+      'What key features do you include in doctor on-demand app development?',
+    answer: (
+      <>
+        <p>Key features include:</p>
+        <li>User & doctor registration</li>
+        <li>Profile management</li>
+        <li>Appointment booking</li>
+        <li>Real-time video consultation</li>
+        <li>E-prescriptions</li>
+        <li>Payment gateway integration</li>
+        <li>Ratings & reviews</li>
+        <li>Notifications and reminders</li>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question:
+      'What advanced technologies can be integrated into a doctor on-demand app?',
+    answer: (
+      <>
+        <p>We integrate advanced technologies such as:</p>
+        <li>
+          AI & ML for personalised recommendations and automated scheduling
+        </li>
+        <li>Blockchain for secure medical data storage</li>
+        <li>
+          IoT for wearable device integration and remote health monitoring
+        </li>
+        <li>
+          Cloud solutions for scalable data management and seamless access
+        </li>
+      </>
+    ),
+  },
+];
+export const LMSFawData = [
+  {
+    value: 'faq-1',
+    question: 'What is an LMS software, and how can it benefit my business?',
+    answer: (
+      <>
+        <p>
+          A Learning Management System (LMS) is a digital platform for creating,
+          managing, and delivering educational or training content. For your
+          business, it streamlines employee training, improves learner
+          engagement, tracks progress efficiently, and reduces training costs.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What features do you offer in your LMS development?',
+    answer: (
+      <p>
+        We provide custom features including user management, course creation,
+        AI-based recommendations, assessments, certifications, gamification,
+        performance analytics, and seamless integration with CRMs or HR systems.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question:
+      'Can the LMS be customized to match our company’s branding and specific requirements?',
+    answer: (
+      <>
+        <p>
+          Yes, we build fully customized LMS platforms tailored to your
+          workflows, branding guidelines, and unique training objectives to
+          ensure consistency with your company’s identity.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' Is the LMS user-friendly for both admins and learners?',
+    answer: (
+      <>
+        <p>
+          Absolutely. We focus on intuitive UI/UX design, ensuring
+          administrators can easily manage content and users while learners
+          navigate courses seamlessly without technical hurdles.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'Will the LMS work on mobile devices and tablets?',
+    answer: (
+      <>
+        <p>
+          Yes, our LMS solutions are fully responsive and optimized for
+          desktops, tablets, and smartphones to provide flexible, on-the-go
+          learning access anytime, anywhere.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: ' How do you ensure data privacy and security in the LMS?',
+    answer: (
+      <>
+        <p>
+          We implement robust security measures, including SSL encryption,
+          role-based access control, secure data storage, and compliance with
+          data protection regulations to keep your platform and user data safe.
+        </p>
+      </>
+    ),
+  },
+];
+export const educationFawData = [
+  {
+    value: 'faq-1',
+    question:
+      'What exactly is an e-learning app and how can it benefit my business?',
+    answer: (
+      <>
+        <p>
+          An eLearning app is a digital platform that allows users to access
+          educational content anytime, anywhere using their smartphones or
+          computers. For your business, it enhances reach, delivers interactive
+          learning experiences, and opens new revenue streams through course
+          sales, subscriptions, and certifications.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'What key features should an effective education app include?',
+    answer: (
+      <p>
+        A good education app must include user-friendly navigation, interactive
+        videos or quizzes, progress tracking, secure payment options,
+        notifications, and discussion forums. These features keep learners
+        engaged and improve knowledge retention.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question:
+      ' I want to build an educational game app – should I choose iOS or Android?',
+    answer: (
+      <>
+        <p>
+          It depends on your target audience. Choose iOS if your users are
+          mostly in regions like North America or Europe, where Apple usage is
+          high. Choose Android if your learners are in Asia, Africa, or emerging
+          markets due to broader Android penetration. Ideally, build for both to
+          maximize reach.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question:
+      ' What technologies and programming languages are best for building e-learning apps?',
+    answer: (
+      <>
+        <p>
+          For cross-platform apps, use Flutter or React Native. For native
+          development, Swift is best for iOS, and Kotlin or Java for Android.
+          Backend technologies like Node.js, PHP, or Python with cloud
+          integration (AWS, Azure) ensure scalability and performance.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'How can I ensure data privacy and security in my education app?',
+    answer: (
+      <>
+        <p>
+          Implement SSL encryption, strong authentication, secure payment
+          gateways, and compliance with data privacy regulations like GDPR or
+          COPPA. Regular security audits and encrypted user data storage further
+          protect sensitive information.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: 'What is the estimated cost to develop an e-learning app?',
+    answer: (
+      <>
+        <p>
+          The cost varies based on complexity, features, and platform. A basic
+          app may cost $10,000 – $20,000, while a fully-featured app with live
+          classes, AI integration, and analytics can range from $30,000 to
+          $100,000+. Get a detailed estimate based on your requirements.
+        </p>
+      </>
+    ),
+  },
+];
+export const aiagentFawData = [
+  {
+    value: 'faq-1',
+    question: 'What Exactly Is AI Agent Development?',
+    answer: (
+      <>
+        <p>
+          AI Agent Development involves designing intelligent software programs
+          that can think, learn, and act like humans. These agents automate
+          tasks, analyse data, interact with users, and make decisions to
+          enhance operational efficiency.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-2',
+    question: 'How Can AI Agents Add Value to My Business?',
+    answer: (
+      <p>
+        AI agents boost productivity by automating repetitive tasks, improve
+        decision-making with real-time data insights, enhance customer
+        experiences with 24/7 intelligent support, and reduce operational costs.
+      </p>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: 'What Kinds of AI Agents Can You Build for Businesses?',
+    answer: (
+      <>
+        <p>
+          We develop various AI agents such as chatbots, virtual assistants,
+          task automation bots, predictive analytics agents, conversational AI
+          interfaces, and decision-making systems tailored to your business
+          needs.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: ' Which Technologies Do You Use to Build AI Agents?',
+    answer: (
+      <>
+        <p>
+          Our team leverages machine learning, NLP, deep learning, cloud
+          computing (AWS, Azure, GCP), frameworks like TensorFlow and PyTorch,
+          and secure APIs to develop robust, scalable AI agents.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'What Is the Usual Timeline for AI Agent Development?',
+    answer: (
+      <>
+        <p>
+          Development timelines vary based on complexity and features, typically
+          ranging from 4 to 12 weeks for MVPs and longer for enterprise-grade
+          solutions.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-6',
+    question: ' How Much Does Developing an AI Agent Cost?',
+    answer: (
+      <>
+        <p>
+          Costs depend on project scope, features, and technology stack. Basic
+          AI agents may start from $8,000 – $15,000, while advanced enterprise
+          solutions can range higher based on requirements.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-7',
+    question: ' Can AI Agents Work with My Current Systems?',
+    answer: (
+      <>
+        <p>
+          Yes, our AI agents are designed for seamless integration with your
+          existing CRMs, ERPs, APIs, and business platforms without disrupting
+          current workflows.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-8',
+    question: ' How Is Data Security Maintained in AI Agents?',
+    answer: (
+      <>
+        <p>
+          We implement strong security measures including encryption, secure
+          APIs, role-based access controls, and compliance with standards like
+          GDPR or HIPAA to protect user data and privacy.
+        </p>
+      </>
+    ),
+  },
+];

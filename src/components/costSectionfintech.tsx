@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 export default function ProjectCost({
   details,
+  bgclass = '',
   className = '',
   imageclass = '',
 }) {
@@ -15,7 +16,12 @@ export default function ProjectCost({
     <section className="mx-auto mt-2 max-w-7xl md:mt-14">
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <div className="px-5 py-10 md:relative">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-gray-400 px-3 py-4 md:flex-row md:p-8 lg:p-16">
+        <div
+          className={cn(
+            'mx-auto flex max-w-7xl flex-col items-center gap-10 rounded-[40px] bg-gray-400 px-3 py-4 md:flex-row md:p-8 lg:p-16',
+            bgclass
+          )}
+        >
           <div
             className={cn(
               'right-0 top-[-35px] flex w-[250px] justify-center md:absolute md:w-[32rem]',
