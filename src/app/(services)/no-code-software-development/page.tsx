@@ -6,7 +6,6 @@ import ConsultingServicesfintechAll from '@/components/consultingServicesfintech
 import { ContactUs } from '@/components/contactUs';
 import { FaqAccordion } from '@/components/faqAccordion';
 import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
-import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
 import { Locations } from '@/components/Location';
 import Rating2 from '@/components/rating2';
 import Ratings from '@/components/ratings';
@@ -19,21 +18,21 @@ import { ecommerceAppDevelopment } from '@/cosnt';
 import Image from 'next/image';
 import React from 'react';
 import TopCompanies from '../mobile-app-development/TopCompanies';
+import { cn } from '@/lib/utils';
 
 const Page = () => {
   return (
     <>
       <HeroSectionfintechAll details={data} />
-      <TopCompanies />
+      <TopCompanies className="mt-6" />
       <LeadingSectionfintechAll details={leadingdata} />
       <ConsultingServicesfintechAll
         hoverclass=" !bg-slate-100 "
         heading={servicedataheading}
         details={serviceData}
       />
-      <Techstack />
       <ThreeCardAlternateimagePosition
-        className="pb-8"
+        className="mt-4 pb-8"
         title="Step-by-Step Process of Low-Code App Development"
         desc="A Simplified Look into Each Stage of Building Apps with Low-Code Platforms"
         mistakes={noCodeMistakeCards}
@@ -63,8 +62,7 @@ const data = {
   title: 'No-Code Software Development Company',
   description:
     'Bring your ideas to life by creating stunning apps easily using no-code technology.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/bannercode.jpg?updatedAt=1752647921609',
+  image: 'https://ik.imagekit.io/avtechnosys/lowcodenocodebg.jpeg',
   btn: 'Discuss Your Project Idea ',
 };
 
@@ -74,7 +72,7 @@ const leadingdata = {
     'With no-code technology, you can build attractive and user-friendly applications that provide a strong branded experience for your customers. These platforms use visual interfaces and drag-and-drop features, making app development simple and manageable without any coding knowledge.',
   description2:
     'No-code tools offer multiple advantages, including faster development time, seamless integration with third-party services, and access to pre-built components. Using no-code platforms, you can create various applications such as websites, mobile apps, workflows, dashboards, and much more.',
-  image: 'leadlowcode.jpg',
+  image: 'shopify-wordpress.png',
 };
 
 function Maindetails() {
@@ -90,53 +88,53 @@ function Maindetails() {
         />
         <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2">
           <div className="rounded-lg bg-slate-100 p-4 duration-300 hover:shadow-lg">
-            <div className="flex gap-3">
-              <h1 className="text-3xl font-bold">Salesforce</h1>
+            <div className="flex items-center gap-3">
+              <h1 className="text-3xl font-bold">WordPress</h1>
               <Image
                 width={100}
                 height={100}
-                className="h-auto w-16"
-                src="/Salesforce.com_logo.svg_1_.png"
-                alt=""
+                className="h-10 w-auto"
+                src="/Wordpress-Logo.svg.png"
+                alt="WordPress Logo"
               />
             </div>
             <p className="mt-3 text-base text-gray-600 md:text-lg">
-              At AV Technosys, we provide Salesforce solutions for businesses of
-              all sizes, from startups to large enterprises. Our structured
-              Salesforce development process ensures that your requirements are
-              fully addressed and the final application is smooth and
-              user-friendly.
+              At AV Technosys, we leverage the power of WordPress to create
+              highly responsive, secure, and user-friendly websites tailored to
+              your business needs. Whether you’re building a blog, corporate
+              site, or an e-commerce platform, we provide end-to-end WordPress
+              development services.
             </p>
             <p className="mt-3 text-base text-gray-600 md:text-lg">
-              With our team of experienced developers, we can turn your ideas
-              into powerful, efficient Salesforce applications that drive your
-              business forward.
+              Our expert team ensures seamless integration of plugins, custom
+              themes, and performance optimization—empowering your brand with a
+              digital presence that is scalable, SEO-friendly, and easy to
+              manage.
             </p>
           </div>
+
           <div className="rounded-lg bg-slate-100 p-4 duration-300 hover:shadow-lg">
             <div className="flex gap-3">
-              <h1 className="text-3xl font-bold">Pega</h1>
+              <h1 className="text-3xl font-bold">Shopify</h1>
               <Image
                 width={100}
                 height={100}
-                className="h-auto w-32"
-                src="/pega_logo_1_.png"
+                className="h-10 w-auto"
+                src="/technologies/shopify.svg"
                 alt=""
               />
             </div>
             <p className="mt-3 text-base text-gray-600 md:text-lg">
-              Pega is a powerful platform used for business process management
-              and customer relationship management. It enables businesses to
-              streamline operations, automate workflows, and enhance customer
-              experiences with ease. With Pega, you can boost customer
-              engagement and leverage built-in artificial intelligence
-              capabilities for smarter processes.
+              At AV Technosys, we specialize in crafting powerful and visually
+              appealing Shopify stores that help businesses establish a strong
+              online presence. From theme customization to app integration, we
+              deliver scalable Shopify solutions that meet your specific goals.
             </p>
             <p className="mt-3 text-base text-gray-600 md:text-lg">
-              Similar to Salesforce, Pega offers industry-specific solutions
-              such as Pega Marketing, Pega Customer Service, and Pega
-              Healthcare, all of which can be customised to fit your unique
-              business needs.
+              Whether you're launching a new store or optimizing an existing
+              one, our team ensures a seamless, mobile-optimized, and
+              conversion-focused Shopify experience that drives sales and
+              enhances user engagement.
             </p>
           </div>
         </div>
@@ -239,40 +237,13 @@ const techStack = [
     name: 'Zoho Creator',
     image: '/download1.png',
   },
-  {
-    name: 'Salesforce Lightning',
-    image: '/download2.svg',
-  },
+
   {
     name: 'Shopify',
     image: '/download3.png',
   },
 ];
-function Techstack() {
-  return (
-    <section className="mt-5 bg-[#e7efec] px-4 py-16 md:mt-10">
-      <div className="mx-auto max-w-6xl text-center">
-        <h2 className="mb-12 text-3xl font-bold text-gray-900 md:text-4xl">
-          Tech Stack and Tools
-        </h2>
-        <div className="grid grid-cols-1 justify-center sm:grid-cols-3">
-          {techStack.map((tool, index) => (
-            <div key={index} className="flex flex-col items-center gap-4">
-              <Image
-                src={tool.image}
-                alt={tool.name}
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-              {tool.name}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 const audience = [
   {
     title: 'Businesses of all sizes ',
@@ -326,3 +297,47 @@ function Leverage() {
     </section>
   );
 }
+
+const LeadingSectionfintechAll = ({
+  className = '',
+  details,
+  imageclass = '',
+  orderclass = '',
+}: any) => {
+  return (
+    <>
+      <section className="mx-auto max-w-7xl bg-white px-4 py-8 sm:py-16 md:px-6 md:py-20">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+          {/* Left Content */}
+          <div className={cn('text-center md:text-start', orderclass)}>
+            <h2 className="mb-6 text-2xl font-bold text-black md:text-3xl lg:text-4xl">
+              {details?.title}
+            </h2>
+            <p className="mb-4 text-sm leading-normal tracking-wide text-gray-700 sm:text-base sm:leading-relaxed">
+              {details?.description1}
+            </p>
+            <p className="text-sm leading-normal tracking-wide text-gray-700 sm:text-base sm:leading-relaxed md:hidden lg:block">
+              {details?.description2}
+            </p>
+          </div>
+
+          {/* Right Video/Image */}
+          <div
+            className={cn(
+              'relative mx-auto max-w-sm overflow-hidden',
+              imageclass
+            )}
+          >
+            <Image
+              src={`/${details?.image}`}
+              alt="Fintech Trends 2025"
+              width={500}
+              height={500}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};

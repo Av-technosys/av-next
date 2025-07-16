@@ -53,8 +53,7 @@ const data = {
   title: 'Healthcare App Development Company',
   description:
     'AV Technosys offers top-notch healthcare app development services, backed by experienced developers who build scalable and reliable digital healthcare solutions.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/healthcarebanner2.jpg?updatedAt=1752224020375',
+  image: 'https://ik.imagekit.io/avtechnosys/healthcarebanner2.jpg',
 };
 
 const leadingdata = {

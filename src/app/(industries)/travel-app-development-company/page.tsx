@@ -63,8 +63,7 @@ const data = {
   title: 'Travel App Development Company',
   description:
     'Want to build a travel app? AV Technosys creates custom travel apps with advanced features to enhance user experiences and make your business a top choice for travelers.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/travelban3.jpg?updatedAt=1752224042325',
+  image: 'https://ik.imagekit.io/avtechnosys/travelban3.jpg',
 };
 const leadingdata = {
   title: 'Crafting Travel Apps That Redefine User Experiences',

@@ -49,7 +49,7 @@ const OnDemanddetailsSection = ({ details, heading }) => {
           </div>
           <button
             onClick={() => setIsLeadFormOpen(true)}
-            className="mt-8 rounded-lg bg-yellow-400 px-6 py-2 text-sm font-semibold text-black transition hover:bg-yellow-500"
+            className="mt-8 rounded-lg bg-yellow-400 px-6 py-2.5 font-medium text-black transition hover:bg-yellow-500"
           >
             Get Quote Now
           </button>

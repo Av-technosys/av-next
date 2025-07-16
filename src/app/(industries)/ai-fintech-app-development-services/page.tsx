@@ -83,8 +83,7 @@ const data = {
   title: 'Future Of AI In Fintech',
   description:
     'Make use of next-generation AI to revolutionize your BFSI procedures. With our AI Fintech app development services, you can quickly and easily do fraud detection, real-time credit assessments, and customer personalization!',
-  image:
-    'https://ik.imagekit.io/avtechnosys/herofintechbanner.jpg?updatedAt=1752122053513',
+  image: 'https://ik.imagekit.io/avtechnosys/herofintechbanner.jpg',
 };
 
 const leadingdata = {

@@ -43,8 +43,7 @@ const data = {
   title: 'Temple Management App Development Company',
   description:
     'Utilize data technology to manage funds, expedite operations, and effectively supervise all activities with a comprehensive temple management system.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/astrologybanner.jpg?updatedAt=1752151384277',
+  image: 'https://ik.imagekit.io/avtechnosys/astrologybanner.jpg',
 };
 const leadingdata = {
   title: 'What is Temple Management Software?',
