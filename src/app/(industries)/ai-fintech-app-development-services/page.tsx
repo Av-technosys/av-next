@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   description:
     'AI in fintech boosts efficiency by automating tasks and using predictive analytics for smarter financial decisions.',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/it-consulting-services/',
+    canonical:
+      'https://www.avtechnosys.com/ai-fintech-app-development-services/',
   },
   robots: {
     index: true,
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Smarter Financial Solutions with AI in Fintech',
     description:
       'AI in fintech boosts efficiency by automating tasks and using predictive analytics for smarter financial decisions.',
-    url: 'https://www.avtechnosys.com/it-consulting-services/',
+    url: 'https://www.avtechnosys.com/ai-fintech-app-development-services/',
     siteName: 'AV Technosys',
     type: 'website',
   },

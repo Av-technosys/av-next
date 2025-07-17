@@ -332,7 +332,10 @@ function ExperienceSection() {
             {experienceData.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div className="flex w-full flex-col items-center rounded-xl border border-yellow-300 bg-white/30 p-3 md:items-start md:gap-2">
+                <div
+                  key={idx}
+                  className="flex w-full flex-col items-center rounded-xl border border-yellow-300 bg-white/30 p-3 md:items-start md:gap-2"
+                >
                   <div className="flex items-center gap-2 text-2xl font-semibold text-gray-800 sm:text-4xl md:text-black">
                     <Icon
                       stroke={2}

@@ -47,9 +47,10 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
             >
               All
             </p>
-            {blogCategorySummery.map((item) => {
+            {blogCategorySummery.map((item, idx) => {
               return (
                 <p
+                  key={idx}
                   onClick={() => handleCategoryFilter(item.value)}
                   className="hover:underline"
                 >

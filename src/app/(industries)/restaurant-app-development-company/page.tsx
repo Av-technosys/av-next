@@ -15,6 +15,35 @@ import { Locations } from '@/components/Location';
 import Testimonial from '@/app/reviews';
 import AiAstrologySection from '@/components/aiastrologysection';
 import { CaseStudy } from '@/components/caseStudy';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      'Food Delivery App Development Services | Food Delivery App Development',
+  },
+  description:
+    'Build a user-friendly food delivery app that seamlessly connects restaurants and customers with our custom development services.',
+  alternates: {
+    canonical:
+      'https://www.avtechnosys.com/restaurant-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title:
+      'Food Delivery App Development Services | Food Delivery App Development',
+    description:
+      'Build a user-friendly food delivery app that seamlessly connects restaurants and customers with our custom development services.',
+    url: 'https://www.avtechnosys.com/restaurant-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

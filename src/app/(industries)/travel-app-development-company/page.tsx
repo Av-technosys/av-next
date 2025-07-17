@@ -16,6 +16,32 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import Testimonial from '@/app/reviews';
 import AiAstrologySection from '@/components/aiastrologysection';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Travel App Development Company - AV Technosys',
+  },
+  description:
+    'AV Technosys offers premium travel app development services to boost and streamline your travel business.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/travel-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Travel App Development Company - AV Technosys',
+    description:
+      'AV Technosys offers premium travel app development services to boost and streamline your travel business.',
+    url: 'https://www.avtechnosys.com/travel-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

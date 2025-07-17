@@ -17,7 +17,7 @@ const TopCompanies = ({ className }: { className?: string }) => {
       <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-6 px-4 py-3 sm:grid-cols-3 md:grid-cols-5">
         {logoData.map((item, index) => (
           <div
-            key={item}
+            key={index}
             className="w-full flex-1 rounded-md border px-4 py-2 shadow"
           >
             <Image

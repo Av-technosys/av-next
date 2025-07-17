@@ -9,9 +9,11 @@ import { Locations } from '@/components/Location';
 import { InsightAboutUs } from '@/conponents/InsightAboutUs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: {
+    absolute: 'Contact AV Technosys for Web & Mobile App Development',
+  },
   description:
-    'Contact AV Technosys for mobile and web development services. Send us your app request—we’ll get back to you within 48 hours!',
+    'Contact AV Technosys for Software Development, Web & Mobile App Development, and Design',
   alternates: {
     canonical: 'https://www.avtechnosys.com/contact-us/',
   },
@@ -20,9 +22,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Contact Us',
+    title: 'Contact AV Technosys for Web & Mobile App Development',
     description:
-      'Contact AV Technosys for mobile and web development services. Send us your app request—we’ll get back to you within 48 hours!',
+      'Contact AV Technosys for Software Development, Web & Mobile App Development, and Design',
     url: 'https://www.avtechnosys.com/contact-us/',
     siteName: 'AV Technosys',
     type: 'website',

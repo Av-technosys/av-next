@@ -1,6 +1,32 @@
 import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import Footer1 from '../footer1';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Terms and Conditions - AV Technosys',
+  },
+  description:
+    'Welcome to AV Technosys. Please read our terms before submitting any information or content on this website.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/terms-and-conditions/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Terms and Conditions - AV Technosys',
+    description:
+      'Welcome to AV Technosys. Please read our terms before submitting any information or content on this website.',
+    url: 'https://www.avtechnosys.com/terms-and-conditions/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const TermsAndConditions = () => {
   return (
