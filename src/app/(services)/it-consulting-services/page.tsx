@@ -17,6 +17,7 @@ import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
 import ProjectCost from '@/components/costSectionfintech';
 import { Metadata } from 'next';
+import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
@@ -74,6 +75,7 @@ const Page = () => {
       <FaqAccordion data={ItconsultingFawData} />
       <ContactUs />
       <BlogSection data={ecommerceAppDevelopment} />
+      <Rating2 />
       <Locations />
     </>
   );

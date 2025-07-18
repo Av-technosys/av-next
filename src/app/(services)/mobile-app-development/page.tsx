@@ -15,6 +15,8 @@ import CustomMobileSection from './CustomMobileSection';
 import { ContactUs } from '@/components/contactUs';
 import { mobileServiceFAQ } from '@/const';
 import { Metadata } from 'next';
+import Rating2 from '@/components/rating2';
+import { Locations } from '@/components/Location';
 
 export const metadata: Metadata = {
   title: {
@@ -55,6 +57,8 @@ const Page = () => {
       <FaqAccordion data={mobileServiceFAQ} />
       <ContactUs />
       <BlogSection />
+      <Rating2 />
+      <Locations />
     </div>
   );
 };
