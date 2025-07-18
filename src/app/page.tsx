@@ -32,6 +32,7 @@ import { CaseStudy } from '@/components/caseStudy';
 import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
+import Rating2 from '@/components/rating2';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -54,6 +55,7 @@ const Home = () => {
       <ContactUs />
       <FaqAccordion />
       <BlogSection />
+      <Rating2 />
       <Locations />
       <Footer1 />
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
