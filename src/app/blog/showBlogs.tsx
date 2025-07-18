@@ -5,36 +5,27 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { blogCategories } from '@/const';
 import { SearchIcon } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import useDebounce from '@/lib/useDebouncing';
+import { useState } from 'react';
 import Image from 'next/image';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
+import { blogCategorySummery } from '@/const/blogCategories';
+import { useRouter } from 'next/navigation';
 
 dayjs.extend(utc);
-const ShowBlogs = ({ blogData, blogCategorySummery }) => {
+const ShowBlogs = ({ blogData }) => {
   const [filteredBlogs, setFilteredBlogs] = useState(blogData);
   const [searchTerm, setSearchTerm] = useState('');
+  const router = useRouter();
 
   function handleCategoryFilter(blogCategorySlug) {
     setSearchTerm('');
-    const filteredBlogs = blogData.filter(
-      (item) => item.blogCategory === blogCategorySlug
-    );
+    console.log('blogcategoypro', blogCategorySlug);
+    router.push(`/blog?category=${blogCategorySlug}`);
+    // const filteredBlogs = blogData.filter(
+    //   (item) => item.blogCategory === blogCategorySlug
+    // );
     setFilteredBlogs(filteredBlogs);
   }
-
-  const debouncedSearchTerm = useDebounce(searchTerm, 800);
-
-  useEffect(() => {
-    if (debouncedSearchTerm === '') {
-      setFilteredBlogs(blogData);
-    } else {
-      const filtered = blogData.filter((item) =>
-        item.title.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
-      );
-      setFilteredBlogs(filtered);
-    }
-  }, [debouncedSearchTerm]);
 
   return (
     <div className="flex flex-col">
@@ -50,8 +41,8 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
             {blogCategorySummery.map((item) => {
               return (
                 <p
-                  onClick={() => handleCategoryFilter(item.value)}
-                  className="hover:underline"
+                  onClick={() => handleCategoryFilter(item?.value)}
+                  className="cursor-pointer select-none hover:underline"
                 >
                   {item.label}
                 </p>
@@ -70,7 +61,7 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
           <SearchIcon size={20} className="text-gray-400" />
         </div>
       </div>
-      {filteredBlogs.length > 0 ? (
+      {filteredBlogs?.length > 0 ? (
         <div className="mb-12 flex h-full w-full flex-col items-center gap-6 md:flex-row">
           <div className="w-full max-w-2xl">
             <Link
@@ -106,10 +97,33 @@ const ShowBlogs = ({ blogData, blogCategorySummery }) => {
       ) : (
         <p className="text-2xl font-semibold text-gray-500">No Blogs</p>
       )}
-      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-        {filteredBlogs?.map((blog, idx) => {
-          return <BlogCard blog={blog} idx={idx} />;
-        })}
+      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-4">
+        <div className="col-span-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {filteredBlogs?.map((blog, idx) => {
+              if (idx == 0) return;
+              return <BlogCard blog={blog} idx={blog.id} />;
+            })}
+          </div>
+        </div>
+        <div className="!sticky !top-0 col-span-1 border border-black text-center text-2xl">
+          <p
+            onClick={() => setFilteredBlogs(blogData)}
+            className="hover:underline"
+          >
+            All
+          </p>
+          {blogCategorySummery.map((item) => {
+            return (
+              <p
+                onClick={() => handleCategoryFilter(item.value)}
+                className="hover:underline"
+              >
+                {item.label}
+              </p>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -122,9 +136,6 @@ function getBlogCategory(blogCategorySlug) {
 }
 
 function BlogCard({ blog, idx }: any) {
-  console.log(convertS3ToImageKit(blog.image));
-
-  if (idx == 0) return;
   function formatDateToDDMMYYYY(isoDateStr: string) {
     const date = dayjs.utc(JSON.parse(isoDateStr));
     return date.format('DD/MM/YYYY');
