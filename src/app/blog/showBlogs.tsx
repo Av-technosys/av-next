@@ -17,13 +17,16 @@ const ShowBlogs = ({ blogData }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
 
-  function handleCategoryFilter(blogCategorySlug) {
+  function handleCategoryFilter(blogCategorySlug: String) {
     setSearchTerm('');
-    console.log('blogcategoypro', blogCategorySlug);
+
+    if (blogCategorySlug === 'all') {
+      router.push(`/blog`);
+      return;
+    }
+
     router.push(`/blog?category=${blogCategorySlug}`);
-    // const filteredBlogs = blogData.filter(
-    //   (item) => item.blogCategory === blogCategorySlug
-    // );
+
     setFilteredBlogs(filteredBlogs);
   }
 
@@ -32,12 +35,6 @@ const ShowBlogs = ({ blogData }) => {
       <div className="mb-12 flex w-full flex-col items-center justify-between gap-3 sm:flex-row sm:gap-6">
         <div className="w-full overflow-x-auto">
           <div className="flex w-full min-w-[48rem] items-center gap-6 overflow-x-auto py-4 lg:gap-10">
-            <p
-              onClick={() => setFilteredBlogs(blogData)}
-              className="hover:underline"
-            >
-              All
-            </p>
             {blogCategorySummery.map((item) => {
               return (
                 <p

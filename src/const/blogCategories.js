@@ -39,6 +39,7 @@ export const blogCategories = [
 ];
 
 export const blogCategorySummery = [
+  { value: 'all', label: 'All' },
   { value: 'app-development', label: 'App Development' },
   { value: 'dating', label: 'Dating' },
   { value: 'ai', label: 'Artificial Intelligence' },

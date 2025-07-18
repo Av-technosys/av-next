@@ -31,34 +31,36 @@ export const metadata: Metadata = {
 
 const Blog = async ({ searchParams }: any) => {
   const PAGE_LIMIT = 7;
+
   const searchParamsData = await searchParams;
   const currentPage = searchParamsData.page || 1;
-  const searchText = searchParamsData.search || 1;
+  const searchText = searchParamsData.search || '';
+  const selectedCategory = searchParamsData.category || '';
 
-  const selectedCategor = searchParamsData.category || '';
-  const blogData = await getAllBlogsByPage(
-    currentPage,
-    PAGE_LIMIT,
-    selectedCategor,
-    searchText
-  );
-
-  console.log('blog-data', blogData);
+  const blogData = await getAllBlogsByPage({
+    page: currentPage,
+    limit: PAGE_LIMIT,
+    selectedCategory,
+    search: searchText,
+  });
 
   return (
     <div className="pt-3 text-black">
       <NavBarHome />
       <div className="fontTest mx-auto mt-4 max-w-7xl px-6 md:px-4 lg:mt-12">
         <ShowBlogs
-          key={String(currentPage + selectedCategor)}
+          key={String(currentPage + selectedCategory)}
           blogData={blogData?.data}
         />
       </div>
-      <BlogPagination
-        limit={PAGE_LIMIT}
-        page={Number(currentPage)}
-        totalPages={Number(blogData.totalPages)}
-      />
+      {(blogData?.data?.length as number) > 0 ? (
+        <BlogPagination
+          limit={PAGE_LIMIT}
+          page={Number(currentPage)}
+          totalPages={Number(blogData?.totalPages)}
+        />
+      ) : null}
+
       <Footer1 />
     </div>
   );
