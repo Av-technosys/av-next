@@ -8,7 +8,6 @@ import { FaqAccordion } from '@/components/faqAccordion';
 import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
 import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
 import { Locations } from '@/components/Location';
-import Rating2 from '@/components/rating2';
 import Ratings from '@/components/ratings';
 import ServicesManaged from '@/components/servicesManaged';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
@@ -34,7 +33,6 @@ const Page = () => {
       <FaqAccordion data={astrologytemplefawdata} />
       <ContactUs />
       <BlogSection data={ecommerceAppDevelopment} />
-      <Rating2 />
       <Locations />
     </>
   );

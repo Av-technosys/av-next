@@ -19,7 +19,6 @@ import { Locations } from '@/components/Location';
 import Ratings from '@/components/ratings';
 import PortfolioCrousel from '@/components/PortfolioCrousel';
 import { HeroSection } from './HeroSection';
-import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
@@ -74,7 +73,6 @@ const Page = () => {
       <FaqAccordion data={AIDevelopmentServiceFAQ} />
       <ContactUs />
       <BlogSection data={blogsAI} />
-      <Rating2 />
       <Locations />
     </>
   );

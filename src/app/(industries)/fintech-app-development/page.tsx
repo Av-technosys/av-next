@@ -21,7 +21,6 @@ import Fintecheffect, {
   ThreeCardAlternateimagePosition,
 } from '../conponents';
 import Image from 'next/image';
-import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
@@ -73,7 +72,6 @@ const FintechPage = () => {
       <FaqAccordion data={fintechFawData} />
       <ContactUs />
       <BlogSection />
-      <Rating2 />
       <Locations />
     </>
   );
