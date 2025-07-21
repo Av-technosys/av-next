@@ -13,9 +13,25 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import { Eye, EyeOff, LoaderCircle } from 'lucide-react';
 import { toggleBlogVisibility } from '../../lib';
-import { set } from 'date-fns';
 
-const AdminBlogTble = ({ data }) => {
+import { Button } from './ui/button';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
+
+const AdminBlogTble = ({ data, count }) => {
+  const router = useRouter();
+  const [endIndex, setendIndex] = useState(10);
+  console.log('data.length', data?.length);
+  console.log('endIndex', endIndex);
+
+  const params = useSearchParams();
+  const blogscount = params.get('blogs') || 0;
+  console.log('blogscount', blogscount);
+
+  const loadMoreHandler = () => {
+    setendIndex((prev) => prev + 10);
+    router.push(`?blogs=${endIndex + 10}`);
+  };
+
   return (
     <div className="mt-6 w-full">
       <Table>
@@ -29,7 +45,7 @@ const AdminBlogTble = ({ data }) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((item) => (
+          {data?.map((item) => (
             <TableRow key={item.id}>
               <TableCell className="font-medium">
                 <Link
@@ -50,6 +66,15 @@ const AdminBlogTble = ({ data }) => {
           ))}
         </TableBody>
       </Table>
+      <div className="mt-5 w-full text-center">
+        <Button
+          variant={'outline'}
+          onClick={loadMoreHandler}
+          className={`rounded ${blogscount >= count && 'hidden'} `}
+        >
+          Load More
+        </Button>
+      </div>
     </div>
   );
 };
@@ -63,13 +88,13 @@ function TableVisible({ item }) {
   async function handleToggleVisible(id, isVisible) {
     setLoading(true);
     await toggleBlogVisibility(id, !isVisible);
-    setIsVisible(!isVisible);
+    setIsVisible((prev) => !prev);
     setLoading(false);
   }
   return (
     <TableCell className="text-right">
       <div
-        onClick={() => handleToggleVisible(item.id, item.isVisible)}
+        onClick={() => handleToggleVisible(item?.id, item?.isVisible)}
         className="ml-auto w-fit cursor-pointer"
       >
         {loading ? (
