@@ -4,18 +4,26 @@ import Link from 'next/link';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import { blogCategories } from '@/const';
-import { SearchIcon } from 'lucide-react';
-import { useState } from 'react';
 import Image from 'next/image';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 import { blogCategorySummery } from '@/const/blogCategories';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import DebounceSearch from './debounceSearch';
 
 dayjs.extend(utc);
 const ShowBlogs = ({ blogData }) => {
   const [filteredBlogs, setFilteredBlogs] = useState(blogData);
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
+
+  const params = useSearchParams();
+  const searchparam = params.get('search');
+
+  useEffect(() => {
+    setFilteredBlogs(blogData);
+    router.refresh();
+  }, [searchparam]);
 
   function handleCategoryFilter(blogCategorySlug: String) {
     setSearchTerm('');
@@ -47,16 +55,7 @@ const ShowBlogs = ({ blogData }) => {
             })}
           </div>
         </div>
-        <div className="flex w-full items-center gap-2 rounded-lg bg-white/10 px-4 py-2 shadow-md transition-all focus-within:ring-2 focus-within:ring-blue-500 sm:w-auto">
-          <input
-            type="text"
-            placeholder="Search blogs"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-transparent px-2 py-1 text-sm placeholder-gray-400 focus:outline-none"
-          />
-          <SearchIcon size={20} className="text-gray-400" />
-        </div>
+        <DebounceSearch />
       </div>
       {filteredBlogs?.length > 0 ? (
         <div className="mb-12 flex h-full w-full flex-col items-center gap-6 md:flex-row">
@@ -94,31 +93,11 @@ const ShowBlogs = ({ blogData }) => {
       ) : (
         <p className="text-2xl font-semibold text-gray-500">No Blogs</p>
       )}
-      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-4">
-        <div className="col-span-3">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {filteredBlogs?.map((blog, idx) => {
-              if (idx == 0) return;
-              return <BlogCard blog={blog} idx={blog.id} />;
-            })}
-          </div>
-        </div>
-        <div className="!sticky !top-0 col-span-1 border border-black text-center text-2xl">
-          <p
-            onClick={() => setFilteredBlogs(blogData)}
-            className="hover:underline"
-          >
-            All
-          </p>
-          {blogCategorySummery.map((item) => {
-            return (
-              <p
-                onClick={() => handleCategoryFilter(item.value)}
-                className="hover:underline"
-              >
-                {item.label}
-              </p>
-            );
+      <div className="mt-6 grid gap-6">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {filteredBlogs?.map((blog, idx) => {
+            if (idx == 0) return;
+            return <BlogCard blog={blog} idx={blog.id} />;
           })}
         </div>
       </div>
