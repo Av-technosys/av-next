@@ -6,6 +6,7 @@ import { NavBarHome } from '@/components/navBar';
 
 import ShowBlogs from './showBlogs';
 import { BlogPagination } from './paginationblog';
+import DebounceSearch from './debounceSearch';
 
 export const metadata: Metadata = {
   title: 'Blogs',
@@ -45,6 +46,7 @@ const Blog = async ({ searchParams }: any) => {
   return (
     <div className="pt-3 text-black">
       <NavBarHome />
+      <DebounceSearch />
       <div className="fontTest mx-auto mt-4 max-w-7xl px-6 md:px-4">
         <ShowBlogs
           key={String(currentPage + selectedCategory)}
@@ -58,7 +60,6 @@ const Blog = async ({ searchParams }: any) => {
           totalPages={Number(blogData?.totalPages)}
         />
       ) : null}
-
       <Footer1 />
     </div>
   );

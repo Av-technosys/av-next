@@ -55,7 +55,6 @@ const ShowBlogs = ({ blogData }) => {
             })}
           </div>
         </div>
-        <DebounceSearch />
       </div>
       {filteredBlogs?.length > 0 ? (
         <div className="mb-12 flex h-full w-full flex-col items-center gap-6 md:flex-row">

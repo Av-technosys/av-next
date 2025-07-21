@@ -11,14 +11,12 @@ const DebounceSearch = () => {
   const handleSearch = async (query) => {
     console.log('Searching for:', query);
     router.push(`/blog?search=${query}`);
-    // const data = await getAllBlogsBySearch(query);
-    // console.log('data', data);
   };
 
   const debouncedSearch = useCallback(
     debounce((query) => {
       handleSearch(query);
-    }, 500), // 500ms delay
+    }, 500),
     []
   );
 
@@ -29,8 +27,11 @@ const DebounceSearch = () => {
   };
 
   return (
-    <>
-      <div className="ml-auto flex max-w-xs items-center justify-center rounded-lg bg-white/10 px-4 py-2 shadow-md transition-all focus-within:ring-2 focus-within:ring-blue-500 sm:w-auto">
+    <div className="flex min-h-80 w-full flex-col items-center justify-center space-y-8 bg-yellow-300/30 px-4 md:min-h-96">
+      <h3 className="text-center text-3xl font-semibold text-neutral-700 md:text-4xl">
+        Explore Our Latest Blogs & Insights
+      </h3>
+      <div className="flex w-full max-w-xl items-center justify-center rounded-3xl bg-white px-4 py-2.5 shadow transition-all focus-within:ring-2 focus-within:ring-blue-500">
         <input
           type="text"
           placeholder="Search blogs"
@@ -40,7 +41,7 @@ const DebounceSearch = () => {
         />
         <SearchIcon size={20} className="text-gray-400" />
       </div>
-    </>
+    </div>
   );
 };
 
