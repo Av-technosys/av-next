@@ -16,7 +16,26 @@ const Footer1 = ({ className = '' }) => {
             {footerData.map((item, idx) => {
               return <FooterList key={idx} data={item} />;
             })}
-
+          </div>
+        </div>
+        <div className="w-full border-t bg-gray-50 py-4">
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 md:flex-row">
+            <div className="flex items-center gap-4">
+              <a href="https://www.dmca.com/Protection/Status.aspx?id=d9f8c7fd-18f0-4b29-bdf1-d4b6e19ea6f3&refurl=https%3a%2f%2fwww.avtechnosys.com%2f&rlo=true">
+                <Image
+                  alt="DMCA"
+                  width={100}
+                  height={100}
+                  src="/review/dmca.png"
+                  className="h-12 w-auto"
+                />
+              </a>
+              <div className="text-gray-700">
+                Copyright © 2025{' '}
+                <span className="font-medium text-black">avtechnosys.com</span>{' '}
+                All Rights Reserved
+              </div>
+            </div>
             <div className="mt-4 flex gap-4 text-gray-600 md:ml-auto md:mt-0 md:justify-end">
               <Link
                 href={'https://www.facebook.com/profile.php?id=61556941457814'}
@@ -51,26 +70,6 @@ const Footer1 = ({ className = '' }) => {
             </div>
           </div>
         </div>
-        <div className="w-full border-t bg-gray-50 py-4">
-          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 md:flex-row">
-            <div className="flex items-center gap-4">
-              <a href="https://www.dmca.com/Protection/Status.aspx?id=d9f8c7fd-18f0-4b29-bdf1-d4b6e19ea6f3&refurl=https%3a%2f%2fwww.avtechnosys.com%2f&rlo=true">
-                <Image
-                  alt="DMCA"
-                  width={100}
-                  height={100}
-                  src="/review/dmca.png"
-                  className="h-12 w-auto"
-                />
-              </a>
-              <p className="text-gray-700">
-                Copyright © 2025{' '}
-                <span className="font-medium text-black">avtechnosys.com</span>{' '}
-                All Rights Reserved
-              </p>
-            </div>
-          </div>
-        </div>
       </footer>
     </>
   );
@@ -87,7 +86,7 @@ function FooterList({ data }: any) {
           return (
             <Link
               href={item.link}
-              className="cursor-pointer text-gray-600 duration-200 hover:text-black hover:underline"
+              className="cursor-pointer text-gray-600 duration-500 hover:scale-105 hover:text-black hover:underline"
               key={idx}
             >
               {item.name}
@@ -120,8 +119,8 @@ const footerData = [
         link: '/no-code-software-development/',
       },
       {
-        name: 'E-commerce',
-        link: '/ecommerce-app-development/',
+        name: 'AI Agent Company',
+        link: '/ai-agent-development-company/',
       },
       {
         name: 'IT-Consulting',
@@ -130,27 +129,70 @@ const footerData = [
     ],
   },
   {
-    name: 'Product',
+    name: 'Industries',
     links: [
       {
-        name: 'About Us',
-        link: '/about-us',
+        name: 'Astrology',
+        link: '/astrology-app-development/',
       },
-
       {
-        name: 'Portfolio',
-        link: '/portfolio',
+        name: 'Finance',
+        link: '/fintech-app-development/',
       },
-
       {
-        name: 'Blog',
-        link: '/blog',
+        name: 'Education',
+        link: '/education-app-development-company/',
+      },
+      {
+        name: 'Real Estate',
+        link: '/real-estate-app-development/',
+      },
+      {
+        name: 'Media & Entertainment',
+        link: '/event-management-app-development/',
+      },
+      {
+        name: 'Ecommerce',
+        link: '/ecommerce-app-development/',
+      },
+      {
+        name: 'Pet Care',
+        link: '/pet-care-app-development-company/',
+      },
+    ],
+  },
+  {
+    name: 'On Demand',
+    links: [
+      {
+        name: 'Trading App',
+        link: '/trading-app-development-company/',
+      },
+      {
+        name: 'Dating App',
+        link: '/dating-app-development/',
+      },
+      {
+        name: 'Restaurants App',
+        link: '/restaurant-app-development-company/',
+      },
+      {
+        name: 'Salon App',
+        link: '/beauty-salon-app-development-company/',
+      },
+      {
+        name: 'Veterinary App',
+        link: '/veterinary-app-development/',
+      },
+      {
+        name: 'Insurance App',
+        link: '/insurance-app-development-company/',
       },
     ],
   },
 
   {
-    name: 'Company',
+    name: 'Resources',
     links: [
       {
         name: 'Hire Us',
@@ -175,8 +217,21 @@ const footerData = [
     ],
   },
   {
-    name: 'Contact Info',
+    name: 'Product',
     links: [
+      {
+        name: 'Blog',
+        link: '/blog',
+      },
+      {
+        name: 'About Us',
+        link: '/about-us',
+      },
+
+      {
+        name: 'Portfolio',
+        link: '/portfolio',
+      },
       {
         name: '01414515354',
         link: 'tel:01414515354',

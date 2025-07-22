@@ -49,7 +49,7 @@ const ShowBlogs = ({ blogData }) => {
             >
               All
             </p>
-            {blogCategorySummery.map((item) => {
+            {blogCategorySummery.map((item, idx) => {
               return (
                 <p
                   key={idx}
