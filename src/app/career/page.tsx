@@ -1,6 +1,32 @@
 import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import Footer1 from '../footer1';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Career - Current Job Openings for Developer, Designer, QA, BA',
+  },
+  description:
+    'Explore current job openings and grow your career with a leading mobile app development company.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/travel-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Career - Current Job Openings for Developer, Designer, QA, BA',
+    description:
+      'Explore current job openings and grow your career with a leading mobile app development company.',
+    url: 'https://www.avtechnosys.com/travel-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

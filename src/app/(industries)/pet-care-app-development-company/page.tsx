@@ -14,7 +14,32 @@ import ServicesManaged from '@/components/servicesManaged';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { datingFawData, petcareFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Smart Pet Care App Development Solutions',
+  },
+  description:
+    'Build pet care apps with tracking, bookings, and health monitoring features. AV Technosys delivers scalable, expert solutions',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/pet-care-app-development-company/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Smart Pet Care App Development Solutions',
+
+    description:
+      'Build pet care apps with tracking, bookings, and health monitoring features. AV Technosys delivers scalable, expert solutions',
+    url: 'https://www.avtechnosys.com/pet-care-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

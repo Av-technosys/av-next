@@ -15,7 +15,32 @@ import ServicesManaged from '@/components/servicesManaged';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { Eventfawdata, tradingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Top Event Management App Development Services',
+  },
+  description:
+    'We build event management apps with ticketing, real-time updates, and seamless attendee experiences.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/event-management-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Top Event Management App Development Services',
+
+    description:
+      'We build event management apps with ticketing, real-time updates, and seamless attendee experiences.',
+    url: 'https://www.avtechnosys.com/event-management-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
@@ -53,8 +78,7 @@ const data = {
   title: 'Event Management App Development Company',
   description:
     'Streamline your events with AV Technosys’ powerful event management apps. Automate processes and grow your business with ease.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/eventbanner.jpg?updatedAt=1752224014212',
+  image: 'https://ik.imagekit.io/avtechnosys/eventbanner.jpg',
 };
 
 const leadingdata = {

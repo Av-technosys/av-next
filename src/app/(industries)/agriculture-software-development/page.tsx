@@ -14,7 +14,33 @@ import ServicesManaged from '@/components/servicesManaged';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { agrifawdata, Eventfawdata } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      'Top Agriculture Software Developers for Modern Farming Solutions',
+  },
+  description:
+    'Experience smart farming with our agriculture software development services, delivering efficient and tech-driven solutions for modern farms.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/agriculture-software-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Top Agriculture Software Developers for Modern Farming Solutions',
+
+    description:
+      'Experience smart farming with our agriculture software development services, delivering efficient and tech-driven solutions for modern farms.',
+    url: 'https://www.avtechnosys.com/agriculture-software-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

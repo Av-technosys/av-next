@@ -16,6 +16,31 @@ import { ecommerceAppDevelopment } from '@/cosnt';
 import React from 'react';
 import { ThreeCardAlternateimagePosition } from '../conponents';
 import PetGroomingApps from '@/components/petGrooming';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'On-Demand Veterinary App Development Solutions',
+  },
+  description:
+    'On-demand veterinary apps for easy vet access, appointments, and pet health records in one place.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/veterinary-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'On-Demand Veterinary App Development Solutions',
+
+    description:
+      'On-demand veterinary apps for easy vet access, appointments, and pet health records in one place.',
+    url: 'https://www.avtechnosys.com/veterinary-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

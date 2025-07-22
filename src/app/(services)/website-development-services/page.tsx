@@ -17,7 +17,33 @@ import { ExperienceSections } from '@/conponents/experience';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { DigitalmarketingFawData, webDevFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Web Development Services | AV Technosys',
+  },
+  description:
+    'Get professional web development services to build a responsive, high-quality website tailored to your business needs.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/website-development-services/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'Web Development Services | AV Technosys',
+    description:
+      'Get professional web development services to build a responsive, high-quality website tailored to your business needs.',
+    url: 'https://www.avtechnosys.com/website-development-services/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

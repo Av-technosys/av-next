@@ -69,17 +69,6 @@ const Footer1 = ({ className = '' }) => {
                 All Rights Reserved
               </p>
             </div>
-            <div className="mt-4 flex flex-wrap items-center gap-6 md:mt-0 md:flex-nowrap">
-              <Link className="hover:underline" href={'/terms-and-conditions'}>
-                Terms of Service
-              </Link>
-              <Link className="hover:underline" href={'/privacy-policy'}>
-                Privacy Policy
-              </Link>
-              <Link className="hover:underline" href={'/career'}>
-                Career
-              </Link>
-            </div>
           </div>
         </div>
       </footer>
@@ -147,10 +136,7 @@ const footerData = [
         name: 'About Us',
         link: '/about-us',
       },
-      {
-        name: 'Services',
-        link: '/services',
-      },
+
       {
         name: 'Portfolio',
         link: '/portfolio',
@@ -169,6 +155,10 @@ const footerData = [
       {
         name: 'Hire Us',
         link: '/hire-us',
+      },
+      {
+        name: 'Career',
+        link: '/career',
       },
       {
         name: 'Contact Us',

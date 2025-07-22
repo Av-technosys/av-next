@@ -1,7 +1,8 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
-const Whychoosefintechsection = ({ details, heading }) => {
+const Whychoosefintechsection = ({ details, heading, imageclass = '' }) => {
   return (
     <section className="mx-auto max-w-7xl bg-white px-4 py-8 md:py-20">
       <div className="grid w-full grid-cols-6 gap-4">
@@ -31,7 +32,12 @@ const Whychoosefintechsection = ({ details, heading }) => {
           </div>
         </div>
 
-        <div className="order-1 col-span-6 mx-auto hidden items-center justify-center lg:order-2 lg:col-span-2 lg:block">
+        <div
+          className={cn(
+            'order-1 col-span-6 mx-auto hidden h-full w-full items-center justify-center lg:order-2 lg:col-span-2 lg:flex',
+            imageclass
+          )}
+        >
           <Image
             src={`/${heading?.image}`}
             alt="Payment Mobile Illustration"

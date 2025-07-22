@@ -9,7 +9,9 @@ import { BlogPagination } from './paginationblog';
 import DebounceSearch from './debounceSearch';
 
 export const metadata: Metadata = {
-  title: 'Blogs',
+  title: {
+    absolute: 'Tech Blogs on App Development, AI & MVPs | AV Technosys',
+  },
   description:
     'Read all the latest trends occurring in the IT sector — from AI to no-code development, we cover it all. Visit to know more.',
   alternates: {
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Blogs',
+    title: 'Tech Blogs on App Development, AI & MVPs | AV Technosys',
     description:
       'Read all the latest trends occurring in the IT sector — from AI to no-code development, we cover it all. Visit to know more.',
     url: 'https://www.avtechnosys.com/blog/',

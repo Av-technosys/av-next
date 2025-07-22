@@ -84,8 +84,7 @@ const data = {
   title: 'Loan Lending App Development Services',
   description:
     'AV Technosys builds advanced loan lending apps that make it simple for users to access fast financing solutions and borrow directly from trusted lenders.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/loanlandingbanner.jpg?updatedAt=1752122066590',
+  image: 'https://ik.imagekit.io/avtechnosys/loanlandingbanner.jpg',
 };
 
 const leadingdata = {

@@ -51,7 +51,10 @@ const RealEstatetechnologies = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {RealestateTechnologies?.map((item, index) => {
             return (
-              <div className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-300 hover:shadow-xl">
+              <div
+                key={index}
+                className="rounded-xl bg-gradient-to-br from-[#e0eaff] to-[#d6e4ff] p-6 text-left shadow-md duration-300 hover:shadow-xl"
+              >
                 <Image
                   height={200}
                   width={200}

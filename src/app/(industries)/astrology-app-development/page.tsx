@@ -10,13 +10,36 @@ import { FaqAccordion } from '@/components/faqAccordion';
 import Leadformservices from '@/components/leadformservices';
 import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
 import { Locations } from '@/components/Location';
-import PortfolioCrousel from '@/components/PortfolioCrousel';
 import Rating2 from '@/components/rating2';
 import ServicesManaged from '@/components/servicesManaged';
 import Smartsolutionsection from '@/components/smartsolutionssection';
 import { astrologyFawData, webDevFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Astrology App Development Company - AV Technosys',
+  },
+  description:
+    'Cross-platform astrology app development with live chat, video calls, daily horoscopes, and prediction features.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/astrology-app-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Astrology App Development Company - AV Technosys',
+    description:
+      'Cross-platform astrology app development with live chat, video calls, daily horoscopes, and prediction features.',
+    url: 'https://www.avtechnosys.com/astrology-app-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (

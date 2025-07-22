@@ -37,13 +37,17 @@ const ServicesManaged = ({
                 {service.description}
               </p>
             </div>
-            <Image
-              src={service.image}
-              alt={service.title}
-              width={500}
-              height={500}
-              className="h-56 w-full rounded-lg object-cover"
-            />
+            {service?.image && (
+              <>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={500}
+                  height={500}
+                  className="h-56 w-full rounded-lg object-cover"
+                />
+              </>
+            )}
           </div>
         ))}
       </div>

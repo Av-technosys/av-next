@@ -20,7 +20,9 @@ import { SectionHeadingAbout, TechnologiesOffered } from '@/components';
 import { InsightAboutUs } from '@/conponents/InsightAboutUs';
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: {
+    absolute: 'About US - Top Mobile App & Web Development Company',
+  },
   description:
     'We are a leading Web development company with a team of more than 100+ experienced developers. Know more about AV Technosys and our services by visiting us',
   alternates: {
@@ -29,6 +31,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    title: 'About US - Top Mobile App & Web Development Company',
+    description:
+      'We are a leading Web development company with a team of more than 100+ experienced developers. Know more about AV Technosys and our services by visiting us',
+    url: 'https://www.avtechnosys.com/about-us/',
+    siteName: 'AV Technosys',
+    type: 'website',
   },
 };
 

@@ -45,7 +45,7 @@ export default function Astrologyhomesection({ details, imageclass = '' }) {
             </div>
 
             {/* Right Section (Image) */}
-            <div className="w-full max-w-sm md:max-w-xl">
+            <div className={cn('w-full max-w-sm md:max-w-xl', imageclass)}>
               <Image
                 height={500}
                 width={500}

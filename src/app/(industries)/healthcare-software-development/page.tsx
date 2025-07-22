@@ -15,6 +15,31 @@ import { healthcarefawdata, ItconsultingFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import Rating2 from '@/components/rating2';
 import Fintecheffect from '../conponents';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Healthcare App Development Company - AV Technosys',
+  },
+  description:
+    'We create healthcare software that enhances patient care, streamlines workflows, and keeps data secure.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/healthcare-software-development/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Healthcare App Development Company - AV Technosys',
+
+    description:
+      'We create healthcare software that enhances patient care, streamlines workflows, and keeps data secure.',
+    url: 'https://www.avtechnosys.com/healthcare-software-development/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
@@ -53,8 +78,7 @@ const data = {
   title: 'Healthcare App Development Company',
   description:
     'AV Technosys offers top-notch healthcare app development services, backed by experienced developers who build scalable and reliable digital healthcare solutions.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/healthcarebanner2.jpg?updatedAt=1752224020375',
+  image: 'https://ik.imagekit.io/avtechnosys/healthcarebanner2.jpg',
 };
 
 const leadingdata = {

@@ -107,7 +107,7 @@ function HeroSection({ setIsLeadOpen }) {
           <div className="mx-auto grid w-full max-w-7xl grid-cols-3 items-center gap-y-8 xl:grid-cols-5">
             {ratingData.map((item, index) => {
               return (
-                <div className="w-full border-l first:border-none">
+                <div key={index} className="w-full border-l first:border-none">
                   <div className="mx-auto mr-auto flex w-fit flex-col gap-2">
                     <p className="text-white">{item.title}</p>
                     <Image
@@ -294,7 +294,10 @@ function ExperienceSection() {
             {experienceData.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div className="flex w-full flex-col items-center rounded-xl border border-yellow-300 bg-white/30 p-3 md:items-start md:gap-2">
+                <div
+                  key={idx}
+                  className="flex w-full flex-col items-center rounded-xl border border-yellow-300 bg-white/30 p-3 md:items-start md:gap-2"
+                >
                   <div className="flex items-center gap-2 text-2xl font-semibold text-gray-800 sm:text-4xl md:text-black">
                     <Icon
                       stroke={2}

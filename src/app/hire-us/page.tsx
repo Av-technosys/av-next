@@ -16,8 +16,11 @@ import { ContactUs } from '@/components/contactUs';
 import { WhyChooseUs } from './WhyChooseUs';
 import PortfolioCrousel from '@/components/PortfolioCrousel';
 import Footer1 from './../footer1';
+
 export const metadata: Metadata = {
-  title: 'Hire Us',
+  title: {
+    absolute: 'Hire Dedicated Developers | Dedicated Developers for Hire',
+  },
   description:
     'Looking for a company from which you can hire developers in India? AV Technosys is a leading outsourcing company that has a vast pool of talent. Hire from us now!',
   alternates: {
@@ -26,6 +29,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    title: 'Hire Dedicated Developers | Dedicated Developers for Hire',
+    description:
+      'Looking for a company from which you can hire developers in India? AV Technosys is a leading outsourcing company that has a vast pool of talent. Hire from us now!',
+    url: 'https://www.avtechnosys.com/hire-us/',
+    siteName: 'AV Technosys',
+    type: 'website',
   },
 };
 

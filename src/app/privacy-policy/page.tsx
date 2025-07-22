@@ -1,6 +1,32 @@
 import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import Footer1 from '../footer1';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'AV Technosys Privacy Policy Ensuring Trust',
+  },
+  description:
+    'Read AV Technosys’ Privacy Policy to understand how we collect, use, and protect your data.',
+  alternates: {
+    canonical: 'https://www.avtechnosys.com/privacy-policy/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: 'AV Technosys Privacy Policy Ensuring Trust',
+    description:
+      'Read AV Technosys’ Privacy Policy to understand how we collect, use, and protect your data.',
+    url: 'https://www.avtechnosys.com/privacy-policy/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const PrivacyPolicy = () => {
   return (

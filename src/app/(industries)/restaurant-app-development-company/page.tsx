@@ -15,6 +15,35 @@ import { Locations } from '@/components/Location';
 import Testimonial from '@/app/reviews';
 import AiAstrologySection from '@/components/aiastrologysection';
 import { CaseStudy } from '@/components/caseStudy';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      'Food Delivery App Development Services | Food Delivery App Development',
+  },
+  description:
+    'Build a user-friendly food delivery app that seamlessly connects restaurants and customers with our custom development services.',
+  alternates: {
+    canonical:
+      'https://www.avtechnosys.com/restaurant-app-development-company/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title:
+      'Food Delivery App Development Services | Food Delivery App Development',
+    description:
+      'Build a user-friendly food delivery app that seamlessly connects restaurants and customers with our custom development services.',
+    url: 'https://www.avtechnosys.com/restaurant-app-development-company/',
+    siteName: 'AV Technosys',
+    type: 'website',
+  },
+};
 
 const Page = () => {
   return (
@@ -69,8 +98,7 @@ const data = {
   title: 'Restaurant App Development Company',
   description:
     'We build customised, feature-packed restaurant apps that simplify ordering, improve customer experience, and increase your sales.',
-  image:
-    'https://ik.imagekit.io/avtechnosys/restaurentbanner.png?updatedAt=1752224039154',
+  image: 'https://ik.imagekit.io/avtechnosys/restaurentbanner.png',
 };
 const leadingdata = {
   title: 'Boost Your Business with Restaurant App Development',
