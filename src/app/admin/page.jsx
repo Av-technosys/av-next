@@ -1,27 +1,20 @@
 import AdminBlogTble from '@/components/adminBlogTble';
-import {
-  getAdminBlogData,
-  getAdminBlogDataCount,
-  getBlogFormData,
-} from '../../../lib';
+import { getAdminBlogData, getAdminBlogDataCount } from '../../../lib';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
-import AdminBlogFormTable from '@/components/adminBlogFormData';
 import { Button } from '@/components/ui/button';
 
 const Page = async ({ searchParams }) => {
   let data = [];
-  let blogFormData = [];
-  let blogdatacount = [];
+  let blogdatacount;
 
   const paramsvalue = searchParams;
   const blogsvalue = Number(paramsvalue?.blogs);
 
   try {
-    [data, blogdatacount, blogFormData] = await Promise.all([
+    [data, blogdatacount] = await Promise.all([
       getAdminBlogData(blogsvalue),
       getAdminBlogDataCount(),
-      getBlogFormData(),
     ]);
   } catch (error) {
     console.error('Error fetching admin data:', error);
@@ -48,13 +41,7 @@ const Page = async ({ searchParams }) => {
         </div>
       </div>
 
-      <AdminBlogTble data={data} count={blogdatacount.length} />
-      {blogFormData.length > 0 && (
-        <>
-          <p className="mt-12 text-3xl">Blogs Data</p>
-          <AdminBlogFormTable data={blogFormData} />
-        </>
-      )}
+      <AdminBlogTble data={data} count={blogdatacount} />
     </div>
   );
 };

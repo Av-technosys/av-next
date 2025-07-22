@@ -15,17 +15,14 @@ import { Eye, EyeOff, LoaderCircle } from 'lucide-react';
 import { toggleBlogVisibility } from '../../lib';
 
 import { Button } from './ui/button';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const AdminBlogTble = ({ data, count }) => {
   const router = useRouter();
   const [endIndex, setendIndex] = useState(10);
-  console.log('data.length', data?.length);
-  console.log('endIndex', endIndex);
 
   const params = useSearchParams();
   const blogscount = params.get('blogs') || 0;
-  console.log('blogscount', blogscount);
 
   const loadMoreHandler = () => {
     setendIndex((prev) => prev + 10);
@@ -70,7 +67,7 @@ const AdminBlogTble = ({ data, count }) => {
         <Button
           variant={'outline'}
           onClick={loadMoreHandler}
-          className={`rounded ${blogscount >= count && 'hidden'} `}
+          className={`rounded ${blogscount >= count[0].count && 'hidden'} `}
         >
           Load More
         </Button>

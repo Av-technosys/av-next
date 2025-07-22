@@ -9,7 +9,6 @@ const DebounceSearch = () => {
   const router = useRouter();
 
   const handleSearch = async (query) => {
-    console.log('Searching for:', query);
     router.push(`/blog?search=${query}`);
   };
 

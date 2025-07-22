@@ -1,14 +1,17 @@
 import React from 'react';
-import { getLeadFormData } from '../../../../lib';
+import { getBlogFormData, getLeadFormData } from '../../../../lib';
 import AdminBlogFormTable from '@/components/adminBlogFormData';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const Page = async () => {
   let leadFormData = [];
+  let blogFormData = [];
 
-  const response = await getLeadFormData();
-  leadFormData = response;
+  [leadFormData, blogFormData] = await Promise.all([
+    getLeadFormData(),
+    getBlogFormData(),
+  ]);
 
   return (
     <>
@@ -23,6 +26,12 @@ const Page = async () => {
             </div>
           </div>
           <AdminBlogFormTable data={leadFormData} />
+        </>
+      )}
+      {blogFormData.length > 0 && (
+        <>
+          <p className="mt-12 text-3xl">Blogs Data</p>
+          <AdminBlogFormTable data={blogFormData} />
         </>
       )}
     </>
