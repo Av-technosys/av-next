@@ -4,29 +4,28 @@ export const portfolioData = [
     description:
       'A clean, product-focused website for a premium lighting brand-showcasing engineering precision, and versatile lighting for residential, commercial, and architectural spaces.',
     images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-3.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-4.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/canqua1.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/canqua2.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/canqua3.jpg',
     ],
     link: 'https://canquaindia.com/',
 
-    technologies: ['wordpress'],
+    technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
   },
-  {
-    name: 'Goyal salt LTD',
-    description:
-      ' A clean, information-rich website built for a trusted salt manufacturing company—designed to showcase product quality, global reach, and B2B trust.',
-    images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-3.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-4.jpg',
-    ],
-    link: 'https://goyalsaltltd.com/',
+  // {
+  //   name: 'Goyal salt LTD',
+  //   description:
+  //     ' A clean, information-rich website built for a trusted salt manufacturing company—designed to showcase product quality, global reach, and B2B trust.',
+  //   images: [
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-1.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-2.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-3.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-4.jpg',
+  //   ],
+  //   link: 'https://goyalsaltltd.com/',
 
-    technologies: ['wordpress'],
-  },
+  //   technologies: ['wordpress'],
+  // },
   {
     name: 'Rajasthani Haat',
     description:
@@ -39,21 +38,20 @@ export const portfolioData = [
     ],
     link: 'https://rajasthanihaat.com/',
 
-    technologies: ['wordpress', 'woocommerce'],
+    technologies: ['/icons/wordpress.bin', '/icons/woocommerce.bin'],
   },
   {
     name: 'AAJ Ka Karmveer',
     description:
       'An engaging, mobile-friendly website crafted for a socially-driven initiative—highlighting stories of impact, ease of donations, and seamless navigation.',
     images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-3.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-4.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk1.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk2.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk3.jpg',
     ],
     link: 'https://aajkakarmveer.com/',
 
-    technologies: ['wordpress'],
+    technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
   },
   {
     name: 'Potent Hygiene',
@@ -67,7 +65,7 @@ export const portfolioData = [
     ],
     link: 'https://potenthygiene.com/',
 
-    technologies: ['shopify', 'razorpay'],
+    technologies: ['/icons/shopify.bin', '/icons/razorpay.bin'],
   },
 
   {
@@ -82,7 +80,7 @@ export const portfolioData = [
     ],
     link: 'https://www.saaskart.co/',
 
-    technologies: ['aws', 'react', 'razorpay'],
+    technologies: ['/icons/aws.bin', '/icons/react.bin', '/icons/razorpay.bin'],
   },
   {
     name: 'Tavaga',
@@ -95,8 +93,7 @@ export const portfolioData = [
       'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/tavaga-4.jpg',
     ],
     link: 'https://tavaga.com/',
-
-    technologies: ['php', 'aws'],
+    technologies: ['/icons/php.bin', '/icons/aws.bin'],
   },
   {
     name: 'RenoQuotes',
@@ -110,7 +107,21 @@ export const portfolioData = [
     ],
     link: 'https://renoquotes.com/en/home',
 
-    technologies: ['react', 'php'],
+    technologies: ['/icons/php.bin', '/icons/react.bin'],
+  },
+
+  {
+    name: 'Missimaginaa',
+    description:
+      'Where women lead in style. Classy, old-money-inspired tailoring: blazers, vests, skirts & more for the modern woman.',
+    images: [
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism1.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism2.jpg',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism3.jpg',
+    ],
+    link: 'https://renoquotes.com/en/home',
+
+    technologies: ['/icons/wordpress.bin'],
   },
 
   {
@@ -126,7 +137,7 @@ export const portfolioData = [
     ],
     link: 'https://gourholidays.com',
 
-    technologies: ['wordpress', 'woocommerce'],
+    technologies: ['/icons/wordpress.bin', '/icons/woocommerce.bin'],
   },
   {
     name: 'Valentino Gelato',
@@ -140,7 +151,7 @@ export const portfolioData = [
     ],
     link: 'https://velentinogelato.co.uk',
 
-    technologies: ['php'],
+    technologies: ['/icons/php.bin'],
   },
   {
     name: 'Stormatics',
@@ -154,7 +165,7 @@ export const portfolioData = [
     ],
     link: 'https://stormatics.tech',
 
-    technologies: ['wordpress'],
+    technologies: ['/icons/wordpress.bin'],
   },
 
   {

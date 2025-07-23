@@ -37,7 +37,7 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
                       <Image
                         width={100}
                         height={100}
-                        src={`/icons/${item}.bin`}
+                        src={item}
                         className="size-6 rounded-full"
                         alt=""
                       />
