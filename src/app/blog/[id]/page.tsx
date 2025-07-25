@@ -24,7 +24,8 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const slug = (await params).id;
-  const [post] = await getBlogBySlug(slug);
+  const postData = await getBlogBySlug(slug);
+  const post = postData[0];
 
   return {
     title: {
@@ -59,12 +60,30 @@ export async function generateMetadata(
 
 const Page = async (context: any) => {
   const slug = context.params.id;
-  const [blogData] = await getBlogBySlug(slug);
-  const relatedBlogs = await getRelatedBlogs(blogData?.id);
+  const blogDataResponse = await getBlogBySlug(slug);
+  const blogData = blogDataResponse[0];
 
-  if (!blogData) {
-    return <p>Loading...</p>;
+  if (!blogDataResponse) {
+    return (
+      <>
+        <NavBarHome />
+        <p className="py-8">Loading...</p>
+        <Footer1 />
+      </>
+    );
   }
+
+  if (blogDataResponse.length === 0) {
+    return (
+      <>
+        <NavBarHome />
+        <p className="py-6 text-center">No Blog Found on this slug</p>
+        <Footer1 />
+      </>
+    );
+  }
+
+  const relatedBlogs = await getRelatedBlogs(blogData?.id);
 
   return (
     <div className="min-h-screen bg-white text-black">
