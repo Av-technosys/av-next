@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { TArroeRight } from '@/components/icons';
 import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
 const HeroSectionfintechAll = ({ details, className = '' }) => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
