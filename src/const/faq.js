@@ -566,18 +566,6 @@ export const AIDevelopmentServiceFAQ = [
     ),
   },
   {
-    value: 'item-6',
-    question:
-      'What is the typical timeline for planning and executing an AI project?',
-    answer: (
-      <p>
-        It usually takes 1–2 weeks to define the scope and project roadmap.
-        Depending on the complexity, development and deployment may take
-        anywhere from 2 to 6 months.
-      </p>
-    ),
-  },
-  {
     value: 'item-7',
     question: 'How do you ensure the security of AI projects?',
     answer: (
@@ -585,41 +573,6 @@ export const AIDevelopmentServiceFAQ = [
         We implement strict data encryption, access control, and secure APIs. We
         also follow industry best practices like GDPR compliance, secure model
         training, and regular vulnerability assessments.
-      </p>
-    ),
-  },
-  {
-    value: 'item-8',
-    question: 'What is the estimated cost of building an AI-based application?',
-    answer: (
-      <p>
-        The cost can vary widely based on project complexity, required features,
-        and development hours. On average, a custom AI app can range from
-        $15,000 to $100,000 or more.
-      </p>
-    ),
-  },
-  {
-    value: 'item-9',
-    question: 'How long does it take to develop a full AI-based product?',
-    answer: (
-      <p>
-        Development timelines vary based on the scope, but most AI projects take
-        between 8 to 24 weeks, including research, model training, testing, and
-        deployment.
-      </p>
-    ),
-  },
-  {
-    value: 'item-10',
-    question:
-      'What should I consider when choosing an AI app development company?',
-    answer: (
-      <p>
-        Look for experience, a strong AI portfolio, tech expertise,
-        industry-specific knowledge, client reviews, and ongoing support
-        services. A reliable company will understand your business goals and
-        translate them into impactful AI solutions.
       </p>
     ),
   },

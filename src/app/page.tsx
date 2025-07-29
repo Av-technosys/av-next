@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Footer1 from './footer1';
 import { ChevronRight } from 'lucide-react';
@@ -32,12 +32,14 @@ import { CaseStudy } from '@/components/caseStudy';
 import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
+import Chatbot from './chatbot';
+import Whatsapp from './whatsapp';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
 
   return (
-    <div className="h-full min-h-screen w-full bg-white">
+    <div className="relative h-full min-h-screen w-full bg-white">
       <InfoNav />
       <NavBarHome />
       <HeroSection setIsLeadOpen={setIsLeadOpen} />
@@ -55,6 +57,8 @@ const Home = () => {
       <FaqAccordion />
       <BlogSection />
       <Locations />
+      <Chatbot />
+      <Whatsapp />
       <Footer1 />
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
     </div>
