@@ -38,7 +38,7 @@ export function AIButton({
         </MovingBorder>
       </div>
       <Link
-        href={'/ai-development-services/'}
+        href={'/ai-development-company/'}
         className={cn(
           'relative flex h-full w-full items-center justify-center space-x-2 px-4 py-1 text-sm font-semibold text-neutral-800 antialiased backdrop-blur-xl',
           className

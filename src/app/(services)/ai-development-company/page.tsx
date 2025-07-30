@@ -3,7 +3,7 @@ import { SectionHeading } from '@/components/sectionHeading';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { FaqAccordion } from '@/components/faqAccordion';
 import Image from 'next/image';
-import { AIButton, TechnologiesOffered } from '@/components';
+import { TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
 import { ContactUs } from '@/components/contactUs';
 import AdvancedAiExperts from './AdvanceAIExperts';
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   description:
     'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/ai-development-services/',
+    canonical: 'https://www.avtechnosys.com/ai-development-company/',
   },
   robots: {
     index: true,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Advanced AI Development Services - AV Technosys',
     description:
       'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
-    url: 'https://www.avtechnosys.com/ai-development-services/',
+    url: 'https://www.avtechnosys.com/ai-development-company/',
     siteName: 'AV Technosys',
     type: 'website',
   },

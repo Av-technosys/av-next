@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import Footer1 from './footer1';
 import { ChevronRight } from 'lucide-react';
@@ -186,7 +186,7 @@ function AISection({ setIsLeadOpen }) {
             ))}
           </div>
 
-          <Link href="/ai-development-services">
+          <Link href="/ai-development-company">
             <button className="group relative mt-6 inline-flex w-fit overflow-hidden rounded-3xl border border-neutral-600 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               Explore More
               <span className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-neutral-800 via-yellow-300 to-neutral-800"></span>

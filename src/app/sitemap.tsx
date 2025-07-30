@@ -15,7 +15,7 @@ const paths = [
   '/fintech-app-development',
   '/ecommerce-app-development',
   '/real-estate-app-development',
-  '/ai-development-services',
+  '/ai-development-company',
   '/mobile-app-development',
 ];
 
