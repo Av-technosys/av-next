@@ -11,6 +11,9 @@ import { NavBarHome } from '@/components/navBar';
 import ShowBlogs from './showBlogs';
 import { BlogPagination } from './paginationblog';
 import DebounceSearch from './debounceSearch';
+import Rating2 from '@/components/rating2';
+import { Locations } from '@/components/Location';
+import { ContactUs } from '@/components/contactUs';
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 const Blog = async ({ searchParams }: any) => {
-  const PAGE_LIMIT = 7;
+  const PAGE_LIMIT = 10;
   const searchParamsData = await searchParams;
   const currentPage = searchParamsData.page || 1;
   const searchText = searchParamsData.search || '';
@@ -66,6 +69,9 @@ const Blog = async ({ searchParams }: any) => {
           totalPages={Number(blogData?.totalPages)}
         />
       ) : null}
+      <ContactUs />
+      <Rating2 />
+      <Locations />
       <Footer1 />
     </div>
   );
