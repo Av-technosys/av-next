@@ -1,10 +1,12 @@
 'use client';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const Chatbot = () => {
   const inpref = useRef<any>();
+  const chatBotRef = useRef<any>();
+
   const [role, setrole] = useState('');
   const [output, setoutput] = useState('');
   const [userMsg, setuserMsg] = useState('');
@@ -12,6 +14,23 @@ const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [changeBot, setchangeBot] = useState(false);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        chatBotRef.current &&
+        !chatBotRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const generateText = async (e) => {
     e.preventDefault();
@@ -41,8 +60,11 @@ const Chatbot = () => {
   };
   return (
     <>
-      <div className="fixed bottom-10 right-3 z-50 md:right-10">
-        {changeBot ? (
+      <div
+        ref={chatBotRef}
+        className="fixed bottom-10 right-3 z-50 md:right-10"
+      >
+        {changeBot && isOpen ? (
           <>
             <div className="mb-4 w-full">
               <div className="flex h-[28rem] max-w-xs flex-col overflow-hidden rounded-lg md:max-w-sm">
