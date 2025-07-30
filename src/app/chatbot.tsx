@@ -94,7 +94,10 @@ const Chatbot = () => {
                       )}
                     </div>
                   </div>
-                  <form onSubmit={generateText} className="flex gap-2">
+                  <form
+                    onSubmit={generateText}
+                    className={output ? 'mb-10 flex gap-2' : 'flex gap-2'}
+                  >
                     <input
                       type="text"
                       ref={inpref}
