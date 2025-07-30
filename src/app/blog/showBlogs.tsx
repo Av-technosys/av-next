@@ -6,10 +6,8 @@ import utc from 'dayjs/plugin/utc';
 import { blogCategories } from '@/const';
 import Image from 'next/image';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
-import { blogCategorySummery } from '@/const/blogCategories';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import DebounceSearch from './debounceSearch';
 
 dayjs.extend(utc);
 const ShowBlogs = ({ blogData }) => {
@@ -25,38 +23,8 @@ const ShowBlogs = ({ blogData }) => {
     router.refresh();
   }, [searchparam]);
 
-  function handleCategoryFilter(blogCategorySlug: String) {
-    setSearchTerm('');
-
-    if (blogCategorySlug === 'all') {
-      router.push(`/blog`);
-      return;
-    }
-
-    router.push(`/blog?category=${blogCategorySlug}`);
-
-    setFilteredBlogs(filteredBlogs);
-  }
-
   return (
     <div className="flex flex-col">
-      <div className="mb-12 flex w-full flex-col items-center justify-between gap-3 sm:flex-row sm:gap-6">
-        <div className="w-full overflow-x-auto">
-          <div className="flex w-full min-w-[48rem] items-center gap-6 overflow-x-auto py-4 lg:gap-10">
-            {blogCategorySummery.map((item, idx) => {
-              return (
-                <p
-                  key={idx}
-                  onClick={() => handleCategoryFilter(item.value)}
-                  className="hover:underline"
-                >
-                  {item.label}
-                </p>
-              );
-            })}
-          </div>
-        </div>
-      </div>
       {filteredBlogs?.length > 0 ? (
         <div className="mb-12 flex h-full w-full flex-col items-center gap-6 md:flex-row">
           <div className="w-full max-w-2xl">
