@@ -10,6 +10,7 @@ import {
   AlignLeft,
   AlignCenter,
   AlignRight,
+  ImageIcon,
 } from 'lucide-react';
 import InputImage from './inputImage';
 import InputTagList from './inputTagList';
@@ -17,6 +18,7 @@ import { toast } from 'sonner';
 
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
+import Image from '@tiptap/extension-image';
 import Youtube from '@tiptap/extension-youtube';
 import Table from '@tiptap/extension-table';
 import TableRow from '@tiptap/extension-table-row';
@@ -82,6 +84,7 @@ const TiptapEditor = ({ data }) => {
       TableRow,
       TableHeader,
       TableCell,
+      Image,
     ],
     content: data?.data || '<p>Hello World! 🌎️</p>',
   });
@@ -93,6 +96,7 @@ const TiptapEditor = ({ data }) => {
     if (editor) {
       const html = editor.getHTML();
       setSavedHtml(html);
+
       // https://av-blog.s3.ap-south-1.amazonaws.com
 
       let finalImageSrc = imageSrc;
@@ -138,6 +142,55 @@ const TiptapEditor = ({ data }) => {
       }
     }
     setLoading(false);
+  };
+
+  const editorImageUpload = async (img) => {
+    var imageUrl;
+
+    // if (!img || !img.type.startsWith('image/')) {
+    //   return;
+    // }
+
+    try {
+      const response = await fetch('/api/getS3UploadURL', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fileName: '',
+          fileType: img,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get signed URL');
+      }
+
+      const { data } = await response.json();
+      const { url, key } = data;
+      console.log('url', url);
+
+      // 2. Upload the file to S3 using PUT
+      const upload = await fetch(url, {
+        method: 'PUT',
+        headers: { 'Content-Type': key },
+        body: img,
+      });
+
+      if (upload.ok) {
+        console.log('File uploaded successfully to S3');
+        // Optionally store the public URL
+        imageUrl = `https://av-blog.s3.ap-south-1.amazonaws.com/${key}`;
+        console.log('imageUrl', imageUrl);
+        return imageUrl;
+      } else {
+        console.error('Failed to upload to S3');
+      }
+    } catch (err) {
+      console.error('Error uploading file:', err);
+    }
+    return imageUrl;
   };
 
   function showNoti(response) {
@@ -372,6 +425,27 @@ const TiptapEditor = ({ data }) => {
           }}
         >
           <span className="text-xs">Table</span>
+        </Toggle>
+        <Toggle
+          pressed={false}
+          onPressedChange={async () => {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = async () => {
+              const file = input.files?.[0];
+              const s3URL = await editorImageUpload(file);
+              let finalImageSrc = s3URL;
+              setSavedHtml((prev) => ({ ...prev, s3URL }));
+              if (!file) return;
+
+              const url = URL.createObjectURL(file); // Temporary URL
+              editor.chain().focus().setImage({ src: s3URL }).run();
+            };
+            input.click();
+          }}
+        >
+          <ImageIcon className="h-4 w-4" />
         </Toggle>
         <Button onClick={() => editor.chain().focus().addColumnAfter().run()}>
           Add Column
