@@ -13,16 +13,15 @@ import Ratings from '@/components/ratings';
 import ServicesManaged from '@/components/servicesManaged';
 import Smartsolutionsection from '@/components/smartsolutionssection';
 import Testimonial from '@/components/Testimonial';
-import { ExperienceSections } from '@/conponents/experience';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
-import { DigitalmarketingFawData, webDevFawData } from '@/const';
+import { webDevFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Web Development Services | AV Technosys',
+    absolute: 'Website Development Company | Web Development Services',
   },
   description:
     'Get professional web development services to build a responsive, high-quality website tailored to your business needs.',
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Web Development Services | AV Technosys',
+    title: 'Website Development Company | Web Development Services',
     description:
       'Get professional web development services to build a responsive, high-quality website tailored to your business needs.',
     url: 'https://www.avtechnosys.com/website-development-services/',
@@ -52,12 +51,12 @@ const Page = () => {
       <Ratings className="md:flex" />
       <LeadingSectionfintechAll details={leadingdata} />
       <Smartsolutionsection
+        className={'bg-gradient-to-b from-white to-yellow-300'}
         heading={Servicesheading}
         details={Servicesdetails}
       />
       <ProjectCost details={costdata} />
       <ServicesManaged heading={servicesheading} services={services} />
-      <ExperienceSections className="border-y-4 border-y-[#EAB308]" />
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}
@@ -78,24 +77,24 @@ const Page = () => {
 export default Page;
 
 const data = {
-  title: 'Website Development Company',
+  title: 'Web Development Company',
   description:
     'AV Technosys is a top web development company delivering custom web applications along with robust frontend and backend development services. Partner with us to build high-performance web solutions for your business goals.',
-  image: 'https://ik.imagekit.io/avtechnosys/websiteherobg.jpeg',
+  image: 'https://ik.imagekit.io/avtechnosys/webdevheros2.jpg',
   btn: 'Discuss Your Project Idea ',
 };
 
 const leadingdata = {
-  title: 'Leading Web Development Services for All Business Requirements',
+  title: 'Expert Web Development for All Types of Business Requirements',
   description1:
-    'As a trusted web development company, AV Technosys provides comprehensive web development services for startups, SMBs, and large enterprises. We specialise in building scalable, secure, and high-performance web applications tailored to your business objectives, making us a top choice for online platform development.',
+    'AV Technosys is a leading web development company delivering end-to-end digital solutions for startups, SMBs, and large enterprises. We specialize in building scalable, secure, and high-performing web applications tailored to your unique business goals. Whether it’s a custom web app, responsive design, or a robust backend system, we craft future-ready solutions that drive real results.',
   description2:
-    'From custom web app development and responsive design to robust backend solutions, our team delivers future-ready products that drive results. Backed by our web development consulting expertise, we ensure your project exceeds expectations from initial concept to final launch. So, if you’re looking for a reliable partner to build your next web platform, AV Technosys is here to help.',
-  image: 'websitedevelopmentbanner.jpg',
+    "With strong expertise in web development consulting, our team ensures your project is guided from concept to launch with precision and care. If you're looking for a dependable technology partner to bring your next web platform to life, AV Technosys is here to help.",
+  image: 'webdevlead.jpg',
 };
 
 const Servicesheading = {
-  title: 'Our Comprehensive Range of Web Development Services',
+  title: 'Custom Web Development Services for Every Business',
   description:
     'AV Technosys provides full-scale web development solutions driven by industry expertise, innovation, and a user-centric approach to digital growth.',
 };
@@ -174,7 +173,7 @@ const costdata = {
 };
 
 const servicesheading = {
-  title: 'Comprehensive Web Development Services Designed for Your Success',
+  title: 'End-to-End Web Development Focused on Your Goals',
   description:
     'At AV Technosys, we build secure, scalable websites and web apps that strengthen your business and bring your digital vision to life.',
 };
@@ -221,7 +220,7 @@ const whychooseheading = {
   title: 'Why Partner with AV Technosys for Web Development?',
   description:
     'AV Technosys has demonstrated proficiency in providing creative online solutions that spur expansion and create enduring alliances.',
-  image: 'partnerwithavwebsite.jpeg',
+  image: 'webdevwhychoose.jpg',
 };
 
 const whychoosedata = [
@@ -251,6 +250,6 @@ const leadformdata = {
   title: 'Looking for a Web Development Partner You Can Trust?',
   description:
     'Get scalable, custom web development solutions delivered on time and within budget, tailored to your business goals.',
-  btn: 'Request a Free Web Development Consultation',
+  btn: 'Hire Our Experts',
   image: 'projectCallGirl.webp',
 };

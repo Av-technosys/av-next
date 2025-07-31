@@ -84,19 +84,19 @@ const Page = () => {
 export default Page;
 
 const data = {
-  title: 'IT Consulting Services Company',
+  title: 'IT Consulting Services',
   description:
     'We offer end-to-end enterprise IT consulting services, including cloud migration, business transformation, digital strategy, governance enhancement, and IT infrastructure support, to drive your organisation’s growth and efficiency.',
   image: 'https://ik.imagekit.io/avtechnosys/it-consulting-banner.jpg',
 };
 
 const leadingdata = {
-  title: 'Transform Your Business with Modern IT Consulting Services',
+  title: 'Smarter IT Consulting for a Future-Ready Business',
   description1:
-    'In today’s rapidly evolving technological landscape, advancements emerge constantly, often overnight. New solutions that can transform your business are becoming available all the time. If you don’t leverage these opportunities, your competitors surely will. That’s why IT consulting has become essential in the modern business world.',
+    'In today’s fast-paced tech landscape, staying updated with the latest innovations is crucial. Businesses that fail to adapt risk falling behind competitors who embrace new technologies first. That’s where IT consulting becomes essential.',
   description2:
-    'If you want your company to grow, integrating IT consulting into your strategic planning is vital. As experienced IT consultants, we identify the most effective technologies to implement your projects efficiently and support the management of your customers, teams, and business goals based on your unique requirements.',
-  image: 'it-consultingpic.jpg',
+    'At AV Technosys, our expert IT consultants help you integrate the right technologies into your business strategy. We ensure efficient project execution while aligning tech solutions with your unique goals, teams, and customer need empowering you to scale smarter.',
+  image: 'itconsultlead.jpg',
 };
 
 const servicesheading = {
@@ -108,37 +108,37 @@ const services = [
   {
     title: 'Enhanced Efficiency',
     description:
-      'Our IT consulting services identify efficiency gaps, automate processes, and optimise workflows. This leads to higher productivity, better resource utilisation, and faster time-to-market for your products and services.',
+      'We identify efficiency gaps, automate processes, and streamline workflows to boost productivity and accelerate your time-to-market.',
     image: '/itmanaged1.jpg',
   },
   {
     title: 'Cost Savings',
     description:
-      'By leveraging IT expertise, businesses can identify and implement cost-saving strategies such as optimising infrastructure and deploying effective technology solutions. This reduces operational expenses, allowing funds to be redirected towards strategic initiatives that drive growth and innovation.',
+      'Our IT consulting helps reduce operational costs by optimizing infrastructure and implementing smart, cost-effective tech solutions.',
     image: '/itmanaged2.jpg',
   },
   {
     title: 'Strategic Alignment',
     description:
-      'IT consulting aligns your technology strategies with your broader business goals. Our consultants ensure your IT investments directly support long-term growth, enhance competitive advantage, and create a unified technology approach for business success.',
+      'We align your technology roadmap with business goals, ensuring every IT investment supports long-term growth and competitive advantage.',
     image: '/itmanaged3.jpg',
   },
   {
     title: 'Security Risk Management',
     description:
-      'We help minimise security risks and ensure compliance with industry standards by implementing robust security measures and frameworks. This protects sensitive data, maintains smooth operations, builds customer trust, and prevents costly legal issues.',
+      'We strengthen your digital defenses with industry-standard security practices, protecting sensitive data and ensuring compliance.',
     image: '/itmanaged4.jpg',
   },
   {
     title: 'Innovation Enablement',
     description:
-      'Our consultants introduce and implement innovative technologies like AI, machine learning, and IoT, accelerating your organisation’s pace of innovation. This helps you enhance customer offerings and stay ahead in rapidly evolving markets.',
+      'We drive innovation by integrating emerging technologies like AI, IoT, and machine learning to enhance your offerings and market position.',
     image: '/itmanaged5.jpg',
   },
   {
     title: 'Scalability and Flexibility',
     description:
-      'We recommend scalable and flexible IT solutions, including cloud services, to help your business adapt to market changes with ease. Such flexibility ensures you can adjust resources quickly to meet seasonal demands or new growth opportunities, keeping your business agile and competitive.',
+      'Our scalable IT solutions, including cloud services, allow you to adapt quickly to changing demands and seize growth opportunities.',
     image: '/itmanaged6.jpg',
   },
 ];
@@ -162,37 +162,37 @@ const serviceData = [
     name: 'IT Strategy Consulting',
     img: 'htmfa1.png',
     description:
-      'We align your technology initiatives with your business goals by designing and implementing effective IT strategies. Our team ensures your software is secure, scalable, and ready to meet evolving demands, helping you solve IT challenges and leverage new growth opportunities.',
+      'We align your tech initiatives with business goals, creating secure, scalable strategies to solve IT challenges and unlock growth.',
   },
   {
     name: 'Technology Consulting',
     img: 'htmfa2.png',
     description:
-      'From planning to execution, we help you adopt emerging technologies that transform operations and drive innovation. Our experts identify solutions that enhance workflows, streamline processes, and create detailed implementation roadmaps tailored to your business needs.',
+      'From planning to implementation, we help adopt emerging technologies that improve workflows and boost operational efficiency.',
   },
   {
     name: 'Digital Transformation Consulting',
     img: 'htmfa3.png',
     description:
-      'We support your digital transformation journey with end-to-end services, including strategy, optimisation, and integration. By automating workflows and modernising customer interactions, we build agile and future-ready organisations.',
+      'We guide your end-to-end digital journey automating workflows, modernizing customer experiences, and building agile, future-ready systems.',
   },
   {
     name: 'Process and Cost Optimization',
     img: 'htmfa4.png',
     description:
-      'Our consultants analyse your current operations to recommend technologies that improve efficiency and reduce costs. We also provide strategic budget insights, enabling smarter financial decisions and higher returns on your technology investments.',
+      'Our experts identify tech solutions that enhance efficiency and cut costs, helping you maximize ROI through smarter budgeting.',
   },
   {
     name: 'Project Management Guidance',
     img: 'htmfa5.png',
     description:
-      'Enhance your project management capabilities with our strategic guidance. We combine innovative technology with human expertise to ensure projects are executed smoothly, on time, and aligned with your organisational objectives.',
+      'We strengthen project execution with strategic support, ensuring timely delivery aligned with your business goals.',
   },
   {
     name: 'Core Technology Modernization',
     img: 'htmfa6.png',
     description:
-      'We modernise your IT infrastructure by integrating advanced technologies such as ERP systems, analytics, and mobile solutions. This creates a robust digital foundation that increases productivity, strengthens capabilities, and drives business growth.',
+      'Upgrade your IT infrastructure with ERP, analytics, and mobile tech to build a scalable, high-performing digital foundation.',
   },
 ];
 
@@ -207,22 +207,22 @@ const whychoosedata = [
   {
     title: 'Supply Chain & Financial Management',
     description:
-      ' Implement robust supply chain processes to enhance logistics and inventory management, while automating financial operations to improve accuracy, speed, and informed business decisions.',
+      ' Optimize logistics, inventory, and automate financial operations for faster, more accurate decision-making.',
   },
   {
     title: ' Human Resource Management',
     description:
-      ' Streamline HR processes to simplify administration, enhance talent acquisition, and effectively boost employee performance management.',
+      ' Simplify HR tasks, improve hiring, and boost employee performance with streamlined processes.',
   },
   {
-    title: '. Data Analytics & Insights',
+    title: 'Data Analytics & Insights',
     description:
-      'Use data analytics to gain deeper business insights, optimise daily operations, and support strategic, informed decision-making.',
+      'Leverage analytics to improve operations, uncover insights, and make smarter, data-driven decisions.',
   },
   {
     title: ' Governance & Compliance Automation',
     description:
-      ' Automate compliance workflows and reporting to ensure your business meets all data protection and regulatory requirements seamlessly.',
+      'Automate compliance and reporting to meet regulatory standards and ensure data protection effortlessly.',
   },
 ];
 
@@ -243,32 +243,32 @@ const trusteditconsultingdata = [
   {
     name: 'Project Management Software',
     description:
-      'We use advanced project management tools such as Jira and Trello to plan, track, and manage our IT consulting projects efficiently. These platforms help us ensure that every task is completed on time, stays within scope, and meets the highest quality standards.',
+      'We use tools like Jira and Trello to plan, track, and manage projects efficiently—ensuring timely delivery and top-tier quality.',
   },
   {
     name: 'Collaboration Platforms',
     description:
-      'Tools like Slack and Microsoft Teams enable smooth communication and collaboration between our teams and clients. With features like real-time messaging, file sharing, and instant updates, these platforms keep everyone aligned throughout the project lifecycle.',
+      'Slack and Microsoft Teams power seamless communication, real-time updates, and smooth collaboration between our team and yours.',
   },
   {
     name: 'Data Analysis Tools',
     description:
-      'Our team leverages powerful data analysis tools such as Tableau and Power BI to visualize and interpret complex data. These tools help us identify trends, generate actionable insights, and support data-driven decisions that enhance your business performance.',
+      'With Tableau and Power BI, we turn complex data into actionable insights that support smarter, performance-driven decisions.',
   },
   {
     name: 'Cybersecurity Tools',
     description:
-      'To safeguard your IT infrastructure, we deploy robust cybersecurity solutions like Norton Security, McAfee, and Palo Alto Networks. These tools offer comprehensive protection with advanced threat detection and response capabilities, ensuring the safety and integrity of your systems and data.',
+      'We protect your systems using trusted cybersecurity solutions like Norton, McAfee, and Palo Alto for complete threat defense.',
   },
   {
     name: 'Cloud Services',
     description:
-      'We harness the power of cloud platforms like AWS, Microsoft Azure, and Google Cloud to deliver scalable and flexible IT solutions. These services enable us to deploy, manage, and optimize your IT infrastructure with maximum availability and performance.',
+      'Leveraging AWS, Azure, and Google Cloud, we deliver scalable, high-performance IT solutions with 24/7 availability.',
   },
   {
     name: 'Development and Testing Tools',
     description:
-      'For software development and testing, we rely on tools such as GitHub, Jenkins, and Selenium. These technologies streamline development workflows, automate testing processes, and ensure that the final product is robust, reliable, and aligned with your business requirements.',
+      'Using GitHub, Jenkins, and Selenium, we streamline development, automate testing, and ensure robust, reliable software delivery.',
   },
 ];
 
@@ -282,19 +282,19 @@ const avoidmistakesdata = [
   {
     title: 'Advanced Technologies for Smarter Solutions',
     description:
-      ' We harness AI/ML for predictive analytics and smarter decision-making, integrate IoT for real-time data and automation, and implement blockchain solutions to ensure security, transparency, and data integrity across your business operations.',
+      ' We leverage AI/ML for predictive insights, IoT for automation and real-time data, and blockchain to boost transparency and security across operations.',
     image: 'servicesavoidmistakespic1.jpg',
   },
   {
     title: 'Data-Driven Insights & Enhanced Security',
     description:
-      'Using big data and advanced analytics, we uncover valuable insights to guide strategic decisions and growth opportunities. Our robust cybersecurity solutions protect your systems with threat detection, prevention, and response strategies to maintain business continuity.',
+      'Our analytics uncover key business trends, while advanced cybersecurity tools ensure protection through proactive threat detection and response.',
     image: 'servicesavoidmistakespic2.jpg',
   },
   {
     title: 'Scalable Cloud & IT Infrastructure',
     description:
-      ' Our cloud computing expertise provides scalable and flexible IT infrastructure, enabling your business to adapt quickly to changing demands while improving efficiency and reducing operational costs.',
+      'We deliver flexible, scalable cloud solutions that boost agility, reduce costs, and help your business quickly adapt to shifting demands.',
     image: 'servicesavoidmistakespic3.jpg',
   },
 ];

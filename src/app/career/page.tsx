@@ -2,6 +2,10 @@ import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import Footer1 from '../footer1';
 import { Metadata } from 'next';
+import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
+import { ContactUs } from '@/components/contactUs';
+import Rating2 from '@/components/rating2';
+import { Locations } from '@/components/Location';
 
 export const metadata: Metadata = {
   title: {
@@ -32,11 +36,9 @@ const Page = () => {
   return (
     <>
       <NavBarHome />
+      <HeroSectionfintechAll details={data} />
       <section className="bg-white px-4 py-16 md:px-8 lg:px-20">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
-            Careers at AV Technosys
-          </h2>
           <p className="mb-6 text-xl font-semibold text-primary">
             Empowering Talent. Building Digital Futures.
           </p>
@@ -91,9 +93,18 @@ const Page = () => {
           </a>
         </div>
       </section>
+      <ContactUs />
+      <Rating2 />
+      <Locations />
       <Footer1 />
     </>
   );
 };
 
 export default Page;
+const data = {
+  title: 'Careers at AV Technosys',
+  description: '',
+  image: 'https://ik.imagekit.io/avtechnosys/careerhs.jpg',
+  btn: '',
+};

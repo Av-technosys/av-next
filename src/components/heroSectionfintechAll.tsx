@@ -31,17 +31,19 @@ const HeroSectionfintechAll = ({ details, className = '' }) => {
           <p className={cn('mb-8 text-lg font-medium text-white', className)}>
             {details?.description}
           </p>
-          <motion.button
-            whileTap={{ scale: 0.92 }}
-            onClick={() => setIsLeadOpen(true)}
-            className="flex items-center justify-center gap-2 rounded-full bg-[#EAB308] px-6 py-2 text-lg font-semibold text-white transition"
-          >
-            {details.btn || 'Request Demo'}
-            <span className="text-2xl">
-              {' '}
-              <TArroeRight />
-            </span>
-          </motion.button>
+          {details.btn != '' && (
+            <motion.button
+              whileTap={{ scale: 0.92 }}
+              onClick={() => setIsLeadOpen(true)}
+              className="flex items-center justify-center gap-2 rounded-full bg-[#EAB308] px-6 py-2 text-lg font-semibold text-white transition"
+            >
+              {details.btn || 'Request Demo'}
+              <span className="text-2xl">
+                {' '}
+                <TArroeRight />
+              </span>
+            </motion.button>
+          )}
         </div>
       </div>
     </section>

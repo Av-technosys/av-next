@@ -11,6 +11,9 @@ import { NavBarHome } from '@/components/navBar';
 import { TableOfContents } from './tableOfContext';
 import { TArroeRight } from '@/components/icons';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
+import Rating2 from '@/components/rating2';
+import { ContactUs } from '@/components/contactUs';
+import { Locations } from '@/components/Location';
 
 export const revalidate = 604800;
 
@@ -173,6 +176,9 @@ const Page = async (context: any) => {
           </div>
         </div>
       </div>
+      <ContactUs />
+      <Rating2 />
+      <Locations />
       <Footer1 />
     </div>
   );
