@@ -13,6 +13,8 @@ export function BlogPagination({ page, totalPages, limit }) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+
   const handlePageChange = (direction) => {
     let newPage = page;
 
@@ -21,7 +23,7 @@ export function BlogPagination({ page, totalPages, limit }) {
     } else if (direction === 'next' && page < totalPages) {
       newPage = page + 1;
     } else {
-      return;
+      newPage = direction;
     }
 
     const params = new URLSearchParams(searchParams.toString());
@@ -42,9 +44,21 @@ export function BlogPagination({ page, totalPages, limit }) {
           />
         </PaginationItem>
 
-        <PaginationItem>
-          <div className="px-4 py-2 text-sm">{`Page ${page} of ${totalPages}`}</div>
-        </PaginationItem>
+        {pageNumbers.map((pagenum) => {
+          return (
+            <PaginationItem onClick={() => handlePageChange(pagenum)}>
+              <div
+                className={
+                  pagenum === page
+                    ? 'pointer-events-none px-4 py-2 text-red-700 opacity-50'
+                    : 'px-4 py-2 text-sm'
+                }
+              >
+                {pagenum}
+              </div>
+            </PaginationItem>
+          );
+        })}
 
         <PaginationItem>
           <PaginationNext

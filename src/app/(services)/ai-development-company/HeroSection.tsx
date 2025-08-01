@@ -41,14 +41,10 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-10 text-sm text-gray-300 sm:text-base md:text-lg">
-            AV Technosys is a{' '}
-            <span className="font-semibold text-white">
-              top AI development company
-            </span>{' '}
-            delivering innovative, scalable, and custom AI solutions that help
-            businesses automate processes, boost efficiency, and achieve
-            sustainable growth. Our smart, industry-focused approach ensures
-            every solution aligns perfectly with client goals.
+            AV Technosys is a top AI development company delivering innovative
+            and scalable AI solutions that help businesses automate, improve
+            efficiency, and achieve sustainable growth. Our industry-focused
+            approach ensures every solution aligns with client goals.
           </p>
 
           <div>

@@ -3,7 +3,7 @@ import { SectionHeading } from '@/components/sectionHeading';
 import { HoverEffect } from '@/components/servicesCardHoverEffect';
 import { FaqAccordion } from '@/components/faqAccordion';
 import Image from 'next/image';
-import { AIButton, TechnologiesOffered } from '@/components';
+import { TechnologiesOffered } from '@/components';
 import { BlogSection } from '@/components/blogSection';
 import { ContactUs } from '@/components/contactUs';
 import AdvancedAiExperts from './AdvanceAIExperts';
@@ -16,29 +16,28 @@ import { AIDevelopmentServiceFAQ } from '@/const';
 import { Metadata } from 'next';
 import TestimonilaCrousel from '@/components/testimonilaCrousel';
 import { Locations } from '@/components/Location';
-import Ratings from '@/components/ratings';
-import PortfolioCrousel from '@/components/PortfolioCrousel';
 import { HeroSection } from './HeroSection';
+import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'AI Development Services | AI Development Company | AV Technosys',
+    absolute: 'Advanced AI Development Services - AV Technosys',
   },
   description:
     'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/ai-development-services/',
+    canonical: 'https://www.avtechnosys.com/ai-development-company/',
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'AI Development Services | AI Development Company | AV Technosys',
+    title: 'Advanced AI Development Services - AV Technosys',
     description:
       'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
-    url: 'https://www.avtechnosys.com/ai-development-services/',
+    url: 'https://www.avtechnosys.com/ai-development-company/',
     siteName: 'AV Technosys',
     type: 'website',
   },
@@ -48,15 +47,12 @@ const Page = () => {
   return (
     <>
       <HeroSection />
-      <Ratings className="md:flex" />
       <TransformAiSection />
       <AdvancedAiExperts />
       <div className="mt-4">
         <ServiceSection />
         <BuildSmartSolutions />
       </div>
-      <PortfolioCrousel />
-      <TechnologiesOffered />
       <OurExpertsSection />
       <AiProjectCost />
       <SmartAiSolutions />
@@ -66,10 +62,14 @@ const Page = () => {
           title={'What Our Clients Say About Working With Us'}
         />
         <div className="mx-auto w-full max-w-7xl px-6">
-          <TestimonilaCrousel cardClassName=" bg-neutral-900" />
+          <TestimonilaCrousel cardClassName=" bg-neutral-900 text-white" />
         </div>
       </section>
-      <Whychooseus />
+      <Whychoosefintechsection
+        heading={whychooseheading}
+        details={whychoosedata}
+      />
+      <TechnologiesOffered />
       <AiEffectSection />
       <FaqAccordion data={AIDevelopmentServiceFAQ} />
       <ContactUs />
@@ -177,27 +177,27 @@ function TransformAiSection() {
         <div className="flex flex-col items-center gap-6 px-4 py-16 md:flex-row md:justify-around md:px-6">
           <div className="md:max-w-md md:p-3 lg:max-w-xl">
             <h1 className="pt-10 text-center text-3xl font-bold md:pt-0 md:text-left md:font-semibold lg:text-4xl">
-              Transform Your Business with Smart AI Solutions
+              AI Solutions That Take Your Business to the Next Level
             </h1>
             <p className="mt-5 text-center text-gray-600 md:text-left">
-              AV Technosys is a trusted name in AI development, offering
-              cutting-edge AI app development services designed to help
-              businesses capitalize on new opportunities. Our skilled AI
-              developers deliver customized solutions that enhance operational
-              efficiency and empower smarter decision-making.
+              AV Technosys is a leading name in AI development, delivering
+              cutting-edge AI app development services that enable businesses to
+              harness new growth opportunities. Our expert team specializes in
+              crafting customized AI solutions that improve operational
+              efficiency and drive smarter, data-backed decision-making.
             </p>
             <p className="mt-5 hidden text-gray-600 lg:block">
-              Whether you're seeking advanced AI software development or custom
-              AI app development services, our team brings deep technical
-              expertise and a results-driven approach. As a top AI app
-              development company, we create intelligent, scalable solutions
-              tailored to diverse industries.
+              Whether you need advanced AI software or tailored AI app
+              development, we bring deep technical expertise and a
+              results-focused mindset. As a top-tier AI development company, we
+              build intelligent, scalable solutions designed to meet the unique
+              needs of businesses across a wide range of industries.
             </p>
           </div>
 
           <div className="mx-auto h-auto p-3 md:mx-0">
             <Image
-              src="/herobg2.jpg"
+              src="/aileadchange.jpg"
               height="400"
               width="700"
               alt="ai-robot"
@@ -377,3 +377,31 @@ function Whychooseus() {
     </div>
   );
 }
+const whychooseheading = {
+  title: 'Why AV Technosys Is Your Ideal AI Development Partner',
+  description:
+    'AV Technosys delivers innovative, scalable AI solutions that help businesses automate, improve efficiency, and grow. Our industry-focused approach ensures every solution aligns with client goals.',
+  image: 'aichoosechange.jpg',
+};
+const whychoosedata = [
+  {
+    title: 'End-to-End AI Expertise',
+    description:
+      'We handle the full AI development cycle from concept to deployment, delivering scalable, forward-thinking solutions aligned with your business goals.',
+  },
+  {
+    title: 'Custom, Scalable Solutions',
+    description:
+      ' Our AI systems are built to match your industry needs and grow with your business, ensuring long-term value.',
+  },
+  {
+    title: 'Cross-Industry Experience',
+    description:
+      ' From healthcare to fintech, we’ve delivered AI solutions across sectors, addressing unique challenges with measurable results.',
+  },
+  {
+    title: 'Quality & Security First',
+    description:
+      ' We follow strict coding standards, data privacy practices, and robust QA to ensure secure, high-performing AI systems you can trust.',
+  },
+];

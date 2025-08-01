@@ -32,19 +32,16 @@ const Whychoosefintechsection = ({ details, heading, imageclass = '' }) => {
           </div>
         </div>
 
-        <div
-          className={cn(
-            'order-1 col-span-6 mx-auto hidden h-full w-full items-center justify-center lg:order-2 lg:col-span-2 lg:flex',
-            imageclass
-          )}
-        >
-          <Image
-            src={`/${heading?.image}`}
-            alt="Payment Mobile Illustration"
-            width={500}
-            height={500}
-            className="w-full max-w-xs rounded-md object-contain transition-transform duration-500 hover:scale-105 sm:max-w-sm md:max-w-96"
-          />
+        <div className="order-1 col-span-6 mx-auto hidden lg:order-2 lg:col-span-2 lg:block">
+          <div className="flex h-full items-center justify-center">
+            <Image
+              src={`/${heading?.image}`}
+              alt="Payment Mobile Illustration"
+              width={500}
+              height={500}
+              className="w-full max-w-xs rounded-md object-contain transition-transform duration-500 hover:scale-105 sm:max-w-sm md:max-w-96"
+            />
+          </div>
         </div>
       </div>
     </section>

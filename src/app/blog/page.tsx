@@ -1,6 +1,10 @@
 import Footer1 from '../footer1';
 
-import { getAllBlogsByPage, getAllBlogsMetaDeta } from './../../../lib/index';
+import {
+  getAdminBlogDataCount,
+  getAllBlogsByPage,
+  getAllBlogsMetaDeta,
+} from './../../../lib/index';
 import { Metadata } from 'next';
 import { NavBarHome } from '@/components/navBar';
 
