@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
+import Chatbot from './chatbot';
+import Whatsapp from './whatsapp';
 
 export const metadata: Metadata = {
   title: {
@@ -94,6 +96,8 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Chatbot />
+        <Whatsapp />
       </body>
     </html>
   );

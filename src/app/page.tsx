@@ -32,8 +32,6 @@ import { CaseStudy } from '@/components/caseStudy';
 import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
-import Chatbot from './chatbot';
-import Whatsapp from './whatsapp';
 import Rating2 from '@/components/rating2';
 
 const Home = () => {
@@ -59,8 +57,7 @@ const Home = () => {
       <BlogSection />
       <Rating2 />
       <Locations />
-      <Chatbot />
-      <Whatsapp />
+
       <Footer1 />
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
     </div>
