@@ -2,6 +2,10 @@ import { NavBarHome } from '@/components/navBar';
 import React from 'react';
 import Footer1 from '../footer1';
 import { Metadata } from 'next';
+import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
+import { ContactUs } from '@/components/contactUs';
+import Rating2 from '@/components/rating2';
+import { Locations } from '@/components/Location';
 
 export const metadata: Metadata = {
   title: {
@@ -32,11 +36,8 @@ const TermsAndConditions = () => {
   return (
     <div>
       <NavBarHome />
+      <HeroSectionfintechAll details={data} />
       <div className="mx-auto mt-12 max-w-5xl px-4 py-10 text-gray-800">
-        <h1 className="mb-6 text-4xl font-bold text-zinc-900">
-          Terms and Conditions
-        </h1>
-
         <p className="mb-6">
           AV Technosys undertakes projects on a Time and Material basis. By
           using our services, you agree to the following terms:
@@ -248,9 +249,18 @@ const TermsAndConditions = () => {
           the contract.
         </p>
       </div>
+      <ContactUs />
+      <Rating2 />
+      <Locations />
       <Footer1 className="border-t" />
     </div>
   );
 };
 
 export default TermsAndConditions;
+const data = {
+  title: 'Terms And Conditions',
+  description: '',
+  image: 'https://ik.imagekit.io/avtechnosys/termshero.jpg',
+  btn: '',
+};
