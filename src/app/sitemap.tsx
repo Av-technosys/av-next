@@ -34,6 +34,8 @@ const servicesAndIndustries = [
   '/pet-care-app-development-company',
   '/veterinary-app-development',
   '/pet-food-delivery-app-development',
+  '/ai-development-company',
+  '/mobile-app-development',
 ];
 
 const paths = [
@@ -46,11 +48,7 @@ const paths = [
   '/blog',
   '/privacy-policy',
   '/terms-and-conditions',
-  '/fintech-app-development',
-  '/ecommerce-app-development',
-  '/real-estate-app-development',
-  '/ai-development-company',
-  '/mobile-app-development',
+  ...servicesAndIndustries,
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
