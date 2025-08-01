@@ -169,7 +169,6 @@ const TiptapEditor = ({ data }) => {
 
       const { data } = await response.json();
       const { url, key } = data;
-      console.log('url', url);
 
       // 2. Upload the file to S3 using PUT
       const upload = await fetch(url, {
@@ -179,10 +178,8 @@ const TiptapEditor = ({ data }) => {
       });
 
       if (upload.ok) {
-        console.log('File uploaded successfully to S3');
         // Optionally store the public URL
         imageUrl = `https://av-blog.s3.ap-south-1.amazonaws.com/${key}`;
-        console.log('imageUrl', imageUrl);
         return imageUrl;
       } else {
         console.error('Failed to upload to S3');
