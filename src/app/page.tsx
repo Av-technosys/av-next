@@ -80,6 +80,12 @@ function HeroSection({ setIsLeadOpen }) {
           src="https://av-blog.s3.ap-south-1.amazonaws.com/hserSection/hero-bg.mp4"
           type="video/mp4"
         />
+        <track
+          src="/captions/video-captions.vtt"
+          kind="captions"
+          label="English"
+          default
+        />
         Your browser does not support the video tag.
       </video>
 
@@ -97,7 +103,7 @@ function HeroSection({ setIsLeadOpen }) {
           </p>
           <div
             onClick={() => setIsLeadOpen(true)}
-            className="flex w-fit cursor-pointer items-center gap-2 rounded-lg bg-yellow-600 p-2 px-4 font-semibold text-white ring-gray-50 hover:bg-transparent hover:ring-2 md:px-5 md:py-3.5"
+            className="flex w-fit cursor-pointer items-center gap-2 rounded-lg bg-yellow-700 p-2 px-4 font-bold text-white ring-gray-50 hover:bg-transparent hover:ring-2 md:px-5 md:py-3.5"
           >
             <p className="text-lg">Consult Our Experts</p>
             <ChevronRight color="white" />

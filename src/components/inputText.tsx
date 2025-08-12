@@ -34,18 +34,20 @@ export function InputText({
         )}
       </AnimatePresence>
 
-      <input
-        type="text"
-        value={value}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={!showLabel ? label : ''}
-        className={cn(
-          'w-full rounded border border-gray-300 px-4 py-3 text-base placeholder-gray-400 focus:border-yellow-500 focus:outline-none',
-          inputClass
-        )}
-      />
+      <label htmlFor="my-inp">
+        <input
+          type="text"
+          value={value}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder={!showLabel ? label : ''}
+          className={cn(
+            'w-full rounded border border-gray-300 px-4 py-3 text-base placeholder-gray-400 focus:border-yellow-500 focus:outline-none',
+            inputClass
+          )}
+        />
+      </label>
     </div>
   );
 }

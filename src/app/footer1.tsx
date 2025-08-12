@@ -43,18 +43,21 @@ const Footer1 = ({ className = '' }) => {
                 <Facebook
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
+                  aria-label="facebook"
                 />
               </Link>
               <Link href={'https://www.instagram.com/avtechnosys/'}>
                 <Instagram
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
+                  aria-label="instagram"
                 />
               </Link>
               <Link href={'https://x.com/AvTechnosys'}>
                 <Twitter
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
+                  aria-label="twitter"
                 />
               </Link>
               <Link
@@ -63,6 +66,7 @@ const Footer1 = ({ className = '' }) => {
                 }
               >
                 <Linkedin
+                  aria-label="linkedin"
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
                 />
