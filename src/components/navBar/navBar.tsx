@@ -56,6 +56,7 @@ export function NavBarHome() {
         {/* Mobile Menu Toggle */}
         <div className="lg:hidden">
           <button
+            aria-label="mobile menu open"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-gray-800"
           >
@@ -82,7 +83,7 @@ export function NavBarHome() {
 
 export function InfoNav() {
   return (
-    <div className="mx-auto flex w-full max-w-screen-2xl flex-col justify-end px-4 py-1 sm:flex-row sm:gap-6">
+    <div className="mx-auto flex w-full max-w-screen-2xl flex-col justify-end gap-3 px-4 py-1 sm:flex-row sm:gap-6">
       <Link
         className="ml-auto flex w-fit items-center gap-2 text-sm hover:underline md:text-base"
         href="mailto:info@avtechnosys.com"

@@ -104,14 +104,14 @@ export const CardIcon = ({ icon, image }) => {
 
 export const CardTitle = ({ className = '', children }) => {
   return (
-    <h4
+    <h3
       className={cn(
         'mt-2 text-xl font-semibold tracking-wide text-white md:mt-4 md:text-2xl',
         className
       )}
     >
       {children}
-    </h4>
+    </h3>
   );
 };
 

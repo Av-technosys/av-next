@@ -30,26 +30,28 @@ const Tabs = () => {
     <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-2">
       <div className="max-h-96 bg-yellow-500 pr-2 text-neutral-900">
         <div className="good-scrollbar flex max-h-72 cursor-pointer list-none flex-col overflow-y-auto scroll-smooth p-3 text-lg md:max-h-[24rem] md:p-4 md:text-xl">
-          {tabs.map((tab, index) => {
-            const Icon = tab.icon;
-            return (
-              <li
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`flex items-center justify-between rounded-md px-4 py-3 font-semibold ${
-                  activeTab === index ? 'bg-white/40 text-gray-700' : ''
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Icon />
-                  {tab.label}
-                </div>
-                {activeTab === index && (
-                  <TArroeRight className="ml-2 size-6 text-gray-700" />
-                )}
-              </li>
-            );
-          })}
+          <ul className="list-none">
+            {tabs.map((tab, index) => {
+              const Icon = tab.icon;
+              return (
+                <li
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`flex items-center justify-between rounded-md px-4 py-3 font-semibold ${
+                    activeTab === index ? 'bg-white/40 text-gray-700' : ''
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon />
+                    {tab.label}
+                  </div>
+                  {activeTab === index && (
+                    <TArroeRight className="ml-2 size-6 text-gray-700" />
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
 
