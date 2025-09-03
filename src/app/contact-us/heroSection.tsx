@@ -18,6 +18,7 @@ import { InputText } from '@/components/inputText';
 import { InputTextArea } from '@/components/inputTextArea';
 import { submitLeadForm } from '../../../lib';
 import { useRouter } from 'next/navigation';
+import { sendLeadMail } from '@/lib/healper';
 
 const iconMap = {
   MessageSquareText,
@@ -48,6 +49,14 @@ export default function Header() {
       setLoading(false);
       return;
     }
+
+    const res = await sendLeadMail({
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+      number: formDetails.number,
+      slug: 'Lead PopUp',
+    });
 
     const response = await submitLeadForm({
       name: formDetails.name,

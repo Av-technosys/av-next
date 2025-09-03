@@ -5,6 +5,7 @@ import { ZContactUser } from '@/ZTypes/contact';
 import { useState } from 'react';
 import { submitLeadForm } from '../../lib';
 import { cn } from '@/lib/utils';
+import { sendLeadMail } from '@/lib/healper';
 
 export function ContactUs() {
   const [formDetails, setFormDetails] = useState({
@@ -26,6 +27,14 @@ export function ContactUs() {
       setLoading(false);
       return;
     }
+
+    const res = await sendLeadMail({
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+      number: formDetails.number,
+      slug: 'Lead PopUp',
+    });
 
     const response = await submitLeadForm({
       name: formDetails.name,

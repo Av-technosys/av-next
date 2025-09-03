@@ -1,19 +1,10 @@
 'use client';
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React from 'react';
 import './Footer.css';
 
-// Phone fild
-import PhoneInput from 'react-phone-input-2';
 import Link from 'next/link';
 
-import {
-  MessageSquareText,
-  MessageCircle,
-  Phone,
-  MapPin,
-  LoaderCircle,
-} from 'lucide-react';
+import { MessageSquareText, MessageCircle, Phone, MapPin } from 'lucide-react';
 import { TChatSupport, TMapPin, TMessage, TPhone } from '@/components/icons';
 
 const iconMap = {
@@ -28,93 +19,6 @@ const handleEmailClick = () => {
 };
 
 const Cldren = () => {
-  const form = useRef();
-  const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [mobileNumber, setMobileNumber] = useState('');
-  const validateForm = (formData) => {
-    let errors: any = {};
-
-    // Validate first name
-    if (!formData.get('first_name')) {
-      errors.first_name = 'First name is required';
-    }
-
-    // Validate last name
-    if (!formData.get('last_name')) {
-      errors.last_name = 'Last name is required';
-    }
-
-    // Validate company name
-    if (!formData.get('from_company')) {
-      errors.company_name = 'Company name is required';
-    }
-
-    // Validate email
-    const email = formData.get('from_email');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email) {
-      errors.email = 'Email is required';
-    } else if (!emailRegex.test(email)) {
-      errors.email = 'Invalid email address';
-    }
-
-    // Validate phone number
-    const phone = formData.get('phone');
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!phone) {
-      errors.phone = 'Phone number is required';
-    } else if (!phoneRegex.test(phone)) {
-      errors.phone = 'Invalid phone number';
-    }
-
-    // Validate message
-    if (!formData.get('message')) {
-      errors.message = 'Message is required';
-    }
-
-    // Validate checkbox
-    const checkbox = formData.get('privacy_policy');
-    if (!checkbox) {
-      errors.checkbox = 'You must agree to the Privacy Policy.';
-    }
-
-    return errors;
-  };
-
-  // Function to send email using EmailJS
-  const sendEmail = (e) => {
-    console.log('form submition start');
-    e.preventDefault();
-    const formData = new FormData(form.current);
-    const validationErrors = validateForm(formData);
-    const data = Object.fromEntries(formData);
-    // console.log(data);
-    const templatePhrase = {
-      from_name: data.from_first_name + ' ' + data.from_last_name,
-      from_email: data.from_email,
-      from_number: mobileNumber,
-      from_company: data.from_company,
-      message: data.message,
-    };
-    // console.log(templatePhrase);
-    emailjs
-      .send('service_tz902dr', 'template_bjzmbng', templatePhrase, {
-        publicKey: '7e3pjCOJgYjLD4Mu-',
-      })
-      .then(
-        (response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          // @ts-ignore
-          e.target.reset();
-          setLoading(false);
-        },
-        (error) => {
-          console.log('FAILED...', error);
-        }
-      );
-  };
-
   return (
     <div className="py-20 pb-0">
       {/* //daisy ui card */}
