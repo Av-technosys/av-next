@@ -18,7 +18,7 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
               className="group rounded-3xl border bg-white p-4 duration-700 hover:scale-105 md:p-8"
             >
               <div className="flex items-center justify-between gap-4">
-                <div className="text-2xl font-semibold uppercase text-gray-800">
+                <div className="text-xl font-semibold uppercase text-gray-800 md:text-3xl">
                   {item.name}
                 </div>
                 <Link

@@ -83,16 +83,16 @@ export function NavBarHome() {
 
 export function InfoNav() {
   return (
-    <div className="mx-auto flex w-full max-w-screen-2xl flex-col justify-end gap-3 px-4 py-1 sm:flex-row sm:gap-6">
+    <div className="mx-auto flex w-full max-w-screen-2xl justify-end gap-3 px-4 py-1 sm:gap-6">
       <Link
-        className="ml-auto flex w-fit items-center gap-2 text-sm hover:underline md:text-base"
+        className="ml-auto flex w-fit items-center gap-2 text-[9px] hover:underline md:text-base"
         href="mailto:info@avtechnosys.com"
       >
         <TEmail className="size-4 text-blue-600 md:size-8" />
         info@avtechnosys.com
       </Link>
       <Link
-        className="ml-auto flex w-fit items-center gap-2 text-sm hover:underline sm:ml-0 md:text-base"
+        className="ml-auto flex w-fit items-center gap-2 text-[9px] hover:underline sm:ml-0 md:text-base"
         href="msteams:/l/chat/0/0?users=akansha@avtechnosys.com"
       >
         <TTeams className="size-4 text-blue-600 md:size-8" />

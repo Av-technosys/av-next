@@ -56,7 +56,7 @@ const Blog = async ({ searchParams }: any) => {
     <div className="pt-3 text-black">
       <NavBarHome />
       <DebounceSearch />
-      <div className="fontTest mx-auto mt-4 max-w-7xl px-6 md:px-4">
+      <div className="fontTest mx-auto mt-10 max-w-7xl px-6 md:px-4">
         <ShowBlogs
           key={String(currentPage + selectedCategory)}
           blogData={blogData?.data}

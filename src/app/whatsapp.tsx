@@ -9,7 +9,7 @@ const Whatsapp = () => {
         href="https://api.whatsapp.com/send/?phone=%2B917877727352&text&type=phone_number&app_absent=0"
         target="_blank"
       >
-        <button className="flex h-14 w-14 items-center justify-center rounded-full bg-green-400 p-2 text-3xl font-bold text-white shadow-xl">
+        <button className="flex h-12 w-12 items-center justify-center rounded-full bg-green-400 p-1 text-3xl font-bold text-white shadow-xl md:h-14 md:w-14 md:p-2">
           <Image
             src="/icons8-whatsapp-48.png"
             alt="whatsapp image"

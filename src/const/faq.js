@@ -1,7 +1,7 @@
 export const homeFaq = [
   {
     value: 'item-1',
-    question: 'What mobile app development services does AV Technosys offer?',
+    question: 'What mobile app services does AV Technosys offer?',
     answer: (
       <>
         <p>
@@ -45,7 +45,7 @@ export const homeFaq = [
   },
   {
     value: 'item-3',
-    question: 'How Do You Ensure the Security of My Data and That of My Users?',
+    question: "How do you ensure my data and user's data security?",
     answer: (
       <p>
         We care about the safety of your data. We use multiple layers of
@@ -78,8 +78,7 @@ export const homeFaq = [
   },
   {
     value: 'item-5',
-    question:
-      'Does AV Technosys offer post-release support and maintenance services?',
+    question: 'Does AV Technosys provide support and maintenance?',
     answer: (
       <p>
         As a leading AI-driven digital transformation company, we provide

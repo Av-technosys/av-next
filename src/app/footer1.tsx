@@ -36,7 +36,7 @@ const Footer1 = ({ className = '' }) => {
                 All Rights Reserved
               </div>
             </div>
-            <div className="mt-4 flex gap-4 text-gray-600 md:ml-auto md:mt-0 md:justify-end">
+            <div className="mb-10 mt-4 flex gap-4 text-gray-600 md:mb-0 md:ml-auto md:mt-0 md:justify-end">
               <Link
                 href={'https://www.facebook.com/profile.php?id=61556941457814'}
               >

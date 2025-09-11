@@ -58,7 +58,7 @@ export function StickyScrollRevealDemo() {
                 />
               </div>
               <div className="w-full md:w-1/2">
-                <h3 className="text-3xl font-medium text-gray-900">
+                <h3 className="text-2xl font-medium text-gray-900 md:text-3xl">
                   {item.title}
                 </h3>
                 <p className="mt-4 text-gray-600">{item.description}</p>

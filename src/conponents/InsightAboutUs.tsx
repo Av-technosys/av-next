@@ -48,7 +48,7 @@ export function InsightAboutUs() {
     <div className="mx-auto w-full max-w-7xl px-4 py-20">
       <SectionHeadingAbout>Learn More About Us</SectionHeadingAbout>
 
-      <div className="mt-12 flex flex-col gap-12 md:flex-row">
+      <div className="mt-4 flex flex-col gap-12 md:mt-12 md:flex-row">
         <div className="grid h-fit w-full grid-cols-3 items-center gap-4 md:w-2/5">
           {awards.map((Item, idx) => {
             return (
@@ -58,7 +58,7 @@ export function InsightAboutUs() {
                   height={300}
                   key={idx}
                   src={`/review/${Item}`}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain p-2 md:p-2"
                   alt=""
                 />
               </div>
@@ -85,12 +85,12 @@ export function InsightAboutUs() {
             {stats.map((item, index) => (
               <div className="w-full space-y-2" key={index}>
                 {item.icon}
-                <p className="text-xl font-semibold leading-6 text-neutral-900">
+                <p className="pl-2 text-xl font-semibold leading-6 text-neutral-900">
                   {item.title}
                   <br className="hidden md:block" />
                   {item.subtitle}
                 </p>
-                <p className="text-sm text-neutral-600">
+                <p className="pl-2 text-sm text-neutral-600">
                   {item.description || '\u00A0'}
                 </p>
               </div>

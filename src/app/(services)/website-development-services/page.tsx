@@ -51,7 +51,6 @@ const Page = () => {
       <Ratings className="md:flex" />
       <LeadingSectionfintechAll details={leadingdata} />
       <Smartsolutionsection
-        className={'bg-gradient-to-b from-white to-yellow-300'}
         heading={Servicesheading}
         details={Servicesdetails}
       />

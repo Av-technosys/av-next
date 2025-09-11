@@ -27,7 +27,7 @@ export default function MissionVisionSection() {
         {/* Left Text Column */}
         <div className="flex flex-1 flex-col gap-8 text-gray-800">
           {content.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="text-center md:text-start">
               <h2 className="text-3xl font-bold text-yellow-500">
                 {item.title}
               </h2>
@@ -43,7 +43,7 @@ export default function MissionVisionSection() {
             alt="Mission Vision Illustration"
             width={600}
             height={500}
-            className="m-auto h-full max-h-[28rem] w-auto rounded-md object-contain"
+            className="m-auto h-full max-h-[20rem] w-auto rounded-md object-contain md:max-h-[28rem]"
           />
         </div>
       </div>
