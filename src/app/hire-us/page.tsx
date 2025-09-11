@@ -293,7 +293,7 @@ function PartnerWithUs() {
             Partner with AV Technosys and unlock world-class development talent.
           </p>
           <Link
-            className="group mt-6 flex w-fit items-center gap-2 rounded bg-yellow-600 px-6 py-3 text-center text-lg font-semibold text-white ring ring-yellow-600 duration-200 hover:bg-transparent"
+            className="group mt-6 flex w-fit items-center gap-2 rounded bg-yellow-600 px-6 py-2 text-center text-lg font-semibold text-white ring ring-yellow-600 duration-200 hover:bg-transparent"
             href="/contact-us"
           >
             Hire Now

@@ -157,7 +157,7 @@ function ServiceSection() {
             items={serviceData}
             iconClassName={'!text-black'}
             cartClassName={
-              '!hover:shadow-gray-500 bg-gradient-to-b from-[#f7f9f8] to-[#cedfde] group-hover:shadow-gray-500 shadow-lg '
+              '!hover:shadow-gray-500 bg-slate-100 group-hover:shadow-gray-500 shadow-lg '
             }
             descriptionClassName={
               'text-neutral-600 leading-relaxed tracking-wide'
@@ -387,21 +387,21 @@ const whychoosedata = [
   {
     title: 'End-to-End AI Expertise',
     description:
-      'We handle the full AI development cycle from concept to deployment, delivering scalable, forward-thinking solutions aligned with your business goals.',
+      'We manage the full AI cycle from idea to deployment with scalable solutions.',
   },
   {
     title: 'Custom, Scalable Solutions',
     description:
-      ' Our AI systems are built to match your industry needs and grow with your business, ensuring long-term value.',
+      'AI systems tailored to your industry and built to grow with your business.',
   },
   {
     title: 'Cross-Industry Experience',
     description:
-      ' From healthcare to fintech, we’ve delivered AI solutions across sectors, addressing unique challenges with measurable results.',
+      'Proven AI solutions across healthcare, fintech, and more with real results.',
   },
   {
     title: 'Quality & Security First',
     description:
-      ' We follow strict coding standards, data privacy practices, and robust QA to ensure secure, high-performing AI systems you can trust.',
+      'Strict standards, data privacy, and QA ensure secure, high-performance AI.',
   },
 ];

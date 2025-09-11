@@ -67,22 +67,22 @@ export function ContactUs() {
       style={{ background: 'linear-gradient(135deg, #F0D099, #FDFFBF)' }}
       className="w-full border-y-4 border-yellow-400 px-4 py-12"
     >
-      <div className="mx-auto grid min-h-96 max-w-7xl grid-cols-1 flex-col items-center justify-between gap-16 md:grid-cols-2 md:gap-4">
-        <div className="space-y-12">
+      <div className="mx-auto grid min-h-96 max-w-7xl grid-cols-1 flex-col items-center justify-between gap-3 md:grid-cols-2 md:gap-4">
+        <div className="space-y-4 md:space-y-12">
           <p
             style={{
               wordSpacing: '0.3rem',
             }}
-            className="text-3xl font-semibold leading-relaxed text-neutral-800 md:text-5xl md:leading-[4rem]"
+            className="text-2xl font-semibold text-neutral-800 md:text-5xl md:leading-[4rem]"
           >
             Our Technology Experts Are Catalysts for Digital Transformation
           </p>
-          <p className="text-2xl font-medium tracking-wider text-neutral-700">
+          <p className="text-xl font-medium tracking-wider text-neutral-700 md:text-2xl">
             Book a Free call with Our Experts and Start Building the Future
             Today.
           </p>
         </div>
-        <div className="relative mx-auto flex h-full w-full max-w-lg flex-col gap-2.5 rounded-3xl bg-white/40 px-6 py-3 pb-4 shadow-2xl shadow-yellow-300 backdrop-blur-md md:ml-auto">
+        <div className="relative mx-auto flex h-full w-full max-w-lg flex-col gap-2.5 rounded-3xl bg-white/40 px-6 py-3 pb-4 shadow-lg shadow-yellow-300 backdrop-blur-md md:ml-auto">
           <InputText
             inputClass="bg-transparent border-yellow-900 focus:border-yellow-700"
             labelClass="bg-yellow-950 rounded px-2 py-0.5 text-xs text-white"

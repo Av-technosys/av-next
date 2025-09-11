@@ -57,7 +57,6 @@ const Home = () => {
       <BlogSection />
       <Rating2 />
       <Locations />
-
       <Footer1 />
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
     </div>
@@ -217,35 +216,35 @@ function PartnerSection() {
   return (
     <div className="w-full border-y-4 border-neutral-600 bg-neutral-800 px-4 py-12 text-white md:py-20 md:pb-24">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-6 md:grid-cols-2">
-        <p className="text-3xl leading-tight tracking-wider sm:text-4xl">
+        <p className="text-xl leading-tight tracking-wider md:text-2xl">
           Strategic Partnerships as a Catalyst for Business Growth{' '}
         </p>
         <div className="mt-8 grid w-full grid-cols-2 items-center justify-end gap-6 sm:grid-cols-4 md:mt-0 md:gap-12">
           <Image
             height={100}
             width={100}
-            className="mx-auto h-10 w-auto md:mx-0 md:h-12"
+            className="mx-auto h-8 w-auto md:mx-0 md:h-12"
             src="/review/aws-partner.svg"
             alt=""
           />
           <Image
             height={100}
             width={100}
-            className="mx-auto h-10 w-auto md:mx-0 md:h-9"
+            className="mx-auto h-8 w-auto md:mx-0 md:h-9"
             src="/review/mongodb-partner.svg"
             alt=""
           />
           <Image
             height={100}
             width={100}
-            className="mx-auto h-10 w-auto md:mx-0 md:h-9"
+            className="mx-auto h-8 w-auto md:mx-0 md:h-9"
             src="/review/cloudinary-partner.svg"
             alt=""
           />
           <Image
             height={100}
             width={100}
-            className="mx-auto h-10 w-auto md:mx-0 md:h-12"
+            className="mx-auto h-8 w-auto md:mx-0 md:h-12"
             src="/review/google-cloud-partner.svg"
             alt=""
           />
@@ -293,7 +292,7 @@ function ExperienceSection() {
     <div className="w-full bg-yellow-50/50 px-4 py-12 md:bg-gradient-to-br md:p-2 md:py-20">
       <div className="mx-auto grid w-full max-w-7xl gap-12 md:grid-cols-12">
         <div className="flex w-full flex-col gap-12 md:col-span-7">
-          <p className="max-w-xl text-3xl font-semibold leading-tight tracking-wider text-gray-800 md:mt-6">
+          <p className="max-w-xl text-center text-3xl font-semibold leading-tight tracking-wider text-gray-800 md:mt-6 md:text-start">
             Why <span className="text-yellow-500">AV Technosys</span> Is the
             Strategic Choice for Your Project
           </p>
@@ -381,7 +380,7 @@ function BookCall({ setIsLeadOpen }) {
           </p>
           <button
             onClick={() => setIsLeadOpen(true)}
-            className="group mt-8 flex w-fit cursor-pointer items-center gap-1 rounded bg-neutral-800 px-6 py-3 font-semibold text-white"
+            className="group mt-8 flex w-fit cursor-pointer items-center gap-1 rounded-md bg-neutral-800 px-6 py-3 font-semibold text-white"
           >
             Book A Free Demo{' '}
             <TArroeRight className="duration-300 group-hover:-rotate-45" />
@@ -483,7 +482,7 @@ function BlogSection() {
           </div>
           <Link
             href={'/blog'}
-            className="group flex h-fit w-fit cursor-pointer items-center gap-2 rounded bg-yellow-500 px-6 py-3 font-medium text-white duration-200 hover:bg-yellow-600"
+            className="group flex h-fit w-fit cursor-pointer items-center gap-2 rounded-md bg-yellow-500 px-6 py-3 font-medium text-white duration-200 hover:bg-yellow-600"
           >
             <p className="font-medium">View All Blogs</p>
             <TArroeRight
@@ -563,7 +562,7 @@ function WhyChooseUs() {
     <div className="w-full px-4 py-16">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
         <div className="relative w-full overflow-hidden">
-          <p className="h-full w-full text-center text-4xl font-extrabold text-neutral-400 md:translate-y-4 md:text-8xl xl:text-[10rem]">
+          <p className="h-full w-full text-center text-4xl font-[900] text-neutral-400 md:translate-y-4 md:text-8xl md:font-extrabold xl:text-[10rem]">
             Why Choose Us
           </p>
           <div className="absolute bottom-0 left-0 h-12 w-full from-white to-transparent md:h-20 md:bg-gradient-to-t"></div>

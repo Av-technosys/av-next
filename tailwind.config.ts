@@ -102,7 +102,7 @@ export default {
     },
     animation: {
       shimmer: 'shimmer 2s linear infinite',
-      slide:'slide 20s linear  infinite;'
+      slide: 'slide 20s linear  infinite;',
     },
     keyframes: {
       shimmer: {
@@ -113,12 +113,11 @@ export default {
           backgroundPosition: '-200% 0',
         },
       },
-       slide: {
-          from: { transform: 'translateX(0%)' },
-          to: { transform: 'translateX(-50%)' },
-        },
+      slide: {
+        from: { transform: 'translateX(100%)' },
+        to: { transform: 'translateX(-100%)' },
+      },
     },
-    
   },
   plugins: [addVariablesForColors, require('tailwindcss-animate')],
 } satisfies Config;

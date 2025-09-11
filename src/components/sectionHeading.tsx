@@ -13,7 +13,7 @@ export const SectionHeading = ({
     >
       <p
         className={cn(
-          'text-center text-3xl font-semibold capitalize leading-normal text-gray-800 md:text-[2.75rem]',
+          'text-center text-2xl font-semibold capitalize leading-normal text-gray-800 md:text-[2.75rem]',
           titleClass
         )}
       >
@@ -21,7 +21,7 @@ export const SectionHeading = ({
       </p>
       <p
         className={cn(
-          'mx-auto mt-4 max-w-3xl text-center text-lg text-gray-700 md:mt-4 md:text-xl md:font-light',
+          'mx-auto mt-4 max-w-3xl text-center text-sm text-gray-700 md:mt-4 md:text-xl md:font-light',
           descClass
         )}
       >

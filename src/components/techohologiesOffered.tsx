@@ -28,8 +28,8 @@ const Tabs = () => {
 
   return (
     <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-2">
-      <div className="max-h-96 bg-yellow-500 pr-2 text-neutral-900">
-        <div className="good-scrollbar flex max-h-72 cursor-pointer list-none flex-col overflow-y-auto scroll-smooth p-3 text-lg md:max-h-[24rem] md:p-4 md:text-xl">
+      <div className="max-h-96 bg-yellow-500 pr-2 pt-5 text-neutral-900 md:pr-0">
+        <div className="good-scrollbar flex max-h-72 cursor-pointer list-none flex-col overflow-y-auto scroll-smooth p-3 text-base md:max-h-[24rem] md:p-4 md:text-xl">
           <ul className="list-none">
             {tabs.map((tab, index) => {
               const Icon = tab.icon;
@@ -37,7 +37,7 @@ const Tabs = () => {
                 <li
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`flex items-center justify-between rounded-md px-4 py-3 font-semibold ${
+                  className={`flex items-center justify-between rounded-md px-4 py-2 font-semibold md:py-3 ${
                     activeTab === index ? 'bg-white/40 text-gray-700' : ''
                   }`}
                 >
@@ -56,8 +56,8 @@ const Tabs = () => {
       </div>
 
       {/* Content */}
-      <div className="hide-scrollbar h-96 justify-between overflow-y-auto bg-white px-4 pb-10 [&>*]:gap-3">
-        <div className="mt-10 grid grid-cols-2 gap-4">
+      <div className="hide-scrollbar h-[20rem] justify-between overflow-y-auto bg-white px-4 pb-10 md:h-96 [&>*]:gap-3">
+        <div className="mt-2 grid grid-cols-2 gap-4 md:mt-10">
           {TechonologyData[activeTab].map((item: any, index: number) => (
             <IconWithName idx={index} item={item} key={item.name} />
           ))}

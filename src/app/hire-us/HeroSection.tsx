@@ -27,16 +27,16 @@ export function HeroSection() {
       <LeadPopUp isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="flex flex-col gap-3">
-          <h1 className="text-5xl font-extrabold text-yellow-900">
-            Hire Dedicated <br /> Developers
+          <h1 className="text-4xl font-extrabold text-yellow-900">
+            Hire Dedicated Developers
           </h1>
 
-          <p className="mt-2 text-xl leading-relaxed tracking-wide text-gray-500">
+          <p className="mt-2 text-lg leading-relaxed tracking-wide text-gray-500">
             Planning your next big project? Hire dedicated developers from AV
             Technosys, a team of experienced professionals committed to turning
             your ideas into reality.
           </p>
-          <ul className="mt-3 space-y-1 pl-2 text-xl font-semibold text-gray-600">
+          <ul className="mt-3 space-y-1 pl-2 text-lg font-semibold text-gray-600">
             {highlights.map((item, idx) => (
               <li
                 key={idx}

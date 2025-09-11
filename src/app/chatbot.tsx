@@ -148,7 +148,7 @@ const Chatbot = () => {
             onClick={() => {
               setIsOpen((prev) => !prev), setchangeBot(false);
             }}
-            className="flex h-14 w-14 animate-float items-center justify-center rounded-full bg-[rgb(202,138,4)] text-3xl font-bold text-white shadow-xl"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-[rgb(202,138,4)] text-3xl font-bold text-white shadow-xl md:h-14 md:w-14"
           >
             {isOpen ? (
               <p>X</p>
@@ -156,7 +156,7 @@ const Chatbot = () => {
               <Image
                 src="/chatboticon.svg"
                 alt="chatbot icon"
-                className="p-3"
+                className="p-3 md:p-3"
                 width={300}
                 height={300}
               />

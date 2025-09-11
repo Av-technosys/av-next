@@ -71,7 +71,9 @@ function Card({ cardData }) {
           <p className="text-3xl font-semibold text-white">{cardData.title}</p>
         </div>
         {/* Desc */}
-        <p className="mt-3 font-light text-gray-200">{cardData.desc}</p>
+        <p className="mt-3 text-sm font-light text-gray-200 md:text-base">
+          {cardData.desc}
+        </p>
         <div className="mt-4 flex flex-wrap items-center gap-4 md:mt-6 md:flex-row md:gap-6">
           <div className="flex flex-col items-center">
             <p className="text-3xl font-medium text-gray-100">
@@ -87,7 +89,7 @@ function Card({ cardData }) {
           </div>
           <div className="flex max-w-40 flex-col">
             <p className="text-sm text-gray-400">Industry</p>
-            <p className="text-lg font-semibold text-gray-100">
+            <p className="text-sm font-semibold text-gray-100 md:text-lg">
               {cardData.industry}
             </p>
           </div>
@@ -132,7 +134,7 @@ function Card({ cardData }) {
       {/* image */}
       <div
         className={cn(
-          'h-64 w-auto shrink-0 rounded-2xl bg-gradient-to-br p-4 md:aspect-square md:h-96',
+          'hidden h-64 w-auto shrink-0 rounded-2xl bg-gradient-to-br p-4 md:block md:aspect-square md:h-96',
           cardData.bgClass
         )}
       >

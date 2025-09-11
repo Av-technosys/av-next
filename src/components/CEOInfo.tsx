@@ -27,7 +27,7 @@ export function CEOInfo() {
             </Link>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center gap-4 md:flex-row md:items-start">
+        <div className="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:items-start">
           <div className="rounded-full bg-yellow-200 p-2">
             <Image
               width={200}
@@ -37,7 +37,7 @@ export function CEOInfo() {
               alt="CEO image"
             />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center justify-center gap-2 pt-3 md:items-start">
             <p className="text-xl font-semibold">Akansha Agrawal</p>
             <p className="font-medium">Founder</p>
             <Link

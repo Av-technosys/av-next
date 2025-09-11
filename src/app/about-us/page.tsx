@@ -92,17 +92,19 @@ function HeroSection() {
   return (
     <div
       style={{
-        backgroundImage: "url('/new/about-bg.jpeg')",
+        backgroundImage:
+          "url('https://ik.imagekit.io/avtechnosys/aboutusbannerabstract.jpg')",
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        backgroundPosition: 'top',
       }}
       className="mx-auto flex h-full max-h-[32rem] w-full flex-col gap-2 px-6 py-24 md:px-4"
     >
       <div className="m-auto flex w-full max-w-3xl flex-col gap-6 py-6">
-        <p className="text-center text-4xl font-semibold text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-5xl">
+        <p className="text-center text-4xl font-semibold text-black md:text-5xl">
           Smart Solutions for Web & Mobile to Elevate Your Business
         </p>
-        <p className="mx-auto max-w-xl text-center text-sm font-medium text-gray-50 drop-shadow-[1px_1px_2px_rgba(0,0,0,0.8)] md:text-base">
+        <p className="mx-auto max-w-xl text-center text-sm font-medium text-black md:text-base">
           Global leaders in mobile app development, offering innovative business
           solutions crafted by expert professionals.
         </p>
