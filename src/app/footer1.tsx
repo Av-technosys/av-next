@@ -221,7 +221,7 @@ const footerData = [
     ],
   },
   {
-    name: 'Product',
+    name: 'Get to Know Us',
     links: [
       {
         name: 'Blog',
@@ -247,3 +247,4 @@ const footerData = [
     ],
   },
 ];
+
