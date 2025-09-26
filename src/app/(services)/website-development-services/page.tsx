@@ -17,6 +17,7 @@ import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { webDevFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Metadata } from 'next';
+import Script from 'next/script';
 import React from 'react';
 
 export const metadata: Metadata = {
@@ -44,9 +45,47 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Best Web Development Company | Web Development Services',
+  url: 'https://www.avtechnosys.com/website-development-services/',
+  description:
+    'Get professional web development services to build a responsive, high-quality website tailored to your business needs.',
+  brand: {
+    '@type': 'Brand',
+    name: 'AVTechnosys',
+    url: 'https://www.avtechnosys.com/',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.avtechnosys.com/assets/images/web-development-main.png',
+  },
+  review: {
+    '@type': 'Review',
+    author: {
+      '@type': 'Organization',
+      name: 'Clutch.co',
+    },
+    datePublished: '2022-01-10T07:13:18+00:00',
+    dateModified: '2025-02-05T12:58:09+00:00',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '4.9',
+      bestRating: '5',
+    },
+  },
+};
+
 const Page = () => {
   return (
     <>
+      <Script
+        id="schema-website-development"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <HeroSectionfintechAll className="" details={data} />
       <Ratings className="md:flex" />
       <LeadingSectionfintechAll details={leadingdata} />

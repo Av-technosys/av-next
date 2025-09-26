@@ -17,6 +17,7 @@ import { mobileServiceFAQ } from '@/const';
 import { Metadata } from 'next';
 import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
@@ -40,26 +41,73 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Top Mobile App Development Company in India & USA',
+  url: 'https://www.avtechnosys.com/mobile-app-development/',
+  description:
+    'Looking for skilled app developers in the USA and India? Get custom-built mobile solutions designed for your business success.',
+  brand: {
+    '@type': 'Brand',
+    name: 'AVTechnosys',
+    url: 'https://www.avtechnosys.com/',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.avtechnosys.com/assets/images/mobile-app-banner.png',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: 'https://www.avtechnosys.com/mobile-app-development/',
+    price: '5000',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+  },
+  review: {
+    '@type': 'Review',
+    author: {
+      '@type': 'Organization',
+      name: 'Clutch.co',
+    },
+    datePublished: '2022-01-10T07:13:18+00:00',
+    dateModified: '2025-02-05T12:58:09+00:00',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '4.9',
+      bestRating: '5',
+    },
+  },
+};
+
 const Page = () => {
   return (
-    <div className="text-neutral-800">
-      <HeroSection />
-      <TopCompanies />
-      <FroMultipalPlatform />
-      <ServiceForVariousPlatrorm />
-      <AppDevelopmentStack />
-      <TechnologiesOffered />
-      <WhyChooseUs />
-      <RevenueHighlightSection />
-      <AppDevelopmentProcess />
-      <CustomMobileSection />
-      <HireDevelopersSection />
-      <FaqAccordion data={mobileServiceFAQ} />
-      <ContactUs />
-      <BlogSection />
-      <Rating2 />
-      <Locations />
-    </div>
+    <>
+      <Script
+        id="schema-mobile-app-development"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <div className="text-neutral-800">
+        <HeroSection />
+        <TopCompanies />
+        <FroMultipalPlatform />
+        <ServiceForVariousPlatrorm />
+        <AppDevelopmentStack />
+        <TechnologiesOffered />
+        <WhyChooseUs />
+        <RevenueHighlightSection />
+        <AppDevelopmentProcess />
+        <CustomMobileSection />
+        <HireDevelopersSection />
+        <FaqAccordion data={mobileServiceFAQ} />
+        <ContactUs />
+        <BlogSection />
+        <Rating2 />
+        <Locations />
+      </div>
+    </>
   );
 };
 

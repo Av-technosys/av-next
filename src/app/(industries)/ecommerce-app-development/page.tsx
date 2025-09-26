@@ -21,6 +21,7 @@ import Testimonial from '@/components/Testimonial';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Locations } from '@/components/Location';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
@@ -45,9 +46,54 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Ecommerce App Development Services for Your Business',
+  url: 'https://www.avtechnosys.com/ecommerce-app-development/',
+  description:
+    'Grow your online store with AV Technosys’ ecommerce app development services. Hire expert developers for custom, user-friendly apps that boost sales.',
+  brand: {
+    '@type': 'Brand',
+    name: 'AV Technosys',
+    url: 'https://www.avtechnosys.com/',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.avtechnosys.com/assets/images/ecommerce-banner.png',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: 'https://www.avtechnosys.com/ecommerce-app-development/',
+    price: '5000',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+  },
+  review: {
+    '@type': 'Review',
+    author: {
+      '@type': 'Organization',
+      name: 'Clutch.co',
+    },
+    datePublished: '2022-01-10T07:13:18+00:00',
+    dateModified: '2025-02-05T12:58:09+00:00',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '4.9',
+      bestRating: '5',
+    },
+  },
+};
+
 const Page = () => {
   return (
     <>
+      <Script
+        id="schema-ecommerce-app-development"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <EcommerceHero />
       <EmpoweringEcommerce />
       <EndToEndSolution />
