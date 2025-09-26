@@ -57,14 +57,47 @@ const inter = Inter({
   weight: '400',
   subsets: ['latin'],
 });
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'AV Technosys : Top Website And Mobile App Development Company',
+    url: 'https://www.avtechnosys.com/',
+    description:
+      'AV Technosys is a mobile app development and web development company, building world-class high-performing mobile applications and web apps.',
+    provider: {
+      '@type': 'Organization',
+      name: 'AVTechnosys',
+      url: 'https://clutch.co/profile/avtechnosys#highlights',
+    },
+    image: 'https://ik.imagekit.io/avtechnosys/new-logo.png',
+    review: {
+      '@type': 'Review',
+      datePublished: '2022-01-10',
+      dateModified: '2025-02-05',
+      author: {
+        '@type': 'Organization',
+        name: 'Clutch.co',
+        url: 'https://clutch.co/profile/avtechnosys',
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.9',
+        bestRating: '5',
+        worstRating: '1',
+      },
+    },
+  };
+
   return (
     <html lang="en">
       <head>
+        {/* Microsoft Clarity */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(c,l,a,r,i,t,y){
@@ -86,9 +119,17 @@ export default function RootLayout({
           name="dmca-site-verification"
           content="TjFlbHU5SmZnSFQ2UjV2TXp5Ti9sWGVaazEvR1JQRjBnR1pPQzlEM0JRYz01"
         />
+
+        {/* JSON-LD Schema Markup */}
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       </head>
-      <body className={` ${inter.className} scroll-smooth antialiased`}>
-        {/* Google Analytics Scripts */}
+      <body className={`${inter.className} scroll-smooth antialiased`}>
+        {/* Google Analytics */}
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-CG4YB8XJ0P`}

@@ -20,6 +20,7 @@ import { Locations } from '@/components/Location';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import TopCompanies from '../mobile-app-development/TopCompanies';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
@@ -44,9 +45,47 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'AI Agent Development Services by Industry Experts',
+  url: 'https://www.avtechnosys.com/ai-agent-development-company/',
+  description:
+    'AV Technosys builds smart AI agents to transform your business. Connect with us today.',
+  brand: {
+    '@type': 'Brand',
+    name: 'AV Technosys',
+    url: 'https://www.avtechnosys.com/',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.avtechnosys.com/assets/images/ai-agent_banner.png',
+  },
+  review: {
+    '@type': 'Review',
+    author: {
+      '@type': 'Organization',
+      name: 'Clutch.co',
+    },
+    datePublished: '2022-01-10T07:13:18+00:00',
+    dateModified: '2025-02-05T12:58:09+00:00',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '4.9',
+      bestRating: '5',
+    },
+  },
+};
+
 const Page = () => {
   return (
     <>
+      <Script
+        id="schema-ai-agent-development"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <HeroSectionAiAgent />
       <TopCompanies className="py-8" />
       <TransformAiSection />
