@@ -73,12 +73,12 @@ function Card({
 }
 
 const cardData = [
-  {
-    msg: 'AV Technosys turned our ideas into a seamless digital solution. Their team was reliable, responsive, and easy to work with. We truly valued their professionalism, attention to detail, and collaborative spirit throughout the project.',
-    name: 'Earl Duncan',
-    position: 'Founder, S4 Digi – Digital Marketing',
-    img: '/earlcan.png',
-  },
+  // {
+  //   msg: 'AV Technosys turned our ideas into a seamless digital solution. Their team was reliable, responsive, and easy to work with. We truly valued their professionalism, attention to detail, and collaborative spirit throughout the project.',
+  //   name: 'Earl Duncan',
+  //   position: 'Founder, S4 Digi – Digital Marketing',
+  //   img: '/earlcan.png',
+  // },
   {
     msg: 'Our app has seen a noticeable boost in user engagement since launch. AV Technosys delivered a high-quality product tailored to our needs. The team was efficient, responsive, and easy to collaborate with. We’re very satisfied with the results and their overall professionalism.',
     name: 'Nitin',
