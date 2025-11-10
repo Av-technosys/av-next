@@ -7,6 +7,7 @@ import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import { SectionHeading } from '@/components/sectionHeading';
 import { Description } from '@radix-ui/react-dialog';
 import Footer1 from '@/app/footer1';
+import ProductsHomeBanner from '@/components/productsHomeBanner';
 
 const Page = () => {
   const features = [
@@ -30,7 +31,7 @@ const Page = () => {
     },
   ];
 
-  const featureCards = [
+  const featureCards = [  
     {
       image: '/mainFeaturesCard1-productPage.png',
       title: 'Analytics',
@@ -63,23 +64,15 @@ const Page = () => {
     },
   ];
 
+  const homeBannerImages={
+    image1:"/mainheroproduct.png",
+    image2:"/productgirlHero.png"
+  }
+
   return (
     <>
       <NavBarHome />
-      <div className="relative mx-auto flex h-48 max-w-7xl items-center justify-center md:h-96">
-        <Image
-          src={'/mainheroproduct.png'}
-          fill={true}
-          alt="asdf"
-          className="absolute -z-10 h-full w-full object-cover"
-        />
-        <Image
-          src={'/productgirlHero.png'}
-          fill={true}
-          alt="asdf"
-          className="absolute inset-0 -z-10 mx-auto h-full !w-10/12 translate-y-[60%] rounded-md object-cover"
-        />
-      </div>
+      <ProductsHomeBanner  homeBannerImages={homeBannerImages}/>
       <div className="!h-[7rem] w-full md:!h-[18rem]"></div>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 sm:grid-cols-2 sm:px-6">
         <div className="order-1 flex items-center justify-center sm:order-2">

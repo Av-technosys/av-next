@@ -41,6 +41,7 @@ const Home = () => {
     <div className="relative h-full min-h-screen w-full bg-white">
       <InfoNav />
       <NavBarHome />
+      
       <HeroSection setIsLeadOpen={setIsLeadOpen} />
       <Ratings />
       <AISection setIsLeadOpen={setIsLeadOpen} />
