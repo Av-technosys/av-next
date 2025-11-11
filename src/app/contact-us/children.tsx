@@ -86,7 +86,7 @@ function ContactUsCards({ data }: { data: ContactUsCard }) {
       <div className="mx-auto h-fit w-fit">
         <IconComponent size={32} />
       </div>
-      <div className="flex flex-col gaCall Usp-0 text-center">
+      <div className="flex flex-col gap-0 text-center">
         <h2 className="text-2xl font-medium">{data.title}</h2>
         <p className="text-gray-500">{data.description}</p>
         <Link
