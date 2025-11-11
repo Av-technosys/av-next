@@ -22,7 +22,7 @@ export function FaqAccordion({ data = null, desc = null }: any) {
       >
         {(data || homeFaq).map((item) => (
           <Item key={item.value} value={item.value}>
-            <Heading>{item.question}</Heading>
+            <Heading><h3>{item.question}</h3></Heading>
             <Answer>{item.answer}</Answer>
           </Item>
         ))}

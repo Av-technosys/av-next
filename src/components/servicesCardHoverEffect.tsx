@@ -59,7 +59,7 @@ export const HoverEffect = ({
               <CardIcon icon={item.icon} image={item.img} />
             )}
 
-            <CardTitle className={titleClassName}>{item.name}</CardTitle>
+            <CardTitle className={titleClassName}><h3>{item.name}</h3></CardTitle>
             <CardDescription className={descriptionClassName}>
               {item.description}
             </CardDescription>
@@ -117,13 +117,13 @@ export const CardTitle = ({ className = '', children }) => {
 
 export const CardDescription = ({ className = '', children }) => {
   return (
-    <p
+    <h3
       className={cn(
         'mt-4 leading-relaxed tracking-wide text-gray-300 md:mt-8',
         className
       )}
     >
       {children}
-    </p>
+    </h3>
   );
 };

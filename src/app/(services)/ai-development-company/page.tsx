@@ -22,7 +22,7 @@ import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Advanced AI Development Services - AV Technosys',
+    absolute: 'Advanced AV Technosys',
   },
   description:
     'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',

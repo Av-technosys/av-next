@@ -100,9 +100,9 @@ export default function Header() {
       <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
       <div className="m-auto flex w-full max-w-7xl flex-col justify-between gap-12 px-4 py-16 md:flex-row md:gap-6 md:px-8">
         <div className="flex w-full flex-col gap-4 md:max-w-md md:gap-12">
-          <p className="text-center text-5xl font-bold leading-[64px] text-white md:text-left">
+          <h1 className="text-center text-5xl font-bold leading-[64px] text-white md:text-left">
             Launch Your Digital Journey Today
-          </p>
+          </h1>
           <p className="text-center text-xl text-gray-50 md:text-left">
             Get answers to all of your inquiries from our business development
             team.

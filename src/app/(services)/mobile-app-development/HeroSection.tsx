@@ -7,9 +7,9 @@ export function HeroSection() {
   return (
     <div className="px- mx-auto flex max-w-7xl flex-col items-center gap-4 py-16 sm:px-6 md:py-24">
       <LeadPopUp isOpen={isLeadPopUpOpen} setIsOpen={setIsLeadPopUpOpen} />
-      <h2 className="text-center text-3xl font-semibold text-neutral-800 lg:text-5xl">
+      <h1 className="text-center text-3xl font-semibold text-neutral-800 lg:text-5xl">
         Mobile App Development Company
-      </h2>
+      </h1>
       <p className="mx-auto mt-2 max-w-3xl text-center text-lg text-neutral-500">
         AV Technosys delivers high-performance, user-centric mobile apps for all
         industries, native or cross-platform. From concept to launch, we build

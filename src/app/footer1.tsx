@@ -62,7 +62,7 @@ const Footer1 = ({ className = '' }) => {
               </Link>
               <Link
                 href={
-                  'https://www.linkedin.com/company/av-technosys/mycompany/'
+                  'https://www.linkedin.com/company/av-technosys/'
                 }
               >
                 <Linkedin

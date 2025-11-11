@@ -58,7 +58,7 @@ export default function HireDevelopersSection() {
               key={index}
               className={`flex items-center justify-between rounded-full px-5 py-3 text-sm font-semibold text-white ${dev.bg} shadow-md transition-all hover:scale-105`}
             >
-              {dev.name}
+              <h4>{dev.name}</h4>
               <span className="ml-3 flex h-7 w-7 items-center justify-center rounded-full bg-white text-gray-800">
                 &raquo;
               </span>

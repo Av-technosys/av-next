@@ -101,9 +101,9 @@ function HeroSection() {
       className="mx-auto flex h-full max-h-[32rem] w-full flex-col gap-2 px-6 py-24 md:px-4"
     >
       <div className="m-auto flex w-full max-w-3xl flex-col gap-6 py-6">
-        <p className="text-center text-4xl font-semibold text-black md:text-5xl">
+        <h1 className="text-center text-4xl font-semibold text-black md:text-5xl">
           Smart Solutions for Web & Mobile to Elevate Your Business
-        </p>
+        </h1>
         <p className="mx-auto max-w-xl text-center text-sm font-medium text-black md:text-base">
           Global leaders in mobile app development, offering innovative business
           solutions crafted by expert professionals.
@@ -209,7 +209,7 @@ function OuvrValueCard({ data }: any) {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <p className="text-lg font-medium text-neutral-900">{data.title}</p>
+        <h3 className="text-lg font-medium text-neutral-900">{data.title}</h3>
         <p className="text-sm tracking-wide text-neutral-500">
           {data.description}
         </p>

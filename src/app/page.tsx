@@ -472,9 +472,9 @@ function BlogSection() {
       <div className="mx-auto max-w-7xl text-black">
         <div className="mb-8 flex flex-col justify-between gap-4 xl:flex-row xl:items-center">
           <div>
-            <p className="mb-2 text-3xl font-semibold capitalize">
+            <h4 className="mb-2 text-3xl font-semibold capitalize">
               Our Latest Blogs
-            </p>
+            </h4>
             <p className="text-xl text-gray-600">
               Get the most recent information on trends, technology, and
               development insights.
@@ -562,9 +562,9 @@ function WhyChooseUs() {
     <div className="w-full px-4 py-16">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
         <div className="relative w-full overflow-hidden">
-          <p className="h-full w-full text-center text-4xl font-[900] text-neutral-400 md:translate-y-4 md:text-8xl md:font-extrabold xl:text-[10rem]">
+          <h3 className="h-full w-full text-center text-4xl font-[900] text-neutral-400 md:translate-y-4 md:text-8xl md:font-extrabold xl:text-[10rem]">
             Why Choose Us
-          </p>
+          </h3>
           <div className="absolute bottom-0 left-0 h-12 w-full from-white to-transparent md:h-20 md:bg-gradient-to-t"></div>
         </div>
         <div className="space-y-6 rounded-3xl border bg-gray-50 px-6 py-4 md:py-12">
