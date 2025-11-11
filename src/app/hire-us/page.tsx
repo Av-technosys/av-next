@@ -103,9 +103,9 @@ const DedicatedDevelopersSection = () => {
         <div className="flex flex-col gap-8 lg:flex-row">
           {/* Left content */}
           <div className="lg:w-1/2">
-            <p className="text-2xl font-semibold sm:text-3xl md:leading-normal">
+            <h2 className="text-2xl font-semibold sm:text-3xl md:leading-normal">
               Hire the Right Talent to Bring Your Vision to Life
-            </p>
+            </h2>
             <p className="mt-6 text-gray-700">
               When you partner with AV Technosys, you tap into a diverse pool of
               specialized developers to meet your unique project needs. Our
@@ -289,9 +289,9 @@ function PartnerWithUs() {
         />
         <div className=""></div>
         <div className="flex flex-col items-center gap-4 px-6 py-12 xl:col-span-2">
-          <p className="mx-auto w-full text-center text-3xl font-medium leading-tight tracking-wide text-gray-200 md:text-4xl">
+          <h2 className="mx-auto w-full text-center text-3xl font-medium leading-tight tracking-wide text-gray-200 md:text-4xl">
             Partner with AV Technosys and unlock world-class development talent.
-          </p>
+          </h2>
           <Link
             className="group mt-6 flex w-fit items-center gap-2 rounded bg-yellow-600 px-6 py-2 text-center text-lg font-semibold text-white ring ring-yellow-600 duration-200 hover:bg-transparent"
             href="/contact-us"

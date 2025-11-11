@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'Explore current job openings and grow your career with a leading mobile app development company.',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/travel-app-development-company/',
+    canonical: 'https://www.avtechnosys.com/career/',
   },
 
   robots: {

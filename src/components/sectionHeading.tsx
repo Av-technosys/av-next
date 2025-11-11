@@ -11,14 +11,14 @@ export const SectionHeading = ({
     <div
       className={cn('mx-auto w-full max-w-7xl px-2 py-8 md:py-12', className)}
     >
-      <p
+      <h3
         className={cn(
           'text-center text-2xl font-semibold capitalize leading-normal text-gray-800 md:text-[2.75rem]',
           titleClass
         )}
       >
         {title}
-      </p>
+      </h3>
       <p
         className={cn(
           'mx-auto mt-4 max-w-3xl text-center text-sm text-gray-700 md:mt-4 md:text-xl md:font-light',

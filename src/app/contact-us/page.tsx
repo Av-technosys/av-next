@@ -6,7 +6,7 @@ import { NavBarHome } from '@/components/navBar';
 import Header from './heroSection';
 import { CEOInfo } from '@/components/CEOInfo';
 import { Locations } from '@/components/Location';
-import { InsightAboutUs } from '@/conponents/InsightAboutUs';
+
 
 export const metadata: Metadata = {
   title: {
@@ -38,7 +38,6 @@ const ContactUs = () => {
       <Header />
       <CEOInfo />
       <Cldren />
-      <InsightAboutUs />
       <Locations />
       <Footer1 className="mt-0 border-t" />
     </div>

@@ -44,7 +44,7 @@ export const HireDevelopersSection = () => {
           onClick={() => setIsOpen(true)}
           className="rounded-md bg-gradient-to-r from-pink-500 to-orange-400 px-6 py-3 font-semibold text-white shadow-md transition hover:opacity-90"
         >
-          Hire App Developers
+         <h4> Hire App Developers</h4>
         </motion.button>
       </div>
     </div>

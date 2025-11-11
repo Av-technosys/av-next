@@ -49,9 +49,9 @@ export default function HiringSteps() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-lg font-bold text-yellow-700 shadow-inner">
                   {step.number}
                 </div>
-                <h3 className="text-left text-lg font-semibold text-gray-800">
+                <h4 className="text-left text-lg font-semibold text-gray-800">
                   {step.title}
-                </h3>
+                </h4>
               </div>
               <p className="mt-4 text-sm text-gray-600">{step.description}</p>
             </div>
