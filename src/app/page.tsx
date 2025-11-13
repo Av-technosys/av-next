@@ -166,10 +166,28 @@ function AISection({ setIsLeadOpen }) {
 
   return (
     <div className="w-full px-3 py-8 pb-24 md:px-4">
-      <SectionHeading
-        title="Grow more quickly with cutting-edge technology"
-        desc="Innovative technologies are transforming app development, enabling smarter solutions and business growth"
-      />
+
+
+          <div
+            className={cn('mx-auto w-full max-w-7xl px-2 py-8 md:py-12')}
+          >
+            <h2
+              className={cn(
+                'text-center text-2xl font-semibold capitalize leading-normal text-gray-800 md:text-[2.75rem]',
+                
+              )}
+            >
+              Grow more quickly with cutting-edge technology
+            </h2>
+            <p
+              className={cn(
+                'mx-auto mt-4 max-w-3xl text-center text-sm text-gray-700 md:mt-4 md:text-xl md:font-light',
+                
+              )}
+            >
+             Innovative technologies are transforming app development, enabling smarter solutions and business growth
+            </p>
+          </div>
 
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-6 rounded-3xl bg-zinc-800 px-6 py-8 text-white md:px-10 lg:flex-row">
         <div className="flex flex-col gap-4">
