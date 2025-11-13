@@ -33,9 +33,9 @@ export function WhyChooseUs() {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
         {/* Section Heading */}
         <div className="relative w-full overflow-hidden">
-          <p className="h-full w-full text-center text-4xl font-extrabold text-neutral-400 md:translate-y-4 md:text-8xl xl:text-[9.6rem]">
+          <h3 className="h-full w-full text-center text-4xl font-extrabold text-neutral-400 md:translate-y-4 md:text-8xl xl:text-[9.6rem]">
             Why Choose Us
-          </p>
+          </h3>
           <div className="absolute bottom-0 left-0 h-12 w-full bg-gradient-to-t from-white to-transparent md:h-20"></div>
         </div>
 
