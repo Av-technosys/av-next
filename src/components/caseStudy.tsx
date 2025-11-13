@@ -6,7 +6,7 @@ export const CaseStudy = ({ className = '' }) => {
   return (
     <div className={cn('w-full p-1 py-12 pb-20 sm:px-2', className)}>
       <SectionHeading
-        title="We build impactful mobile and web apps"
+        title="We Create Powerful and User-focused Mobile and Web Apps"
         desc=" Here is how we have created a success story for brands dreaming big and something exceptional."
       />
       <div className="mx-auto w-full max-w-7xl px-1">

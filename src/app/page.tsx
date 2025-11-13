@@ -173,9 +173,9 @@ function AISection({ setIsLeadOpen }) {
 
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-6 rounded-3xl bg-zinc-800 px-6 py-8 text-white md:px-10 lg:flex-row">
         <div className="flex flex-col gap-4">
-          <p className="text-3xl font-semibold md:text-4xl">
+          <h3 className="text-3xl font-semibold md:text-4xl">
             Artificial Intelligence
-          </p>
+          </h3>
           <p className="text-lg font-light text-gray-300 md:text-xl">
             AI transforms user interactions and business processes, making your
             app intelligent, adaptive, and automating tasks seamlessly. It
@@ -344,11 +344,11 @@ function TechnologiesOffered() {
     // <div className="w-full bg-[#1c1c1e]">
     <div className="w-full border-y-4 border-blue-300 bg-gradient-to-r from-[#0078F0] to-neutral-800">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-12 sm:gap-6 md:py-20">
-        <h1 className="py-4 text-3xl font-medium leading-tight tracking-wider text-gray-200 sm:text-4xl md:text-5xl">
+        <p className="py-4 text-3xl font-medium leading-tight tracking-wider text-gray-200 sm:text-4xl md:text-5xl">
           Build Smarter with Advanced, <br />
           Reliable{' '}
           <span className="font-semibold text-white">Technologies</span>
-        </h1>
+        </p>
         <Tabs />
       </div>
     </div>

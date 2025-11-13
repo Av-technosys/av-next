@@ -15,7 +15,7 @@ export function TechnologiesOffered({
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-12 sm:gap-6 md:py-20">
-        <h1
+        <p
           className={cn(
             'py-4 text-3xl font-medium leading-tight tracking-wider text-gray-200 sm:text-4xl md:text-5xl',
             childclass
@@ -24,7 +24,7 @@ export function TechnologiesOffered({
           Build Smarter with Advanced <br />
           Reliable{' '}
           <span className="font-semibold text-white">Technologies</span>
-        </h1>
+        </p>
         <Tabs />
       </div>
     </div>
