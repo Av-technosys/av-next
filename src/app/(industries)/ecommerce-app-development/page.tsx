@@ -453,9 +453,9 @@ const WhatMakesUsSection = () => {
     <section className="bg-gradient-to-br from-white via-purple-50 to-orange-100">
       <div className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+          <h3 className="mb-4 text-3xl font-bold md:text-4xl">
             Why Choose Us as Your E-commerce Development Partner?
-          </h2>
+          </h3>
           <p className="mx-auto max-w-3xl text-gray-600">
             Find out why businesses trust AV Technosys for ecommerce
             development. Our customised solutions and expert strategies drive

@@ -81,9 +81,9 @@ function IconWithName({ idx, item }: { item: any; idx: number }) {
             width={100}
             alt="technology_image"
           />
-          <h1 className="my-auto font-medium text-gray-800 md:text-xl">
+          <p className="my-auto font-medium text-gray-800 md:text-xl">
             {item.name}
-          </h1>
+          </p>
         </motion.div>
       </AnimatePresence>
     </>
