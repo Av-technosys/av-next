@@ -10,7 +10,7 @@ export function Locations() {
               width={300}
               height={300}
               src="/review/hq-india.svg"
-              alt=""
+              alt="location-image"
               className="h-full w-full object-contain"
             />
           </div>
@@ -28,7 +28,7 @@ export function Locations() {
               width={300}
               height={300}
               src="/review/hq-uk.svg"
-              alt=""
+              alt="location-image"
               className="h-full w-full object-contain"
             />
           </div>
@@ -45,7 +45,7 @@ export function Locations() {
               width={300}
               height={300}
               src="/review/hq-uae.svg"
-              alt=""
+              alt="location-image"
               className="h-full w-full object-contain"
             />
           </div>

@@ -6,6 +6,11 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { IconBrandX } from '@tabler/icons-react';
+import {
+  TIconBrandPinterestFilled,
+  TIconBrandYoutube,
+} from '@/components/icons';
 
 const Footer1 = ({ className = '' }) => {
   return (
@@ -54,18 +59,28 @@ const Footer1 = ({ className = '' }) => {
                 />
               </Link>
               <Link href={'https://x.com/AvTechnosys'}>
-                <Twitter
+                <IconBrandX
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
                   aria-label="twitter"
                 />
               </Link>
-              <Link
-                href={
-                  'https://www.linkedin.com/company/av-technosys/'
-                }
-              >
+              <Link href={'https://www.linkedin.com/company/av-technosys/'}>
                 <Linkedin
+                  aria-label="linkedin"
+                  className="cursor-pointer duration-200 hover:scale-125"
+                  size={22}
+                />
+              </Link>
+              <Link href={'https://www.youtube.com/@AV_Technosys'}>
+                <TIconBrandYoutube
+                  aria-label="linkedin"
+                  className="cursor-pointer duration-200 hover:scale-125"
+                  size={22}
+                />
+              </Link>
+              <Link href={'https://in.pinterest.com/avtechnosys/'}>
+                <TIconBrandPinterestFilled
                   aria-label="linkedin"
                   className="cursor-pointer duration-200 hover:scale-125"
                   size={22}
@@ -247,4 +262,3 @@ const footerData = [
     ],
   },
 ];
-

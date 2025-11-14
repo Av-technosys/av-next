@@ -66,7 +66,7 @@ function Card({ cardData }) {
             width={100}
             className="size-12 rounded-md md:size-16"
             src={cardData.logo}
-            alt=""
+            alt={cardData.title}
           />
           <p className="text-3xl font-semibold text-white">{cardData.title}</p>
         </div>
@@ -103,7 +103,7 @@ function Card({ cardData }) {
                 height={250}
                 src="/google_play_store.webp"
                 className="h-24 w-auto max-w-28 object-contain"
-                alt=""
+                alt="casestudy-image"
               />
             )}
             {cardData.isAppStoreAvailable && (
@@ -112,7 +112,7 @@ function Card({ cardData }) {
                 height={250}
                 src="/app_store.webp"
                 className="h-24 w-auto max-w-28 object-contain"
-                alt=""
+                alt="casestudy-image"
               />
             )}
           </div>
@@ -143,7 +143,7 @@ function Card({ cardData }) {
           height={400}
           src={cardData.image}
           className="h-full w-full object-contain"
-          alt=""
+          alt="casestudy-image"
         />
       </div>
     </div>

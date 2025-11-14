@@ -87,7 +87,7 @@ function ContactUsCards({ data }: { data: ContactUsCard }) {
         <IconComponent size={32} />
       </div>
       <div className="flex flex-col gap-0 text-center">
-        <h2 className="text-2xl font-medium">{data.title}</h2>
+        <p className="text-2xl font-medium">{data.title}</p>
         <p className="text-gray-500">{data.description}</p>
         <Link
           href={data.link}

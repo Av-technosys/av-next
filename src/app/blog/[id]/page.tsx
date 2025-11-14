@@ -114,7 +114,7 @@ const Page = async (context: any) => {
             width={500}
             src={convertS3ToImageKit(blogData.image)}
             className="h-auto w-full object-contain"
-            alt=""
+            alt="image"
           />
 
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
@@ -124,7 +124,7 @@ const Page = async (context: any) => {
                 width={64}
                 src={convertS3ToImageKit(blogData.userImage as string)}
                 className="rounded-full"
-                alt=""
+                alt="image"
               />
               <div className="flex flex-col justify-center gap-1">
                 <span className="text-xl font-semibold">

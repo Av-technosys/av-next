@@ -39,6 +39,8 @@ import {
   IconUsersGroup,
   IconWorld,
   IconWorldCode,
+  IconBrandYoutube,
+  IconBrandPinterestFilled,
 } from '@tabler/icons-react';
 
 export function TUser(props) {
@@ -52,6 +54,12 @@ export function TFacebook(props) {
 }
 export function TX(props) {
   return <IconBrandX color="blue" {...props} />;
+}
+export function TIconBrandYoutube(props) {
+  return <IconBrandYoutube {...props} />;
+}
+export function TIconBrandPinterestFilled(props) {
+  return <IconBrandPinterestFilled {...props} />;
 }
 export function TArroeRight(props) {
   return <IconArrowRight {...props} />;

@@ -11,9 +11,9 @@ export function CEOInfo() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 md:flex-row md:px-8">
         <div className="w-full">
           <div className="flex w-full max-w-md flex-col gap-4 md:gap-6">
-            <h4 className="text-2xl font-medium md:text-4xl">
+            <h2 className="text-2xl font-medium md:text-4xl">
               Startup idea in mind? Let's validate it together.
-            </h4>
+            </h2>
 
             <p className="md:text-xl">
               Let us share our honest thoughts with you.

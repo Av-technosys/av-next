@@ -409,7 +409,7 @@ function ExperienceSection() {
             height={500}
             className="h-full w-full rounded-md object-cover"
             src="/experience-img.png"
-            alt=""
+            alt="experience-image"
           />
         </div>
       </div>

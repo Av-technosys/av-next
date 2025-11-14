@@ -63,7 +63,7 @@ export default function PortfolioCrousel({ headingClass = '' }) {
                             height={100}
                             src={`/icons/${item}.bin`}
                             className="size-6 rounded-full"
-                            alt=""
+                            alt="portfolio-image"
                           />
                         </div>
                       );
@@ -85,7 +85,7 @@ export default function PortfolioCrousel({ headingClass = '' }) {
                             height={300}
                             src={convertS3ToImageKit(image)}
                             className="h-auto max-h-72 w-full rounded-md object-contain"
-                            alt=""
+                            alt="portfolio-image"
                           />
                         </div>
                       );

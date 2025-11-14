@@ -117,13 +117,13 @@ export const CardTitle = ({ className = '', children }) => {
 
 export const CardDescription = ({ className = '', children }) => {
   return (
-    <h3
+    <p
       className={cn(
         'mt-4 leading-relaxed tracking-wide text-gray-300 md:mt-8',
         className
       )}
     >
       {children}
-    </h3>
+    </p>
   );
 };

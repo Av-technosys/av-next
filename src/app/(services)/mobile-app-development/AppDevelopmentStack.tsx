@@ -102,7 +102,7 @@ function Card() {
             key={selectedCategory.title}
             src={selectedCategory.image}
             className="h-auto w-full rounded-xl object-cover"
-            alt=""
+            alt="image"
           />
         </div>
         <motion.div key={selectedCategory.title} className="w-full space-y-5">
