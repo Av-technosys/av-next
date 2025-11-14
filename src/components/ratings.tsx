@@ -18,7 +18,7 @@ const Ratings = ({ className = '' }) => {
                 height={100}
                 src={item.image}
                 className="mr-auto h-6 w-auto md:h-10"
-                alt=""
+                alt="ratings-image"
               />
               <div className="mr-auto flex items-center gap-2 [&>*]:hidden [&>*]:first:block [&>*]:last:block">
                 <p className="text-sm text-white">{item.stars + ' / 5'}</p>
@@ -28,7 +28,7 @@ const Ratings = ({ className = '' }) => {
                     height={50}
                     src="/review/top-star.svg"
                     className="h-3 w-auto"
-                    alt="*"
+                    alt="ratings-image"
                     key={index}
                   />
                 ))}
@@ -39,7 +39,7 @@ const Ratings = ({ className = '' }) => {
                     height={50}
                     src="/review/top-star-47.svg"
                     className="h-3 w-auto"
-                    alt="*"
+                    alt="ratings-image"
                   />
                 )}
               </div>

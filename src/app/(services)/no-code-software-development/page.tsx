@@ -144,7 +144,7 @@ function Maindetails() {
                 height={100}
                 className="h-10 w-auto"
                 src="/technologies/shopify.svg"
-                alt=""
+                alt="wordpress-image"
               />
             </div>
             <p className="mt-3 text-base text-gray-600 md:text-lg">

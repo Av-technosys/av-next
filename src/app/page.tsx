@@ -121,7 +121,7 @@ function HeroSection({ setIsLeadOpen }) {
                       height={400}
                       src={item.image}
                       className="mr-auto h-10 w-auto"
-                      alt=""
+                      alt="image"
                     />
                     <div className="mx-auto flex items-center gap-2">
                       <p className="text-white">{item.stars + ' / 5'}</p>
@@ -131,7 +131,7 @@ function HeroSection({ setIsLeadOpen }) {
                           height={50}
                           src="/review/top-star.svg"
                           className="h-4 w-auto"
-                          alt=""
+                          alt="image"
                           key={index}
                         />
                       ))}
@@ -142,7 +142,7 @@ function HeroSection({ setIsLeadOpen }) {
                           height={50}
                           src="/review/top-star-47.svg"
                           className="h-4 w-auto"
-                          alt=""
+                          alt="image"
                         />
                       )}
                     </div>
@@ -166,28 +166,23 @@ function AISection({ setIsLeadOpen }) {
 
   return (
     <div className="w-full px-3 py-8 pb-24 md:px-4">
-
-
-          <div
-            className={cn('mx-auto w-full max-w-7xl px-2 py-8 md:py-12')}
-          >
-            <h2
-              className={cn(
-                'text-center text-2xl font-semibold capitalize leading-normal text-gray-800 md:text-[2.75rem]',
-                
-              )}
-            >
-              Grow more quickly with cutting-edge technology
-            </h2>
-            <p
-              className={cn(
-                'mx-auto mt-4 max-w-3xl text-center text-sm text-gray-700 md:mt-4 md:text-xl md:font-light',
-                
-              )}
-            >
-             Innovative technologies are transforming app development, enabling smarter solutions and business growth
-            </p>
-          </div>
+      <div className={cn('mx-auto w-full max-w-7xl px-2 py-8 md:py-12')}>
+        <h2
+          className={cn(
+            'text-center text-2xl font-semibold capitalize leading-normal text-gray-800 md:text-[2.75rem]'
+          )}
+        >
+          Grow more quickly with cutting-edge technology
+        </h2>
+        <p
+          className={cn(
+            'mx-auto mt-4 max-w-3xl text-center text-sm text-gray-700 md:mt-4 md:text-xl md:font-light'
+          )}
+        >
+          Innovative technologies are transforming app development, enabling
+          smarter solutions and business growth
+        </p>
+      </div>
 
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-6 rounded-3xl bg-zinc-800 px-6 py-8 text-white md:px-10 lg:flex-row">
         <div className="flex flex-col gap-4">
@@ -222,7 +217,7 @@ function AISection({ setIsLeadOpen }) {
             width={400}
             src="/ai_image.webp"
             className="h-full max-h-[20rem] w-auto object-contain lg:max-h-[26rem]"
-            alt=""
+            alt="image"
           />
         </div>
       </div>
@@ -243,28 +238,28 @@ function PartnerSection() {
             width={100}
             className="mx-auto h-8 w-auto md:mx-0 md:h-12"
             src="/review/aws-partner.svg"
-            alt=""
+            alt="image"
           />
           <Image
             height={100}
             width={100}
             className="mx-auto h-8 w-auto md:mx-0 md:h-9"
             src="/review/mongodb-partner.svg"
-            alt=""
+            alt="image"
           />
           <Image
             height={100}
             width={100}
             className="mx-auto h-8 w-auto md:mx-0 md:h-9"
             src="/review/cloudinary-partner.svg"
-            alt=""
+            alt="image"
           />
           <Image
             height={100}
             width={100}
             className="mx-auto h-8 w-auto md:mx-0 md:h-12"
             src="/review/google-cloud-partner.svg"
-            alt=""
+            alt="image"
           />
         </div>
       </div>
@@ -310,10 +305,10 @@ function ExperienceSection() {
     <div className="w-full bg-yellow-50/50 px-4 py-12 md:bg-gradient-to-br md:p-2 md:py-20">
       <div className="mx-auto grid w-full max-w-7xl gap-12 md:grid-cols-12">
         <div className="flex w-full flex-col gap-12 md:col-span-7">
-          <p className="max-w-xl text-center text-3xl font-semibold leading-tight tracking-wider text-gray-800 md:mt-6 md:text-start">
+          <h2 className="max-w-xl text-center text-3xl font-semibold leading-tight tracking-wider text-gray-800 md:mt-6 md:text-start">
             Why <span className="text-yellow-500">AV Technosys</span> Is the
             Strategic Choice for Your Project
-          </p>
+          </h2>
           <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 md:gap-y-10">
             {experienceData.map((item, idx) => {
               const Icon = item.icon;
@@ -349,7 +344,7 @@ function ExperienceSection() {
             height={500}
             className="h-full w-full rounded-md object-cover"
             src="/experience-img.png"
-            alt=""
+            alt="image"
           />
         </div>
       </div>
@@ -409,7 +404,7 @@ function BookCall({ setIsLeadOpen }) {
             height={500}
             width={500}
             src="/bookacall.png"
-            alt=""
+            alt="image"
             className="h-full w-full object-contain"
           />
         </div>

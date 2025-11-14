@@ -26,7 +26,7 @@ export function GetLeadForm() {
           width={100}
           src="/projectCallGirl.webp"
           className="absolute bottom-0 left-6 hidden h-auto w-80 lg:block"
-          alt=""
+          alt="callgirl-image"
         />
         <div className="hidden w-80 px-12 lg:block"></div>
         <div className="flex flex-col gap-6 text-white">

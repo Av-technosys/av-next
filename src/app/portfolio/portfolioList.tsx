@@ -39,7 +39,7 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
                         height={100}
                         src={item}
                         className="size-6 rounded-full"
-                        alt=""
+                        alt="technologies-image"
                       />
                     </div>
                   );
@@ -61,7 +61,7 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
                         height={500}
                         src={convertS3ToImageKit(image)}
                         className="h-full max-h-72 w-full rounded-md object-contain"
-                        alt=""
+                        alt="image"
                       />
                     </div>
                   );

@@ -21,7 +21,7 @@ const CustomMobileSection = () => {
         width={500}
         className="absolute bottom-0 right-0 hidden h-96 w-auto md:block"
         src="/custom-mobile-solution.webp"
-        alt=""
+        alt="image"
       />
     </div>
   );

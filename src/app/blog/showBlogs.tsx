@@ -48,9 +48,9 @@ const ShowBlogs = ({ blogData }) => {
           <div className="flex flex-col gap-2">
             <p>{getBlogCategory(filteredBlogs[0]?.blogCategory)}</p>
             <Link href={`/blog/${filteredBlogs[0]?.slug}`}>
-              <h1 className="text-3xl font-semibold hover:underline">
+              <p className="text-3xl font-semibold hover:underline">
                 {filteredBlogs[0]?.title}
-              </h1>
+              </p>
             </Link>
             <p className="mb-4 text-xl font-medium text-gray-600">
               {filteredBlogs[0]?.metaDescription}

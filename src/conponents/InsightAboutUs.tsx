@@ -59,7 +59,7 @@ export function InsightAboutUs() {
                   key={idx}
                   src={`/review/${Item}`}
                   className="h-full w-full object-contain p-2 md:p-2"
-                  alt=""
+                  alt="aboutUs-image"
                 />
               </div>
             );
