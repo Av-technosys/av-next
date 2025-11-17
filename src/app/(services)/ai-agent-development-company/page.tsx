@@ -131,9 +131,9 @@ function TransformAiSection() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center gap-6 px-4 py-16 md:flex-row md:justify-around md:px-6">
           <div className="md:max-w-md md:p-3 lg:max-w-xl">
-            <h1 className="pt-10 text-center text-3xl font-bold md:pt-0 md:text-left md:font-semibold lg:text-4xl">
+            <h2 className="pt-10 text-center text-3xl font-bold md:pt-0 md:text-left md:font-semibold lg:text-4xl">
               Empower Your Business with Advanced AI Agent Development
-            </h1>
+            </h2>
             <p className="mt-5 text-center text-gray-600 md:text-left">
               At AV Technosys, we deliver AI Agent Development services that
               keep your business ahead of the curve. From intelligent virtual

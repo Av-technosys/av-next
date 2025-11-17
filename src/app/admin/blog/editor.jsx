@@ -42,6 +42,7 @@ import { Toaster } from '@/components/ui/sonner';
 
 const TiptapEditor = ({ data }) => {
   const [title, setTitle] = useState(data?.title || '');
+  const [metaTitle, setMetaTitle] = useState(data?.metaTitle || '');
   const [metaDescription, setMetaDescription] = useState(
     data?.metaDescription || ''
   );
@@ -111,6 +112,7 @@ const TiptapEditor = ({ data }) => {
       if (data?.slug) {
         const response = await updateBlogByID({
           title,
+          metaTitle,
           metaDescription,
           blogCategory,
           image: finalImageSrc,
@@ -129,6 +131,7 @@ const TiptapEditor = ({ data }) => {
       } else {
         const response = await insertBlog({
           title,
+          metaTitle,
           metaDescription,
           blogCategory,
           image: finalImageSrc,
@@ -195,6 +198,7 @@ const TiptapEditor = ({ data }) => {
       toast('blog Sved.');
 
       setTitle('');
+      setMetaTitle('');
       setMetaDescription('');
       setBlogCategory('');
       setImageLink('');
@@ -268,6 +272,13 @@ const TiptapEditor = ({ data }) => {
         className="mb-4"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+      />
+      <Input
+        title={'Blog Meta Title'}
+        placeholder="Enter Blog Meta Title"
+        className="mb-4"
+        value={metaTitle}
+        onChange={(e) => setMetaTitle(e.target.value)}
       />
       <div className="mb-3 flex gap-4">
         <InputImage

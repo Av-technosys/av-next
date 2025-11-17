@@ -7,9 +7,9 @@ const FroMultipalPlatform = () => {
     <div className="mx-auto mt-8 flex w-full max-w-7xl flex-col gap-6 px-6 py-12">
       <div className="flex items-center gap-12">
         <div className="w-full max-w-3xl">
-          <h1 className="text-3xl font-semibold">
+          <h2 className="text-3xl font-semibold">
             Trusted Experts in Custom Mobile App Solutions
-          </h1>
+          </h2>
           <p className="mt-6 text-neutral-500">
             With extensive experience in app and website development, AV
             Technosys has successfully delivered over 200 applications across a

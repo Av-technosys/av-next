@@ -23,7 +23,7 @@ const ServiceForVariousPlatrorm = () => {
               key={idx}
             >
               <div className="relative size-12">{data.icon}</div>
-              <h1 className="text-2xl font-semibold">{data.title}</h1>
+              <h3 className="text-2xl font-semibold">{data.title}</h3>
               <p className="text-base text-gray-700">{data.description}</p>
               <motion.button
                 onClick={() => setIsLeadPopUpOpen(true)}

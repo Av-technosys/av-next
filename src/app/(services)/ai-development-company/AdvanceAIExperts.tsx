@@ -38,10 +38,10 @@ export default function AdvancedAiExperts() {
   return (
     <div className="h-full w-full">
       <div className="w-full border-y-4 px-6 py-16">
-        <h1 className="text-center text-3xl font-semibold text-neutral-800 md:text-4xl">
+        <h2 className="text-center text-3xl font-semibold text-neutral-800 md:text-4xl">
           {/* Advanced AI Expertise, Personalized for You */}
           Specialized in AI Models for Your need
-        </h1>
+        </h2>
         <div className="mx-auto mt-16 grid max-w-7xl grid-cols-2 gap-6 text-white sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {aiTools.map((tool, index) => (
             <AnimatePresence>

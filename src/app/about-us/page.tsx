@@ -69,7 +69,7 @@ function HeroSection() {
   const socialLinks = [
     {
       name: 'Facebook',
-      href: 'https://www.facebook.com/people/AV-Technosys/',
+      href: 'https://www.facebook.com/profile.php?id=61556941457814',
       Icon: Facebook,
     },
     {
@@ -84,7 +84,7 @@ function HeroSection() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/company/av-technosys/mycompany/',
+      href: 'https://www.linkedin.com/company/av-technosys/',
       Icon: Linkedin,
     },
   ];
@@ -109,7 +109,7 @@ function HeroSection() {
           solutions crafted by expert professionals.
         </p>
         <Link
-          href={'/hire-us'}
+          href={'/contact-us'}
           className="group mx-auto flex w-fit cursor-pointer items-center gap-2 rounded-3xl border-2 border-white bg-neutral-200 px-4 py-2 duration-200"
         >
           <p className="font-medium capitalize">Get free consultation</p>

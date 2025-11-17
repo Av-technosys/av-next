@@ -63,36 +63,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'AV Technosys : Top Website And Mobile App Development Company',
-    url: 'https://www.avtechnosys.com/',
-    description:
-      'AV Technosys is a mobile app development and web development company, building world-class high-performing mobile applications and web apps.',
-    provider: {
-      '@type': 'Organization',
-      name: 'AVTechnosys',
-      url: 'https://clutch.co/profile/avtechnosys#highlights',
-    },
-    image: 'https://ik.imagekit.io/avtechnosys/new-logo.png',
-    review: {
-      '@type': 'Review',
-      datePublished: '2022-01-10',
-      dateModified: '2025-02-05',
-      author: {
-        '@type': 'Organization',
-        name: 'Clutch.co',
-        url: 'https://clutch.co/profile/avtechnosys',
-      },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-      },
-    },
-  };
+  // const schema = {
+  //   '@context': 'https://schema.org',
+  //   '@type': 'Service',
+  //   name: 'AV Technosys : Top Website And Mobile App Development Company',
+  //   url: 'https://www.avtechnosys.com/',
+  //   description:
+  //     'AV Technosys is a mobile app development and web development company, building world-class high-performing mobile applications and web apps.',
+  //   provider: {
+  //     '@type': 'Organization',
+  //     name: 'AVTechnosys',
+  //     url: 'https://clutch.co/profile/avtechnosys#highlights',
+  //   },
+  //   image: 'https://ik.imagekit.io/avtechnosys/new-logo.png',
+  //   review: {
+  //     '@type': 'Review',
+  //     datePublished: '2022-01-10',
+  //     dateModified: '2025-02-05',
+  //     author: {
+  //       '@type': 'Organization',
+  //       name: 'Clutch.co',
+  //       url: 'https://clutch.co/profile/avtechnosys',
+  //     },
+  //     reviewRating: {
+  //       '@type': 'Rating',
+  //       ratingValue: '4.9',
+  //       bestRating: '5',
+  //       worstRating: '1',
+  //     },
+  //   },
+  // };
 
   return (
     <html lang="en">
@@ -121,12 +121,12 @@ export default function RootLayout({
         />
 
         {/* JSON-LD Schema Markup */}
-        <Script
+        {/* <Script
           id="schema-org"
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
+        /> */}
       </head>
       <body className={`${inter.className} scroll-smooth antialiased`}>
         {/* Google Analytics */}

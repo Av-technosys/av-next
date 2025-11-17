@@ -85,4 +85,10 @@ const cardData = [
     position: 'Founder, Tavaga – Stock Consultancy',
     img: '/nitin-tavaga.png',
   },
+  {
+    msg: 'Working with AV Technosys is a great experience. They understand our business needs well and always give the right suggestions. The team stays in touch, updates us regularly, and handles every task professionally. We’re happy with their work and look forward to continuing this collaboration.',
+    name: 'Rajesh Goyal ',
+    position: 'Chairman, Goyal Salt',
+    img: '/rajeshGoyal.png',
+  },
 ];

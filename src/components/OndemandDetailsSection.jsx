@@ -18,9 +18,9 @@ const OnDemanddetailsSection = ({ details, heading }) => {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="relative z-10 flex flex-col items-center px-4 py-8 sm:px-8 md:px-12">
-          <h1 className="text-center text-3xl font-bold md:text-4xl">
+          <h2 className="text-center text-3xl font-bold md:text-4xl">
             {heading?.title}
-          </h1>
+          </h2>
           <div className="my-4 h-[2px] w-52 bg-yellow-400"></div>
 
           <div className="grid w-full grid-cols-1 items-center gap-6 md:grid-cols-2">

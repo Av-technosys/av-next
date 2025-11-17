@@ -34,11 +34,11 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-20 flex h-full items-center justify-center px-6 text-center">
         <div className="max-w-4xl">
-          <h3 className="text-4xl font-extrabold leading-normal text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-extrabold leading-normal text-white sm:text-5xl lg:text-6xl">
             <span className="text-white">Artificial </span>
             <span className="text-[#00D8FF]">Intelligence</span> <br />
             <span className="text-white">Development Company</span>
-          </h3>
+          </h1>
 
           <p className="mt-10 text-sm text-gray-300 sm:text-base md:text-lg">
             AV Technosys is a top AI development company delivering innovative
