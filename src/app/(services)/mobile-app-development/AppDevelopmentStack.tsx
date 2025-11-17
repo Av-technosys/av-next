@@ -9,9 +9,9 @@ const AppDevelopmentStack = () => {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-12">
       <div>
-        <h1 className="text-3xl font-semibold">
+        <h2 className="text-3xl font-semibold">
           Smart Technology Choices for Custom App Success
-        </h1>
+        </h2>
         <p className="mt-2 text-lg text-neutral-500">
           Build smarter, faster, and better using today’s top mobile app
           technologies. Create standout experiences with cutting-edge tools and

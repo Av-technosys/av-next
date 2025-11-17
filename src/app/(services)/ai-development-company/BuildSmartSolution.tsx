@@ -12,9 +12,9 @@ export default function BuildSmartSolutions() {
         <div className="text-center md:px-4">
           <div className="flex justify-around bg-[linear-gradient(-45deg,_#ee7752,_#e73c7e,_#23a6d5)] px-5 py-12 md:rounded-3xl md:py-0">
             <div className="flex flex-col items-center justify-center gap-5">
-              <h1 className="text-3xl font-bold text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-4xl">
+              <h3 className="text-3xl font-bold text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-4xl">
                 Build Smarter Solutions with Us
-              </h1>
+              </h3>
               <p className="text-lg text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,0.9)] md:text-lg">
                 Partner with Top AI Experts to Unlock Endless Potential
               </p>

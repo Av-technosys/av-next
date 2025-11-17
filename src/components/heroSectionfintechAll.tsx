@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { TArroeRight } from '@/components/icons';
 import { cn } from '@/lib/utils';
+import { IconHours12 } from '@tabler/icons-react';
 
 const HeroSectionfintechAll = ({ details, className = '' }) => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -20,14 +21,14 @@ const HeroSectionfintechAll = ({ details, className = '' }) => {
       <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-4 text-center">
         <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
         <div className="z-10 mx-auto flex max-w-5xl flex-col items-center">
-          <h3
+          <IconHours12
             className={cn(
               'mb-6 text-3xl font-bold !leading-snug text-white sm:text-3xl md:text-5xl',
               className
             )}
           >
             {details?.title}
-          </h3>
+          </IconHours12>
           <p className={cn('mb-8 text-lg font-medium text-white', className)}>
             {details?.description}
           </p>

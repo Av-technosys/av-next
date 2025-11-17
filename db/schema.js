@@ -9,6 +9,7 @@ import {
 export const blogTable = pgTable('blog', {
   id: uuid('id').primaryKey().defaultRandom(),
   title: varchar('title').notNull(),
+  metaTitle: varchar('metaTitle'),
   metaDescription: varchar('meta_description').notNull(),
   blogCategory: varchar('blog_category').notNull(),
   image: varchar('image').notNull(),

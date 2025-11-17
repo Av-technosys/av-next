@@ -44,7 +44,6 @@ const paths = [
   '/career',
   '/contact-us',
   '/hire-us',
-  '/services',
   '/blog',
   '/privacy-policy',
   '/terms-and-conditions',

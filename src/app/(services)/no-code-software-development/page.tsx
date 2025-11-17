@@ -112,7 +112,7 @@ function Maindetails() {
         <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2">
           <div className="rounded-lg bg-slate-100 p-4 duration-300 hover:shadow-lg">
             <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-bold">WordPress</h1>
+              <h3 className="text-3xl font-bold">WordPress</h3>
               <Image
                 width={100}
                 height={100}
@@ -138,7 +138,7 @@ function Maindetails() {
 
           <div className="rounded-lg bg-slate-100 p-4 duration-300 hover:shadow-lg">
             <div className="flex gap-3">
-              <h1 className="text-3xl font-bold">Shopify</h1>
+              <h3 className="text-3xl font-bold">Shopify</h3>
               <Image
                 width={100}
                 height={100}

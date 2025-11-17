@@ -36,6 +36,20 @@
       "when": 1748409776195,
       "tag": "0004_fair_corsair",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1763358314116,
+      "tag": "0005_old_randall_flagg",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1763359404761,
+      "tag": "0006_dry_warlock",
+      "breakpoints": true
     }
   ]
 }

@@ -61,7 +61,7 @@ export default function PortfolioCrousel({ headingClass = '' }) {
                           <Image
                             width={100}
                             height={100}
-                            src={`/icons/${item}.bin`}
+                            src={`${item}`}
                             className="size-6 rounded-full"
                             alt="portfolio-image"
                           />
