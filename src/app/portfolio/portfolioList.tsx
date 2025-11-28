@@ -21,13 +21,15 @@ export function PortfolioList({ portfolioData }: { portfolioData: any }) {
                 <div className="text-xl font-semibold uppercase text-gray-800 md:text-3xl">
                   {item.name}
                 </div>
-                <Link
-                  target="_blank"
-                  href={item.link}
-                  className="shrink-0 cursor-pointer rounded-md bg-neutral-800 px-4 py-1.5 font-medium text-white duration-300 sm:opacity-0 group-hover:sm:opacity-100"
-                >
-                  <p>Visit Site</p>
-                </Link>
+                {item.link != '' && (
+                  <Link
+                    target="_blank"
+                    href={item.link}
+                    className="shrink-0 cursor-pointer rounded-md bg-neutral-800 px-4 py-1.5 font-medium text-white duration-300"
+                  >
+                    <p>Visit Site</p>
+                  </Link>
+                )}
               </div>
 
               <div className="flex items-center [&>*]:-ml-2">

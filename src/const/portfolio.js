@@ -49,7 +49,7 @@ export const portfolioData = [
       'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk2.jpg',
       'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk3.jpg',
     ],
-    link: 'https://aajkakarmveer.com/',
+    link: '',
 
     technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
   },

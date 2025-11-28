@@ -16,11 +16,11 @@ export default function Astrologyhomesection({ details, imageclass = '' }) {
           <div className="flex min-h-[60vh] flex-col-reverse items-center justify-between gap-10 px-6 py-12 md:flex-row md:gap-2 md:px-16 lg:my-16 lg:py-0">
             {/* Left Section */}
             <div className="md:max-w-sm lg:!max-w-2xl">
-              <h2 className="text-center text-2xl font-bold md:text-start md:text-3xl lg:text-5xl">
+              <h1 className="text-center text-2xl font-bold md:text-start md:text-3xl lg:text-5xl">
                 <span className="text-[#EAB308]">{details?.title}</span>{' '}
                 <br className="hidden md:block" />
                 <p className="text-black lg:mt-5">DEVELOPMENT COMPANY</p>
-              </h2>
+              </h1>
               <p className="mt-6 text-center text-base text-gray-700 md:text-start md:text-lg">
                 {details?.description1}
               </p>
