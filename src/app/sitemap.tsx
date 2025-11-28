@@ -35,7 +35,6 @@ const servicesAndIndustries = [
   '/veterinary-app-development',
   '/pet-food-delivery-app-development',
   '/ai-development-company',
-  '/mobile-app-development',
 ];
 
 const paths = [
