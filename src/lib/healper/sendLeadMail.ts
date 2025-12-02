@@ -1,58 +1,43 @@
 'use server';
-import AWS from 'aws-sdk';
+import nodemailer from "nodemailer";
 
-// Set the region
-AWS.config.update({
-  accessKeyId: process.env.S3_ACCESS_KEY,
-  secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-  region: process.env.S3_REGION,
-});
-
-export async function sendLeadMail({ email, name, message, number, slug }) {
-  var params = {
-    Destination: {
-      /* required */
-      // CcAddresses: [
-      //   "EMAIL_ADDRESS",
-      //   /* more items */
-      // ],
-      ToAddresses: ['sales@avtechnosys.com'],
-    },
-    Message: {
-      /* required */
-      Body: {
-        /* required */
-        Html: {
-          Charset: 'UTF-8',
-          Data: `<div>
-        <h1>Hello from ${name}</h1>
-        <p>Message: ${message}</p>
-        <p>Mobile Number: ${number}</p>
-        <p>From: ${slug}</p>
-        <p>Email: ${email}</p>
-        </div>`,
-        },
-        Text: {
-          Charset: 'UTF-8',
-          Data: 'TEXT_FORMAT_BODY',
-        },
+export async function sendLeadMail({ name, email, number, message, slug }) {
+  try {
+    const transporter = nodemailer.createTransport({
+      host: "email-smtp.ap-south-1.amazonaws.com", // SES endpoint
+      port: 587, // or 2587 or 25
+      secure: false, // TLS starts automatically
+      auth: {
+        user: process.env.SES_USER,
+        pass: process.env.SES_PASS,
       },
-      Subject: {
-        Charset: 'UTF-8',
-        Data: '🚀 New lead alert! Time to make magic happen!',
-      },
-    },
-    Source: 'new-lead@avtechnosys.com' /* required */,
-    ReplyToAddresses: [
-      'sales@avtechnosys.com',
-      /* more items */
-    ],
-  };
+    });
 
-  // Create the promise and SES service object
-  var sendMail = new AWS.SES({ apiVersion: '2010-12-01' })
-    .sendEmail(params)
-    .promise();
+    const mailOptions = {
+      from: '"AV Technosys" <info@avtechnosys.com>',
+      to: ["info@avtechnosys.com", "ashish@avtechnosys.com"],
+      subject: "🚀 New Lead Received!",
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
+          <h2 style="color: #333;">New Lead Information</h2>
+          
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Mobile:</strong> ${number}</p>
+          <p><strong>Message:</strong> ${message}</p>
+          <p><strong>Source Page:</strong> ${slug}</p>
 
-  return sendMail;
+          <br/>
+          <p style="color: #777;">This email was sent via your website lead form.</p>
+        </div>
+      `,
+    };
+
+    const result = await transporter.sendMail(mailOptions);
+
+    return { success: true, result };
+  } catch (error) {
+    console.error("SES Email Error:", error);
+    return { success: false, error };
+  }
 }

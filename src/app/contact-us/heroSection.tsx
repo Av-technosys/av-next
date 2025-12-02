@@ -50,13 +50,14 @@ export default function Header() {
       return;
     }
 
-    // const res = await sendLeadMail({
-    //   name: formDetails.name,
-    //   email: formDetails.email,
-    //   message: formDetails.message,
-    //   number: formDetails.number,
-    //   slug: 'Lead PopUp',
-    // });
+try {
+      const res = await sendLeadMail({
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+      number: formDetails.number,
+      slug: 'Lead PopUp',
+    });
 
     const response = await submitLeadForm({
       name: formDetails.name,
@@ -73,15 +74,20 @@ export default function Header() {
       setShowMessage('');
       setErrorMessage('Something went wrong');
     }
-
-    setFormDetails({
-      name: '',
-      email: '',
-      message: '',
-      number: '+91',
-    });
+} catch (error) {
+  console.log(error);
+}finally{
+    // setFormDetails({
+    //   name: '',
+    //   email: '',
+    //   message: '',
+    //   number: '+91',
+    // });
 
     setLoading(false);
+}
+
+
   };
 
   const router = useRouter();
