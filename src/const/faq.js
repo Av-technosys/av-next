@@ -2896,3 +2896,97 @@ export const aiagentFawData = [
     ),
   },
 ];
+
+export const ManufacturingFawData = [
+  {
+    value: 'faq-1',
+    question:
+      ' What are Manufacturing  Services and how do they improve business?',
+    answer: (
+      <>
+        <p>
+          Manufacturing IT Services help streamline production, automate
+          workflows, reduce human errors, and improve real-time decision-making.
+          With advanced software, your factory becomes more efficient,
+          cost-effective, and scalable, allowing you to optimize operations and
+          achieve higher productivity with minimal downtime.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    value: 'faq-2',
+    question:
+      'Do you offer custom Manufacturing Software Development solutions?',
+    answer: (
+      <>
+        <p>
+          Yes, AV Technosys builds fully customized manufacturing software
+          tailored to unique production processes, quality control needs,
+          inventory management, machine automation, and reporting requirements.
+          Our solutions are designed to enhance efficiency, reduce downtime, and
+          support your factory’s complete digital transformation.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-3',
+    question: ' Can I hire Manufacturing Software Developers for my project?',
+    answer: (
+      <>
+        <p>
+          Absolutely. You can hire skilled, dedicated developers from AV
+          Technosys for long-term or short-term manufacturing IT projects. Our
+          experts work exclusively on your tasks, ensuring faster delivery,
+          better communication, flexible scaling, and full control over
+          development.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-4',
+    question: 'What technologies use in Manufacturing Software Development?',
+    answer: (
+      <>
+        <p>
+          {' '}
+          We work with modern technologies like React, Node.js, .NET, Python,
+          SQL databases, IoT devices, automation systems, and cloud platforms
+          such as AWS and Azure. These tools help us build reliable,
+          high-performance, and secure manufacturing applications tailored to
+          your needs.
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-5',
+    question: 'How can manufacturing software reduce production downtime?',
+    answer: (
+      <>
+        <p>
+          Manufacturing software tracks machine health, alerts issues early,
+          automates workflows, and prevents unexpected failures. This helps
+          maintain smooth production with minimum downtime.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    value: 'faq-6',
+    question: 'Is Manufacturing Software scalable for growing industries?',
+    answer: (
+      <>
+        <p>
+          Yes, it easily scales as your factory expands. You can add new
+          machines, users, modules, or features anytime. This supports long-term
+          growth with consistent performance.
+        </p>
+      </>
+    ),
+  },
+];
