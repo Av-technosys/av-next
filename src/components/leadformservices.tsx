@@ -24,7 +24,7 @@ const Leadformservices = ({
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="relative flex w-full gap-12 rounded-3xl bg-[linear-gradient(270deg,_#6a0dad,_#8e44ad,_#9b59b6,_#6a0dad)] bg-[length:300%_300%] px-6 py-8 md:py-12"
+        className='relative flex w-full gap-12 rounded-3xl bg-[linear-gradient(270deg,_#6a0dad,_#8e44ad,_#9b59b6,_#6a0dad)] bg-[length:300%_300%] px-6 py-8 md:py-12'
       >
         <Image
           height={100}
@@ -36,7 +36,7 @@ const Leadformservices = ({
           )}
           alt="leadForm-image"
         />
-        <div className="hidden w-80 px-12 lg:block"></div>
+        <div className={cn('hidden w-80 px-12 lg:block',contentclassName)}></div>
         <div className="flex flex-col gap-6 text-white">
           <p className="text-3xl font-semibold md:text-4xl">{details?.title}</p>
           <p className="text-sm tracking-wide md:text-base">

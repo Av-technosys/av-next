@@ -254,7 +254,7 @@ const services = [
   },
 ];
 
-const whychooseheading = {
+const whychooseheading ={
   title: 'Why Partner with AV Technosys for Web Development?',
   description:
     'AV Technosys has demonstrated proficiency in providing creative online solutions that spur expansion and create enduring alliances.',

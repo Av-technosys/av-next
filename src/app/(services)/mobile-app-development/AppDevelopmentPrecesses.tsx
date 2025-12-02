@@ -41,20 +41,25 @@ const steps = [
   },
 ];
 
-const AppDevelopmentProcess = () => {
+const AppDevelopmentProcess = ({ stepsData, sectionData }: any) => {
   const [isLeadPopUpOpen, setIsLeadPopUpOpen] = React.useState(false);
   return (
     <section className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-16 md:px-8 lg:flex-row">
       <LeadPopUp isOpen={isLeadPopUpOpen} setIsOpen={setIsLeadPopUpOpen} />
       {/* Left Sticky Column */}
+
       <div className="top-24 w-full max-w-md self-start lg:sticky">
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-          Mobile App Journey: Our Process Explained
+          {sectionData
+            ? sectionData.title
+            : 'Mobile App Journey: Our Process Explained'}
         </h2>
         <p className="mt-4 text-gray-600">
-          We follow structured and dedicated mobile app development process that
+          {sectionData
+            ? sectionData.description
+            : ` We follow structured and dedicated mobile app development process that
           adapts to different app types, functionalities, and business needs.
-          Here's a breakdown of our app development approach:
+          Here's a breakdown of our app development approach:`}
         </p>
         <button
           onClick={() => setIsLeadPopUpOpen(true)}
@@ -66,14 +71,23 @@ const AppDevelopmentProcess = () => {
 
       {/* Right Scrollable Content */}
       <div className="flex w-full flex-col gap-10">
-        {steps.map((step, idx) => (
-          <div key={idx} className="flex gap-4">
-            <div>
-              <h3 className="mb-2 text-xl font-semibold">{step.title}</h3>
-              <p className="text-gray-700">{step.desc}</p>
-            </div>
-          </div>
-        ))}
+        {stepsData
+          ? stepsData?.map((step: any, idx: number) => (
+              <div key={idx} className="flex gap-4">
+                <div>
+                  <h3 className="mb-2 text-xl font-semibold">{step.title}</h3>
+                  <p className="text-gray-700">{step.desc}</p>
+                </div>
+              </div>
+            ))
+          : steps.map((step: any, idx: number) => (
+              <div key={idx} className="flex gap-4">
+                <div>
+                  <h3 className="mb-2 text-xl font-semibold">{step.title}</h3>
+                  <p className="text-gray-700">{step.desc}</p>
+                </div>
+              </div>
+            ))}
       </div>
     </section>
   );

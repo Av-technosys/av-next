@@ -8,8 +8,9 @@ import { cn } from '@/lib/utils';
 const HeroSectionfintechAll = ({ details, className = '' }) => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
   return (
+
     <section
-      className="flex items-center"
+      className="flex items-center  "
       style={{
         backgroundImage: `url('${details?.image}')`,
         backgroundPosition: 'top',
@@ -17,12 +18,12 @@ const HeroSectionfintechAll = ({ details, className = '' }) => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-4 text-center">
+      <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-4 text-center ">
         <LeadPopUp isOpen={isLeadOpen} setIsOpen={setIsLeadOpen} />
-        <div className="z-10 mx-auto flex max-w-5xl flex-col items-center">
+        <div className="z-10 mx-auto flex max-w-5xl flex-col items-center ">
           <h1
             className={cn(
-              'mb-6 text-3xl font-bold !leading-snug text-white sm:text-3xl md:text-5xl',
+              'mb-6 text-3xl font-bold !leading-snug text-white sm:text-3xl md:text-5xl ',
               className
             )}
           >
