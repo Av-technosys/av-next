@@ -2989,4 +2989,27 @@ export const ManufacturingFawData = [
       </>
     ),
   },
+  {
+    value: 'faq-7',
+    question: ' Is your software suitable for small and medium manufacturers?',
+    answer: (
+      <>
+        <p>
+          Yes, we offer scalable and affordable solutions, designed specifically for small and medium manufacturing units.
+
+        </p>
+      </>
+    ),
+  },
+  {
+    value: 'faq-8',
+    question: 'Can your software integrate with my systems or machines?',
+    answer: (
+      <>
+        <p>
+          Absolutely. We build integration-ready software that connects with billing tools, CRMs, accounting systems, and IoT-enabled machines.
+        </p>
+      </>
+    ),
+  },
 ];
