@@ -167,6 +167,15 @@ const industryServices = {
         },
       ],
     },
+    {
+      title: 'Manufacturing',
+      children: [
+        {
+          title: 'Manufacturing Software Development Company',
+          link: '/manufacturing-software-development-company',
+        },
+      ],
+    },
   ],
 };
 

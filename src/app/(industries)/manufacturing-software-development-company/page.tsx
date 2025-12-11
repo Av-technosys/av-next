@@ -2,7 +2,7 @@ import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
 import Smartsolutionsection from '@/components/smartsolutionssection';
 import Image from 'next/image';
 import React from 'react';
-import AppDevelopmentProcess from '../mobile-app-development/AppDevelopmentPrecesses';
+import AppDevelopmentProcess from '../../(services)/mobile-app-development/AppDevelopmentPrecesses';
 import Leadformservices from '@/components/leadformservices';
 import { FaqAccordion } from '@/components/faqAccordion';
 import Rating2 from '@/components/rating2';
@@ -26,7 +26,6 @@ import {
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { Metadata } from 'next';
 
-
 export const metadata: Metadata = {
   title: {
     absolute: 'Manufacturing Software Development Company | AV Technosys',
@@ -34,7 +33,8 @@ export const metadata: Metadata = {
   description:
     'AV Technosys offers manufacturing software development services. We help to improve efficiency, track production, and streamline operations. Contact us. ',
   alternates: {
-    canonical: 'https://www.avtechnosys.com/manufacturing-software-development-company/',
+    canonical:
+      'https://www.avtechnosys.com/manufacturing-software-development-company/',
   },
 
   robots: {
@@ -57,7 +57,7 @@ const page = () => {
     title: 'Manufacturing Software Development Company',
     description:
       'AV Technosys provides powerful, customized manufacturing software solutions that streamline operations, improve productivity, and help your manufacturing business achieve greater efficiency and growth.',
-    image: 'https://ik.imagekit.io/avtechnosys/manufactureBanner.jpg',
+    image: 'https://ik.imagekit.io/avtechnosys/manufacturingBannerNew.jpg',
     btn: 'Manufacturing Project Idea',
   };
 
