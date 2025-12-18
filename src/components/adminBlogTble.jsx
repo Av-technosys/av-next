@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Table,
   TableBody,
@@ -21,6 +21,13 @@ const AdminBlogTble = ({ data, count }) => {
   const router = useRouter();
   const [endIndex, setendIndex] = useState(10);
 
+  const [localStorage, setLocalStorage] = useState(null);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setLocalStorage(window.localStorage);
+    }
+  }, []);
+
   const params = useSearchParams();
   const blogscount = params.get('blogs') || 0;
 
@@ -31,47 +38,55 @@ const AdminBlogTble = ({ data, count }) => {
 
   return (
     <div className="mt-6 w-full">
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="">Title</TableHead>
-            <TableHead>Author </TableHead>
-            <TableHead>Date </TableHead>
-            <TableHead className="text-right">Category</TableHead>
-            <TableHead className="text-right">Visible</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {data?.map((item) => (
-            <TableRow key={item.id}>
-              <TableCell className="font-medium">
-                <Link
-                  prefetch={false}
-                  className="hover:underline"
-                  href={`/admin/blog/${item.slug}`}
-                >
-                  {item.title}
-                </Link>
-              </TableCell>
-              <TableCell>{item.userName}</TableCell>
-              <TableCell>
-                {dayjs(JSON.parse(item.date)).format('DD-MM-YYYY')}
-              </TableCell>
-              <TableCell className="text-right">{item.blogCategory}</TableCell>
-              <TableVisible item={item} />
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-      <div className="mt-5 w-full text-center">
-        <Button
-          variant={'outline'}
-          onClick={loadMoreHandler}
-          className={`rounded ${blogscount >= count[0].count && 'hidden'} `}
-        >
-          Load More
-        </Button>
-      </div>
+      {localStorage?.getItem('token') === process.env.NEXT_PUBLIC_TOKEN ? (
+        <>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="">Title</TableHead>
+                <TableHead>Author </TableHead>
+                <TableHead>Date </TableHead>
+                <TableHead className="text-right">Category</TableHead>
+                <TableHead className="text-right">Visible</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {data?.map((item) => (
+                <TableRow key={item.id}>
+                  <TableCell className="font-medium">
+                    <Link
+                      prefetch={false}
+                      className="hover:underline"
+                      href={`/admin/blog/${item.slug}`}
+                    >
+                      {item.title}
+                    </Link>
+                  </TableCell>
+                  <TableCell>{item.userName}</TableCell>
+                  <TableCell>
+                    {dayjs(JSON.parse(item.date)).format('DD-MM-YYYY')}
+                  </TableCell>
+                  <TableCell className="text-right">
+                    {item.blogCategory}
+                  </TableCell>
+                  <TableVisible item={item} />
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <div className="mt-5 w-full text-center">
+            <Button
+              variant={'outline'}
+              onClick={loadMoreHandler}
+              className={`rounded ${blogscount >= count[0].count && 'hidden'} `}
+            >
+              Load More
+            </Button>
+          </div>
+        </>
+      ) : (
+        <div>Not logged in</div>
+      )}
     </div>
   );
 };
