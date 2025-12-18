@@ -1,10 +1,10 @@
 'use server';
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
 export async function sendLeadMail({ name, email, number, message, slug }) {
   try {
     const transporter = nodemailer.createTransport({
-      host: "email-smtp.ap-south-1.amazonaws.com", // SES endpoint
+      host: 'email-smtp.ap-south-1.amazonaws.com', // SES endpoint
       port: 587, // or 2587 or 25
       secure: false, // TLS starts automatically
       auth: {
@@ -15,8 +15,9 @@ export async function sendLeadMail({ name, email, number, message, slug }) {
 
     const mailOptions = {
       from: '"AV Technosys" <info@avtechnosys.com>',
-      to: ["info@avtechnosys.com", "ashish@avtechnosys.com"],
-      subject: "🚀 New Lead Received!",
+      to: ['info@avtechnosys.com'],
+      bcc: ['ashish@avtechnosys.com'],
+      subject: '🚀 New Lead Received!',
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px;">
           <h2 style="color: #333;">New Lead Information</h2>
@@ -37,7 +38,7 @@ export async function sendLeadMail({ name, email, number, message, slug }) {
 
     return { success: true, result };
   } catch (error) {
-    console.error("SES Email Error:", error);
+    console.error('SES Email Error:', error);
     return { success: false, error };
   }
 }
