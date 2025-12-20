@@ -33,12 +33,22 @@ import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 import Rating2 from '@/components/rating2';
+import Snowfall from 'react-snowfall';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
 
   return (
     <div className="relative h-full min-h-screen w-full bg-white">
+      <Snowfall
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh',
+          zIndex: 50,
+          pointerEvents: 'none',
+        }}
+      />
       <InfoNav />
       <NavBarHome />
       <HeroSection setIsLeadOpen={setIsLeadOpen} />
