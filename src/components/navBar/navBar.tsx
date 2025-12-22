@@ -30,21 +30,32 @@ export function NavBarHome() {
     <div className="sticky top-0 z-50 max-h-[calc(100vh)] w-full overflow-y-auto bg-white py-3 shadow-md md:py-3 lg:h-auto lg:overflow-visible">
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 px-4">
         {/* Logo with animation */}
-        <motion.div
+        {/* <motion.div
           onClick={navigateHomePage}
           initial={{ height: '3.4rem' }}
           animate={{ height: !isScrolled ? '3.4rem' : '2.8rem' }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="flex-shrink-0 cursor-pointer"
-        >
-          <Image
+        > */}
+        {/* <Image
             width={100}
             height={100}
             src="/new-logo.png"
             className="h-full w-auto object-contain"
             alt="Logo"
+          /> */}
+        {/* </motion.div> */}
+
+        {/*  this part is removed after christmas , i mean this image is removed and above code is commented off so old logo will see again.. */}
+        <div className="flex h-14 w-[200px] items-center overflow-hidden md:h-24 md:w-[300px]">
+          <Image
+            src="/avSantalogo.png"
+            alt="Logo"
+            width={200}
+            height={60}
+            className="h-full w-full object-cover"
           />
-        </motion.div>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden items-center gap-4 lg:flex">
