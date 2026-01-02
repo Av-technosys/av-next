@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Footer1 from './footer1';
 import { ChevronRight } from 'lucide-react';
@@ -32,20 +32,12 @@ import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 import Rating2 from '@/components/rating2';
-import Fireworks from '@/components/fireworks';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
-  const [showFireworks, setShowFireworks] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowFireworks(false), 6000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="relative h-full min-h-screen w-full bg-white">
-      {showFireworks && <Fireworks />}
       <InfoNav />
       <NavBarHome />
       <HeroSection setIsLeadOpen={setIsLeadOpen} />
