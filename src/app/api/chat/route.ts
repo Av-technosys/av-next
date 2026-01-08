@@ -4,7 +4,7 @@ import { Pinecone } from '@pinecone-database/pinecone';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! });
 const pc = new Pinecone({ apiKey: process.env.PINECORN! });
-const index = pc.index('developer-quickstart-js');
+const index = pc.index('av-chatbot-index');
 
 export async function POST(req: Request) {
   const { message } = await req.json();
@@ -34,7 +34,8 @@ export async function POST(req: Request) {
       {
         role: 'system',
         content:
-          'You are an AV Technosys website assistant. Answer ONLY from context. If missing, say you don’t know.',
+          // 'You are an AV Technosys website assistant name AVA. Answer ONLY from context. If missing, say you don’t know.',
+          'You are an AV Technosys website assistant name AVA. Get the answer from the context . If missing then tell any general information and keep the replies short',
       },
       {
         role: 'user',
