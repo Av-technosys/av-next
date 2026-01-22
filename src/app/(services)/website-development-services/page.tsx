@@ -22,10 +22,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Website Development Company | Web Development Services',
+    absolute: 'Website Development Services | Custom Web Solutions – AVT',
   },
   description:
-    'Get professional web development services to build a responsive, high-quality website tailored to your business needs.',
+    'Build fast, secure & scalable websites with AV Technosys. We offer custom website development, responsive design, eCommerce & web apps. Talk to a web developer',
   alternates: {
     canonical: 'https://www.avtechnosys.com/website-development-services/',
   },
@@ -254,7 +254,7 @@ const services = [
   },
 ];
 
-const whychooseheading ={
+const whychooseheading = {
   title: 'Why Partner with AV Technosys for Web Development?',
   description:
     'AV Technosys has demonstrated proficiency in providing creative online solutions that spur expansion and create enduring alliances.',

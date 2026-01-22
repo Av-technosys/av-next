@@ -19,10 +19,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Temple Management Software Development Services | AV Technosys',
+    absolute: 'Temple Management App Development Company | AV Technosys ',
   },
   description:
-    'Choose AV Technosys for powerful and easy-to-use temple management software solutions.',
+    'Need a temple management system? AV Technosys builds easy-to-use custom software for puja booking, donations, events, member tracking and more. Contact us.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/temple-management-software/',
   },

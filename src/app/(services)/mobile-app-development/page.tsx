@@ -21,9 +21,10 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Top Mobile App Development Company in India & USA',
+    absolute:
+      'Top Mobile App Development Company | Android & IOS | AV Technosys',
   },
-  description: `Looking for skilled app developers in the USA and India? Get custom-built mobile solutions designed for your business success.`,
+  description: `Looking for a mobile app development company in the USA, UAE and India? We customise Android & iOS apps. Grow downloads, users & revenue with AV Technosys.`,
   alternates: {
     canonical: 'https://www.avtechnosys.com/mobile-app-development/',
   },

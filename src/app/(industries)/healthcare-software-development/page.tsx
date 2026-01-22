@@ -19,10 +19,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Healthcare App Development Company - AV Technosys',
+    absolute: 'Leading Healthcare App Development Company – AV Technosys',
   },
   description:
-    'We create healthcare software that enhances patient care, streamlines workflows, and keeps data secure.',
+    'AV Technosys develops scalable healthcare software that enhances patient care, streamlines workflows, and keeps data secure. Talk to a healthcare app developer',
   alternates: {
     canonical: 'https://www.avtechnosys.com/healthcare-software-development/',
   },

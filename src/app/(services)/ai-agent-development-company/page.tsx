@@ -24,10 +24,10 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'AI Agent Development Services by Industry Experts',
+    absolute: 'Top AI Agent Development Company | AI Experts | AV Technosys',
   },
   description:
-    'AV Technosys builds smart AI agents to transform your business. Connect with us today.',
+    'Build smart AI agents with AV Technosys. Our AI agent development services help automate tasks, boost efficiency & scale business operations. Call to AI Experts',
   alternates: {
     canonical: 'https://www.avtechnosys.com/ai-agent-development-company/',
   },

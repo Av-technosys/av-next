@@ -9,10 +9,10 @@ import { Locations } from '@/components/Location';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Terms and Conditions - AV Technosys',
+    absolute: 'Terms and Conditions – AV Technosys',
   },
   description:
-    'Welcome to AV Technosys. Please read our terms before submitting any information or content on this website.',
+    'Review the AV Technosys Terms and Conditions for use of our software, web, mobile, AI and digital services across our platforms. Call support for any questions.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/terms-and-conditions/',
   },

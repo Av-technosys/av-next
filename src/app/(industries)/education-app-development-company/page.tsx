@@ -21,10 +21,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'E-learning app development company | AV Technosys',
+    absolute: 'Education & eLearning App Development Company – AV Technosys',
   },
   description:
-    'Get scalable, interactive e-learning apps built by AV Technosys for schools, startups, and enterprises.',
+    'Develop powerful education apps with AV Technosys. Secure, scalable solutions for teachers, students & institutions with interactive features. Talk to experts.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/education-app-development-company/',
   },

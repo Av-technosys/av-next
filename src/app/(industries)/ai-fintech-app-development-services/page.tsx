@@ -23,10 +23,10 @@ import Testimonial from '@/app/reviews';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Smarter Financial Solutions with AI in Fintech',
+    absolute: 'Custom AI Fintech App Development Services – AV Technosys',
   },
   description:
-    'AI in fintech boosts efficiency by automating tasks and using predictive analytics for smarter financial decisions.',
+    'AI-powered fintech app development by experts. Build secure, scalable financial apps with automation, analytics and real-time insights with AV Technosys.',
   alternates: {
     canonical:
       'https://www.avtechnosys.com/ai-fintech-app-development-services/',

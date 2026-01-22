@@ -23,10 +23,10 @@ import Fintecheffect, {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Top Companies for Trading Software Development | AV Technosys',
+    absolute: 'Reliable Trading App Development Company – AV Technosys',
   },
   description:
-    'Build secure, scalable trading apps with our expert developers. Get custom stock, crypto, and forex platforms for your business.',
+    'Planning to launch a trading app? Secure and scalable stock trading app development by experts. Get custom stock, crypto, and forex platforms for your business.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/trading-app-development-company/',
   },

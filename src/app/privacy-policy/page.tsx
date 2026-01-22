@@ -9,10 +9,10 @@ import { Locations } from '@/components/Location';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'AV Technosys Privacy Policy Ensuring Trust',
+    absolute: 'Our Privacy Policy for Ensuring Trust – AV Technosys',
   },
   description:
-    'Read AV Technosys’ Privacy Policy to understand how we collect, use, and protect your data.',
+    'Read the AV Technosys Privacy Policy to understand how we collect, use and protect your information when you use our website & services. Call our support team.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/privacy-policy/',
   },

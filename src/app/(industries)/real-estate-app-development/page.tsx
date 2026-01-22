@@ -22,10 +22,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Real Estate App Development Company - AV Technosys',
+    absolute: 'Professional Real Estate App Development Company - AV Technosys',
   },
   description:
-    'AV Technosys is a top real estate app development company offering cost-effective and scalable real estate app development services. Get a quote today.',
+    'AV Technosys is a trusted real estate app development company providing scalable and budget-friendly solutions for property platforms. Get a free quote now.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/real-estate-app-development/',
   },

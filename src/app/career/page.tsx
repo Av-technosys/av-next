@@ -9,10 +9,10 @@ import { Locations } from '@/components/Location';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Career - Current Job Openings for Developer, Designer, QA, BA',
+    absolute: 'Careers at AV Technosys | Technology Jobs & Opportunities',
   },
   description:
-    'Explore current job openings and grow your career with a leading mobile app development company.',
+    'Explore current job openings and grow your career with innovative web, mobile, AI and digital tech teams in India. Build your career with AV Technosys. ',
   alternates: {
     canonical: 'https://www.avtechnosys.com/career/',
   },

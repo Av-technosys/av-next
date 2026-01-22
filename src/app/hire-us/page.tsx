@@ -19,7 +19,7 @@ import Footer1 from './../footer1';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Hire Dedicated Developers | Dedicated Developers for Hire',
+    absolute: 'Hire Dedicated Developers & IT Experts | AV Technosys',
   },
   description:
     'Looking for a company from which you can hire developers in India? AV Technosys is a leading outsourcing company that has a vast pool of talent. Hire from us now!',

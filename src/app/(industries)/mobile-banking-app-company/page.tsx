@@ -23,10 +23,10 @@ import Fintecheffect, {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Mobile Banking Software Development Services',
+    absolute: 'Mobile Banking App Development Company - AV Technosys',
   },
   description:
-    'Secure, user-friendly mobile banking apps to enhance digital banking and streamline transactions.',
+    'Mobile banking app development with secure login, payments, transfers, and analytics. AV Technosys delivers a user-centric and high-performance banking app.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/mobile-banking-app-company/',
   },

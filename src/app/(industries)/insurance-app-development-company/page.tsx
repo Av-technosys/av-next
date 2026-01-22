@@ -23,10 +23,10 @@ import Fintecheffect, {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Trusted Insurance App Development Company',
+    absolute: 'Leading Insurance App Development Company – AV Technosys',
   },
   description:
-    'AV Technosys offers scalable, efficient insurance app solutions for your business needs.',
+    'Grow your insurance business with custom app development. Secure, scalable insurance apps with policy, claim and payment features by AV Technosys. Contact us.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/insurance-app-development-company/',
   },

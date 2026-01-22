@@ -20,10 +20,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'On-Demand Veterinary App Development Solutions',
+    absolute: 'On-Demand Veterinary App Development Company - AV Technosys',
   },
   description:
-    'On-demand veterinary apps for easy vet access, appointments, and pet health records in one place.',
+    'Create smart veterinary apps that simplify clinic management, improve pet care and enhance client engagement with AV Technosys. Build your veterinary app.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/veterinary-app-development/',
   },

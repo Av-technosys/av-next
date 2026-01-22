@@ -20,10 +20,10 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: {
     absolute:
-      'Food Delivery App Development Services | Food Delivery App Development',
+      'Restaurant App Development Company | Food Delivery App Development',
   },
   description:
-    'Build a user-friendly food delivery app that seamlessly connects restaurants and customers with our custom development services.',
+    'Looking to launch a restaurant or food delivery app? We build custom restaurant apps with online ordering, table bookings, menus, and delivery features. Call us',
   alternates: {
     canonical:
       'https://www.avtechnosys.com/restaurant-app-development-company/',

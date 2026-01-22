@@ -19,10 +19,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Smart Pet Care App Development Solutions',
+    absolute: 'Smart Pet Care App Development Company – AV Technosys',
   },
   description:
-    'Build pet care apps with tracking, bookings, and health monitoring features. AV Technosys delivers scalable, expert solutions',
+    'Create powerful pet care apps with AV Technosys. Build pet care apps with tracking, bookings, and health monitoring features. Hire pet app developers now.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/pet-care-app-development-company/',
   },

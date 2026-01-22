@@ -21,10 +21,10 @@ import Fintecheffect, {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Professional Loan Lending App Development',
+    absolute: 'Professional Loan Lending App Development - AV Technosys',
   },
   description:
-    'Loan lending app development for seamless user experience, secure transactions, and automated loan processing.',
+    'We build custom loan & lending apps tailored for fintech and financial institutions. Secure and user-centric solutions. Get a free loan app consultation.',
   alternates: {
     canonical:
       'https://www.avtechnosys.com/loan-lending-app-development-services/',
