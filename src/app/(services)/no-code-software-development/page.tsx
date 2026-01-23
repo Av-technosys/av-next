@@ -22,10 +22,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Best No-Code Developers & Software Solutions Company',
+    absolute: 'Best No-Code Software Development Company – AV Technosys',
   },
   description:
-    'Boost your projects with AV Technosys’ no-code development services, delivering fast, reliable software solutions to meet your needs.',
+    'Fast, reliable no-code software development services by AV Technosys. Build apps, workflows & solutions with low code to boost your business growth. Call us.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/no-code-software-development/',
   },

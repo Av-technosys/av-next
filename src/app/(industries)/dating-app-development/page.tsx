@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: 'Best Dating App Development Company - AV Technosys',
   },
   description:
-    'We build dating apps with real-time chat, geolocation, secure logins, and smart matching for all platforms',
+    'Turn your dating app idea into reality with our dating app development services. We build dating apps with real-time chat, secure logins, and smart matching.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/dating-app-development/',
   },

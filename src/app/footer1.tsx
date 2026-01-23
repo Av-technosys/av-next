@@ -36,7 +36,7 @@ const Footer1 = ({ className = '' }) => {
                 />
               </a>
               <div className="text-gray-700">
-                Copyright © 2025{' '}
+                Copyright © 2026{' '}
                 <span className="font-medium text-black">avtechnosys.com</span>{' '}
                 All Rights Reserved
               </div>

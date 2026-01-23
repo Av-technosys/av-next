@@ -25,10 +25,10 @@ import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'FinTech App Development Company - AV Technosys',
+    absolute: 'Trusted FinTech App Development Services - AV Technosys',
   },
   description:
-    'AV Technosys is a top FinTech app development company offering secure and innovative fintech app development services to transform your financial business.',
+    'AV Technosys is one of the best FinTech app development company offering secure & innovative fintech app solutions to transform your financial business. Call us',
   alternates: {
     canonical: 'https://www.avtechnosys.com/fintech-app-development/',
   },

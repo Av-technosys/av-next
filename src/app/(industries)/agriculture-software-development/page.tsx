@@ -19,11 +19,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      'Top Agriculture Software Developers for Modern Farming Solutions',
+    absolute: 'Agriculture Software Development Service – AV Technosys',
   },
   description:
-    'Experience smart farming with our agriculture software development services, delivering efficient and tech-driven solutions for modern farms.',
+    'Develop agriculture software that improves productivity, monitoring, and traceability. AV Technosys delivers smart AgTech solutions. Discuss Your Requirements.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/agriculture-software-development/',
   },

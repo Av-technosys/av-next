@@ -21,10 +21,10 @@ import { InsightAboutUs } from '@/conponents/InsightAboutUs';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'About US - Top Mobile App & Web Development Company',
+    absolute: 'About AV Technosys | Global Technology Solutions Company',
   },
   description:
-    'We are a leading Web development company with a team of more than 100+ experienced developers. Know more about AV Technosys and our services by visiting us',
+    'AV Technosys is a trusted technology partner providing software, web, mobile and AI solutions for growing businesses in India, USA and UAE. Talk to our experts.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/about-us/',
   },

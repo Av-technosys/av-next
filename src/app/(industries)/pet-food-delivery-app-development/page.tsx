@@ -20,10 +20,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Pet Food Delivery App Development Services',
+    absolute: 'Pet Food Delivery App Development Company – AV Technosys',
   },
   description:
-    'Grow with AV Technosys’ pet food delivery app development, innovative, scalable solutions for your business',
+    'Build your pet food delivery app with AV Technosys. Feature-rich solutions for orders, tracking, payments and customer engagement. Request a custom app quote.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/pet-food-delivery-app-development/',
   },

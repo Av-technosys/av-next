@@ -20,10 +20,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Top Event Management App Development Services',
+    absolute: 'Event Management App Development Company – AV Technosys',
   },
   description:
-    'We build event management apps with ticketing, real-time updates, and seamless attendee experiences.',
+    'We build event management apps with ticketing, real-time updates, and check‑in and engagement features, designed for organizers & attendees. Talk to experts.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/event-management-app-development/',
   },

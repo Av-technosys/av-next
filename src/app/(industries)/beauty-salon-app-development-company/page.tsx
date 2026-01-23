@@ -21,10 +21,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Salon App Development Company | Beauty Salon App Development',
+    absolute: 'Beauty & Salon App Development Company – AV Technosys',
   },
   description:
-    'As a beauty salon app developer, AV Technosys builds on-demand apps that help salons connect with clients easily.',
+    'Launch your beauty salon app with AV Technosys. We offer complete solutions for appointments, services, payments, and customer loyalty features. Schedule a Demo',
   alternates: {
     canonical:
       'https://www.avtechnosys.com/beauty-salon-app-development-company/',

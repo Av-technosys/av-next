@@ -19,10 +19,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'LMS Development Company | Innovative Learning Apps',
+    absolute: 'Custom LMS App Development Company – AV Technosys',
   },
   description:
-    'Hire AV Technosys for expert LMS development and advanced custom e-learning solutions.',
+    'Create powerful LMS and eLearning platforms. Hire AV Technosys for expert LMS software development solutions for schools, corporations, and training providers.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/lms-development-company/',
   },

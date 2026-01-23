@@ -17,10 +17,10 @@ import { ContactUs } from '@/components/contactUs';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Tech Blogs on App Development, AI & MVPs | AV Technosys',
+    absolute: 'Latest Technology Insights & Development Blogs | AV Technosys',
   },
   description:
-    'Read all the latest trends occurring in the IT sector — from AI to no-code development, we cover it all. Visit to know more.',
+    'Read expert tech blogs on app development, AI, custom web solutions, and modern technology. Stay updated with the latest trends and insights from AV Technosys.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/blog/',
   },

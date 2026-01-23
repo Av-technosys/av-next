@@ -21,10 +21,11 @@ import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'IT Consulting Support & Services for Businesses',
+    absolute:
+      'Managed IT Consulting Services for Business Growth – AV Technosys',
   },
   description:
-    'AV Technosys provides expert IT consulting to support your projects and drive business growth.',
+    'Expert managed IT consulting services by AV Technosys to support projects and optimise IT strategy for a future-ready business. Talk to our IT experts today.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/it-consulting-services/',
   },

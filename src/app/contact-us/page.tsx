@@ -7,13 +7,12 @@ import Header from './heroSection';
 import { CEOInfo } from '@/components/CEOInfo';
 import { Locations } from '@/components/Location';
 
-
 export const metadata: Metadata = {
   title: {
-    absolute: 'Contact AV Technosys for Web & Mobile App Development',
+    absolute: 'Contact AV Technosys | Technology Experts | India, USA & UAE',
   },
   description:
-    'Contact AV Technosys for Software Development, Web & Mobile App Development, and Design',
+    'Contact AV Technosys to discuss your tech project. Our team in India, USA & UAE is ready to help with web, mobile, AI & digital development. Start your project.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/contact-us/',
   },

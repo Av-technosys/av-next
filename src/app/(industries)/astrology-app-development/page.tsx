@@ -20,10 +20,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Astrology App Development Company - AV Technosys',
+    absolute: 'Custom Astrology App Development Company - AV Technosys',
   },
   description:
-    'Cross-platform astrology app development with live chat, video calls, daily horoscopes, and prediction features.',
+    'Searching for a reliable astrology app development company? AV Technosys builds feature-rich astrology apps with live chat, video calls and daily horoscopes.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/astrology-app-development/',
   },

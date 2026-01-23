@@ -8,12 +8,13 @@ import { PostHogProvider } from './providers';
 
 export const metadata: Metadata = {
   title: {
-    default: 'AV Technosys : Top Website And Mobile App Development Company',
+    default:
+      'Technology Solutions & Software Development Company – AV Technosys',
     template:
       '%s | AV Technosys : Top Website And Mobile App Development Company',
   },
   description:
-    'AV Technosys is a mobile app development and web development company, builds world-class high-performing mobile applications and web apps.',
+    'AV Technosys is a technology solutions company offering software, web, mobile, AI and digital services for businesses across India, USA & UAE. Discuss Your Project',
   alternates: {
     canonical: 'https://www.avtechnosys.com',
   },

@@ -22,10 +22,11 @@ import Rating2 from '@/components/rating2';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Advanced AV Technosys',
+    absolute:
+      'Artificial Intelligence Development Company | Custom AI Solutions',
   },
   description:
-    'One of the top providers of AI development services, AV Technosys, enhances business operations by automating processes, boosting productivity, and more',
+    'AV Technosys delivers custom AI development services to automate operations, boost efficiency and drive smarter decisions with scalable, industry-ready AI solutions.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/ai-development-company/',
   },

@@ -19,10 +19,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Advanced Doctor On Demand App Development Services',
+    absolute: 'Doctor On Demand App Development Company - AV Technosys',
   },
   description:
-    'AV Technosys builds custom doctor-on-demand apps to enhance patient access and healthcare delivery.',
+    'AV Technosys develops doctor-on-demand apps that simplify consultations, appointments, and secure patient care. Get a free telemedicine App consultation.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/doctor-on-demand-app-development/',
   },

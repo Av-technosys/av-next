@@ -19,10 +19,10 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Digital Marketing Services | Best Digital Marketing Agency',
+    absolute: 'Digital Marketing Services | SEO, PPC & SMM – AV Technosys',
   },
   description:
-    'AV Technosys: India’s trusted digital marketing company to grow your traffic and revenue.',
+    'Grow your business with expert digital marketing services, including SEO, PPC, social media, content & email marketing by AV Technosys. Get more leads today.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/digital-marketing-services/',
   },

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: 'Travel App Development Company - AV Technosys',
   },
   description:
-    'AV Technosys offers premium travel app development services to boost and streamline your travel business.',
+    'AV Technosys builds custom travel apps with booking, itinerary, maps, reviews, and payments. Elevate your tourism businesses. Get a free travel app consultation',
   alternates: {
     canonical: 'https://www.avtechnosys.com/travel-app-development-company/',
   },

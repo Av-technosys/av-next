@@ -57,11 +57,10 @@ const data = [
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      'Laundry App Development Company | Laundry App Development Services',
+    absolute: 'On-Demand Laundry App Development Company – AV Technosys',
   },
   description:
-    'Choose AV Technosys for powerful and easy-to-use temple management software solutions',
+    'Grow your laundry business with feature-rich mobile laundry apps. Develop a secure, user-friendly laundry app with pickup, delivery, tracking & secure payments.',
   alternates: {
     canonical: 'https://www.avtechnosys.com/laundry-app-development/',
   },

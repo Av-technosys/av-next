@@ -21,10 +21,10 @@ import Fintecheffect, {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'E-Wallet Integration for Apps and Websites',
+    absolute: 'Trusted Digital Wallet Integration Services – AV Technosys',
   },
   description:
-    'AV Technosys offers secure, fast, and flexible digital wallet integration for your business.',
+    'Want to boost your store’s user experience with a digital wallet integration? We offer secure, fast, and flexible e-wallet integration for your business.',
   alternates: {
     canonical:
       'https://www.avtechnosys.com/digital-wallet-integration-services/',

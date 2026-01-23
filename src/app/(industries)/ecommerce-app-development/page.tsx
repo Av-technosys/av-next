@@ -25,10 +25,10 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Ecommerce App Development Services for Your Business',
+    absolute: 'Custom Ecommerce App Development Company - AV Technosys',
   },
   description:
-    'Grow your online store with AV Technosys’ ecommerce app development services. Hire expert developers for custom, user-friendly apps that boost sales.',
+    'Build scalable e-commerce apps with AV Technosys. Hire expert developers for feature-rich solutions for shopping, payments, offers, and user engagement. Call us',
   alternates: {
     canonical: 'https://www.avtechnosys.com/ecommerce-app-development/',
   },
