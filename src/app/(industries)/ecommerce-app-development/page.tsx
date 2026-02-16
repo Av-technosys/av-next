@@ -2,7 +2,7 @@ import EcommerceHero from '@/app/(industries)/ecommerce-app-development/ecommerc
 import Rating2 from '@/components/rating2';
 import { SectionHeading } from '@/components/sectionHeading';
 import EcommerceAppCost from '@/app/(industries)/ecommerce-app-development/ecommerce-app-cost';
-import { CaseStudy } from '@/components/caseStudy';
+
 import { ContactUs } from '@/components/contactUs';
 import { BlogSection } from '@/components/blogSection';
 import { ecommerceFawData } from '@/const';
@@ -98,7 +98,7 @@ const Page = () => {
       <EmpoweringEcommerce />
       <EndToEndSolution />
       <EcommerceServices />
-      <CaseStudy className="py-0" />
+
       <EcommerceFeatureSection />
       <TechnologiesOffered />
       <EcommerceAppCost />

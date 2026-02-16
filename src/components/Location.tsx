@@ -49,11 +49,10 @@ export function Locations() {
               className="h-full w-full object-contain"
             />
           </div>
-          <p className="text-center text-lg font-medium md:text-xl">UAE</p>
+          <p className="text-center text-lg font-medium md:text-xl">USA</p>
           <p className="text-center text-sm">
-            M01, AL Mulla Building 2, <br />
-            Near Burj Nahar Mall, Deira, Dubai <br />
-            +971 521665467
+            15632 Lucy Lane ,<br /> Frisco , TX , 75033 <br />
+            303-589-5158
           </p>
         </div>
       </div>

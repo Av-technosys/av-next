@@ -6,7 +6,7 @@ import React from 'react';
 import { ThreeCardAlternateimagePosition } from '../conponents';
 import ProjectCost from '@/components/costSectionfintech';
 import OnDemanddetailsSection from '@/components/OndemandDetailsSection';
-import { CaseStudy } from '@/components/caseStudy';
+
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { TechnologiesOffered } from '@/components';
 import Testimonial from '@/app/reviews';
@@ -73,7 +73,7 @@ const Page = () => {
         details={costdata}
       />
       <OnDemanddetailsSection details={demandData} heading={demandHeading} />
-      <CaseStudy />
+
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}

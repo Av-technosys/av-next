@@ -2,7 +2,7 @@ import Testimonial from '@/app/reviews';
 import { TechnologiesOffered } from '@/components';
 import Astrologydetailsbox from '@/components/astrologydetailsbox';
 import { BlogSection } from '@/components/blogSection';
-import { CaseStudy } from '@/components/caseStudy';
+
 import { ContactUs } from '@/components/contactUs';
 import { FaqAccordion } from '@/components/faqAccordion';
 import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
@@ -47,7 +47,7 @@ const Page = () => {
       <Ratings className="md:flex" />
       <LeadingSectionfintechAll className="md:order-2" details={leadingdata} />
       <ServicesManaged heading={servicesheading} services={services} />
-      <CaseStudy />
+
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}

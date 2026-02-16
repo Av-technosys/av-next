@@ -1,6 +1,5 @@
 import Testimonial from '@/app/reviews';
 import { BlogSection } from '@/components/blogSection';
-import { CaseStudy } from '@/components/caseStudy';
 import { ContactUs } from '@/components/contactUs';
 import { FaqAccordion } from '@/components/faqAccordion';
 import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
@@ -51,7 +50,7 @@ const Page = () => {
         services={services}
       />
       <Leadformservices details={leadformdata} />
-      <CaseStudy className="py-0" />
+
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}

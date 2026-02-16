@@ -11,7 +11,6 @@ import { fintechFawData } from '@/const';
 import Herosectionfintech from './HeroSection';
 import FintechProjectCost from './FintechProjectCost';
 import FintechStartProject from './FintechStartProject';
-import { CaseStudy } from '@/components/caseStudy';
 import { Locations } from '@/components/Location';
 import TestimonilaCrousel from '@/components/testimonilaCrousel';
 import Ratings from '@/components/ratings';
@@ -56,7 +55,6 @@ const FintechPage = () => {
       <Ratings className="mt-7 md:flex" />
       <Fintechsmartsolution />
       <FintechProjectCost />
-      <CaseStudy />
       <ThreeCardAlternateimagePosition
         className="pb-8"
         title="Avoid These Costly Mistakes in FinTech App Creation"
