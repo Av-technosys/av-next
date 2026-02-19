@@ -6,7 +6,7 @@ import AiAstrologySection from '@/components/aiastrologysection';
 import ProjectCost from '@/components/costSectionfintech';
 import ServicesManaged from '@/components/servicesManaged';
 import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
-import { CaseStudy } from '@/components/caseStudy';
+
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import OnDemanddetailsSection from '@/components/OndemandDetailsSection';
 import { TechnologiesOffered } from '@/components';
@@ -107,7 +107,7 @@ const Page = () => {
         heading={servicedataheading}
         details={serviceData}
       />
-      <CaseStudy />
+
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}

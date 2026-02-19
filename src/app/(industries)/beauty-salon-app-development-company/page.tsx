@@ -3,7 +3,7 @@ import Testimonial from '@/app/reviews';
 import { TechnologiesOffered } from '@/components';
 import Astrologyhomesection from '@/components/astrologyhomesection';
 import { BlogSection } from '@/components/blogSection';
-import { CaseStudy } from '@/components/caseStudy';
+
 import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
 import { ContactUs } from '@/components/contactUs';
 import { FaqAccordion } from '@/components/faqAccordion';
@@ -60,7 +60,7 @@ const Page = () => {
         heading={servicedataheading}
         details={serviceData}
       />
-      <CaseStudy />
+
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}

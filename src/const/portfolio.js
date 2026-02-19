@@ -12,20 +12,58 @@ export const portfolioData = [
 
     technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
   },
-  // {
-  //   name: 'Goyal salt LTD',
-  //   description:
-  //     ' A clean, information-rich website built for a trusted salt manufacturing company—designed to showcase product quality, global reach, and B2B trust.',
-  //   images: [
-  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-1.jpg',
-  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-2.jpg',
-  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-3.jpg',
-  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/bollywoodbites-4.jpg',
-  //   ],
-  //   link: 'https://goyalsaltltd.com/',
+  {
+    name: 'Morzze',
+    description:
+      'A clean, product-focused website for a premium lighting brand-showcasing engineering precision, and versatile lighting for residential, commercial, and architectural spaces.',
+    images: [
+      'https://av-blog.s3.ap-south-1.amazonaws.com/morzee1.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/morzee2.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/morzee3.png',
+    ],
+    link: 'https://www.morzze.com/',
 
-  //   technologies: ['wordpress'],
-  // },
+    technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
+  },
+  {
+    name: 'Roop Shree',
+    description:
+      'A clean, product-focused website for a premium lighting brand-showcasing engineering precision, and versatile lighting for residential, commercial, and architectural spaces.',
+    images: [
+      'https://av-blog.s3.ap-south-1.amazonaws.com/roopshree1.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/roopshree2.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/roopshree3.png',
+    ],
+    link: 'https://roopshreebandhej.com/',
+
+    technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
+  },
+  {
+    name: 'Saving Sathi',
+    description:
+      'A clean, product-focused website for a premium lighting brand-showcasing engineering precision, and versatile lighting for residential, commercial, and architectural spaces.',
+    images: [
+      'https://av-blog.s3.ap-south-1.amazonaws.com/ssathi1.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/ssathi2.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/ssathi3.png',
+    ],
+    link: 'https://www.savingsathi.com/',
+
+    technologies: [],
+  },
+  {
+    name: 'Goyal salt LTD',
+    description:
+      ' A clean, information-rich website built for a trusted salt manufacturing company—designed to showcase product quality, global reach, and B2B trust.',
+    images: [
+      'https://av-blog.s3.ap-south-1.amazonaws.com/goyalsalt1.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/goyalsalt2.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/goyalsalt3.png',
+    ],
+    link: 'https://goyalsaltltd.com/',
+
+    technologies: ['/icons/react.bin'],
+  },
   {
     name: 'Rajasthani Haat',
     description:
@@ -40,19 +78,19 @@ export const portfolioData = [
 
     technologies: ['/icons/wordpress.bin', '/icons/woocommerce.bin'],
   },
-  {
-    name: 'AAJ Ka Karmveer',
-    description:
-      'An engaging, mobile-friendly website crafted for a socially-driven initiative—highlighting stories of impact, ease of donations, and seamless navigation.',
-    images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk3.jpg',
-    ],
-    link: '',
+  // {
+  //   name: 'AAJ Ka Karmveer',
+  //   description:
+  //     'An engaging, mobile-friendly website crafted for a socially-driven initiative—highlighting stories of impact, ease of donations, and seamless navigation.',
+  //   images: [
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk1.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk2.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/ajk3.jpg',
+  //   ],
+  //   link: '',
 
-    technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
-  },
+  //   technologies: ['/icons/wordpress.bin', '/icons/elementor-wordpress.png'],
+  // },
   {
     name: 'Potent Hygiene',
     description:
@@ -66,6 +104,20 @@ export const portfolioData = [
     link: 'https://potenthygiene.com/',
 
     technologies: ['/icons/shopify.bin', '/icons/razorpay.bin'],
+  },
+
+  {
+    name: 'SoupX',
+    description:
+      ' A clean, information-rich website built for a trusted salt manufacturing company—designed to showcase product quality, global reach, and B2B trust.',
+    images: [
+      'https://av-blog.s3.ap-south-1.amazonaws.com/shoupX1.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/shoupX2.png',
+      'https://av-blog.s3.ap-south-1.amazonaws.com/shoupX3.png',
+    ],
+    link: 'https://www.soupx.health/',
+
+    technologies: ['/icons/react.bin'],
   },
 
   {
@@ -95,50 +147,50 @@ export const portfolioData = [
     link: 'https://tavaga.com/',
     technologies: ['/icons/php.bin', '/icons/aws.bin'],
   },
-  {
-    name: 'RenoQuotes',
-    description:
-      'A user-centric website built to simplify renovation project planning, with intuitive UX, trust-building elements, and fast lead generation.',
-    images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-3.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-4.jpg',
-    ],
-    link: 'https://renoquotes.com/en/home',
+  // {
+  //   name: 'RenoQuotes',
+  //   description:
+  //     'A user-centric website built to simplify renovation project planning, with intuitive UX, trust-building elements, and fast lead generation.',
+  //   images: [
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-1.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-2.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-3.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/renoquotes-4.jpg',
+  //   ],
+  //   link: 'https://renoquotes.com/en/home',
 
-    technologies: ['/icons/php.bin', '/icons/react.bin'],
-  },
+  //   technologies: ['/icons/php.bin', '/icons/react.bin'],
+  // },
 
-  {
-    name: 'Missimaginaa',
-    description:
-      'Where women lead in style. Classy, old-money-inspired tailoring: blazers, vests, skirts & more for the modern woman.',
-    images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism3.jpg',
-    ],
-    link: 'https://renoquotes.com/en/home',
+  // {
+  //   name: 'Missimaginaa',
+  //   description:
+  //     'Where women lead in style. Classy, old-money-inspired tailoring: blazers, vests, skirts & more for the modern woman.',
+  //   images: [
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism1.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism2.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mism3.jpg',
+  //   ],
+  //   link: 'https://renoquotes.com/en/home',
 
-    technologies: ['/icons/wordpress.bin'],
-  },
+  //   technologies: ['/icons/wordpress.bin'],
+  // },
 
-  {
-    name: 'Gour Holidays',
-    slug: '/gour-holidays',
-    description:
-      'A visually immersive travel website designed for easy exploration, tour package discovery, and seamless inquiries-perfectly tailored for a tour operator brand.',
-    images: [
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-1.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-2.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-3.jpg',
-      'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-4.jpg',
-    ],
-    link: 'https://gourholidays.com',
+  // {
+  //   name: 'Gour Holidays',
+  //   slug: '/gour-holidays',
+  //   description:
+  //     'A visually immersive travel website designed for easy exploration, tour package discovery, and seamless inquiries-perfectly tailored for a tour operator brand.',
+  //   images: [
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-1.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-2.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-3.jpg',
+  //     'https://av-blog.s3.ap-south-1.amazonaws.com/website-portfolio/mytravel-4.jpg',
+  //   ],
+  //   link: 'https://gourholidays.com',
 
-    technologies: ['/icons/wordpress.bin', '/icons/woocommerce.bin'],
-  },
+  //   technologies: ['/icons/wordpress.bin', '/icons/woocommerce.bin'],
+  // },
   {
     name: 'Valentino Gelato',
     description:

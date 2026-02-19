@@ -10,7 +10,7 @@ import { BlogSection } from '@/components/blogSection';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import Testimonial from '@/app/reviews';
 import { TechnologiesOffered } from '@/components';
-import { CaseStudy } from '@/components/caseStudy';
+
 import HeroSectionfintechAll from '@/components/heroSectionfintechAll';
 import LeadingSectionfintechAll from '@/components/leadingSectionfintechAll';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
@@ -57,7 +57,7 @@ const Page = () => {
         heading={whychooseheading}
         details={whychoosedata}
       />
-      <CaseStudy />
+
       <ConsultingServicesfintechAll
         heading={servicedataheading}
         details={serviceData}

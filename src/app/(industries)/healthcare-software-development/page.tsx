@@ -5,7 +5,7 @@ import ServicesManaged from '@/components/servicesManaged';
 import React from 'react';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
 import { TechnologiesOffered } from '@/components';
-import { CaseStudy } from '@/components/caseStudy';
+
 import { FaqAccordion } from '@/components/faqAccordion';
 import Testimonial from '@/app/reviews';
 import { ContactUs } from '@/components/contactUs';
@@ -48,7 +48,7 @@ const Page = () => {
       <Ratings className="md:flex" />
       <LeadingSectionfintechAll className="md:order-2" details={leadingdata} />
       <ServicesManaged heading={servicesheading} services={services} />
-      <CaseStudy />
+
       <Fintecheffect
         boxheadingclass="md:text-3xl"
         boxButton={"I'M INTERESTED"}

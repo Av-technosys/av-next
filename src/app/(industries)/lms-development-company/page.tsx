@@ -3,7 +3,7 @@ import Testimonial from '@/app/reviews';
 import { TechnologiesOffered } from '@/components';
 import Astrologyhomesection from '@/components/astrologyhomesection';
 import { BlogSection } from '@/components/blogSection';
-import { CaseStudy } from '@/components/caseStudy';
+
 import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
 import { ContactUs } from '@/components/contactUs';
 import { FaqAccordion } from '@/components/faqAccordion';
@@ -12,7 +12,7 @@ import { Locations } from '@/components/Location';
 import OnDemanddetailsSection from '@/components/OndemandDetailsSection';
 import Rating2 from '@/components/rating2';
 import Whychoosefintechsection from '@/conponents/whychoosefintechsection';
-import { LMSFawData, SalonFawData } from '@/const';
+import { LMSFawData } from '@/const';
 import { ecommerceAppDevelopment } from '@/cosnt';
 import { Metadata } from 'next';
 import React from 'react';
@@ -59,7 +59,7 @@ const Page = () => {
         details={serviceData}
       />
       <OnDemanddetailsSection details={demandData} heading={demandHeading} />
-      <CaseStudy />
+
       <Whychoosefintechsection
         heading={whychooseheading}
         details={whychoosedata}

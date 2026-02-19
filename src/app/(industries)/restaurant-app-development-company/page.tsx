@@ -14,7 +14,7 @@ import Rating2 from '@/components/rating2';
 import { Locations } from '@/components/Location';
 import Testimonial from '@/app/reviews';
 import AiAstrologySection from '@/components/aiastrologysection';
-import { CaseStudy } from '@/components/caseStudy';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ const Page = () => {
         heading={aiastrologyheading}
         details={aiastrologydetails}
       />
-      <CaseStudy />
+
       <ProjectCost
         imageclass=" lg:top-[-65px]"
         className="lg:max-w-sm"

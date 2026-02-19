@@ -1,6 +1,6 @@
 import Testimonial from '@/app/reviews';
 import { BlogSection } from '@/components/blogSection';
-import { CaseStudy } from '@/components/caseStudy';
+
 import ConsultingServicesfintechAll from '@/components/consultingServicesfintechAll';
 import { ContactUs } from '@/components/contactUs';
 import ProjectCost from '@/components/costSectionfintech';
@@ -60,7 +60,7 @@ const Page = () => {
         heading={servicedataheading}
         details={serviceData}
       />
-      <CaseStudy className="my-0" />
+
       <Testimonial />
       <FaqAccordion data={agrifawdata} />
       <ContactUs />

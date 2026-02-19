@@ -27,11 +27,12 @@ import { LeadPopUp } from '@/components/leadPopUp';
 import { ContactUs } from '@/components/contactUs';
 import { Locations } from '@/components/Location';
 import Image from 'next/image';
-import { CaseStudy } from '@/components/caseStudy';
+
 import Ratings from '@/components/ratings';
 import { ServiceSection } from '@/conponents/ServicesOffered';
 import { convertS3ToImageKit } from '@/lib/healper/imagekit';
 import Rating2 from '@/components/rating2';
+import BrandsWeBuild from '@/components/brandsWeBuild';
 
 const Home = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false);
@@ -46,7 +47,7 @@ const Home = () => {
       <ServiceSection />
       <ExperienceSection />
       <PartnerSection />
-      <CaseStudy />
+      <BrandsWeBuild setIsLeadOpen={setIsLeadOpen} />
       <Testimonial />
       <BookCall setIsLeadOpen={setIsLeadOpen} />
       <TechnologiesOffered />
@@ -270,17 +271,17 @@ function ExperienceSection() {
   const experienceData = [
     {
       title: 'Years of Experience',
-      value: '10+',
+      value: '5+',
       icon: TBriefcase,
     },
     {
       title: 'Countries Served',
-      value: '50+',
+      value: '5+',
       icon: TFlag,
     },
     {
       title: 'Successful Projects',
-      value: '1000+',
+      value: '100+',
       icon: TCode,
     },
     {
@@ -290,12 +291,12 @@ function ExperienceSection() {
     },
     {
       title: 'Clients Worldwide',
-      value: '500+',
+      value: '100+',
       icon: TWorld,
     },
     {
       title: 'Team',
-      value: '100+',
+      value: '50+',
       icon: TUserGroup,
     },
   ];
