@@ -52,7 +52,7 @@ function Card({
     >
       <span className="absolute bottom-0 right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700"></span>
       <span className="absolute bottom-px right-0 h-px w-1/3 bg-gradient-to-r from-neutral-700 via-yellow-400 to-neutral-700 blur-xl"></span>
-      <p className="border-b border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">
+      <p className="border-b h-52 md:h-28 overflow-y-auto border-neutral-700 pb-4 tracking-wider text-gray-300 md:text-lg">
         {cardData.msg}
       </p>
       <div className="flex gap-6">

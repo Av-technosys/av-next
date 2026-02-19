@@ -64,6 +64,7 @@ import {
 import BrandCard from './brandCard';
 import { SectionHeading } from './sectionHeading';
 import { TArroeRight } from './icons';
+import Autoplay from 'embla-carousel-autoplay';
 
 export const brands = [
   {
@@ -229,7 +230,11 @@ export default function BrandsCarousel({ setIsLeadOpen }) {
         descClass={'text-gray-600'}
       />
       <div className="relative mx-auto mb-20 max-w-7xl md:px-4">
-        <Carousel opts={{ align: 'start', loop: true }}>
+        <Carousel  plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]} opts={{ align: 'start', loop: true }}>
           <CarouselContent>
             {brands.map((brand) => (
               <CarouselItem key={brand.id}>
@@ -237,11 +242,8 @@ export default function BrandsCarousel({ setIsLeadOpen }) {
               </CarouselItem>
             ))}
           </CarouselContent>
-
-          <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
-            <CarouselPrevious className="static translate-y-0" />
-            <CarouselNext className="static translate-y-0" />
-          </div>
+          <CarouselPrevious className="text-black" />
+          <CarouselNext className="text-black" />
         </Carousel>
       </div>
 
