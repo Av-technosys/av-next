@@ -28,13 +28,13 @@ export function ContactUs() {
       return;
     }
 
-    // const res = await sendLeadMail({
-    //   name: formDetails.name,
-    //   email: formDetails.email,
-    //   message: formDetails.message,
-    //   number: formDetails.number,
-    //   slug: 'Lead PopUp',
-    // });
+    const res = await sendLeadMail({
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+      number: formDetails.number,
+      slug: 'Lead PopUp',
+    });
 
     const response = await submitLeadForm({
       name: formDetails.name,
