@@ -183,6 +183,7 @@ export default function RootLayout({
         <Chatbot />
         <Whatsapp />
       </body>
+      <script src="https://cdn-in.pagesense.io/js/2demo1avtechnosys/1e925b0edce74465b8a253dbf636533b.js"></script>
     </html>
   );
 }
