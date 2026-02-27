@@ -50,42 +50,48 @@ export default function Header() {
       return;
     }
 
-try {
+    try {
       const res = await sendLeadMail({
-      name: formDetails.name,
-      email: formDetails.email,
-      message: formDetails.message,
-      number: formDetails.number,
-      slug: 'Lead PopUp',
-    });
+        name: formDetails.name,
+        email: formDetails.email,
+        message: formDetails.message,
+        number: formDetails.number,
+        slug: 'Lead PopUp',
+      });
 
-    const response = await submitLeadForm({
-      name: formDetails.name,
-      email: formDetails.email,
-      message: formDetails.message,
-      number: formDetails.number,
-      slug: 'Contact-Us',
-    });
+      const response = await submitLeadForm({
+        name: formDetails.name,
+        email: formDetails.email,
+        message: formDetails.message,
+        number: formDetails.number,
+        slug: 'Contact-Us',
+      });
+      setFormDetails({
+        name: '',
+        email: '',
+        message: '',
+        number: '+91',
+      })
 
-    if (response) {
-      setShowMessage('Successfully Sent');
-      setErrorMessage('');
-    } else {
-      setShowMessage('');
-      setErrorMessage('Something went wrong');
+      if (response) {
+        setShowMessage('Successfully Sent');
+        setErrorMessage('');
+      } else {
+        setShowMessage('');
+        setErrorMessage('Something went wrong');
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      // setFormDetails({
+      //   name: '',
+      //   email: '',
+      //   message: '',
+      //   number: '+91',
+      // });
+
+      setLoading(false);
     }
-} catch (error) {
-  console.log(error);
-}finally{
-    // setFormDetails({
-    //   name: '',
-    //   email: '',
-    //   message: '',
-    //   number: '+91',
-    // });
-
-    setLoading(false);
-}
 
 
   };
@@ -188,7 +194,7 @@ try {
   );
 }
 
-function HeroBtn({ className = '', label = '', onClick = () => {} }) {
+function HeroBtn({ className = '', label = '', onClick = () => { } }) {
   return (
     <div
       onClick={onClick}

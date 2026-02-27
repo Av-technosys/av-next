@@ -29,6 +29,7 @@ const AdminBlogFormTable = ({ data }) => {
               <TableHead className="w-52">Number </TableHead>
               <TableHead className="">Message</TableHead>
               <TableHead className="w-60">Slug</TableHead>
+              <TableHead className="w-60">Time</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -47,6 +48,7 @@ const AdminBlogFormTable = ({ data }) => {
                     {item?.slug}
                   </Link>
                 </TableCell>
+                <TableCell className="">{item?.createdAt.toDateString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -47,6 +47,7 @@ const paths = [
   '/blog',
   '/privacy-policy',
   '/terms-and-conditions',
+  '/portfolio',
   ...servicesAndIndustries,
 ];
 
