@@ -78,7 +78,7 @@ const AdminBlogTble = ({ data, count }) => {
             <Button
               variant={'outline'}
               onClick={loadMoreHandler}
-              className={`rounded ${blogscount >= count[0].count && 'hidden'} `}
+              className={`rounded ${blogscount >= count && count[0]?.count && 'hidden'} `}
             >
               Load More
             </Button>
