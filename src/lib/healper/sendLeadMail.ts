@@ -1,8 +1,15 @@
 'use server';
 import nodemailer from 'nodemailer';
+import { headers } from 'next/headers';
 
 export async function sendLeadMail({ name, email, number, message, slug }) {
   try {
+    const requestHeaders = headers();
+    const ip =
+      requestHeaders.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      requestHeaders.get('x-real-ip')?.trim() ||
+      'Unknown';
+
     const transporter = nodemailer.createTransport({
       host: 'email-smtp.ap-south-1.amazonaws.com', // SES endpoint
       port: 587, // or 2587 or 25
@@ -30,6 +37,7 @@ export async function sendLeadMail({ name, email, number, message, slug }) {
 
           <br/>
           <p style="color: #777;">This email was sent via your website lead form.</p>
+          <p><strong>IP Address:</strong> ${ip}</p>
         </div>
       `,
     };
